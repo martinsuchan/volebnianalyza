@@ -1,0 +1,17 @@
+﻿rok,kod,popis,zavaznost,OID,MC,KODZASTUP,TYPZASTUP,hodnota
+2018,A2,"Odevzdáno více obálek, než bylo vydáno",2,500119/4032,Praha 4,554782,1,odevzdáno 272 > vydáno 267
+2018,A2,"Odevzdáno více obálek, než bylo vydáno",2,500119/4032,Praha 4,500119,2,odevzdáno 272 > vydáno 267
+2018,A2,"Odevzdáno více obálek, než bylo vydáno",2,500208/8025,Praha 8,554782,1,odevzdáno 321 > vydáno 320
+2018,A2,"Odevzdáno více obálek, než bylo vydáno",2,500208/8025,Praha 8,500208,2,odevzdáno 321 > vydáno 320
+2018,A2,"Odevzdáno více obálek, než bylo vydáno",2,547395/44004,Praha-Petrovice,554782,1,odevzdáno 581 > vydáno 579
+2018,A2,"Odevzdáno více obálek, než bylo vydáno",2,547395/44004,Praha-Petrovice,547395,2,odevzdáno 581 > vydáno 579
+2022,A2,"Odevzdáno více obálek, než bylo vydáno",2,500224/10022,Praha 10,554782,1,odevzdáno 293 > vydáno 291
+2022,A2,"Odevzdáno více obálek, než bylo vydáno",2,500224/10022,Praha 10,500224,2,odevzdáno 293 > vydáno 291
+2026,A2,"Odevzdáno více obálek, než bylo vydáno",2,500089/2029,Praha 2,554782,1,odevzdáno 337 > vydáno 336
+2026,A2,"Odevzdáno více obálek, než bylo vydáno",2,500089/2029,Praha 2,500089,2,odevzdáno 337 > vydáno 336
+2026,A2,"Odevzdáno více obálek, než bylo vydáno",2,539694/13048,Praha 13,554782,1,odevzdáno 306 > vydáno 305
+2026,A2,"Odevzdáno více obálek, než bylo vydáno",2,539694/13048,Praha 13,539694,2,odevzdáno 306 > vydáno 305
+2026,A12,Záznam ČSÚ označen příznakem CHYBA=1,1,500089/2029,Praha 2,554782,1,1
+2026,A12,Záznam ČSÚ označen příznakem CHYBA=1,1,500089/2029,Praha 2,500089,2,1
+2026,A12,Záznam ČSÚ označen příznakem CHYBA=1,1,539694/13048,Praha 13,554782,1,1
+2026,A12,Záznam ČSÚ označen příznakem CHYBA=1,1,539694/13048,Praha 13,539694,2,1

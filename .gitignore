@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Stažená zdrojová data ČSÚ – velká (~420 MB), lze je znovu stáhnout z volby.gov.cz/opendata (viz README)
+data/raw/
+
+# Odvozené mezivýsledky pipeline – vzniknou spuštěním skriptů (viz README)
+data/processed/
+data/results/
+
+# Dočasné soubory
+report/_tmp*
+*.log
+*.tmp
+
+# OS a editory
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

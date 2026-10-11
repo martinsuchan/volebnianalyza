@@ -1,0 +1,93 @@
+﻿rok,ZK,OID,strana,nazev_strany,porcislo,jmeno,hlasy,reference,pravdepodobne,rozdil,typ,celkem_kand,mandat,MC
+2026,50008901,500089/2005,8,Česká pirátská strana,22,Daniel Vaculík,4,44,44,-40,vypadla_cislice,1360,N,Praha 2
+2026,50008901,500089/2031,8,Česká pirátská strana,1,Magdalena Valdmanová,340,33,34,306,vlozena_cislice,2017,A,Praha 2
+2026,50009701,500097/3052,7,Strana zelených,20,Anna Kusáková,353,35,35,318,vlozena_cislice,1717,N,Praha 3
+2026,50009701,500097/3038,9,"SPD,Trikolora a NK pro P3 s podporou PRO a Přísahy",4,Václav Papež,65,5,5,60,vlozena_cislice,792,N,Praha 3
+2026,50011901,500119/4017,4,"SPD pro Prahu 4 s podp. PRO, SOCDEM, Trikolory, NK",27,Stanislav Zedník,39,8,9,30,vlozena_cislice,1470,N,Praha 4
+2026,50011901,500119/4103,7,"SPOLEČNĚ PRO ZMĚNU – STAN,PR.SOBĚ,LIDOVCI A ZELENÍ",4,Tomáš Kaplan,11,115,115,-104,vypadla_cislice,12674,A,Praha 4
+2026,50014301,500143/5071,2,TOP Lidovci a Nezávislí,13,Jiří Hamouz,113,14,13,100,vlozena_cislice,1587,N,Praha 5
+2026,50014301,500143/5036,4,PRAHA 5 SOBĚ,38,Viktorie Havlíček,14,145,145,-131,vypadla_cislice,5313,N,Praha 5
+2026,50014301,500143/5056,5,Občanská demokratická strana,34,Eva Zapletalová,0,18,20,-20,vypadla_cislice,4110,N,Praha 5
+2026,50014301,500143/5053,6,Motoristé sobě a Svobodní,21,Jiří Krátký,0,21,20,-20,vypadla_cislice,719,N,Praha 5
+2026,50014301,500143/5046,7,Naše Praha 5,22,Martina Tlustá,54,6,5,49,vlozena_cislice,748,N,Praha 5
+2026,50014301,500143/5047,7,Naše Praha 5,3,Jozef Stolz,0,24,24,-24,propad,829,N,Praha 5
+2026,50014301,500143/5053,8,Česká pirátská strana,40,Stanislav Petr,0,45,45,-45,propad,1801,N,Praha 5
+2026,50014301,500143/5045,11,STAROSTOVÉ A NEZÁVISLÍ,16,Zdeněk Štěpánek,16,48,48,-32,propad,4011,N,Praha 5
+2026,50017801,500178/6101,4,Česká pirátská strana,14,Martin Suchan,0,35,35,-35,propad,3272,N,Praha 6
+2026,50017801,500178/6065,5,SPD s podporou Trikolory a PRO,3,Richard Havlík,1,18,18,-17,vypadla_cislice,1223,N,Praha 6
+2026,50017801,500178/6081,8,ANO 2011,41,Josef Matoušek,425,42,42,383,vlozena_cislice,3821,N,Praha 6
+2026,50017801,500178/6021,10,Motoristé sobě a Svobodní,20,Milan Konvalinka,130,14,13,117,vlozena_cislice,1061,N,Praha 6
+2026,50017801,500178/6043,10,Motoristé sobě a Svobodní,19,Petr Spěvák,169,16,16,153,vlozena_cislice,1114,N,Praha 6
+2026,50020801,500208/8056,4,ODS s podporou KDU-ČSL,19,Zdeněk Beran,0,69,70,-70,vypadla_cislice,5331,N,Praha 8
+2026,50020801,500208/8013,6,Česká pirátská strana,15,Ondřej Profant,7,22,22,-15,propad,2206,N,Praha 8
+2026,50020801,500208/8057,9,ANO 2011,11,Kateřina Pechová,0,23,23,-23,propad,4394,N,Praha 8
+2026,50021601,500216/9026,8,PRAHA 9 SOBĚ,17,Veronika Chalupová,0,17,17,-17,propad,2096,N,Praha 9
+2026,50022401,500224/10028,1,JSME PRAHA 10,9,Barbora Abu Dayeh,2,21,21,-19,vypadla_cislice,2603,N,Praha 10
+2026,50022401,500224/10028,4,SPD pro Prahu 10,2,Stanislav Šimek,0,20,20,-20,vypadla_cislice,2019,A,Praha 10
+2026,50022401,500224/10043,6,Naše Praha 10,24,Miroslav Křehlík,165,16,16,149,vlozena_cislice,1695,N,Praha 10
+2026,50022401,500224/10100,9,Společně pro Prahu 10 (Nejlepší město na světě),25,Jiřina Provazníková,5,54,54,-49,vypadla_cislice,6386,N,Praha 10
+2026,53821301,538213/20008,5,Hnutí Šance pro Počernice,5,Marek Ladomerský,18,62,62,-44,propad,718,N,Praha 20
+2026,54710701,547107/12028,4,Naše Dvanáctka,14,Petr Čáp,80,8,8,72,vlozena_cislice,613,N,Praha 12
+2026,54710701,547107/12005,9,Piráti Praha 12,8,Petri Mališů,22,76,76,-54,propad,2250,N,Praha 12
+2026,54710701,547107/12048,11,PRAHA 12 SOBĚ,2,Ladislav Pelcl,6,60,60,-54,vypadla_cislice,2179,A,Praha 12
+2026,55478201,500097/3008,5,PRAHA SOBĚ,24,Zuzana Habartová,12,124,124,-112,vypadla_cislice,67920,N,Praha 3
+2026,55478201,500119/4065,5,PRAHA SOBĚ,36,Kamila Sirotná,0,25,25,-25,propad,67578,N,Praha 4
+2026,55478201,500119/4126,5,PRAHA SOBĚ,45,Michal Kočandrle,0,40,40,-40,vypadla_cislice,66425,N,Praha 4
+2026,55478201,500178/6005,5,PRAHA SOBĚ,37,Michal Šorel,11,112,112,-101,vypadla_cislice,67028,N,Praha 6
+2026,55478201,538931/22001,5,PRAHA SOBĚ,24,Zuzana Habartová,8,81,81,-73,vypadla_cislice,67920,N,Praha 22
+2026,55478201,547107/12049,5,PRAHA SOBĚ,5,Tomáš Kaplan,71,6,7,64,vlozena_cislice,70805,A,Praha 12
+2026,55478201,500119/4103,7,Česká pirátská strana,10,Zdeněk Hřib,10,41,41,-31,propad,40201,A,Praha 4
+2026,55478201,500143/5071,7,Česká pirátská strana,55,Martin Altschmied,3,40,39,-36,vypadla_cislice,33556,N,Praha 5
+2026,55478201,500186/7032,7,Česká pirátská strana,45,Kristýna Marie Pokorná,332,32,32,300,vlozena_cislice,35235,N,Praha 7
+2026,55478201,500208/8085,7,Česká pirátská strana,39,Andrea Chlopčíková,334,32,33,301,vlozena_cislice,34901,N,Praha 8
+2026,55478201,500208/8101,7,Česká pirátská strana,65,Jiří Dohnal,180,20,18,162,vlozena_cislice,29413,N,Praha 8
+2026,55478201,500224/10083,7,Česká pirátská strana,9,Zuzana Böhmová,4,46,46,-42,vypadla_cislice,38171,N,Praha 10
+2026,55478201,500224/10100,7,Česká pirátská strana,37,Kateřina Hunalová,3,31,31,-28,vypadla_cislice,34895,N,Praha 10
+2026,55478201,539694/13006,7,Česká pirátská strana,29,Václav Okapa,177,16,17,160,vlozena_cislice,35109,N,Praha 13
+2026,55478201,547042/37006,7,Česká pirátská strana,62,Kornélia Gottmannová,2,22,22,-20,vypadla_cislice,32148,N,Praha-Kunratice
+2026,55478201,547107/12001,7,Česká pirátská strana,14,Martin Štěrba,10,40,40,-30,propad,36573,N,Praha 12
+2026,55478201,547107/12022,7,Česká pirátská strana,64,Matěj Veselovský,0,15,15,-15,propad,30966,N,Praha 12
+2026,55478201,547417/18008,7,Česká pirátská strana,50,Eduard Horák,0,35,35,-35,propad,33884,N,Praha 18
+2026,55478201,500119/4093,9,STAROSTOVÉ A NEZÁVISLÍ,8,Michal Biskup,7,70,70,-63,vypadla_cislice,90286,A,Praha 4
+2026,55478201,500143/5076,9,STAROSTOVÉ A NEZÁVISLÍ,32,Marie Kučerová,32,98,98,-66,propad,87145,N,Praha 5
+2026,55478201,500186/7035,9,STAROSTOVÉ A NEZÁVISLÍ,33,Lukáš Tůma,4,40,40,-36,vypadla_cislice,87673,N,Praha 7
+2026,55478201,547387/15006,9,STAROSTOVÉ A NEZÁVISLÍ,28,Nataliya Kolomičenková,18,144,148,-130,vypadla_cislice,87876,N,Praha 15
+2026,55478201,500178/6043,10,"SPD pro Prahu s podp. Trikolory, PRO, Přísahy a NK",23,Jana Dvořáková,88,8,8,80,vlozena_cislice,13226,N,Praha 6
+2026,55478201,500178/6067,10,"SPD pro Prahu s podp. Trikolory, PRO, Přísahy a NK",59,Milan Čmelík,44,4,4,40,vlozena_cislice,12698,N,Praha 6
+2026,55478201,500208/8041,10,"SPD pro Prahu s podp. Trikolory, PRO, Přísahy a NK",5,Tomáš Adamec,5,26,25,-20,vypadla_cislice,13516,N,Praha 8
+2026,55478201,500208/8041,10,"SPD pro Prahu s podp. Trikolory, PRO, Přísahy a NK",47,Miroslav Dolanský,0,24,24,-24,propad,12874,N,Praha 8
+2026,55478201,500224/10020,10,"SPD pro Prahu s podp. Trikolory, PRO, Přísahy a NK",1,Milan Urban,112,11,11,101,vlozena_cislice,15290,N,Praha 10
+2026,55478201,547107/12026,10,"SPD pro Prahu s podp. Trikolory, PRO, Přísahy a NK",57,Tomáš Chleboun,55,5,5,50,vlozena_cislice,12832,N,Praha 12
+2026,55478201,547107/12028,10,"SPD pro Prahu s podp. Trikolory, PRO, Přísahy a NK",4,Jan Čížek,130,13,13,117,vlozena_cislice,14036,N,Praha 12
+2026,55478201,547174/17007,10,"SPD pro Prahu s podp. Trikolory, PRO, Přísahy a NK",65,Josef Nerušil,80,8,8,72,vlozena_cislice,12149,N,Praha 17
+2026,55478201,500178/6050,11,GEN s podporou veřejnosti,8,Jiří Štyler,54,4,4,50,vlozena_cislice,1714,N,Praha 6
+2026,55478201,500208/8048,12,SPOLU pro Prahu,2,Michal Hroza,3,36,36,-33,vypadla_cislice,86401,A,Praha 8
+2026,55478201,500208/8093,13,Levice,18,Anežka Polášková,33,3,3,30,vlozena_cislice,1277,N,Praha 8
+2026,55478201,500119/4049,14,Motoristé sobě,38,Matěj Chrudina,40,4,4,36,vlozena_cislice,10766,N,Praha 4
+2026,55478201,539694/13058,14,Motoristé sobě,51,Martina Těšínská,131,13,13,118,vlozena_cislice,10757,N,Praha 13
+2026,55478201,547298/27001,14,Motoristé sobě,4,Marek Zeman,4,24,24,-20,vypadla_cislice,12033,N,Praha-Ďáblice
+2026,55478201,547298/27001,14,Motoristé sobě,40,Valeria Belousova,2,23,23,-21,vypadla_cislice,10739,N,Praha-Ďáblice
+2026,55478201,547298/27001,14,Motoristé sobě,46,Filip Tomíček,2,23,23,-21,vypadla_cislice,10695,N,Praha-Ďáblice
+2026,55478201,500119/4104,15,Svobodní,34,Marie Bican Kratochvílová,34,3,3,31,vlozena_cislice,1791,N,Praha 4
+2026,55478201,500089/2024,16,JSME PRAHA,20,Matěj Juřík,33,3,3,30,vlozena_cislice,2413,N,Praha 2
+2026,55478201,547034/11059,16,JSME PRAHA,3,Ondřej Chrást,44,4,4,40,vlozena_cislice,3553,N,Praha 11
+2026,55478201,547034/11044,19,REZIDENTI – REBELOVÉ pro změnu Prahy,20,Vladislav Svoboda,22,3,2,20,vlozena_cislice,919,N,Praha 11
+2026,55478201,500089/2018,20,"Spojená levice pro Prahu (KSČM, ČSSD, KSČ)",1,Petr Vlček,32,2,2,30,vlozena_cislice,4000,N,Praha 2
+2026,55478201,500178/6066,20,"Spojená levice pro Prahu (KSČM, ČSSD, KSČ)",20,Felicita Carmenatová,55,6,5,50,vlozena_cislice,3416,N,Praha 6
+2026,55478201,500208/8046,20,"Spojená levice pro Prahu (KSČM, ČSSD, KSČ)",33,Jana Novotná,77,7,7,70,vlozena_cislice,3456,N,Praha 8
+2026,55478201,500224/10097,20,"Spojená levice pro Prahu (KSČM, ČSSD, KSČ)",12,Yvona Legierská,55,5,5,50,vlozena_cislice,3565,N,Praha 10
+2026,55478201,547417/18012,20,"Spojená levice pro Prahu (KSČM, ČSSD, KSČ)",45,Jiří Bláha,32,2,2,30,vlozena_cislice,3366,N,Praha 18
+2026,55478201,500178/6067,22,ANO 2011,47,Petr Štefek,0,26,26,-26,propad,54042,N,Praha 6
+2026,55478201,500224/10010,22,ANO 2011,2,Mária Ševčíková,4,46,46,-42,vypadla_cislice,55406,A,Praha 10
+2026,55478201,500224/10031,22,ANO 2011,36,Michaela Kozumplíková,0,39,40,-40,vypadla_cislice,54348,N,Praha 10
+2026,55478201,500224/10031,22,ANO 2011,62,Eva Ingrid Antl Burianová,390,39,39,351,vlozena_cislice,52981,N,Praha 10
+2026,55478201,500224/10100,22,ANO 2011,31,Pavel Fišer,7,28,27,-20,vypadla_cislice,54404,N,Praha 10
+2026,55478201,538931/22004,22,ANO 2011,55,Jan Klusoň,0,83,80,-80,vypadla_cislice,53624,N,Praha 22
+2026,55478201,547395/44004,22,ANO 2011,7,Radomír Nepil,7,75,75,-68,vypadla_cislice,55162,A,Praha-Petrovice
+2026,55478201,547417/18007,22,ANO 2011,19,Stanislav Nekolný,11,106,110,-99,vypadla_cislice,54749,N,Praha 18
+2026,55478201,547417/18007,22,ANO 2011,32,Kristýna Kyselová,10,104,104,-94,vypadla_cislice,54348,N,Praha 18
+2026,55478201,500119/4131,24,SEN PRO PRAHU s Václavem Láskou,50,Martina Jurasová,90,10,9,81,vlozena_cislice,10538,N,Praha 4
+2026,55478201,547042/37006,24,SEN PRO PRAHU s Václavem Láskou,52,Jan Nedvěd,56,6,6,50,vlozena_cislice,10429,N,Praha-Kunratice
+2026,55478201,547107/12013,24,SEN PRO PRAHU s Václavem Láskou,60,Antonie Mocová,30,4,3,27,vlozena_cislice,10058,N,Praha 12
+2026,55478201,547271/49004,24,SEN PRO PRAHU s Václavem Láskou,32,Zdeněk Kresl,77,7,7,70,vlozena_cislice,10847,N,Praha-Suchdol
+2026,55478201,547387/15006,24,SEN PRO PRAHU s Václavem Láskou,13,Jan Škoch,0,16,16,-16,propad,11031,N,Praha 15
