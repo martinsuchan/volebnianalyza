@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno všech 6 záznamů z typos_2026.pkl (Olšanská, Kyjovský v okrscích 1 a 7, Snášel, Julínek, Volejníčková) včetně podílů v ostatních okrscích, roku 2022 a bydliště.",
+    "zjisteni": "Všechny záznamy jsou místní preference nebo falešné poplachy: (1) Katarína Olšanská (Pro Rousínovsko č. 10, Vítovice), okrsek 9: 38 hlasů, 27,9 % hlasů strany proti 4–6 % jinde; v okrsku 9 vyčnívají i další kandidáti z Vítovic (Šmerda 88 vs 21–48, Doleželová 98). (2) Jiří Kyjovský (ODS č. 5, Čechyně): 26 hlasů v okrsku 1 a 29 v okrsku 7 – v okrsku 1 má 20,2 % (v roce 2022 22,4 %) proti 8–14 % jinde, tedy trvalý místní vzorec. (3) Martin Snášel (ODS č. 13, Královopolské Vážany): 28 hlasů v okrsku 2 (10,4 % proti 2,3–6,2 % jinde, v okrsku 9 22,4 %). (4) Zdeněk Julínek (ODS č. 11, Rousínov): 27 hlasů v okrsku 7 (12,1 %; v roce 2022 11,3 %, ostatní okrsky 5–11 %). (5) Helena Volejníčková (ODS č. 6, propad 7 vs 34 v okrsku 8): č. 6 má v ostatních okrscích také nižší hlasy, podíl 2,5 % je v rozsahu 1,6–6,0 %.",
+    "dukaz": "Rok 2022: Kyjovský 22,4 % v okrsku 1, Julínek 11,3 % v okrsku 7; bydliště odpovídá okrskům (Vítovice, Čechyně, Vážany).",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace oprav (o desítky hlasů) nemění mandáty (2, 2, 2, 3, 3, 2, 1) ani zvolené.",
+    "umysl": "Bez indikace – skutečné místní preference.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

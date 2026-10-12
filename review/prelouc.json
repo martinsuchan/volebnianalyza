@@ -1,0 +1,9 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Libor Cápay (SPD s podporou nezávislých, č. 11, okrsek 575500/10) má 28 hlasů místo ~8 (stejnou hodnotu 28 má v řádku i č. 1); podíl 12,6 % hlasů strany je výrazně nad maximem jinde (7,5 %), vložená číslice je pravděpodobná, preferenci nelze vyloučit.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() s opravou každé hodnoty: mandáty i zvolení beze změny."
+  }
+}

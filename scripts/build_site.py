@@ -1,17 +1,16 @@
-"""Build the static report site into ./report from analysis results."""
-import sys, os, json, shutil, math, datetime
+"""Statický web report/: rozcestník, komunální volby (zatím Praha pod kv/praha/), senát, registr nálezů, metodika, data."""
+import sys, os, json, shutil, math
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(__file__))
-from common import RES, ROOT, load, MAGISTRAT, HCOLS
+from common import RES, P, ROOT, load, MAGISTRAT, HCOLS
 from anomalies import prep
 import svg
 from svg import E, fmt
+from sablona import page as _page, fig, badge_j, badge_d, filters, write_assets, link, AUTHOR_URL, GEN, OUT, JLAB, DOPAD_RANK
+from units import units
 
-OUT = os.path.join(ROOT, 'report')
 os.makedirs(os.path.join(OUT, 'assets'), exist_ok=True); os.makedirs(os.path.join(OUT, 'data'), exist_ok=True)
-GEN = datetime.date(2026, 10, 11).strftime('%-d. %-m. %Y') if os.name != 'nt' else '11. 10. 2026'
 MAGZK = MAGISTRAT * 100 + 1
-AUTHOR_URL = 'https://www.facebook.com/martinsuchan85'
 VG_APP = 'https://volby.gov.cz/app/kv2026/cs/20261009/results/'
 VG_JSON = 'https://volby.gov.cz/appdata/kv2026/20261009/vysled/okrsek/1100/'
 
@@ -77,39 +76,18 @@ def finding_links(r):
     return ''
 F = pd.read_json(f'{RES}/findings_2026.json')
 
-NAV = [('index.html', 'Manažerský report'), ('nalezy.html', 'Detailní nálezy'), ('mapa.html', 'Mapa okrsků'),
-       ('testy.html', 'Globální forenzní testy'), ('metodika.html', 'Metodika a zdroje'), ('data.html', 'Data ke stažení'), ('senat.html', 'Senát 2026')]
+UL = units()
+U = {u['kod']: u for u in UL}
+PHA = U[MAGISTRAT]
+PD = f'kv/{PHA["slug"]}/'
+PHA_TABS = [(PD + 'index.html', 'Přehled'), (PD + 'nalezy.html', 'Nálezy'), (PD + 'mapa.html', 'Mapa okrsků'), (PD + 'testy.html', 'Forenzní testy')]
 
 
-def page(fn, title, body, desc='', brand='Forenzní audit · Komunální volby Praha 2026'):
-    nav = ''.join(f'<a href="{h}"{" aria-current=page" if h == fn else ""}>{E(t)}</a>' for h, t in NAV)
-    doc = f'''<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{E(title)} – {"Audit voleb 2026" if fn == "senat.html" else "Audit voleb Praha 2026"}</title><meta name="description" content="{E(desc)}">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="assets/favicon-180.png">
-<link rel="stylesheet" href="assets/style.css"></head><body>
-<header class="top"><div class="wrap"><div class="brand">{E(brand)}</div><nav>{nav}</nav></div></header>
-<main class="wrap">{body}</main>
-<footer class="wrap foot">Autor: <a href="{AUTHOR_URL}">Martin Suchan</a>. Nezávislá analýza veřejných otevřených dat ČSÚ (stav k 11. 10. 2026).
-Statistické nálezy nejsou důkazem úmyslného jednání; označují místa, kde je vhodné ověřit originální zápisy okrskových komisí. Vygenerováno {GEN}.</footer>
-<div id="tip" role="tooltip" hidden></div><script src="assets/app.js"></script></body></html>'''
-    open(os.path.join(OUT, fn), 'w', encoding='utf-8').write(doc)
-
-
-def fig(title, sub, chart, leg='', tbl='', note=''):
-    return (f'<figure class="card"><figcaption><h3>{E(title)}</h3><p class="sub">{E(sub)}</p></figcaption>{leg}<div class="cw">{chart}</div>'
-            f'{f"<p class=note>{note}</p>" if note else ""}{tbl}</figure>')
-
-
-def badge_j(j):
-    cls = {5: 'b-crit', 4: 'b-crit', 3: 'b-ser', 2: 'b-warn', 1: 'b-low'}[j]
-    lab = {5: 'Jistá', 4: 'Velmi vysoká', 3: 'Vysoká', 2: 'Střední', 1: 'Nízká'}[j]
-    return f'<span class="badge {cls}"><span class="ico" aria-hidden="true">{"●" * min(j, 5)}</span>{lab}</span>'
-
-
-def badge_d(k):
-    cls = {'Mění mandáty': 'b-crit', 'Může změnit mandáty': 'b-ser', 'Mění zvolené': 'b-ser', 'Těsný výsledek': 'b-warn', 'Bez vlivu': 'b-low'}.get(k, 'b-low')
-    ico = {'b-crit': '▲', 'b-ser': '△', 'b-warn': '!', 'b-low': '–'}[cls]
-    return f'<span class="badge {cls}"><span class="ico" aria-hidden="true">{ico}</span>{E(k)}</span>'
+def page_pha(fn, title, body, desc=''):
+    """Stránka územní jednotky Praha (kv/praha/<fn>) se záložkami a drobečkovou navigací."""
+    crumbs = [('Přehled', 'index.html'), ('Komunální volby 2026', 'kv/index.html')]
+    crumbs += [('Praha', None)] if fn == 'index.html' else [('Praha', PD + 'index.html'), (title, None)]
+    _page(PD + fn, f'{title} – Praha' if fn != 'index.html' else 'Komunální volby 2026 – Praha', body, desc, section='kv', crumbs=crumbs, tabs=PHA_TABS)
 
 
 # ------------------------------------------------------------------ data prep
@@ -135,77 +113,9 @@ YC = {y: year_counts(y) for y in (2018, 2022, 2026)}
 # fragile councils
 s26 = seats[seats.rok == 2026].copy()
 fr = s26.groupby('ZK').agg(z=('zastupitelstvo', 'first'), M=('mandatu', 'first'), gain=('hlasy_k_zisku', 'min'), lose=('hlasy_k_ztrate', 'min'))
-fr['thr'] = s26.assign(a=s26.do_prahu.abs()).groupby('ZK').a.min()
+fr['thr'] = s26[s26.prah_rozhoduje].assign(a=lambda x: x.do_prahu.abs()).groupby('ZK').a.min()  # jen strany, jimž hranice mění mandáty
 fr['krit'] = fr[['gain', 'lose', 'thr']].min(axis=1); fr['vol'] = fr.krit / fr.M
 fr = fr.sort_values('vol')
-
-# ------------------------------------------------------------------ assets
-CSS = r'''
-:root{color-scheme:light;--page:#f9f9f7;--surface:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;--grid:#e1e0d9;--axis:#c3c2b7;
---border:rgba(11,11,11,.10);--series-1:#2a78d6;--series-2:#eb6834;--series-3:#1baf7a;--good:#0ca30c;--warning:#fab219;--serious:#ec835a;--critical:#d03b3b;
---div-pos:#2a78d6;--div-neg:#e34948;--neutral:#e1e0d9;--map-base:#e6e5df;--accent-bg:#eef4fc}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--muted:#898781;
---grid:#2c2c2a;--axis:#383835;--border:rgba(255,255,255,.10);--series-1:#3987e5;--series-2:#d95926;--series-3:#199e70;--div-pos:#3987e5;--div-neg:#e66767;--neutral:#383835;--map-base:#2c2c2a;--accent-bg:#16263a}}
-:root[data-theme="dark"]{color-scheme:dark;--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--muted:#898781;--grid:#2c2c2a;--axis:#383835;--border:rgba(255,255,255,.10);
---series-1:#3987e5;--series-2:#d95926;--series-3:#199e70;--div-pos:#3987e5;--div-neg:#e66767;--neutral:#383835;--map-base:#2c2c2a;--accent-bg:#16263a}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--page);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
-.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
-a{color:var(--series-1)}
-header.top{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:5}
-header.top .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;padding-top:10px;padding-bottom:10px}
-.brand{font-weight:650}
-nav{display:flex;flex-wrap:wrap;gap:4px 14px}nav a{color:var(--ink2);text-decoration:none;font-size:14px;padding:2px 0;border-bottom:2px solid transparent}
-nav a[aria-current]{color:var(--ink);border-bottom-color:var(--series-1)}
-h1{font-size:28px;line-height:1.2;margin:28px 0 6px}h2{font-size:21px;margin:34px 0 10px}h3{font-size:16px;margin:0}
-.lead{font-size:17px;color:var(--ink2);max-width:860px}
-.verdict{background:var(--accent-bg);border:1px solid var(--border);border-left:4px solid var(--series-1);border-radius:10px;padding:16px 18px;margin:18px 0}
-.verdict p{margin:.35em 0}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:16px 0}
-.tile{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
-.tile .l{color:var(--ink2);font-size:13px}.tile .v{font-size:26px;font-weight:650;margin-top:2px}.tile .s{color:var(--muted);font-size:12.5px}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;margin:16px 0}
-.card figcaption{margin-bottom:6px}.sub{color:var(--ink2);margin:2px 0 0;font-size:13.5px}
-.cw{width:100%;overflow-x:auto}.chart{width:100%;height:auto;display:block;min-width:620px}.chart.sm{min-width:300px}.two .cw,.two>div{min-width:0}
-.chart .grid{stroke:var(--grid);stroke-width:1}.chart .axis{stroke:var(--axis);stroke-width:1}
-.chart .tick{fill:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}.chart .lab{fill:var(--ink2);font-size:12px}
-.chart .val{fill:var(--ink2);font-size:11px;font-variant-numeric:tabular-nums}
-.chart .hit{fill:transparent}.chart .mk:hover path,.chart .mk:focus path,.chart .mk:hover rect:not(.hit){opacity:.78}
-.chart .col:hover,.chart .col:focus{fill:var(--grid);fill-opacity:.5}
-.chart .hl{stroke:var(--critical);stroke-width:1.5;stroke-dasharray:none}.chart .expmark{stroke:var(--ink);stroke-width:2;stroke-linecap:round}
-.chart :focus{outline:none}
-.legend{display:flex;flex-wrap:wrap;gap:4px 16px;color:var(--ink2);font-size:13px;margin:6px 0}.lg{display:inline-flex;align-items:center;gap:6px}
-.note{color:var(--ink2);font-size:13px;margin:8px 0 0}
-details.tableview{margin-top:8px}details.tableview summary{cursor:pointer;color:var(--ink2);font-size:13px}
-.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0}
-th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--grid);vertical-align:top}th{color:var(--ink2);font-weight:600;font-size:12.5px}
-td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
-.badge{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:2px 9px 2px 7px;font-size:12px;font-weight:600;white-space:nowrap;border:1px solid var(--border)}
-.badge .ico{font-size:9px;letter-spacing:-1px}
-.b-crit .ico{color:var(--critical)}.b-ser .ico{color:var(--serious)}.b-warn .ico{color:var(--warning)}.b-low .ico{color:var(--muted)}
-.b-crit{background:color-mix(in srgb,var(--critical) 12%,transparent)}.b-ser{background:color-mix(in srgb,var(--serious) 12%,transparent)}
-.b-warn{background:color-mix(in srgb,var(--warning) 14%,transparent)}
-.find{border-left:4px solid var(--grid)}.find.p1{border-left-color:var(--critical)}.find.p2{border-left-color:var(--serious)}.find.p3{border-left-color:var(--warning)}
-.find dl{display:grid;grid-template-columns:150px 1fr;gap:4px 14px;margin:10px 0 0}.find dt{color:var(--ink2);font-size:13px}.find dd{margin:0}
-@media (max-width:640px){.find dl{grid-template-columns:1fr}.find dt{margin-top:6px}h1{font-size:23px}}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media (max-width:760px){.two{grid-template-columns:1fr}}
-.foot{color:var(--muted);font-size:12.5px;padding-top:24px;padding-bottom:40px}
-#tip{position:fixed;z-index:20;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:8px;
-padding:6px 9px;font-size:12.5px;max-width:320px;box-shadow:0 4px 18px rgba(0,0,0,.18)}
-.map path{stroke:var(--surface);stroke-width:.35}.map path.f{stroke:var(--ink);stroke-width:.6}
-ol.steps li,ul.l li{margin:5px 0}code{font-size:13px;background:var(--grid);padding:1px 5px;border-radius:4px}
-.json{font-size:12px;color:var(--ink2)}.kicker{color:var(--ink2);font-size:13px;text-transform:uppercase;letter-spacing:.04em;margin-top:24px}
-'''
-JS = r'''(function(){var t=document.getElementById('tip');
-function show(e,el){var s=el.getAttribute('data-tip');if(!s)return;t.textContent=s;t.hidden=false;var r=el.getBoundingClientRect();
-var x=(e&&e.clientX!=null&&e.type!=='focus')?e.clientX:r.left+r.width/2,y=(e&&e.clientY!=null&&e.type!=='focus')?e.clientY:r.top;
-var w=t.offsetWidth,h=t.offsetHeight;var L=Math.min(Math.max(8,x+12),innerWidth-w-8),T=y-h-12;if(T<8)T=y+16;t.style.left=L+'px';t.style.top=T+'px';}
-function hide(){t.hidden=true;}
-document.addEventListener('pointermove',function(e){var el=e.target.closest&&e.target.closest('[data-tip]');if(el)show(e,el);else hide();});
-document.addEventListener('focusin',function(e){var el=e.target.closest&&e.target.closest('[data-tip]');if(el)show(e,el);});
-document.addEventListener('focusout',hide);document.addEventListener('pointerleave',hide);})();'''
-open(os.path.join(OUT, 'assets/style.css'), 'w', encoding='utf-8').write(CSS)
-open(os.path.join(OUT, 'assets/app.js'), 'w', encoding='utf-8').write(JS)
 
 # ------------------------------------------------------------------ charts
 def chart_years():
@@ -334,7 +244,7 @@ def chart_digits():
 
 # ------------------------------------------------------------------ map
 def map_svg():
-    cen = pd.read_pickle(os.path.join(ROOT, 'data/processed/centroids.pkl'))
+    cen = pd.read_pickle(os.path.join(P, 'centroids.pkl'))
     lat0 = 50.08; k = 1400
     allp = [pt for g in cen.geom for poly in g for pt in poly]
     lon_min = min(p[0] for p in allp); lat_max = max(p[1] for p in allp)
@@ -372,7 +282,7 @@ def page_index():
                    f'<td>{E(r.typ)}<br><span class="sub">{E(r.subjekt)}</span></td><td>{badge_j(r.jistota)}</td><td>{badge_d(r.dopad_kat)}</td></tr>'
                    for r in F.sort_values(['priorita', 'jistota'], ascending=[True, False]).itertuples())
     s26c = seats[seats.rok == 2026]
-    body = f'''<h1>Forenzní audit komunálních voleb v Praze 2026</h1>
+    body = f'''<h1>Komunální volby 2026 – Praha</h1>
 <p class="lead">Nezávislá analýza všech 1 120 volebních okrsků, 2 240 okrskových zápisů (Zastupitelstvo hl. m. Prahy a 57 zastupitelstev městských částí),
 36 761 stranických a 8 607 kandidátních výsledků z otevřených dat ČSÚ, porovnaná s volbami 2018 a 2022.</p>
 <p class="sub">Autor: <a href="{AUTHOR_URL}">Martin Suchan</a> · 11. 10. 2026 · Každý nález obsahuje proklik na výsledky okrsku na volby.gov.cz.</p>
@@ -389,10 +299,6 @@ lhůta pro návrh k Městskému soudu v Praze je <strong>10 dnů od vyhlášení
 <div class="tile"><div class="l">Potvrzené chyby bez dopadu</div><div class="v">{int((F.typ.str.startswith("Chybějící") | F.typ.str.startswith("Nulové")).sum()) - 1} + {len(pd.read_pickle(f"{RES}/typos_2026.pkl"))}</div><div class="s">chybějící balíky / nulové strany + překlepy u kandidátů</div></div>
 <div class="tile"><div class="l">Známky manipulace</div><div class="v">žádné</div><div class="s">směr chyb je nahodilý</div></div>
 </div>'''.replace(f'{n_ok:,}', f'{n_ok:,}'.replace(',', ' '))
-    body += ('<div class="card" style="border-left:4px solid var(--series-1)"><p class="kicker">Nově · samostatná analýza</p>'
-             '<h3><a href="senat.html">Senátní volby 2026, 1. kolo: forenzní audit a srovnání s komunálními volbami →</a></h3>'
-             '<p>Všech 5 021 okrsků ve 27 obvodech. Výsledky jsou plně reprodukovatelné a bez známek manipulace. V obvodu Žďár nad Sázavou ale o postupu do 2. kola rozhodl '
-             '<strong>jediný hlas</strong>. Senátních obálek se odevzdalo o 13 % méně než komunálních, což je normální: většina voličů senátní lístek nepřevzala.</p></div>')
     body += '<h2>Registr nálezů podle priority</h2><p class="sub">Jistota = pravděpodobnost, že zveřejněný údaj neodpovídá skutečnosti. Dopad = výsledek simulace opravy a nového přepočtu mandátů a pořadí kandidátů.</p>'
     body += f'<div class="card tw"><table><thead><tr><th>ID</th><th>Zastupitelstvo / okrsek</th><th>Typ a subjekt</th><th>Jistota chyby</th><th>Dopad</th></tr></thead><tbody>{rows}</tbody></table></div>'
     body += '<h2>Doporučení</h2><ol class="steps">'
@@ -413,11 +319,12 @@ lhůta pro návrh k Městskému soudu v Praze je <strong>10 dnů od vyhlášení
         'Žádné kopírované výsledky mezi okrsky; všech 11 případů podezřelého „prohození“ stran se vysvětlilo místní geografií (stejný vzorec na druhém lístku nebo v roce 2022).',
         'Účast oproti roku 2022 se výrazně (|z| &gt; 5) změnila jen ve 2 okrscích, bez výkyvu jakékoli strany.'
     ]) + '</ul>'
-    page('index.html', 'Manažerský report', body, 'Manažerské shrnutí forenzního auditu komunálních voleb v Praze 2026')
+    body += mc_table()
+    page_pha('index.html', 'Přehled', body, 'Manažerské shrnutí forenzního auditu komunálních voleb v Praze 2026')
 
 
 def page_findings():
-    body = '<h1>Detailní nálezy</h1><p class="lead">Každý nález uvádí důkazy, míru jistoty, posouzení možného úmyslu, simulovaný dopad na mandáty a doporučený krok.</p>'
+    body = '<h1>Nálezy – Praha</h1><p class="lead">Každý nález uvádí důkazy, míru jistoty, posouzení možného úmyslu, simulovaný dopad na mandáty a doporučený krok.</p>'
     body += '<p class="sub">Škála jistoty: <strong>Jistá</strong> – deterministický rozpor v datech; <strong>Velmi vysoká</strong> ≥ 95 % (dvě nezávislé linie důkazů nebo logická nemožnost); '
     body += '<strong>Vysoká</strong> 80–95 %; <strong>Střední</strong> 50–80 %; <strong>Nízká</strong> &lt; 50 % (riziko, nikoli zjištěná chyba).</p>'
     body += ('<p class="sub">U každého nálezu je odkaz <strong>„Ověřit na volby.gov.cz“</strong>, který otevře výsledky daného okrsku v oficiální aplikaci ČSÚ '
@@ -447,25 +354,25 @@ def page_findings():
     body += '<h2 id="preklepy">Seznam překlepů a propadů u kandidátů (2026)</h2>'
     body += ('<div class="card tw"><table><thead><tr><th>Zastupitelstvo</th><th>Okrsek</th><th>Strana</th><th class="num">Poř.</th><th>Kandidát</th><th class="num">Zapsáno</th><th class="num">Pravděp.</th><th>Typ</th><th>Zvolen</th><th>Ověřit</th></tr></thead><tbody>'
              + ''.join('<tr>' + ''.join(f'<td{" class=num" if i in (3, 5, 6) else ""}>{c if i == 9 else E(str(c))}</td>' for i, c in enumerate(row)) + '</tr>' for row in rows) + '</tbody></table></div>')
-    page('nalezy.html', 'Detailní nálezy', body, 'Detailní nálezy forenzního auditu voleb Praha 2026')
+    page_pha('nalezy.html', 'Nálezy', body, 'Detailní nálezy forenzního auditu voleb Praha 2026')
 
 
 def page_map():
     m, status = map_svg()
     cnt = pd.Series([v[0] for v in status.values()]).value_counts()
-    body = ('<h1>Mapa okrsků s nálezy</h1><p class="lead">Polygony okrsků podle hranic ČSÚ (stav 2022; hranice 2026 nebyly jako soubor zveřejněny – 3 nové okrsky nejsou zakresleny). '
+    body = ('<h1>Mapa okrsků s nálezy – Praha</h1><p class="lead">Polygony okrsků podle hranic ČSÚ (stav 2022; hranice 2026 nebyly jako soubor zveřejněny – 3 nové okrsky nejsou zakresleny). '
             'Najetím myší nebo tabulátorem zobrazíte detail.</p>')
     body += fig('Kde se nálezy nacházejí', 'Barva = nejzávažnější nález v okrsku (magistrát nebo MČ)', m,
                 svg.legend([(f'Mění / může měnit mandáty ({cnt.get("critical", 0)})', '--critical', 'rect'),
                             (f'Potvrzená chyba bez vlivu na mandáty ({cnt.get("serious", 0)})', '--serious', 'rect'),
                             (f'Drobná chyba / procedurální nesrovnalost ({cnt.get("warning", 0)})', '--warning', 'rect'), ('Bez nálezu', '--map-base', 'rect')]),
                 note='Nálezy jsou rozptýlené po celém městě bez prostorového shluku – to odpovídá nezávislým chybám jednotlivých komisí, nikoli řízenému zásahu.')
-    page('mapa.html', 'Mapa okrsků', body, 'Mapa pražských volebních okrsků s vyznačenými nálezy')
+    page_pha('mapa.html', 'Mapa okrsků', body, 'Mapa pražských volebních okrsků s vyznačenými nálezy')
 
 
 def page_tests():
     ip = {y: fp[str(y)]['integer'] for y in (2018, 2022, 2026)}
-    body = '<h1>Globální forenzní testy</h1><p class="lead">Testy celé populace okrsků, které se v odborné literatuře používají k odhalení plošné manipulace (vhazování lístků, „kreslení“ výsledků). Všechny jsou porovnány s volbami 2018 a 2022.</p>'
+    body = '<h1>Forenzní testy – Praha</h1><p class="lead">Testy celé populace okrsků, které se v odborné literatuře používají k odhalení plošné manipulace (vhazování lístků, „kreslení“ výsledků). Všechny jsou porovnány s volbami 2018 a 2022.</p>'
     body += chart_klimek() + chart_vpb() + chart_digits()
     rows = [[y, ip[y]['turnout_integer_obs'], f"{ip[y]['turnout_integer_exp']:.1f} ± {ip[y]['turnout_integer_sd']:.1f}", f"{ip[y]['turnout_integer_p']:.2f}",
              ip[y]['leader'], ip[y]['leader_near_integer'], f"{ip[y]['leader_near_integer_exp']:.0f}", f"{ip[y]['leader_binom_p']:.2f}"] for y in (2018, 2022, 2026)]
@@ -493,7 +400,7 @@ def page_tests():
                 svg.hist(tc.z.dropna().clip(-8, 8).values, np.arange(-8, 8.5, 0.5), tc[tc.z.abs() > 5].z.values, xlabel='z-skóre změny účasti'),
                 svg.legend([('Okrsky', '--series-1', 'rect'), ('|z| > 5', '--critical', 'rect')]),
                 note='Jen 2 okrsky (Praha 2/2032, Praha 9/9033) mají neobvyklý nárůst účasti (+15 a +16 p. b.); žádná strana v nich nevykazuje odpovídající výkyv – slabý signál bez dalšího nálezu.')
-    page('testy.html', 'Globální forenzní testy', body, 'Klimek, Kobak, Beber–Scacco a další testy pro Prahu 2018–2026')
+    page_pha('testy.html', 'Forenzní testy', body, 'Klimek, Kobak, Beber–Scacco a další testy pro Prahu 2018–2026')
 
 
 def page_method():
@@ -520,7 +427,10 @@ def page_method():
     body = '''<h1>Metodika, zdroje a omezení</h1>
 <h2>1. Data</h2><p>Byla stažena kompletní okrsková data ČSÚ (věty T/3 – voliči, obálky, platné lístky, hlasy; věty HL – hlasy stran a všech kandidátů), registry stran a kandidátů
 a číselníky pro komunální volby 2018, 2022 a 2026; dále všech 165 průběžných XML dávek z volební noci 2026 (časy zpracování, příznak opakovaného zaslání) a hranice okrsků.
-Analýza je omezena na Prahu (okres 1100): 1 120 okrsků, Zastupitelstvo hl. m. Prahy (65 mandátů) a 57 zastupitelstev MČ.</p>
+Zpracována jsou krajská města a sídla všech obcí s rozšířenou působností a pověřených obecních úřadů (seznam na stránce <a href="kv/index.html">Komunální volby 2026</a>).
+U menších obcí s několika okrsky je srovnání se sousedními okrsky slabé; nálezy se tam opírají hlavně o vnitřní logiku zápisu a o rok 2022. Praha: 1 120 okrsků, Zastupitelstvo hl. m. Prahy (65 mandátů)
+a 57 zastupitelstev MČ; registr pražských nálezů byl jednotlivě ověřen v datech. U ostatních měst počítají stejné detektory a registr nálezů sestavuje šablona
+(<code>findings_auto.py</code>); kontrola jednotlivých nálezů v datech (prováděná AI modelem podle zadání <code>review/ZADANI.md</code>) se zapisuje do souborů <code>review/&lt;obec&gt;.json</code> a stav kontroly je uveden u každého nálezu. Metodika senátních voleb je popsána na <a href="senat/index.html#metodika">stránce Senátu</a>.</p>
 <h2>2. Deterministické kontroly integrity</h2><ul class="l">
 <li>Aritmetika zápisu: vydané ≤ zapsaní voliči, odevzdané ≤ vydané obálky, platné lístky ≤ odevzdané, hlasy ≤ platné lístky × mandáty, součty stran a kandidátů, kandidát ≤ počet platných lístků, strana ≤ fyzické maximum.</li>
 <li>Shoda údajů o obálkách mezi magistrátním a místním lístkem (jedna obálka).</li>
@@ -548,7 +458,8 @@ Analýza je omezena na Prahu (okres 1100): 1 120 okrsků, Zastupitelstvo hl. m. 
 <h2>8. Reprodukovatelnost</h2><p>Celý výpočet je ve skriptech <code>scripts/</code> (Python 3.13, pandas, scipy): <code>etl.py</code> → <code>integrity.py</code> → <code>seats.py</code> → <code>anomalies.py</code> → <code>missing.py</code> → <code>stacks.py</code> → <code>typos.py</code> → <code>batches.py</code> → <code>fingerprints.py</code> → <code>materiality.py</code> → <code>findings.py</code> → <code>build_site.py</code>.</p>
 <h2>9. Autor</h2><p><a href="https://www.facebook.com/martinsuchan85">Martin Suchan</a></p>
 <h2>10. Zdroje</h2><ol class="l">''' + ''.join(f'<li><a href="{u}">{E(t)}</a></li>' for t, u in src) + '</ol>'
-    page('metodika.html', 'Metodika a zdroje', body, 'Metodika forenzní analýzy, omezení a zdroje')
+    _page('metodika.html', 'Metodika a zdroje', body, 'Metodika forenzní analýzy, omezení a zdroje', section='metodika',
+          crumbs=[('Přehled', 'index.html'), ('Metodika', None)])
 
 
 def page_data(extra=()):
@@ -563,13 +474,234 @@ def page_data(extra=()):
     b = pd.read_pickle(f'{RES}/batches_2026.pkl'); b.to_csv(os.path.join(OUT, 'data/xml_davky_praha_2026.csv'), index=False, encoding='utf-8-sig'); files.append(('xml_davky_praha_2026.csv', 'Pražské záznamy z XML dávek volební noci'))
     pd.read_csv(f'{RES}/integrity.csv').to_csv(os.path.join(OUT, 'data/integrita_2018_2026.csv'), index=False, encoding='utf-8-sig'); files.append(('integrita_2018_2026.csv', 'Výsledky deterministických kontrol'))
     files += list(extra)
-    body = '<h1>Data ke stažení</h1><p class="lead">Mezivýsledky analýzy ve formátu CSV (UTF-8). Zdrojová data jsou volně dostupná na volby.cz (viz Metodika).</p><div class="card tw"><table><thead><tr><th>Soubor</th><th>Obsah</th></tr></thead><tbody>'
+    for u in UL:
+        s = summ_of(u) if u['kod'] != MAGISTRAT and u['stav'] == 'hotovo' else None
+        files += [tuple(x) for x in (s['files'] if s else [])]
+    body = '<h1>Data ke stažení</h1><p class="lead">Mezivýsledky analýzy ve formátu CSV (UTF-8). Zdrojová data jsou volně dostupná na volby.gov.cz (viz <a href="metodika.html">Metodika</a>); celý výpočet lze zopakovat skripty v repozitáři.</p><div class="card tw"><table><thead><tr><th>Soubor</th><th>Obsah</th></tr></thead><tbody>'
     body += ''.join(f'<tr><td><a href="data/{f}">{f}</a></td><td>{E(t)}</td></tr>' for f, t in files) + '</tbody></table></div>'
-    page('data.html', 'Data ke stažení', body, 'CSV výstupy forenzní analýzy')
+    _page('data.html', 'Data ke stažení', body, 'CSV výstupy forenzní analýzy', section='data', crumbs=[('Přehled', 'index.html'), ('Data', None)])
+
+
+def n0(v):
+    return f'{int(round(v)):,}'.replace(',', ' ')
+
+
+def mc_sortkey(name):
+    import re
+    m = re.match(r'Praha (\d+)$', name)
+    return (0, int(m.group(1)), '') if m else (1, 0, name)
+
+
+def mc_table():
+    """Tabulka zastupitelstev MČ s kotvami (cíl vyhledávání) – přehled, kam se podívat dál."""
+    T = pd.read_pickle(f'{RES}/typos_2026.pkl')
+    rows = ''
+    for m in sorted(PHA['mc'], key=lambda m: mc_sortkey(m['nazev'])):
+        zk = m['kod'] * 100 + 1
+        short = m['nazev'].replace('Praha-', '')
+        nf = F[F.ZK.astype(int) == zk]
+        nf = nf[~nf.typ.str.startswith('Překlepy')]
+        ft = F[F.typ.str.startswith('Výsledek těsnější') & F.MC.astype(str).str.split(', ').apply(lambda l: short in l or m['nazev'] in l)]
+        ids = list(nf.id) + list(ft.id)
+        nt = int((T.ZK == zk).sum())
+        krit = fr.krit.get(zk)
+        rows += (f'<tr id="mc-{m["kod"]}"><td data-v="{E(m["nazev"])}"><a href="{vg_url(m["kod"])}" target="_blank" rel="noopener">{E(m["nazev"])}</a></td>'
+                 f'<td class="num">{m["mandatu"]}</td><td class="num">{m["okrsku"]}</td><td class="num" data-v="{m["volicu"]}">{n0(m["volicu"])}</td>'
+                 f'<td data-v="{len(ids)}">' + ', '.join(f'<a href="nalezy.html#{i}">{i}</a>' for i in ids) + '</td>'
+                 f'<td class="num">{nt}</td><td class="num" data-v="{krit if krit is not None else 1e9}">{n0(krit) if krit is not None else "–"}</td></tr>')
+    return ('<h2 id="mc">Zastupitelstva městských částí</h2><p class="sub">Název vede na výsledky MČ na volby.gov.cz. Rozhodující rezerva = nejmenší počet hlasů, '
+            'který by změnil rozdělení mandátů nebo vedl k rovnosti rozhodované losem. Řadit lze kliknutím na záhlaví sloupce.</p>'
+            + filters('t-mc', []) +
+            '<div class="card tw"><table id="t-mc" class="sortable"><thead><tr><th>Městská část</th><th class="num">Mandátů</th><th class="num">Okrsků</th><th class="num">Voličů</th>'
+            '<th>Nálezy</th><th class="num">Překlepy u kandidátů</th><th class="num">Rozhodující rezerva (hlasů)</th></tr></thead><tbody>' + rows + '</tbody></table></div>')
+
+
+def all_findings(SF):
+    out = []
+    for r in F.itertuples():
+        if str(r.OID).count('/') == 1:
+            misto = f'{r.zastupitelstvo} · okrsek {r.OID.split("/")[1]}'
+        else:  # souhrnný nález za více okrsků / zastupitelstev
+            zast = {'MČ': 'zastupitelstva MČ', 'magistrát i MČ': 'magistrát i zastupitelstva MČ'}.get(r.zastupitelstvo, r.zastupitelstvo)
+            misto = f'Praha – {zast}' + (f' ({r.MC})' if str(r.MC) not in ('', 'nan', 'více MČ') else ', více MČ')
+        out.append(dict(gid=f'Praha {r.id}', volby='kv', uzemi='Praha', misto=misto, typ=r.typ, subjekt=str(r.subjekt), jistota=int(r.jistota),
+                        dopad=r.dopad_kat, url=f'{PD}nalezy.html#{r.id}', kraj=PHA['kraj'], obec='krajske'))
+    for u in UL:
+        s = summ_of(u) if u['kod'] != MAGISTRAT and u['stav'] == 'hotovo' else None
+        for f in (s['findings'] if s else []):
+            misto = f['zastupitelstvo'] + (f' · okrsek {f["OID"].split("/")[1]}' if f['OID'].count('/') == 1 else f' ({f["MC"]})'[:140])
+            out.append(dict(gid=f'{u["nazev"]} {f["id"]}', volby='kv', uzemi=u['nazev'], misto=f'{u["nazev"]} – {misto}', typ=f['typ'],
+                            subjekt=f['subjekt'] + (' · automatický nález, zatím neověřen' if f['stav'] != 'zkontrolováno' else ''),
+                            jistota=int(f['jistota']), dopad=f['dopad_kat'], url=f'kv/{u["slug"]}/nalezy.html#{f["id"]}', kraj=u['kraj'], obec=u['typ']))
+    for f in SF:
+        out.append(dict(gid=f'Senát {f["id"]}', volby='senat', uzemi='Senát 2026', misto=f['misto'], typ=f['typ'], subjekt='', jistota=int(f['jistota']),
+                        dopad=f['dopad'], url=f'senat/index.html#{f["id"]}', kraj='', obec=''))
+    out.sort(key=lambda d: (-DOPAD_RANK.get(d['dopad'], 1), -d['jistota']))
+    return out
+
+
+def findings_rows(AF, frm):
+    return ''.join(
+        f'<tr data-volby="{d["volby"]}" data-uzemi="{E(d["uzemi"])}" data-kraj="{E(d["kraj"])}" data-obec="{d["obec"]}" data-jistota="{d["jistota"]}" data-dopad="{DOPAD_RANK.get(d["dopad"], 1)}">'
+        f'<td class="id" data-v="{E(d["gid"])}"><a href="{link(frm, d["url"])}">{E(d["gid"])}</a></td><td>{E(d["misto"])}</td>'
+        f'<td>{E(d["typ"])}' + (f'<br><span class="sub">{E(d["subjekt"])}</span>' if d['subjekt'] else '') + '</td>'
+        f'<td data-v="{d["jistota"]}">{badge_j(d["jistota"])}</td><td data-v="{DOPAD_RANK.get(d["dopad"], 1)}">{badge_d(d["dopad"])}</td></tr>' for d in AF)
+
+
+FIND_HEAD = '<thead><tr><th>ID</th><th>Místo</th><th>Typ a subjekt</th><th>Jistota chyby</th><th>Dopad</th></tr></thead>'
+
+
+def page_all_findings(AF):
+    body = ('<h1>Všechny nálezy</h1><p class="lead">Společný registr nálezů ze všech zpracovaných voleb a území, seřazený podle dopadu a jistoty. '
+            'Filtrem lze zúžit výběr; kliknutím na ID otevřete detail s důkazy a odkazy na volby.gov.cz.</p>'
+            '<p class="sub">Jistota = pravděpodobnost, že zveřejněný údaj neodpovídá skutečnosti (Jistá – deterministický rozpor; Velmi vysoká ≥ 95 %; Vysoká 80–95 %; '
+            'Střední 50–80 %; Nízká &lt; 50 % = riziko, nikoli zjištěná chyba). Dopad = výsledek simulace opravy.</p>')
+    body += filters('t-all', [
+        ('volby', 'Volby', [('kv', 'Komunální 2026'), ('senat', 'Senát 2026')]),
+        ('kraj', 'Kraj', sorted({(d['kraj'], d['kraj']) for d in AF if d['kraj']})),
+        ('obec', 'Obec', [('krajske', 'krajská města'), ('orp', 'obce s rozšířenou působností'), ('pou', 'obce s pověřeným obecním úřadem')]),
+        ('uzemi', 'Území', sorted({(d['uzemi'], d['uzemi']) for d in AF})),
+        ('jistota', 'Jistota alespoň', [(5, 'Jistá'), (4, 'Velmi vysoká'), (3, 'Vysoká'), (2, 'Střední')]),
+        ('dopad', 'Dopad alespoň', [(3, 'Mění / může změnit výsledek'), (2, 'Těsný výsledek')])])
+    body += f'<div class="card tw"><table id="t-all" class="sortable">{FIND_HEAD}<tbody>{findings_rows(AF, "nalezy.html")}</tbody></table></div>'
+    _page('nalezy.html', 'Všechny nálezy', body, 'Registr všech nálezů forenzního auditu voleb 2026', section='nalezy',
+          crumbs=[('Přehled', 'index.html'), ('Všechny nálezy', None)])
+
+
+def summ_of(u):
+    p = os.path.join(ROOT, 'data', 'results', 'kv', u['slug'], 'summary.json')
+    return json.load(open(p, encoding='utf-8')) if os.path.exists(p) else None
+
+
+def unit_summary(u):
+    """Souhrnné ukazatele zpracované jednotky (Praha z ručního registru, ostatní města ze summary.json)."""
+    if u['stav'] != 'hotovo':
+        return None
+    if u['kod'] != MAGISTRAT:
+        s = summ_of(u)
+        return dict(nal_vysl=s['nal_vysl'], nal=s['nal'], rez=int(s['rez']) if s['rez'] is not None else 0, rez_z=s['rez_z'])
+    kr = fr.iloc[0]
+    return dict(nal_vysl=int(F.dopad_kat.isin(['Mění mandáty', 'Může změnit mandáty', 'Mění zvolené']).sum()), nal=int(len(F)),
+                typos=int(len(pd.read_pickle(f'{RES}/typos_2026.pkl'))), rez=int(kr.krit), rez_z=kr.z)
+
+
+def page_kv_index():
+    rows = ''
+    for u in sorted(UL, key=lambda u: (u['stav'] != 'hotovo', -u['volicu'])):
+        s = unit_summary(u)
+        done = s is not None
+        name = f'<a href="{link("kv/index.html", u["url"])}">{E(u["nazev"])}</a>' if done else E(u['nazev'])
+        st = '<span class="st st-done">zpracováno</span>' if done else '<span class="st st-plan">v přípravě</span>'
+        rez_txt = f'{n0(s["rez"])} hl. – {E(s["rez_z"])}' if done else '–'
+        rows += (f'<tr id="u-{u["kod"]}" data-kraj="{E(u["kraj"])}" data-stav="{u["stav"]}" data-typ="{u["typ"]}"><td data-v="{E(u["nazev"])}">{name}'
+                 + {'krajske': ' <span class="sub">krajské město</span>', 'orp': ' <span class="sub">ORP</span>', 'pou': ' <span class="sub">POU</span>'}[u['typ']]
+                 + f'</td><td>{E(u["kraj"])}</td>'
+                 f'<td class="num">{len(u["mc"])}</td><td class="num" data-v="{u["okrsku"]}">{n0(u["okrsku"])}</td><td class="num" data-v="{u["volicu"]}">{n0(u["volicu"])}</td>'
+                 f'<td>{st}</td><td class="num" data-v="{s["nal_vysl"] if done else -1}">{s["nal_vysl"] if done else "–"}</td>'
+                 f'<td class="num" data-v="{s["nal"] if done else -1}">{s["nal"] if done else "–"}</td>'
+                 f'<td data-v="{s["rez"] if done else 1e9}">{rez_txt}</td></tr>')
+    n_done = sum(u['stav'] == 'hotovo' for u in UL)
+    volicu_mil = f'{sum(u["volicu"] for u in UL) / 1e6:.1f}'.replace('.', ',')
+    nk = sum(u['typ'] == 'krajske' for u in UL); no = sum(u['typ'] == 'orp' for u in UL); np_ = sum(u['typ'] == 'pou' for u in UL)
+    sk = f'{nk} krajských měst, {no} dalších obcí s rozšířenou působností (ORP) a {np_} dalších obcí s pověřeným obecním úřadem (POU)'
+    stav_txt = (f'Zpracováno je všech {sk}; ostatní obce mohou přibýt později.' if n_done == len(UL) else
+                f'Zpracováno {n_done} z {len(UL)} obcí ({sk}); ostatní připravujeme.')
+    body = f'''<h1>Komunální volby 2026</h1>
+<p class="lead">Forenzní analýza okrskových dat pro zastupitelstva obcí a jejich městských částí či obvodů. {stav_txt}
+Obec nebo městskou část najdete i vyhledáváním v záhlaví.</p>
+<div class="tiles">
+<div class="tile"><div class="l">Obcí</div><div class="v">{len(UL)}</div><div class="s">{nk} krajských měst + {no} ORP + {np_} POU, {n_done} zpracováno</div></div>
+<div class="tile"><div class="l">Okrsků</div><div class="v">{n0(sum(u["okrsku"] for u in UL))}</div><div class="s">ve sledovaných obcích</div></div>
+<div class="tile"><div class="l">Městských částí / obvodů</div><div class="v">{sum(len(u["mc"]) for u in UL)}</div><div class="s">s vlastním zastupitelstvem</div></div>
+<div class="tile"><div class="l">Voličů</div><div class="v">{volicu_mil} mil.</div><div class="s">v seznamech sledovaných obcí</div></div>
+</div>
+<h2>Obce</h2><p class="sub">Nálezy s dopadem = mění nebo mohou změnit mandáty či zvolené kandidáty. Rozhodující rezerva = nejmenší počet hlasů, který by v některém
+zastupitelstvu obce změnil rozdělení mandátů nebo vedl k rovnosti rozhodované losem. Řadit lze kliknutím na záhlaví sloupce.</p>'''
+    body += filters('t-units', [('kraj', 'Kraj', sorted({(u['kraj'], u['kraj']) for u in UL})),
+                                ('typ', 'Obec', [('krajske', 'krajská města'), ('orp', 'obce s rozšířenou působností'), ('pou', 'obce s pověřeným obecním úřadem')]),
+                                ('stav', 'Stav', [('hotovo', 'zpracováno'), ('pripravuje', 'v přípravě')])])
+    body += ('<div class="card tw"><table id="t-units" class="sortable"><thead><tr><th>Obec</th><th>Kraj</th><th class="num">MČ / MO</th><th class="num">Okrsků</th>'
+             '<th class="num">Voličů</th><th>Stav</th><th class="num">Nálezy s dopadem</th><th class="num">Nálezů celkem</th><th>Rozhodující rezerva</th></tr></thead>'
+             f'<tbody>{rows}</tbody></table></div>')
+    body += ('<h2>Jak číst výsledky obce</h2><ul class="l"><li><strong>Přehled</strong> – závěr, registr nálezů obce, těsné výsledky a tabulka městských částí.</li>'
+             '<li><strong>Nálezy</strong> – detail každého nálezu s důkazy, mírou jistoty, simulací dopadu a odkazy na volby.gov.cz.</li>'
+             '<li><strong>Mapa okrsků</strong> – kde se nálezy nacházejí.</li><li><strong>Forenzní testy</strong> – globální testy celé populace okrsků a srovnání s lety 2018 a 2022.</li></ul>')
+    _page('kv/index.html', 'Komunální volby 2026', body, 'Přehled obcí s forenzní analýzou komunálních voleb 2026', section='kv',
+          crumbs=[('Přehled', 'index.html'), ('Komunální volby 2026', None)])
+
+
+def page_home(AF):
+    # na úvodní stránce: vše, co mění nebo může změnit výsledek; těsné výsledky jen pro Prahu, krajská města a Senát (ORP v registru)
+    top = [d for d in AF if DOPAD_RANK.get(d['dopad'], 1) >= 3 or (DOPAD_RANK.get(d['dopad'], 1) == 2 and d['obec'] not in ('orp', 'pou'))]
+    n_done = sum(u['stav'] == 'hotovo' for u in UL)
+    nk_done = sum(u['stav'] == 'hotovo' and u['typ'] == 'krajske' for u in UL)
+    no_done = sum(u['stav'] == 'hotovo' and u['typ'] == 'orp' for u in UL)
+    np_done = sum(u['stav'] == 'hotovo' and u['typ'] == 'pou' for u in UL)
+    other_txt = ''
+    for grp, lab, n in (('krajske', 'Ostatní krajská města', nk_done - 1), ('orp', 'Obce s rozšířenou působností', no_done),
+                        ('pou', 'Obce s pověřeným obecním úřadem', np_done)):
+        oth = [d for d in AF if d['volby'] == 'kv' and d['uzemi'] != 'Praha' and d['obec'] == grp]
+        if not oth:
+            continue
+        ov = [d for d in oth if DOPAD_RANK.get(d['dopad'], 1) >= 3]
+        n_ok = sum(1 for d in oth if 'zatím neověřen' not in d['subjekt'])
+        other_txt += (f'<p><strong>{lab}</strong> ({n}): {len(oth)} nálezů, z toho {len(ov)} s vlivem nebo možným vlivem na výsledek'
+                      + (': ' + '; '.join(f'<a href="{d["url"]}">{E(d["gid"])}</a> {E(d["typ"].lower())} ({E(d["dopad"].lower())})' for d in ov) if ov and len(ov) <= 12 else
+                         (' (viz tabulka níže)' if ov else ''))
+                      + f'. Registry těchto obcí sestavuje šablona; jednotlivě v datech ověřeno (AI kontrolou) {n_ok} z {len(oth)} nálezů.</p>')
+    body = f'''<h1>Forenzní audit voleb 2026</h1>
+<p class="lead">Nezávislá analýza okrskových dat ČSÚ z voleb 9.–10. 10. 2026: komunální volby ve {nk_done} krajských městech,
+{no_done} dalších obcích s rozšířenou působností a {np_done} dalších obcích s pověřeným obecním úřadem a 1. kolo senátních voleb ve 27 obvodech. Hledáme chyby v zápisech okrskových komisí a známky manipulace a posuzujeme, zda mohly změnit výsledek.</p>
+<form class="searchbig" role="search" onsubmit="return false"><label class="vh" for="q-home">Najít obec, městskou část nebo senátní obvod</label>
+<input id="q-home" type="search" list="hledat-list" data-search placeholder="Najděte obec, městskou část nebo senátní obvod…" autocomplete="off"></form>
+<div class="verdict"><p><strong>Závěr:</strong> V datech nejsou známky systematické ani koordinované manipulace; výsledky jsou ze součtu okrsků plně reprodukovatelné.
+Našli jsme ale konkrétní chyby v zápisech: v <strong>Praze 10</strong> překlep, který mění 2 mandáty, v <strong>Praze 15</strong> chybějící hlasy, které mohou změnit 1 mandát.
+V senátním obvodu <strong>Žďár nad Sázavou</strong> rozhodl o postupu do 2. kola jediný hlas.</p>{other_txt}</div>
+<div class="hubs">
+<a class="hub" href="kv/index.html"><h3>Komunální volby 2026 →</h3><p>Zpracováno {n_done} obcí – krajská města, obce s rozšířenou působností a s pověřeným obecním úřadem ({n0(sum(u["okrsku"] for u in UL if u["stav"] == "hotovo"))} okrsků).
+Seznam obcí s počty nálezů a rozhodujícími rezervami.</p></a>
+<a class="hub" href="senat/index.html"><h3>Senát 2026, 1. kolo →</h3><p>5 021 okrsků ve 27 obvodech, srovnání s komunálními volbami okrsek po okrsku.
+Proč bylo senátních obálek o 13 % méně a kde rozhodly jednotky hlasů.</p></a>
+<a class="hub" href="nalezy.html"><h3>Všechny nálezy →</h3><p>Společný registr {len(AF)} nálezů s filtrem podle voleb, území, jistoty a dopadu.</p></a>
+</div>
+<h2>Nálezy, které mění nebo mohou změnit výsledek, a těsné výsledky</h2>
+<p class="sub">Těsné výsledky v obcích s rozšířenou působností a s pověřeným obecním úřadem jsou v <a href="nalezy.html">registru všech nálezů</a> (filtr Dopad).</p>
+<div class="card tw"><table class="sortable">{FIND_HEAD}<tbody>{findings_rows(top, "index.html")}</tbody></table></div>
+<p class="sub"><a href="nalezy.html">Zobrazit všech {len(AF)} nálezů →</a></p>
+<h2>O analýze</h2><ul class="l">
+<li>Zdrojem jsou výhradně otevřená data ČSÚ (volby.gov.cz); každý nález má odkaz na výsledky okrsku v oficiální aplikaci.</li>
+<li>Postupy, omezení a literaturu popisuje <a href="metodika.html">Metodika</a>; mezivýsledky jsou v sekci <a href="data.html">Data</a>, výpočet lze zopakovat skripty v repozitáři.</li>
+<li>Analýza vznikla s pomocí AI modelu Claude Opus 5.5 a může obsahovat chyby. Statistický nález není důkazem úmyslu; závazné jsou jen výsledky vyhlášené Státní volební komisí.</li></ul>'''
+    _page('index.html', 'Přehled', body, 'Forenzní audit komunálních a senátních voleb 2026 z otevřených dat ČSÚ', section='home')
+
+
+def search_entries(AF, se_obvody):
+    S = []
+    for u in UL:
+        S.append((f'{u["nazev"]} – komunální volby' + ('' if u['stav'] == 'hotovo' else ' (v přípravě)'),
+                  u['url'] if u['stav'] == 'hotovo' else f'kv/index.html#u-{u["kod"]}'))
+    for u in UL:
+        for m in u['mc']:
+            if u['stav'] == 'hotovo':
+                S.append((f'{m["nazev"]} – městská část ({u["nazev"]})', f'{u["url"].rsplit("/", 1)[0]}/index.html#mc-{m["kod"]}'))
+            else:
+                S.append((f'{m["nazev"]} – městská část/obvod ({u["nazev"]}, v přípravě)', f'kv/index.html#u-{u["kod"]}'))
+    for o, nm in se_obvody:
+        S.append((f'Senát – obvod {o} {nm}', f'senat/index.html#obvod-{o}'))
+    for d in AF:
+        S.append((f'{d["gid"]} – {d["typ"]} ({d["misto"]})', d['url']))
+    S += [('Všechny nálezy', 'nalezy.html'), ('Metodika a zdroje', 'metodika.html'), ('Data ke stažení', 'data.html')]
+    return S
 
 
 fig_years = chart_years(); fig_margins = chart_margins(); fig_intent = chart_intent()
 import build_senat
-se_files = build_senat.build(page, fig, badge_j, badge_d, AUTHOR_URL)
+se_files = build_senat.build(_page, fig, badge_j, badge_d, AUTHOR_URL)
+AF = all_findings(build_senat.findings())
 page_index(); page_findings(); page_map(); page_tests(); page_method(); page_data(se_files)
+page_kv_index(); page_all_findings(AF); page_home(AF)
+write_assets(search_entries(AF, [(int(o), n) for o, n in build_senat.obvn.items() if o in set(build_senat.t5.OBVOD)]))
+for old in ('mapa.html', 'testy.html', 'senat.html'):  # stránky z původní (jen pražské) struktury
+    if os.path.exists(os.path.join(OUT, old)):
+        os.remove(os.path.join(OUT, old))
 print('site built in', OUT, os.listdir(OUT))

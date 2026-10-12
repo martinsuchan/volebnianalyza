@@ -40,6 +40,28 @@ def margins(V, NC, M, seats, q, last_win, first_lose):
     return res
 
 
+def do_prahu(V, NC, M, p):
+    """Kolik hlasů straně p chybí do 5% hranice (kladné), resp. kolik jich může ztratit, než pod ni klesne (záporné). Přidané či ubrané hlasy
+    mění i celkový součet, proto dělení (1 − 0,05·f); f přepočítává hranici u neúplných kandidátek (podnět z kontroly Turnova)."""
+    f = 0.05 * (NC[p] / M if NC[p] < M else 1)
+    return round((f * sum(V.values()) - V[p]) / (1 - f))
+
+
+def threshold_matters(V, NC, M, seats, p, do_prahu):
+    """Mění překročení 5% hranice stranou p (resp. pád pod ni) rozdělení mandátů? Strana pod hranicí: přidat hlasy, dokud se
+    nekvalifikuje, a zjistit, zda získá mandát. Strana nad hranicí s mandáty: pád pod hranici mandáty vždy mění."""
+    if do_prahu <= 0:  # strana je nad hranicí
+        return seats[p] > 0
+    V2 = dict(V); x = int(do_prahu)
+    for _ in range(50):
+        V2[p] = V[p] + x
+        s2, q2, _, _, _ = allocate(V2, NC, M)
+        if p in q2:
+            return s2[p] > 0
+        x += max(1, int(0.002 * sum(V.values())))
+    return False
+
+
 def run(year):
     d = load(year); ros, rk, cm = d['ros'], d['rk'], d['councils']
     rows, crows = [], []
@@ -57,10 +79,12 @@ def run(year):
                              hlasy_k_zisku=mg[p]['gain'], hlasy_k_ztrate=mg[p]['lose'],
                              volici_k_zisku=None if mg[p]['gain'] is None else math.ceil(mg[p]['gain'] / M),
                              volici_k_ztrate=None if mg[p]['lose'] is None else math.ceil(mg[p]['lose'] / M),
-                             do_prahu=round(0.05 * sum(V.values()) * (NC[p] / M if NC[p] < M else 1) - V[p])))
+                             do_prahu=do_prahu(V, NC, M, p),
+                             prah_rozhoduje=threshold_matters(V, NC, M, seats, p, do_prahu(V, NC, M, p))))
         # preferential votes within each party with seats
         for p in V:
             c = rk[(rk.ZK == zk) & (rk.POR_STR_HL == p) & (rk.PLATNOST == 'A')].sort_values('PORCISLO')
+            c = c.assign(POCHLASU=c.POCHLASU.fillna(0))  # chybějící údaj v registru (Jilemnice 2018)
             if not len(c):
                 continue
             avg = math.floor(V[p] / NC[p])  # §45 odst. 4: průměr zaokrouhlený dolů

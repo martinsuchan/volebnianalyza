@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 33 hlasů. PRO LIDI by při ztrátě 33 hlasů (nebo Pro Mšeno při zisku 99 hlasů) přišla o čtvrtý mandát; jednookrskové město.",
+    "dopad": "Pro Mšeno 11 → 12, PRO LIDI 4 → 3; zvolena by byla Monika Houžvicová (č. 12, Pro Mšeno) místo Pavla Štětiny (č. 3, PRO LIDI). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

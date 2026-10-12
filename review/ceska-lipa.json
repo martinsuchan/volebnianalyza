@@ -1,0 +1,17 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeny oba řádky (okrsky 561380/15 a 561380/9) včetně základu řádku, ostatních okrsků a součtů; simulace outcome() oprav obou hodnot (+36, −90).",
+    "zjisteni": "Dvě hodnoty. Okrsek 15: Jan Spilka (ŽIVÁ LÍPA č. 20) má 3 hlasy, řádek 35–58 (sousedé č. 19 a č. 21 41 a 38); nula za č. 25 je u č. 26–40, což jsou kandidáti nad M = 25, takže jen č. 20 je skutečný propad pod základ (~38), chybí ~36 hlasů (možná z hodnoty 39 vypadl znak). Okrsek 9: Martina Svatošová (SPOLEČNĚ č. 14) má 100 hlasů při základu 10 (celý řádek 8–23); 100 z 198 lístků je prakticky vyloučeno (jinde max. 38), správná hodnota je asi 10 (vložená nula). Součty stran = součet kandidátů (1 020 a 380), takže obě chyby jsou promítnuty do hlasů stran.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty i zvolené: Spilka (2 790 → 2 826) je pod preferenční hranicí 3 243 i bez zvolení, ŽIVÁ LÍPA 10 mandátů beze změny; Svatošová (702 → 612) není mezi 2 zvolenými SPOLEČNĚ (Turnhöfer 1 059, Kozák 838), ať je 100 nebo 10.",
+    "doporuceni": "Ověřit zápisy T/3 okrsků 561380/15 a 561380/9."
+  },
+  "batches": {
+    "kontrola": "Porovnány dávky XML s finálními daty t3/hl: u okrsku 561380/28 se změnil jen příznak PLATNE_HLASY.",
+    "zjisteni": "Okrsek 561380/28 byl zaslán opakovaně; počty voličů (821), vydaných (277), odevzdaných (276) a platných lístků (270) zůstaly stejné, změnily se jen platné hlasy z mezisoučtu 1 009 na konečných 6 148 (první zaslání zřejmě neúplné). Finální hlasy stran sečtou na 6 148, součet je konzistentní.",
+    "jistota": 5,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Ve finálních datech bez vlivu; informativní."
+  }
+}

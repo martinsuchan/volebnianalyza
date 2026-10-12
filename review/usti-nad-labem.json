@@ -1,0 +1,152 @@
+{
+  "missing:502316/4017:55480401": {
+    "kontrola": "Ověřeno v datech okrsku 502316/4017 (městský lístek i lístek MO Střekov), porovnáno s 8 sousedními okrsky, s ostatními 96 okrsky a s rokem 2022; dopad simulován přes outcome() pro všechny strany včetně horního odhadu.",
+    "zjisteni": "Okrsek 502316/4017 (Střekov, 598 zapsaných voličů, 316 obálek, 310 platných lístků): na městském lístku je 8 871 hlasů, tj. 77 % možných (310 × 37 = 11 470); sousední okrsky mají 86–94 %, medián města 92 %. Hlasy kandidátů jsou ale uvnitř zápisu konzistentní (součet kandidátů = hlasy strany, žádné nuly ani propady uprostřed listin), takže nejde o nedopsaný řádek. Deficit není soustředěn do jedné strany: JEDNO ÚSTÍ má 3 153 hlasů (kandidáti č. 1–26 po ~88, č. 27–36 po ~75, tedy zhruba 75–88 lístků s křížkem, tj. ~28 % lístků proti ~50 % u sousedů 4014 a 4013), zatímco ÚSTEČÁCI jsou výrazně nad očekáváním (1 151 hlasů = 13,0 % hlasů okrsku proti 3,7 % ve městě; kandidát č. 1 má 62, ostatní ~30) a ANO je nad průměrem sousedů. Stejný obraz je na lístku MO Střekov: 3 113 hlasů = 67 % možných (15 × 310), nejnižší hodnota ze všech 97 okrsků, a strana Za lepší Střekov tam má jen 44 hlasů proti ~388 očekávaným (na městském lístku Vaše Ústí 737). Odhadovaný podíl lístků s křížkem u strany je 0,70 (město) a 0,55 (MO) proti 0,87 a 0,80 u sousedů. V roce 2022 měl okrsek 84 % možných hlasů na obálku (průměr okrsků 86 %), tedy už tehdy mírně pod okolím. Odhad chybějících hlasů z původního nálezu (~1 534, tj. ~41 lístků) odpovídá zápisu, ale shodný deficit na obou nezávisle přepsaných lístcích svědčí spíš pro skutečné chování voličů (mnoho lístků s jednotlivými kandidáty, ne s křížkem u strany) nebo pro společnou příčinu než pro chybu přepisu jednoho řádku.",
+    "dukaz": "z(hlasy/lístek) = -8,5 vůči sousedním okrskům; deficit je ale shodný na městském (77 %) i MO lístku (67 %), kandidátské řádky jsou vnitřně konzistentní a žádná strana nemá stopu chybějícího balíku (u JEDNO ÚSTÍ na lístku MO jen ‚slabý‘ signál: ~58 lístků proti ~119 očekávaným).",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() pro zastupitelstvo města (37 mandátů): ani horní odhad (celý deficit 2 599 hlasů = všech 70 lístků s plným počtem hlasů) přidělený kterékoli jedné straně nemění mandáty ani zvolené, protože nejmenší skutečná rezerva města je 2 440 hlasů (SPOLU PRO ÚSTÍ ztrácí 3. mandát) a 2 730 hlasů (ANO získává 7. mandát). Uvedená rezerva 754 hlasů v původním textu je vzdálenost DSZ (1 kandidát) k přepočtené 5% hranici a mandát by straně nepřinesla (simulace +1 100 hlasů nic nemění). Konzervativní odhad (41 lístků) ani doplnění ~47 lístků pro JEDNO ÚSTÍ (nejpravděpodobnější místo deficitu) nic nemění. Dohromady s N02 by změnu mandátu (7. mandát ANO místo 22. JEDNO ÚSTÍ, zvolen by byl kandidát č. 7 ANO) vyvolalo až 74 lístků výhradně pro ANO (2 738 hlasů), což odporuje datům, protože ANO je v obou okrscích nad očekáváním. Na lístku MO Střekov je rezerva jen 138 hlasů (SPOLU PRO ÚSTÍ by při +10 lístcích, tj. +150 hlasech, získalo 2. mandát na úkor 8. mandátu JEDNO ÚSTÍ), ale SPOLU je v okrsku na lístku MO nad očekáváním (397 vs ~329 hlasů); doplnění Za lepší Střekov (+23 lístků) i JEDNO ÚSTÍ (+61 lístků) mandáty MO nemění.",
+    "umysl": "Bez indikace záměru – nejpravděpodobnější je neobvyklé chování voličů (rozdrobené lístky), případně nahodilá chyba při sčítání.",
+    "doporuceni": "Porovnat zápis okrsku s dokumentací komise (hlasy JEDNO ÚSTÍ a Za lepší Střekov na obou lístcích); při shodě vzít jako místní vzorec. Zvážit, aby detektor zahrnoval i lístek MO (okrsek 4017 je na něm nejhorším okrskem, rezerva MO Střekov je jen 138 hlasů).",
+    "vyradit": false
+  },
+  "missing:567892/1005:55480401": {
+    "kontrola": "Ověřeno v datech okrsku 567892/1005 (městský lístek i lístek MO Ústí-město), porovnáno se sousedními okrsky, s rokem 2022 a s druhým lístkem téhož okrsku; kandidátské řádky i součty zkontrolovány; dopad simulován přes outcome() pro každou stranu včetně horního odhadu.",
+    "zjisteni": "Okrsek 567892/1005 (Ústí-město, 646 zapsaných voličů, 314 obálek, 298 platných lístků město / 306 MO): na městském lístku je 8 185 hlasů, tj. 74 % možných (298 × 37 = 11 026), sousední okrsky mají 90–96 %. Na lístku MO Ústí-město (21 mandátů) má tentýž okrsek 6 113 hlasů = 95 % možných (306 × 21), tedy normál. Rozdíl mezi lístky (-0,209) je z-skóre -6,0 vůči 92 okrskům s ≥ 100 obálkami (druhý nejhorší okrsek má -0,072), takže nízká hodnota je specifická pro městský lístek, ačkoli lístky vyplňovali titíž voliči. V roce 2022 měl okrsek obě hodnoty shodné (87 % a 88 % možných hlasů na obálku). Deficit je soustředěn do JEDNO ÚSTÍ: na městském lístku má 4 150 hlasů (kandidáti hladce klesají ze 118 na 100, odhadem ~112 lístků s křížkem), na lístku MO 3 605 hlasů (162–183 po kandidátovi, ~172 lístků); tedy chybí asi 60 lístků ≈ 2 200 hlasů. Po doplnění takového balíku by okrsek měl 94 % možných hlasů, přesně úroveň lístku MO a sousedů. U ostatních stran je poměr město/MO v normálu (ANO 36 vs 44 lístků, SPOLU 22 vs 29), proto zbytek odpovídá menším odchylkám. Kandidátské řádky jsou uvnitř konzistentní (součty = hlasy stran), takže konkrétní chybu v čísle nelze z dat vyčíst; vzorec odpovídá nezapsanému nebo nezapočtenému balíku lístků JEDNO ÚSTÍ na městském lístku.",
+    "dukaz": "Dvě nezávislé linie: z(hlasy/lístek) = -9,4 vůči sousedním okrskům a z = -6,0 u rozdílu městský lístek minus lístek MO téhož okrsku (MO lístek je v normě); deficit odpovídá ~60 lístkům JEDNO ÚSTÍ (112 vs ~172 na lístku MO). Zbývá možnost, že voliči na městském lístku skutečně využili méně hlasů.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() pro zastupitelstvo města: doplnění 52 lístků (1 924 hlasů, odhad z původního nálezu) pro kteroukoli jednu stranu nic nemění; doplnění ~60 lístků (2 220 hlasů) pro JEDNO ÚSTÍ, kde deficit leží, rovněž nemění mandáty ani zvolené (JEDNO ÚSTÍ má dál 22 mandátů). Nejmenší rezervy města jsou 2 440 hlasů (SPOLU PRO ÚSTÍ ztrácí 3. mandát) a 2 730 hlasů (ANO získává 7. mandát), nikoli 754 hlasů z původního textu (vzdálenost DSZ s 1 kandidátem k přepočtené 5% hranici, která mandát nepřinese). Teoretický strop okrsku (všechny lístky s 37 hlasy) je 2 841 hlasů; změnu by vyvolalo jen přidělení ≥ 74 lístků (2 738 hlasů) výhradně ANO (7. mandát ANO místo 22. JEDNO ÚSTÍ, zvolen kandidát č. 7 ANO), což odporuje datům (ANO má v okrsku 1 349 hlasů, tedy v normálu). Společně s N01 platí totéž. Lístek MO Ústí-město není postižen.",
+    "umysl": "Bez indikace záměru – vzorec odpovídá nahodilé chybě (nezapsaný nebo nezapočtený balík lístků na městském lístku).",
+    "doporuceni": "Ověřit zápis okrsku i originál sčítacího formuláře městského lístku (hlasy JEDNO ÚSTÍ a součet platných hlasů); při potvrzení opravit zhruba o +60 lístků pro JEDNO ÚSTÍ. Mandáty se tím nemění.",
+    "vyradit": false
+  },
+  "tight": {
+    "kontrola": "Přepočet mandátů z dat (seats.csv a outcome()) pro MO Neštěmice; ověřeny d'Hondtovy podíly i preferenční práh a pořadí kandidátů SPOLU PRO ÚSTÍ; prověřeno, zda jsou v MO Neštěmice jiné nálezy (žádné).",
+    "zjisteni": "MO Ústí nad Labem-Neštěmice (15 mandátů, celkem 62 054 hlasů): poslední mandát obsazuje SPOLU PRO ÚSTÍ (3 169 hlasů, jeden mandát) jen o 21 hlasů před třetím mandátem ANO (podíly 3 169 vs 9 446 / 3 = 3 148,7; rozdíl 20,3 hlasu, tj. 2 voliči). Simulace: při -20 hlasech SPOLU se nic nemění, při -21 hlasech (nebo +62 hlasech ANO) přechází mandát na ANO: místo Petra Vidláka (SPOLU, č. 5) by byl zvolen Josef Říha (ANO, č. 3). I zvolená osoba za SPOLU je těsná: Vidlák (244 hlasů) je zvolen díky preferenčnímu posunu (práh 110 % průměru = 232,1 hlasu) o 2 hlasy před Nicole Školkovou (242); David Bauer (235) je také nad prahem a Liana Wagnerová (231) o 1 hlas pod. SPOLU je nad 5% hranicí o 66 hlasů. Žádná chyba v tomto zastupitelstvu nebyla zjištěna, nález je rizikový, ne důkazní. Dále je těsná rezerva v MO Střekov (SPOLU PRO ÚSTÍ získá 2. mandát při +138 hlasech) a v zastupitelstvu města se pořadí SPOLU PRO ÚSTÍ rozhoduje o 11 hlasů (Štrymplová 1 753 vs Novák 1 742 pro 3. zvolené místo), tyto případy ale nespadají do kritérií tohoto nálezu.",
+    "dukaz": "Rezerva 21 hlasů (2 voliči) je menší než jakákoli běžná chyba sčítání jednoho okrsku; drobné chyby (±1–5 hlasů) nejsou statisticky viditelné.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek",
+    "dopad": "Mandát SPOLU PRO ÚSTÍ (Petr Vidlák) versus třetí mandát ANO (Josef Říha) v MO Neštěmice rozhoduje 21 hlasů; kterákoli chyba v kterémkoli ze 21 okrsků MO tak může změnit složení zastupitelstva.",
+    "umysl": "Bez indikace",
+    "doporuceni": "Zvážit preventivní kontrolní přepočet hlasů MO Neštěmice (hlasy SPOLU PRO ÚSTÍ a ANO v 21 okrscích). Dodatek: při zveřejnění opravit zdvojenou tečku v textu (‚hl..‘).",
+    "vyradit": false
+  },
+  "inv0": {
+    "kontrola": "Ověřeno v datech (t3, obě zastupitelstva okrsku 567892/1018), porovnáno s ostatními 96 okrsky a pravděpodobnost nuly přepočtena z míry neplatnosti města a MO.",
+    "zjisteni": "Okrsek 567892/1018 (Ústí-město, 641 zapsaných voličů): 226 vydaných i odevzdaných obálek a 226 platných lístků na městském i MO lístku, tedy 0 neplatných na obou. Ve městě je neplatných 4,1 % a na lístcích MO 3,5 % (medián okrsku 9 neplatných lístků na městském lístku). Pravděpodobnost nuly při takové míře je ~0,008 % na městském lístku (0,959^226) a ~0,03 % na lístku MO, na obou tedy řádově méně. Souběžně jsou hlasy na platný lístek nižší než u sousedů: 88,4 % možných hlasů (město 7 389 hlasů) a 90,4 % (MO 4 291) proti mediánu města 91,9 %, což je slučitelné s tím, že mezi platnými zůstaly prázdné lístky. Jednostranné nuly mají i okrsky 567892/1021 (166 obálek, jen městský lístek), 501298/3013 (212) a 502316/4002 (185) (jen lístek MO) a 567892/1015 (12 obálek, bez významu). Podobný mechanismus se projevil u 502081/2001, kde byla v první dávce také nula neplatných (viz N08).",
+    "dukaz": "Při běžné míře neplatnosti je nula u okrsku s 226 obálkami velmi nepravděpodobná; shodná nula na obou lístcích a mírně nižší hlasy na lístek podporují hypotézu, že komise neplatné či prázdné lístky nevyčlenila.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty: neplatné lístky nemají hlasy, hlasy stran ani kandidátů se nemění. Zkresluje jen údaj o neplatných lístcích (v okrsku zřejmě několik až desítky, odhadem ~9 při průměru).",
+    "umysl": "Bez indikace záměru – pravděpodobně organizační chyba komise při třídění lístků.",
+    "doporuceni": "Ověřit v zápisu komise, zda byly neplatné lístky vyčleněny; kontrola v programu ČSÚ: varování při nulovém počtu neplatných lístků u okrsku s 100+ obálkami.",
+    "vyradit": false
+  },
+  "typos:souhrn": {
+    "kontrola": "Všechny tři hodnoty ověřeny v hl/ros (kandidátské řádky, součty strany, srovnání s ostatními okrsky) a dopad simulován přes outcome(); skenem všech řádků kandidátů dohledán širší problém u okrsku 567892/1007.",
+    "zjisteni": "(1) 502316/4004, lístek MO Střekov, Za lepší Střekov s podporou Vaše Ústí, kandidátka č. 13 Jitka Červinková: 5 hlasů, zatímco sousedé na listině mají 36–52 (č. 12: 43, č. 14: 42); č. 13 je mezi prvními 15 (M = 15), takže nemůže mít méně hlasů než lístků s křížkem u strany; pravděpodobně vypadla číslice (45 → 5). Součet kandidátů (654) se shoduje s hlasy strany, takže strana je podhodnocena o ~40 hlasů. (2) 567892/1007, městský lístek, SPOLU PRO ÚSTÍ: detektor označil jen kandidáta č. 16 Marka Lízra (0 místo ~16), ve skutečnosti je řádek poškozen mnohem víc: z 36 platných kandidátů má 19 nulu (č. 10–12, 16, 19–26, 28, 29, 31, 32, 34–36), ostatní 15–20 hlasů; hlasy strany 269 = součet kandidátů 254 + 15 hlasů neplatného č. 13. S ~15 lístky s křížkem by každý kandidát měl mít ≥ 15 hlasů (očekávaný součet ~540), na lístku MO má SPOLU v okrsku 357 hlasů (kandidáti 17–21) a v ostatních okrscích Ústí-město je městský počet 1,3–1,6násobek lístku MO (tj. ~480–570). Jde o nedopsaný zápis ~19 pozic, chybí ~285 hlasů. (3) 567892/1008, lístek MO Ústí-město, Vaše Ústí s podporou Za lepší Střekov, kandidát č. 1 Zdeněk Grus: 100 hlasů proti 10 (č. 2) a 7 (č. 3); v ostatních 38 okrscích má č. 1 nejvýše 47 hlasů (při 734 hlasech strany); 100 z 245 hlasů strany je nepravděpodobné, pravděpodobně vložená číslice (10 → 100), strana je nadhodnocena o ~90 hlasů.",
+    "dukaz": "(1) a (2) logická nemožnost (kandidáti do pozice M musí mít aspoň tolik hlasů jako lístků s křížkem u strany); (2) navíc nezávisle potvrzeno lístkem MO téhož okrsku; (3) jedna číslice navíc vrací hodnotu sousedů, v ostatních okrscích má kandidát č. 1 maximálně 47 hlasů. Jistota u (3) ~85–90 %.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace oprav: (1) +40 hlasů pro Za lepší Střekov a kandidátku č. 13 v MO Střekov, (2) +15 až +20 hlasů pro 19 nulových pozic SPOLU PRO ÚSTÍ v zastupitelstvu města, (3) -90 hlasů pro Vaše Ústí a kandidáta č. 1 v MO Ústí-město: bez vlivu na mandáty i pořadí zvolených (u SPOLU ve městě jsou pozice s nulou pod preferenčním prahem 1 733,6 hlasu, zvolení Bzura, Šidák a Štrymplová se nemění; Štrymplová má 1 753 hlasů, Novák 1 742, oba pozice mají v řádku 1007 vyplněné).",
+    "umysl": "Nízká – vzorec odpovídá nahodilé chybě přepisu (u 1007 nedopsanému řádku).",
+    "doporuceni": "Opravit data podle originálních zápisů, zejména řádek SPOLU PRO ÚSTÍ v okrsku 567892/1007 (ne jen kandidáta č. 16). Detektor by měl hlásit i více nul v řádku (nyní vynechává případy, kdy sousední kandidáti nejsou oba nenulové).",
+    "vyradit": false
+  },
+  "missing:501298/3002:50129801": {
+    "kontrola": "Ověřeno v datech okrsku 501298/3002 (lístek MO Severní Terasa i městský lístek), porovnáno se sousedními okrsky a rokem 2022, kandidátské řádky SPOLU PRO ÚSTÍ zkontrolovány; dopad simulován přes outcome() pro každou stranu včetně teoretického stropu.",
+    "zjisteni": "Okrsek 501298/3002 (Severní Terasa, 1 048 zapsaných voličů, 364 obálek, 361 platných lístků MO / 357 město): na lístku MO je 4 433 hlasů, tj. 82 % možných (361 × 15 = 5 415), sousední okrsky v MO mají 89–96 %; na městském lístku 11 353 hlasů = 86 % (sousedé 91–93 %). Nízká hodnota je tedy na obou lístcích, v roce 2022 měl okrsek 89 % (město) a 86 % (MO) na obálku, v 2026 jen 84 % a 81 %. Strana SPOLU PRO ÚSTÍ má na lístku MO 303 hlasů (84 hlasů na 100 lístků proti 116–173 u sousedů), což odpovídá deficitu ~126 hlasů, tedy jen čtvrtině z celkově chybějících ~525 hlasů; ostatní strany jsou v normálu (JEDNO ÚSTÍ 540 a ANO 353 hlasů na 100 lístků proti 515–643 a 273–391 u sousedů). Kandidáti SPOLU mají hladký řádek 16–29 hlasů (součet = hlasy strany), na městském lístku má SPOLU v okrsku 870 hlasů (řádek 21–34). Poměr hlasů SPOLU na lístku MO/městském lístku je 0,35 (u sousedů 0,46–0,82), tedy mírně mimo, ne však extrémně (z = -2,1).",
+    "dukaz": "z(hlasy/lístek) = -8,1 vůči sousedním okrskům; deficit je ale rozptýlen přes více stran a shodný na obou lístcích, tedy slučitelný s nižším využitím hlasů voliči; konkrétní chybný řádek ani balík lístků v datech nelze určit.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() pro MO Severní Terasa (15 mandátů): ani celý deficit 525 hlasů, ani teoretický strop okrsku (982 hlasů = všechny lístky s plným počtem 15 hlasů) přidělený kterékoli jedné straně nemění mandáty ani zvolené. Skutečná nejmenší rezerva MO je 874 hlasů (SPD ztrácí mandát) a 994 hlasů (SPOLU PRO ÚSTÍ získává 2. mandát), nikoli 794 hlasů z původního textu (vzdálenost PRO Právo k přepočtené 5% hranici, která mandát nepřinese).",
+    "umysl": "Bez indikace záměru – pravděpodobně chování voličů nebo nahodilá chyba.",
+    "doporuceni": "Ověřit zápis okrsku (hlasy SPOLU PRO ÚSTÍ na lístku MO a součty), bez zvýšené priority.",
+    "vyradit": false
+  },
+  "cross": {
+    "kontrola": "Ověřeno v cross_2026.pkl, v hl a t3 pro všech 39 okrsků Ústí-město (podíl ÚSTEČÁCI na městském lístku a lístku MO); ověřena i metodika očekávání a kandidátské řádky ÚSTEČÁCI v okrsku 567892/1038.",
+    "zjisteni": "Tři zmíněné okrsky nejsou zjevné chyby. ÚSTEČÁCI kandidují na městském lístku i na lístku MO Ústí-město (strana č. 3, 6 328 hlasů, 3,26 %). Okrsky 567892/1014 (49 obálek) a 567892/1015 (12 obálek) jsou malé: ÚSTEČÁCI mají na městském lístku 74 hlasů (2 lístky × 37) a 37 hlasů (1 lístek) a na lístku MO 0, ale očekávání na lístku MO je jen ~1,7 a ~0,7 lístku, tedy nula je náhodná (z = -1,2 a -1,0). Extrémní z-skóre 27 a 34 vzniklo tím, že očekávání pro městský lístek se odvozuje z nuly na lístku MO (0,03–0,2 hlasu), což je artefakt metody. Okrsek 567892/1038: městský lístek 239 hlasů (3,1 %), lístek MO 8 hlasů (0,18 %, očekáváno ~119, z = -2,1), na lístku MO jsou to jednotlivé hlasy kandidátů (0–2), celý lístek MO má vyplněno 97 % možných hlasů, tedy není kam doplnit chybějící balík. Podíl ÚSTEČÁCI na lístku MO se v 39 okrscích Ústí-město pohybuje od 0 do 27 % (medián 2,0 %), na městském lístku medián 3,3 %; podobné nebo větší rozdíly mají i okrsky 1031 (80 vs 8 hlasů) a 1007 (164 vs 21), takže jde o místní vzorec (ÚSTEČÁCI se na městském lístku volí častěji než na lístku MO).",
+    "dukaz": "Z-skóre ≥ 8 vzniká u 1014 a 1015 výhradně nulovým očekáváním z druhého lístku a malými čísly; u 1038 je skutečné z-skóre na lístku MO jen -2,1 a podobný rozptyl mají desítky okrsků.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: ÚSTEČÁCI mají na lístku MO Ústí-město 6 328 hlasů (3,26 %) a k 5% hranici jim chybí 3 368 hlasů; i doplnění ~110 hlasů z okrsku 1038 je řádově menší než nejmenší rezerva MO (1 282 hlasů, ANO získává 4. mandát) a rezerva města je 2 440 hlasů.",
+    "umysl": "Bez indikace",
+    "doporuceni": "Nález vyřadit. V detektoru ignorovat páry, kde je očekávání z druhého lístku < ~5 hlasů, a omezit z-skóre (nyní vzniká z 0,03–0,2 očekávaných hlasů).",
+    "vyradit": true
+  },
+  "batches": {
+    "kontrola": "Ověřeno v batches_2026.pkl a batch_votes_2026.pkl (všechny dávky obou okrsků) a porovnáno s finálními daty t3.",
+    "zjisteni": "Dva okrsky byly zaslány opakovaně: 502081/2001 (Neštěmice): v dávce 29 (10. 10. 16:48) bylo 112 odevzdaných obálek a 112 platných lístků (0 neplatných), v opakované dávce 52 (18:43) 117 odevzdaných obálek, platné lístky zůstaly 112 (město) a 98 (MO), hlasy beze změny (město 3 985 hlasů); finální data mají 117 obálek, tedy oprava je v nich zahrnuta. 567892/1014 (Ústí-město): v dávce 20 (16:04) 47 odevzdaných obálek a 44 platných lístků MO (902 hlasů), v dávkách 57 (19:07–19:08, lístek MO s příznakem OPAKOVANE = 1) 49 odevzdaných obálek, platné lístky 47 (město, 1 627 hlasů) a 44 (MO) beze změny; finální data odpovídají (49 obálek). V obou případech se tedy opravil jen počet odevzdaných obálek (112 → 117, 47 → 49), hlasy stran se nezměnily.",
+    "dukaz": "XML dávky ČSÚ (příznak OPAKOVANE) a porovnání hodnot jednotlivých dávek s finálními daty.",
+    "jistota": 5,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Ve finálních datech bez vlivu: hlasy stran a platné lístky se mezi dávkami nezměnily, změnil se pouze počet odevzdaných obálek.",
+    "umysl": "Žádná – oprava během zpracování.",
+    "doporuceni": "Žádné.",
+    "vyradit": false
+  },
+  "row:567892/1007:55480401:8": {
+    "kontrola": "Ověřen celý vektor hlasů kandidátů SPOLU PRO ÚSTÍ (HLASY_01–37) na městském lístku okrsku 567892/1007, porovnán s lístkem MO téhož okrsku a se souhrnem překlepů (typos:souhrn, bod 2); doplnění simulováno přes outcome() pro 15, 16, 20 a 30 hlasů na každou nulu.",
+    "zjisteni": "Městský lístek, 234 platných lístků, SPOLU PRO ÚSTÍ 269 hlasů: kandidáti č. 1–9 mají 15–20 hlasů (20, 15, 16, 15, 16, 16, 16, 17, 17), z 36 platných kandidátů má 19 nulu (č. 10–12, 16, 19–26, 28, 29, 31, 32, 34–36) a mezi nulami jsou osamělé hodnoty 15 (č. 14, 15, 18, 27, 30, 33, 37; č. 13 je neplatný). Kandidát č. 37 s 15 hlasy za nulami u č. 10–12 je při křížkové logice nemožný: každý kandidát v prvních 37 by měl mít aspoň tolik hlasů, kolik je lístků s křížkem (~15). Jde o nedopsaný zápis 19 pozic; chybí 285–311 hlasů (19 × 15 až 16,4), takže celý řádek má mít ~540–580 hlasů. Je to tentýž jev jako v souhrnu překlepů (bod 2, tam ‚chybí ~285 hlasů‘, stejných 19 nul); odhad sjednocen na 285–311. Lístek MO téhož okrsku je úplný (SPOLU má 357 hlasů).",
+    "dukaz": "Dvě linie: (1) vnitřní logika řádku (č. 37 a č. 14 mají 15 hlasů, č. 10–12 nulu; křížek u strany dává hlas prvním 37 kandidátům); (2) lístek MO téhož okrsku má pro SPOLU 357 hlasů a v ostatních okrscích Ústí-město je městský počet 1,3–1,6násobek lístku MO (~480–570).",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() pro zastupitelstvo města (37 mandátů): doplnění 15, 16, 20 i 30 hlasů každému z 19 kandidátů (285 až 570 hlasů straně) nemění mandáty ani zvolené osoby.",
+    "umysl": "Nízká – nedopsaný řádek zápisu (typicky přechod na další stranu tiskopisu); bez indikace záměru.",
+    "doporuceni": "Ověřit zápis okrsku 567892/1007 – hlasy kandidátů SPOLU PRO ÚSTÍ na městském lístku (č. 10–12, 16, 19–26, 28, 29, 31, 32, 34–36). Nález duplikuje bod 2 souhrnu překlepů; při sestavení zprávy počítat jednou.",
+    "vyradit": false
+  },
+  "row:567892/1032:55480401:6": {
+    "kontrola": "Ověřen vektor hlasů kandidátů Vaše Ústí s podporou Za lepší Střekov na městském lístku okrsku 567892/1032 vůči lístku MO téhož okrsku a ostatním stranám okrsku; doplnění simulováno přes outcome() pro 7, 9, 15 a 30 hlasů na nulu.",
+    "zjisteni": "Městský lístek, 255 platných lístků, strana 105 hlasů: kandidáti č. 1–7 mají 15, 7, 7, 9, 12, 10, 8, dále č. 11 = 9 a č. 16, 17, 21, 36 po 7 hlasech; 25 kandidátů (č. 8–10, 12–15, 18–20, 22–35, 37) má nulu. Hodnota 7 (nejmenší nenulová) odpovídá počtu lístků s křížkem u strany; kandidát č. 36 se 7 hlasy za nulami u č. 8–10 je při křížkové logice nemožný (č. 11 = 9 je vyšší než č. 8 = 0). Lístek MO téhož okrsku je úplný (170 hlasů, kandidáti č. 1–21 po 6–13, tj. ~7 křížků). Jde o nedopsaný zápis 25 pozic; chybí odhadem 175 (25 × 7) až 233 hlasů (odhad detektoru). Detektor uvádí ~9 křížků a jistotu 2; nejmenší nenulová hodnota je ale 7 a izolované hodnoty 7 za nulami vzorec potvrzují.",
+    "dukaz": "Dvě linie: vnitřní logika řádku (izolované hodnoty 7 u č. 16, 17, 21, 36 za nulami) a úplný řádek téže strany na lístku MO (170 hlasů) proti 105 na městském lístku se 37 kandidáty.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() pro zastupitelstvo města (37 mandátů): doplnění 7, 9, 15 i 30 hlasů každému z 25 kandidátů (175 až 750 hlasů straně) nemění mandáty ani zvolené osoby.",
+    "umysl": "Nízká – nedopsaný řádek zápisu; bez indikace záměru.",
+    "doporuceni": "Ověřit zápis okrsku 567892/1032 – hlasy kandidátů Vaše Ústí s podporou Za lepší Střekov na městském lístku.",
+    "vyradit": false
+  },
+  "swap:567892/1012:55480401:1:6": {
+    "kontrola": "Porovnány oba lístky okrsku 567892/1012, okrsky Ústí-město (1001–1039) i Střekov, rok 2022; ověřeny součty kandidátů s hlasy stran, profily preferencí a simulován dopad prohození přes outcome().",
+    "zjisteni": "ÚSTEČÁCI mají v okrsku 2 165 hlasů (18,2 %) na městském lístku a 1 823 hlasů (27,3 %) na lístku MO (ostatní okrsky Ústí-město 0,1–11 % resp. do 5,9 %), tedy stejný vzorec na dvou nezávisle opsaných lístcích s odlišným pořadím stran. Vaše Ústí s podporou Za lepší Střekov: 251 hlasů (2,1 %) město a 128 (1,9 %) MO, což odpovídá okrskům Ústí-město (0–5 %). Očekávání ~1 484 hlasů vzešlo ze sousedů ze Střekova (502316/40xx, kde je Za lepší Střekov místní kandidátka s 8–21 %), nikoli z okolí v Ústí-město. Součty kandidátů sedí (ÚSTEČÁCI ~54–58 hlasů na kandidáta, Vaše ~6–7).",
+    "dukaz": "Silný podíl ÚSTEČÁKŮ (18,2 % město, 27,3 % MO) se opakuje na druhém lístku; prohození by muselo nastat na obou lístcích nezávisle. Falešný nález vznikl výběrem sousedů z jiné části města.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Hypoteticky: prohození (1 914 hlasů) by nezměnilo mandáty (ÚSTEČÁCI 0, Vaše Ústí 4), jen by na mandátu Vaše Ústí zaměnilo zvoleného přes preferenční práh (č. 3 Vonka Černá místo č. 4 Grus). Záměna nepotvrzena, reálný dopad žádný.",
+    "umysl": "Bez indikace – místní vzorec.",
+    "doporuceni": "Neřešit; v detektoru brát sousedy v rámci téhož městského obvodu a místní kandidátky (Za lepší Střekov) zvlášť.",
+    "vyradit": true
+  },
+  "swap:567892/1014:55480401:5:9": {
+    "kontrola": "Porovnány oba lístky okrsku 567892/1014, jeho velikost, rok 2022 a sousední okrsky; zkontrolovány kandidátské řádky; dopad prohození simulován přes outcome().",
+    "zjisteni": "Malý okrsek: 1 000 zapsaných voličů, jen 49 obálek (47 platných lístků město, 44 MO; v roce 2022 39 obálek). ANO 2011 má na městském lístku všech 37 kandidátů shodně 34 hlasů (34 lístků s křížkem, 72 %), JEDNO ÚSTÍ po 3 hlasech; na lístku MO ANO 32 hlasů u každého z 21 kandidátů (672 hlasů, 74,5 %) a JEDNO ÚSTÍ 126. Shodný poměr ANO ≈ 72–75 % na dvou nezávisle opsaných lístcích, kde jsou strany pod jinými čísly (město 5/9, MO 1/2), vylučuje prohození při přepisu. Podíl ANO je v tomto okrsku vysoký (v roce 2022 jen 23–25 %), ale při 47 lístcích jde o ověřitelný, ne chybový jev.",
+    "dukaz": "Stejný vzorec na obou lístcích s odlišným pořadím stran; malý počet lístků (47).",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Hypoteticky prohození 1 147 hlasů (město) nemění mandáty ani zvolené osoby.",
+    "umysl": "Bez indikace – místní vzorec v malém okrsku.",
+    "doporuceni": "Neřešit; v detektoru vyloučit okrsky s < 100 obálkami nebo požadovat shodu i na druhém lístku.",
+    "vyradit": true
+  },
+  "swap:567892/1014:56789201:1:2": {
+    "kontrola": "Totéž jako u swap:567892/1014:55480401:5:9 – oba lístky okrsku 567892/1014, rok 2022 a sousedé; dopad prohození simulován přes outcome().",
+    "zjisteni": "Lístek MO Ústí-město, malý okrsek 567892/1014 (49 obálek, 44 platných lístků): ANO 2011 672 hlasů (32 u každého z 21 kandidátů, 74,5 %), JEDNO ÚSTÍ 126 (14,0 %). Stejně vysoký podíl ANO (77,3 %) je na městském lístku téhož okrsku, kde jsou strany pod jinými čísly; prohození by muselo nastat na obou lístcích nezávisle. Nejde o záměnu, ale o místní vzorec malého okrsku.",
+    "dukaz": "Shoda s nezávislým městským lístkem téhož okrsku.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Hypoteticky prohození 546 hlasů (MO) nemění mandáty ani zvolené osoby.",
+    "umysl": "Bez indikace – místní vzorec.",
+    "doporuceni": "Neřešit; viz doporučení u předchozího nálezu.",
+    "vyradit": true
+  },
+  "row:502081/2010:55480401:5": {
+    "kontrola": "Ověřen vektor HLASY_01–37 řádku v hl, součet kandidátů = POC_HLASU (324), neplatní kandidáti žádní; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 324 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 10 (rozpětí 9–10), nulu má 3 z 37 kandidátů (č. 20–22). Podíl strany v okrsku je 45,9 % proti 41,1 % (rozpětí 31,2–46,7 %) v sousedních okrscích a 50,2 % mediánu zastupitelstva. Na druhém lístku (Ústí nad Labem-Neštěmice) má táž strana v okrsku 123 hlasů, tj. 39,0 % (medián zastupitelstva 25,8 %). Hlasy na platný lístek v okrsku: 0,954 oproti 0,919 u sousedů (bez deficitu).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 30 hlasů (konzervativně, medián řádku) i 30 hlasů (horní odhad) nemění rozdělení mandátů (strana 22 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 4
+  }
+}

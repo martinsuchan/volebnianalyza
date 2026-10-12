@@ -1,0 +1,9 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Jiřina Gallová (Sdružení nez. kan. pro Mohelnici, č. 4, okrsek 540471/13) má 38 hlasů místo ~8; podíl 22,0 % je nad maximem jinde (16,7 %), ale v řádku má 28 hlasů i č. 8 a v jiných okrscích mají kandidáti podíly až 15,6 % (p90), takže jde pravděpodobněji o místní preferenci.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() s opravou každé hodnoty: mandáty i zvolení beze změny."
+  }
+}

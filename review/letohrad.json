@@ -1,0 +1,13 @@
+{
+  "swap:580538/5:58053801:3:4": {
+    "kontrola": "Porovnány podíly obou stran ve všech 6 okrscích 2026 i 2022 (stejné okrsky), vektory kandidátů obou stran v okrsku 5, součty okrsku a simulace outcome() s prohozením hodnot.",
+    "zjisteni": "SPOLU PRO LETOHRAD má v okrsku 5 5 256 hlasů (54,1 %), SDRUŽENÍ PRO LETOHRADSKO, S PODPOROU 3PK 2 987 (30,7 %); po prohození by měla SPOLU 30,7 % a Sdružení 54,1 %. Jde ale o místní vzorec, nikoli o záměnu: okrsky 4 a 5 jsou baštou SPOLU i v roce 2022 (SPOLU (ODS, KDU-ČSL, TOP 09) tehdy 35,2 % v okrsku 4 a 44,7 % v okrsku 5, SDRUŽENÍ PRO LETOHRADSKO jen 33,6 % a 33,3 % oproti 52–60 % v okrscích 1–3). V roce 2026 mají v okrscích 4 a 5 SPOLU 39,5 % a 54,1 % a Sdružení 35,9 % a 30,7 %, jinde SPOLU 27–32 % a Sdružení 52–55 %. Vektory kandidátů obou stran jsou vnitřně konzistentní (bez nul, součty odpovídají hlasům stran), takže by musely být prohozeny celé řádky včetně 21 kandidátů najednou.",
+    "dukaz": "Rok 2022: stejné rozložení sil v okrscích 4 a 5 (SPOLU nad Sdružením), tedy trvalý místní vzorec; Δχ² = 85 vzniká právě tímto vzorcem.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Pro úplnost simulace prohození: SPOLU PRO LETOHRAD 8 → 7 mandátů (Daniel Kubelka č. 2, Jiří Skalický č. 5 a Čestmír Doubrava č. 6 by byli nahrazeni Terezou Juráškovou č. 9 a Davidem Šubertem č. 18 – posun preferenčního prahu), SDRUŽENÍ PRO LETOHRADSKO 10 → 11 (Pavla Skácelíková, č. 11). Protože jde o místní vzorec, změna se nepředpokládá.",
+    "umysl": "Bez indikace – skutečný volební vzorec lokality.",
+    "doporuceni": "Nález vyřadit.",
+    "vyradit": true
+  }
+}

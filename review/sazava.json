@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome().",
+    "zjisteni": "Rezerva 34 hlasů: SPOLEČNĚ PRO SÁZAVU by při úbytku ~34 hlasů ze 6 mandátů klesla na 5 (odpadl by Petr Šibrava, č. 3) a Zdraví Sport Vzdělání (7 mandátů) by získalo osmý (Richard Strouhal, č. 8); totéž při +45 hlasech pro Zdraví Sport Vzdělání.",
+    "dopad": "Zdraví Sport Vzdělání 7 → 8 a SPOLEČNĚ PRO SÁZAVU 6 → 5 mandátů při změně o ~34 hlasů (d'Hondt u posledního mandátu).",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

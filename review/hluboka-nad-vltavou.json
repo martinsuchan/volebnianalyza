@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor kandidáta v okrsku 4, jeho podíl ve všech okrscích a v roce 2022, bydliště a simulace outcome().",
+    "zjisteni": "Jiří Valenta (Hluboká pro rodinu č. 15, Bavorovice) má v okrsku 544485/4 25 hlasů při sousedech 6 a 6 (12,1 % hlasů strany proti 3,0–4,2 % jinde). Stejný vzorec měl v roce 2022 (listina č. 2, č. 14): 10,0 % v okrsku 4 proti 3,1–5,2 % jinde (19 hlasů), takže jde o místní preferenci z Bavorovic, ne o překlep.",
+    "dukaz": "Rok 2022: 10,0 % v témže okrsku 4 proti ~4 % jinde; bydliště Bavorovice.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu; simulace opravy (–19 hlasů) nemění mandáty ani zvolené.",
+    "umysl": "Bez indikace – skutečná preference.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

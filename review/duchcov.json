@@ -1,0 +1,8 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s dV = –7 hlasů pro DUCHCOV MĚSTO ROVNOSTI – STAN.",
+    "zjisteni": "O 5% hranici rozhodlo 7 hlasů (21 mandátů, tj. 0,3 voliče): DUCHCOV MĚSTO ROVNOSTI – STAN má 2 184 hlasů, tj. 5,0146 %, a získala 1 mandát (Michael Šlajchrt, č. 1). Úbytek o 7 a více hlasů by ji dostal pod 5% hranici: mandát by ztratila a získala by ho ANO 2011 (4 → 5 mandátů, Vít Fiala, č. 3). Druhý nejbližší zlom: Šance pro Duchcov by při –398 hlasech přišla o mandát (Jitka Bártová, č. 16) ve prospěch ANO 2011.",
+    "dopad": "Mandát může změnit chyba o 7 hlasů v součtu STAN (nebo v celkovém počtu hlasů, který určuje hranici); žádná konkrétní chyba nebyla nalezena, jde o upozornění na těsný výsledek.",
+    "jistota": 1
+  }
+}

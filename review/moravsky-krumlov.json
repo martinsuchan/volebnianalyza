@@ -1,0 +1,11 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor ODS v okrsku 8, stejný kandidát v ostatních okrscích, bydliště; rok 2022 pro osobu nenalezen; simulace outcome().",
+    "zjisteni": "Petr Procházka (ODS č. 7, bydliště Polánka) 52 hlasů v okrsku 594482/8 (celkem strana 197, ostatní kandidáti 6–12, ve zbytku města 15–24). Vzorec odpovídá kandidátovi z místní části, kterého okrsek silně podporuje; hodnota 52 není vložená číslice (6 → 52).",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace opravy: bez vlivu na mandáty i pořadí zvolených.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

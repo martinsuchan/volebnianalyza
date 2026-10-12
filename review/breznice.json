@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome().",
+    "zjisteni": "Rezerva 24 hlasů: PRO NAŠE MĚSTO by při úbytku ~24 hlasů ze 3 mandátů kleslo na 2 (odpadl by Robert Čížek, č. 2) a SPOLEČNĚ PRO BŘEZNICI (7 mandátů) by získala osmý (Monika Schořovská, č. 8).",
+    "dopad": "SPOLEČNĚ PRO BŘEZNICI 7 → 8 a PRO NAŠE MĚSTO 3 → 2 mandáty při změně o ~24 hlasů (d'Hondt u posledního mandátu).",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

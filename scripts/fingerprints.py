@@ -24,6 +24,9 @@ def digit_tests(year):
     out = {}
     for lab, sel in (('magistrat', hl.TYPZASTUP == 1), ('mc', hl.TYPZASTUP == 2)):
         v = hl[sel & (hl.POC_HLASU >= 10)].POC_HLASU.astype(int).values
+        if len(v) < 50:  # město bez MČ/MO (nebo příliš málo dat)
+            out[lab] = None
+            continue
         ld = np.bincount(v % 10, minlength=10)
         chi_ld = stats.chisquare(ld)
         s = np.array([int(str(x)[1]) for x in v])
@@ -39,7 +42,7 @@ def digit_tests(year):
             continue
         c = np.bincount(v % 10, minlength=10); r = stats.chisquare(c)
         per.append(dict(MC=mc, n=int(len(v)), chi2=float(r.statistic), p=float(r.pvalue)))
-    per = pd.DataFrame(per); per['p_bonf'] = (per.p * len(per)).clip(upper=1)
+    per = pd.DataFrame(per, columns=['MC', 'n', 'chi2', 'p']); per['p_bonf'] = (per.p * len(per)).clip(upper=1)
     out['per_mc'] = per.sort_values('p').to_dict('records')
     # T3 counts last digit
     t = t3[t3.TYPZASTUP == 1]
@@ -100,13 +103,16 @@ def digits_corrected(year):
     out = {}
     for lab, tz in (('magistrat', 1), ('mc', 2)):
         h = hl[hl.TYPZASTUP == tz]
+        if (h.HLASY_01 >= 10).sum() < 50:
+            out[lab] = None
+            continue
         c1 = h.HLASY_01.astype(int).values
         v = c1[c1 >= 10]; ld = np.bincount(v % 10, minlength=10); r = stats.chisquare(ld)
         s = np.array([int(str(x)[1]) for x in v]); sd = np.bincount(s, minlength=10); r2 = stats.chisquare(sd, BENF2 * len(s))
         v100 = c1[c1 >= 100]; ld100 = np.bincount(v100 % 10, minlength=10); r100 = stats.chisquare(ld100)
         hm = h.merge(t3[['OID', 'TYPZASTUP', 'MANDATY']].drop_duplicates(['OID', 'TYPZASTUP']), on=['OID', 'TYPZASTUP'], how='left')
         vp = hm[(hm.MANDATY % 5 != 0) & (hm.POC_HLASU >= 100)].POC_HLASU.astype(int).values
-        rp = stats.chisquare(np.bincount(vp % 10, minlength=10)) if len(vp) else None
+        rp = stats.chisquare(np.bincount(vp % 10, minlength=10)) if len(vp) >= 50 else None
         out[lab] = dict(n_c1=int(len(v)), ld_c1_chi2=float(r.statistic), ld_c1_p=float(r.pvalue), ld_c1_counts=ld.tolist(),
                         bl2_c1_mean=float(s.mean()), bl2_c1_chi2=float(r2.statistic), bl2_c1_p=float(r2.pvalue),
                         n_c1_100=int(len(v100)), ld_c1_100_chi2=float(r100.statistic), ld_c1_100_p=float(r100.pvalue), ld_c1_100=ld100.tolist(),
@@ -137,7 +143,10 @@ if __name__ == '__main__':
         json.dump(hist, open(f'{RES}/klimek_hist_{y}.json', 'w'), ensure_ascii=False)
         print('=====', y)
         for lab in ('magistrat', 'mc'):
-            x = dt[lab]; print(f" {lab}: n={x['n']} lastdigit chi2={x['ld_chi2']:.1f} p={x['ld_p']:.3g} | 2BL mean={x['bl2_mean']:.3f} chi2={x['bl2_chi2']:.1f} p={x['bl2_p']:.3g}")
+            x = dt[lab]
+            if x is None:
+                continue
+            print(f" {lab}: n={x['n']} lastdigit chi2={x['ld_chi2']:.1f} p={x['ld_p']:.3g} | 2BL mean={x['bl2_mean']:.3f} chi2={x['bl2_chi2']:.1f} p={x['bl2_p']:.3g}")
         print(' T3 last digit', dt['t3']['chi2'], dt['t3']['p'], ' worst MČ', dt['per_mc'][:3])
         print(' integer %', ip)
         print(' klimek', kl)

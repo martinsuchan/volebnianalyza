@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Obě hodnoty ověřeny v hl/t3 proti listině, ostatním okrskům a simulováno outcome(); třetího kandidáta (Pavel Antonín, č. 9 PRO BROD, okrsek 13) detektor sám vyřadil jako preferenci.",
+    "zjisteni": "(1) Okrsek 568414/7, PRO BROD, kand. č. 3 Ivana Šrámková má 45 hlasů, sousedé č. 2 a č. 4 mají 5 a 6, č. 1 má 10; okrsek měl 121 platných lístků (45 by byla ~37 %), strana má 156 hlasů, v ostatních okrscích má č. 3 nejvýše 19 hlasů. Poměr k sousedům 8,2× (jinde medián 0,8×) – vložená číslice (5→45), jistota vysoká. (2) Okrsek 568414/32, Společně pro Brod, kand. č. 2 Alena Jindrová má 4 hlasy, sousedé č. 1 a č. 3 mají 16 a 17; strana má 102 hlasů při 210 lístcích a řádek je nerovnoměrný (č. 4 má 2, č. 6 a č. 7 po 1), poměr 0,24 (jinde medián 0,75, druhý nejnižší z 31 okrsků); slabší případ, nelze vyloučit skutečně nízkou podporu.",
+    "dukaz": "Šrámková: poměr 8,2× a nejvyšší hodnota č. 3 ve městě (45 vs. max 19 jinde); Jindrová: druhý nejnižší poměr.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: oprava Šrámkové (−40 hlasů) a Jindrové (+10 až +12) nemění mandáty ani zvolené; žádná z nich zvolena není.",
+    "umysl": "Nízká – nahodilé chyby přepisu.",
+    "doporuceni": "Ověřit zápisy T/3 okrsků 568414/7 (č. 3 PRO BROD) a 568414/32 (č. 2 Společně pro Brod).",
+    "vyradit": false
+  }
+}

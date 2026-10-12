@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() (+11 hlasů ANO).",
+    "zjisteni": "Rezerva 11 hlasů: ANO 2011 potřebuje +11 hlasů na třetí mandát (Jan Špeta, č. 3); PRO LEPŠÍ HLUBOČKY by tak ze 3 mandátů klesly na 2 (zvolení Ladislava Hejdy, č. 1, by zaniklo). Stejný výsledek dává úbytek 11 hlasů PRO LEPŠÍ HLUBOČKY.",
+    "dopad": "ANO 2011 2 → 3 a PRO LEPŠÍ HLUBOČKY 3 → 2 mandáty při změně o 11 hlasů (d'Hondt u posledního mandátu).",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "integ:A2": {
+    "kontrola": "Ověřeno v t3: okrsek 579025/34 a porovnání se všemi 36 okrsky města a rokem 2022.",
+    "zjisteni": "Okrsek 579025/34 (Trutnov, 134 voličů v seznamu): vydáno 56 obálek, odevzdáno 57, platných lístků 57. Je to jediný okrsek města, kde odevzdané přesahují vydané (rozdíl −1); v roce 2022 měl týž okrsek opačný stav (vydáno 60, odevzdáno 59). Hlasy sedí na odevzdané lístky: 1 704 hlasů = 0,906 možných (57 × 33), medián města 0,905.",
+    "dukaz": "Deterministický aritmetický rozpor 57 > 56; hlasy odpovídají 57 odevzdaným lístkům.",
+    "jistota": 5,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: rozdíl o jednu obálku v okrsku s 1 704 hlasy nemá vliv na mandáty ani pořadí kandidátů.",
+    "umysl": "Žádná – drobná chyba evidence obálek (zřejmě nezapsaná jedna vydaná obálka).",
+    "doporuceni": "Bez dalších kroků; komise může opravit údaj o vydaných obálkách.",
+    "vyradit": false
+  }
+}

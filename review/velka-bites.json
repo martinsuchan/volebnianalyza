@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor kandidáta v okrsku 3, jeho podíl ve všech okrscích a simulace outcome().",
+    "zjisteni": "František Žák (Dobrá volba pro Bíteš č. 16, Velká Bíteš) má v okrsku 596973/3 25 hlasů při sousedech 7 a 10 (9,2 % hlasů strany proti 3,5–5,5 % jinde; i v okrscích 1 a 4 má 59 a 24 hlasů, tedy nad sousedy). V roce 2022 pod stejným jménem nekandidoval. Zvýšený podíl je spíše osobní oblíbenost než překlep, potvrdit ji ale nelze.",
+    "dukaz": "Podíl 9,2 % je dvojnásobek běžného; nadprůměrné hlasy má Žák i v okrscích 1 a 4.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu; oprava o –18 hlasů nemění mandáty (1, 1, 6, 4, 5, 2, 2) ani zvolené.",
+    "umysl": "Nízká – nahodilá chyba přepisu nebo preference.",
+    "doporuceni": "Lze ověřit v originálním zápisu okrsku 3.",
+    "vyradit": false
+  }
+}

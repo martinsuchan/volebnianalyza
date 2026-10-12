@@ -1,0 +1,12 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor HLASY_01–21 BOJKOVJANÉ ve všech 6 okrscích, bydliště kandidátů (rk.BYDLISTEN), rok 2022 a simulace úbytku hlasů.",
+    "zjisteni": "Roman Krejčiřík (BOJKOVJANÉ č. 11, bydliště Krhov) má v okrsku 592048/5 (203 hlasů) 27 hlasů při sousedech 6 a 7. Není to vložená číslice (7 → 27): také v sousedním malém okrsku 4 má 18 vs. 13/10 a v obou vesnických okrscích vyčnívá i kandidát č. 18 Michalcová z Bzové (33 v okrsku 4 proti 8/12; 19 v okrsku 5 proti 7/8; 10 v okrsku 6 proti 2). Jde o místní preference venkovských okrsků; v roce 2022 byl v témže okrsku Miroslav Krejčiřík (Krhov, jiná strana) jen těsně nad sousedy (11 vs. 8/9), stejný vzorec se tedy neopakuje, ale zápis je vnitřně konzistentní (součet 203 = POC_HLASU).",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Úbytek 20 hlasů BOJKOVJANÉ (6 050 hlasů, 4 mandáty) nemění mandáty (rezerva ke ztrátě 905 hlasů) ani zvolené.",
+    "umysl": "Bez indikace – pravděpodobně místní preference.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

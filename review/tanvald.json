@@ -1,0 +1,8 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s úbytkem 27 hlasů u SPOLEČNĚ PRO TANVALD.",
+    "zjisteni": "Rezerva 27 hlasů: SPOLEČNĚ PRO TANVALD (3 008 hlasů) by při úbytku 27 hlasů ztratilo druhý mandát (Martin Semecký, č. 1) ve prospěch VOLBA PRO MĚSTO (6 → 7; Jakub Kozák, č. 6). Další hranice: VOLBA PRO MĚSTO +95.",
+    "dopad": "Změna jen při chybě ≥ 27 hlasů u jedné strany; město nemá žádné jiné nálezy ani překlepy, není důvod k podezření.",
+    "jistota": 1
+  }
+}

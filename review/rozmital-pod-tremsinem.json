@@ -1,0 +1,19 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv (do_prahu = −2) a přepočtem allocate() se ztrátou 2 hlasů Rybářů.",
+    "zjisteni": "Rezerva 2 hlasy: Rybáři Rožmitál mají 1 217 hlasů = 5,007 % z 24 306 (hranice 1 215,3), tedy 2 hlasy nad 5% hranicí. Při ztrátě 2 hlasů by strana mandát (Jakub Pazderník, č. 2) ztratila a třetí mandát by získala Naše ROŽMITÁLSKO (Lucie Voříšková, č. 2, 293 hlasů).",
+    "dopad": "Naše ROŽMITÁLSKO 2 → 3 mandáty, Rybáři Rožmitál 1 → 0 při změně o 2 hlasy (5% hranice, nikoli d'Hondt); jakákoli drobná chyba v 11 okrscích může změnit výsledek.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeny obě hodnoty: vektory v 11 okrscích, rok 2022, hodnoty téhož kandidáta v jiných okrscích a simulace.",
+    "zjisteni": "Obě hodnoty jsou místní vzorce, nikoli překlepy. (1) Václav Braun (KSČM č. 8, Zalány) má v okrsku 541231/11 18 hlasů při sousedech 3 a 4; v roce 2022 měl v témže okrsku 27 při sousedech 9 a 4 (celkem 340 hlasů) – opakuje se po čtyřech letech. (2) Hana Šourková (NEZÁVISLÍ č. 12) má v okrsku 4 5 hlasů proti 16 a 15, ale č. 12 má ve všech okrscích 0,3–0,4násobek hlasů sousedů (např. 3 vs. 9/9, 6 vs. 14/15, 4 vs. 4/4); součty řádků sedí.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Úbytek 17 hlasů KSČM (2 151 hlasů, rezerva ke ztrátě 1 002) a +10 hlasů NEZÁVISLÝM (2 261, rezerva ke zisku 1 112) nemění mandáty ani zvolené.",
+    "umysl": "Bez indikace – skutečná preference voličů.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

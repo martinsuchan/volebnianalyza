@@ -1,0 +1,9 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Ze tří hodnot je jen Jiří Hron (KDU-ČSL, č. 16: 28 hlasů místo ~8, podíl 11,9 % vs. max 7,8 %) výrazně nad rozsahem jinde. Lucie Novotná (TOP 09, č. 7: 18 hlasů, podíl 19,8 % vs. max 21,4 %) i Josef Mazánek (Novoměšťáci, č. 5: 26 hlasů, 10,6 % vs. max 25,0 %) jsou v běžném rozpětí – preference.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() s opravou každé hodnoty: mandáty i zvolení beze změny."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 24 hlasů. Pro Hrotovice by s přírůstkem 24 hlasů získali třetí mandát na úkor SDRUŽENÍ NEZÁVISLÝCH KANDIDÁTŮ I (ztráta 48 hlasů) nebo KDU-ČSL (ztráta 160 hlasů).",
+    "dopad": "Pro Hrotovice 2 → 3, SDRUŽENÍ NEZÁVISLÝCH KANDIDÁTŮ I 6 → 5; zvolen by byl Jan Abrahám (č. 4, Pro Hrotovice) místo Libora Fialy (č. 6, SDRUŽENÍ NEZÁVISLÝCH KANDIDÁTŮ I). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv (do_prahu = 25) a přepočtem allocate() pro +24 (beze změny) a +25 hlasů SPD.",
+    "zjisteni": "Rezerva 25 hlasů u 5% hranice: Svoboda a přímá demokracie (SPD) má 1 126 hlasů = 4,898 % z 22 991 (hranice ~1 150 hlasů); při +25 hlasech by překročila 5 % a získala mandát (Milan Křiklava, č. 3, 102 hlasů) na úkor SLK pro naše město (3 → 2 mandáty, odpadla by Martina Funtánová, č. 6). Jinak SLK při úbytku ~45 hlasů ztrácí mandát ve prospěch ANO 2011 (Roman Šmíd, č. 12).",
+    "dopad": "SPD 0 → 1 a SLK pro naše město 3 → 2 mandáty při +25 hlasech SPD (5% hranice); mandát SLK/ANO je ve hře i při ~45 hlasech.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

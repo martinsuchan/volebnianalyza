@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 30 hlasů. Žijeme Slavonicko! by s přírůstkem 30 hlasů získalo druhý mandát na úkor Sportovců a občanů Slavonic (jejich rezerva 74 hlasů); Sdružení pro změnu 2010 při +228 hlasech.",
+    "dopad": "Žijeme Slavonicko! 1 → 2, Sportovci a občané Slavonic 5 → 4; zvolen by byl Milan Blecha (č. 1, Žijeme Slavonicko!) místo Petry Burghardové (č. 4, Sportovci a občané Slavonic). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

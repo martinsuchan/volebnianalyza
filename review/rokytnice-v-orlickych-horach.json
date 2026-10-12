@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 9 hlasů. SDRUŽENÍ PRO ROKYTNICI by při ztrátě 9 hlasů (ve skutečnosti 10) nebo ROKYTNICE PRO při zisku 11 hlasů předalo jeden mandát; jednookrskové město, 11 076 hlasů.",
+    "dopad": "ROKYTNICE PRO 5 → 6, SDRUŽENÍ PRO ROKYTNICI 5 → 4; zvolen by byl Petr Fric (č. 5, ROKYTNICE PRO) místo Petra Buchala (č. 4, SDRUŽENÍ PRO ROKYTNICI). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

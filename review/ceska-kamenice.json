@@ -1,0 +1,8 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s dV = +43 hlasů pro Pro Českou Kamenici.",
+    "zjisteni": "Rezerva 43 hlasů (21 mandátů, tj. 2,0 voliče): poslední mandát získala Koalice pro Kamenici (13. mandát, Marcela Zemanová, č. 13) před Pro Českou Kamenici (3 584 hlasů, 2 mandáty). Přírůstek Pro Českou Kamenici o 43 hlasů by mandát přesunul: Pro Českou Kamenici 2 → 3 (Filip Čerňanský, č. 3), Koalice 13 → 12 (Marcela Zemanová by ztratila).",
+    "dopad": "Mandát může změnit chyba ≥ 43 hlasů; konkrétní chyba nebyla nalezena, jde o upozornění.",
+    "jistota": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome().",
+    "zjisteni": "Rezerva 51 hlasů: Sdružení pro Žacléř by při úbytku ~51 hlasů ze 3 mandátů kleslo na 2 (odpadl by Jiří Jirásek, č. 5) a Náš Žacléř (7 mandátů) by získal osmý (Jaroslav Mádle, č. 8).",
+    "dopad": "Náš Žacléř 7 → 8 a Sdružení pro Žacléř 3 → 2 mandáty při změně o ~51 hlasů; spíš riziko než zjištěná chyba.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

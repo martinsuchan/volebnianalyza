@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() (+8 hlasů NEZÁVISLÍ).",
+    "zjisteni": "Rezerva 8 hlasů: „NEZÁVISLÍ“ potřebují +8 hlasů na druhý mandát (Petra Svachová, č. 10); NOVÉ HRUŠOVANY by ze 3 mandátů klesly na 2 (odpadla by Renata Rabatová, č. 3). Stejně působí úbytek 12 hlasů NOVÝCH HRUŠOVAN.",
+    "dopad": "NEZÁVISLÍ 1 → 2 a NOVÉ HRUŠOVANY 3 → 2 mandáty při změně o 8 hlasů (d'Hondt u posledního mandátu).",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

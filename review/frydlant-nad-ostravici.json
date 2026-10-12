@@ -1,0 +1,10 @@
+{
+  "missing:598143/7:59814301": {
+    "kontrola": "Ověřen poměr hlasů na lístek ve všech okrscích 2026 a 2022, řádky kandidátů všech 4 stran v okrsku 598143/7 a podíly stran.",
+    "zjisteni": "Využití hlasů 81,7 % (4 307 / (251 × 21)) při 91–97 % v ostatních okrscích; v roce 2022 byl okrsek běžný (3 822 / (202 × 21) = 90,1 %), odchylka je tedy nová. Řádky kandidátů všech 4 stran jsou ale souvislé bez děr (např. PRO FRÝDLANT 94, 83, 85 … 71; 1 640 hlasů), součty sedí a podíly stran (12,8 / 21,3 / 38,1 / 27,8 %) zapadají mezi okolní okrsky. Chybějící balík z dat nelze doložit; může jít i o jiné chování voličů (účast v okrsku 52 % vs. 42 % v roce 2022).",
+    "dukaz": "Využití hlasů 0,817 vs. 0,92 jinde, ale souvislé řádky a plausibilní podíly stran.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: rozdělení ~598 hlasů podle podílů v okolí mandáty nemění (rezerva zastupitelstva 1 003 hlasů)."
+  }
+}

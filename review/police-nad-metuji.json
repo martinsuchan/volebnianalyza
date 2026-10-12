@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() (+7 hlasů NEZÁVISLÍ).",
+    "zjisteni": "Rezerva 7 hlasů: NEZÁVISLÍ potřebují +7 hlasů na druhý mandát (Jiří Černý, č. 5); Volba pro Polici – Radek Starý a nezávislí kandidáti by přišla o Radka Slováka (č. 5), tj. 5 → 4 mandáty. Stejná změna nastane při úbytku 17 hlasů Volby pro Polici.",
+    "dopad": "NEZÁVISLÍ 1 → 2 a Volba pro Polici 5 → 4 mandáty při změně o 7 hlasů (d'Hondt u posledního mandátu).",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

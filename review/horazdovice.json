@@ -1,0 +1,8 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s přírůstkem 23 hlasů pro PRAVÉ HORAŽĎOVICE S PODPOROU ODS.",
+    "zjisteni": "Rezerva 23 hlasů: PRAVÉ HORAŽĎOVICE S PODPOROU ODS (6 478 hlasů, 21,0 %) by při přírůstku 23 hlasů získaly 4. mandát (Petr Jáchim, č. 7) na úkor ObčanéHD (11 → 10; Jiří Lukeš, č. 11). Opačně úbytek 62 hlasů u ObčanéHD.",
+    "dopad": "Změna jen při chybě ≥ 23 hlasů; město nemá žádné překlepy ani jiné nálezy, není důvod k podezření.",
+    "jistota": 1
+  }
+}

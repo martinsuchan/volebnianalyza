@@ -1,0 +1,13 @@
+{
+  "row:560383/5:56038301:5": {
+    "kontrola": "Ověřen vektor HLASY_01–21 Strany soukromníků v okrsku 5 i v okrsku 4, rok 2022 a simulace outcome() s doplněním 45 a 60 hlasů.",
+    "zjisteni": "Vektor okrsku 560383/5 (Strana soukromníků ČR, M = 21, 266 hlasů): 16, 16, 16, 13, 16, 0, 14, 13, 14, 16, 0, 13, 16, 14, 13, 0, 15, 16, 16, 14, 15. Kandidáti č. 6, 11 a 16 (každý pátý) mají 0 hlasů, všichni ostatní 13–16 – při ~14 lístcích s křížkem u strany musí mít každý z prvních 21 kandidátů nejméně ~13 hlasů, nula je nemožná. Pravidelný odstup 5 svědčí o systematickém vynechání buněk při přepisu, ne o náhodě. V roce 2022 měla obdobná strana (SPOLU Chodov) v okrsku 5 řádek bez nul.",
+    "dukaz": "Tři nuly uvnitř souvislého bloku 13–16, rozestup přesně 5 kandidátů.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Chybí odhadem 3 × 15 = 45 hlasů. Strana soukromníků má celkem 1 502 hlasů (3,0 %) a 0 mandátů; od 5% hranice jí chybí 1 563 hlasů. Simulace outcome() s +45 i +60 hlasy nemění mandáty (ANO 4, Místní hnutí 16, Vize pro Chodov 1) ani zvolené.",
+    "umysl": "Nízká – pravděpodobně vynechané buňky při přepisu zápisu okrsku.",
+    "doporuceni": "Porovnat s originálním zápisem okrsku 5 a doplnit hlasy pro kandidáty č. 6, 11, 16.",
+    "vyradit": false
+  }
+}

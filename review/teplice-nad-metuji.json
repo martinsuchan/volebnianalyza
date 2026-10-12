@@ -1,0 +1,20 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 29 hlasů. SVORNOST by s přírůstkem 30 hlasů (Nezávislí 2026 by při ztrátě 29 hlasů mandát ještě udrželi, při 30 ne) získala druhý mandát; SOUSEDÉ při +35 hlasech.",
+    "dopad": "SVORNOST 1 → 2, Nezávislí 2026 – udržitelná a transparentní strat. 2 → 1; zvolen by byl Petr Metelka (č. 1, SVORNOST) místo Pavla Šmejdy (č. 7, Nezávislí 2026). Při variantě SOUSEDÉ by nastoupila Kateřina Čermáková (č. 1, SOUSEDÉ) místo Šmejdy. Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeny všechny označené hodnoty: vektor HLASY_xx ve všech okrscích, bydliště kandidátů (rk.BYDLISTEN), spolubydlící na listině, rok 2022 a limit PL_HL_CELK ≤ PLAT_LISTKY × M.",
+    "zjisteni": "Eva Hrubá (č. 9, bydliště Zdoňov) má v okrsku 574538/3 24 hlasů při sousedech 6 a 5. Spoluobčanka ze Zdoňova (č. 2) má v okrsku 28 hlasů, takže vyčnívají obě a vzorec se opakuje: v roce 2022 měla Hrubá v témže okrsku 24 hlasů (sousedé 23 a 15). Jde o místní preferenci.",
+    "dukaz": "Opakování stejného vzorce v roce 2022 a/nebo v ostatních okrscích či u spolukandidátů ze stejné obce.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Žádný vliv na mandáty ani zvolené (simulace materiality: zmena_mandatu = False, zmena_zvolenych = False); nejde o chyby.",
+    "umysl": "Bez indikace – skutečná místní preference.",
+    "doporuceni": "Nález vyřadit.",
+    "vyradit": true
+  }
+}

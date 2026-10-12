@@ -1,0 +1,8 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s dV = –7 hlasů pro Mníšek – Město pro rodinu.",
+    "zjisteni": "Rezerva 7 hlasů (15 mandátů, tj. 0,5 voliče): poslední mandát získala strana Mníšek – Město pro rodinu s podporou SEN (3. mandát, Zdeněk Vyskočil, č. 2) o 7 hlasů před Společně pro Mníšek (7 119 hlasů, 3 mandáty; chybí jí 10 hlasů). Úbytek první strany o 7 hlasů (nebo přírůstek druhé o 10) by mandát přesunul: Město pro rodinu 3 → 2 (Zdeněk Vyskočil ztrácí), Společně pro Mníšek 3 → 4 (Jan Bezpalec, č. 4).",
+    "dopad": "Rozhoduje 7 hlasů; konkrétní chyba nebyla nalezena, jde o upozornění (doporučen kontrolní přepočet).",
+    "jistota": 1
+  }
+}

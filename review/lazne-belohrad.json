@@ -1,0 +1,9 @@
+{
+  "batches": {
+    "kontrola": "Ověřeno v batch_changes_2026.pkl: okrsek 573094/1, dávka 47, PLATNE_HLASY 3 187 (průběžně) → 7 190 (finální), ostatní údaje shodné; finální hodnota odpovídá PL_HL_CELK v t3.",
+    "zjisteni": "Okrsek 573094/1 (974 voličů, 523 platných lístků) byl zaslán opakovaně; v první dávce byl průběžný součet platných hlasů 3 187, ve finální 7 190 (523 × 15 = 7 845 možných). Voliči, obálky i lístky se nezměnily; jde o neúplný mezisoučet při postupném zapisování.",
+    "jistota": 5,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Finální data jsou konzistentní (PL_HL_CELK 7 190 ≤ 7 845); bez vlivu."
+  }
+}

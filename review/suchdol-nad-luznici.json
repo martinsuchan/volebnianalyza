@@ -1,0 +1,38 @@
+{
+  "typo:547280/1:54728001:2:11": {
+    "kontrola": "Ověřen vektor HLASY_01–17 ODS ve všech 7 okrscích, bydliště kandidátů (rk.BYDLISTEN), rok 2022 (kandidát tehdy nekandidoval), součty řádků vs. POC_HLASU a HLASY_STR, simulace opravy s dV i dC a d'Hondtovy podíly.",
+    "zjisteni": "Jana Šachlová (ODS č. 11, bydliště Suchdol nad Lužnicí) má v okrsku 547280/1 8 hlasů, sousedé č. 10 a č. 12 mají 25 a 22. Nejde o překlep, ale o stálý vzorec kandidátky: v okrsku 2 má také 8 hlasů (sousedé 19 a 33), v okrsku 3 18 (20 a 42), v okrscích 6 a 7 10 a 8 (sousedé 10/14 a 9/13). Její podíl na průměru řádku je 0,37 (okrsek 1), 0,34 (okrsek 2), 0,58 (okrsek 3); hodnota 8 v okrsku 1 tedy přesně odpovídá tomu, co čekáme z poměru v okrscích 2–3 (0,3–0,4 × 24 = 8–10). Součet řádku (366) sedí na POC_HLASU, součet strany na HLASY_STR 1 891. V roce 2022 kandidát toho jména v Suchdole nebyl, srovnání není možné.",
+    "dukaz": "Stejně nízké hodnoty (8, 8, 18) se opakují v okrscích 1–3 vedle sousedů s 19–42 hlasy, voliči ji tedy systematicky škrtají; propad není vázán na jediný okrsek. Jedna vložená číslice (8 místo 24) by nevysvětlila shodné 8 v okrsku 2.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Hypotetická oprava 8 → 24 (+16 hlasů ODS i kandidátce) by změnila mandáty: ODS 1 → 2 (Pavel Voříšek, ODS č. 7, 144 hlasů) a KDU-ČSL 2 → 1 (Marie Kalátová, č. 3, 204 hlasů, by odpadla; zůstává Josef Hojek č. 1). Mechanismus není 5% hranice (obě strany ji splňují s velkou rezervou, hranice = 959,6 hlasů; ODS má 1 891, KDU-ČSL 1 901), ale d'Hondt u posledního, 17. mandátu: 2. podíl KDU-ČSL 950,5 vs. 2. podíl ODS 945,5. ODS potřebuje +10 hlasů pro shodu (950,5) a +11 pro zisk mandátu (simulace outcome: +10 beze změny, +11 mění). Protože je hodnota 8 prokazatelně skutečná, mandáty se nemění.",
+    "umysl": "Bez indikace – skutečná nízká preference kandidátky.",
+    "doporuceni": "Nález vyřadit; zachovat upozornění na těsný výsledek (10 hlasů ODS × KDU-ČSL).",
+    "vyradit": true
+  },
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv, d'Hondtových podílech (17. a 18. podíl) a simulací outcome() pro ±10 a ±11 hlasů.",
+    "zjisteni": "Rezerva 10 hlasů: poslední (17.) mandát získala KDU-ČSL (2. podíl 950,5 při 1 901 hlasech) před ODS (2. podíl 945,5 při 1 891 hlasech). Přírůstek ODS o 11 hlasů (nebo úbytek KDU-ČSL o 11 hlasů) by přesunul mandát: Marie Kalátová (KDU-ČSL, č. 3) by byla nahrazena Pavlem Voříškem (ODS, č. 7); +10 hlasů vede jen ke shodě podílů (950,5). Obě strany jsou nad 5% hranicí (959,6 hlasů).",
+    "dopad": "ODS 1 → 2 mandáty a KDU-ČSL 2 → 1 jen tehdy, pokud by ODS přibylo ≥ 11 hlasů (nebo KDU-ČSL ubylo ≥ 11). Jediná podezřelá hodnota (Šachlová 8 hlasů) je ale doložený stálý vzorec, nikoli překlep.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  },
+  "typos:souhrn": {
+    "kontrola": "Obě hodnoty ověřeny: vektory v 7 okrscích, bydliště kandidátů, rok 2022, simulace oprav (outcome s dV i dC).",
+    "zjisteni": "Šachlová (ODS č. 11, 8 hlasů v okrsku 1) je skutečný stálý vzorec (8, 8, 18 v okrscích 1–3 vedle sousedů s 19–42 hlasy), nikoli překlep – viz samostatný nález. Zbývá Jan Divoký (KDU-ČSL č. 2, bydliště Hrdlořezy) s 0 hlasy v okrsku 547280/6 (KDU-ČSL tam 121 hlasů, sousedé č. 1 a č. 3 mají 18 a 15; součet řádku sedí). V ostatních okrscích má Divoký 0,5–0,8násobek hlasů sousedů (např. 27 vs. 43/45, 13 vs. 22/21), čekali bychom tedy ~10. Nula je možná jen tehdy, když žádný lístek neměl křížek u strany (ostatní kandidáti mají 4–8 hlasů), takže jde o málo pravděpodobnou, ale nevyloučenou hodnotu. Oprava o 10–16 hlasů (Divoký 156 → 166–172, stále za Kateřinou Hamerníkovou s 201 hlasy) nemění mandáty ani zvolené.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace +10 a +16 hlasů KDU-ČSL a kandidátovi: beze změny mandátů i zvolených (KDU-ČSL 2: Hojek č. 1, Kalátová č. 3).",
+    "doporuceni": "Ověřit řádek KDU-ČSL v okrsku 6 (kandidát č. 2: 0 hlasů). Šachlovou z nálezů vyřadit."
+  },
+  "missing:547280/1:54728001": {
+    "kontrola": "Ověřeny součty: Σ POC_HLASU stran = PL_HL_CELK (3 402) v okrsku 1; hlasy na lístek ve všech okrscích a v roce 2022 (hlasy na oprávněného voliče); struktura hlasů stran; simulace dV podle podílů okrsku 1 i sousedních okrsků.",
+    "zjisteni": "Okrsek 547280/1 má 263 platných lístků a 3 402 hlasů, tj. 76 % možných 4 471 (okrsky 2, 3, 6, 7: 89–90 %); stejně nízký je i okrsek 5 (78 %, 72 lístků), který detektor jako nález nenašel. Součty stran (1 217 + 366 + 621 + 764 + 434) sedí přesně na PL_HL_CELK, nejde tedy o nezapsaný řádek. Okrsek 1 se liší i strukturou: Naše Suchdolsko 35,8 % (jinde 43–60 %), KDU-ČSL 18,3 % (jinde 6–7 %) s nápadnou koncentrací hlasů na kandidáty č. 1, 3, 5 – voliči tam rozdávali méně hlasů jednotlivým kandidátům. Hlasů na oprávněného voliče bylo v okrsku 1 málo i v roce 2022 (6,1 oproti 8,0 v okrsku 2; v roce 2026 5,3 oproti 7,3), nízká hodnota je tedy částečně trvalá.",
+    "dukaz": "Součty sedí, nízká intenzita hlasování se opakuje v roce 2022 a koreluje se silnou preferenční koncentrací KDU-ČSL; nelze ji odlišit od skutečného chování voličů.",
+    "jistota": 1,
+    "dopad_kat": "Může změnit mandáty",
+    "dopad": "Hypotetické doplnění 576 hlasů podle podílů sousedních okrsků (Naše Suchdolsko +291, ODS +57, KDU-ČSL +44, Suchdol pro všechny +134, Pro Suchdol +50) by přesunulo mandát z KDU-ČSL na ODS (ODS 1 → 2: Pavel Voříšek, č. 7; KDU-ČSL 2 → 1: Marie Kalátová, č. 3) o rozdíl 3 hlasů. Při rozdělení podle podílů okrsku 1 samotného (ODS +62, KDU-ČSL +105) se nic nemění. Výsledek závisí na zcela hypotetickém rozdělení; nic v zápisu nenasvědčuje, že by hlasy chyběly.",
+    "umysl": "Bez indikace – pravděpodobně skutečné chování voličů (méně hlasů na lístek).",
+    "doporuceni": "Nepovažovat za chybu; případně ověřit počet platných lístků a hlasů v zápisu okrsku 1."
+  }
+}

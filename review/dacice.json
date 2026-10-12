@@ -1,0 +1,16 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s přírůstkem 37 hlasů pro ODS pro Dačice.",
+    "zjisteni": "Rezerva 37 hlasů: ODS pro Dačice s podporou STAN (4 386 hlasů, 8,20 %) by při přírůstku 37 hlasů získala druhý mandát (Petr Mašata, č. 14) na úkor Naše Česko (9 → 8; Pavel Stejskal, č. 9). Další hranice: KDU-ČSL +99.",
+    "dopad": "Změna jen při chybě ≥ 37 hlasů u dané strany; nalezené hodnoty (Vronka, Kučera-Pykal) nejsou prokázanou chybou.",
+    "jistota": 1
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor ODS pro Dačice v okrscích 3 a 8, kandidáti v ostatních okrscích, bydliště; rok 2022 pro obě osoby nenalezen; simulace outcome().",
+    "zjisteni": "Jiří Kučera-Pykal (č. 15) má v okrsku 546127/3 6 hlasů, ale minimum celého řádku je 4 (vektor 27, 10, 40, 21, 27, 20, 17, 22, 19, 35, 24, 19, 11, 21, 6, 21, 6, 8, 5, 16, 4), takže ‚propad‘ není logicky nemožný, řádek je silně nerovnoměrný. Rostislav Vronka (č. 19, Lipolec) 35 hlasů v okrsku 8 vs. ~6 (celkem strana 153), s vyčnívajícími č. 2 a č. 3 (po 11) – může jít o místního kandidáta, ověřit nelze (v roce 2022 nekandidoval).",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace oprav: bez vlivu na mandáty i pořadí zvolených.",
+    "doporuceni": "Kučera-Pykal není chyba, Vronka nízká priorita."
+  }
+}

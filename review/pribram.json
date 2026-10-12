@@ -1,0 +1,24 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl/t3 a simulací outcome(): hodnota porovnána s listinou strany, se všemi ostatními okrsky města a nasimulována oprava na 4–6 hlasů.",
+    "zjisteni": "Jediná hodnota: okrsek 539911/10, Přátelé Příbrami a Březových Hor, KDU-ČSL, kand. č. 3 Josef Vacek má 24 hlasů, sousedé č. 2 a č. 4 mají 6 a 7. Řádek strany ale silně kolísá (č. 1 17, č. 5 17, č. 6 18, č. 7 15, č. 8 8, č. 9 10), strana má v okrsku 240 hlasů při 400 platných lístcích a součet kandidátů se rovná hlasům strany. V ostatních okrscích má č. 3 nejvýše 25 hlasů (jednou 70); poměr k sousedům je zde 3,7× (medián jinde 1,4×, 90. percentil 2,0×). Je to nejvyšší poměr v obci, ale na tak nerovnoměrné listině nelze odlišit překlep od místní preference.",
+    "dukaz": "Poměr k sousedům 3,7× proti mediánu 1,4× ve 33 okrscích, ale sousední kandidáti č. 5–7 mají 15–18 hlasů, takže 24 není mimo rozsah listiny; vložená číslice není prokázána.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: oprava na 4–6 hlasů (−18 až −20 hlasů kandidátovi i straně) nemění mandáty ani zvolené; Josef Vacek zvolen není.",
+    "umysl": "Žádný důvod k podezření – nejspíše místní preference nebo drobný překlep.",
+    "doporuceni": "Bez dalších kroků; případně namátkově ověřit zápis okrsku 539911/10.",
+    "vyradit": false
+  },
+  "gap": {
+    "kontrola": "Spočítáno z t3 pro všech 39 okrsků města v letech 2026 a 2022 (vydané vs. odevzdané obálky, PL_HL_CELK vs. PLAT_LISTKY × 25) a simulováno outcome() pro doplnění hlasů.",
+    "zjisteni": "Okrsek 539911/14 (Příbram): vydáno 579 obálek, odevzdáno 540, platných lístků 540 (39 obálek chybí v urně; voličské průkazy 0). Hlasy odpovídají odevzdaným lístkům: 12 288 hlasů je 0,91 možných (540 × 25 = 13 500), při 579 lístcích by to bylo jen 0,85. Druhý největší rozdíl v obci je 12 obálek (okrsek 3), medián 0. Okrsek má trvale vysokou účast (2022: 571 vydaných = 47,6 % ze 1 200 voličů při mediánu okrsků 38,9 %, rozdíl vydaných a odevzdaných 0; 2026: 579 vydaných = 48,9 % z 1 185 při mediánu 40,9 %), takže 579 vydaných není odlehlá hodnota; spíše chybí odevzdané obálky (účast podle odevzdaných 45,6 %).",
+    "dukaz": "Rozdíl 39 obálek při mediánu 0 a maximu 12 v ostatních okrscích; hlasy sedí na odevzdané, nikoli na vydané obálky.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: součty hlasů odpovídají odevzdaným lístkům, nejde o nezapsané hlasy. I kdyby 39 chybějících obálek hypoteticky obsahovalo ~890 hlasů (0,91 × 25 na lístek), jejich rozdělení podle podílů stran mandáty nemění.",
+    "umysl": "Nelze posoudit z dat – voliči, kteří odešli s obálkou, nebo chyba evidence.",
+    "doporuceni": "Ověřit komentář komise v zápisu okrsku 539911/14 (vysvětlení rozdílu 39 obálek).",
+    "vyradit": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "typo:500496/59:50049601:9:8": {
+    "kontrola": "Ověřeno v okrskových datech (hl, t3, rk) a simulací outcome() s úpravou hlasů strany i kandidáta: zapsaná hodnota 221 je v okrsku 59 jediným extrémem, oprava na ~22 mění zvoleného kandidáta MILUJEME OLOMOUC.",
+    "zjisteni": "V okrsku 500496/59 je u kand. č. 8 Marty Pečinkové Perůtkové zapsáno 221 hlasů; sousedé na listině mají 23 (č. 7) a 20 (č. 9), zbytek listiny 12–31 (č. 1 má 31). Okrsek měl 237 platných lístků, takže 221 hlasů by znamenalo, že ~93 % voličů dalo hlas jí, ale první kandidát listiny má jen 31 hlasů (13 %) a ostatní kandidáti ~20–24; to je prakticky vyloučené. Ve všech ostatních 95 okrscích je její hlas nejvýše o 10,5 nad průměrem sousedů (medián +0,5), zde +199,5. Hodnota 221 vznikne z 22 vložením jedné číslice. Součet 1 104 hlasů strany v okrsku i PL_HL_CELK (9 731) už zapsanou hodnotu obsahují, tj. chyba je promítnuta i do součtů okrsku. Totéž platí o samostatné chybě v okrsku 3 (č. 45 Petr Navrátil, 210 místo ~21), která zvolené nemění.",
+    "dukaz": "Rozdíl proti průměru sousedů +199,5 (v 95 ostatních okrscích max. +10,5); 221 z 237 platných lístků při 31 hlasech pro č. 1; odebráním jedné číslice vznikne 22, tedy hodnota sousedů.",
+    "jistota": 4,
+    "dopad_kat": "Mění zvolené",
+    "dopad": "MĚNÍ ZVOLENÉ (mandáty stran se nemění). MILUJEME OLOMOUC má 3 mandáty. Zapsáno: Marta Pečinková Perůtková (č. 8) má 2 560 hlasů, tj. nad hranicí preferenčního posunu 2 401,3 (110 % z floor(98 245/45) = 2 183), a je zvolena před č. 1 a č. 6 jako třetí (2 986, 2 853, 2 560); Roman Koutek (č. 3, 2 523 hlasů) zvolen není. Po opravě na 22 hlasů (−199; strana −199 hlasů) má 2 361 hlasů, hranice klesne na 2 391,4 a preferenční posun nesplní; mandát získá Roman Koutek (č. 3, 2 523 hlasů, nad hranicí). Změna nastane při jakékoli skutečné hodnotě do 184 hlasů (např. i 31 nebo 0); konzervativní i horní odhad skutečné hodnoty (~22–31) vedou ke stejnému výsledku. Společná oprava s chybou Navrátila (−189) výsledek nemění.",
+    "umysl": "Nízká – vzorec odpovídá překlepu (vložená číslice); chyba ale shodou okolností posunula mandát v rámci strany na kandidátku č. 8.",
+    "doporuceni": "Okamžitě ověřit zápis T/3 okrsku 500496/59 (hlasy kandidáta č. 8 MILUJEME OLOMOUC) a případně přepočítat hlasy; podnět ČSÚ/MV a případně návrh na soudní přezkum (§ 60 zák. č. 491/2001 Sb., lhůta 10 dnů od vyhlášení výsledků)."
+  },
+  "inv0": {
+    "kontrola": "Spočítáno z t3: ODEVZ_OBAL − PLAT_LISTKY pro všech 96 okrsků; porovnáno s očekáváním z binomického modelu při míře neplatnosti města.",
+    "zjisteni": "Nula neplatných lístků je v 15 z 96 okrsků (všechny s 129–472 obálkami). Při průměrné neplatnosti 0,7 % je očekávaný počet takových okrsků ~12,7, pozorovaných 15 je v rámci náhody (medián neplatných lístků na okrsek je 2, rozdělení 0/1/2/3/4: 15/19/23/20/13). Tvrzení „velmi nepravděpodobná“ pro Olomouc neplatí.",
+    "dukaz": "Pozorováno 15 nulových okrsků, očekáváno ~12,7 (Poissonovsky/binomicky, s rozptylem ±3,3).",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty i na pořadí kandidátů.",
+    "umysl": "Žádný důvod k podezření – odpovídá běžné variabilitě.",
+    "doporuceni": "Nález nezveřejňovat jako anomálii.",
+    "vyradit": true
+  },
+  "typos:souhrn": {
+    "kontrola": "Všechny tři hodnoty ověřeny proti okrskovým datům a sousedům na listině, dopad simulován přes outcome() (jednotlivě i společně).",
+    "zjisteni": "Dvě vložené číslice a jeden nelogický propad: (1) okrsek 59, MILUJEME OLOMOUC č. 8 Pečinková Perůtková 221 místo ~22 (viz samostatný nález, mění zvolené); (2) okrsek 3, MILUJEME OLOMOUC č. 45 Petr Navrátil 210 místo ~21 (soused 21, celkem 223 platných lístků, v ostatních okrscích max. +2 nad sousedem); (3) okrsek 75, KDU-ČSL č. 4 Rostislav Hainc 0 hlasů při sousedech 36 a 35 (nejhlubší propad ze všech okrsků, −35,5 proti sousedům; v ostatních okrscích medián 30 hlasů). Při 50 hlasech pro č. 1 je nula uprostřed listiny logicky téměř nemožná.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Souhrnně Bez vlivu; zvolené mění pouze oprava č. 8 Pečinkové Perůtkové (samostatný nález N01: místo ní by byl zvolen Roman Koutek). Oprava Navrátila (−189) ani Hainca (+36, kdy je již zvolen s 3 180 hlasy) mandáty ani zvolené nemění.",
+    "doporuceni": "Ověřit zápisy T/3 okrsků 3, 59 a 75 a opravit data."
+  },
+  "row:500496/56:50049601:8": {
+    "kontrola": "Ověřeno v hl/t3/ros/shares: vektor SPD v okrsku 56 porovnán s 95 ostatními okrsky a sousedy; očekávání podle shares_2026; dopad nasimulován přes outcome().",
+    "zjisteni": "Okrsek 56 (Olomouc): 246 platných lístků, 9 994 hlasů (90,3 % možných 11 070; sousedé medián 94,1 %, rozpětí 91,2–96,2 %). Řádek SPD, Svobodní a Trikolora (259 hlasů, součet kandidátů se rovná hlasům strany): kandidáti č. 1–19 mají 13–15 hlasů, č. 20–45 (26 kandidátů) nuly. Podíl strany je 2,6 % při očekávaných 6,1 % (~606 hlasů), tj. schodek ~347 hlasů, což odpovídá chybějícím 26 × 14 = 364 hlasům.",
+    "dukaz": "Dvě nezávislé linie: (1) nulový konec listiny nemá žádný z ostatních 95 okrsků (1. percentil poměru konec/začátek 0,57) a aby nuly byly pravdivé, musel by každý ze ~14 lístků s křížkem u strany obsahovat ≥ 26 křížků pro jiné strany; (2) podíl strany v okrsku je pod polovinou očekávání a schodek hlasů sedí na chybějící blok.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty ani zvolené: SPD má 3 mandáty (6,55 %), rezerva 18 177 hlasů k zisku dalšího a 7 779 ke ztrátě; doplnění 338 až 1 014 hlasů (1× až 3×) nic nemění.",
+    "umysl": "Nelze posoudit; vzorec odpovídá nedopsanému nebo nezapsanému úseku řádku v zápisu, nikoli chování voličů.",
+    "doporuceni": "Ověřit zápis okrsku 56: kandidátní hlasy SPD, Svobodní a Trikolora č. 20–45.",
+    "vyradit": false
+  },
+  "row:500496/32:50049601:4": {
+    "kontrola": "Ověřeno v hl/t3/ros/shares: vektor LOL v okrsku 32 porovnán s ostatními okrsky (konec listiny LOL je v celém městě plochý) a se sousedy; dopad nasimulován přes outcome().",
+    "zjisteni": "Okrsek 32 (Olomouc): 256 platných lístků, 10 245 hlasů (88,9 % možných 11 520; sousedé medián 92,9 %, rozpětí 89,4–95,1 %, okrsek je v nejnižších ~5 %). Řádek LEVICOVÉ OLOMOUCKO (206 hlasů): kandidáti č. 1–32 mají 6–8 hlasů (jeden 10), č. 33–45 (13 kandidátů) nuly. Chybí odhadem 13 × 6 = 78 hlasů. Celkový podíl strany (2,0 %, čekáno 1,8 %) je v normě, protože 78 hlasů je v okrsku jen ~0,8 %; nevysvětlený schodek okrsku (~460 hlasů) nález nevysvětluje celý.",
+    "dukaz": "V ostatních okrscích má LOL (s alespoň 2 hlasy na začátku listiny) plochý konec listiny: kandidáti č. 39–45 mívají o 0–1 hlas méně než začátek, nulový konec mají jen okrsky 32, 42 a (slabší, č. 43–45) 65. Aby nuly byly pravdivé, musel by každý ze ~6 lístků s křížkem u strany obsahovat ≥ 13 křížků pro jiné strany; druhou, slabší linií je nízké využití hlasů okrsku.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty ani zvolené: LOL má v Olomouci 19 863 hlasů (1,54 %), do 5% hranice jí chybí 44 507 hlasů; doplnění 78 až 234 hlasů nic nemění.",
+    "umysl": "Nelze posoudit; vzorec odpovídá nedopsanému nebo nezapsanému úseku řádku v zápisu, nikoli chování voličů.",
+    "doporuceni": "Ověřit zápis okrsku 32: kandidátní hlasy LOL č. 33–45.",
+    "vyradit": false
+  },
+  "row:500496/42:50049601:4": {
+    "kontrola": "Ověřeno v hl/t3/ros/shares: vektor LOL v okrsku 42 porovnán s ostatními okrsky a sousedy; dopad nasimulován přes outcome().",
+    "zjisteni": "Okrsek 42 (Olomouc): 299 platných lístků, 12 834 hlasů (95,4 % možných 13 455; sousedé medián 93,9 %, využití hlasů je v normě). Řádek LEVICOVÉ OLOMOUCKO (211 hlasů): kandidáti č. 1–38 mají 5–7 hlasů, č. 39–45 (7 kandidátů) nuly. Chybí odhadem 7 × 5 = 35 hlasů. Podíl strany (1,6 %) přesně odpovídá očekávání (1,6 %, ~203 hlasů), takže celkové součty chybu ani nepotvrzují, ani nevyvracejí.",
+    "dukaz": "Jediná linie důkazů: konec listiny LOL je v ostatních okrscích plochý (kandidáti č. 39–45 mívají o 0–1 hlas méně než začátek; nuly jen v okrscích 32, 42 a slabě 65) a každý ze 6–7 lístků s křížkem u strany by musel obsahovat ≥ 7 křížků pro jiné strany. Bez druhé linie (součty okrsku jsou v normě, jde jen o 35 hlasů) je jistota vysoká, nikoli velmi vysoká.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty ani zvolené: LOL má 1,54 % (do hranice chybí 44 507 hlasů); doplnění 35 až 105 hlasů nic nemění.",
+    "umysl": "Nelze posoudit; vzorec odpovídá nedopsanému nebo nezapsanému úseku řádku v zápisu, nikoli chování voličů.",
+    "doporuceni": "Ověřit zápis okrsku 42: kandidátní hlasy LOL č. 39–45; vyřídit společně s okrskem 32.",
+    "vyradit": false
+  }
+}

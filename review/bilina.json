@@ -1,0 +1,13 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome(): +83 hlasů straně 10; prohlédnuty shares, missing a spikes.",
+    "zjisteni": "MOJE BÍLINA s podporou Pirátů (8 043 hlasů, 2 mandáty) by získala 3. mandát s +83 hlasy (~3 voliči); mandát by ztratili Nezávislí pro Bílinu (4→3). Okrskové detektory u strany 10 žádnou chybu neukazují (v žádném okrsku |z| > 2) a využití hlasů je ve všech okrscích v normě (nejhorší z = −1,5). Na 5% hranici je nejtěsnější Naše Bílina – Svobodní (5,61 %, rezerva 576 hlasů), která tedy nerozhoduje.",
+    "dukaz": "Rezerva 83 hlasů; žádná zjištěná chyba v řádcích strany 10 ani 3.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek",
+    "dopad": "Těsný výsledek: +83 hlasů MOJE BÍLINA přesouvá mandát od Aleny Jelínkové (č. 2 Nezávislí pro Bílinu) k Antonínu Budajovi (č. 3 MOJE BÍLINA). Bez identifikované chyby jde jen o riziko.",
+    "umysl": "Žádný důvod k podezření – jde o těsnost výsledku.",
+    "doporuceni": "Bez dalších kroků, pokud nebude žádán přepočet.",
+    "vyradit": false
+  }
+}

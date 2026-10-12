@@ -1,0 +1,12 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor HLASY_01–15 Naše Třemošnice ve 4 okrscích a součet řádku (1 097 = POC_HLASU).",
+    "zjisteni": "Daniel Klepetko (Naše Třemošnice č. 14) má v okrsku 572411/1 28 hlasů při sousedech 100 a 87. Není to překlep: stejný 'propad' je ve všech okrscích – 28 vs. 62/63 (okrsek 2), 37 vs. 88/94 (okrsek 3), 7 vs. 10/11 (okrsek 4), tedy 0,3–0,67násobek sousedů; vektor je navíc silně preferenční (hodnoty 28–108), křížky u strany nedominují.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "+66 hlasů Naše Třemošnice (2 943, rezerva ke zisku 305) nemění mandáty ani zvolené.",
+    "umysl": "Bez indikace – stálá nízká preference kandidáta.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

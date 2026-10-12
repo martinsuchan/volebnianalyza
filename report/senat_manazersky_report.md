@@ -1,6 +1,6 @@
 # Senátní volby 2026, 1. kolo – manažerské shrnutí
 
-*Autor: [Martin Suchan](https://www.facebook.com/martinsuchan85) · Nezávislá analýza otevřených dat ČSÚ, stav k 11. 10. 2026. Volby se konaly 9.–10. 10. 2026 ve 27 obvodech (5 021 okrsků, 154 kandidátů). Analýza zahrnuje srovnání s komunálními volbami konanými ve stejný den. Podrobnosti najdete na stránce `senat.html`.*
+*Autor: [Martin Suchan](https://www.facebook.com/martinsuchan85) · Nezávislá analýza otevřených dat ČSÚ, stav k 11. 10. 2026. Volby se konaly 9.–10. 10. 2026 ve 27 obvodech (5 021 okrsků, 154 kandidátů). Analýza zahrnuje srovnání s komunálními volbami konanými ve stejný den. Podrobnosti najdete na stránce `senat/index.html`.*
 
 ## Závěr
 

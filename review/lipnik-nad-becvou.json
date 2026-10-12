@@ -1,0 +1,12 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor HLASY_01–20 strany ‚Pro moderní Lipník‘ v okrsku 11, stejný kandidát v ostatních okrscích a v roce 2022, simulace outcome().",
+    "zjisteni": "Martin Drietomský (č. 3, zvolený, bydliště Lipník n. B. VI-Loučka) má v okrsku 514705/11 48 hlasů (sousedé 9). V roce 2022 měl jako lídr jiné kandidátky v témže okrsku 49 hlasů při sousedech 30 a 42 a celkem 419, tedy silná domácí preference v okrsku 11 (Loučka). Řádek má i další vyčnívající číslo (č. 15 = 80), což ukazuje na místní kandidáty. Nejde o překlep.",
+    "dukaz": "Rok 2022: 49 hlasů v témže okrsku; vzorec se opakuje.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace opravy 48 → 9: bez vlivu na mandáty i pořadí zvolených.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

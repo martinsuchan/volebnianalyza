@@ -1,0 +1,11 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen řádek STAROSTOVÉ A NEZÁVISLÍ v okrsku 4 a rok 2022 podle jména, simulace outcome().",
+    "zjisteni": "František Novák (č. 2, zvolený) má v okrsku 589624/4 6 hlasů (sousedé 17 a 19); řádek je nerovnoměrný (17, 6, 19, 19, 22, 20, 9, 7, 12, 17, 7, 10, 4, 5, 10) a minimum je 4. V roce 2022 měl v témže okrsku 12 hlasů při sousedech 22 a 15, tj. opět pod okolím – stejný místní vzorec, ne vypadlá číslice.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace opravy (6 → 18): bez vlivu na mandáty i pořadí zvolených.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

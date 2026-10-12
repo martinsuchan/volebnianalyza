@@ -1,0 +1,27 @@
+{
+  "typo:592943/5:59294301:1:13": {
+    "kontrola": "Ověřen vektor HLASY_01–15 ALTERNATIVY v okrsku 5, stejný kandidát v ostatních 7 okrscích, kandidát podle jména v roce 2022, bydliště kandidátů (rk.BYDLISTEN), simulace outcome() pro opravy o 10–27 hlasů a d'Hondtovy podíly.",
+    "zjisteni": "Zbyněk Žáček (č. 13, bydliště Černčín) má v okrsku 592943/5 zapsáno 30 hlasů, sousední kandidáti č. 12 a č. 14 po 3 (vektor č. 1–15: 11, 6, 6, 6, 6, 12, 5, 6, 3, 3, 13, 3, 30, 3, 12). Nejde ale o překlep: stejný vzorec má Žáček i v roce 2022 (tehdy na kandidátce ANO/Bučováci č. 12): v okrsku 5 dostal 27 hlasů při sousedech 1 a 1, zatímco v ostatních okrscích jeho hlasy kopírují sousedy. Také spolukandidát z Černčína Radomír Machala (č. 11) má v okrsku 5 neobvykle 13 hlasů proti 3. Jde o místní preferenci (okrsek 5 odpovídá Černčínu), která se opakuje po čtyřech letech. Součet kandidátů (125) odpovídá hlasům strany i PL_HL_CELK, zápis je vnitřně konzistentní.",
+    "dukaz": "Rok 2022: tentýž kandidát 27 hlasů v témže okrsku při sousedech 1 a 1; bydliště Černčín; druhý kandidát z Černčína (č. 11 Machala) rovněž vyčnívá.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Pokud by hodnota byla překlep (30 → 3), ALTERNATIVA pro Bučovice by přišla o jediný mandát (Zdeněk Koudelka, č. 6) ve prospěch KDU-ČSL (Iveta Skoupá, č. 10; 9 → 10 mandátů). Mechanismus není 5% hranice (ALTERNATIVA má 1 873 z 33 657 hlasů = 5,56 %, po opravě 5,49 %), ale d'Hondt u posledního, 15. mandátu: 1. podíl ALTERNATIVY 1 873,0 vs. 10. podíl KDU-ČSL 1 861,2, rozdíl 11,8 hlasu. Simulace outcome(): úbytek 11 hlasů nic nemění, 12 a více hlasů mandát převrátí (oprava o 27 ho převrátí). Protože je ale hodnota 30 prokazatelně místní preference, mandáty se nemění.",
+    "umysl": "Bez indikace – skutečná preference voličů v Černčíně.",
+    "doporuceni": "Nález vyřadit. Zachovat jen upozornění na těsný výsledek (12 hlasů).",
+    "vyradit": true
+  },
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome(): hranice posledního mandátu mezi ALTERNATIVOU a KDU-ČSL.",
+    "zjisteni": "Rezerva 12 hlasů: poslední (15.) mandát získala ALTERNATIVA pro Bučovice s 1 873 hlasy (podíl 1 873,0) před KDU-ČSL (10. podíl 1 861,2 při 18 612 hlasech). Úbytek ALTERNATIVY o 12 a více hlasů (nebo přírůstek KDU-ČSL o 119 hlasů) by přesunul mandát: Zdeněk Koudelka (č. 6) by byl nahrazen Ivetou Skoupou (KDU-ČSL, č. 10).",
+    "dopad": "Mandát ALTERNATIVA 1 → 0, KDU-ČSL 9 → 10 jen tehdy, pokud by v součtu ALTERNATIVY přebývalo ≥ 12 hlasů; hodnocené podezřelé hodnoty (Žáček 30, Pavlíková 27) jsou doložené místní preference, takže se změna nepředpokládá.",
+    "jistota": 1
+  },
+  "typos:souhrn": {
+    "kontrola": "Obě hodnoty ověřeny: jména z roku 2022, hodnoty v ostatních okrscích, bydliště a simulace oprav.",
+    "zjisteni": "Obě hodnoty jsou místní preference, nikoli překlepy: Zbyněk Žáček (ALTERNATIVA č. 13, Černčín) 30 hlasů v okrsku 5 (v roce 2022 27 hlasů v témže okrsku při sousedech 1 a 1), Ludmila Pavlíková (VOLBA PRO MĚSTO č. 14) 27 hlasů v okrsku 7 proti ~7 (v roce 2022 měla v okrsku 7 jako kandidátka KDU-ČSL č. 8 rovněž 54 hlasů při sousedech 16–20 a 11–20, jinde ~27).",
+    "jistota": 1,
+    "dopad": "Oprava Pavlíkové by nezměnila mandáty; u Žáčka viz samostatný nález (hodnota je ale pravděpodobně správná).",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

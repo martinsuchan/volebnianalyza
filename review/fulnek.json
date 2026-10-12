@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeny všechny 3 záznamy z typos_2026.pkl (Bortel okrsek 1, Schenk a Schoppik okrsek 11), podíly v ostatních okrscích, bydliště a simulace outcome().",
+    "zjisteni": "(1) Michal Bortel (Vize pro Fulnek č. 1, lídr, zvolen) má v okrsku 599352/1 28 hlasů proti 7 u č. 2: lídr má ve všech okrscích výrazně víc než č. 2 (46 vs 25, 59 vs 33, 40 vs 8), podíl 18,3 % je na úrovni ostatních okrsků (8,0–19,0 %) – falešný poplach u lídra kandidátky. (2) Roman Schenk (Vize pro Fulnek č. 14, Lukavec), okrsek 11: 46 hlasů proti sousedům 1 a 2, podíl 39,3 % proti 4–8 % jinde; ve stejném okrsku vyčnívají i další kandidáti z Lukavce (FULNEK PRO LIDI: Heger č. 12 = 44 a Pavera č. 14 = 39 proti 14–25), kdežto Schoppik z Jerlochovic (č. 13) má jen 14 – místní preference Lukavce, nikoli překlep. (3) Karel Schoppik (propad 14 vs 42) je tím vysvětlen: sousední kandidáti jsou z Lukavce, on ne; v roce 2022 měl pod jinou stranou v okrsku 11 50 hlasů.",
+    "dukaz": "Lídr kandidátky a tři kandidáti z Lukavce zvýšení současně v okrsku 11.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu; simulace opravy (–22 a –44 hlasů) nemění mandáty (1, 2, 1, 2, 7, 2) ani zvolené.",
+    "umysl": "Bez indikace – skutečné preference.",
+    "doporuceni": "Souhrn vyřadit; detektor by neměl označovat lídra kandidátky jako překlep.",
+    "vyradit": true
+  }
+}

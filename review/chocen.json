@@ -1,0 +1,24 @@
+{
+  "typo:580350/8:58035001:2:9": {
+    "kontrola": "Ověřen vektor HLASY_01–21 PRO CHOCEŇ SPOLEČNĚ ve všech 9 okrscích, tentýž kandidát v roce 2022 (list 3, č. 12, pod jinou stranou), bydliště kandidátů (rk.BYDLISTEN), součty okrsku (součet kandidátů = hlasy strany = PL_HL_CELK) a simulace outcome() pro opravy o 1–20 hlasů.",
+    "zjisteni": "Martin Valach (č. 9, bydliště Dvořisko) má v okrsku 580350/8 zapsáno 27 hlasů při sousedech 8 a 8 (vektor č. 1–21: 19, 16, 12, 10, 13, 11, 12, 8, 27, 8, 6, 14, 6, 11, 9, 10, 7, 11, 10, 9, 6). Nejde o překlep, ale o opakující se místní preferenci: v roce 2022 (tehdy na kandidátce SPOL. pro město, ODS a Nestran., č. 12) měl Valach ve stejném okrsku 8 34 hlasů při sousedech 23 a 22 (ostatní kandidáti 13–25), zatímco v okrscích 1–6 kopíroval sousedy (např. 73 vs 63/72, 94 vs 103/95). V roce 2026 je Valach jediný kandidát z Dvořiska na všech listinách a jediný, kdo v okrsku 8 vyčnívá nad ostatní (o 17–19 hlasů). Stejný jev je vidět i jinde: v okrsku 7 vyčnívají Aleš Dvořák (Březenice, č. 5) 47 vs 29/29 a Jiří Šimek (Hemže, č. 7) 52 vs 29/19 – místní kandidáti dostávají ve vesnických okrscích výrazně víc hlasů. Zápis okrsku 8 je vnitřně konzistentní (součet kandidátů 235 = hlasy strany, PL_HL_CELK 1 631 ≤ 85 × 21).",
+    "dukaz": "Rok 2022: 34 hlasů při sousedech 23 a 22 ve stejném okrsku 8; bydliště Dvořisko; podobné vyčnívání místních kandidátů (Dvořák – Březenice, Šimek – Hemže) v okrsku 7.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Pokud by šlo o překlep (27 → 7), PRO CHOCEŇ SPOLEČNĚ by si ponechala 5 mandátů, ale poslední z nich by místo Martina Valacha (č. 9, 866 hlasů) získal Jiří Kutlvašr (č. 6, 853 hlasů). Mechanismus je preferenční posun: kandidáti nad 110 % průměru strany (průměr 736,3, práh 810) jsou řazeni podle hlasů – Valtr 993, Kiesewetter 967, Macháček 913 a Brožek 884 mají mandát jistý, o pátý soupeří Valach 866, Kutlvašr 853 a Šimek 839 (Aleš Dvořák, č. 5, 770 hlasů, je pod prahem). Rozdíl Valach – Kutlvašr je 13 hlasů; simulace outcome(): úbytek 12 hlasů nic nemění, 13 a více hlasů mandát převrátí (při 13 vyjde shoda 853 : 853, rozhoduje pořadí na listině). Mandáty stran (3, 5, 5, 8) se nemění. Protože je hodnota 27 prokazatelně místní preference, zvolení se nemění.",
+    "umysl": "Bez indikace – skutečná preference voličů z Dvořiska, opakovaná po čtyřech letech.",
+    "doporuceni": "Nález vyřadit. Zveřejnit jen upozornění, že o posledním mandátu PRO CHOCEŇ SPOLEČNĚ rozhodlo 13 hlasů mezi Valachem a Kutlvašrem.",
+    "vyradit": true
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeny obě hodnoty z typos_2026.pkl (Valach okrsek 8, Jiří Pražák okrsek 7), vektory kandidátů v ostatních okrscích, rok 2022 a simulace outcome() pro opravy o 20 hlasů.",
+    "zjisteni": "Dvě vložené číslice: (1) Martin Valach, PRO CHOCEŇ SPOLEČNĚ č. 9, okrsek 8: 27 místo ~7 – místní preference z Dvořiska opakující se od roku 2022 (34 hlasů při sousedech 22–23), viz samostatný nález, vyřazeno. (2) Jiří Pražák, Nestraníci č. 15, okrsek 7: 28 hlasů při sousedech 7 a 7 (vektor č. 13–17: 7, 7, 28, 7, 4). Pražák bydlí v Chocni, v roce 2022 nekandidoval a v ostatních okrscích kopíruje sousedy (okrsek 8: 16 vs 13/13, okrsek 9: 5 vs 5/5). V malém okrsku 7 vyčnívá i Novotný (č. 3, 22 vs 10/8), ale 28 proti 7 (čtyřnásobek) nelze doložit místní vazbou – zůstává možnost překlepu (28 → 8). Součet kandidátů okrsku 7 (183) odpovídá hlasům strany, takže hodnotu nelze vyvrátit zevnitř zápisu.",
+    "dukaz": "Valach: rok 2022 a místní preference. Pražák: bez dohledané místní vazby a bez srovnání s rokem 2022.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Oprava Pražáka o –20 hlasů (473 → 453) nemění mandáty ani zvolené: Nestraníci mají 3 mandáty (Pelinka, Zimová, Novotný), Pražák je 15. na listině a pod 110 % průměru strany (495). Oprava Valacha by změnila zvolené (Valach → Kutlvašr), ale jde o místní preferenci, takže se nepředpokládá.",
+    "umysl": "Bez indikace – nahodilý přepis nebo místní preference.",
+    "doporuceni": "Hodnotu Pražáka (okrsek 7) lze ověřit v originálním zápisu; Valacha vyřadit.",
+    "vyradit": false
+  }
+}

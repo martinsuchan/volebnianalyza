@@ -1,0 +1,20 @@
+{
+  "stack:597007/11:59700701:5": {
+    "kontrola": "Ověřen vektor HLASY_01–23 strany č. 5 v okrsku 597007/11, podíly stran ve všech 12 okrscích a srovnání s rokem 2022.",
+    "zjisteni": "Řádek strany Společně VM je souvislý (č. 1: 121, ostatní 67–96, bez děr, součet = hlasy strany 1 948); nic nenasvědčuje nezapsanému balíku. Podíl strany 35,8 % vs. 47–62 % jinde je vyvážen vysokými podíly dvou jiných stran (č. 3: 17,0 %, č. 4: 29,7 % při 9–19 % jinde). Nízké využití hlasů (83 % možných) je stejné i v roce 2022 (79,5 % při 89 % jinde) a podobné v okrsku 9 (84 %), jde tedy o místní chování voličů v malém okrsku (286 lístků).",
+    "dukaz": "Řádek bez děr, součty sedí, nízké využití hlasů je stálý rys okrsku (2022 též).",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty; i kdyby straně chybělo 1 384 hlasů, jde o hlasy strany s 49 408 hlasy.",
+    "umysl": "Bez indikace – místní vzorec hlasování je pravděpodobnější než chyba."
+  },
+  "missing:597007/10:59700701": {
+    "kontrola": "Ověřen poměr PL_HL_CELK/(PLAT_LISTKY × 23) ve všech okrscích 2026 i 2022 a řádky kandidátů všech stran v okrsku 597007/10.",
+    "zjisteni": "Využití hlasů 80,4 % (3 717 / (201 × 23)) je nízké, ale v roce 2022 byl stejný okrsek stejně nízko (3 234 hlasů / (179 odevzdaných × 23) = 78,6 %) při 89–91 % ve velkých okrscích; podobně nízké jsou i malé okrsky 9 (84 %) a 11 (83 %). Řádky hlasů kandidátů jsou souvislé bez děr. Jde o místní vzorec, nikoli doložené chybějící hlasy.",
+    "dukaz": "Stejný nízký poměr hlasů na lístek v roce 2022; souvislé řádky kandidátů.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty, ani při doplnění ~540 hlasů podle podílů v sousedních okrscích.",
+    "vyradit": true
+  }
+}

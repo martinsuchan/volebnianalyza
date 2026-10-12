@@ -1,0 +1,9 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Markéta Kočí (Hnutí dobrých proměn, č. 14, okrsek 574121/14) má 25 hlasů místo očekávaných 2–3 (sousedé 3, 2, 4); její podíl 16,0 % hlasů strany v okrsku je víc než dvojnásobek maxima jinde (7,5 %, medián 4,8 %), což svědčí o vložené číslici, ale může jít i o místní preferenci. Dopad nulový.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() s opravou každé hodnoty: mandáty i zvolení beze změny."
+  }
+}

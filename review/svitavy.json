@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl/t3 pro všech 5 okrsků: kandidát č. 2 KDU-ČSL porovnán se sousedy v těchto i ve všech ostatních 16 okrscích; simulace outcome().",
+    "zjisteni": "Všech pět hodnot patří téže kandidátce: Jana Bezděková (KDU-ČSL, č. 2) má v okrscích 577731/1, /6, /9, /10 a /16 po řadě 8, 6, 18, 5 a 9 hlasů, zatímco č. 1 a č. 3 mají 25/23, 29/28, 63/55, 36/29 a 31/33. Poměr k sousedům je 0,15–0,33; v ostatních 16 okrscích je medián 0,43 (10. percentil 0,25, 90. percentil 0,58) a č. 2 má tam 1–34 hlasů proti 38–67 u č. 1. Jde tedy o systematický rys (část voličů KDU-ČSL č. 2 nepodpořila), nikoli o pět samostatných překlepů; pět nejnižších okrsků z 21 je očekávaný výběr z levého konce rozdělení. Součty kandidátů se rovnají hlasům stran.",
+    "dukaz": "Stejný vzorec (č. 2 trvale ~30–40 % sousedů) ve všech okrscích města, nikoli izolované chyby.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: doplnění +16 až +41 hlasů č. 2 v pěti okrscích by mandáty ani zvolené neměnilo; nejde o chybu zápisu.",
+    "umysl": "Žádný důvod k podezření – místní vzorec hlasování.",
+    "doporuceni": "Nález nezveřejňovat jako anomálii.",
+    "vyradit": true
+  }
+}

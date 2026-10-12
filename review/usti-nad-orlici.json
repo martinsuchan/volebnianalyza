@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv (hlasy 6 208 = 5,028 %) a simulací outcome() s odečtením 37 hlasů.",
+    "zjisteni": "Koalice SPD, ČSNS a nezávislých pro lepší Ústí má 6 208 platných hlasů, 5,0280 % (přepočteno), tedy 36 hlasů nad 5% hranicí; jediný mandát (č. 1 Martin Dudla).",
+    "dopad": "Pokles o 37 hlasů by koalici SPD vzal mandát a Martin Dudla by nebyl zvolen; mandát by získali OUŠŤÁCI (7 → 8, Linda Gregarová). Jde o hypotetický posun o 0,03 % hlasů; žádná chyba v datech zjištěna.",
+    "dopad_kat": "Těsný výsledek",
+    "jistota": 1
+  }
+}

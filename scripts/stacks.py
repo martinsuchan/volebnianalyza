@@ -57,7 +57,8 @@ def run(year):
                             z_vpb=m.z_vpb if m is not None else np.nan,
                             shoda=min(d2, d1) / max(d2, d1) if d1 and d1 > 0 and d2 > 0 else 0,
                             hlasy=g.set_index('OID').POC_HLASU[o], scale=sc))
-    S = pd.DataFrame(out)
+    S = pd.DataFrame(out, columns=['rok', 'ZK', 'OID', 'strana', 'nazev', 'pb_obs', 'pb_ocek', 'z_strana', 'chybi_listku_strana',
+                                   'chybi_listku_okrsek', 'z_vpb', 'shoda', 'hlasy', 'scale'])  # sloupce i pro prázdný výsledek
     S['MC'] = S.OID.map(t3.drop_duplicates('OID').set_index('OID').MC)
     # classification
     S['tri'] = np.select([(S.z_vpb <= -5) & (S.z_strana <= -3.5) & (S.shoda >= 0.6),

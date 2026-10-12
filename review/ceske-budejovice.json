@@ -1,0 +1,21 @@
+{
+ "inv0": {
+  "kontrola": "Ověřeno v okrskových zápisech: všech 10 okrsků má PLAT_LISTKY = ODEVZ_OBAL (191–303 obálek); ve městě je 10 takových okrsků z 90, průměrná neplatnost 0,96 %. Poissonův model dává ≈ 6,0 očekávaných nul (P ≥ 10 ≈ 8 %).",
+  "zjisteni": "V 10 z 90 okrsků (544256/10, 24, 30, 31, 35, 38, 40, 46, 57, 69) se počet platných lístků rovná počtu odevzdaných obálek (191–303 obálek), zatímco městský průměr neplatnosti je 1,0 % (medián 3 neplatné na okrsek). Při této míře by se nula čekala přibližně v 6 okrscích z 90, tedy 10 je jen mírně nad očekáváním.",
+  "dukaz": "10 pozorovaných nul oproti ≈ 6,0 očekávaným (P ≈ 8 %); nulové okrsky jsou spíše menší (průměr 249 obálek oproti 328 ve městě), což je přirozené. Statisticky nejde o výrazný rozpor.",
+  "jistota": 1,
+  "umysl": "Nízká – nejspíš náhoda, případně nevyčleněné neplatné lístky",
+  "dopad_kat": "Bez vlivu",
+  "dopad": "Bez vlivu na mandáty ani zvolené; ovlivňuje jen statistiku neplatných hlasů.",
+  "doporuceni": "Pouze orientační dotaz na komise; kontrola v programu ČSÚ: varování při nulovém počtu neplatných lístků."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřen okrsek 544256/18: hl a rk i součet kandidátů (1 362 = POC_HLASU); simulace opravy 0→30 neměnící mandáty ani zvolené.",
+  "zjisteni": "Jediná hodnota: v okrsku 544256/18 má kandidát č. 28 Jan Schreib (Společně pro Budějovice – Lidovci a TOP 09) 0 hlasů, zatímco sousední č. 22–34 mají 25–42 (č. 27: 32, č. 29: 26). Kandidát je platný (PLATNOST A) a uprostřed listiny, proto nemůže mít méně než oba sousedé; ve zbylých 89 okrscích má 12–55 hlasů, nulu jen v tomto jediném. Součet kandidátů souhlasí s POC_HLASU okrsku, takže chyba je už v zapsaném řádku hlasů; patrně chybí asi 26–32 hlasů.",
+  "dukaz": "Logická nemožnost (kandidát uprostřed listiny s nulou při sousedech ~30) a nula je v 1 z 90 okrsků, kde jinde minimum 12.",
+  "jistota": 4,
+  "dopad_kat": "Bez vlivu",
+  "dopad": "Simulace opravy 0→30 (konzervativně) i 0→32 (horní odhad): strana si drží 3 mandáty, zvolení se nemění; Schreib (celkem 1 792 hlasů) není zvolen ani po opravě.",
+  "doporuceni": "Opravit data podle původního zápisu; chybějící hlasy kandidáta č. 28 doplnit."
+ }
+}

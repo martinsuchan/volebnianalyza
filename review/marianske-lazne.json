@@ -1,0 +1,10 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Obě hodnoty jsou jen nízké, nikoli logicky nemožné: Ladislav Špelina (Změna pro M. L., č. 4) má 6 hlasů, ale v řádku mají 5–10 hlasů i č. 8, 9, 13, 15–19 (podíl 3,0 % hlasů strany v okrsku vs. 5,0 % medián jinde); Jana Barcziová (Za lepší M. L., č. 7) má 5 hlasů při dalších 5–6 v řádku (2,4 % vs. 3,9 %). Nejde o vypadlou číslici, ale o rozptyl preferencí.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() s opravou každé hodnoty: mandáty i zvolení beze změny.",
+    "vyradit": true
+  }
+}

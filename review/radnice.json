@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 7 hlasů. Občané Radnic by s přírůstkem pouhých 7 hlasů získali druhý mandát na úkor TJ SOKOL RADNICE (ta by musela ztratit 35 hlasů) nebo Spolu pro Živé Radnice (76 hlasů). Jednookrskové město, 10 628 hlasů.",
+    "dopad": "Občané Radnic 1 → 2, TJ SOKOL RADNICE 10 → 9 (ztráta 2/3 většiny, 10 z 15 mandátů); zvolen by byl Josef Beran (č. 1, Občané Radnic) místo Jiřího Cozla (č. 10, TJ SOKOL RADNICE). Při variantě Spolu pro Živé Radnice by místo Adriany Koláčkové (č. 4) nastoupil Beran. Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

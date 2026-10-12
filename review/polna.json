@@ -1,0 +1,41 @@
+{
+  "typo:587711/5:58771101:5:13": {
+    "kontrola": "Ověřen vektor HLASY_01–21 KDU-ČSL ve všech 7 okrscích, Jaromír Panáček v roce 2022 (list 1 i list 4), bydliště všech kandidátů (rk.BYDLISTEN), podíl KDU-ČSL v okrscích a simulace outcome() pro opravy o 5–66 hlasů.",
+    "zjisteni": "Jaromír Panáček (KDU-ČSL č. 13, bydliště Hrbov) má v okrsku 587711/5 zapsáno 42 hlasů při sousedech 4 a 4 (vektor č. 1–21: 32, 10, 6, 9, 10, 7, 5, 7, 10, 9, 4, 4, 42, 4, 4, 6, 31, 3, 6, 5, 15). Nejde o překlep: stejný vzorec měl Panáček už v roce 2022 – na listině SPOLU pro Polnou (č. 13) 22 hlasů při sousedech 10 a 5 v tomtéž okrsku 5 (v okrscích 1–3 kopíroval sousedy: 26 vs 25/24, 23 vs 29/34) a na listině ČSSD (č. 13) 28 při sousedech 21 a 15. Okrsek 5 (202 voličů, 151 platných lístků) odpovídá Hrbovu: dva kandidáti KDU-ČSL z Hrbova, Panáček (č. 13) a Jana Klusáčková (č. 17), mají 42 a 31 hlasů, ostatní kandidáti 3–10. Také v roce 2022 byla v okrsku 5 zvýšená kandidátka z Hrbova Myšičková (ČSSD č. 17: 27 hlasů při sousedech 16 a 14). Podíl KDU-ČSL v okrsku 5 (9,0 % platných hlasů) odpovídá ostatním okrskům (5,8–9,2 %), tedy součet nevypadá chybně navýšený. Součet kandidátů (229) = hlasy strany; zápis je vnitřně konzistentní.",
+    "dukaz": "Rok 2022: Panáček 22 vs 10/5 (SPOLU) a 28 vs 21/15 (ČSSD) v okrsku 5; další hrbovská kandidátka (Myšičková) vyčnívá stejně; dva hrbovští kandidáti KDU-ČSL 2026.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Pokud by šlo o překlep (42 → 4, tj. –38 hlasů KDU-ČSL), KDU-ČSL by přišla o druhý mandát (Lukáš Hrdina, č. 2, 274 hlasů) a SNK POLNÁ 2030 by získala 6. mandát (Vít Kruntorád, č. 14, 573 hlasů): mandáty 5 → 6 a 2 → 1. Mechanismus není 5% hranice (KDU-ČSL má 3 458 hlasů = 8,48 %), ale d'Hondt u posledního, 21. mandátu: KDU-ČSL má rezervu jen 8 hlasů (SNK POLNÁ 2030 chybí 25). Simulace outcome(): úbytek 5 hlasů nic nemění, 10 a více hlasů mandát převrátí. Protože jde o prokazatelně místní preferenci z Hrbova, mandáty se nemění.",
+    "umysl": "Bez indikace – skutečná preference voličů z Hrbova, opakovaná po čtyřech letech.",
+    "doporuceni": "Nález vyřadit. Zachovat jen upozornění na těsný výsledek (8 hlasů mezi KDU-ČSL a SNK POLNÁ 2030).",
+    "vyradit": true
+  },
+  "typo:587711/5:58771101:5:17": {
+    "kontrola": "Ověřen vektor KDU-ČSL v okrsku 5, bydliště kandidátů, rok 2022 (hrbovští kandidáti na jiných listinách) a simulace outcome() pro opravy o 28 a 66 hlasů.",
+    "zjisteni": "Jana Klusáčková (KDU-ČSL č. 17, bydliště Hrbov) má v okrsku 587711/5 31 hlasů při sousedech 6 a 3 (vektor č. 15–19: 4, 6, 31, 3, 6). Spolu s Panáčkem (č. 13, také Hrbov, 42 hlasů) je to druhý a poslední hrbovský kandidát na listině – oba vyčnívají současně, zatímco ostatní kandidáti z Polné ne. Stejný jev měli hrbovští kandidáti v okrsku 5 i v roce 2022 (Panáček 22 vs 10/5 a 28 vs 21/15, Myšičková 27 vs 16/14). Součet kandidátů 229 = hlasy strany. Jde o místní preferenci, nikoli o vloženou číslici.",
+    "dukaz": "Spolu s Panáčkem dva kandidáti z Hrbova současně; rok 2022 – stejný vzorec u hrbovských kandidátů na dvou listinách.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Pokud by šlo o překlep (31 → 3, –28 hlasů), vedlo by to stejně jako u Panáčka ke změně: KDU-ČSL 2 → 1 mandát (Lukáš Hrdina, č. 2, by ztratil mandát) a SNK POLNÁ 2030 5 → 6 (Vít Kruntorád, č. 14). Mechanismus je d'Hondt u 21. mandátu (rezerva KDU-ČSL 8 hlasů, ne 5% hranice – KDU-ČSL má 8,48 %). Simulace outcome(): už –10 hlasů mandát převrátí. Hodnota je ale doložená místní preference, takže se mandáty nemění.",
+    "umysl": "Bez indikace – skutečná preference voličů z Hrbova.",
+    "doporuceni": "Nález vyřadit.",
+    "vyradit": true
+  },
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome(): rezerva 8 hlasů u 2. mandátu KDU-ČSL, doplněna jména.",
+    "zjisteni": "Rezerva 8 hlasů (21 mandátů, tedy 0,4 voliče s plným počtem hlasů): 21. mandát získala KDU-ČSL (3 458 hlasů, 8,48 %) jako svůj druhý, Lukáš Hrdina (č. 2, 274 hlasů). Úbytek KDU-ČSL o 8 a více hlasů (nebo přírůstek SNK POLNÁ 2030 o 25 hlasů) by mandát přesunul na SNK POLNÁ 2030 (Vít Kruntorád, č. 14, 573 hlasů): SNK 5 → 6, KDU-ČSL 2 → 1. Mechanismus je d'Hondt, 5% hranici žádná ze stran nemění (Zelení mají 83 hlasů, 0,20 %).",
+    "dopad": "Mění mandáty jen tehdy, pokud by se KDU-ČSL ztratilo ≥ 8 hlasů; jediné podezřelé hodnoty (Panáček 42, Klusáčková 31 v okrsku 5) jsou doložená místní preference z Hrbova (potvrzena i v roce 2022), takže změna se nepředpokládá.",
+    "jistota": 1
+  },
+  "typos:souhrn": {
+    "kontrola": "Obě hodnoty (Panáček 42, Klusáčková 31, okrsek 5) ověřeny jednotlivě; viz samostatné nálezy.",
+    "zjisteni": "Obě hodnoty KDU-ČSL v okrsku 5 patří kandidátům z Hrbova (Panáček č. 13, Klusáčková č. 17); hrbovští kandidáti vyčnívali v okrsku 5 i v roce 2022 na dvou různých listinách. Nejde o vložené číslice, ale o místní preferenci.",
+    "dukaz": "Rok 2022: Panáček 22 vs 10/5 (SPOLU), 28 vs 21/15 (ČSSD), Myšičková 27 vs 16/14 v okrsku 5; v roce 2026 dva Hrbovští kandidáti současně.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Případná oprava obou hodnot (–66 hlasů) by převrátila 2. mandát KDU-ČSL (Hrdina) ve prospěch SNK POLNÁ 2030 (Kruntorád), ale hodnoty jsou doložená místní preference, takže se mandáty nemění.",
+    "umysl": "Bez indikace – skutečná preference voličů z Hrbova.",
+    "doporuceni": "Souhrn vyřadit společně s oběma samostatnými nálezy.",
+    "vyradit": true
+  }
+}

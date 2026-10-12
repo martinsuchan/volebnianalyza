@@ -1,0 +1,10 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Obě hodnoty jsou v normálním rozptylu: Jakub Brabenec (Severočeši.cz, č. 4) má 6 hlasů, jinde v řádku 4–9 (podíl 2,9 % vs. 3,8 % medián); Jan Javorek (č. 9) má 25 hlasů, ale podíl 17,1 % leží uvnitř rozpětí jinde (medián 10,6 %, max 22,0 %) a v témže řádku má 21 hlasů i č. 17 – místní preference. Prokázaná chyba chybí.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() s opravou každé hodnoty: mandáty i zvolení beze změny.",
+    "vyradit": true
+  }
+}

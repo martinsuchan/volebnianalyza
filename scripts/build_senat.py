@@ -4,7 +4,7 @@ import json, os
 import numpy as np, pandas as pd
 import svg
 from svg import E, fmt
-from common import ROOT, RES
+from common import ROOT, RES0 as RES
 
 OUT = os.path.join(ROOT, 'report')
 SE_APP = 'https://volby.gov.cz/app/senat/20261009/cs/results/'
@@ -228,6 +228,30 @@ def findings():
     return F
 
 
+OBVODY_NALEZU = {'S01': [51], 'S02': [75], 'S03': [66], 'S04': [18], 'S05': [69], 'S06': [9], 'S07': [24], 'S08': [12], 'S09': [15],
+                 'S10': [6, 78, 81, 18], 'S11': [18, 54, 42]}
+
+
+def districts_table(F):
+    """Přehled všech 27 obvodů s kotvami obvod-NN (cíl vyhledávání v záhlaví webu)."""
+    ids = {}
+    for f in F:
+        for o in OBVODY_NALEZU.get(f['id'], []):
+            ids.setdefault(o, []).append(f['id'])
+    rows = ''
+    for r in mg.sort_values('OBVOD').itertuples():
+        res = f'{E(r.prvni)} zvolen v 1. kole' if r.zvolen_1k else f'postupují {E(r.prvni)} a {E(r.druhy)}'
+        rez = (f'{n0(r.rozdil_nad_50)} nad 50 %' if r.zvolen_1k else f'{n0(r.rozdil_2_3)} (2. vs 3. místo)')
+        rows += (f'<tr id="obvod-{r.OBVOD}"><td data-v="{r.OBVOD}">{r.OBVOD}</td><td data-v="{E(obvn[r.OBVOD])}"><a href="{se_url(r.OBVOD)}" {A}>{E(obvn[r.OBVOD])}</a></td>'
+                 f'<td>{res}</td><td class="num" data-v="{r.presun_50 if r.zvolen_1k else r.rozdil_2_3}">{rez}</td>'
+                 f'<td class="num" data-v="{dist.r[r.OBVOD]:.4f}">{pct(dist.r[r.OBVOD])}</td>'
+                 f'<td data-v="{len(ids.get(r.OBVOD, []))}">' + ', '.join(f'<a href="#{i}">{i}</a>' for i in ids.get(r.OBVOD, [])) + '</td></tr>')
+    return ('<h2 id="obvody">Obvody</h2><p class="sub">Název vede na výsledky obvodu na volby.gov.cz. Rozdíl = počet hlasů mezi 2. a 3. místem, '
+            'u zvolených v 1. kole rezerva nad nadpoloviční většinou. Řadit lze kliknutím na záhlaví.</p>'
+            '<div class="card tw"><table class="sortable"><thead><tr><th class="num">Č.</th><th>Obvod</th><th>Výsledek 1. kola</th><th class="num">Rozdíl hlasů</th>'
+            '<th class="num">Senátní / komunální obálky</th><th>Nálezy</th></tr></thead><tbody>' + rows + '</tbody></table></div>')
+
+
 # ------------------------------------------------------------------ tabulky testů
 def tests_table():
     I = integ.groupby(['rok', 'kod']).size()
@@ -308,7 +332,7 @@ def build(page, fig, badge_j, badge_d, AUTHOR_URL):
                     f'<dt>Doporučení</dt><dd>{E(f["doporuceni"])}</dd><dt>Ověřit na volby.gov.cz</dt><dd>{f["odkazy"]}</dd></dl></article>' for f in F)
     rmin, rmax = dist.r.min(), dist.r.max()
     n_ok = len(t5)
-    body = f'''<p class="kicker">Samostatná analýza · navazuje na <a href="index.html">audit komunálních voleb v Praze</a></p>
+    body = f'''<p class="kicker">Senát 2026 · souvisí s <a href="../kv/index.html">komunálními volbami 2026</a></p>
 <h1>Senátní volby 2026, 1. kolo: forenzní audit a srovnání s komunálními volbami</h1>
 <p class="lead">Analýza všech {n0(n_ok)} okrsků ve 27 senátních obvodech (9.–10. 10. 2026), {len(rk)} kandidátů a 156 XML dávek volební noci,
 porovnaná okrsek po okrsku s komunálními volbami konanými ve stejný den a se senátními volbami 2018, 2020 a 2022.</p>
@@ -346,6 +370,7 @@ zhruba čtyři pětiny voličů. Odchylky jednotlivých okrsků od okolí jsme p
 <p class="sub">Pro každý obvod: o kolik hlasů šlo při postupu do 2. kola (2. vs 3. místo) a při zvolení v 1. kole (hranice nadpoloviční většiny platných hlasů).
 „Stačí přesunout“ = nejmenší počet hlasů, který by při přesunu od jednoho kandidáta k druhému změnil výsledek.</p>
 {chart_margins(fig)}
+{districts_table(F)}
 <h2 id="registr">Registr nálezů</h2>
 <p class="sub">Jistota = pravděpodobnost, že zveřejněný údaj neodpovídá skutečnosti (Jistá – deterministický rozpor; Velmi vysoká ≥ 95 %; Vysoká 80–95 %; Střední 50–80 %; Nízká &lt; 50 % = riziko, nikoli zjištěná chyba).</p>
 <div class="card tw"><table><thead><tr><th>ID</th><th>Místo</th><th>Typ</th><th>Jistota chyby</th><th>Dopad</th></tr></thead><tbody>{reg}</tbody></table></div>
@@ -384,6 +409,6 @@ U senátních voleb se výsledky vyhlašují až po 2. kole a dřívější náv
 <a href="https://volby.gov.cz/opendata/se2018/se2018_opendata.htm" {A}>Senát 2018</a> · <a href="https://volby.gov.cz/app/senat/20261009/cs/results" {A}>Výsledky Senát 2026 na volby.gov.cz</a> ·
 <a href="https://www.zakonyprolidi.cz/cs/1995-247" {A}>Zákon č. 247/1995 Sb.</a> (§ 87, § 88). Výpočet: <code>scripts/se_etl.py</code> → <code>se_audit.py</code> → <code>build_senat.py</code>.</p>
 <p class="sub">Odkazy na okrsky: Senát <code>results/!_&lt;obvod&gt;_&lt;kód obce nebo MČ/MO&gt;__&lt;okrsek&gt;</code>, komunální volby <code>results/!__0_&lt;kraj&gt;_&lt;okres&gt;_&lt;kód obce nebo MČ/MO&gt;___&lt;okrsek&gt;</code>.</p></div>'''
-    page('senat.html', 'Senát 2026 – 1. kolo', body, 'Forenzní audit 1. kola senátních voleb 2026 a srovnání s komunálními volbami',
-         brand='Forenzní audit · Senát 2026, 1. kolo')
+    page('senat/index.html', 'Senát 2026 – 1. kolo', body, 'Forenzní audit 1. kola senátních voleb 2026 a srovnání s komunálními volbami',
+         section='senat', crumbs=[('Přehled', 'index.html'), ('Senát 2026, 1. kolo', None)])
     return write_csv()

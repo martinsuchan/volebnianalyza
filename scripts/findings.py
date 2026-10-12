@@ -27,7 +27,7 @@ def build():
                  'odpovídá jeho počet hlasů přesně počtu lístků s křížkem u strany (poměr ≈ 1,0, žádné preferenční hlasy). Hodnota 165 vznikne z 16 nebo 15 vložením jedné číslice.',
         dukaz='Poměr k základu strany 11,0× (v ostatních okrscích nejvýše 1,25×); odebráním jedné číslice vznikne hodnota 16.', jistota=4,
         umysl='Nízká – vzorec odpovídá překlepu; chyba však shodou okolností posouvá stranu právě nad 5% hranici',
-        dopad='MĚNÍ SLOŽENÍ ZASTUPITELSTVA: Naše Praha 10 je po opravě pod 5 % (rezerva byla jen 99 hlasů) → ztrácí 2 mandáty '
+        dopad='MĚNÍ SLOŽENÍ ZASTUPITELSTVA: Naše Praha 10 je po opravě pod 5 % (k pádu pod hranici stačila ztráta 105 hlasů) → ztrácí 2 mandáty '
               '(I. Cabrnochová, B. Zoufalík); mandát získají JSME PRAHA 10 (M. Žilinová) a SPD pro Prahu 10 (J. Nerušil). '
               'Změna nastane, kdykoli je skutečný počet ≤ 60 hlasů.', dopad_kat='Mění mandáty',
         doporuceni='Okamžitě ověřit zápis T/3 okrsku 10043 a přepočítat hlasy kandidáta; podnět ČSÚ/MV, případně návrh k Městskému soudu v Praze (§ 60, lhůta 10 dnů od vyhlášení výsledků SVK).')
@@ -115,7 +115,7 @@ def build():
     add(id=f'N{i:02d}', priorita=2, typ='Výsledek těsnější než běžná chybovost sčítání', ZK=0, OID='', MC='Petrovice, Praha 13, Praha 21, Praha 20, Praha 18, Křeslice',
         zastupitelstvo='MČ', subjekt='6 zastupitelstev',
         zjisteni='O posledním mandátu rozhodlo: Praha-Petrovice 2 hlasy, Praha 21 18 hlasů, Praha 13 22 hlasů (zde navíc potvrzen chybějící balík STAN v okrsku 13053), '
-                 'Praha-Křeslice 28, Praha 20 49, Praha 18 – Naše Česko chybělo k 5 % 49 hlasů.',
+                 'Praha-Křeslice 28, Praha 20 49, Praha 18 – Naše Česko chybělo k 5 % 52 hlasů.',
         dukaz='Rezerva je menší než 2 voliči (každý volič má 15–35 hlasů); v datech připadá na okrsek ~0,25 detekovatelné chyby a drobné chyby (±1–5 hlasů) nejsou statisticky viditelné.',
         jistota=1, umysl='Bez indikace', dopad='Mandát může změnit jakákoli drobná chyba v kterémkoli okrsku MČ.', dopad_kat='Těsný výsledek',
         doporuceni='Zvážit preventivní kontrolní přepočet (zejména Petrovice a Praha 13).')
@@ -125,6 +125,33 @@ def build():
         subjekt='SPOLU pro Prahu', zjisteni='První přenos: SPOLU 0 hlasů; opakovaný přenos v 0:36: 4 099 hlasů. Opakovaně bylo posláno dalších 5 okrsků (13038, 18006, 18008, 10044, 13040).',
         dukaz='XML dávky ČSÚ č. 72 a 123 (příznak OPAKOVANE=1)', jistota=5, umysl='Žádná – kontrolní mechanismus zafungoval', dopad='Opraveno, ve finálních datech bez vlivu.',
         dopad_kat='Bez vlivu', doporuceni='Obdobnou kontrolu (strana s 0 hlasy při vysokém očekávání) zavést automaticky – v okrsku 2/2038 nezafungovala.')
+    i += 1
+    # neúplně opsané řádky kandidátů – detektor doplněný po kontrole krajských měst (rows.py), společná simulace dopadu
+    from rows import detect as rows_detect
+    from materiality import outcome
+    RW = rows_detect(d); RW = RW[RW.sila != 'slaby']
+    zmena = []
+    for zk, g in RW.groupby('ZK'):
+        dV, dC = {}, {}
+        for r in g.itertuples():
+            dV[r.strana] = dV.get(r.strana, 0) + r.chybi
+            for k, v in r.dC.items():
+                dC[k] = dC.get(k, 0) + v
+        s0, e0 = outcome(ros, d['rk'], cm, zk); s1, e1 = outcome(ros, d['rk'], cm, zk, dV, dC)
+        if s0 != s1 or e0 != e1:
+            zmena.append(zname(zk))
+    top = RW.sort_values('chybi', ascending=False).head(4)
+    add(id=f'N{i:02d}', priorita=3, typ='Neúplně opsané řádky kandidátů (souhrn)', ZK=0, OID=', '.join(RW.OID.drop_duplicates()), MC=', '.join(sorted(set(RW.OID.map(mcmap).astype(str)))),
+        zastupitelstvo='magistrát i MČ', subjekt=f'{len(RW)} řádků v {RW.OID.nunique()} okrscích ({(RW.sila == "silny").sum()} s velmi vysokou jistotou)',
+        zjisteni='Kandidáti č. 1–k mají v okrsku zhruba stejně hlasů (lístky s křížkem u strany), další kandidáti do počtu mandátů nulu – řádek zápisu nebyl dopsán. '
+                 'Největší případy: ' + '; '.join(f'{r.OID} {r.nazev} ({zname(r.ZK)}): kandidáti 1–{r.posledni_v_bloku} po ~{r.zaklad:.0f}, pak {r.nul} nul, chybí ~' + f'{r.chybi:,}'.replace(',', ' ') + ' hlasů'
+                                                 for r in top.itertuples()) + '.',
+        dukaz='Nula za blokem by vyžadovala, aby každý lístek s křížkem u strany obsahoval mnoho hlasů pro kandidáty jiných stran; u silných případů (lístky s křížkem × pozice za blokem ≥ 80) je to prakticky vyloučeno.',
+        jistota=4, umysl='Nízká – nedopsané řádky zápisu, nahodile napříč stranami',
+        dopad=('Společná simulace doplnění všech řádků v každém zastupitelstvu nemění mandáty ani zvolené kandidáty.' if not zmena else
+               'Společná simulace mění výsledek v: ' + ', '.join(zmena) + '.'),
+        dopad_kat='Bez vlivu' if not zmena else 'Mění zvolené',
+        doporuceni='Detektor byl doplněn po kontrole krajských měst; jednotlivé řádky zatím nebyly ručně ověřeny. Zavést v programu ČSÚ kontrolu nul za blokem kandidátů.')
     Fd = pd.DataFrame(F)
     Fd['jistota_text'] = Fd.jistota.map(JISTOTA)
     return Fd

@@ -1,0 +1,8 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s dV = +12 hlasů pro Vratimováci s rozumem.",
+    "zjisteni": "Rezerva 12 hlasů (17 mandátů, tj. 0,7 voliče): Vratimováci s rozumem mají 2 030 hlasů (5,06 %, 5% hranici překonali o 24 hlasů), ale mandát nezískali – poslední mandát připadl NEZÁVISLÍ – STAROSTOVÉ (6. mandát, Linda Machová, č. 6). Přírůstek Vratimováků o 12 hlasů by mandát přesunul: Vratimováci s rozumem 0 → 1 (Michal Kocurek, č. 1), NEZÁVISLÍ – STAROSTOVÉ 6 → 5 (Linda Machová by ztratila). Nejde o 5% hranici, ta je splněna, ale o d'Hondtovo dělení u posledního mandátu.",
+    "dopad": "Mandát může změnit chyba ≥ 12 hlasů; konkrétní chyba nebyla nalezena, jde o upozornění.",
+    "jistota": 1
+  }
+}

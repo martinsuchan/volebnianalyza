@@ -1,0 +1,8 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s dV = –4 hlasy pro PRO Nejdek.",
+    "zjisteni": "Rezerva 4 hlasy (15 mandátů, tj. 0,3 voliče): poslední mandát získalo PRO Nejdek (2 653 hlasů, 2 mandáty) o 4 hlasy před Stranou soukromníků ČR (2 649 hlasů, 1 mandát). Úbytek PRO Nejdek o 4 hlasy (nebo přírůstek soukromníků o 5) by mandát přesunul: PRO Nejdek 2 → 1 (Miroslav Drobný, č. 3, by ztratil), Strana soukromníků 1 → 2 (Jiří Vítek, č. 2).",
+    "dopad": "Rozhodují 4 hlasy; konkrétní chyba nebyla nalezena, jde o upozornění na těsný výsledek (doporučen kontrolní přepočet).",
+    "jistota": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Nejpřesvědčivější je Michal Bartoněk (Žijeme Stříbro, č. 6, okrsek 561215/5): 0 hlasů mezi 61 a 54 u sousedů, přitom v ostatních okrscích má 35–87 – jde o nezapsanou buňku (chybí ~55 hlasů). Bartoněk nebyl zvolen (365 hlasů celkem). Miroslav Nenutil (Stříbro pro vás, č. 15: 27 hlasů místo ~7) je jen mírně nad maximem jinde (12,5 % vs. 10,0 %), preferenci nelze vyloučit. Julie Balážová (SPD, č. 9: 6 hlasů, základ řádku 5–19) je v rozptylu.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome(): doplnění +55 i +110 hlasů Bartoňkovi (a straně Žijeme Stříbro) mandáty ani zvolené nemění; oprava Nenutila (−20) též bez vlivu."
+  }
+}

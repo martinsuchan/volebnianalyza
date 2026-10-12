@@ -1,0 +1,45 @@
+{
+  "typo:598917/9:59891701:4:38": {
+    "kontrola": "Ověřen vektor hlasů Srdcem pro Karvinou v okrsku 598917/9 (HLASY_01–45), ostatní okrsky (poměr č. 38 k mediánu řádku nejvýše 1,1×) a simulace outcome() včetně prahu 32 hlasů; druhý lístek v Karviné není.",
+    "zjisteni": "Libor Tkáč (č. 38 ze 41) má v okrsku 60 hlasů, ale všichni ostatní kandidáti v řádku mají 6–9 hlasů (č. 37 a č. 39 po 6, č. 1 jen 8). Při 191 platných lístcích by 54 voličů nad základ zvolilo kandidáta z konce listiny, což je v řádku bez jiné preference nepravděpodobné; v žádném z ostatních okrsků nepřekračuje č. 38 medián řádku o více než 10 %. Hodnota 6 odpovídá okolí (připsaná nula). Součet kandidátů 319 = hlasy strany v okrsku, chyba je tedy promítnuta i do součtu stran a hranice 5 %.",
+    "dukaz": "60 proti 6–9 u všech ostatních 40 kandidátů; v ostatních okrscích max. 1,1× medián řádku; po odebrání číslice vznikne 6.",
+    "jistota": 4,
+    "dopad_kat": "Mění mandáty",
+    "dopad": "MĚNÍ MANDÁTY (a tím zvolené) přes 5% hranici SPD, ne přímým přičtením hlasů. SPD má 23 818 hlasů z 476 392 platných hlasů stran = 4,9997 % a leží 2 hlasy pod hranicí (5 % = 23 819,6), proto má 0 mandátů. Každá z chyb nadsazuje součet hlasů všech stran, a tím i hranici. Hranice klesne pod 23 818 při snížení celkového počtu hlasů o ≥ 32 (476 360 × 5 % = 23 818,0). Samotná oprava kterékoli z tří hodnot (−54, −36, −40) to splní: SPD překročí 5 % (4,9997 → 5,0000–5,0002 %, po opravě všech tří 5,0010 %) a dostane 2 mandáty (Ester Stračánková 754 a Ladislav Hammer 749 hlasů, oba nad preferenční hranicí 638,8), Žijeme pro Karvinou klesne z 30 na 29 mandátů (nezvolen Andřej Wałoszek, č. 30, 7 300 hlasů) a Srdcem pro Karvinou ze 4 na 3 (nezvolen Radek Vojkůvka, č. 6, 1 096 hlasů). Ověřeno outcome(): snížení o 31 hlasů výsledek nemění, o 32 a víc ano; společná oprava všech tří (−130) dává totéž. Snížení o 54 hlasů je přitom více, než je třeba (stačí 32); platí pro jakoukoli skutečnou hodnotu 28 a méně.",
+    "doporuceni": "Okamžitě ověřit zápis T/3 okrsku 598917/9 (hlasy kandidáta č. 38 Srdcem pro Karvinou) a případně přepočítat hlasy."
+  },
+  "typo:598917/26:59891701:5:1": {
+    "kontrola": "Ověřen vektor hlasů NOVÍ LIDOVCI v okrsku 598917/26, poměr lídra k mediánu řádku v ostatních okrscích a simulace outcome() včetně prahu 32 hlasů.",
+    "zjisteni": "Tomáš Hejda (č. 1, lídr) má v okrsku 40 hlasů, kandidáti č. 2–26 mají 2–5 (typicky 2), tedy 8–20× méně. Lídr může mít preferenční náskok, ale v ostatních okrscích je č. 1 nejvýše 4,0× medián řádku (90. percentil 2,5×); zde 20×. Navíc má v témže řádku přesně 40 hlasů i kandidátka č. 27 (viz další nález) – dvě shodné extrémní hodnoty jsou nápadné. Hodnota 4 odpovídá okolí. Skutečná preferenční hodnota lídra by musela být ≤ 8, aby oprava stačila (−32). Součet kandidátů 178 = hlasy strany, chyba je promítnuta do součtů.",
+    "dukaz": "40 vs 2–5 u č. 2–26; poměr 20× proti max. 4,0× v ostatních okrscích.",
+    "jistota": 3,
+    "dopad_kat": "Mění mandáty",
+    "dopad": "MĚNÍ MANDÁTY (a tím zvolené) přes 5% hranici SPD, ne přímým přičtením hlasů. SPD má 23 818 hlasů z 476 392 platných hlasů stran = 4,9997 % a leží 2 hlasy pod hranicí (5 % = 23 819,6), proto má 0 mandátů. Každá z chyb nadsazuje součet hlasů všech stran, a tím i hranici. Hranice klesne pod 23 818 při snížení celkového počtu hlasů o ≥ 32 (476 360 × 5 % = 23 818,0). Samotná oprava kterékoli z tří hodnot (−54, −36, −40) to splní: SPD překročí 5 % (4,9997 → 5,0000–5,0002 %, po opravě všech tří 5,0010 %) a dostane 2 mandáty (Ester Stračánková 754 a Ladislav Hammer 749 hlasů, oba nad preferenční hranicí 638,8), Žijeme pro Karvinou klesne z 30 na 29 mandátů (nezvolen Andřej Wałoszek, č. 30, 7 300 hlasů) a Srdcem pro Karvinou ze 4 na 3 (nezvolen Radek Vojkůvka, č. 6, 1 096 hlasů). Ověřeno outcome(): snížení o 31 hlasů výsledek nemění, o 32 a víc ano; společná oprava všech tří (−130) dává totéž. Pro tento nález platí při skutečné hodnotě ≤ 8; při skutečné hodnotě 9–39 samotná oprava nestačí, ale společně s ostatními dvěma ano.",
+    "doporuceni": "Ověřit zápis T/3 okrsku 598917/26 (hlasy kandidátů č. 1 a č. 27 NOVÍ LIDOVCI)."
+  },
+  "typo:598917/26:59891701:5:27": {
+    "kontrola": "Ověřen vektor hlasů NOVÍ LIDOVCI v okrsku 598917/26 (kandidátka uprostřed listiny), celkové hlasy kandidátky ve městě (421) a simulace outcome() včetně prahu 32 hlasů.",
+    "zjisteni": "Kamila Fašungová (č. 27 ze 41) má v okrsku 40 hlasů, sousedé č. 26 a č. 28 po 2 a prakticky celý řádek po 2 (2–5). Kandidátka uprostřed listiny nemůže mít 20× více než sousedé bez lístků s křížkem; celkem má ve městě 421 hlasů, takže 40 hlasů z jednoho okrsku je zjevná odchylka. Hodnota 40 u č. 27 se opakuje s č. 1 (Hejda 40) – patrně chybná dvojice. Správná hodnota je spíše 2 než 0 (sousedé 2). Součet kandidátů 178 = hlasy strany, chyba promítnuta do součtů.",
+    "dukaz": "40 proti 2 u obou sousedů; poměr 20× k mediánu řádku (jinde max. 5×).",
+    "jistota": 4,
+    "dopad_kat": "Mění mandáty",
+    "dopad": "MĚNÍ MANDÁTY (a tím zvolené) přes 5% hranici SPD, ne přímým přičtením hlasů. SPD má 23 818 hlasů z 476 392 platných hlasů stran = 4,9997 % a leží 2 hlasy pod hranicí (5 % = 23 819,6), proto má 0 mandátů. Každá z chyb nadsazuje součet hlasů všech stran, a tím i hranici. Hranice klesne pod 23 818 při snížení celkového počtu hlasů o ≥ 32 (476 360 × 5 % = 23 818,0). Samotná oprava kterékoli z tří hodnot (−54, −36, −40) to splní: SPD překročí 5 % (4,9997 → 5,0000–5,0002 %, po opravě všech tří 5,0010 %) a dostane 2 mandáty (Ester Stračánková 754 a Ladislav Hammer 749 hlasů, oba nad preferenční hranicí 638,8), Žijeme pro Karvinou klesne z 30 na 29 mandátů (nezvolen Andřej Wałoszek, č. 30, 7 300 hlasů) a Srdcem pro Karvinou ze 4 na 3 (nezvolen Radek Vojkůvka, č. 6, 1 096 hlasů). Ověřeno outcome(): snížení o 31 hlasů výsledek nemění, o 32 a víc ano; společná oprava všech tří (−130) dává totéž. Snížení o 38 (na hodnotu 2) je více než nutných 32; stačí skutečná hodnota ≤ 8.",
+    "doporuceni": "Ověřit zápis T/3 okrsku 598917/26 (hlasy kandidátů č. 1 a č. 27 NOVÍ LIDOVCI)."
+  },
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv (SPD 4,9997 %, do hranice chybí 2 hlasy) a simulací outcome().",
+    "zjisteni": "Rezerva 2 hlasy je vzdálenost SPD (23 818 hlasů) od 5% hranice (5 % z 476 392 = 23 819,6). Nejde jen o statistické riziko: tři nalezené překlepy v okrscích 9 a 26 nadsazují součet hlasů o 130; snížení součtu o 32 hlasů stačí k tomu, aby SPD hranici překonala a získala 2 mandáty.",
+    "jistota": 2,
+    "dopad_kat": "Mění mandáty",
+    "dopad": "Viz nálezy N01–N03: oprava již jedné z chyb (−32 hlasů a více) přesouvá 2 mandáty z Žijeme pro Karvinou (−1, Wałoszek) a Srdcem pro Karvinou (−1, Vojkůvka) na SPD (Hammer, Stračánková).",
+    "doporuceni": "Přepočítat hlasy a ověřit zápisy okrsků 598917/9 a 598917/26 a zvážit preventivní kontrolní přepočet."
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeny všechny tři hodnoty (okrsky 9 a 26) vektory kandidátů, rozdělením poměrů v ostatních okrscích a simulací outcome().",
+    "zjisteni": "3 vložené číslice/odlehlé hodnoty ve 2 okrscích: Tkáč 60 (okolí 6), Hejda 40 (okolí 2–5), Fašungová 40 (okolí 2); všechny nadsazují součet hlasů o 130. Samostatně každá z oprav mění mandáty přes 5% hranici SPD (viz nálezy N01–N03).",
+    "jistota": 3,
+    "dopad_kat": "Mění mandáty",
+    "dopad": "MĚNÍ MANDÁTY (a tím zvolené) přes 5% hranici SPD, ne přímým přičtením hlasů. SPD má 23 818 hlasů z 476 392 platných hlasů stran = 4,9997 % a leží 2 hlasy pod hranicí (5 % = 23 819,6), proto má 0 mandátů. Každá z chyb nadsazuje součet hlasů všech stran, a tím i hranici. Hranice klesne pod 23 818 při snížení celkového počtu hlasů o ≥ 32 (476 360 × 5 % = 23 818,0). Samotná oprava kterékoli z tří hodnot (−54, −36, −40) to splní: SPD překročí 5 % (4,9997 → 5,0000–5,0002 %, po opravě všech tří 5,0010 %) a dostane 2 mandáty (Ester Stračánková 754 a Ladislav Hammer 749 hlasů, oba nad preferenční hranicí 638,8), Žijeme pro Karvinou klesne z 30 na 29 mandátů (nezvolen Andřej Wałoszek, č. 30, 7 300 hlasů) a Srdcem pro Karvinou ze 4 na 3 (nezvolen Radek Vojkůvka, č. 6, 1 096 hlasů). Ověřeno outcome(): snížení o 31 hlasů výsledek nemění, o 32 a víc ano; společná oprava všech tří (−130) dává totéž.",
+    "doporuceni": "Opravit data; ověřit zápisy T/3 okrsků 598917/9 a 598917/26."
+  }
+}

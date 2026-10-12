@@ -39,7 +39,7 @@ def precinct_metrics(year):
     m['gap'] = m.VYD_OBALKY - m.ODEVZ_OBAL
     m['inv_mag'] = 1 - m.PLAT_LISTKY / m.ODEVZ_OBAL
     m['inv_mc'] = 1 - m.PLAT_MC / m.ODEVZ_OBAL
-    m['vpb_mag'] = m.PL_HL_CELK / m.PLAT_LISTKY / 65
+    m['vpb_mag'] = m.PL_HL_CELK / m.PLAT_LISTKY / int(t3[t3.TYPZASTUP == 1].MANDATY.iloc[0])  # mandáty zastupitelstva města (Praha 65)
     m['vpb_mc'] = m.PLHL_MC / m.PLAT_MC / m.M_MC
     m['d_valid'] = m.PLAT_LISTKY - m.PLAT_MC
     for col in ('turnout', 'inv_mag', 'inv_mc'):
@@ -129,10 +129,16 @@ def swaps(R, zmin=3.0):
     return pd.DataFrame(out)
 
 
+CROSS_COLS = ['rok', 'ZK', 'MC', 'OID', 'strana_mc', 'nazev_mc', 'strany_mag', 'strany_mag_cisla', 'hlasy_mc', 'hlasy_mag',
+              'podil_mc', 'podil_mag', 'ocek_podil_mag', 'ocek_podil_mc', 'ocek_hlasy_mag', 'ocek_hlasy_mc', 'z_mag', 'z_mc', 'pomer_median']
+
+
 def cross_ballot(year):
-    """Magistrát vs MČ: same party on both ballots; their share ratio should be locally stable."""
+    """Lístek města (magistrát) vs. lístek MČ/MO: podíl téže strany na obou lístcích by měl být místně stabilní."""
     d, t3, hl, ros, nb = prep(year)
     mag = ros[ros.KODZASTUP == MAGISTRAT]
+    if not (t3.TYPZASTUP == 2).any():  # město bez MČ/MO: druhý lístek neexistuje
+        return pd.DataFrame(columns=CROSS_COLS)
     def code(s):
         return {c.lstrip('0') for c in str(s).replace(' ', '').split(',') if c and c.lstrip('0') not in ('80', '999', 'nan', '')}
     magc = {r.POR_STR_HL: code(r.SLOZENI) | {str(r.VSTRANA)} for _, r in mag.iterrows()}
@@ -175,7 +181,7 @@ def cross_ballot(year):
                                 podil_mc=sL[o], podil_mag=sS[o], ocek_podil_mag=eS[o], ocek_podil_mc=eL[o],
                                 ocek_hlasy_mag=eS[o] * TS[o], ocek_hlasy_mc=eL[o] * TL[o],
                                 z_mag=zS[o] / scS, z_mc=zL[o] / scL, pomer_median=float(np.exp(med))))
-    return pd.DataFrame(out)
+    return pd.DataFrame(out, columns=CROSS_COLS)
 
 
 def candidate_anomalies(year):

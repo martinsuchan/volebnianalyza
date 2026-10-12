@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 12 hlasů. Sportovci a nezávislí by při ztrátě 12 hlasů (nebo SNK Evropští demokraté při zisku 62 hlasů) předali jeden mandát SNK Evropští demokraté; další hranice je 198 hlasů (MÍSTNÍ HNUTÍ NEZ.).",
+    "dopad": "SNK Evropští demokraté 10 → 11, Sportovci a nezávislí 2 → 1; zvolen by byl Michal Brzák (č. 11, SNK Evropští demokraté) místo Josefa Ryciny (č. 2, Sportovci a nezávislí). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

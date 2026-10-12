@@ -1,0 +1,32 @@
+{
+ "inv0": {
+  "kontrola": "Ověřeno v okrskových zápisech: všech 10 okrsků má PLAT_LISTKY = ODEVZ_OBAL (154–441 obálek); ve městě je 10 takových okrsků z 85, průměrná neplatnost 0,94 %. Při Poissonově modelu s touto mírou by se čekalo asi 3,8 okrsku (P ≥ 10 ≈ 0,6 %).",
+  "zjisteni": "V 10 z 85 okrsků (569810/6, 11, 18, 24, 34, 36, 58, 60, 71, 75) se počet platných lístků rovná počtu odevzdaných obálek (154–441 obálek), ačkoli ve městě je neplatných v průměru 0,9 % lístků (medián 3 na okrsek). Při této míře by se nula čekala asi ve 4 okrscích. V okrscích 569810/11, 18, 34 a 71 je přitom rozdíl mezi vydanými a odevzdanými obálkami 1–2, ale tyto obálky jsou vedeny jako neodevzdané, ne jako neplatné.",
+  "dukaz": "10 pozorovaných nul oproti ≈ 3,8 očekávaným (Poissonův model, P ≈ 0,6 %); skutečná neplatnost se mezi okrsky liší, takže model přeceňuje nápadnost. V datech nelze rozlišit nezapsané neplatné lístky od okrsku, kde žádný neplatný nebyl.",
+  "jistota": 2,
+  "umysl": "Nízká – nejspíš nevyčleněné neplatné lístky, nebo prostá náhoda",
+  "dopad_kat": "Bez vlivu",
+  "dopad": "Bez vlivu na mandáty ani zvolené; případné neplatné lístky by jen snížily počet platných hlasů v okrscích a změnily statistiku neplatnosti.",
+  "doporuceni": "Dotaz na komise v těchto okrscích, zda byly neplatné lístky vyčleněny; kontrola v programu ČSÚ: varování při nulovém počtu neplatných lístků."
+ },
+ "typos:souhrn": {
+  "kontrola": "Všechny 3 hodnoty ověřeny v hl, rk a okrskových zápisech; součty kandidátů v okrscích sedí s POC_HLASU, opravy simulovány funkcí outcome (žádná změna mandátů ani zvolených).",
+  "zjisteni": "Tři hodnoty ve dvou okrscích vypadají jako vložená číslice: 569810/66 Roman Pátek (č. 1, strana 8) 67 hlasů při sousedech 6, 6, 2 (v ostatních okrscích má strana č. 1 nejvýše 33, medián 10; patrně 6); 569810/60 Jan Komárek (č. 8, SALON REPUBLIKY 21) 133 hlasů při sousedech 12 a 10 (patrně 13, žádný jiný okrsek nemá nad 28); 569810/66 Monika Janáková (č. 22, SALON REPUBLIKY 21) 29 hlasů při sousedech 7–8 (patrně 9). V okrsku 569810/60 je navíc nenápadně zvýšený kandidát č. 12 (48 hlasů při sousedech 10 a 12), který detektor neoznačil – může jít o další chybu, nebo o skutečnou preferenci.",
+  "dukaz": "Hodnoty jsou 3–10× vyšší než sousední kandidáti i než maximum téže pozice v ostatních okrscích; jeden znak navíc vrací hodnotu sousedů. Alternativa skutečné preference je nepravděpodobná (kandidát č. 1 strany 8 by měl 67 z 165 hlasů strany v okrsku).",
+  "jistota": 3,
+  "dopad_kat": "Bez vlivu",
+  "dopad": "Simulace oprav (67→6, 133→13, 29→9): mandáty ani zvolení se nemění; ani jedna ze stran (č. 8 má 0 mandátů, č. 10 má 0 mandátů) nepřichází o mandát a kandidáti nejsou zvoleni. Opravy hlasy jen snižují.",
+  "doporuceni": "Opravit data; ověřit v původním zápisu i kandidáta č. 12 SALON REPUBLIKY 21 v okrsku 569810/60 (48 hlasů)."
+ },
+ "swap:569810/34:56981001:2:6": {
+  "kontrola": "Ověřen okrsek 569810/34 (jediný lístek zastupitelstva města) proti 8 sousedním okrskům, roku 2022 a městskému průměru; testovány součty a profil preferencí kandidátů; dopad prohození simulován přes outcome().",
+  "zjisteni": "ANO 2011 má v okrsku 920 hlasů (6,1 %, město 22,2 %, sousedé 18–30 %), Změna pro Hradec, Zelení a KDU-ČSL 3 142 hlasů (20,8 %, město 7,9 %, sousedé 6–10 %); v roce 2022 měl okrsek ANO 17,3 % a Změnu 7,8 %, takže prohozený stav by sedl na okolí i na rok 2022. Proti záměně svědčí, že součty kandidátů přesně souhlasí s hlasy stran (920 a 3 142) a že ‚vlnění‘ preferencí kandidátů po odečtení trendu odpovídá vlastní straně (korelace ANO 0,61, Změna 0,72) a ne druhé (0,01 a 0,09), tedy řádky kandidátů zaměněny nejsou. Záměna by musela postihnout jen součty, což z dat nelze prokázat, a druhý lístek v Hradci Králové není. Odchylka je velká (ANO třetinový podíl proti městu), ale zápis je vnitřně konzistentní.",
+  "dukaz": "Δχ² = 70 a shoda s rokem 2022 mluví pro záměnu, shoda profilů kandidátů s vlastní stranou a součtů proti ní; bez druhého kontrolního lístku nelze rozhodnout.",
+  "jistota": 1,
+  "dopad_kat": "Bez vlivu",
+  "dopad": "Simulace outcome(): prohození 2 222 hlasů (ANO +2 222, Změna −2 222) nemění mandáty ani zvolené osoby.",
+  "umysl": "Bez indikace záměru; případně záměna řádků stran při přepisu.",
+  "doporuceni": "Porovnat s originálním zápisem okrsku 569810/34 (strany č. 2 a 6). Bez dopadu na výsledek.",
+  "vyradit": false
+ }
+}

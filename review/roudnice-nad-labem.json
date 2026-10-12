@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv (Roudničtí patrioti 4 262 hlasů, 5,0275 %) a simulací outcome() s odečtením 26 hlasů.",
+    "zjisteni": "Roudničtí patrioti (DOMOV, KSČM) mají 4 262 hlasů, 5,0275 % – 25 hlasů nad 5% hranicí; jediný mandát (č. 1 Miroslav Pém).",
+    "dopad": "Pokles o 26 hlasů by straně vzal mandát (nezvolený Miroslav Pém) a SPOLEČNĚ PRO ROUDNICI by získalo 7. mandát (6 → 7, Daniel Doucha). Hypotetický posun o 0,03 %; chyba v datech nezjištěna.",
+    "dopad_kat": "Těsný výsledek",
+    "jistota": 1
+  }
+}

@@ -72,9 +72,9 @@ def run(year):
                     out.append(dict(rok=year, ZK=zk, OID=o, strana=p, nazev_strany=pn.get((zk, p)), porcislo=pos[i],
                                     jmeno=f'{nm.JMENO} {nm.PRIJMENI}', hlasy=x, reference=t, pravdepodobne=best,
                                     rozdil=x - best, typ=kind, celkem_kand=int(nm.POCHLASU), mandat=nm.MANDAT))
-    T = pd.DataFrame(out)
-    if len(T):
-        T['MC'] = T.OID.map(t3.drop_duplicates('OID').set_index('OID').MC)
+    T = pd.DataFrame(out, columns=['rok', 'ZK', 'OID', 'strana', 'nazev_strany', 'porcislo', 'jmeno', 'hlasy', 'reference', 'pravdepodobne',
+                                   'rozdil', 'typ', 'celkem_kand', 'mandat'])  # sloupce i pro prázdný výsledek
+    T['MC'] = T.OID.map(t3.drop_duplicates('OID').set_index('OID').MC)
     return T
 
 
@@ -83,6 +83,6 @@ if __name__ == '__main__':
     for y in (2018, 2022, 2026):
         T = run(y); T.to_pickle(f'{RES}/typos_{y}.pkl')
         print('=====', y, len(T), T.typ.value_counts().to_dict() if len(T) else {})
-        if y == 2026:
+        if y == 2026 and len(T):
             print(T.sort_values('rozdil', key=abs, ascending=False)[['MC', 'OID', 'ZK', 'strana', 'nazev_strany', 'porcislo', 'jmeno', 'hlasy',
                                                                     'reference', 'pravdepodobne', 'rozdil', 'typ', 'celkem_kand', 'mandat']].to_string())

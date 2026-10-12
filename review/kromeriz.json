@@ -1,0 +1,24 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Všechny tři hodnoty ověřeny v hl/t3 proti sousedům na listině a proti ostatním okrskům; dopad opravy simulován přes outcome() (jednotlivě).",
+    "zjisteni": "Tři vložené číslice v okrscích 588296/18, /22 a /25. (1) Okrsek 18, KSČM č. 15 Dušan Matejík 80 hlasů místo ~8 (sousedé 9 a 8, celá listina 8–16; strana má v okrsku 303 hlasů, takže 80 by bylo 26 % z nich; v ostatních okrscích má č. 15 nejvýše 25) – nejsilnější případ. (2) Okrsek 22, Zdravé Kroměřížsko č. 13 Jiří Šálek 28 místo ~8 (sousedé 7 a 7, č. 1 má 12, zbytek řádku 5–10; poměr 4,0× proti mediánu 1,1×, nejvyšší z 24 okrsků). (3) Okrsek 25, NEZÁVISLÍ č. 11 Radek Brázdilík 29 místo ~9 (sousedé 8 a 11, č. 1 má 9; v ostatních okrscích nejvýše 11). Součty hlasů stran už zapsané hodnoty obsahují.",
+    "dukaz": "Poměr k sousedům 9,4×, 4,0× a 3,4× (medián v ostatních okrscích 0,9–1,1×), v každém případě nejvyšší ze všech okrsků; u č. 15 odebráním jedné číslice vznikne 8.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: oprava všech tří hodnot (−72, −20, −20 hlasů) nemění mandáty ani zvolené; žádný z kandidátů zvolen není.",
+    "umysl": "Nízká – nahodilé chyby přepisu.",
+    "doporuceni": "Ověřit zápisy T/3 okrsků 588296/18, /22 a /25 a opravit data.",
+    "vyradit": false
+  },
+  "row:588296/2:58829601:12": {
+    "kontrola": "Ověřeno v hl/t3/shares/ros: vektor NEZÁVISLÍ v okrsku 2 proti ostatním 25 okrskům téže strany, součty (sumvec = POC_HLASU = 99), podíl strany proti očekávání; dopad nasimulován.",
+    "zjisteni": "Okrsek 588296/2 (Kroměříž), NEZÁVISLÍ: 99 hlasů (0,7 % z 14 398) při 612 platných lístcích. Vektor kandidátů č. 1–27: 9, 4, 6, 6, 6, 0, 5, 0, 4, 7, 5, 0, 4, 0, 8, 0, 5, 4, 4, 4, 0, 0, 0, 4, 0, 4, 10, tj. 9 nul (č. 6, 8, 12, 14, 16, 21, 22, 23, 25) mezi hodnotami ~4–6; součet vektoru se rovná hlasům strany (99), nic tedy neukazuje na nedopsaný řádek. Podíl strany se od očekávání (121 hlasů, z = −0,3) téměř neliší, takže hlasy strany nechybějí; doplnění nul hodnotou 4–5 by dalo ~144 hlasů, tj. nad očekávání. Strana má jen ~4 lístky s křížkem a takto roztroušené nuly (a ojedinělé vyšší hodnoty) mají v okrscích 5, 14, 19, 20, 22 a 26 téže strany také (např. okrsek 14: 6, 0, 3, 0, 0, 1, 5, ...; okrsek 20: 2, 0, 3, 0, 1, 0, 0, 0, 8, ...), což odpovídá voličům, kteří označili kandidáty jednotlivě místo křížku u strany, nikoli chybě zápisu.",
+    "dukaz": "Nula uprostřed řádku není logicky nemožná u strany s ~4 voliči, kteří označují konkrétní kandidáty; součet vektoru i podíl strany jsou v pořádku a stejný vzorec mají další malé řádky téže strany.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: NEZÁVISLÍ mají v Kroměříži 2 501 hlasů (pod 5% hranicí, 0 mandátů); doplnění ~45 hlasů nic nemění.",
+    "umysl": "Žádný důvod k podezření – drobná hodnota a přirozená variabilita malého řádku.",
+    "doporuceni": "Nález nezveřejňovat jako anomálii.",
+    "vyradit": true
+  }
+}

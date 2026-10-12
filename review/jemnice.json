@@ -1,0 +1,13 @@
+{
+  "row:590789/5:59078901:3": {
+    "kontrola": "Ověřen vektor HLASY_01–21 strany č. 3 v okrscích 1–6, řádky ostatních stran v okrsku 590789/5, součty POC_HLASU vs. PL_HL_CELK a kapacita PLAT_LISTKY × M.",
+    "zjisteni": "V okrsku 590789/5 (65 voličů, 39 platných lístků) má Sdružení nezávislých kandidátů v Jemnici 54 hlasů: kandidáti č. 1–10 mají 8, 5, 7, 8, 5, 7, 4, 6, 3, 1 a č. 11–21 nulu (vektor se plynule snižuje, není to blok shodných hodnot). Ostatní strany mají v témže okrsku vyplněných všech 21 kandidátů. Součet hlasů stran (161 + 0 + 54 + 358 + 183 + 11) = 767 přesně sedí na PL_HL_CELK a hlasy kandidátů na POC_HLASU. Doplnění ~91 hlasů by dalo 858 hlasů, ale kapacita okrsku je jen 39 × 21 = 819, tj. nejvýš by mohlo chybět 52. Strana má v okrsku podíl 7 % (jinde 20 %; v okrsku 6 jen 3,8 %), silný je tam MLADÍ ZA ROZVOJ JEMNICE (47 %). Lístek s křížkem u strany by dal hlas všem 21 kandidátům, takže nuly od č. 11 znamenají jen individuální výběr z čela listiny.",
+    "dukaz": "Doplnění 91 hlasů by překročilo kapacitu okrsku (858 > 819) a součty zápisu sedí; vzorec odpovídá individuálním hlasům pro čelo listiny.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty ani zvolené (Sdružení nezávislých kandidátů má 6 030 hlasů; simulace doplnění nic nezměnila).",
+    "umysl": "Bez indikace.",
+    "doporuceni": "Nález vyřadit.",
+    "vyradit": true
+  }
+}

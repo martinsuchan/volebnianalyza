@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 39 hlasů. PROMĚSTECKO by s přírůstkem 39 hlasů získalo druhý mandát na úkor Za otevřené město (rezerva této strany 58 hlasů) a SPOLEČNĚ PRO MĚSTO (87 hlasů).",
+    "dopad": "PROMĚSTECKO 1 → 2, Za otevřené město 3 → 2; zvolen by byl Jindřich Vojtíšek (č. 6, PROMĚSTECKO) místo Jitky Drugdové (č. 6, Za otevřené město). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

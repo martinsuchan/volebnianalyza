@@ -10,18 +10,29 @@
 body{margin:0;background:var(--page);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
 .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
 a{color:var(--series-1)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 header.top{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:5}
-header.top .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;padding-top:10px;padding-bottom:10px}
-.brand{font-weight:650}
-nav{display:flex;flex-wrap:wrap;gap:4px 14px}nav a{color:var(--ink2);text-decoration:none;font-size:14px;padding:2px 0;border-bottom:2px solid transparent}
-nav a[aria-current]{color:var(--ink);border-bottom-color:var(--series-1)}
-h1{font-size:28px;line-height:1.2;margin:28px 0 6px}h2{font-size:21px;margin:34px 0 10px}h3{font-size:16px;margin:0}
+header.top .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;padding-top:9px;padding-bottom:9px}
+.brand{font-weight:650;color:var(--ink);text-decoration:none}
+nav.main{display:flex;flex-wrap:wrap;gap:4px 14px}nav.main a{color:var(--ink2);text-decoration:none;font-size:14px;padding:2px 0;border-bottom:2px solid transparent}
+nav.main a[aria-current]{color:var(--ink);border-bottom-color:var(--series-1)}
+.search{margin-left:auto}.search input,.searchbig input{font:inherit;font-size:14px;padding:6px 10px;border:1px solid var(--border);border-radius:8px;background:var(--page);color:var(--ink);width:230px}
+.searchbig{margin:14px 0}.searchbig input{width:100%;max-width:560px;font-size:17px;padding:10px 14px}
+@media (max-width:760px){.search{margin-left:0;width:100%}.search input{width:100%}}
+.crumbs{font-size:13px;color:var(--ink2);margin:16px 0 0}.crumbs a{color:var(--ink2)}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--border);margin:12px 0 0;overflow-x:auto}
+.tabs a{padding:8px 12px;text-decoration:none;color:var(--ink2);border-bottom:2px solid transparent;white-space:nowrap;font-size:14.5px}
+.tabs a[aria-current]{color:var(--ink);border-bottom-color:var(--series-1);font-weight:600}
+h1{font-size:28px;line-height:1.2;margin:22px 0 6px}h2{font-size:21px;margin:34px 0 10px}h3{font-size:16px;margin:0}
 .lead{font-size:17px;color:var(--ink2);max-width:860px}
 .verdict{background:var(--accent-bg);border:1px solid var(--border);border-left:4px solid var(--series-1);border-radius:10px;padding:16px 18px;margin:18px 0}
 .verdict p{margin:.35em 0}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:16px 0}
 .tile{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
 .tile .l{color:var(--ink2);font-size:13px}.tile .v{font-size:26px;font-weight:650;margin-top:2px}.tile .s{color:var(--muted);font-size:12.5px}
+.hubs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:16px 0}
+.hub{display:block;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;color:var(--ink);text-decoration:none}
+.hub:hover,.hub:focus{border-color:var(--series-1)}.hub h3{color:var(--series-1);font-size:17px}.hub p{margin:6px 0 0;color:var(--ink2)}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;margin:16px 0}
 .card figcaption{margin-bottom:6px}.sub{color:var(--ink2);margin:2px 0 0;font-size:13.5px}
 .cw{width:100%;overflow-x:auto}.chart{width:100%;height:auto;display:block;min-width:620px}.chart.sm{min-width:300px}.two .cw,.two>div{min-width:0}
@@ -37,12 +48,21 @@ h1{font-size:28px;line-height:1.2;margin:28px 0 6px}h2{font-size:21px;margin:34p
 details.tableview{margin-top:8px}details.tableview summary{cursor:pointer;color:var(--ink2);font-size:13px}
 .tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0}
 th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--grid);vertical-align:top}th{color:var(--ink2);font-weight:600;font-size:12.5px}
-td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}td.id{white-space:nowrap}
+table.sortable th:not([data-nosort]){cursor:pointer;user-select:none}table.sortable th:not([data-nosort]):hover{color:var(--ink)}
+table.sortable th[aria-sort=ascending]::after{content:" ▲";font-size:10px}table.sortable th[aria-sort=descending]::after{content:" ▼";font-size:10px}
+tr:target td{background:var(--accent-bg)}
+.filters{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:flex-end;margin:4px 0 8px}
+.filters label{display:flex;flex-direction:column;gap:3px;font-size:12.5px;color:var(--ink2)}
+.filters select,.filters input{font:inherit;font-size:14px;padding:5px 8px;border:1px solid var(--border);border-radius:8px;background:var(--page);color:var(--ink)}
+.count{color:var(--muted);font-size:13px;margin-left:auto}
 .badge{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:2px 9px 2px 7px;font-size:12px;font-weight:600;white-space:nowrap;border:1px solid var(--border)}
 .badge .ico{font-size:9px;letter-spacing:-1px}
 .b-crit .ico{color:var(--critical)}.b-ser .ico{color:var(--serious)}.b-warn .ico{color:var(--warning)}.b-low .ico{color:var(--muted)}
 .b-crit{background:color-mix(in srgb,var(--critical) 12%,transparent)}.b-ser{background:color-mix(in srgb,var(--serious) 12%,transparent)}
 .b-warn{background:color-mix(in srgb,var(--warning) 14%,transparent)}
+.st{display:inline-block;border-radius:999px;padding:1px 9px;font-size:12px;font-weight:600;border:1px solid var(--border);white-space:nowrap}
+.st-done{background:color-mix(in srgb,var(--good) 13%,transparent)}.st-plan{color:var(--muted)}
 .find{border-left:4px solid var(--grid)}.find.p1{border-left-color:var(--critical)}.find.p2{border-left-color:var(--serious)}.find.p3{border-left-color:var(--warning)}
 .find dl{display:grid;grid-template-columns:150px 1fr;gap:4px 14px;margin:10px 0 0}.find dt{color:var(--ink2);font-size:13px}.find dd{margin:0}
 @media (max-width:640px){.find dl{grid-template-columns:1fr}.find dt{margin-top:6px}h1{font-size:23px}}

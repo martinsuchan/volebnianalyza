@@ -1,0 +1,17 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s úbytkem 61 hlasů u JIHOČEŠI 2012.",
+    "zjisteni": "Rezerva 61 hlasů: JIHOČEŠI 2012 (3 412 hlasů) by při úbytku 61 hlasů ztratili druhý mandát (Jana Kopúnová, č. 3) ve prospěch Naše Česko (3 → 4; Stanislav Škrabal, č. 2). Další hranice: Naše Česko +122, ANO 2011 −230.",
+    "dopad": "Změna jen při chybě ≥ 61 hlasů; hodnocené hodnoty (Kopal, Šišková, Talíř) jsou místní preference.",
+    "jistota": 1
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeno 5 hodnot (3 kandidáti v 5 případech): vektory řádků, tytéž kandidáty v ostatních okrscích a bydliště.",
+    "zjisteni": "Nejde o překlepy. Ivana Šišková (JIHOČEŠI č. 10) má 26 a 27 hlasů ve dvou různých okrscích (4 a 8) a také 35, 40, 46 jinde – silná kandidátka, nikoli chyba přepisu. Pavel Talíř (KDU-ČSL č. 4, Pořešín) má 21 a 23 hlasů ve dvou okrscích při základu 4–5 a 38, 46 jinde – opakovaná místní preference. Ondřej Kopal (JIHOČEŠI č. 9) má 8 hlasů, což není pod základem řádku (minimum řádku 6), takže ‚propad‘ není logicky nemožný.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace oprav: bez vlivu na mandáty i pořadí zvolených.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

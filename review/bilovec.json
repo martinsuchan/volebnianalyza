@@ -1,0 +1,11 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen řádek SDRUŽENÍ NEZÁVISLÝCH v okrsku 5 a rok 2022 podle jména, simulace outcome().",
+    "zjisteni": "Eva Smolková (č. 13) má 5 hlasů, tj. základ řádku (většina řádku 5–6; vektor 9, 5, 6, 9, 6, 6, 9, 5, 5, 5, 6, 15, 5, 15, 4); vyčnívají naopak sousední č. 12 a č. 14 (po 15). Nejde o vypadlou číslici. V roce 2022 měla v témže okrsku 8 hlasů při sousedech 13 a 19, tedy opět méně než sousedé.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace opravy: bez vlivu na mandáty i pořadí zvolených.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "missing:592005/13:59200501": {
+    "kontrola": "Ověřeno v t3/hl/shares: vektory všech 8 stran v okrsku 13 proti ostatním okrskům, rok 2022 a simulace outcome() (proporcionálně i vše jedné straně).",
+    "zjisteni": "Okrsek 592005/13 (Uherské Hradiště): 290 platných lístků, 5 613 hlasů, tj. 0,72 možných (27 × 290 = 7 830); medián okrsků 0,90; v roce 2022 měl týž okrsek 0,92 (medián města 0,91). Pokles je tedy nový, nikoli trvalý. Žádná strana ani kandidátský řádek nemá vzorec nedopsaného zápisu (vektory hladké, nuly jen na konci listiny strany 4 Město generací, která má méně kandidátů); schodek je rozložen: ANO 909 hlasů (16,2 % proti 20,0 % v ostatních okrscích, ~381 hlasů pod očekáváním), Hradišťáci 1 227 (21,9 % proti 26,9 %, ~209 pod), zatímco Občanští demokraté mají 1 272 (22,7 % proti 16,7 %). Z podílů stran nejvýše |z| = 2,5. Mechanismus nelze určit.",
+    "dukaz": "z(hlasy/lístek) = −13,8 proti sousedům; pokles z 0,92 (2022) na 0,72; chybí ~1 607 hlasů, tj. ~60 lístků. Druhá linie důkazů (vzorec v řádcích stran) chybí.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: rozdělení 1 607 hlasů podle podílů stran mandáty nemění (rezerva zastupitelstva 481 hlasů). Změnu by přineslo jen přisouzení všech 1 607 hlasů straně ANO (5→6 mandátů, Hradišťáci 8→7: Marcela Čechová místo Jany Bujákové); realistický schodek ANO je ~381 hlasů, pod rezervou 481.",
+    "umysl": "Nelze posoudit – může jít o nezapsaný balík lístků i o neobvyklé chování voličů.",
+    "doporuceni": "Ověřit zápis okrsku 592005/13 (počet platných lístků a hlasy stran) a komentář komise.",
+    "vyradit": false
+  }
+}

@@ -1,8 +1,8 @@
-"""Precinct centroids from ČSÚ 2022 boundaries (2026 boundaries not published as file); kNN neighbours."""
+"""Těžiště okrsků z hranic ČSÚ 2022 (hranice 2026 nebyly zveřejněny jako soubor); k nejbližších sousedů."""
 import json, os, sys
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(__file__))
-from common import ROOT, P
+from common import ROOT, P, MAGISTRAT
 
 
 def centroids():
@@ -10,12 +10,13 @@ def centroids():
     rows = []
     for f in gj['features']:
         pr = f['properties']
-        if pr['OBEC'] != '554782':
+        if int(pr['OBEC']) != MAGISTRAT:
             continue
         g = f['geometry']
         polys = g['coordinates'] if g['type'] == 'MultiPolygon' else [g['coordinates']]
         pts = np.array([p for poly in polys for p in poly[0]])
-        rows.append(dict(OID=f"{pr['MOMC']}/{int(pr['CISLO'])}", lon=pts[:, 0].mean(), lat=pts[:, 1].mean(),
+        obec = pr['MOMC'] if pr['MOMC'] not in ('', '0') else pr['OBEC']  # okrsky mimo MČ/MO mají MOMC = 0
+        rows.append(dict(OID=f"{int(obec)}/{int(pr['CISLO'])}", lon=pts[:, 0].mean(), lat=pts[:, 1].mean(),
                          geom=[[list(map(lambda v: round(v, 4), p)) for p in poly[0]] for poly in polys]))
     return pd.DataFrame(rows)
 
@@ -24,7 +25,8 @@ def neighbours(oids, k=6):
     """Return dict OID -> list of k neighbour OIDs (same MČ preferred by caller). Fallback: numeric order."""
     c = centroids().drop_duplicates('OID').set_index('OID')
     have = [o for o in oids if o in c.index]
-    xy = c.loc[have, ['lon', 'lat']].values * np.array([np.cos(np.radians(50.08)), 1.0])
+    lat0 = 50.08 if MAGISTRAT == 554782 else float(c.lat.mean())  # Praha: původní konstanta (reprodukovatelnost)
+    xy = c.loc[have, ['lon', 'lat']].values * np.array([np.cos(np.radians(lat0)), 1.0])
     nb = {}
     for i, o in enumerate(have):
         dd = ((xy - xy[i]) ** 2).sum(1); idx = np.argsort(dd)[1:k + 1]

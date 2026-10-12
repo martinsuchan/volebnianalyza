@@ -1,0 +1,10 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor SPD v okrsku 563510/31 (30 kandidátů), srovnání č. 15 s ostatními okrsky a simulace outcome() s doplněním 14 hlasů.",
+    "zjisteni": "Ivanka Rejmanová (SPD č. 15) má v okrsku 563510/31 hlasy 2, přičemž celý řádek má 14–22 hlasů (č. 14 16, č. 16 16, medián 16–17). Hlas strany dostane každý z 30 kandidátů, takže hodnota 2 pod základem ~16 je logicky nemožná; chybí ~14 hlasů (hodnota 2 možná z nedopsaného „1x“ nebo propadu). Součet kandidátů 508 = hlasy strany v okrsku, nuly jinde v řádku nejsou. V ostatních okrscích má č. 15 nejméně 11 hlasů.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: SPD má 25 224 hlasů (6,93 %) a 2 mandáty; doplnění 14 hlasů nemění mandáty ani zvolené (Rejmanová 788 → 802 hlasů, nezvolena).",
+    "doporuceni": "Ověřit zápis T/3 okrsku 563510/31 – hlasy kandidáta č. 15 SPD."
+  }
+}

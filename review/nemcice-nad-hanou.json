@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 17 hlasů. SNK města Němčice nad Hanou by při ztrátě 17 hlasů (ve skutečnosti 18) přišla o druhý mandát ve prospěch ANO NĚMČICÍM (při +53) nebo Společně pro Němčice (při +27).",
+    "dopad": "ANO NĚMČICÍM 5 → 6, SNK 2 → 1; zvolen by byl Radomír Mik (č. 6, ANO NĚMČICÍM) místo Oldřicha Plchota (č. 2, SNK města Němčice nad Hanou); při zisku 27 hlasů Společně pro Němčice by místo Plchota nastoupil Marek Antel (č. 2, Společně pro Němčice). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

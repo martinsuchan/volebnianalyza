@@ -1,0 +1,8 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s úbytkem 58 hlasů u Naše Pohořelice.",
+    "zjisteni": "Rezerva 58 hlasů: Naše Pohořelice (3 500 hlasů) by při úbytku 58 hlasů ztratily druhý mandát (Lukáš Mertlík, č. 2) ve prospěch STAROSTOVÉ A NEZÁVISLÍ (2 → 3; Magdaléna Němečková, č. 3). Další hranice: STAROSTOVÉ +88.",
+    "dopad": "Změna jen při chybě ≥ 58 hlasů; nebyl nalezen žádný konkrétní důvod (město nemá žádné překlepy ani jiné nálezy).",
+    "jistota": 1
+  }
+}

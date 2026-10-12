@@ -1,0 +1,10 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Obě hodnoty jsou jen nízké: Monika Blažková (KDU-ČSL, č. 9) má 3 hlasy, ale 3 hlasy má v řádku i č. 11 (podíl 1,9 % vs. 3,7 %); Bronislav Tyl (Občané pro Litovel, č. 15) má 18 hlasů, což je základní úroveň řádku (15–25), „reference“ 56 vznikla z kandidátů č. 14, 16, 18 s preferenčním nárůstem (62, 50, 60). Nejde o chybu.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() s opravou každé hodnoty: mandáty i zvolení beze změny.",
+    "vyradit": true
+  }
+}

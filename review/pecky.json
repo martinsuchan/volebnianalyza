@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeny obě hodnoty (Hájek, Jeřábek, okrsek 6), podíly ve všech okrscích i v roce 2022 a bydliště kandidátů z Velkých Chvalovic.",
+    "zjisteni": "Aleš Hájek (č. 8) a Petr Jeřábek (č. 18), oba SNK PEČKY PEČÁKŮM a oba bydlištěm Velké Chvalovice, mají v okrsku 537641/6 38 a 42 hlasů při sousedech 5–8 (podíl 13,9 % a 15,4 % hlasů strany proti 2,5–4,7 % v okrscích 1–5). Stejně vyčnívají další dva kandidáti z Velkých Chvalovic (Pejřil č. 6: 22, Hájková č. 15: 22). V roce 2022 měl Hájek v okrsku 6 11,5 % a Jeřábek 10,2 % proti ~4 % jinde. Jde o opakovanou místní preferenci z Velkých Chvalovic (okrsek 6), ne o překlepy.",
+    "dukaz": "Rok 2022: 11,5 % a 10,2 % v okrsku 6; čtyři kandidáti ze stejné obce zvýšení naráz.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu; simulace oprav (–33 a –37 hlasů) nemění mandáty (2, 6, 10, 2, 1) ani zvolené.",
+    "umysl": "Bez indikace – skutečná preference.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

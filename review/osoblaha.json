@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 12 hlasů. Rozvoj OSOBLAHY = spokojená rodina by při ztrátě 12 hlasů (nebo Patrioti pro Osoblahu při zisku 41 hlasů) předal jeden mandát; Osoblaha pro život při +122. Obec má 9 mandátů a 2 738 hlasů.",
+    "dopad": "Patrioti pro Osoblahu 6 → 7, Rozvoj OSOBLAHY 2 → 1; zvolen by byl Zdeněk Krejčí (č. 7, Patrioti pro Osoblahu) místo Daniely Houdkové (č. 3, Rozvoj OSOBLAHY). Při variantě Osoblaha pro život by nastoupila Pavlína Adamopulosová (č. 2) místo Houdkové. Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

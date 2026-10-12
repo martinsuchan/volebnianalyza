@@ -1,0 +1,23 @@
+{
+  "inv0": {
+    "kontrola": "Z t3 spočteno, že v Karlovarských 46 okrscích s ≥ 100 obálkami je celková neplatnost 1,11 %; nulovou neplatnost mají okrsky 6, 24, 26, 27, 28, 35 a 40 (7 okrsků, 171–351 obálek), očekává se 3,5 (Poisson, P(≥ 7) ≈ 7 %).",
+    "zjisteni": "Sedm okrsků (6: 190 obálek, 24: 267, 26: 335, 27: 219, 28: 171, 35: 200, 40: 329) má počet platných lístků shodný s odevzdanými obálkami. Při městské míře 1,11 % se očekává 3,5 takových okrsků; pozorovaný počet 7 je mírný nadbytek (P ≈ 7 %), neplatnost okrsků kolísá výrazně (0–11 lístků na okrsek), takže jde nejspíš o náhodu plus rozdílnou praxi komisí. Nezapsaná neplatnost by byla jen statistická vada, ne chyba v hlasech.",
+    "dukaz": "Pozorováno 7 nulových okrsků, očekáváno 3,5 (P(≥ 7) ≈ 7 %); PL_HL_CELK ≤ PLAT_LISTKY × 35 platí všude. V datech 2022 sloupec PLAT_LISTKY chybí, srovnání není možné.",
+    "jistota": 1,
+    "umysl": "Žádná prokazatelná – nulová neplatnost mohla vzniknout náhodou nebo zanedbáním vyčlenění neplatných lístků.",
+    "dopad": "Bez vlivu na mandáty ani zvolené; neplatné lístky se do hlasů stran nepočítají, jde jen o statistiku neplatnosti.",
+    "doporuceni": "Jen jako riziko (nejde o zjištěnou chybu); detektor by měl nález vyvolat jen při výrazném nadbytku nulových okrsků oproti očekávání, v tomto městě je nadbytek hraniční.",
+    "vyradit": false
+  },
+  "row:554961/3:55496101:1": {
+    "kontrola": "Ověřeno v hl/t3/ros/shares, srovnáno s 49 ostatními okrsky, se sousedy a s rokem 2022 (stejný okrsek); dopad nasimulován přes outcome() a seats.csv.",
+    "zjisteni": "Okrsek 3 (Karlovy Vary): 86 platných lístků, 2 619 hlasů (87,0 % možných 3 010; sousedé medián 92,7 %, rozpětí 84,4–96,4 %, okrsek je v nejnižších ~2 %). Řádek SPD (96 hlasů, součet kandidátů se rovná hlasům strany): kandidáti č. 1–15 mají 6–7 hlasů, č. 16–35 (20 kandidátů) nuly. Podíl strany je 3,7 % při očekávaných 7,7 % (~202 hlasů), tj. schodek ~106 hlasů proti chybějícím 20 × 6 = 120. V roce 2022 měla SPD v tomtéž okrsku 304 hlasů (9,9 % při městském 10,8 %), tedy běžný podíl (voličů v seznamu bylo tehdy 295, nyní 259). Okrsek má i další odchylky, které nález N01 nepokrývá: ODS jen 17 hlasů (0,6 %; čekáno ~137; kandidáti mají 0–2 hlasy; v roce 2022 měla koalice SPOLU 6,2 %) a Starostové 249 proti ~373, naopak Karlovaráci 598 proti ~363.",
+    "dukaz": "Dvě linie: (1) nulový konec listiny nemá žádný z ostatních 49 okrsků (1. percentil poměru konec/začátek 0,25) a ~6 lístků s křížkem u strany by muselo mít každý ≥ 20 křížků pro jiné strany; (2) podíl SPD je pod polovinou očekávání, využití hlasů okrsku je v nejnižších ~2 % a v roce 2022 měla SPD v okrsku obvyklý podíl.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty ani zvolené: SPD má 2 mandáty (6,82 %, rezerva 2 981 hlasů k zisku a 7 950 ke ztrátě); doplnění 120 až 360 hlasů nic nemění. Podhodnocená ODS (5,36 %, rezerva 1 422 hlasů nad hranicí) by doplněním ~120 hlasů jen získala; doplnění SPD zvedá základ hranice o ~6 hlasů.",
+    "umysl": "Nelze posoudit; vzorec odpovídá nedopsanému nebo nezapsanému úseku řádku v zápisu, nikoli chování voličů.",
+    "doporuceni": "Ověřit zápis okrsku 3 (malý okrsek, 86 lístků): kandidátní hlasy SPD č. 16–35 a řádek ODS.",
+    "vyradit": false
+  }
+}

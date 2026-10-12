@@ -1,0 +1,17 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s přírůstkem 55 hlasů pro Volba pro město.",
+    "zjisteni": "Rezerva 55 hlasů: Volba pro město (3 394 hlasů, 7,46 %) by při přírůstku 55 hlasů získala 2. mandát (Jiří Weinzettl, č. 2) na úkor Naše Česko (18 → 17; Vladimír Matějka, č. 18). Další: Nestraníci +202, KDU-ČSL +269.",
+    "dopad": "Změna jen při chybě ≥ 55 hlasů v součtu jedné strany; hodnocená hodnota (Farka, KDU-ČSL) tuto hranici netýká.",
+    "jistota": 1
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor KDU-ČSL v okrsku 10, stejný kandidát v ostatních okrscích a v roce 2022 (jako kandidát č. 8 jiné strany), bydliště.",
+    "zjisteni": "Pavel Farka (KDU-ČSL č. 9, Rankov) 27 hlasů v okrsku 545171/10 při sousedech 4 a 3. V roce 2022 měl v témže okrsku 23 hlasů při sousedech 10–17 (nejvíc ze svého řádku), v ostatních okrscích jen 4–24, jde tedy o místní preferenci v okrsku 10. Řádek má další vyčnívající čísla (č. 6 = 33, č. 14 = 18).",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace opravy: bez vlivu na mandáty i pořadí zvolených (Farka KDU-ČSL zvolen není).",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

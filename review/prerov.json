@@ -1,0 +1,10 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor Společně pro Přerov v okrsku 511382/18 (35 kandidátů), srovnání č. 16 s ostatními okrsky a simulace outcome() s doplněním 26 hlasů; porovnání s lídrem a rokem 2022 se netýká (kandidát č. 16, nikoli lídr).",
+    "zjisteni": "Josef Chytil (č. 16) má v okrsku 8 hlasů; řádek má 22–59 hlasů a sousedé č. 15 a č. 17 mají 33 a 35 (úroveň základu z lístků s křížkem je v tomto řádku 22–35, od č. 20 klesá na 28 a 22). Hodnota 8 pod základem je logicky nemožná, chybí ~26 hlasů. Součet kandidátů 1 105 = hlasy strany v okrsku (podíl 12,6 % z 8 786, ostatní strany bez děr). V ostatních okrscích je č. 16 nejméně 2 (okrsek 26 s 105 hlasy strany).",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: oprava +26 hlasů (Chytil 1 152 → 1 178) pod preferenční hranicí 1 277 (110 % z 1 161), mandáty ani zvolení se nemění (Společně pro Přerov 4 mandáty).",
+    "doporuceni": "Ověřit zápis T/3 okrsku 511382/18 – hlasy kandidáta č. 16."
+  }
+}

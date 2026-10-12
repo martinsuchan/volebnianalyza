@@ -1,0 +1,10 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor Motoristé sobě a Svobodní v okrsku 562335/4 včetně základní úrovně řádku, srovnání č. 2 s ostatními okrsky a celkových hlasů kandidátů.",
+    "zjisteni": "Nález je falešný: Jan Plhal (č. 2) má v okrsku 5 hlasů, ale základ řádku (hlasy z lístků s křížkem u strany) je 5–6 (č. 4–6 6, č. 10 5, č. 14 5, č. 19–20 5, č. 23–27 5). Hodnota 5 je tedy na úrovni základu, nikoli propad; „referenci“ 18 vytvořily sousedé s preferenčním náskokem – č. 1 Valko 19 a č. 3 Brčák 17 (Brčák má ve městě 1 086 hlasů, Plhal 616). V ostatních okrscích má č. 2 minimálně 2 hlasy (okrsky s 59–65 hlasy strany). Součet kandidátů 190 = hlasy strany. Strana má 4,91 % a 274 hlasů pod 5% hranicí, mandát nemá.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu; není chyba.",
+    "vyradit": true
+  }
+}

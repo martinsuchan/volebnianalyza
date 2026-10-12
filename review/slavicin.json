@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeny obě hodnoty z typos_2026.pkl (Mana okrsek 7, Pjajko okrsek 6), podíly v ostatních okrscích a v roce 2022 na dvou listinách.",
+    "zjisteni": "Jaroslav Mana (Věříme Slavičínu! č. 3, bydliště Divnice) má v okrsku 585751/7 39 hlasů při sousedech 5 a 5 (podíl 21,0 % hlasů strany proti 4,3–4,8 % v ostatních okrscích). Jde o opakovanou místní preferenci: v roce 2022 měl v témže okrsku na listině č. 8 12,4 % (35 hlasů) a na listině č. 9 14,3 % (32 hlasů) proti ~4 % jinde. Nález je tedy skutečná preference voličů z Divnic, nikoli překlep. Druhý záznam (Roman Pjajko, VIZE PRO SLAVIČÍN č. 2, okrsek 6: 8 hlasů proti 31) je falešný poplach: č. 2 má na listině ve všech okrscích výrazně méně hlasů než č. 1 a č. 3 (např. 37 vs 64/75, 41 vs 67/73, 12 vs 35/54, 8 vs 31/31), jeho podíl 3,9 % leží v rozmezí 3,5–5,2 % ostatních okrsků.",
+    "dukaz": "Rok 2022: Mana 12,4 % a 14,3 % v okrsku 7 (jinde ~4 %), bydliště Divnice; Pjajko má stejný poměr k sousedům i v jiných okrscích.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu; simulace opravy nemění mandáty ani zvolené.",
+    "umysl": "Bez indikace – skutečná preference.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

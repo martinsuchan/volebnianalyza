@@ -1,0 +1,12 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor HLASY_01–15 STAROSTOVÉ A NEZÁVISLÍ ve 4 okrscích, bydliště kandidátů, rok 2022 (kandidáti ze Svatbínu) a simulace úbytku hlasů.",
+    "zjisteni": "Tomáš Šmejkal (STAROSTOVÉ A NEZÁVISLÍ č. 10, bydliště Svatbín) má v okrsku 533416/4 (174 hlasů, 75 lístků) 28 hlasů při sousedech 9 a 8. Ve stejném okrsku vyčnívá i druhý kandidát ze Svatbínu, Chládek (č. 5), s 31 hlasy proti 8 a 8 – jde o místní okrsek Svatbínu. Opakuje se to v roce 2022: Chládek (SNK č. 7) 48 hlasů v okrsku 4 proti 26 a 44, Nedvěd (Svatbín) 24 vs. 4 a 7. Zápis je konzistentní (součet 174 = POC_HLASU).",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Úbytek 20 hlasů strany nemění mandáty ani zvolené (simulace outcome()).",
+    "umysl": "Bez indikace – skutečná místní preference.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

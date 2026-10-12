@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 38 hlasů. Lepší Vejprty by při ztrátě 38 hlasů (shodně Zdraví Sport Vzdělání při zisku 76 hlasů, tj. přesunu 38 hlasů mezi stranami) přišly o druhý mandát. STAROSTOVÉ A NEZÁVISLÍ by museli ztratit 172 hlasů.",
+    "dopad": "Zdraví Sport Vzdělání 3 → 4, Lepší Vejprty 2 → 1; zvolen by byl Jakub Jelínek (č. 3, Zdraví Sport Vzdělání) místo Jiřího Šlajse (č. 6, Lepší Vejprty). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

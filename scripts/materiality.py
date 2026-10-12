@@ -10,7 +10,7 @@ Scenarios are applied per finding and jointly; seats (§45) and the preferential
 import sys, os, math, json
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(__file__))
-from common import load, RES
+from common import load, RES, UNIT
 from seats import allocate
 
 Y = 2026
@@ -54,6 +54,17 @@ def corrections():
             corr.append(dict(id=f'S-{r.OID}-{r.ZK}-{r.strana}-{lab}', druh=f'chybějící balík ({lab})', ZK=r.ZK, OID=r.OID,
                              dV={r.strana: k * width}, dC={(r.strana, c): k for c in pos},
                              popis=f'{r.nazev}: +{k} lístků × {width} hlasů'))
+    if UNIT != 'praha':
+        # nulové hlasy strany při vysokém očekávání: doplnit očekávaný počet lístků s křížkem u strany
+        Z = pd.read_pickle(f'{RES}/zeros_{Y}.pkl')
+        Z = Z[(Z.rok == Y) & (Z.p_conservative < 1e-3)] if len(Z) else Z
+        for r in Z.itertuples():
+            M = int(cm.MANDATY[r.ZK]); nc = int(ros[(ros.ZK == r.ZK) & (ros.POR_STR_HL == r.strana)].NCAND.fillna(0).iloc[0])
+            width = max(min(nc, M), 1); k = int(round(r.exp_ballots))
+            pos = sorted(rk[(rk.ZK == r.ZK) & (rk.POR_STR_HL == r.strana) & (rk.PLATNOST == 'A')].PORCISLO)[:width]
+            corr.append(dict(id=f'Z-{r.OID}-{r.ZK}-{r.strana}-kons', druh='nulové hlasy strany', ZK=r.ZK, OID=r.OID,
+                             dV={r.strana: k * width}, dC={(r.strana, c): k for c in pos}, popis=f'{r.nazev}: +{k} lístků × {width} hlasů'))
+        return corr
     # Praha 2/2038 – ANO (22) & SEN (24) restored from MČ-ballot ratio / neighbours
     X = pd.read_pickle(f'{RES}/cross_{Y}.pkl')
     ano = X[(X.OID == '500089/2038') & (X.strany_mag == 'ANO 2011')].ocek_hlasy_mag.iloc[0]
@@ -79,10 +90,10 @@ def run():
                         zmena_mandatu=s0 != s1, zmena_zvolenych=e0 != e1,
                         detail='; '.join(f'strana {p}: {s0[p]}→{s1[p]}' for p in s0 if s0[p] != s1[p]) +
                                ('' if e0 == e1 else f' | zvoleni navíc {sorted(e1 - e0)}, vypadli {sorted(e0 - e1)}')))
-    R = pd.DataFrame(res)
+    R = pd.DataFrame(res, columns=['id', 'druh', 'ZK', 'OID', 'popis', 'zmena_mandatu', 'zmena_zvolenych', 'detail'])
     # joint scenario per council (conservative variants + all typos)
     joint = []
-    for zk, g in pd.DataFrame(corr).groupby('ZK'):
+    for zk, g in (pd.DataFrame(corr).groupby('ZK') if corr else []):
         sel = [c for c in corr if c['ZK'] == zk and not c['id'].endswith('-max')]
         dV, dC = {}, {}
         for c in sel:
@@ -93,7 +104,7 @@ def run():
                           detail='; '.join(f'strana {p}: {s0[p]}→{s1[p]}' for p in s0 if s0[p] != s1[p]) +
                                  ('' if e0 == e1 else f' | navíc {sorted(e1 - e0)}, vypadli {sorted(e0 - e1)}'),
                           dV=json.dumps({int(k): int(v) for k, v in dV.items()})))
-    J = pd.DataFrame(joint)
+    J = pd.DataFrame(joint, columns=['ZK', 'zastupitelstvo', 'oprav', 'zmena_mandatu', 'zmena_zvolenych', 'detail', 'dV'])
     return R, J
 
 

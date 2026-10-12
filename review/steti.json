@@ -1,0 +1,15 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s dV = +35 hlasů pro SEN PRO ŠTĚTSKO.",
+    "zjisteni": "Rezerva 35 hlasů (21 mandátů, tj. 1,7 voliče): poslední mandát získala strana Zdraví Sport Vzdělání (5. mandát, Hana Klementová, č. 14) před SEN PRO ŠTĚTSKO (4 792 hlasů, 2 mandáty). Přírůstek SEN o 35 hlasů by mandát přesunul: SEN PRO ŠTĚTSKO 2 → 3 (Martin Brož, č. 4), Zdraví Sport Vzdělání 5 → 4 (Hana Klementová by ztratila). Podobně těsný je TÝM pro Štětí (+44 hlasů → 2. mandát Josef Kinař, č. 3, rovněž na úkor Zdraví Sport Vzdělání).",
+    "dopad": "Mandát může změnit chyba ≥ 35 hlasů; žádná konkrétní chyba v okrscích nalezena, jde o upozornění.",
+    "jistota": 1
+  },
+  "batches": {
+    "kontrola": "Ověřeno v batches_2026.pkl a batch_votes_2026.pkl (okrsek 565709/8, dávky 19 a 36) a ve finálních datech t3/hl.",
+    "zjisteni": "Okrsek 565709/8 byl odeslán dvakrát: dávka 19 (15:58) obsahovala neúplný mezisoučet 712 platných hlasů, opakovaná dávka 36 (17:20) již 1 027. Změnily se přitom hlasy tří stran, ne jen průběžný součet: SPD s podporou STAČILO! 83 → 146 (+63), ODS & nezávislí 37 → 100 (+63), CESTA LEPŠÍM SMĚREM 74 → 263 (+189); ostatní strany a počty lístků (57 odevzdaných obálek, 55 platných lístků) zůstaly. Přírůstky jsou násobky 21 (3 × 21, 3 × 21, 9 × 21), což svědčí o dodatečně zapsaných lístcích s křížkem u strany. Finální data jsou konzistentní (součet kandidátů = hlasy strany, 1 027 ≤ 55 × 21).",
+    "dukaz": "XML dávky ČSÚ (příznak OPAKOVANE): 712 → 1 027 hlasů v okrsku 8.",
+    "jistota": 5,
+    "dopad": "Ve finálních datech bez vlivu; jde o doplnění neúplného mezisoučtu během zpracování."
+  }
+}

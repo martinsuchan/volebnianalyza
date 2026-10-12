@@ -1,0 +1,8 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s dV = +24 hlasů pro Napajedelské fórum.",
+    "zjisteni": "Rezerva 24 hlasů (21 mandátů, tj. 1,1 voliče): poslední mandát získalo ANO 2011 (4. mandát) před Napajedelským fórem (6 591 hlasů, 2 mandáty). Přírůstek fóra o 24 hlasů (nebo úbytek ANO o 32) by mandát přesunul: Napajedelské fórum 2 → 3 (Roman Hrdina, č. 3), ANO 4 → 3 (podle simulace by mandát ztratil Jiří Čižmař, č. 1).",
+    "dopad": "Mandát může změnit chyba ≥ 24 hlasů; konkrétní chyba nebyla nalezena, jde o upozornění.",
+    "jistota": 1
+  }
+}

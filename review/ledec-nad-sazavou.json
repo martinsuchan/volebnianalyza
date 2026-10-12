@@ -1,0 +1,12 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor HLASY_01–15 KDU-ČSL a SNK ve všech 6 okrscích, součet řádku (259 = POC_HLASU), rok 2022 a dopad na mandáty.",
+    "zjisteni": "Jediný 'propad': Petr Fiala (KDU-ČSL a SNK č. 12, Ledeč nad Sázavou) má v okrsku 568988/5 5 hlasů, sousedé č. 11 a 13 mají 20 a 19. Není to překlep: ve všech okrscích má Fiala 0,4–0,7násobek hlasů sousedů (14 vs. 23/21, 27 vs. 45/35, 17 vs. 26/31, 13 vs. 21/27, 2 vs. 7/4), tedy čekaných ~11–13; v roce 2022 měl rovněž méně než sousedé (19 vs. 24/20 v okrsku 5). Součet řádku sedí a nejnižší hodnota řádku (č. 8: 8) nevylučuje nulový počet křížků u strany.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Doplnění +15 hlasů KDU-ČSL (2 120 → 2 135) by nezměnilo mandáty (rezerva ke zisku 588 hlasů) ani zvolené.",
+    "umysl": "Bez indikace – osobní/místní preference.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

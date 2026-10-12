@@ -1,0 +1,10 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Obě hodnoty jsou v rozsahu místního vzorce: Jan Škaryd (KDU-ČSL, č. 15: 22 hlasů, podíl 15,1 % vs. max 31,1 % v jiném okrsku) a Lucie Guizani (SNK pro Chotěboř, č. 7: 5 hlasů při dalších 0–7; podíl 2,0 % vs. 4,1 %). Chyba není prokázána.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() s opravou každé hodnoty: mandáty i zvolení beze změny.",
+    "vyradit": true
+  }
+}

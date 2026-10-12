@@ -9,7 +9,7 @@ Výstupy v data/processed:
 import glob, json, os, sys
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(__file__))
-from common import ROOT, P
+from common import ROOT, P0 as P
 
 RAW = os.path.join(ROOT, 'data', 'raw')
 KV_DATE = {2018: 20181005, 2022: 20220923}

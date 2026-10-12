@@ -1,0 +1,10 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Radek Ševčík (Volba pro město, č. 5) má 5 hlasů; v řádku jsou i hodnoty 2, 3, 5, 6 (podíl 1,9 % hlasů strany vs. 3,6 % medián jinde). Nejde o vypadlou číslici, ale o běžný rozptyl.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() s opravou každé hodnoty: mandáty i zvolení beze změny.",
+    "vyradit": true
+  }
+}

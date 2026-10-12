@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 39 hlasů. OBČANÉ SVOBODY by s přírůstkem 39 hlasů získali třetí mandát na úkor SPOLEČNĚ PRO SVOBODU (ztráta 52 hlasů); Pro kulturu a mládež by musela ztratit 89 hlasů.",
+    "dopad": "OBČANÉ SVOBODY 2 → 3, SPOLEČNĚ PRO SVOBODU 4 → 3; zvolen by byl Pavel Čekaňák (č. 3, OBČANÉ SVOBODY) místo Anny Tiché (č. 2, SPOLEČNĚ PRO SVOBODU). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen řádek Noví Lidovci pro Telč v okrsku 7 a minimum řádku, simulace outcome().",
+    "zjisteni": "Štefan Vindt (č. 7) má v okrsku 588024/7 4 hlasy (sousedé 17 a 15). Řádek je silně nerovnoměrný (12, 9, 12, 15, 6, 17, 4, 15, 15, 10, 17, 5, 10, 12, 17, 13, 7, 24, 8, 7) a 4 je jeho minimum, ne nelogický propad (hodnoty 4–6 jsou v řádku opakovaně). Nejde o vypadlou číslici.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace opravy: bez vlivu na mandáty i pořadí zvolených.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

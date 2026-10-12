@@ -1,0 +1,17 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s úbytkem 40 hlasů u B-R-O-D.",
+    "zjisteni": "Rezerva 40 hlasů: B-R-O-D (4 822 hlasů) by při úbytku 40 hlasů ztratilo 3. mandát (Martina Hýrková, č. 4) ve prospěch Za rozvoj města (4 → 5; Jiří Linka, č. 1). Další hranice: Za rozvoj města +66.",
+    "dopad": "Změna jen při chybě ≥ 40 hlasů; hodnocené hodnoty u Živého Brodu (Prevužňák, Vondrová) jsou místní preference a s touto hranicí nesouvisejí.",
+    "jistota": 1
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeny řádky strany Živý Brod v okrscích 7 a 9, bydliště, ostatní okrsky; rok 2022 pro osoby nenalezen; simulace outcome().",
+    "zjisteni": "Jakub Prevužňák (č. 9, Střevelná) 36 hlasů v okrsku 563871/7 a Michaela Vondrová (č. 6, Bzí) 29 hlasů v okrsku 9: oba kandidáti bydlí v malých místních částech a vyčnívají ve vlastním okrsku (jinde ~10–22), jde o místní preferenci. Vektory jsou jinak hladké a součet odpovídá straně.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace oprav: bez vlivu na mandáty i pořadí zvolených.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

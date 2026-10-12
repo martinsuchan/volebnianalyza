@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv (Piráti pro Vlašim 3 651 hlasů, 4,9476 % přepočteno) a simulací outcome() s přidáním 42 hlasů.",
+    "zjisteni": "Piráti pro Vlašim mají 3 651 hlasů, 4,9476 % – chybí 41 hlasů k 5% hranici (Vlašim je náš domov je naopak 150 hlasů nad hranicí).",
+    "dopad": "Přírůstek 42 hlasů by Pirátům dal 1 mandát (Petr Švingr) na úkor VOLBY PRO MĚSTO VLAŠIM (9 → 8, nezvolený Karel Pěkný). Hypotetický posun o 0,05 %; chyba v datech nezjištěna.",
+    "dopad_kat": "Těsný výsledek",
+    "jistota": 1
+  }
+}

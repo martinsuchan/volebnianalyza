@@ -1,0 +1,22 @@
+{
+  "inv0": {
+    "kontrola": "Z t3 spočteno, že v Jihlavě je ve 35 okrscích (všechny ≥ 100 obálek) celková neplatnost 0,54 % (ODEVZ_OBAL − PLAT_LISTKY); nulovou neplatnost mají okrsky 11 (506 obálek), 22 (460) a 33 (278) a při Poissonově modelu s touto mírou se v takovém souboru okrsků očekává 3,5 nulových okrsků (P(≥ 3) = 68 %).",
+    "zjisteni": "Okrsky 11, 22 a 33 mají počet platných lístků shodný s počtem odevzdaných obálek (506, 460, 278). Při městské míře neplatnosti 0,54 % se ale nula při 35 okrscích očekává u 3,5 okrsků; pozorované 3 tedy odpovídají náhodě. Neplatnost ostatních okrsků je 1–6 lístků.",
+    "dukaz": "Pozorováno 3 nulové okrsky, očekáváno 3,5 (P(≥ 3) ≈ 68 %); žádný nadbytek nulových okrsků. Souhlasí PL_HL_CELK ≤ PLAT_LISTKY × 37 ve všech okrscích. V datech 2022 sloupec PLAT_LISTKY chybí, srovnání není možné.",
+    "jistota": 1,
+    "umysl": "Žádná – počet odpovídá náhodě, o úmyslu nic nesvědčí.",
+    "doporuceni": "Nález je statisticky nepodložený (falešný poplach detektoru při nízké neplatnosti města); doporučeno vyřadit, detektor by měl porovnávat počet nulových okrsků s očekávaným počtem, ne označovat každý jednotlivý.",
+    "vyradit": true
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeny obě hodnoty (SDL, kand. č. 6 Martin Hyský, okrsky 12 a 16) proti sousedním okrskům i proti ostatním kandidátům strany; simulací funkce outcome ověřen dopad.",
+    "zjisteni": "Hyský má v okrsku 12 hodnotu 19 (kandidát č. 5 a 7: 3 a 3) a v okrsku 16 hodnotu 28 (sousedé 5 a 4). Nejde o překlep: Hyský má preferenční náskok ve všech okrscích (např. okrsek 14: 20 vs. 5–7, okrsek 18: 17 vs. 2, okrsek 24: 14 vs. 1, okrsek 32: 13 vs. 2, okrsek 35: 7 vs. 1 a 0), tj. 3–10× nad základem strany; hodnoty 19 a 28 do tohoto vzorce zapadají. Opravy (−18, −26) by naopak vytvořily nezvykle nízké hodnoty pro tohoto kandidáta (3 a 2).",
+    "dukaz": "Hyský celkem 582 hlasů (strana 6 596), ve 35 okrscích je ho vždy vyšší než sousedů; hodnoty 19 a 28 jsou jen shodou okolností zapsatelné vložením číslice do 3 a 4.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Sociální demokracie a Levice (6 596 hlasů) nezískala mandát (pod 5 %); simulace odečtení 44 hlasů Hyskému nemění žádný mandát ani zvolené.",
+    "umysl": "Žádná – skutečná místní preference kandidáta.",
+    "doporuceni": "Nález vyřadit. Detektor „vložená číslice“ vytváří falešné nálezy u kandidátů s výraznou preferencí, kde je ověřovací kritérium (poměr k základu strany) nízké; doplnit srovnání s hodnotami téhož kandidáta v ostatních okrscích.",
+    "vyradit": true
+  }
+}

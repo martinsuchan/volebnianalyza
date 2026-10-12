@@ -1,0 +1,31 @@
+{
+  "inv0": {
+    "kontrola": "Spočítáno z t3 (ODEVZ_OBAL − PLAT_LISTKY) pro všech 94 okrsků a porovnáno s očekáváním; zkontrolováno, zda jde o okrsky s jedním či dvěma lístky.",
+    "zjisteni": "Nula neplatných lístků je v 11 okrscích města (155–607 obálek; 12. nulový okrsek má méně než 100 obálek). Průměr „1,4 %“ je zkreslený okrsky Vratislavic nad Nisou (40–59 neplatných lístků na okrsek); bez nich je míra ~0,8 % a očekává se asi 7 nulových okrsků, pozorováno je 12. Přebytek je mírný a u jednotlivého okrsku nelze vyloučit, že neplatný lístek prostě nebyl. Všech 11 okrsků je v samotném Liberci s jediným lístkem, nikoli „na obou lístcích“. Dokladem chyby to není, jde o riziko nevyčlenění neplatných lístků.",
+    "dukaz": "Pozorováno 12 nulových okrsků, očekáváno ~7 (míra neplatnosti ~0,8 % mimo Vratislavice); u jednotlivého okrsku pravděpodobnost nuly ~8 %.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty i pořadí kandidátů; může jen zkreslit statistiku neplatných lístků.",
+    "umysl": "Nízká – bez důkazu pochybení; nejspíš běžná variabilita, případně nevyčlenění neplatných lístků.",
+    "doporuceni": "Nezveřejňovat jako chybu jednotlivých komisí; v datech ověřit jen okrsky s nejvyšším počtem obálek (556904/15 – 607, /17 – 528)."
+  },
+  "typos:souhrn": {
+    "kontrola": "Všechny tři hodnoty ověřeny proti sousedům na listině, ostatním okrskům a roku 2022; dopad simulován přes outcome() jednotlivě i společně (beze změny mandátů i zvolených).",
+    "zjisteni": "(1) Okrsek 556904/72, Starostové pro Liberecký kraj č. 2 Jaroslav Zámečník 11 hlasů při sousedech 122 a 111 (správně pravděpodobně 111, vypadla jedna číslice; poslední kandidát listiny má 99 hlasů, takže hodnota 11 je při rovnoměrné listině nemožná). (2) Okrsek 556904/50, Starostové č. 33 Jarmila Levko 4 hlasy při sousedech 46 a 47 (správně ~46; v ostatních okrscích má min. 28). (3) Okrsek 556904/39, PRO Právo Respekt Odbornost č. 24 Eva Kociánová 33 hlasů při sousedech 3 a 3 (správně ~3, zdvojená číslice); v žádném z ostatních 86 okrsků nepřevyšuje průměr sousedů o více než 4 hlasy, ale místní preferenci nelze zcela vyloučit (v jiných okrscích má až 32 hlasů, strana je tam ale mnohem silnější) – nejistota je u této hodnoty vyšší (jistota 3).",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace oprav všech tří hodnot (Zámečník +100, Levko +42, Kociánová −30, včetně součtů stran): bez vlivu na mandáty i zvolené. Zámečník je zvolen i s 8 600 hlasy (č. 2 na listině strany se 14 mandáty, jediný preferenčně posunutý je Hájek s 9 215 hlasy), Levko ani Kociánová zvoleny nejsou a strana PRO Právo Respekt Odbornost mandát nemá.",
+    "doporuceni": "Opravit data okrsků 556904/72, 556904/50 a 556904/39 podle zápisů."
+  },
+  "row:556904/18:56388901:3": {
+    "kontrola": "Ověřeno v hl/t3/ros/shares: vektor PRO Právo Respekt Odbornost v okrsku 18 porovnán s 86 ostatními okrsky a sousedy; dopad nasimulován přes outcome().",
+    "zjisteni": "Okrsek 18 (Liberec): 595 platných lístků, 21 741 hlasů (93,7 % možných 23 205, sousedé medián 93,5 %). Popis nálezu je nepřesný: nejde o blok s nulami na konci, ale o tři izolované nuly. Řádek PRO (1 064 hlasů): kandidáti č. 1–34 mají 28–39 hlasů, č. 35 a 36 mají nulu, č. 37 a 38 mají 29 a 30 a č. 39 (poslední) má nulu. Chybí 3 × 29 = 87 hlasů (detektor odhadl 101). Podíl strany (4,9 %) je nad očekáváním (4,3 %) a využití hlasů okrsku je v normě, chyba je tedy lokální.",
+    "dukaz": "Logická nemožnost: kandidát č. 35 ani č. 36 nemůže mít nulu, když kandidáti č. 37 a 38 mají 29–30 hlasů (křížek u strany dává hlas všem prvním 39 kandidátům), a nula u posledního č. 39 při 30 hlasech u č. 38 by znamenala, že všech ~29 lístků s křížkem u strany mělo právě jeden další křížek.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty ani zvolené: PRO má v Liberci 40 365 hlasů (3,54 %), do 5% hranice jí chybí 16 623 hlasů; doplnění 87 až 261 hlasů nic nemění.",
+    "umysl": "Nelze posoudit; vzorec (izolované nuly mezi vyplněnými hodnotami) odpovídá vynechaným políčkům při přepisu zápisu.",
+    "doporuceni": "Ověřit zápis okrsku 18: hlasy kandidátů PRO č. 35, 36 a 39.",
+    "vyradit": false
+  }
+}

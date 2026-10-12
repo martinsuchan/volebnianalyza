@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeny všechny označené hodnoty: vektor HLASY_xx ve všech okrscích, bydliště kandidátů (rk.BYDLISTEN), spolubydlící na listině, rok 2022 a limit PL_HL_CELK ≤ PLAT_LISTKY × M.",
+    "zjisteni": "Marek Hradil (č. 7 ODS, bydliště Chvalkovice na Hané) má v okrsku 593117/3 61 hlasů při sousedech 7 a 8. Stejný vzorec měl v roce 2022 (tehdy č. 8): v témže okrsku 58 hlasů při sousedech 24 a 8, zatímco v okrscích 1 a 2 jen 27 a 52. Zápis je vnitřně konzistentní (PL_HL_CELK 2 533 ≤ 181 × 15 = 2 715). Jde o místní preferenci (okrsek odpovídá Chvalkovicím na Hané), nikoli o vloženou číslici.",
+    "dukaz": "Opakování stejného vzorce v roce 2022 a/nebo v ostatních okrscích či u spolukandidátů ze stejné obce.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Žádný vliv na mandáty ani zvolené (simulace materiality: zmena_mandatu = False, zmena_zvolenych = False); nejde o chyby.",
+    "umysl": "Bez indikace – skutečná místní preference.",
+    "doporuceni": "Nález vyřadit.",
+    "vyradit": true
+  }
+}

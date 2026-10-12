@@ -1,0 +1,16 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 33 hlasů. ZMĚNA PRO VRANOV by při ztrátě 33 hlasů (nebo Vranováci Vranovu při zisku 39 hlasů) přišla o jeden z 5 mandátů; VRANOV 2026 při ztrátě 161 hlasů. Jednookrskové město, 5 794 hlasů.",
+    "dopad": "Vranováci Vranovu 5 → 6, ZMĚNA PRO VRANOV 5 → 4; zvolena by byla Marcela Brabencová (č. 4, Vranováci Vranovu) místo Josefa Solaře (č. 5, ZMĚNA PRO VRANOV). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  },
+  "batches": {
+    "kontrola": "Ověřeno v batch_changes_2026.pkl: okrsek 595098/1 poslán 10. 10. v 18:49 a znovu ve 23:31; liší se jen ZAPSANI_VOLICI (552 → 627), vydané obálky 420, odevzdané 418, platné lístky 415 a platné hlasy 5 794 beze změny.",
+    "zjisteni": "Opakovaně zaslaný zápis okrsku 595098/1 změnil pouze počet zapsaných voličů ze 552 na 627 (doplnění údaje); hlasy a obálky zůstaly stejné.",
+    "dopad": "Bez vlivu na hlasy a mandáty; mění se jen údaj o zapsaných voličích (účast tak vychází 66,7 % místo 75,7 %).",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 5
+  }
+}

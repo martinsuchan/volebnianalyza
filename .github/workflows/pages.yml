@@ -1,0 +1,40 @@
+# Publikace statického webu ze složky report/ na GitHub Pages.
+# Předpoklad: Settings → Pages → Build and deployment → Source = „GitHub Actions“.
+name: Publikace webu
+
+on:
+  push:
+    branches: [main]
+    paths: ['report/**', '.github/workflows/pages.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Stažení repozitáře
+        uses: actions/checkout@v4
+
+      - name: Nastavení GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Zabalení složky report/
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: report
+
+      - name: Nasazení na GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv (hlasy_k_zisku = 1, do_prahu = −2) a simulací outcome() pro +1 hlas KSČM.",
+    "zjisteni": "Rezerva 1–2 hlasy: KSČM a nezávislí kandidáti mají 921 hlasů (5,012 % z 18 376; hranice 918,8 hlasu, tedy o 2 hlasy nad hranicí), ale mandát nezískali – chybí jim 1 hlas. Při +1 hlasu by KSČM získala mandát (František Podlipský, č. 1) a Občané Borska – společně pro změnu by klesli ze 4 na 3 mandáty (odpadla by Marcela Bláhová Blahutová, č. 3). Podobně stačí, aby Občanům Borska ubyly 3–4 hlasy.",
+    "dopad": "KSČM 0 → 1 a Občané Borska 4 → 3 mandáty při změně o jediný hlas; každá drobná chyba v zápisech tří okrsků může výsledek změnit.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

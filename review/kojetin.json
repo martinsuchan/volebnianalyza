@@ -1,0 +1,19 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s dV = +12 hlasů pro KDU-ČSL.",
+    "zjisteni": "Rezerva 12 hlasů (21 mandátů, tj. 0,6 voliče): poslední mandát získalo ANO 2011 (4. mandát, Kristýna Odložilíková, č. 3) před KDU-ČSL (4 759 hlasů, 2 mandáty; chybí jí 12 hlasů). Přírůstek KDU-ČSL o 12 hlasů (nebo úbytek ANO o 16) by mandát přesunul: KDU-ČSL 2 → 3 (Ladislav Šťastník, č. 2), ANO 4 → 3 (Kristýna Odložilíková by ztratila).",
+    "dopad": "Mandát může změnit chyba ≥ 12 hlasů; konkrétní chyba nebyla nalezena, jde o upozornění. Hodnoty z nálezu překlepů (SPD a Trikolora) na mandáty vliv nemají.",
+    "jistota": 1
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeny oba záznamy z typos_2026.pkl (Krejčiřík č. 12, Fiľo č. 11) v okrsku 8, podíly v ostatních okrscích, rok 2022 a bydliště.",
+    "zjisteni": "František Krejčiřík (SPD a Trikolora č. 12, Kojetín III-Kovalovice) má v okrsku 514055/8 21 hlasů při sousedech 4 a 4 (16,0 % hlasů strany proti 5,0–8,1 % jinde); ve stejném okrsku vyčnívá i Kusák (č. 10, rovněž Kovalovice, 19 vs 6 a 4). Dva kandidáti z Kovalovic jsou zvýšení současně, ostatní nízko – místní preference. V roce 2022 měl Krejčiřík na jiné listině v okrsku 8 11,3 % (jinde 6,8–11,3 %), bez zvýraznění, ale šlo o jinou pozici na listině. Záznam Pavol Fiľo (propad 4 vs 20) je falešný poplach: ostatní nekovalovičtí kandidáti okrsku 8 mají 4–6 hlasů, 4 hlasy jsou běžné.",
+    "dukaz": "Dva kandidáti z Kovalovic zvýšení současně v okrsku 8; okolní nekovalovičtí kandidáti 4–6 hlasů.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu; simulace oprav (–17 hlasů) nemění mandáty (1, 8, 2, 6, 4) ani zvolené.",
+    "umysl": "Bez indikace – místní preference.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

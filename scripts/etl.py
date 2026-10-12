@@ -1,23 +1,32 @@
-"""ETL: load ČSÚ open data (KV 2018/2022/2026) and keep Prague (OKRES 1100) only."""
+"""ETL: načte otevřená data ČSÚ (KV 2018/2022/2026) a ponechá jen analyzované město (AUDIT_UNIT) včetně jeho MČ/MO."""
 import glob, os, sys
 import pandas as pd
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from common import P as OUT, MAGISTRAT
 
 RAW = os.path.join(os.path.dirname(__file__), '..', 'data', 'raw')
-OUT = os.path.join(os.path.dirname(__file__), '..', 'data', 'processed')
-PRAHA_OKRES = 1100
 
 def rd(year, kind, name):
     pat = {'data': '*data*_csv', 'reg': '*reg*_csv', 'cis': '*cis*_csv'}[kind]
     f = glob.glob(os.path.join(RAW, f'kv{year}', pat, 'csv', name))[0]
-    enc = 'ascii' if kind == 'data' else 'cp1250'
-    return pd.read_csv(f, sep=';', encoding=enc if kind != 'data' else 'cp1250', low_memory=False)
+    # celostátní tabulky se při zpracování mnoha obcí čtou opakovaně – mezipaměť v pickle (obnoví se při změně zdroje)
+    cache = os.path.join(OUT, '..', '..', '_celostatni', f'kv{year}_{name}.pkl')
+    if os.path.exists(cache) and os.path.getmtime(cache) >= os.path.getmtime(f):
+        return pd.read_pickle(cache)
+    df = pd.read_csv(f, sep=';', encoding='cp1250', low_memory=False)
+    os.makedirs(os.path.dirname(cache), exist_ok=True)
+    df.to_pickle(cache)
+    return df
 
 def load(year):
-    t3 = rd(year, 'data', 'kvt3.csv'); t3 = t3[t3.OKRES == PRAHA_OKRES].copy()
-    hl = rd(year, 'data', 'kvhl.csv'); hl = hl[hl.OKRES == PRAHA_OKRES].copy()
-    rz = rd(year, 'reg', 'kvrzcoco.csv'); rz = rz[rz.OKRES == PRAHA_OKRES].copy()
-    ros = rd(year, 'reg', 'kvros.csv'); ros = ros[ros.OKRES == PRAHA_OKRES].copy()
-    rk = rd(year, 'reg', 'kvrk.csv'); rk = rk[rk.OKRES == PRAHA_OKRES].copy()
+    t3 = rd(year, 'data', 'kvt3.csv')
+    obce = set(t3[t3.KODZASTUP == MAGISTRAT].OBEC) | {MAGISTRAT}  # území města: obec nebo její MČ/MO
+    t3 = t3[t3.OBEC.isin(obce)].copy()
+    kody = set(t3.KODZASTUP) | {MAGISTRAT}  # zastupitelstvo města + zastupitelstva MČ/MO
+    hl = rd(year, 'data', 'kvhl.csv'); hl = hl[hl.OBEC.isin(obce)].copy()
+    rz = rd(year, 'reg', 'kvrzcoco.csv'); rz = rz[rz.KODZASTUP.isin(kody)].copy()
+    ros = rd(year, 'reg', 'kvros.csv'); ros = ros[ros.KODZASTUP.isin(kody)].copy()
+    rk = rd(year, 'reg', 'kvrk.csv'); rk = rk[rk.KODZASTUP.isin(kody)].copy()
     cvs = rd(year, 'cis', 'cvs.csv'); cns = rd(year, 'cis', 'cns.csv')
     for d in (t3, hl, rz, ros, rk):
         d.insert(0, 'ROK', year)

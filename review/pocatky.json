@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 39 hlasů. KDU-ČSL by při ztrátě 39 hlasů (nebo NEZÁVISLÍ PRO POČÁTKY při zisku 91 hlasů) předala jeden mandát; Sdružení nezávislých kandidátů Počátky by muselo ztratit 136 hlasů.",
+    "dopad": "NEZÁVISLÍ PRO POČÁTKY 6 → 7, KDU-ČSL 3 → 2; zvolen by byl Erik Dufek (č. 1, NEZÁVISLÍ PRO POČÁTKY) místo Pavla Kešnera (č. 3, KDU-ČSL). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

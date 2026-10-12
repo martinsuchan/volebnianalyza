@@ -1,0 +1,10 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Radek Štos (JEDENADVACÍTKA NEZÁVISLÝCH, č. 3) má 5 hlasů, v řádku jsou i další hodnoty 4–8 (podíl 3,2 % vs. 5,6 % medián); nejde o logicky nemožnou hodnotu.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() s opravou každé hodnoty: mandáty i zvolení beze změny.",
+    "vyradit": true
+  }
+}

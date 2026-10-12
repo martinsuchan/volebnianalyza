@@ -1,0 +1,25 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() pro +30 hlasů ODS a +4 hlasy KDU-ČSL.",
+    "zjisteni": "Rezerva 30 hlasů: ODS (1 626 hlasů, 5,165 % – hranici 5 % splňuje, ale má 0 mandátů) by při přírůstku 30 hlasů získala 1 mandát (Josef Etlík, č. 1) na úkor Pro Blatnou (4 → 3; Pavel Kozlovský, č. 4). KDU-ČSL má 4,988 % a chybí jí ~4 hlasy k 5% hranici, ale mandát by ani po jejím překročení nezískala (simulace beze změny).",
+    "dopad": "Mandát by se změnil při chybě ≥ 30 hlasů u ODS; nebyl nalezen konkrétní důvod.",
+    "jistota": 1
+  },
+  "typos:souhrn": {
+    "kontrola": "V souhrnu zbývá po automatickém vyřazení preferencí jediná hodnota: Hana Jahodová (ROVNĚ č. 12); ověřen rok 2022 podle jména a okrsky.",
+    "zjisteni": "Hana Jahodová (č. 12, Drahenický Málkov) má v okrsku 550850/7 22 hlasů (sousedé 4–5; celkem strana 106). V roce 2022 měla v témže okrsku 19 hlasů při sousedech 4–9, což je tentýž vzorec – místní preference, nikoli překlep.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace opravy: bez vlivu na mandáty i pořadí zvolených.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  },
+  "inv0": {
+    "kontrola": "Ověřeno t3 2026 a 2022: neplatné lístky a hlasy na lístek podle okrsků.",
+    "zjisteni": "Jde o okrsek 550850/4: 491 odevzdaných obálek, 491 platných lístků (0 neplatných), zatímco ostatní velké okrsky mají 1,2–2,8 % neplatných. Hlasů na lístek je 0,853 proti 0,90–0,91 v okrscích 1, 2, 3, 5 – nižší hodnota je slučitelná s tím, že část neplatných (řádově desítky prázdných lístků) byla započtena jako platné bez hlasů, důkaz to ale není.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty; posun by byl nanejvýš v řádu jednotek hlasů stran.",
+    "doporuceni": "Ověřit zápis okrsku 4 (počet neplatných lístků)."
+  }
+}

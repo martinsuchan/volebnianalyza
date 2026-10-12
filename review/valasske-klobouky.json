@@ -1,0 +1,25 @@
+{
+  "typo:585891/7:58589101:2:4": {
+    "kontrola": "Ověřen vektor HLASY_01–21 KLOBOUKY VPŘED v okrsku 7 i ve všech ostatních 6 okrscích, bydliště kandidátů, porovnání s rokem 2022 (kandidátka v roce 2022 neexistovala), 5% hranice a simulace outcome() pro opravy o 14, 15, 16 a 28 hlasů.",
+    "zjisteni": "Soňa Beňová Fojtíková (č. 4, Valašské Klobouky) má v okrsku 585891/7 (237 voličů) zapsáno 32 hlasů, sousední č. 3 a č. 5 po 6 a 3; vektor č. 1–21: 13, 7, 6, 32, 3, 6, 13, 33, 3, 7, 14, 5, 4, 3, 3, 3, 4, 4, 3, 13, 4. Řádek má ale druhé téměř shodné vyčnívající číslo: č. 8 Milan Vlček (bydliště Smolina) 33 hlasů a č. 20 Petr Tvarůžek (Smolina) 13, tedy místní kandidáti, takže okrsek 7 pravděpodobně pokrývá Smolinu. Fojtíková sama ze Smoliny není a bydliště její 32 hlasy nevysvětluje; jinde má 26, 10, 34, 27, 1, 0 hlasů (celkem 130, 4. nejsilnější kandidát listiny po Ptáčkovi 191, Vránovi 181 a Cigánkovi 176). Součet vektoru (183) odpovídá hlasům strany. Podezření na vložený znak (3 → 32) je možné, ale nelze je odlišit od preferenčního bloku voličů v okrsku, kde jsou hlasy rozdělené nerovnoměrně (33, 32, 14, 13, 13).",
+    "dukaz": "Hodnota 32 při sousedech 6 a 3, ale totéž platí pro č. 8 (33); souběh dvou stejně velkých ‚překlepů‘ v jednom řádku činí chybu méně pravděpodobnou než místní preferenci.",
+    "jistota": 2,
+    "dopad_kat": "Mění mandáty",
+    "dopad": "MĚNÍ MANDÁTY přes 5% hranici samotné KLOBOUKY VPŘED, pokud by hodnota byla překlep. KLOBOUKY VPŘED mají 2 150 z 42 706 platných hlasů stran = 5,034 % (hranice 2 135,3; rezerva 14,7 hlasu). Oprava 32 → ~4 (−28 hlasů) sníží hlasy strany na 2 122 a součet na 42 678 (hranice 2 133,9), strana hranici nesplní: KLOBOUKY VPŘED 1 → 0 mandátů (nezvolen Karel Ptáček, č. 1), mandát připadne IMPULZ pro Klobouky (4 → 5; zvolen David Ďulík, č. 2, 414 hlasů, který při 7 743 hlasech splní 110 % průměru – hranice 405,9). Simulace outcome(): úbytek 15 hlasů nic nemění, 16 a více hlasů mandát převrátí (viz nález ‚tight‘). Mechanismus je tedy posun 5% hranice, nikoli d'Hondt. Dopad je podmíněn tím, že 32 je skutečně chyba (pravděpodobnost 50–80 %, vzhledem k možné místní preferenci spíše u dolní hranice).",
+    "umysl": "Nízká – pokud jde o chybu, vzorec odpovídá překlepu při přepisu; jinak preference.",
+    "doporuceni": "Ověřit zápis okrsku 585891/7 (řádek KLOBOUKY VPŘED, hlasy kandidáta č. 4) proti originálu zápisu u okrskové komise."
+  },
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() po krocích 14, 15, 16 hlasů.",
+    "zjisteni": "Rezerva 15 hlasů: KLOBOUKY VPŘED mají 2 150 hlasů z 42 706 (5,034 %), 5% hranice je 2 135,3. Ztráta 15 hlasů nic nemění, 16 hlasů znamená pád pod hranici: strana ztratí mandát (Karel Ptáček, č. 1) a mandát připadne IMPULZ pro Klobouky (David Ďulík, č. 2).",
+    "dopad": "Mandát KLOBOUKY VPŘED 1 → 0, IMPULZ pro Klobouky 4 → 5, pokud by hlasům KLOBOUKY VPŘED ubylo ≥ 16. Podezřelá hodnota 32 u Beňové Fojtíkové (samostatný nález) by to způsobila, je-li chybná.",
+    "jistota": 1
+  },
+  "typos:souhrn": {
+    "kontrola": "Všech 5 hodnot ověřeno: vektor v okrsku, ostatní okrsky, rok 2022 podle jména, bydliště, simulace oprav.",
+    "zjisteni": "Z 5 hodnot jsou 4 doložené místní preference nebo přirozené výkyvy: Michal Drga (ODS č. 1, Smolina) 25 hlasů v okrsku 3 – lídr listiny, v roce 2022 měl jako č. 1 jinde 35–56 hlasů; Petr Sucháček (KLOBUČANI SOBĚ č. 17, Smolina) 37 v okrsku 7 – v roce 2022 měl v témže okrsku 40 při sousedech 14–16; Vladimír Mlynárčik (č. 11, Lipina) a Michal Oliva (č. 17, Lipina) po 27 v okrsku 5 – v roce 2022 tamtéž 44 a 33 při sousedech ~20; Kamil Vaculčík (ODS č. 2) 15 vs. 57 a 54 u sousedů je ‚propad‘, ale 15 odpovídá základu řádku (12–20), nejde o chybu. Zbývá jedna hodnota s reálným dopadem: Soňa Beňová Fojtíková 32 (samostatný nález, jistota 2).",
+    "jistota": 2,
+    "dopad": "Oprava všech hodnot: mění mandáty jen kvůli Beňové Fojtíkové (KLOBOUKY VPŘED 1 → 0, IMPULZ pro Klobouky 4 → 5); ostatní opravy bez vlivu.",
+    "doporuceni": "Souhrn ponechat jen kvůli nálezu Beňové Fojtíkové; ostatní hodnoty nepovažovat za chyby."
+  }
+}

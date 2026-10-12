@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv (Volba pro město 6 810 hlasů, 2 mandáty) a simulací outcome() s odečtením 21 hlasů.",
+    "zjisteni": "Druhý mandát Volby pro město drží o 20 hlasů (rezerva 20 hlasů); nejbližší strana, která by mandát získala, je Mladé Mýto (potřebuje 70 hlasů).",
+    "dopad": "Ztráta 21 hlasů by Volbě pro město vzala 2. mandát (2 → 1, nezvolená Iva Vrátilová) a Mladé Mýto by získalo 7. mandát (6 → 7, Michal Koblása). Hypotetický posun; v datech žádná chyba nalezena.",
+    "dopad_kat": "Těsný výsledek",
+    "jistota": 1
+  }
+}

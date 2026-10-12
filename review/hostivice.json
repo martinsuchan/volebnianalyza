@@ -1,0 +1,8 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s dV = +10 hlasů pro ANO 2011.",
+    "zjisteni": "Rezerva 10 hlasů (15 mandátů, tj. méně než 1 volič s plným počtem hlasů): poslední mandát získala SNK HOme (9. mandát, Bronislava Zielenec Kubová, č. 9) před ANO 2011 (5 791 hlasů, 1 mandát). Přírůstek ANO o 10 hlasů by mandát přesunul: ANO 1 → 2 mandáty (Daniel Rath, č. 4), SNK HOme 9 → 8 (Bronislava Zielenec Kubová by ztratila). 5% hranici žádná strana nemění.",
+    "dopad": "Mandát by se změnil jen při souhrnné chybě ≥ 10 hlasů ve prospěch ANO 2011 (nebo –42 hlasů u SNK HOme); žádná konkrétní chyba nebyla nalezena, jde o upozornění.",
+    "jistota": 1
+  }
+}

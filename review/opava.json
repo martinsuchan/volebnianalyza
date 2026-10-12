@@ -1,0 +1,24 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a v datech zastupitelstva MČ Zlatníky (ZK 55541001, 7 mandátů): kandidátní listiny a jejich hlasy, d'Hondt ručně.",
+    "zjisteni": "Nález se týká zastupitelstva Zlatníky (7 mandátů): Občané městských částí Opavy mají 482 hlasů (5 mandátů), jednotliví kandidáti Jasník 97, Krusberský 96, Mareta 92, Vincker 78, Maretová 71, Kachtík 49, KSČM 51. Poslední mandáty: Jasník (97), 5. mandát Občanů (96,4) a Krusberský (96) před Maretou (92); Krusberský by 4 hlasy ztratil mandát, Mareta potřebuje 5. Zlatníky je jediný okrsek tohoto zastupitelstva, data jsou vnitřně konzistentní (součet 1 077 hlasů ≤ 208 lístků × 7). Žádná chyba nebyla nalezena, jde o statisticky těsný výsledek.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek",
+    "dopad": "Mandát v zastupitelstvu Zlatníky (7 členů) rozhoduje rozdíl 4–5 hlasů mezi kandidáty Krusberský (96) a Mareta (92); městské zastupitelstvo Opavy se netýká."
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeny vektory kandidátů v okrscích 555371/5001 (ŽIJEME OPAVOU! č. 12) a 555321/28 (VIZE PRO OPAVU č. 12), porovnání s ostatními okrsky města a s rokem 2022.",
+    "zjisteni": "Dvě izolované hodnoty u kandidáta č. 12: Pavel Nelešovský 25 hlasů (medián řádku 7, sousedé 7 a 7; okrsek Suché Lazce, 541 lístků) a Libor Moravec 27 hlasů (medián řádku 8, sousedé 10 a 8; okrsek 28, 368 lístků). Obě hodnoty by po odebrání úvodní číslice „2“ odpovídaly okolí (5 a 7), ale zároveň jde o malá čísla, kde místní preference (18–19 voličů navíc, v Suchých Lazcích vesnický okrsek) není vyloučena; v ostatních okrscích má č. 12 u těchto stran nejvýše 4× medián řádku. Součty stran (283 a 344) odpovídají součtu kandidátů, takže chyba by byla promítnuta i do součtů. Obě strany nedosáhly 5 % (ŽIJEME OPAVOU! 2,07 %, VIZE PRO OPAVU 3,64 %), takže jejich hlasy na mandáty nemají vliv.",
+    "jistota": 2,
+    "dopad": "Bez vlivu: strany pod 5% hranicí, opravou by ztratily jen 20 hlasů.",
+    "doporuceni": "Ověřit zápis T/3 obou okrsků u kandidáta č. 12; nízká priorita."
+  },
+  "swap:555410/8001:50592701:2:9": {
+    "kontrola": "Porovnány podíly OK Změna pro Opavu (č. 2) a Občané městských částí Opavy (č. 9) ve všech venkovských okrscích Opavy, vektory kandidátů a výsledky v roce 2022 i v MČ Zlatníky.",
+    "zjisteni": "Nejde o záměnu hlasů, ale o místní vzorec: Zlatníky jsou samostatná obec/MČ, kde Občané městských částí Opavy (kandidátka MČ) mají v městské volbě 24,0 % (1 644 hlasů); v ostatních venkovských okrscích 8,1–54,2 % (Komárov 42,7, Suché Lazce 31,1, Vlaštovičky 54,2, Podvihov 27,7, Milostovice 21,6). OK Změna pro Opavu má ve Zlatníkách 7,3 %, ve venkovských okrscích 11,7–28,7 %. Očekávání 2 127/207 vychází z městských okrsků, které s vesnickými nejsou srovnatelné. Řádky kandidátů obou stran jsou souvislé a vnitřně konzistentní (OK Změna č. 1 33, ostatní 12–17; Občané č. 1–6 42, 43, 40, 50, 40, 40). V roce 2022 měla místní kandidátka Občané městských částí Opavy ve Zlatníkách 2 085 hlasů (silný místní výsledek).",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu – nejde o chybu.",
+    "vyradit": true
+  }
+}

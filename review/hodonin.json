@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl/t3 (okrsek 586021/2): vektor strany, porovnání s 24 ostatními okrsky a simulace outcome().",
+    "zjisteni": "Okrsek 586021/2, Hnutí PRO Hodonín, kand. č. 4 Lukáš Lípa má 11 hlasů, sousedé č. 3 a č. 5 mají 115 a 116 a celá listina 108–137 (strana 3 305 hlasů, součet kandidátů se rovná hlasům strany). V ostatních okrscích má č. 4 nejméně 39 hlasů, poměr k sousedům je zde 0,10 (jinde medián 1,06, 10. percentil 1,01). Odpovídá vypadlé číslici (116→11). Lípa je zvolen (mandát A), chyba jeho hlasy jen podhodnocuje.",
+    "dukaz": "Propad na ~10 % sousedů uprostřed listiny, kde mají všichni 108–137 hlasů; nejnižší poměr ze všech okrsků.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: doplnění +105 hlasů kandidátovi i straně nemění mandáty ani zvolené (Lípa je zvolen i s chybnou hodnotou).",
+    "umysl": "Nízká – vzorec odpovídá vypadlé číslici.",
+    "doporuceni": "Ověřit zápis T/3 okrsku 586021/2 (hlasy kandidáta č. 4 Hnutí PRO Hodonín).",
+    "vyradit": false
+  }
+}

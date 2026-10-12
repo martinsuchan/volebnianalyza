@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 import numpy as np, pandas as pd
 from scipy import stats
 sys.path.insert(0, os.path.dirname(__file__))
-from common import ROOT, P, RES
+from common import ROOT, P0 as P, RES0 as RES
 
 HC = [f'HLASY_{i:02d}' for i in range(1, 23)]
 YEARS = (2018, 2020, 2022, 2026)

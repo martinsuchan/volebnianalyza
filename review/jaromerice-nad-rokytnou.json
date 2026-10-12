@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv (hlasy_k_zisku = 25) a simulací outcome().",
+    "zjisteni": "Rezerva 25 hlasů: ZA JAROMĚŘICE (2 653 hlasů, 1 mandát) potřebují +25 hlasů na druhý mandát (František Petrů, č. 3); PRO JISTOTY JAROMĚŘICKA by z 8 mandátů klesly na 7 (odpadl by Milan Kovárník, č. 8).",
+    "dopad": "ZA JAROMĚŘICE 1 → 2 a PRO JISTOTY JAROMĚŘICKA 8 → 7 mandátů při změně o 25 hlasů v 8 okrscích; riziko, nikoli zjištěná chyba.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

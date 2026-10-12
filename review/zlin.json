@@ -1,0 +1,35 @@
+{
+ "integ:A2": {
+  "kontrola": "Ověřeno v t3: okrsek 585068/40 má VYD_OBALKY 352, ODEVZ_OBAL 355, PLAT_LISTKY 353, PL_HL_CELK 13 249; ČSÚ u záznamu samo nastavilo CHYBA = 1. Je to jediný okrsek města s odevzdanými obálkami > vydané.",
+  "zjisteni": "Okrsek 585068/40: odevzdáno 355 obálek, vydáno 352 (rozdíl 3); platných lístků 353, tj. 2 neplatné; platné hlasy 13 249 (37,5 na lístek, při 41 mandátech v normě). Pravděpodobná je chyba v počtu vydaných obálek nebo záměna při zápisu.",
+  "dukaz": "Deterministický aritmetický rozpor ODEVZ_OBAL 355 > VYD_OBALKY 352; potvrzeno i příznakem CHYBA = 1 u zápisu okrsku.",
+  "jistota": 5,
+  "umysl": "Žádná – drobná chyba evidence obálek",
+  "dopad": "Bez vlivu: rozdíl 3 obálek odpovídá nejvýše 123 hlasům (3 × 41), nejtěsnější rezerva ve městě je 2 864 hlasů (ODS, 5. mandát).",
+  "dopad_kat": "Bez vlivu",
+  "doporuceni": "Bez dalších kroků; v případném přezkumu ověřit v zápisu okrsku 40 počet vydaných obálek.",
+  "vyradit": false
+ },
+ "inv0": {
+  "kontrola": "Ověřeno v t3: nulová neplatnost je v okrscích 585068/1, 12, 30, 48, 71 (a v malém 585068/74 se 70 obálkami); porovnáno s Poissonovým očekáváním při městské míře neplatnosti 0,9 % (245 neplatných z 27 048 obálek).",
+  "zjisteni": "Z 74 okrsků má nulu 6 (5 s ≥ 100 obálkami: 430, 406, 306, 437, 331; dále 70 obálek). Při městské míře 0,9 % se podle Poissonova rozdělení čeká 4,7 okrsků s nulou (u 430 obálek 2,0 %, u 306 obálek 6,3 %). Medián neplatných lístků v okrsku je 2, maximum 12, takže nula je pro Zlín běžný výsledek, nikoli anomálie.",
+  "dukaz": "Pozorováno 6 nul, očekáváno 4,7; kritérium „100+ obálek“ v detektoru předpokládá neplatnost v řádu procent, ve Zlíně je však jen 0,9 %. Hlasy nulou ovlivněny nejsou (PL_HL_CELK 35–38 na lístek při 41 mandátech).",
+  "jistota": 1,
+  "umysl": "Bez indikace – nula je při nízké neplatnosti ve městě statisticky běžná",
+  "dopad": "Bez vlivu na mandáty ani zvolené; nejtěsnější rezerva ve městě je 2 864 hlasů.",
+  "dopad_kat": "Bez vlivu",
+  "doporuceni": "Bez dalších kroků; v detektoru ověřovat nulu proti očekávání z městské míry neplatnosti (při míře pod 1–2 % jde o falešné nálezy).",
+  "vyradit": true
+ },
+ "batches": {
+  "kontrola": "Ověřeno v batches_2026.pkl a batch_votes_2026.pkl: okrsek 585068/6 byl zaslán v dávce 50 (18:32) a opakovaně v dávce 74 (20:30, opakovane = 1); finální t3 se shoduje s opakovanou dávkou.",
+  "zjisteni": "V okrsku 585068/6 zůstaly počty obálek a lístků shodné (zapsáno 513, vydáno 199, odevzdáno 199, platných lístků 195), změnily se ale platné hlasy z 6 530 na 7 076 (+546, tj. +8,4 %). Hlasy vzrostly u 7 ze 9 stran: STAROSTOVÉ A NEZÁVISLÍ 1 563 → 1 756, ANO 2011 1 663 → 1 868, Společně pro Zlín 806 → 851, Zlín 21 520 → 570, ODS 459 → 503, PRO LEPŠÍ ZLÍN 330 → 336, ZLÍN SRDCEM a Piráti 529 → 532; Motoristé a SPD beze změny. První zaslání bylo tedy neúplné (nejspíš nedopsané hlasy kandidátů) a do 2 hodin bylo opraveno.",
+  "dukaz": "XML dávky ČSÚ (příznak OPAKOVANE); finální hodnoty POC_HLASU (1 756, 281, 851, 336, 532, 379, 1 868, 503, 570) odpovídají dávce 74; 7 076 / 195 = 36,3 hlasu na lístek (první dávka 33,5).",
+  "jistota": 5,
+  "umysl": "Žádná – oprava neúplného zápisu během zpracování",
+  "dopad": "Ve finálních datech bez vlivu; zveřejněné výsledky už obsahují opravu a rozdíl +546 hlasů je 0,05 % hlasů ve městě (rezerva 2 864 hlasů).",
+  "dopad_kat": "Bez vlivu",
+  "doporuceni": "Žádné; informativní.",
+  "vyradit": false
+ }
+}

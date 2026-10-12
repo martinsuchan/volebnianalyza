@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 40 hlasů. NEZÁVISLÍ (1 681 hlasů) by s přírůstkem 40 hlasů získali druhý mandát na úkor Lokeťáků (5 160 hlasů); alternativně ANO 2011 při +47 hlasech. Další hranice: TOP Loket by musel ztratit 96 hlasů.",
+    "dopad": "NEZÁVISLÍ 1 → 2 mandáty, Lokeťáci 6 → 5; zvolen by byl Ondřej Kuruc (č. 2, NEZÁVISLÍ) místo Jiřího Průši (č. 6, Lokeťáci). Při +47 hlasech pro ANO 2011 by místo Průši vstoupil František Svoboda (č. 4, ANO 2011). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  }
+}

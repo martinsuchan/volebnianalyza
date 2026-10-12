@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor kandidáta v okrsku 6, podíly v ostatních okrscích, bydliště (Lučice), jiní kandidáti z Lučic a simulace outcome().",
+    "zjisteni": "Miloslav Kazda (Volba pro město č. 8, Lučice) má v okrsku 570109/6 21 hlasů při sousedech 3 a 4 (15,9 % hlasů strany proti 2,9–5,1 % jinde). V okrsku 6 mají zvýšené hodnoty i jiní kandidáti z Lučic (list 5: Filip, Teplá, Hataš, Hetešová, Šimák 15–23 hlasů, v okrscích 2–4 většinou 4–13), takže jde nejspíše o místní preferenci. V roce 2022 Kazda nekandidoval, opakování nelze ověřit. Zápis okrsku je vnitřně konzistentní (součet kandidátů 132 = hlasy strany).",
+    "dukaz": "Další kandidáti z Lučic v okrsku 6 vyčnívají také; bez srovnání s rokem 2022.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu; oprava o –17 hlasů nemění mandáty (8, 4, 2, 2, 1, 4) ani zvolené.",
+    "umysl": "Bez indikace – pravděpodobně místní preference.",
+    "doporuceni": "Lze ověřit v originálním zápisu okrsku 6; bez vlivu na výsledek.",
+    "vyradit": false
+  }
+}

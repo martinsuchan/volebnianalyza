@@ -1,0 +1,31 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv: rezervy stran a simulace outcome() pro opravy v nálezech tohoto města.",
+    "zjisteni": "Rezerva 103 hlasů je u 5. mandátu Hnutí pro Havířov (70 561 hlasů, 10,14 %; k zisku dalšího mandátu chybí 103 hlasů). 5% hranici přitom všechny strany překonávají nebo míjejí s větším odstupem: PRO HAVÍŘOV 5,073 % (o 511 hlasů nad hranicí), Společně změňme Havířov 4,748 % (1 755 hlasů pod hranicí). Nález je statistické riziko, ne zjištěná chyba; chyby nalezené v tomto městě (okrsek 38 PRO HAVÍŘOV, okrsek 40) výsledek nemění.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek",
+    "dopad": "Mandát může změnit rozdíl 103 hlasů v rámci celého města; nalezené chyby (doplnění ~300–600 hlasů PRO HAVÍŘOV, opravy v okrsku 40) rozdělení mandátů nemění."
+  },
+  "row:555088/38:55508801:6": {
+    "kontrola": "Ověřen vektor HLASY_01–43 PRO HAVÍŘOV v okrsku 38, 61 sousedních okrsků, ostatní strany téhož okrsku a simulace outcome() s doplněním 30 nul po 10, 12 a 15 hlasech.",
+    "zjisteni": "Nejde o souvislý blok nul: řádek PRO HAVÍŘOV v okrsku 555088/38 má kandidáty č. 1–8 s 13, 12, 11, 12, 10, 9, 10, 9 hlasy, ale ve zbytku jsou díry – nuly u 30 z 43 kandidátů (č. 9, 11, 13–25, 27, 29–42) a osamocené hodnoty 10 (č. 10), 9 (č. 12), 9 (č. 26), 10 (č. 28), 10 (č. 43). Součet 134 hlasů = hlasy strany (podíl 0,94 % z 14 297; ve zbylých okrscích 1,9–12 %, typicky 4–7 %, kandidáti 5–25 hlasů). Při 363 platných lístcích se očekává ~12 hlasů na kandidáta, tj. ~500–600 hlasů; chybí ~400–580. Ostatní strany tamtéž mají souvislé řádky. Hlas strany dostane každý z 43 kandidátů, takže nula uprostřed listiny je logicky nemožná (jde o nedopsané/vynechané buňky, ne o skutečný vzorec). V roce 2022 měly ve stejném okrsku všechny strany souvislé řádky (prvních 12 kandidátů bez děr).",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty i zvolené: doplnění 30 hlasů × 10–15 (+300 až +450 hlasů PRO HAVÍŘOV) ponechá rozdělení mandátů (Hnutí pro Havířov 4, SPOLEČNĚ PRO HAVÍŘOV 8, SPD 3, ANO 13, PRO HAVÍŘOV 2, HAVÍŘOV SOBĚ 13). PRO HAVÍŘOV je 5,07 % a leží 511 hlasů nad hranicí; růst celkového počtu hlasů o 0,05 % ji neohrozí.",
+    "doporuceni": "Ověřit zápis T/3 okrsku 555088/38 – řádek PRO HAVÍŘOV."
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeny oba řádky v okrsku 555088/40 (SPD č. 7, Společně změňme Havířov č. 41) proti sousedním kandidátům, okrskům a výsledku outcome().",
+    "zjisteni": "V okrsku 40: Kateřina Mlýnská (SPD č. 7) má 0 hlasů, sousedé 16 a 14–23 (celý řádek 14–23); Jan Varadzin (Společně změňme Havířov č. 41) má 0 hlasů, sousedé č. 40 a 42 mají 18 a 19. Obě nuly jsou díry uprostřed listiny (každý z M = 43 prvních kandidátů musí mít aspoň počet lístků s křížkem), ne místní preference; chybějí ~16 a ~19 hlasů. Součty stran (639 a 826) jsou shodné se součtem kandidátů, tj. jde o nezapsané hodnoty, ne o chybu v součtech. Typ (propad / vypadlá číslice) u Varadzina nelze z dat rozlišit.",
+    "jistota": 3,
+    "dopad": "Bez vlivu: Mlýnská (1 172 hlasů, doplněno 1 188) je pod preferenční hranicí 1 237 a SPD má 3 mandáty pro č. 1–3; Společně změňme Havířov mandát nezíská (4,75 %).",
+    "doporuceni": "Ověřit zápis T/3 okrsku 555088/40."
+  },
+  "row:555088/22:55508801:6": {
+    "kontrola": "Ověřen vektor HLASY_01–43 řádku v hl, součet kandidátů = POC_HLASU (252), neplatní kandidáti žádní; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 252 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 8 (rozpětí 7–14), nulu má 13 z 43 kandidátů (č. 6, 16, 17, 19, 27, 32, 33, 35, 37–40, 42). Podíl strany v okrsku je 1,9 % proti 4,7 % (rozpětí 3,5–12,2 %) v sousedních okrscích a 4,9 % mediánu zastupitelstva. Hlasy na platný lístek v okrsku: 0,938 oproti 0,944 u sousedů (deficit ~90 hlasů).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 104 hlasů (konzervativně, medián řádku) i 130 hlasů (horní odhad) nemění rozdělení mandátů (strana 2 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 4
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Lukáš Sedláček (ANO 2011, č. 12, okrsek 588458/10) má 27 hlasů místo ~8 (sousedé 8, 8); podíl 9,2 % hlasů strany je více než dvojnásobek maxima jinde (4,5 %). V řádku je podobná hodnota 32 i u č. 17, vložená číslice je tedy pravděpodobná, ale ne jistá.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() s opravou každé hodnoty: mandáty i zvolení beze změny."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() pro přírůstek 62 hlasů u Sdružení občanů Bystřicka.",
+    "zjisteni": "Rezerva 62 hlasů: Sdružení občanů Bystřicka (4 646 hlasů, 7,73 %) by při přírůstku 62 hlasů získalo druhý mandát na úkor Sdružení za rozvoj bystřického regionu (Hanička Pečinková, č. 4 by byla nahrazena Ivetou Šiborovou, č. 10). Ostatní strany mají rezervu přes 180 hlasů.",
+    "dopad": "Mandáty by se změnily při chybě ≥ 62 hlasů v součtu jedné strany; hodnocené překlepy (max. ~38 hlasů) tuto hranici nedosahují.",
+    "jistota": 1
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeny řádky v okrscích 8 a 14, rok 2022 podle jména, bydliště, simulace outcome().",
+    "zjisteni": "Jiří Bureš (Sdružení za rozvoj č. 19) 27 hlasů v okrsku 595411/8: v roce 2022 měl v témže okrsku 29 hlasů při sousedech 11–14, jde o opakovanou místní preferenci. Jaroslav Matyáš (ZMĚNA PRO BYSTŘICI č. 15, bydliště Domanín) 40 hlasů v okrsku 14 (ostatní kandidáti 2–6, celkem strana 125) – vzorec odpovídá kandidátovi z malé místní části; v roce 2022 nekandidoval, nelze ověřit.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace oprav: bez vlivu na mandáty i pořadí zvolených.",
+    "doporuceni": "Hodnotu Bureše nepovažovat za chybu; Matyáš nízká priorita."
+  }
+}

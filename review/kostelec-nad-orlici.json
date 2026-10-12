@@ -1,0 +1,18 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s úbytkem 1 hlasu u SNK Evropští demokraté a přírůstkem 4 hlasů u Kostelec srdcem.",
+    "zjisteni": "Poslední mandát rozhodl 1 hlas: SNK Evropští demokraté (3 964 hlasů) mají 2. mandát o 1 hlas před Kostelec srdcem (15 853), který by ho získal při 4 hlasech navíc. Při úbytku 1 hlasu by SNK přišlo o Viléma Drahoráda (č. 1; druhý mandát) a mandát by připadl Kostelec srdcem (7 → 8; Markéta Kundrátová, č. 6).",
+    "dopad": "Mění mandáty (SNK 2 → 1, Kostelec srdcem 7 → 8) při změně o 1 hlas v součtu jedné z těchto stran. Nebylo nalezeno podezření na konkrétní chybu; jde o riziko.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek",
+    "doporuceni": "Zvážit kontrolní přepočet hlasů obou stran (rezerva 1 hlas)."
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor strany Kostelečáci v okrsku 7, stejný kandidát v ostatních okrscích; rok 2022 pro osobu nenalezen; simulace outcome().",
+    "zjisteni": "Lubomír Andrle (č. 9) 39 hlasů v okrsku 576361/7 vs. 8 u sousedů; ve stejném řádku vyčnívá i č. 13 (32 hlasů) a č. 1, 3 (po 27), tj. řádek je nerovnoměrný a dvě podobně velká čísla nejsou pravděpodobně dva překlepy. Strana Kostelečáci v okrsku 7 měla celkem 314 hlasů. V roce 2022 nelze ověřit, proto zůstává nízké riziko.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace opravy (−31 hlasů pro Kostelečáky): bez vlivu na mandáty i pořadí zvolených, ani na 1hlasové rozhodnutí SNK / Kostelec srdcem.",
+    "doporuceni": "Nízká priorita."
+  }
+}

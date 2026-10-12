@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeny všechny označené hodnoty: vektor HLASY_xx ve všech okrscích, bydliště kandidátů (rk.BYDLISTEN), spolubydlící na listině, rok 2022 a limit PL_HL_CELK ≤ PLAT_LISTKY × M.",
+    "zjisteni": "Václav Sanytrník (č. 14, bydliště Bližanovy) má v okrsku 556955/6 22 hlasů při sousedech 2 a 5. V roce 2022 měl v témže okrsku (tehdy č. 7) 23 hlasů při sousedech 8 a 6, v ostatních okrscích jen 1–15 (mimo okrsek 1: 29). Okrsek 6 je zjevně spádový pro Bližanovy; jde o místní preferenci, nikoli o vloženou číslici (PL_HL_CELK 905 ≤ 66 × 15 = 990).",
+    "dukaz": "Opakování stejného vzorce v roce 2022 a/nebo v ostatních okrscích či u spolukandidátů ze stejné obce.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Žádný vliv na mandáty ani zvolené (simulace materiality: zmena_mandatu = False, zmena_zvolenych = False); nejde o chyby.",
+    "umysl": "Bez indikace – skutečná místní preference.",
+    "doporuceni": "Nález vyřadit.",
+    "vyradit": true
+  }
+}

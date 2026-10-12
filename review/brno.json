@@ -1,0 +1,393 @@
+{
+  "stack:550973/23018:58278601:2": {
+    "kontrola": "Ověřeno v t3/hl okrsku 550973/23018 (lístek města): všech 55 kandidátů Lidovců a Starostů má 0 hlasů, sousední okrsky 18–28 % (medián 24 %), na lístku MČ Brno-střed tentýž okrsek 2 857 hlasů; simulace opravy přes outcome().",
+    "zjisteni": "Celý řádek strany je prázdný: Lidovci a Starostové mají na lístku města 0 hlasů u všech 55 kandidátů (nejde o částečný balík, ale o nezapsanou stranu). Při podílu sousedních okrsků 24,3 % (8 okrsků, rozpětí 18,3–28,3 %) se čeká zhruba 3 586 hlasů, tj. ~65 hlasů na kandidáta (křížky) a u kandidáta č. 1 70–105. Na lístku MČ Brno-střed má stejná strana ve stejném okrsku 2 857 hlasů (očekáváno 3 694) a v roce 2022 měla KDU-ČSL se Starosty ve stejném okrsku 8,1 %. Okrsku chybí na lístku města 3 818 hlasů (hlasy na platný lístek 0,763 oproti 0,961 u sousedů, tj. ~69 lístků), což odpovídá vypadlé straně; součet hlasů stran v zápisu (14 735) se rovná PL_HL_CELK, takže nula se promítla i do celkového součtu.",
+    "dukaz": "Dvě nezávislé linie: (1) nula při očekávaných ~3 600 hlasech (zeros_2026: p < 1e-8 i po konzervativní korekci); (2) stejní voliči dali téže straně na druhém lístku 2 857 hlasů a deficit hlasů okrsku (3 818) odpovídá očekávání strany (3 586).",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty i zvolené. Simulace doplnění: konzervativně +1 815 hlasů (polovina očekávání), horní odhad +3 575 hlasů (65 hlasů každému z 55 kandidátů). Lidovci mají 18 mandátů, k 19. mandátu by potřebovali +14 782 hlasů; pořadí zvolených kandidátů se nemění. I společně s dalšími opravami Lidovců (okrsek 551082/1010 +2 557, okrsek 551031/20016 +729) vychází součet pod 7 000 hlasů, tj. hluboko pod rezervou.",
+    "umysl": "Nízká – celá strana chybí v jednom řádku zápisu při správném součtu ostatních stran; vzor odpovídá nezapsanému řádku v zápisu T/3.",
+    "doporuceni": "Ověřit zápis T/3 okrsku 23018 (lístek města, strana č. 2) a doplnit hlasy; zařadit do kontrol ČSÚ varování „strana s nulou při vysokém očekávání“.",
+    "vyradit": false
+  },
+  "stack:551007/13009:58278601:4": {
+    "kontrola": "Ověřeno v hl okrsku 551007/13009: ANO č. 1–25 mají 25–29 hlasů, č. 26–55 nulu, sousedé 13–21 %, na lístku MČ Královo Pole tentýž okrsek 1 754 hlasů (očekáváno 1 647); simulace opravy přes outcome().",
+    "zjisteni": "Kandidáti ANO č. 1–5 mají 29, 26, 29, 27, 27 hlasů, č. 6–25 shodně 25 a č. 26–55 nulu (celkem 638 hlasů). Listina má 55 kandidátů a M = 55, takže křížek u strany dává hlas všem 55; kandidáti č. 26–55 proto nemohou mít nulu, pokud mají první dvacetipětka ~25 hlasů – zápis je nedopsaný. Očekávání ze 8 sousedních okrsků je 16,5 % (rozpětí 13,1–21,1 %), tj. ~3 735 hlasů a u kandidáta č. 1 80–105 hlasů. Okrsku chybí 3 539 hlasů (0,816 hlasu na lístek oproti 0,943 u sousedů, ~64 lístků), strana je pod očekáváním o 3 097. Na lístku MČ je ANO ve stejném okrsku v normě (1 754 vs 1 647), v roce 2022 měla na lístku města v okrsku 22,4 %.",
+    "dukaz": "Logický rozpor v řádku (první polovina listiny ~25, druhá 0 při M = 55) a shodný deficit strany (3 097) s deficitem okrsku (3 539); na druhém lístku téhož okrsku je ANO v normě.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty i zvolené. Simulace doplnění: konzervativně +1 232, horní odhad +3 102 hlasů (~56 hlasů každému kandidátovi). ANO má 11 mandátů a k 12. by potřebovalo +19 564 hlasů; pořadí zvolených se nemění.",
+    "umysl": "Nízká – typická chyba přepisu (nedopsaný řádek kandidátů ve formuláři).",
+    "doporuceni": "Ověřit zápis T/3 okrsku 13009 (lístek města, strana č. 4) a přepočítat hlasy kandidátů ANO.",
+    "vyradit": false
+  },
+  "stack:551007/13015:55100701:8": {
+    "kontrola": "Ověřeno v okrsku 551007/13015 na obou lístcích a v roce 2022: Lidovci jsou slabí na lístku MČ (815 hlasů) i města (2 060 hlasů, očekáváno 3 172) a stejně slabí byli v roce 2022; řádek kandidátů je rovnoměrný bez logických rozporů.",
+    "zjisteni": "Lidovci a Starostové mají na lístku MČ Královo Pole v okrsku 13015 po 28–33 hlasech u všech 27 kandidátů (celkem 815, tj. 13,0 % hlasů), sousední okrsky mají 19–24 % (očekáváno ~1 356). Řádek je celistvý (žádné nuly ani přeskoky), takže jde o stejnou míru křížků u všech kandidátů, nikoli o nedopsaný zápis. Stejný vzorec je i na lístku města (Lidovci 2 060 hlasů, 15,8 %, sousedé 24 %, tj. ~65 % očekávání), přičemž ANO tam má 3 569 hlasů místo 2 215. V roce 2022 měla KDU-ČSL se Starosty v tomto okrsku 4,8 % proti 12,4 % u sousedů (poměr 0,39; letos 0,6). Nízký počet hlasů na lístek (0,853 na MČ, 0,872 ve městě) je i v roce 2022 (0,927 resp. 0,924 na obálku).",
+    "dukaz": "Slabá strana se projevuje na obou lístcích a v obou volbách (2022 a 2026); z(strana) = −3,6 je málo na nález chyby a deficit hlasů okrsku je rozložen na oba lístky, což odpovídá místnímu volebnímu chování, ne vynechanému balíku.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. I kdyby Lidovci získali dokonce všech chybějících ~540 hlasů (horní odhad), 7. mandát v MČ Královo Pole by vyžadoval +2 409 hlasů (6 mandátů; ODS 7. mandát při podílu 7 466); mandáty ani zvolení se nemění.",
+    "umysl": "Bez indikace – místní vzorec (okrsek silný pro ANO, SPD a Restart, slabý pro Lidovce a Piráty).",
+    "doporuceni": "Žádné; nález vyřadit z registru.",
+    "vyradit": true
+  },
+  "stack:551082/1010:58278601:2": {
+    "kontrola": "Ověřeno v hl/t3 okrsku 551082/1010: všech 55 kandidátů Lidovců má 9–12 hlasů, sousedé 23–27 %; na lístku MČ Bohunice tentýž okrsek 1 410 hlasů (očekáváno 1 761); simulace opravy přes outcome().",
+    "zjisteni": "Lidovci a Starostové mají na lístku města 523 hlasů (4,3 %); všech 55 kandidátů má 9–12 hlasů (č. 1 jen 11), tj. ~9 lístků s křížkem. Sousední okrsky mají 23,3–27,3 % (medián 26 %), tj. ~3 093 hlasů, ~56 křížků a u kandidáta č. 1 ~76 hlasů. Strana je pod očekáváním o ~2 570 hlasů a okrsku chybí 2 296 hlasů (0,801 hlasu na lístek oproti 0,952, ~42 lístků). Na lístku MČ je tatáž strana jen mírně pod očekáváním (1 410 vs 1 761, 80 %), v roce 2022 měla KDU-ČSL se Starosty 11,1 %. Nápadné je i 10,1 % neplatných lístků na lístku města (277 platných z 308 obálek; město má v průměru 4,3 %, na MČ lístku 7,1 %).",
+    "dukaz": "Dvě nezávislé linie: deficit strany (~2 570) odpovídá deficitu okrsku (2 296) a řádek je rovnoměrně ~5× pod hodnotami sousedů, zatímco stejná strana na druhém lístku téhož okrsku je téměř v normě.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty i zvolené. Simulace doplnění: konzervativně +1 017, horní odhad +2 557 hlasů; Lidovci mají 18 mandátů a k 19. potřebují +14 782 hlasů, pořadí zvolených se nemění.",
+    "umysl": "Nízká – pravděpodobně nezapočtený balík lístků s křížkem u strany.",
+    "doporuceni": "Ověřit zápis T/3 okrsku 1010 (lístek města) včetně počtu neplatných lístků; případně přepočítat lístky.",
+    "vyradit": false
+  },
+  "inv0": {
+    "kontrola": "Ověřeno v t3: ve 4 okrscích je PLAT_LISTKY = ODEVZ_OBAL na lístku města i MČ; porovnáno s neplatností sousedních okrsků a s hlasy na platný lístek; v celém městě je 11 okrsků s ≥ 100 obálkami a nulou neplatných alespoň na jednom lístku.",
+    "zjisteni": "Okrsek 29003 (Bystrc): 292 obálek = 292 platných lístků; 3017 (Řečkovice a Mokrá Hora): 378 = 378; 19011 (Židenice): 333 vydaných, 331 odevzdaných = 331 platných; 19013 (Židenice): 351 = 351. Totéž platí pro lístek města i MČ. Neplatnost sousedních okrsků je u města 2,6–5,6 % a u MČ 1,9–3,6 % (město celkem 4,3 %); při 330 obálkách a neplatnosti 2–4 % je pravděpodobnost nuly řádově 1e-3 až 1e-6 pro jeden lístek. Hlasy na platný lístek jsou v těchto okrscích v 6 z 8 srovnání mírně pod sousedy (např. 3017: 0,897 vs 0,938; 19013: 0,913 vs 0,948), což by odpovídalo tomu, že neplatné lístky zůstaly v počtu platných. Nulu mají ještě další okrsky jen na jednom z obou lístků (např. 27006, 20003, 3010 na lístku MČ).",
+    "dukaz": "Nula neplatných při 331–378 obálkách na obou lístcích je při neplatnosti 2–4 % statisticky velmi nepravděpodobná; druhá linie (hlasy na lístek mírně pod sousedy) je slabá a stojí jen na malém rozdílu.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty a zvolené – hlasy stran a kandidátů se počítají zvlášť; zkresluje se pouze statistika neplatných lístků a podíl neplatnosti (4 okrsky, ~1 340 obálek).",
+    "umysl": "Nízká – komise pravděpodobně neplatné lístky nevyčlenila (nebo je nezapsala).",
+    "doporuceni": "Ověřit v zápisech T/3 těchto okrsků počet neplatných lístků; v programu ČSÚ doplnit varování při nulovém počtu neplatných lístků.",
+    "vyradit": false
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v typos_2026.pkl (15 vložených číslic, 11 vypadlých, 8 propadů, 28 okrsků), namátkou 6 řádků proti hl a sousedům, a simulace oprav všech 34 hodnot společně přes outcome() po zastupitelstvech.",
+    "zjisteni": "Počty sedí: 34 hodnot ve 28 okrscích, 15× vložená číslice (např. 99 místo 9 u Šárky Blatecké v okrsku 23038, 104 místo 4 u Michala Sedláčka v 23059, 170 místo 17 u Petry Suchánkové v 19007), 11× vypadlá číslice (např. 0 místo 60 u Matěje Chmely, ANO, v 20025; 10 místo 100 u Evžena Šika, ODS, v 19009) a 8× propad uprostřed listiny (např. Noví lidovci č. 22 v 19007: 21 hlasů mezi sousedy 74 a 69). U vložených číslic vrátí odebrání jedné číslice hodnotu sousedů. Detektor ale podhodnocuje rozsah ve dvou řádcích: v okrsku 27009 (Hnutí pro Žabiny, MČ Žabovřesky) je nulových 7 kandidátů při ~30 hlasech u ostatních (č. 9, 10, 14, 17, 19, 20, 23), nahlášena jsou jen 4; v okrsku 17008 (Za Lužánky, lístek města) mají č. 31 a 33 nulu, ale celá listina má 41 nul z 55 při ~16 křížcích (158 hlasů místo ~840), takže jde o nedopsaný řádek, ne o dva propady.",
+    "dukaz": "U vložených/vypadlých číslic vrací úprava jedné číslice hodnotu sousedních kandidátů; propad uprostřed listiny je logicky nemožný. Simulace všech oprav: bez změny mandátů i pořadí zvolených ve všech 9 dotčených zastupitelstvech (město a 8 MČ).",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Simulace oprav všech 34 hodnot (město i MČ) nemění mandáty ani zvolené kandidáty; jediný zvolený kandidát mezi dotčenými (Simona Ondroušková, Lidovci, město, okrsek 23012: 0 místo 16 hlasů) zůstává zvolený.",
+    "umysl": "Nízká – nahodilé chyby přepisu.",
+    "doporuceni": "Opravit hodnoty; u okrsků 27009 a 17008 ověřit celý řádek strany, nejen nahlášené kandidáty.",
+    "vyradit": false
+  },
+  "zero:551074/8002:58278601:3": {
+    "kontrola": "Ověřeno v hl okrsku 551074/8002: Zelené Brno má 0 hlasů u všech 55 kandidátů, sousedé 4,4–9,3 %; porovnán celkový počet hlasů na lístek a rok 2022; simulace přes outcome().",
+    "zjisteni": "Zelené Brno (č. 3) má na lístku města 0 hlasů u všech kandidátů, v 8 sousedních okrscích 4,4–9,3 % (spolu 6,2 %), tj. ~1 116 hlasů a ~20 lístků s křížkem. Okrsek má 359 platných lístků a 17 981 hlasů, na platný lístek 0,911 oproti 0,956 u sousedů; chybí tedy ~890 hlasů, což odpovídá ~80 % očekávání strany, ostatní strany jsou v normě (Lidovci 5 750 vs 4 486, ODS 4 270 vs 3 254, tedy spíše nad očekáváním). V roce 2022 měla koalice Zelení a Žít Brno v okrsku 404 hlasů (2,3 %).",
+    "dukaz": "zeros_2026: p_nominal 1,5e-9, p po konzervativní korekci na rozptyl 4,7e-4; navíc deficit hlasů okrsku (~890) odpovídá očekávání strany (~1 116).",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty i zvolené. Simulace doplnění: konzervativně +550, horní odhad +1 100 hlasů; Zelené Brno má 6 mandátů, k 7. potřebuje +84 425 hlasů.",
+    "umysl": "Nízká – odpovídá nezapsané straně v zápisu (vzor NSS Blansko 2025).",
+    "doporuceni": "Ověřit zápis T/3 okrsku 8002 (lístek města, strana č. 3) a doplnit hlasy.",
+    "vyradit": false
+  },
+  "missing:550973/23006:58278601": {
+    "kontrola": "Ověřeno v hl okrsku 550973/23006: u 8 z 15 stran s plnou listinou jsou hlasy zapsány jen u několika prvních kandidátů; porovnáno se součtem deficitů stran a s rokem 2022; simulace přes outcome().",
+    "zjisteni": "Na platný lístek připadá 0,769 možného počtu hlasů (sousedé 0,956; 188 platných lístků, 7 952 hlasů, chybí ~2 045 hlasů, ~37 lístků). Příčina je v řádcích osmi stran, které mají hlasy jen u prvních kandidátů a u ostatních nulu: Za Lužánky 66 hlasů (č. 1 má 12, nulu mají 48 z 55; očekáváno 382), SPD 14 (č. 1 má 7, 53 nul; očekáváno 400), Brnoklidem 37 (46 nul; 139), Motoristé 9 (54 nul; 157), Restart 15 (95), PŘÍSAHA 4 (61), BRNO NAPLNO 8 (46), B3 0 (29); dohromady 153 hlasů místo ~1 310. Přidává se Zelené Brno s 823 hlasy místo ~1 343. Naopak ANO (1 644 vs 929), ODS (1 697 vs 1 319) a Nové Brno (552 vs 179) jsou nad očekáváním, takže skutečný podíl deficitu odhadujeme na ~1 700 z 2 045 hlasů. V roce 2022 byl počet hlasů na obálku v okrsku také nižší než v sousedství (0,817), ale ne tak výrazně.",
+    "dukaz": "z(hlasy/lístek) = −13,3 vůči sousedním okrskům; navíc logický rozpor v řádcích osmi stran (křížek u strany dává hlas všem 55 kandidátům, ale kandidáti č. 2–55 mají nulu, i když č. 1 má 4–12 hlasů).",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty i zvolené. Simulace doplnění osmi stran a Zelených: konzervativně +598, horní odhad +1 771 hlasů rozdělených podle stran (nejvíc Zelené +497, Za Lužánky +336, SPD +371). Nejmenší rezerva zastupitelstva je 10 114 hlasů (ODS), nejblíže zisku mandátu jsou Lidovci (+14 782); Za Lužánky by na 4. mandát potřebovali +36 795.",
+    "umysl": "Nízká – pravděpodobně neúplně opsané řádky kandidátů v zápisu T/3 (nelze vyloučit částečně neobvyklé volební chování).",
+    "doporuceni": "Ověřit zápis T/3 okrsku 23006 (hlasy kandidátů stran č. 3, 5, 7, 8, 9, 11, 12, 13, 16) a porovnat s originály; zvážit kontrolu „kandidát č. 2–M nemůže mít méně než počet křížků“ pro řádky s nulami uprostřed.",
+    "vyradit": false
+  },
+  "missing:551031/20016:58278601": {
+    "kontrola": "Ověřeno v hl okrsku 551031/20016: Za Lužánky má 105 hlasů při očekávaných ~787 a 49 nul z 55; ostatní strany mají plné řádky; rozdíl proti součtu deficitů a rok 2022; simulace přes outcome().",
+    "zjisteni": "Na platný lístek připadá 0,815 možného počtu hlasů (sousedé 0,956; 264 platných lístků, 11 832 hlasů, chybí ~2 050 hlasů, ~37 lístků). Za Lužánky mají 105 hlasů (č. 1 má 18, ostatní kandidáti 0, nulu mají 49 z 55) místo ~787 (~14 křížků), což vysvětluje ~680 hlasů. Zbylý deficit není jednoznačný: Lidovci a Starostové mají 2 461 místo ~3 166 (bez nul, 78 %), zatímco ANO (2 291 vs 1 848), ODS (2 818 vs 2 368), Motoristé (554 vs 218) a PŘÍSAHA (287 vs 113) jsou nad očekáváním, což může být i místní volební vzorec. V roce 2022 byl počet hlasů na obálku v okrsku 0,844 (letos 0,766).",
+    "dukaz": "z(hlasy/lístek) = −12,4; logický rozpor v řádku Za Lužánky (č. 1 má 18 hlasů, č. 2–55 nulu kromě č. 30 s 17); deficit okrsku je však vysvětlen jen z jedné třetiny řádkem této strany.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty i zvolené. Simulace doplnění Za Lužánky (+343 až +686 hlasů) a Lidovců (až +729): mandáty ani zvolení se nemění; Za Lužánky by na 4. mandát potřebovali +36 795 hlasů, Lidovci na 19. +14 782, rezerva zastupitelstva je 10 114 hlasů (ODS).",
+    "umysl": "Nízká – pravděpodobně nedopsaný řádek kandidátů Za Lužánky v zápisu T/3; zbytek deficitu může být místní vzorec.",
+    "doporuceni": "Ověřit zápis T/3 okrsku 20016, zejména hlasy kandidátů Za Lužánky (č. 2–55) a Lidovců.",
+    "vyradit": false
+  },
+  "cross": {
+    "kontrola": "Projito všech 11 okrsků proti lístkům města i MČ (řádky stran, sousedé, počet křížků, sekundární detektory swaps/zeros); simulace oprav pro čtyři skutečné případy přes outcome().",
+    "zjisteni": "Z 11 okrsků jsou 4 skutečné chyby zápisu a 7 falešných poplachů z malých čísel. Skutečné: (1) 550990/27006 (Žabovřesky), lístek města: Nové Brno má 2 320 hlasů místo ~459 (+1 861), Piráti 340 místo ~1 645 (−1 305) a SPD 245 místo ~769 (−524); součet deficitů (1 829) odpovídá přebytku, hlasy dvou stran se zjevně přesunuly do řádku Nové Brno (č. 1 má 50 hlasů místo ~10), celkový počet hlasů na lístek je v normě a Piráti na lístku MČ téhož okrsku mají 935 (v normě). Detektor swaps_2026 ho zachytil (chi2 80), ale nález chybí v registru. (2) 550973/23044 (Brno-střed), lístek města: Za Lužánky 48 hlasů (č. 1 má 14, nulu 49 z 55) místo ~517, na lístku MČ 462 (v normě). (3) 551031/20043 (Brno-sever), lístek MČ: Motoristé sobě 3 hlasy (č. 1 má 1, 32 nul z 35) místo ~211; na lístku města 222. (4) 551198/3010 (Bystrc), lístek MČ: Restart pro Brno 3 hlasy (12 nul z 15) místo ~61; na lístku města 393. Falešné poplachy: BRNO NAPLNO v okrscích 23011, 23014, 23029, 23051 (na městském lístku 0–3 hlasy při očekávání 1–2 křížků, tj. 60–125 hlasů; pravděpodobnost nuly 10–30 %), B3 v okrscích 23061, 23068 a 20042 (městský lístek 0 při očekávání 0,2–0,6 křížku; vysoké hodnoty na lístku MČ jsou v rozmezí sousedů, c1/lístek např. 20042: 0,029 vs 0,005–0,032) – očekávaný počet na druhém lístku se u těchto stran vypočítává ze samotné nuly, proto z-skóre ≥ 8 nic neznamená.",
+    "dukaz": "U skutečných případů: řádek strany nesouhlasí s druhým lístkem téhož okrsku a s okolím (27006 navíc přesný součet deficitů a přebytku). U falešných: čekaný počet je ≤ 2 křížky.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Simulace oprav čtyř případů nemění mandáty ani zvolené: 27006 (Nové Brno −1 880, Piráti +1 310, SPD +525 hlasů; Piráti by k 5. mandátu potřebovali +38 575), 23044 (Za Lužánky +253 až +457), 20043 (Motoristé sobě v MČ Brno-sever +102 až +207) a 3010 (Restart v MČ Bystrc +27 až +57).",
+    "umysl": "Nízká – chyby přepisu; v 27006 hlasy dvou stran přepsány do řádku sousední strany.",
+    "doporuceni": "Ověřit zápisy T/3: 27006 (lístek města, strany č. 14, 15, 16), 23044 (lístek města, Za Lužánky), 20043 (lístek MČ, Motoristé) a 3010 (lístek MČ, Restart). Zbývajících 7 okrsků (NAPLNO, B3) je možné z nálezu vypustit.",
+    "vyradit": false
+  },
+  "batches": {
+    "kontrola": "Ověřeno v batch_changes_2026.pkl: ve všech 5 okrscích se údaje mezi první a poslední dávkou liší.",
+    "zjisteni": "Rozdíly mezi první a poslední dávkou: 13010 – vydané obálky 586 → 587; 1004 – odevzdané obálky 380 → 400; 12002 – platné hlasy 31 716 → 32 275; 26004 – platné hlasy 10 490 → 10 170; 14014 – platné hlasy 14 281 → 13 948. Sloupec opakovane je u všech pěti řádků 0, změny se tedy prokazují porovnáním dávek, ne příznakem.",
+    "dukaz": "XML dávky ČSÚ: první a poslední dávka okrsku se liší v uvedených údajích.",
+    "jistota": 5,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Ve finálních datech bez vlivu; jde o informativní oprava během zpracování.",
+    "umysl": "Žádná – oprava během zpracování.",
+    "doporuceni": "Žádné.",
+    "vyradit": false
+  },
+  "row:550973/23044:58278601:15": {
+    "kontrola": "Ověřen vektor hlasů v hl (lístek města), porovnán s osmi sousedy, s lístkem MČ Brno-střed téhož okrsku a s hlasy na platný lístek; simulace přes outcome(). Okrsek má na lístku města i další vadné řádky (SPD, Za Lužánky - viz záznam cross, bod 2), dopad se nesčítá.",
+    "zjisteni": "Piráti a Fakt Brno TU! mají na lístku města č. 1-44 po 16-22 hlasech (22, 21, 21, 22, 20, 19 ... 16) a č. 45-55 přesně 0 (11 nul). Celkem 783 hlasů; sousedé mají na konci listiny 40-90 % úrovně čela a žádnou nulu, na lístku MČ Brno-střed má tentýž okrsek za stranu 849 hlasů bez nul. Odhad chybějících hlasů 231 (11 × 21). Okrsek má na lístku města 0,910 hlasu na platný lístek (334 lístků), sousedé 0,965 (0,917-0,989), tj. chybí ~1 016 hlasů; vadné jsou tu ale tři řádky: Piráti (+231), SPD č. 16 (342 hlasů, č. 1-13 po 18-21, pak nuly s roztroušenými 18-19 na č. 18-20, 25 a 28; chybí ~707, na lístku MČ má SPD 863 hlasů) a Za Lužánky (48 hlasů, +253 až +457, viz cross). Součet 231 + 707 = 938 vrací okrsek na 0,961 (sousedé 0,965).",
+    "dukaz": "Logická nemožnost (každý z ~21 lístků s křížkem u strany by musel mít ≥ 11 hlasů pro jiné strany) a druhá linie: lístek MČ téhož okrsku (849) i deficit hlasů okrsku (~1 016 vs. 938 ze dvou vadných řádků plus Za Lužánky).",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu na mandáty i zvolené. Simulace doplnění +231 hlasů Pirátům (konzervativně i horní odhad, ten vychází stejně); společně s SPD +707 a Za Lužánky až +457 (celkem ≤ 1 395 hlasů) se mandáty ani zvolení v zastupitelstvu města nemění; Piráti by na 5. mandát potřebovali +38 575 hlasů. Dopad se nesčítá s položkou cross (Za Lužánky 23044) - jde o jiné řádky.",
+    "umysl": "Nízká - nedopsaný řádek zápisu T/3 (opsání se zastavilo před koncem řádku strany).",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku. Řádek SPD č. 16 téhož okrsku (707 hlasů) generátor neuvádí, protože hlásí jen první řádek na okrsek.",
+    "vyradit": false
+  },
+  "row:550990/27009:55099001:6": {
+    "kontrola": "Ověřen vektor v hl (lístek MČ Brno-Žabovřesky, M = 25, kandidát č. 5 je neplatný), porovnání se sousedy, lístkem města téhož okrsku, souhrnem typos a hlasy na platný lístek; simulace přes outcome().",
+    "zjisteni": "Piráti a Fakt Brno TU! pro Žabiny mají 275 hlasů: platní kandidáti č. 1-4 a 6-14 po 17-25, pak nuly na č. 15-19 a 21-24 a roztroušené hodnoty 18 (č. 20) a 17 (č. 25), řádek tedy není ani monotónní (nula u č. 5 je neplatný kandidát, ne chyba). Sousední okrsky mají 575-850 hlasů, v čele ~40, na konci 22-34 a v listině žádné nuly. Za stranu je tu 275 hlasů místo očekávaných ~722 (z = -2,7); na lístku města má tentýž okrsek za Piráty 1 013 hlasů (poměr MČ/město 0,27, u sousedů medián 0,51, rozpětí 0,40-0,75). Okrsek má 0,903 hlasu na platný lístek (382 lístků) proti 0,963 u sousedů, tj. chybí ~569 hlasů; vysvětlují je řádky 185 (tento) + 126 (Za Lužánky č. 7, 52 hlasů, vyplněno jen č. 1-6 a 8) + ~210 (Hnutí pro Žabiny, 7 nul při ~30 hlasech, viz typos:souhrn) = ~521.",
+    "dukaz": "Logická nemožnost (~20 křížků u strany, nuly a hodnoty ~17 na pozicích za nulami) a shoda součtu tří vadných řádků (~521) s deficitem hlasů okrsku (~569).",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Konzervativní doplnění +185 hlasů, horní odhad +447 (očekávání ze sousedů 722 - 275); i při společné opravě Za Lužánky +126 se mandáty a zvolení v MČ Žabovřesky nemění (Piráti pro Žabiny mají 2 mandáty, ke 3. by potřebovali +3 628 hlasů, ke ztrátě mandátu by jim stačilo -3 173). Řádek Hnutí pro Žabiny je řešen v typos:souhrn, ne zde.",
+    "umysl": "Nízká - nedopsaný řádek zápisu T/3 (opsání se zastavilo před koncem řádku strany).",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku. Za Lužánky mají neúplný řádek i v dalších okrscích (lístek města: 23006, 23044, 20016, 17008; úplná nula v 3003; lístek MČ Žabovřesky: 27009) - ve čtyřech případech jsou vyplněni jen kandidáti z prvních 5-6 pozic; viz záznam 17008.",
+    "vyradit": false
+  },
+  "row:551031/20025:58278601:9": {
+    "kontrola": "Ověřen vektor v hl (lístek města), sousedé, lístek MČ Brno-sever téhož okrsku, hlasy na platný lístek a souhrn typos; simulace přes outcome().",
+    "zjisteni": "Motoristé sobě mají na lístku města 296 hlasů: č. 1-33 po 8-13 (13, 11, 10, 8 ...), č. 34-55 nuly s výjimkou dvou osamělých 9 na č. 47 a 54 (hodnota na úrovni bloku, řádek není monotónní). Sousedé mají 118-552 hlasů, na konci listiny 2-10 a nuly nemají. Odhad chybějících 202 hlasů (22 × 9). Lístek MČ Brno-sever má za stranu 385 hlasů bez nul (poměr město/MČ 0,77, u sousedů medián 1,66, rozpětí 1,07-5,3; po doplnění 1,29). Okrsek má 0,885 hlasu na platný lístek (456 lístků) vs. 0,959 u sousedů, chybí ~1 859 hlasů; tento řádek vysvětluje jen 202, v okrsku je navíc překlep ANO č. 28 (0 místo 60, viz typos:souhrn), zbytek nelze přiřadit.",
+    "dukaz": "Logická nemožnost (~8 lístků s křížkem by muselo mít ≥ 22 hlasů pro jiné strany, a osamělé hodnoty 9 za nulami) a nízký poměr vůči lístku MČ téhož okrsku.",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Doplnění +202 hlasů (horní odhad +213) nemění mandáty ani zvolené; Motoristé sobě mají v zastupitelstvu města 0 mandátů (2,69 %, do 5% hranice chybí 154 969 hlasů). Překlep ANO č. 28 v témže okrsku (typos:souhrn) je jiný řádek - dopad se nesčítá.",
+    "umysl": "Nízká - nedopsaný řádek zápisu T/3 (opsání se zastavilo před koncem řádku strany).",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku. Zbývající deficit okrsku (~1 650 hlasů) je nevysvětlený.",
+    "vyradit": false
+  },
+  "row:551112/17008:58278601:5": {
+    "kontrola": "Ověřen vektor v hl (lístek města), sousedé, hlasy na platný lístek, záznam typos:souhrn a ostatní okrsky se stejným vzorcem u Za Lužánky; simulace přes outcome().",
+    "zjisteni": "Za Lužánky mají na lístku města 158 hlasů: nenulové jsou jen č. 1-5 (17, 15, 16, 15, 17), 8 (15), 18 (16), 30 (15), 32 (16) a 34 (16); 45 z 55 kandidátů má 0. Sousední okrsky mají 734-1 845 hlasů, v čele 18-40 a na konci listiny 12-32 bez nul; očekává se ~771 hlasů (strana tu má podíl 1,2 % proti 5,9 %, z = -2,1). Odhad chybějících 722 hlasů (45 × ~16). Hodnoty ~16 na izolovaných pozicích nemohou vzniknout z křížků u strany; hodnoty na č. 31 a 33 jsou ty, které typos:souhrn vykázal jako dva propady (2 × 16 = 32 hlasů je podmnožinou tohoto nálezu, nepočítat dvakrát). Okrsek má 0,885 hlasu na platný lístek (271 lístků) vs. 0,959 u sousedů, chybí ~1 107 hlasů; doplnění Za Lužánky (+722) a Restart pro Brno č. 7 (+348; v okrsku 87 hlasů, nenulová jen č. 1-10, 28 a 30) dává 0,956, tedy téměř přesně sousedy.",
+    "dukaz": "Logická nemožnost (nuly mezi nenulovými hodnotami na úrovni bloku) a shoda součtu vadných řádků (1 070) s deficitem okrsku (1 107).",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Konzervativně i horní odhad +722 hlasů (očekávání 771 - 158 = 613 je nižší než chybějící blok); společně s Restart +348 se mandáty ani zvolené nemění. Za Lužánky mají 3 mandáty, ke 4. by potřebovaly +36 795 hlasů; všechny opravy Za Lužánky v Brně dohromady (řádově tisíce hlasů) jsou hluboko pod touto rezervou.",
+    "umysl": "Nízká - nedopsaný řádek zápisu T/3 (opsání se zastavilo před koncem řádku strany).",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku. Za Lužánky mají neúplný řádek i v dalších okrscích (lístek města: 23006, 23044, 20016, 17008; úplná nula v 3003; lístek MČ Žabovřesky: 27009) - ve čtyřech případech jsou vyplněni jen kandidáti z prvních 5-6 pozic; viz záznam 17008. Systematický problém: Za Lužánky mají neúplný řádek v 5 z 353 okrsků lístku města (23006, 23044, 20016, 17008 a 3003 s úplnou nulou) a v 1 okrsku lístku MČ (27009); u 23044, 20016, 17008 a 27009 jsou vyplněni jen kandidáti z prvních 5-6 pozic. Tak extrémní řádek (≥ 45 nul z 55) se u žádné jiné strany nevyskytuje ani dvakrát. Příčinu data neurčí; jde o důvod k hromadnému ověření zápisů těchto okrsků u ČSÚ, ne o doklad úmyslu.",
+    "vyradit": false
+  },
+  "row:551295/21004:58278601:14": {
+    "kontrola": "Ověřen vektor v hl (lístek města), sousedé, hlasy na platný lístek a celkový podíl strany; simulace přes outcome().",
+    "zjisteni": "Nové Brno má 366 hlasů: č. 1-35 po 10-13 (13, 11, 10, 11, 10 ... 10), č. 36-37 a 39-55 nuly a osamělé 11 na č. 38 (hodnota na úrovni bloku mezi nulami). Sousedé mají 69-567 hlasů a nuly nemají. Odhad chybějících 209 hlasů (19 × 11). Celkový podíl strany je ale v normě (1,78 % proti očekávaným 1,70 %, z = 0,1) a okrsek má 0,962 hlasu na platný lístek (sousedé 0,952), tj. žádný deficit; po doplnění 0,971 (nejvyšší soused 0,972). Chyba řádku je tedy jistá, skutečný rozsah (209 hlasů) je nejistý.",
+    "dukaz": "Logická nemožnost (11 hlasů na č. 38 mezi nulami při ~10 křížcích u strany). Druhá linie chybí - hlasy na platný lístek ani podíl strany deficit nepotvrzují.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Doplnění +209 hlasů nemění mandáty ani zvolené; Nové Brno má v zastupitelstvu města 0 mandátů (2,30 %, do 5% hranice chybí 180 739 hlasů).",
+    "umysl": "Nízká - nedopsaný řádek zápisu T/3 (opsání se zastavilo před koncem řádku strany).",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku.",
+    "vyradit": false
+  },
+  "row:551406/7001:58278601:9": {
+    "kontrola": "Ověřen vektor v hl (lístek města) a dva další vadné řádky téhož okrsku, sousedé a hlasy na platný lístek; simulace přes outcome().",
+    "zjisteni": "Motoristé sobě mají v Jehnicích 561 hlasů: č. 1-32 po 15-22 (22, 20, 17 ... 15), č. 33-55 přesně 0 (23 nul). Sousedé mají 195-866 hlasů, na konci listiny 3-14, nuly nemají. Odhad chybějících 437 hlasů (23 × 19). Stejný vzorec mají v okrsku další dva řádky, které generátor nevykázal: BRNO NAPLNO (129 hlasů, č. 1-15 po 8-10, pak 40 nul, chybí ~400) a SPD (887 hlasů, č. 1-49 po 16-22, pak nuly na č. 50-55, chybí ~120). Součet tří řádků ~957 hlasů. Okrsek má na lístku města 0,942 hlasu na platný lístek (577 lístků), sousedé 0,943, tedy bez deficitu; po doplnění 0,972 (sousedé 0,913-0,976), tj. stále v rozpětí.",
+    "dukaz": "Logická nemožnost (každý z ~17 lístků s křížkem u strany by musel mít ≥ 23 hlasů pro jiné strany) a tři různé strany končí v témže okrsku nulovým ocasem; hlasy na platný lístek deficit nepotvrzují (po doplnění zůstávají v rozpětí sousedů).",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Konzervativně i horní odhad +437 hlasů Motoristům (společně se všemi třemi řádky okrsku +957 hlasů) nemění mandáty ani zvolené; Motoristé mají 0 mandátů (2,69 %, do hranice chybí 154 969 hlasů).",
+    "umysl": "Nízká - nedopsaný řádek zápisu T/3 (opsání se zastavilo před koncem řádku strany).",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku. V okrsku 7001 (MČ Jehnice) jsou tři vadné řádky najednou - ověřit celý zápis T/3 lístku města.",
+    "vyradit": false
+  },
+  "row:550973/23042:55097301:4": {
+    "kontrola": "Ověřen vektor v hl (lístek MČ Brno-střed, M = 45), sousedé, lístek města téhož okrsku a poměr MČ/město; simulace přes outcome().",
+    "zjisteni": "SPD a nezávislí mají na lístku MČ 458 hlasů: č. 1-40 po 13 až 9 (13, 12, 13, 16, 13 ... 9, 9), potom č. 41-45 přesně 0 (5 nul). Řádek se do č. 40 plynule zužuje (z 13 na 9) a pak skočí na 0, což by vyžadovalo, aby všech ~9 lístků s křížkem mělo právě 5 hlasů pro jiné strany. Sousedé nuly nemají. Chybí ~65 hlasů (5 × 13), horní odhad 85. Poměr MČ/město pro SPD je 0,65 (458/710) proti mediánu 1,80 u sousedů (0,97-5,73), po doplnění 0,74, takže řádek MČ je nízký pravděpodobně i jinde než v ocasu. Okrsek má 0,915 hlasu na platný lístek (305 lístků) vs. 0,959 u sousedů; tento řádek vysvětluje jen 65 z ~605 chybějících hlasů.",
+    "dukaz": "Skok z 9 hlasů na 0 u pěti posledních kandidátů (bez nedopsání málo pravděpodobný) a nízký poměr MČ/město; druhá linie je ale slabá, nula se týká jen 5 pozic.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Doplnění +65 až +85 hlasů nemění mandáty ani zvolené v MČ Brno-střed; SPD (5,24 %) má 2 mandáty, ke 3. by potřebovala +3 433 hlasů a 5% hranici překračuje o 1 865 hlasů.",
+    "umysl": "Nízká - nedopsaný řádek zápisu T/3 (opsání se zastavilo před koncem řádku strany).",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku.",
+    "vyradit": false
+  },
+  "row:550973/23063:55097301:1": {
+    "kontrola": "Ověřen vektor v hl (lístek MČ Brno-střed), sousedé, lístek města téhož okrsku a hlasy na platný lístek; simulace přes outcome().",
+    "zjisteni": "Brnoklidem mají na lístku MČ 260 hlasů: č. 1-34 po 6-11 (6, 8, 10, 11, 9 ... 6), č. 35-45 přesně 0 (11 nul). Odhad chybějících 99 hlasů (11 × 9). Řádek se k č. 34 zužuje z ~8 na 6 a končí skokem na 0. Sousedé mají 109-616 hlasů a na konci listiny 2-13; ojediněle mají 0 (23064 poslední kandidát, 23059 jednu nulu uprostřed). Na lístku města má tentýž okrsek za stranu 222 hlasů (poměr MČ/město 1,17, u sousedů 1,01, rozpětí 0,67-1,54; po doplnění 1,62, nad rozpětím). Okrsek má 0,969 hlasu na platný lístek vs. 0,953 u sousedů, tedy bez deficitu; po doplnění by bylo 0,976 (nejvyšší soused 0,978). Podíl strany je v normě (1,97 % proti 2,33 %, z = -0,3).",
+    "dukaz": "Skok z 6 na 0 u posledních 11 kandidátů; druhá linie (deficit okrsku, lístek města) nález nepotvrzuje.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Doplnění +99 hlasů nemění mandáty ani zvolené; Brnoklidem mají v MČ Brno-střed 3,11 % a 0 mandátů, do 5% hranice chybí 14 477 hlasů.",
+    "umysl": "Nízká - možný nedopsaný konec řádku; nelze vyloučit ani řidší křížky u strany a více hlasů pro jiné strany.",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku.",
+    "vyradit": false
+  },
+  "row:551007/13002:58278601:14": {
+    "kontrola": "Ověřen vektor v hl (lístek města), sousedé, hlasy na platný lístek a celkový podíl strany; simulace přes outcome().",
+    "zjisteni": "Nové Brno má 40 hlasů: č. 1-6 (7, 5, 5, 5, 5, 4), pak jen osamělé 2 (č. 9) a 1 (č. 11, 19, 21, 31, 43, 51, 52) a 0 u 41 kandidátů. Odhad chybějících 237 hlasů (47 × 5) předpokládá ~5 křížků u strany, ale nenulové hodnoty za č. 6 jsou 1-2 (úroveň preferenčních hlasů, ne bloku). Sousedé mají 93-793 hlasů a nuly nemají; očekává se ~300 hlasů (z = -1,5, podíl 0,18 % proti 1,33 %). Okrsek má 0,964 hlasu na platný lístek vs. 0,951 u sousedů, bez deficitu (po doplnění 0,974). Vzorec je slučitelný s tím, že ~5 voličů označilo jen jednotlivé kandidáty č. 1-6 bez křížku u strany, i s nedopsaným řádkem.",
+    "dukaz": "Nuly u ostatních kandidátů při ~5 hlasech u čela; druhá linie chybí (hlasy na platný lístek i podíl strany jsou v rozpětí).",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Doplnění +237 hlasů (horní odhad +260) nemění mandáty ani zvolené; Nové Brno má v zastupitelstvu města 0 mandátů (2,30 %, do hranice chybí 180 739 hlasů).",
+    "umysl": "Nízká - možný nedopsaný řádek, ale stejně dobře skutečný malý počet hlasů.",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku. Nález má nízkou váhu; stačí ověřit při kontrole okrsku.",
+    "vyradit": false
+  },
+  "row:551007/13013:58278601:12": {
+    "kontrola": "Ověřen vektor v hl (lístek města), sousedé, rok 2022 (PŘÍSAHA Roberta Šlachty), hlasy na platný lístek a celkový podíl; simulace přes outcome().",
+    "zjisteni": "PŘÍSAHA občanské hnutí má 55 hlasů: č. 1-5 (10, 8, 7, 6, 6), pak 0 až na osamělé 6 na č. 24, 34 a 44 (rozestup přesně 10, hodnota na úrovni bloku). Odhad chybějících 332 hlasů (47 × ~7). Sousedé mají 56-230 hlasů a v listině nuly nemají (hodnoty 1-5). V roce 2022 měla PŘÍSAHA Roberta Šlachty v témže okrsku 232 hlasů bez jediné nuly (hranice okrsků se mohly změnit). Okrsek má 0,942 hlasu na platný lístek vs. 0,946 u sousedů, deficit ~134 hlasů proti 332 nahlášeným; podíl strany 0,20 % proti očekávaným 0,77 % (z = -1,2).",
+    "dukaz": "Logická nemožnost (nuly na č. 6-23 při ~6 křížcích a osamělé hodnoty 6 po 10 pozicích); druhá linie je slabá (deficit okrsku ~134 hlasů).",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Doplnění +332 hlasů nemění mandáty ani zvolené; PŘÍSAHA má v zastupitelstvu města 0 mandátů (1,12 %, do hranice chybí 259 654 hlasů).",
+    "umysl": "Nízká - nedopsaný řádek zápisu T/3 (opsání se zastavilo před koncem řádku strany).",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku.",
+    "vyradit": false
+  },
+  "row:551031/20026:55103101:1": {
+    "kontrola": "Ověřen vektor v hl (lístek MČ Brno-sever, M = 35), sousedé, lístek města téhož okrsku, rok 2022, poměr MČ/město a hlasy na platný lístek; simulace přes outcome().",
+    "zjisteni": "ANO 2011 má na lístku MČ 699 hlasů: č. 1-30 po 23-26 (26, 25, 23, 23, 23, 25 ... 23), č. 31-35 přesně 0. Skok z 23 na 0 by vyžadoval, aby všech ~23 lístků s křížkem mělo právě 5 hlasů pro jiné strany; v roce 2022 měla ANO v témže okrsku řádek bez nul (1 665 hlasů na lístku MČ, ~46-52 na kandidáta). Detektorem nahlášený rozsah +115 hlasů je ale nejspíš podhodnocený: ANO má na lístku města téhož okrsku 2 539 hlasů (~46 na kandidáta) a na lístku MČ jen 699 (poměr MČ/město 0,28 proti mediánu 0,58 u sousedů, rozpětí 0,48-0,65), z čehož vychází ~1 470 hlasů a chybí ~770. Okrsek má na lístku MČ jen 0,717 hlasu na platný lístek (330 lístků, 8 280 hlasů) vs. 0,942 u sousedů, tj. chybí ~2 600 hlasů; nahlášené řádky vysvětlují ANO +115 a Motoristé sobě č. 8 (81 hlasů, č. 1-7 po 11, pak 1 a nuly; +304, generátor neuvádí). Okrsek má 834 voličů a 334 vydaných obálek, jde o neobvykle nízkou účast (40 %).",
+    "dukaz": "Skok z 23 na 0 u pěti posledních kandidátů, poměr MČ/město poloviční proti sousedům (z_mc = -2,8 v cross_2026) a deficit hlasů okrsku (~2 600).",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Konzervativně +115 hlasů ANO, horní odhad (podle lístku města) ~+770; společně s Motoristy +304 (i při dvojnásobku, ANO +1 500 a Motoristé +1 000) se mandáty ani zvolené v MČ Brno-sever nemění. ANO má 5 mandátů a ke 6. by potřebovalo +10 784 hlasů; nejtěsnější je mandát listiny TÝM SEVER (rezerva 854 hlasů), ANO ho ale ohrozit nemůže, protože ke zisku dalšího mandátu potřebuje +10 784. Motoristé (2,09 %) jsou 14 131 hlasů pod 5% hranicí.",
+    "umysl": "Nízká - nedopsaný řádek zápisu T/3 (opsání se zastavilo před koncem řádku strany).",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku. Ověřit i hlasy na platný lístek okrsku 20026 (lístek MČ).",
+    "vyradit": false
+  },
+  "row:551074/8008:58278601:9": {
+    "kontrola": "Ověřen vektor v hl (lístek města), sousedé, lístek MČ Brno-jih téhož okrsku, poměr město/MČ a hlasy na platný lístek; simulace přes outcome().",
+    "zjisteni": "Motoristé sobě mají na lístku města 546 hlasů: č. 1-49 po 10-14 (14, 12, 12, 12 ... 10), č. 50-51 po 1 a č. 52-55 přesně 0 (4 nuly). Řádek tedy končí plynulým doznívajícím ocasem (10 → 1 → 1 → 0), což odpovídá ~10 lístkům s křížkem u strany, z nichž většina má přesně 6 hlasů pro jiné strany. Neobvyklé, ale ne nemožné. Odhad chybějících hlasů pouhých 70 (4 × ~12, horní odhad stejný). Podíl strany je v normě (3,58 % proti očekávaným 2,52 %, z = 0,9), poměr město/MČ je 6,74 proti mediánu 7,15 u sousedů (2,8-13,4). Okrsek má sice 0,846 hlasu na platný lístek proti 0,944 u sousedů (chybí ~1 772 hlasů), ale tento řádek to nevysvětluje (70).",
+    "dukaz": "Čtyři nuly na konci listiny bez dalšího potvrzení; poměr město/MČ i podíl strany jsou v normě.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Doplnění +70 hlasů nemění mandáty ani zvolené; Motoristé sobě mají v zastupitelstvu města 0 mandátů (2,69 %, do 5% hranice chybí 154 969 hlasů).",
+    "umysl": "Nízká - možné nedopsání posledních čtyř kandidátů, nebo skutečný ocas z voličů se stejným počtem hlasů pro jiné strany.",
+    "doporuceni": "Nález má nízkou váhu a zanedbatelný rozsah; ověřit jen v rámci kontroly okrsku (deficit hlasů okrsku ~1 770 vysvětlit jinak).",
+    "vyradit": false
+  },
+  "row:551198/3004:58278601:12": {
+    "kontrola": "Ověřen vektor v hl (lístek města), sousedé, rok 2022 (PŘÍSAHA Roberta Šlachty), hlasy na platný lístek a celkový podíl; simulace přes outcome().",
+    "zjisteni": "PŘÍSAHA občanské hnutí má 65 hlasů: č. 1-7 (12, 9, 8, 7, 7, 7, 7), osamělé 8 na č. 32 a jinak 0 (47 nul). Odhad chybějících 376 hlasů (47 × 8) předpokládá ~8 křížků u strany; hodnota 8 na č. 32 stojí osamělá mezi nulami, může jít i o preferenční hlasy jednoho kandidáta. Sousedé mají 6-340 hlasů; dva z nich (3008 se součtem 6 a 3015 se součtem 19) mají též téměř samé nuly, takže u malých stran je tento vzorec běžný. V roce 2022 měla PŘÍSAHA Roberta Šlachty v okrsku 168 hlasů bez jediné nuly. Okrsek má 0,942 hlasu na platný lístek vs. 0,951 u sousedů, deficit ~181 hlasů proti 376 nahlášeným; podíl strany 0,35 % proti očekávaným 0,81 % (z = -0,8).",
+    "dukaz": "Nuly na č. 8-55 při ~7 hlasech u čela (nemožné pro křížky u strany); druhá linie je slabá a podobné vzorce mají i malé sousední okrsky.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Doplnění +376 hlasů nemění mandáty ani zvolené; PŘÍSAHA má v zastupitelstvu města 0 mandátů (1,12 %, do hranice chybí 259 654 hlasů).",
+    "umysl": "Nízká - možný nedopsaný řádek, nebo jen ~7 voličů, kteří označili jednotlivé kandidáty.",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku. Nález má nízkou váhu.",
+    "vyradit": false
+  },
+  "row:551228/12004:58278601:13": {
+    "kontrola": "Ověřen vektor v hl (lístek města), sousedé, hlasy na platný lístek a celkový podíl; simulace přes outcome().",
+    "zjisteni": "BRNO NAPLNO - koalice Svobodní, Trikolora, PRO má v Komíně 114 hlasů: č. 1-10 (7, 8, 7, 6, 6 ... 6), č. 11-29 přesně 0 a pak 10 osamělých hodnot 5 na č. 30, 33-36, 38-40, 53 a 55 (jinak nuly). Hodnoty 5 na úrovni bloku mezi nulami nemohou vzniknout z křížků u strany. Odhad chybějících 265 hlasů (35 × ~7,5). Sousedé mají 123-516 hlasů a v listině žádné nuly (např. 12005: 9 po celé listině, 12003: 2). Podíl strany je 0,42 % proti očekávaným 1,26 % (z = -1,2). Okrsek má 0,903 hlasu na platný lístek (545 lístků) vs. 0,948 u sousedů, chybí ~1 348 hlasů, tento řádek vysvětluje ~265; po doplnění 0,911.",
+    "dukaz": "Logická nemožnost (nuly na č. 11-29 následované deseti hodnotami na úrovni bloku) a částečný deficit hlasů okrsku (265 z ~1 350).",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Doplnění +265 hlasů nemění mandáty ani zvolené; BRNO NAPLNO má v zastupitelstvu města 0 mandátů (1,17 %, do 5% hranice chybí 256 321 hlasů).",
+    "umysl": "Nízká - nedopsaný řádek zápisu T/3 (opsání se zastavilo před koncem řádku strany).",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku.",
+    "vyradit": false
+  },
+  "row:551244/19010:58278601:7": {
+    "kontrola": "Ověřen vektor v hl (lístek města), sousedé, lístek MČ Řečkovice a Mokrá Hora téhož okrsku, hlasy na platný lístek; simulace přes outcome().",
+    "zjisteni": "Restart pro Brno má 109 hlasů: č. 1-10 (8, 12, 7, 5, 5, 5, 6, 5, 6, 5), dále nuly s devíti osamělými hodnotami 5 na č. 15, 19, 21, 22, 38, 39, 42, 43 a 47 (45 z 55 kandidátů má 0). Hodnoty 5 na úrovni bloku mezi nulami nevzniknou z křížků u strany. Odhad chybějících 270 hlasů (36 × ~7,5). Sousedé mají 58-735 hlasů a nuly téměř nemají (19005: tři nuly na konci); na lístku MČ má strana v okrsku 0 hlasů (očekávané ~2 křížky), takže druhý lístek nepomůže. Okrsek má 0,963 hlasu na platný lístek (539 lístků) vs. 0,931 u sousedů, bez deficitu; po doplnění 0,972 (nejvyšší soused 0,969), tj. těsně nad rozpětím sousedů. Podíl strany je 0,38 % proti očekávaným 1,20 % (z = -1,3).",
+    "dukaz": "Logická nemožnost (nuly mezi hodnotami na úrovni bloku); druhá linie chybí, okrsek nemá deficit hlasů.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Doplnění +270 hlasů nemění mandáty ani zvolené; Restart pro Brno má v zastupitelstvu města 0 mandátů (1,51 %, do 5% hranice chybí 233 736 hlasů).",
+    "umysl": "Nízká - nedopsaný řádek zápisu T/3 (opsání se zastavilo před koncem řádku strany).",
+    "doporuceni": "Ověřit zápis T/3 okrsku (řádek strany) a doplnit hlasy; při opravě projít i ostatní strany téhož okrsku.",
+    "vyradit": false
+  },
+  "swap:550990/27006:58278601:14:15": {
+    "kontrola": "Ověřen v hl a shares_2026 (lístek města, tři dotčené strany), porovnáno s lístkem MČ Žabovřesky téhož okrsku, osmi sousedy a záznamem cross (bod 1); simulace opravy přes outcome(). Jde o týž okrsek, který je už zkontrolován v záznamu cross - dopad se nesčítá.",
+    "zjisteni": "Nové Brno má na lístku města 2 320 hlasů (11,32 %), sousední okrsky čekají ~459 (2,24 %, z = 8,6); řádek má na všech 55 kandidátech 36-51 hlasů (čelo 50, 51, 47), zatímco u sousedů mají kandidáti v čele 7-21 a na konci 2-13 hlasů. Piráti a Fakt Brno TU! mají 340 hlasů (6-8 na kandidáta, bez nul) místo ~1 645 (z = -3,1), na lístku MČ Žabovřesky má stejná strana 935 hlasů (očekáváno 777). Nejde o čistou záměnu dvou řádků, ale o přesun z více stran: Nové Brno má +1 861 nad očekáváním, Piráti -1 305 a SPD (č. 16, 245 místo ~769) -524, součet deficitů 1 829 přibližně odpovídá přebytku. Okrsek má 0,941 hlasu na platný lístek (396 lístků) proti 0,956 u sousedů, tj. celkový počet hlasů je v normě, takže hlasy byly zapsány k jiným stranám, nikoli ztraceny. Rok 2022 nelze srovnat (strany měly jiné názvy a kandidátky).",
+    "dukaz": "Dvě nezávislé linie: z = 8,6 u Nové Brno vůči sousedům a součet deficitů Pirátů a SPD (1 829) odpovídající přebytku (1 861) při normálním celkovém počtu hlasů; lístek MČ téhož okrsku potvrzuje Piráty (935).",
+    "jistota": 4,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu. Simulace oprav (Nové Brno -1 861, Piráti +1 305, SPD +524 hlasů) nemění mandáty ani zvolené v zastupitelstvu města; Nové Brno má 0 mandátů (2,30 %), Piráti 4 mandáty a k 5. by potřebovali +38 575 hlasů. Týž okrsek je již započten v záznamu cross, bod 1 - dopad se nesčítá.",
+    "umysl": "Nízká - při přepisu zápisu se hlasy dvou stran dostaly do řádku Nové Brno.",
+    "doporuceni": "Ověřit zápis T/3 okrsku 27006 (lístek města, strany č. 14, 15 a 16) a opravit; nález je duplicitní s položkou cross, bod 1.",
+    "vyradit": false
+  },
+  "row:550973/23044:58278601:16": {
+    "kontrola": "Ověřen vektor HLASY_01–55 řádku v hl, součet kandidátů = POC_HLASU (342), neplatní kandidáti žádní; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 342 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 19 (rozpětí 18–21), nulu má 37 z 55 kandidátů (č. 14–17, 21–24, 26, 27, 29–55). Podíl strany v okrsku je 2,0 % proti 2,4 % (rozpětí 0,3–4,2 %) v sousedních okrscích a 3,9 % mediánu zastupitelstva. Na druhém lístku (Brno-střed) má táž strana v okrsku 863 hlasů, tj. 5,9 % (medián zastupitelstva 5,0 %). Hlasy na platný lístek v okrsku: 0,910 oproti 0,965 u sousedů (deficit ~1 016 hlasů).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 703 hlasů (konzervativně, medián řádku) i 740 hlasů (horní odhad) nemění rozdělení mandátů (strana 0 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 4
+  },
+  "row:550990/27009:55099001:5": {
+    "kontrola": "Ověřen vektor HLASY_01–25 řádku v hl, součet kandidátů = POC_HLASU (582), neplatní kandidáti [10]; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 582 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 30 (rozpětí 29–42), nulu má 6 z 25 kandidátů (č. 9, 14, 17, 19, 20, 23). Podíl strany v okrsku je 6,7 % proti 7,1 % (rozpětí 5,9–13,9 %) v sousedních okrscích a 8,3 % mediánu zastupitelstva. V roce 2022 měla strana ve stejně číslovaném okrsku 10,9 % (medián zastupitelstva 8,6 %). Hlasy na platný lístek v okrsku: 0,903 oproti 0,963 u sousedů (deficit ~569 hlasů).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 180 hlasů (konzervativně, medián řádku) i 228 hlasů (horní odhad) nemění rozdělení mandátů (strana 2 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 4
+  },
+  "row:550990/27009:55099001:7": {
+    "kontrola": "Ověřen vektor HLASY_01–25 řádku v hl, součet kandidátů = POC_HLASU (52), neplatní kandidáti žádní; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 52 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 7 (rozpětí 7–9), nulu má 18 z 25 kandidátů (č. 7, 9–25). Podíl strany v okrsku je 0,6 % proti 3,6 % (rozpětí 2,2–4,5 %) v sousedních okrscích a 2,9 % mediánu zastupitelstva. Na druhém lístku (Brno) má táž strana v okrsku 670 hlasů, tj. 3,3 % (medián zastupitelstva 4,9 %). Hlasy na platný lístek v okrsku: 0,903 oproti 0,963 u sousedů (deficit ~569 hlasů).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 126 hlasů (konzervativně, medián řádku) i 144 hlasů (horní odhad) nemění rozdělení mandátů (strana 0 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 4
+  },
+  "row:551031/20026:55103101:8": {
+    "kontrola": "Ověřen vektor HLASY_01–35 řádku v hl, součet kandidátů = POC_HLASU (81), neplatní kandidáti žádní; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 81 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 11 (rozpětí 1–11), nulu má 24 z 35 kandidátů (č. 8, 11–21, 23–29, 31–35). Podíl strany v okrsku je 1,0 % proti 2,3 % (rozpětí 1,2–3,1 %) v sousedních okrscích a 2,2 % mediánu zastupitelstva. Na druhém lístku (Brno) má táž strana v okrsku 431 hlasů, tj. 2,8 % (medián zastupitelstva 2,4 %). Hlasy na platný lístek v okrsku: 0,717 oproti 0,942 u sousedů (deficit ~2 604 hlasů).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 264 hlasů (konzervativně, medián řádku) i 264 hlasů (horní odhad) nemění rozdělení mandátů (strana 0 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 4
+  },
+  "row:551112/17008:58278601:7": {
+    "kontrola": "Ověřen vektor HLASY_01–55 řádku v hl, součet kandidátů = POC_HLASU (87), neplatní kandidáti žádní; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 87 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 7 (rozpětí 5–11), nulu má 43 z 55 kandidátů (č. 11–27, 29, 31–55). Podíl strany v okrsku je 0,7 % proti 1,7 % (rozpětí 1,0–2,7 %) v sousedních okrscích a 1,3 % mediánu zastupitelstva. V roce 2022 měla strana ve stejně číslovaném okrsku 1,8 % (medián zastupitelstva 1,3 %). Hlasy na platný lístek v okrsku: 0,885 oproti 0,959 u sousedů (deficit ~1 107 hlasů).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 301 hlasů (konzervativně, medián řádku) i 387 hlasů (horní odhad) nemění rozdělení mandátů (strana 0 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 3,
+    "dukaz": "Logika zápisu (křížek u strany dává hlas všem 55 kandidátům) a podíl 0,7 % proti 1,7 % u sousedů a 1,8 % v roce 2022; okrsek má deficit hlasů ~1 107; zbývá možnost, že ~8 voličů označilo jednotlivě jen prvních 10 kandidátů (nenulové hodnoty u č. 28 a 30 ukazují, že řádek nebyl vyplněn souvisle)."
+  },
+  "row:551287/14015:55128701:9": {
+    "kontrola": "Ověřen vektor HLASY_01–29 řádku v hl, součet kandidátů = POC_HLASU (1 968), neplatní kandidáti žádní; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 1 968 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 74 (rozpětí 61–110), nulu má 3 z 29 kandidátů (č. 16–18). Podíl strany v okrsku je 11,7 % proti 10,4 % (rozpětí 6,9–15,5 %) v sousedních okrscích a 11,2 % mediánu zastupitelstva. Na druhém lístku (Brno) má táž strana v okrsku 5 990 hlasů, tj. 19,3 % (medián zastupitelstva 17,9 %). Hlasy na platný lístek v okrsku: 0,968 oproti 0,937 u sousedů (bez deficitu).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 222 hlasů (konzervativně, medián řádku) i 258 hlasů (horní odhad) nemění rozdělení mandátů (strana 4 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 4
+  },
+  "row:551287/14015:58278601:1": {
+    "kontrola": "Ověřen vektor HLASY_01–55: nenulových je jen 6 kandidátů (č. 6, 17, 19, 21, 25, 27 po 10–11 hlasech), součet 61 = POC_HLASU; porovnáno se sousedy, lístkem MČ a hlasy na lístek.",
+    "zjisteni": "Kandidáti strany mají v okrsku 61 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 10 (rozpětí 10–11), nulu má 49 z 55 kandidátů (č. 1–5, 7–16, 18, 20, 22–24, 26, 28–55). Podíl strany v okrsku je 0,2 % proti 1,2 % (rozpětí 0,1–3,5 %) v sousedních okrscích a 0,6 % mediánu zastupitelstva. Hlasy na platný lístek v okrsku: 0,982 oproti 0,951 u sousedů (bez deficitu).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 490 hlasů (konzervativně, medián řádku) i 490 hlasů (horní odhad) nemění rozdělení mandátů (strana 0 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 1,
+    "vyradit": true,
+    "dukaz": "Vektor není ve tvaru neúplně opsaného řádku (souvislý blok shodných hodnot od lídra), ale řídký vzorec šesti kandidátů s 10–11 hlasy; okrsek nemá deficit hlasů (0,982 hlasu na lístek a mandát oproti 0,951 u sousedů), takže chybějící hlasy nelze prokázat."
+  },
+  "row:551309/24003:58278601:15": {
+    "kontrola": "Ověřen vektor HLASY_01–55 řádku v hl, součet kandidátů = POC_HLASU (1 163), neplatní kandidáti žádní; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 1 163 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 26 (rozpětí 26–33), nulu má 12 z 55 kandidátů (č. 29–40). Podíl strany v okrsku je 4,5 % proti 5,2 % (rozpětí 2,7–8,2 %) v sousedních okrscích a 6,6 % mediánu zastupitelstva. Hlasy na platný lístek v okrsku: 0,912 oproti 0,955 u sousedů (deficit ~1 220 hlasů).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 312 hlasů (konzervativně, medián řádku) i 348 hlasů (horní odhad) nemění rozdělení mandátů (strana 4 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 4
+  },
+  "row:551406/7001:58278601:13": {
+    "kontrola": "Ověřen vektor HLASY_01–55 řádku v hl, součet kandidátů = POC_HLASU (129), neplatní kandidáti žádní; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 129 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 8 (rozpětí 8–10), nulu má 40 z 55 kandidátů (č. 16–55). Podíl strany v okrsku je 0,4 % proti 0,6 % (rozpětí 0,2–2,1 %) v sousedních okrscích a 1,0 % mediánu zastupitelstva. Hlasy na platný lístek v okrsku: 0,942 oproti 0,943 u sousedů (deficit ~15 hlasů).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 320 hlasů (konzervativně) i 400 hlasů (horní odhad) nemění rozdělení mandátů (strana 0 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 2,
+    "dukaz": "Logika zápisu (křížek u strany by dal hlas všem 55 kandidátům) a nulové hodnoty od č. 16, ale okrsek nemá deficit hlasů (0,942 oproti 0,943 u sousedů) a podíl strany (0,4 %) je v rozpětí sousedů (0,2–2,1 %); legitimní vysvětlení: asi 8–10 voličů označilo jednotlivě jen prvních 15 kandidátů listiny."
+  },
+  "row:551406/7001:58278601:16": {
+    "kontrola": "Ověřen vektor HLASY_01–55 řádku v hl, součet kandidátů = POC_HLASU (887), neplatní kandidáti žádní; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 887 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 18 (rozpětí 16–22), nulu má 6 z 55 kandidátů (č. 50–55). Podíl strany v okrsku je 3,0 % proti 3,7 % (rozpětí 1,5–7,9 %) v sousedních okrscích a 3,9 % mediánu zastupitelstva. Hlasy na platný lístek v okrsku: 0,942 oproti 0,943 u sousedů (deficit ~15 hlasů).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 108 hlasů (konzervativně, medián řádku) i 120 hlasů (horní odhad) nemění rozdělení mandátů (strana 0 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 4
+  },
+  "row:551007/13006:55100701:1": {
+    "kontrola": "Ověřen vektor HLASY_01–27 řádku v hl, součet kandidátů = POC_HLASU (474), neplatní kandidáti žádní; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 474 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 19 (rozpětí 16–24), nulu má 2 z 27 kandidátů (č. 15, 16). Podíl strany v okrsku je 5,2 % proti 6,9 % (rozpětí 3,8–14,6 %) v sousedních okrscích a 6,6 % mediánu zastupitelstva. Na druhém lístku (Brno) má táž strana v okrsku 750 hlasů, tj. 3,9 % (medián zastupitelstva 4,9 %). Hlasy na platný lístek v okrsku: 0,970 oproti 0,902 u sousedů (bez deficitu).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 38 hlasů (konzervativně, medián řádku) i 44 hlasů (horní odhad) nemění rozdělení mandátů (strana 2 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 4
+  },
+  "row:551406/7001:58278601:14": {
+    "kontrola": "Ověřen vektor HLASY_01–55 řádku v hl, součet kandidátů = POC_HLASU (826), neplatní kandidáti žádní; porovnáno se sousedními okrsky, druhým lístkem a rokem 2022 (kde je strana dohledatelná) a nasimulováno doplnění přes outcome().",
+    "zjisteni": "Kandidáti strany mají v okrsku 826 hlasů (součet vektoru kandidátů = POC_HLASU); nenulové hodnoty jsou většinou kolem 15 (rozpětí 14–28), nulu má 2 z 55 kandidátů (č. 52, 54). Podíl strany v okrsku je 2,8 % proti 2,0 % (rozpětí 0,8–2,7 %) v sousedních okrscích a 2,2 % mediánu zastupitelstva. Hlasy na platný lístek v okrsku: 0,942 oproti 0,943 u sousedů (deficit ~15 hlasů).",
+    "dopad": "Bez vlivu na mandáty ani zvolené: simulace doplnění 30 hlasů (konzervativně, medián řádku) i 32 hlasů (horní odhad) nemění rozdělení mandátů (strana 0 mand.) ani zvolené kandidáty.",
+    "dopad_kat": "Bez vlivu",
+    "jistota": 4
+  },
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv (rok 2026): Brno-Bosonohy – ODS o druhý mandát za 35 hlasů (hlasy_k_ztrate), Brno-Vinohrady – ANO o čtvrtý mandát za 53 hlasů, Brno-Bohunice – SPD je 61 hlasů pod 5% hranicí (4,935 %); odpovídá textu nálezu.",
+    "dopad": "Souhrnný nález bez simulace: rezervy 35, 53 a 61 hlasů při 15 a 21 mandátech odpovídají 2–3 voličům s plnými hlasy. Skutečný dopad závisí na případných chybách v okrscích těchto MČ, které jsou řešeny samostatnými nálezy.",
+    "dopad_kat": "Těsný výsledek",
+    "jistota": 1
+  }
+}

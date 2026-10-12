@@ -1,0 +1,9 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Ze čtyř hodnot jsou dvě vložené číslice (Mirka Štěrbová, STAROSTOVÉ A NEZÁVISLÍ č. 10: 26 hlasů místo ~6, podíl 11,5 % vs. max 8,8 % jinde; Alena Krejčí, KDU-ČSL č. 2, zvolená: 25 místo ~5, podíl 12,9 % vs. max 10,5 %) – odchylka je mírná, preferenci lze připustit. Dvě hodnoty Olgy Kudrnové (Starostové pro občany, č. 19: 7 a 11 hlasů) jsou jen nízké (podíl 1,6–1,7 % vs. 2,9 % medián) a nejde o chybu. Oprava Krejčí 25 → 5 hlasů zvolení nezmění.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome(): oprava Krejčí (−20 hlasů) i ostatních hodnot mandáty ani zvolené nemění."
+  }
+}

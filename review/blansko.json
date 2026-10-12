@@ -1,0 +1,24 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Hodnota ověřena v hl/t3 (okrsek 581283/4), proti 25 ostatním okrskům a spikes_2026; dopad simulován přes outcome(). Michala Součka (č. 1, okrsek 14) detektor sám vyřadil jako lídra s preferencí.",
+    "zjisteni": "Okrsek 581283/4, SPORTOVCI PRO BLANSKO, kand. č. 19 Petr Sehnal má 24 hlasů, sousedé č. 18 a č. 20 mají 7 a 6 (základ listiny 6–9, č. 1 19). Strana má 232 hlasů při 186 platných lístcích. Ve stejném řádku ale vyčnívá ještě č. 22 Hana Jedináková s 32 hlasy (základ 7), které detektor jako překlep nenahlásil; dva výkyvy po ~20–25 hlasech na jedné listině nesedí na jednu vloženou číslici a odpovídají spíše místní preferenci. V ostatních okrscích má č. 19 nejvýše 12 hlasů.",
+    "dukaz": "Poměr 3,7× k sousedům, nejvyšší z 26 okrsků; druhý výkyv ve stejném řádku zpochybňuje hypotézu překlepu.",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Bez vlivu: oprava na 4–6 hlasů (−18 až −20) nemění mandáty ani zvolené; Sehnal zvolen není.",
+    "umysl": "Nízká – překlep nebo místní preference.",
+    "doporuceni": "Bez dalších kroků; případně namátkově ověřit zápis okrsku 581283/4.",
+    "vyradit": false
+  },
+  "batches": {
+    "kontrola": "Porovnány dávky ČSÚ (batch_changes, batch_votes) všech 5 okrsků po stranách s finálními daty.",
+    "zjisteni": "Opakovaně zaslané okrsky (hlasy první verze → finální): 581283/2: 4 906→4 922 (+16, Česká pirátská strana 37→53); 581283/28: 3 980→3 987 (+7, SPD a nezávislí 179→186); 581283/30: v první dávce jen 1 596 hlasů, ve druhé 4 720, finálně 4 816 (první verze byla neúplná, 205 lístků); 581283/4: 4 199→4 284 (+85, ANO 2011 1 023→1 108); 581283/9: 5 754→6 039 (+285, LEVICE pro Blansko 160→355, ostatní strany +14 až +63). Obálky a lístky se neměnily. Finální data jsou konzistentní (PL_HL_CELK ≤ lístky × 25 ve všech pěti okrscích).",
+    "dukaz": "XML dávky ČSÚ (příznak OPAKOVANE) a porovnání hlasů po stranách mezi verzemi.",
+    "jistota": 5,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Ve finálních datech bez vlivu; jde o doplnění neúplných zápisů před uzavřením sčítání.",
+    "umysl": "Žádný důvod k podezření – běžné doplnění zápisů komisemi.",
+    "doporuceni": "Bez dalších kroků.",
+    "vyradit": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "swap:565164/5:56516401:1:2": {
+    "kontrola": "Ověřen podíl stran ve všech 5 okrscích, rok 2022, vektory kandidátů obou stran a bydliště kandidátů (rk.BYDLISTEN).",
+    "zjisteni": "V okrsku 565164/5 (151 voličů, 106 lístků) má Společně za Libochovice, Poplze a Dubany 1 007 hlasů (73,3 %) a PRO Libochovice, Poplze a Dubany 328 (23,9 %), jinde mají 17–31 % a 56–73 %. Vysvětlení je místní: kandidátka Společně je z poloviny z Duban (8 z 15, včetně č. 1 Vaníčkové a č. 2 Feixové, která má nejvíc hlasů strany – 461), okrsek 5 odpovídá nejmenší obci. Také v roce 2022 byl okrsek 5 odlišný (PRO jen 41 % oproti 45–77 %, ANO 53 %). Vektory kandidátů jsou ploché a odpovídají hlasům strany (81, 88, 65 … u Společně; 24, 25, 20 … u PRO) – prohození řádků nic nenasvědčuje.",
+    "dukaz": "Místní podpora kandidátky s kandidáty z Dubany; vektory kandidátů obou stran neodporují zápisu; prohození je detekční artefakt malého okrsku s odlišnou strukturou.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Případná záměna by přesunula 679 hlasů mezi stranami (Společně 3 859 → 3 180, PRO 9 347 → 10 026), na hranici mandátů by to ale bylo bez vlivu; protože jde o skutečný místní vzorec, nic se nemění.",
+    "umysl": "Bez indikace.",
+    "doporuceni": "Nález vyřadit.",
+    "vyradit": true
+  }
+}

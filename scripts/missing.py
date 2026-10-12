@@ -32,7 +32,9 @@ def detect(year):
             rows.append(dict(rok=year, ZK=zk, OID=o, MC=r.MC, M=M, PLAT_LISTKY=r.PLAT_LISTKY, ODEVZ_OBAL=r.ODEVZ_OBAL,
                              PL_HL_CELK=r.PL_HL_CELK, vpb=r.vpb, vpb_ocek=ev, z_vpb=(r.vpb - ev) / sd,
                              chybi_hlasu=deficit_votes, chybi_listku=deficit_votes / M))
-    D = pd.DataFrame(rows)
+    D = pd.DataFrame(rows, columns=['rok', 'ZK', 'OID', 'MC', 'M', 'PLAT_LISTKY', 'ODEVZ_OBAL', 'PL_HL_CELK', 'vpb', 'vpb_ocek', 'z_vpb',
+                                    'chybi_hlasu', 'chybi_listku'])  # u malých obcí může být prázdné
+    D['podezrele_strany'] = None
     # attribute deficit to parties with largest negative residuals
     att = []
     for _, r in D[D.z_vpb < -4].iterrows():

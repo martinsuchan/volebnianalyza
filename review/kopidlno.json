@@ -1,0 +1,13 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeny všechny označené hodnoty: vektor HLASY_xx ve všech okrscích, bydliště kandidátů (rk.BYDLISTEN), spolubydlící na listině, rok 2022 a limit PL_HL_CELK ≤ PLAT_LISTKY × M.",
+    "zjisteni": "Jana Škarydová (č. 14, Kopidlno) má v okrsku 573060/2 10 hlasů při sousedech 31 a 28. Přesně 10 hlasů má i v okrsku 1 (sousedé 29 a 17); její podíl je tedy v obou velkých okrscích stabilně nízký a nejde o nelogický propad uvnitř jednoho zápisu. Hodnota není nižší než minimum listiny, takže neodporuje počtu křížků u strany.",
+    "dukaz": "Opakování stejného vzorce v roce 2022 a/nebo v ostatních okrscích či u spolukandidátů ze stejné obce.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Žádný vliv na mandáty ani zvolené (simulace materiality: zmena_mandatu = False, zmena_zvolenych = False); nejde o chyby.",
+    "umysl": "Bez indikace – skutečná místní preference.",
+    "doporuceni": "Nález vyřadit.",
+    "vyradit": true
+  }
+}

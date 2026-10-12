@@ -1,0 +1,9 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřeno v hl a typos_2026.pkl: vektor kandidáta v okrsku, podíl hlasů kandidáta na hlasech strany v okrsku proti ostatním okrskům a simulace outcome() s opravou.",
+    "zjisteni": "Dvě vložené číslice v okrsku 574279/2 u MĚSTO PRO ŽIVOT (Adam Šroll č. 4 a Ondřej Vodehnal č. 11 mají shodně 28 hlasů místo ~8; podíl 13,7 % hlasů strany je více než dvojnásobek maxima jinde, 6,5 %); shoda dvou stejných hodnot v jednom řádku podporuje chybu přepisu, preferenci ale nelze vyloučit. Třetí hodnota (Michal Bureš, Lidé pro Město, č. 4: 18 hlasů při základní úrovni řádku 12–25, sousední kandidáti 54–64) je jen preference sousedů – nejde o chybu.",
+    "jistota": 3,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace outcome() s opravou každé hodnoty: mandáty i zvolení beze změny."
+  }
+}

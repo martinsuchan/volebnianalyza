@@ -1,0 +1,12 @@
+{
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor HLASY_01–15 SRDCEM PRO OPATOVICE v 6 okrscích, bydliště kandidáta, součet řádku (139 = POC_HLASU) a simulace.",
+    "zjisteni": "Pavel Ochrana (SRDCEM PRO OPATOVICE č. 8, bydliště Velká Roudka) má v okrsku 582646/6 25 hlasů při sousedech 5 a 7. Není to vložená číslice: ve druhém malém okrsku 582646/4 vyčnívá stejný kandidát (6 hlasů proti 1 a 1; ostatní kandidáti 0–3) – jde o venkovské okrsky kolem jeho bydliště. Součty řádků sedí; v roce 2022 kandidoval jinak, srovnání není možné.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Úbytek 20 hlasů SRDCEM PRO OPATOVICE (2 327 hlasů, rezerva ke ztrátě 141) nemění mandáty ani zvolené.",
+    "umysl": "Bez indikace – pravděpodobně místní preference.",
+    "doporuceni": "Souhrn vyřadit.",
+    "vyradit": true
+  }
+}

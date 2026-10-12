@@ -1,0 +1,19 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv a simulací outcome() s dV = +68 hlasů pro Pro rozvoj města.",
+    "zjisteni": "Rezerva 68 hlasů (25 mandátů, tj. 2,7 voliče): poslední mandát získala KDU-ČSL (7. mandát, Vratislav Ansorge, č. 6) před Pro rozvoj města (14 752 hlasů, 5 mandátů). Přírůstek Pro rozvoj města o 68 hlasů by mandát přesunul: Pro rozvoj města 5 → 6 (Renata Jakubíková, č. 4), KDU-ČSL 7 → 6 (Vratislav Ansorge by ztratil). Úbytek KDU-ČSL o 79 hlasů by vedl k témuž výsledku.",
+    "dopad": "Mandát může změnit chyba ≥ 68 hlasů; žádný z dalších nálezů (Karel Středa, Město+) na mandáty vliv nemá.",
+    "jistota": 1
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřen vektor kandidáta v okrsku 11, jeho podíl ve všech okrscích a v roce 2022, bydliště a simulace outcome().",
+    "zjisteni": "Hodnotou je Karel Středa (Město+ č. 16, bydliště Stolín) v okrsku 573965/11: 28 hlasů při sousedech 8 a 6 (vektor č. 13–19: 9, 8, 8, 28, 6, 5, 9; podíl 9,7 % hlasů strany v okrsku 11 proti 2,8–4,2 % jinde). V roce 2022 měl Středa na jiné listině (č. 6) v témže okrsku 5,4 % (18 hlasů proti 7 a 9 v okrscích 1 a 12) – lehké zvýšení, ale ne takové. Pro místní preferenci (Stolín) mluví jen mírně zvýšený rok 2022, pro vloženou číslici čtyřnásobek proti sousedům; rozhodnout nelze. Mimo souhrn (typ „propad“) vyčnívá Petr Hejzlar (Pro rozvoj města č. 6, 12 vs 51/42 v okrsku 12), ale č. 6 má na listině systematicky nižší hlasy než sousedé ve všech okrscích (např. 35 vs 64/55, 33 vs 97/56) – nejde o chybu.",
+    "dukaz": "Nález se opírá jen o poměr k sousedům; podíl v roce 2022 je nižší (5,4 %) než letos (9,7 %).",
+    "jistota": 2,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Simulace opravy (–20 hlasů) nemění mandáty (Spoluobčané 10, Pro rozvoj města 5, KDU-ČSL 7, Město+ 3) ani pořadí zvolených; Středa nebyl zvolen (270 hlasů).",
+    "umysl": "Nízká – nahodilá chyba přepisu nebo místní preference.",
+    "doporuceni": "Hodnotu lze ověřit v originálním zápisu okrsku 11; bez vlivu na výsledek.",
+    "vyradit": false
+  }
+}

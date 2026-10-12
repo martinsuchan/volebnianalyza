@@ -1,0 +1,20 @@
+{
+  "tight": {
+    "kontrola": "Rezervy ověřeny v seats.csv (hlasy_k_zisku, hlasy_k_ztrate) a simulací outcome() s přidáním/odebráním hlasů straně; souhrn bez konkrétního chybového okrsku, nepodložený žádnou zjištěnou chybou.",
+    "zjisteni": "Nejmenší rezerva v zastupitelstvu je 13 hlasů. KDU-ČSL (923 hlasů, 5,25 %) by s přírůstkem 13 hlasů získala první mandát na úkor SPOLEČNĚ (5 610 hlasů). Další hranice: ODS by musela ztratit 39 hlasů, MY 50 hlasů.",
+    "dopad": "KDU-ČSL 0 → 1, SPOLEČNĚ 6 → 5; zvolena by byla Zdenka Tyrpeklová (č. 5, KDU-ČSL) místo Pavla Koláře (č. 6, SPOLEČNĚ). Při ztrátě 39 hlasů ODS by Tyrpeklová nahradila Iva Kornatovského (č. 3, ODS). Nález je jen upozornění na těsnost; v datech nebyla zjištěna žádná chyba, která by o výsledku rozhodovala.",
+    "jistota": 1,
+    "dopad_kat": "Těsný výsledek"
+  },
+  "typos:souhrn": {
+    "kontrola": "Ověřeny všechny označené hodnoty: vektor HLASY_xx ve všech okrscích, bydliště kandidátů (rk.BYDLISTEN), spolubydlící na listině, rok 2022 a limit PL_HL_CELK ≤ PLAT_LISTKY × M.",
+    "zjisteni": "Všechny tři hodnoty mají logické vysvětlení. Iveta Mannová (č. 2, Nebřeziny) má 8–9 hlasů proti sousedům 22–28 ve dvou okrscích a 23 proti 45 ve třetím, tedy stabilně ~0,35 podílu sousedů; v roce 2022 měla v okrsku 2 normálních 29 hlasů. Pavlína Černá (č. 8, Babina) má v okrsku 4 27 hlasů při sousedech 4 a 2, ale v roce 2022 měla v témže okrsku 32 hlasů při sousedech 9 a 12 (v okrscích 2 a 3 vysokých 59 a 51). Václav Mour (č. 11, Horní Hradiště) má v okrsku 5 23 hlasů, stejně jako spoluobčané z Horního Hradiště (č. 1: 12, č. 3: 8, sousedé 3 a 4); jde o lokální blok voličů.",
+    "dukaz": "Opakování stejného vzorce v roce 2022 a/nebo v ostatních okrscích či u spolukandidátů ze stejné obce.",
+    "jistota": 1,
+    "dopad_kat": "Bez vlivu",
+    "dopad": "Žádný vliv na mandáty ani zvolené (simulace materiality: zmena_mandatu = False, zmena_zvolenych = False); nejde o chyby.",
+    "umysl": "Bez indikace – skutečná místní preference.",
+    "doporuceni": "Nález vyřadit.",
+    "vyradit": true
+  }
+}

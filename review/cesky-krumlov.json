@@ -1,0 +1,9 @@
+{
+  "tight": {
+    "kontrola": "Ověřeno v seats.csv (Koalice Č. Krumlov 8 666 hlasů, 3 mandáty) a simulací outcome() s odečtením 64 hlasů.",
+    "zjisteni": "Třetí mandát Koalice Č. Krumlov za podpory JIH 12, TOP 09, STAN drží o 63 hlasů; ANO 2011 by 6. mandát získalo po přírůstku 126 hlasů.",
+    "dopad": "Ztráta 64 hlasů by koalici vzala 3. mandát (3 → 2, nezvolený Milan Kotlár) a ANO 2011 by získalo 6. mandát (5 → 6, Jaroslav Brož). Rezerva odpovídá ~0,07 % hlasů, žádná chyba v datech nezjištěna.",
+    "dopad_kat": "Těsný výsledek",
+    "jistota": 1
+  }
+}
