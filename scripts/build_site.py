@@ -653,7 +653,7 @@ def page_home(AF):
 <p class="lead">Nezávislá analýza okrskových dat ČSÚ z voleb 9.–10. 10. 2026: komunální volby ve {nk_done} krajských městech,
 {no_done} dalších obcích s rozšířenou působností a {np_done} dalších obcích s pověřeným obecním úřadem a 1. kolo senátních voleb ve 27 obvodech. Hledáme chyby v zápisech okrskových komisí a známky manipulace a posuzujeme, zda mohly změnit výsledek.</p>
 <form class="searchbig" role="search" onsubmit="return false"><label class="vh" for="q-home">Najít obec, městskou část nebo senátní obvod</label>
-<input id="q-home" type="search" list="hledat-list" data-search placeholder="Najděte obec, městskou část nebo senátní obvod…" autocomplete="off"></form>
+<input id="q-home" type="search" data-search placeholder="Najděte obec, městskou část nebo senátní obvod…" autocomplete="off" enterkeyhint="search"></form>
 <div class="verdict"><p><strong>Závěr:</strong> V datech nejsou známky systematické ani koordinované manipulace; výsledky jsou ze součtu okrsků plně reprodukovatelné.
 Našli jsme ale konkrétní chyby v zápisech: v <strong>Praze 10</strong> překlep, který mění 2 mandáty, v <strong>Praze 15</strong> chybějící hlasy, které mohou změnit 1 mandát.
 V senátním obvodu <strong>Žďár nad Sázavou</strong> rozhodl o postupu do 2. kola jediný hlas.</p>{other_txt}</div>

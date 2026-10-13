@@ -17,8 +17,13 @@ header.top .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;pad
 nav.main{display:flex;flex-wrap:wrap;gap:4px 14px}nav.main a{color:var(--ink2);text-decoration:none;font-size:14px;padding:2px 0;border-bottom:2px solid transparent}
 nav.main a[aria-current]{color:var(--ink);border-bottom-color:var(--series-1)}
 .search{margin-left:auto}.search input,.searchbig input{font:inherit;font-size:14px;padding:6px 10px;border:1px solid var(--border);border-radius:8px;background:var(--page);color:var(--ink);width:230px}
-.searchbig{margin:14px 0}.searchbig input{width:100%;max-width:560px;font-size:17px;padding:10px 14px}
-@media (max-width:760px){.search{margin-left:0;width:100%}.search input{width:100%}}
+.search,.searchbig{position:relative}.searchbig{margin:14px 0}
+.sugg{position:absolute;left:0;right:0;top:100%;z-index:20;margin:4px 0 0;padding:4px 0;list-style:none;background:var(--surface);border:1px solid var(--border);
+border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.18);overflow-y:auto;min-width:260px;max-width:560px}
+.sugg li a{display:block;padding:8px 12px;color:var(--ink);text-decoration:none;font-size:14px;line-height:1.35}
+.sugg li.on a,.sugg li a:hover{background:var(--accent-bg)}.sugg li.empty{padding:8px 12px;color:var(--muted);font-size:14px}
+.search .sugg{left:auto;width:min(420px,92vw)}.searchbig input{width:100%;max-width:560px;font-size:17px;padding:10px 14px}
+@media (max-width:760px){.search{margin-left:0;width:100%}.search input{width:100%}.search .sugg{left:0;width:auto;max-width:none}}
 .crumbs{font-size:13px;color:var(--ink2);margin:16px 0 0}.crumbs a{color:var(--ink2)}
 .tabs{display:flex;gap:2px;border-bottom:1px solid var(--border);margin:12px 0 0;overflow-x:auto}
 .tabs a{padding:8px 12px;text-decoration:none;color:var(--ink2);border-bottom:2px solid transparent;white-space:nowrap;font-size:14.5px}
