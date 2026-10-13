@@ -86,7 +86,17 @@ def finding_links(r):
 # ------------------------------------------------------------------ grafy
 def year_counts(y):
     Ty = pd.read_pickle(f'{RES}/typos_{y}.pkl'); S = pd.read_pickle(f'{RES}/stacks_{y}.pkl'); Z = pd.read_pickle(f'{RES}/zeros_{y}.pkl')
-    _, t, _, _, _ = prep(y); t = t[t.TYPZASTUP == 1]
+    dy, t, _, _, _ = prep(y); t = t[t.TYPZASTUP == 1]
+    if len(Ty):  # stejná vyřazovací pravidla jako v registru (preference kandidátů, řádky s dírami) pro všechny roky
+        from findings_auto import excluded_typos, typo_key
+        ex = excluded_typos(dy, Ty)
+        Ty = Ty[np.array([typo_key(r) not in ex for r in Ty.itertuples()], dtype=bool)]
+    if y == Y and len(Ty):  # rok 2026: bez hodnot, které vyřadila kontrola v datech (review/<obec>.json)
+        rp = os.path.join(ROOT, 'review', f'{UNIT}.json')
+        rv = json.load(open(rp, encoding='utf-8')) if os.path.exists(rp) else {}
+        key = lambda r: f'typo:{r.OID}:{int(r.ZK)}:{int(r.strana)}:{int(r.porcislo)}'
+        souhrn_out = rv.get('typos:souhrn', {}).get('vyradit', False)
+        Ty = Ty[np.array([not rv.get(key(r), {}).get('vyradit', False) and not (souhrn_out and key(r) not in rv) for r in Ty.itertuples()], dtype=bool)]
     g = lambda D, c, v: int((D[c] == v).sum()) if len(D) and c in D else 0
     return dict(ins=g(Ty, 'typ', 'vlozena_cislice'), drop=g(Ty, 'typ', 'vypadla_cislice'), dip=g(Ty, 'typ', 'propad'),
                 stack=int((S.tri != 'slaby').sum()) if len(S) else 0, zero=int((Z.p_conservative < 1e-3).sum()) if len(Z) else 0,
@@ -102,7 +112,9 @@ def chart_years():
     tb = svg.table(['Typ'] + [str(y) for y in (2018, 2022, 2026)], [[c] + [YC[y][k] for y in (2018, 2022, 2026)] for c, k in zip(cats, keys)])
     return fig(f'Stejné detektory, tři volby – {MESTO}', 'Počet nálezů podle typu (' + ('město + ' + JED if HAS_MC else 'zastupitelstvo města') + '), komunální volby 2018, 2022 a 2026', ch,
                svg.legend([('2018', '--series-3', 'rect'), ('2022', '--series-2', 'rect'), ('2026', '--series-1', 'rect')]), tb,
-               'Roky 2018 a 2022 slouží jako kalibrační základna; data z nich neobsahují počet platných lístků, detektory jsou tam o něco citlivější na šum.')
+               'Počty zachycené detektory po automatickém vyřazení zjevných falešných poplachů (stejná pravidla pro všechny tři roky); u roku 2026 navíc bez hodnot, '
+               'které vyřadila kontrola v datech. Roky 2018 a 2022 kontrolou neprošly a slouží jako kalibrační základna; data z nich neobsahují počet platných lístků, '
+               'detektory jsou tam o něco citlivější na šum.')
 
 
 def chart_margins():

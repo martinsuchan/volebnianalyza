@@ -26,6 +26,18 @@ def typo_key(r):
     return f'{r.OID}|{int(r.ZK)}|{int(r.strana)}|{int(r.porcislo)}'
 
 
+def excluded_typos(d, T):
+    """Klíče „překlepů“, které registr vyřazuje: skutečná preference, běžné hodnoty řádku a řádky s dírami či neúplné řádky.
+    Používá se pro rok 2026 i pro srovnávací roky (graf „Stejné detektory, tři volby“), aby počty odpovídaly registru."""
+    from rows import detect as rows_detect, detect_holes
+    out = preference_typos(d, T)
+    if len(T):
+        RW, HW = rows_detect(d), detect_holes(d)
+        rp = set(zip(RW.ZK, RW.OID, RW.strana)) | set(zip(HW.ZK, HW.OID, HW.strana))
+        out |= {typo_key(r) for r in T.itertuples() if (int(r.ZK), r.OID, int(r.strana)) in rp}
+    return out
+
+
 def preference_typos(d, T):
     """„Vložené číslice“ u kandidátů, kteří mají výrazný preferenční náskok před sousedy na listině i v ostatních okrscích
     (medián poměru ≥ 1,5) – jde o skutečnou preferenci, ne o překlep (podnět z ruční kontroly Jihlavy)."""
@@ -222,7 +234,7 @@ def build():
         covered.add((r.ZK, r.OID))
     # 4) překlepy u kandidátů – jednotlivě, pokud mění zvolené, jinak souhrn
     T = pd.read_pickle(f'{RES}/typos_{Y}.pkl')
-    pref = preference_typos(d, T)
+    pref = preference_typos(d, T)  # + řádky z této jednotky (rowparty) níže; totéž dělá excluded_typos pro ostatní roky
     # „překlepy“ v řádcích s dírami nebo neúplných řádcích jsou artefakt nulových sousedů (kontrola Mostu)
     pref |= {typo_key(r) for r in T.itertuples() if (int(r.ZK), r.OID, int(r.strana)) in rowparty} if len(T) else set()
     json.dump(sorted(pref), open(f'{RES}/typos_preference_{Y}.json', 'w', encoding='utf-8'), ensure_ascii=False)  # vyřazené z překlepů
