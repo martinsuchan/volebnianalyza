@@ -1,0 +1,13 @@
+{
+ "typo:583588/4:58358801:3:15": {
+  "kontrola": "Roman Škoda (č. 15) má v okrsku 4 76 hlasů; ve stejném okrsku vyniká i č. 4 (103), v ostatních okrscích mají oba běžné hodnoty (34–45). Okrsek 4 je zjevně domovskou částí obou kandidátů – místní preference.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 4 hlasů, tj. hlasy 0,2 voliče při 21 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Roman Škoda (č. 15): vyřazeno při kontrole nálezů s dopadem – 15) má v okrsku 4 76 hlasů. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

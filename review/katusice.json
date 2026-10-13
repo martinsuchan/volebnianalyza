@@ -1,0 +1,9 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 27 hlasů, tj. hlasy 3,0 voliče při 9 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Bez nahlédnutí do zápisu nelze rozhodnout: Jan Brendl (č. 7): 25 hlasů (ostatní 65–169, oprava na 109 možná). Simulace oprav mandáty ani zvolené nemění.",
+  "jistota": 2
+ }
+}

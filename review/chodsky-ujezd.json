@@ -1,0 +1,17 @@
+{
+ "typo:560910/2:56091001:3:6": {
+  "kontrola": "Markéta Nekvapilová (č. 6) má v okrsku 2 (67 lístků) 42 hlasů, v okrsku 1 76 hlasů a v roce 2022 měla 144 hlasů. Odpovídá místní preferenci v její části obce.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 6 hlasů, tj. hlasy 0,4 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Markéta Nekvapilová (č. 6): vyřazeno při kontrole nálezů s dopadem – Odpovídá místní preferenci v její části obce.. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ },
+ "swap:560910/1:56091001:1:2": {
+  "kontrola": "Obec má 2 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí. Profil hlasů kandidátů záměnu nepotvrzuje (rozdíl odchylek pod 20 %).",
+  "vyradit": true
+ }
+}

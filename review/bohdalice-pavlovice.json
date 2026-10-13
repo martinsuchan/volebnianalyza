@@ -1,0 +1,17 @@
+{
+ "typo:592901/3:59290101:5:7": {
+  "kontrola": "Miroslava Sušanková (č. 7) má v okrsku 3 (83 lístků) 18 hlasů, lídr 15 a č. 5 12; hodnota jen mírně převyšuje ostatní a odpovídá preferenčnímu hlasování v malém okrsku.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 5 hlasů, tj. hlasy 0,5 voliče při 11 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech: 2 z 3 hodnot vysvětluje skutečná preference nebo nemožná oprava (Romana Vojtková (č. 4) je silný(á) i v okrsku 1 (37 hlasů, 2. na listině); Miroslava Sušanková (č. 7): vyřazeno při kontrole nálezů s dopadem – 5 12). Bez nahlédnutí do zápisu nelze rozhodnout: Lukáš Kuba (č. 4): 46 hlasů (ostatní 0–33), preference jinde ani v roce 2022 nedoložena. Simulace oprav mandáty ani zvolené nemění.",
+  "jistota": 2
+ },
+ "swap:592901/2:59290101:1:5": {
+  "kontrola": "Obec má 3 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí. Profil hlasů kandidátů záměnu nepotvrzuje (rozdíl odchylek pod 20 %).",
+  "vyradit": true
+ }
+}

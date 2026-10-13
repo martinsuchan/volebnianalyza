@@ -1,0 +1,13 @@
+{
+ "typo:584347/1:58434701:4:15": {
+  "kontrola": "Radim Šebesta (poslední, č. 15) má 147 hlasů, další kandidáti 37–143, lídr 127; hodnota leží v rozpětí listiny (preferenční hlasy pro posledního kandidáta jsou běžné).",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 44 hlasů, tj. hlasy 2,9 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Radim Šebesta (č. 15): vyřazeno při kontrole nálezů s dopadem – 15) má 147 hlasů, další kandidáti 37–143, lídr 127. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

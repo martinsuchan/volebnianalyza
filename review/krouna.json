@@ -1,0 +1,10 @@
+{
+ "typo:571661/4:57166101:3:3": {
+  "kontrola": "Michal Dubinec (č. 3) má v okrsku 4 39 hlasů; druhý nejvyšší počet na listině má i v okrscích 1 (81) a 2 (11). Konzistentní preference, ne překlep.",
+  "vyradit": true
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 2 hodnot: Ondřej Horváth (č. 6) je slabý(á) i v okrsku 4 (3 hlasů); Michal Dubinec (č. 3): vyřazeno při kontrole nálezů s dopadem – 3) má v okrsku 4 39 hlasů. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

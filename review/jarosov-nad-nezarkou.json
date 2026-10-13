@@ -1,0 +1,9 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 5 hlasů, tj. hlasy 0,3 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "missing:546500/4:54650001": {
+  "kontrola": "Ověřeno v datech: nízké využití hlasů v okrsku 4 (55 %) měl tento okrsek i v roce 2022 (53 %) – jde o místní zvyk volit jen několik kandidátů (v obci kandidují i tři samostatní nezávislí kandidáti), ne o nezapsané lístky.",
+  "vyradit": true
+ }
+}

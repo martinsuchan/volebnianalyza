@@ -44,7 +44,7 @@ def page(path, title, body, desc='', section=None, crumbs=None, tabs=None):
 <footer class="wrap foot">Autor: <a href="{AUTHOR_URL}">Martin Suchan</a>. Nezávislá analýza veřejných otevřených dat ČSÚ (stav k 11. 10. 2026),
 vytvořená s pomocí AI modelu Claude Opus 5.5; může obsahovat chyby. Statistické nálezy nejsou důkazem úmyslného jednání; označují místa,
 kde je vhodné ověřit originální zápisy okrskových komisí. Závazné jsou jen výsledky vyhlášené Státní volební komisí. Vygenerováno {GEN}.</footer>
-<div id="tip" role="tooltip" hidden></div><script src="{root}assets/hledat.js"></script><script src="{root}assets/app.js"></script></body></html>'''
+<div id="tip" role="tooltip" hidden></div><script src="{root}assets/app.js"></script></body></html>'''
     full = os.path.join(OUT, *path.split('/'))
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, 'w', encoding='utf-8').write(doc)
@@ -174,10 +174,12 @@ function hide(){t.hidden=true;}
 document.addEventListener('pointermove',function(e){var el=e.target.closest&&e.target.closest('[data-tip]');if(el)show(e,el);else hide();});
 document.addEventListener('focusin',function(e){var el=e.target.closest&&e.target.closest('[data-tip]');if(el)show(e,el);});
 document.addEventListener('focusout',hide);document.addEventListener('pointerleave',hide);})();
-(function(){var m=document.querySelector('meta[name=root]'),root=m?m.content:'',data=window.HLEDAT||[],MAX=8;
-/* vlastní našeptávač místo <datalist>: ve WebView (např. prohlížeč Facebooku na Androidu) se datalist rozbalí přes klávesnici celý */
+(function(){var m=document.querySelector('meta[name=root]'),root=m?m.content:'',data=null,idx=[],pend=[],MAX=8;
+/* vlastní našeptávač místo <datalist>: ve WebView (např. prohlížeč Facebooku na Androidu) se datalist rozbalí přes klávesnici celý;
+   rejstřík všech obcí (assets/hledat.js) se načte až při prvním použití vyhledávání */
 function norm(v){return v.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
-var idx=data.map(function(d){return norm(d[0]);});
+function need(cb){if(data){cb();return;}pend.push(cb);if(pend.length>1)return;var s=document.createElement('script');s.src=root+'assets/hledat.js';
+s.onload=function(){data=window.HLEDAT||[];idx=data.map(function(d){return norm(d[0]);});var p=pend;pend=[];p.forEach(function(f){f();});};document.head.appendChild(s);}
 function search(v){v=norm(v.trim());if(v.length<2)return[];var a=[],b=[],c=[],i,t,p;
 for(i=0;i<data.length;i++){t=idx[i];p=t.indexOf(v);if(p<0)continue;if(p===0)a.push(data[i]);else if(/[\s(–-]/.test(t.charAt(p-1)))b.push(data[i]);else c.push(data[i]);if(a.length>=MAX)break;}
 return a.concat(b,c).slice(0,MAX);}
@@ -188,11 +190,11 @@ function close(){box.hidden=true;act=-1;inp.setAttribute('aria-expanded','false'
 function mark(){[].forEach.call(box.children,function(li,k){li.classList.toggle('on',k===act);li.setAttribute('aria-selected',k===act?'true':'false');});
 if(act>=0){inp.setAttribute('aria-activedescendant',id+'-'+act);box.children[act].scrollIntoView({block:'nearest'});}else inp.removeAttribute('aria-activedescendant');}
 function fit(){var r=inp.getBoundingClientRect(),vv=window.visualViewport,h=vv?vv.height+vv.offsetTop:window.innerHeight;box.style.maxHeight=Math.max(120,h-r.bottom-12)+'px';}
-function render(){hits=search(inp.value);act=-1;box.innerHTML='';
+function render(){if(!data){need(render);return;}hits=search(inp.value);act=-1;box.innerHTML='';
 if(!hits.length){if(inp.value.trim().length>=2){var e=document.createElement('li');e.className='empty';e.textContent='Nic nenalezeno';box.appendChild(e);box.hidden=false;fit();}else close();return;}
 hits.forEach(function(d,k){var li=document.createElement('li'),a=document.createElement('a');li.id=id+'-'+k;li.setAttribute('role','option');a.href=root+d[1];a.textContent=d[0];a.tabIndex=-1;li.appendChild(a);box.appendChild(li);});
 box.hidden=false;inp.setAttribute('aria-expanded','true');fit();}
-inp.addEventListener('input',render);inp.addEventListener('focus',function(){if(inp.value.trim().length>=2)render();});
+inp.addEventListener('input',render);inp.addEventListener('focus',function(){need(function(){});if(inp.value.trim().length>=2)render();});
 inp.addEventListener('keydown',function(e){if(e.key==='ArrowDown'&&hits.length){e.preventDefault();act=(act+1)%hits.length;mark();}
 else if(e.key==='ArrowUp'&&hits.length){e.preventDefault();act=act<=0?hits.length-1:act-1;mark();}
 else if(e.key==='Enter'){e.preventDefault();var d=hits[act>=0?act:0];if(d)location.href=root+d[1];}else if(e.key==='Escape')close();});

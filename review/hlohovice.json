@@ -1,0 +1,13 @@
+{
+ "typo:559806/3:55980601:2:6": {
+  "kontrola": "Jan Simler (č. 6) má v okrsku 3 31 hlasů z 31 lístků, stejně jako č. 4 (31) a lídr (30): malá část obce volila tři místní kandidáty téměř jednomyslně. Hodnota se shoduje s dalšími kandidáty, nejde o vloženou číslici.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 4 hlasů, tj. hlasy 0,6 voliče při 7 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Jan Simler (č. 6): vyřazeno při kontrole nálezů s dopadem – Hodnota se shoduje s dalšími kandidáty, nejde o vloženou číslici.. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

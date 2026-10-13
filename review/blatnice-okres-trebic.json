@@ -1,0 +1,13 @@
+{
+ "typo:590321/1:59032101:3:1": {
+  "kontrola": "Lídr Ivo Papoušek má 142 hlasů (ostatní kandidáti 11–40) v obci s jediným okrskem; výraznou preferenci měl i v roce 2022 (71 hlasů proti 24–41 u ostatních). Skutečná preference lídra.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 6 hlasů, tj. hlasy 0,9 voliče při 7 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Ivo Papoušek (č. 1): vyřazeno při kontrole nálezů s dopadem – Lídr Ivo Papoušek má 142 hlasů (ostatní kandidáti 11–40) v obci s jediným okrskem. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

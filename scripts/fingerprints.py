@@ -62,6 +62,10 @@ def integer_pct(year, nsim=2000):
     sims = np.array([((100 * rng.binomial(n, p)) % n == 0).sum() for _ in range(nsim)])
     # leader share near integer (magistrát leader of the year)
     mag = ros[ros.KODZASTUP == MAGISTRAT].sort_values('HLASY_STR', ascending=False)
+    if not len(mag):  # řádné volby zrušené a opakované (např. 2018 → 26. 1. 2019): bez výsledků stran
+        return dict(turnout_integer_obs=obs, turnout_integer_exp=float(sims.mean()), turnout_integer_sd=float(sims.std()),
+                    turnout_integer_p=float((sims >= obs).mean()), leader='–', leader_near_integer=0, leader_near_integer_exp=0.0, leader_n=0,
+                    leader_binom_p=float('nan'))
     leader = int(mag.POR_STR_HL.iloc[0]); lname = mag.ZKRATKAO30.iloc[0]
     h = hl[(hl.TYPZASTUP == 1) & (hl.POR_STR_HL == leader)].set_index('OID').POC_HLASU
     T = t.set_index('OID').PL_HL_CELK

@@ -1,0 +1,13 @@
+{
+ "typo:549258/4:54925801:5:9": {
+  "kontrola": "Klára Kothánková (č. 9) má v okrsku 4 37 hlasů, nejvíc hlasů na listině má ale i v okrscích 2 (15) a 3 (26). Jde o skutečnou místní preferenci, ne o vloženou číslici.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 38 hlasů, tj. hlasy 2,5 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 4 hodnot: Eliška Lacinová (č. 5): 38 hlasů v rozpětí listiny (ostatní do 49); Jan Schánilec (č. 5): 28 hlasů v rozpětí listiny (ostatní do 40); Jitka Marková (č. 6): 40 hlasů v rozpětí listiny (ostatní do 51); Klára Kothánková (č. 9): vyřazeno při kontrole nálezů s dopadem – Jde o skutečnou místní preferenci, ne o vloženou číslici.. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

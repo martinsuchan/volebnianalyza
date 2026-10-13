@@ -1,0 +1,13 @@
+{
+ "typo:592188/1:59218801:4:14": {
+  "kontrola": "František Doboš (č. 14) má 29 hlasů; nejméně hlasů na listině měl i v roce 2022 (21 hlasů jako č. 15). Nízká hodnota je skutečná, nejde o propad.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 9 hlasů, tj. hlasy 0,6 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: František Doboš (č. 14): vyřazeno při kontrole nálezů s dopadem – 14) má 29 hlasů. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

@@ -2,11 +2,13 @@
 import json, os, sys
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(__file__))
-from common import ROOT, P, MAGISTRAT
+from common import ROOT, P, MAGISTRAT, MEMO
 
 
 def centroids():
-    gj = json.load(open(os.path.join(ROOT, 'data/raw/geo/vol_okrsky_2022g100.geojson'), encoding='utf8'))
+    if 'geo' not in MEMO:
+        MEMO['geo'] = json.load(open(os.path.join(ROOT, 'data/raw/geo/vol_okrsky_2022g100.geojson'), encoding='utf8'))
+    gj = MEMO['geo']
     rows = []
     for f in gj['features']:
         pr = f['properties']

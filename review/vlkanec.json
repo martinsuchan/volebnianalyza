@@ -1,0 +1,10 @@
+{
+ "typo:534579/1:53457901:2:9": {
+  "kontrola": "Irena Zdeňková (č. 9) má v okrsku 1 25 hlasů; nejvíc hlasů na listině má v okrsku 2 (56) a druhý nejvyšší v okrsku 3 (20). Konzistentní preference.",
+  "vyradit": true
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Irena Zdeňková (č. 9): vyřazeno při kontrole nálezů s dopadem – 9) má v okrsku 1 25 hlasů. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

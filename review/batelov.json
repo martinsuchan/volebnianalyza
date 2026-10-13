@@ -1,0 +1,13 @@
+{
+ "typo:586862/4:58686201:1:5": {
+  "kontrola": "Petr Maryška (č. 5) má v okrsku 4 18 hlasů z 58 lístků; silný je i v okrscích 2 (94), 5 (34) a 6 (33, druhý nejvyšší na listině). Konzistentní preference, nikoli překlep.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 45 hlasů, tj. hlasy 3,0 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Petr Maryška (č. 5): vyřazeno při kontrole nálezů s dopadem – 5) má v okrsku 4 18 hlasů z 58 lístků. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

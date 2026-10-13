@@ -1,0 +1,13 @@
+{
+ "typo:544744/2:54474401:1:4": {
+  "kontrola": "Josef Jáchim (č. 4) má v okrsku 2 43 hlasů; nejvíc hlasů na listině má i v okrscích 1 (85) a 3 (23). Konzistentní preference.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 11 hlasů, tj. hlasy 1,2 voliče při 9 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 3 hodnot: Josef Jáchim (č. 4): vyřazeno při kontrole nálezů s dopadem – 4) má v okrsku 2 43 hlasů; Jaroslav Kadleček (č. 5) je slabý(á) i v okrsku 1 (11 hlasů); Jan Koranda (č. 6) je silný(á) i v okrsku 1 (45 hlasů, 4. na listině). Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

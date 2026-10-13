@@ -1,0 +1,13 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 39 hlasů, tj. hlasy 2,6 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Josef Hýbl (č. 13) je silný(á) i v okrsku 8 (42 hlasů, 1. na listině). Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ },
+ "missing:535672/9:53567201": {
+  "kontrola": "Ověřeno v datech: v okrsku 9 připadá na platný lístek 59 % možných hlasů, v ostatních okrscích 81–95 % a v témže okrsku v roce 2022 87 %. Dvě nezávislé linie (okolí i rok 2022); kandidát č. 7 strany Srdcem pro Dobrovicko má 0 hlasů. Simulace rozdělení ~591 hlasů podle podílů i podle schodků stran mandáty nemění.",
+  "jistota": 3
+ }
+}

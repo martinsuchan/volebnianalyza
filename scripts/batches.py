@@ -3,12 +3,18 @@ import glob, os, sys
 import xml.etree.ElementTree as ET
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(__file__))
-from common import ROOT, RES, load
+from common import ROOT, RES, load, MEMO
 
 NS = '{http://www.volby.cz/kv/}'
 
 
 def parse():
+    if 'davky' not in MEMO:
+        MEMO['davky'] = _parse()
+    return MEMO['davky']
+
+
+def _parse():
     rows, votes = [], []
     for f in sorted(glob.glob(os.path.join(ROOT, 'data/raw/kv2026/davky/d*.xml'))):
         root = ET.parse(f).getroot()

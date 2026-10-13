@@ -1,0 +1,17 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 7 hlasů, tj. hlasy 0,8 voliče při 9 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: lídr kandidátky (Eva Bodenbergerová, 27 hlasů) – preference lídra. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ },
+ "swap:576450/1:57645001:1:4": {
+  "kontrola": "Obec má 3 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí. Profil preferenčních hlasů kandidátů je ale bližší prohozenému stavu (odchylka 1,50 proti 1,17), záměnu proto nelze zcela vyloučit; pravděpodobnější je místní rozložení voličů.",
+  "jistota": 1
+ },
+ "swap:576450/2:57645001:3:5": {
+  "kontrola": "Obec má 3 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí. Profil preferenčních hlasů kandidátů je ale bližší prohozenému stavu (odchylka 1,75 proti 0,89), záměnu proto nelze zcela vyloučit; pravděpodobnější je místní rozložení voličů.",
+  "jistota": 1
+ }
+}

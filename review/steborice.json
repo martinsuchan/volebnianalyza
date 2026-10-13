@@ -1,0 +1,10 @@
+{
+ "typo:510343/2:51034301:4:5": {
+  "kontrola": "Petr Wirkotsch (č. 5) má v okrsku 2 49 hlasů; nejvíc hlasů na listině má i v okrsku 3 (50). Konzistentní místní preference.",
+  "vyradit": true
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Petr Wirkotsch (č. 5): vyřazeno při kontrole nálezů s dopadem – 5) má v okrsku 2 49 hlasů. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

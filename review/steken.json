@@ -1,0 +1,10 @@
+{
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Jakub Poláček (č. 6) je slabý(á) i v okrsku 2 (0 hlasů). Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ },
+ "swap:551856/1:55185601:1:2": {
+  "kontrola": "Obec má 3 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí. Profil preferenčních hlasů kandidátů odpovídá vlastní straně (odchylka 0,88 proti 1,14 při prohození), prohozený zápis by nesl profil druhé strany.",
+  "vyradit": true
+ }
+}

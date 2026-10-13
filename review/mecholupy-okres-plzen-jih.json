@@ -1,0 +1,10 @@
+{
+ "typo:539716/1:53971601:1:4": {
+  "kontrola": "Oprava 19 → 63 by zvýšila využití hlasů na 98,3 % fyzického maxima okrsku (z 92,5 %), což je nepravděpodobné; nízký počet hlasů kandidátky je přirozenější vysvětlení než propad.",
+  "vyradit": true
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Jaroslava Haidingerová (č. 4): vyřazeno při kontrole nálezů s dopadem – Oprava 19 → 63 by zvýšila využití hlasů na 98,3 % fyzického maxima okrsku (z 92,5 %), což je nepravděpodobné. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

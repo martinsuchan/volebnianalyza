@@ -1,0 +1,9 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 37 hlasů, tj. hlasy 2,5 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "swap:540382/1:54038201:2:6": {
+  "kontrola": "Obec má 2 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí. Profil hlasů kandidátů záměnu nepotvrzuje (rozdíl odchylek pod 20 %).",
+  "vyradit": true
+ }
+}

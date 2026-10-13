@@ -1,0 +1,11 @@
+{
+ "typo:569348/1:56934801:1:2": {
+  "kontrola": "Pavel Ročeň (č. 2) má 39 hlasů, ostatní kandidáti listiny 70–136; v roce 2022 měl jako č. 2 94 hlasů, srovnatelně s ostatními (75–118). Oprava na 139 je aritmeticky možná (využití hlasů 90,5 % maxima), pokles obliby kandidáta ale vyloučit nelze.",
+  "jistota": 1,
+  "doporuceni": "Ověřit v zápisu okrskové komise hlasy kandidáta č. 2; bez zápisu jde jen o riziko, nikoli zjištěnou chybu."
+ },
+ "typos:souhrn": {
+  "kontrola": "Bez nahlédnutí do zápisu nelze rozhodnout: Pavel Ročeň (č. 2): 39 hlasů (ostatní 70–136, oprava na 139 možná). Simulace oprav mandáty ani zvolené nemění.",
+  "jistota": 2
+ }
+}

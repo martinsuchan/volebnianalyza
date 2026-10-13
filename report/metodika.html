@@ -8,8 +8,10 @@
 <main class="wrap"><nav class="crumbs" aria-label="Drobečková navigace"><a href="index.html">Přehled</a> › <span aria-current="page">Metodika</span></nav><h1>Metodika, zdroje a omezení</h1>
 <h2>1. Data</h2><p>Byla stažena kompletní okrsková data ČSÚ (věty T/3 – voliči, obálky, platné lístky, hlasy; věty HL – hlasy stran a všech kandidátů), registry stran a kandidátů
 a číselníky pro komunální volby 2018, 2022 a 2026; dále všech 165 průběžných XML dávek z volební noci 2026 (časy zpracování, příznak opakovaného zaslání) a hranice okrsků.
-Zpracována jsou krajská města a sídla všech obcí s rozšířenou působností a pověřených obecních úřadů (seznam na stránce <a href="kv/index.html">Komunální volby 2026</a>).
-U menších obcí s několika okrsky je srovnání se sousedními okrsky slabé; nálezy se tam opírají hlavně o vnitřní logiku zápisu a o rok 2022. Praha: 1 120 okrsků, Zastupitelstvo hl. m. Prahy (65 mandátů)
+Zpracovány jsou všechny obce, v nichž se volilo (seznam okresů a obcí na stránce <a href="kv/index.html">Komunální volby 2026</a>).
+U menších obcí s několika okrsky je srovnání se sousedními okrsky slabé a u obcí s jediným okrskem (asi 4 900 obcí) nemožné; nálezy se tam opírají o vnitřní logiku zápisu
+(aritmetika, součty stran a kandidátů, překlepy u kandidátů), nezávislý přepočet mandátů a rok 2022. Obce s méně než 4 okrsky mají vlastní stránku jen tehdy,
+když detektory něco našly; ostatní jsou řádkem v přehledu svého okresu (těsný výsledek a opravy během volební noci uvádí přímo tabulka okresu). Praha: 1 120 okrsků, Zastupitelstvo hl. m. Prahy (65 mandátů)
 a 57 zastupitelstev MČ; registr pražských nálezů byl jednotlivě ověřen v datech. U ostatních měst počítají stejné detektory a registr nálezů sestavuje šablona
 (<code>findings_auto.py</code>); kontrola jednotlivých nálezů v datech (prováděná AI modelem podle zadání <code>review/ZADANI.md</code>) se zapisuje do souborů <code>review/&lt;obec&gt;.json</code> a stav kontroly je uveden u každého nálezu. Metodika senátních voleb je popsána na <a href="senat/index.html#metodika">stránce Senátu</a>.</p>
 <h2>2. Deterministické kontroly integrity</h2><ul class="l">
@@ -25,7 +27,7 @@ a 57 zastupitelstev MČ; registr pražských nálezů byl jednotlivě ověřen v
 <li><strong>Chybějící balík lístků strany:</strong> medián hlasů kandidátů strany ≈ počet lístků s křížkem u strany; silný nález vyžaduje shodu deficitu strany a deficitu okrsku (dvě nezávislé linie důkazů).</li>
 <li><strong>Nulové hlasy</strong> strany při vysokém očekávání (vzor z případu NSS Blansko 2025), Poissonova pravděpodobnost s korekcí na overdisperzi.</li>
 <li><strong>Překlepy u kandidátů:</strong> hodnota se výrazně liší od sousedů na listině a jedna vložená/vypuštěná číslice ji vrací na jejich úroveň; <strong>propady</strong> uprostřed listiny jsou logicky nemožné, protože každý lístek s křížkem u strany přiděluje hlas všem kandidátům v pořadí do počtu mandátů (§ 40 odst. 2).</li>
-<li><strong>Prohozené strany</strong> (záměna hlasů dvou stran, která zlepší shodu s okolím o Δχ² &gt; 25), duplicitní vektory hlasů, preferenční výkyvy kandidátů, neplatné hlasy, rozdíl obálek, změna účasti oproti 2022.</li></ul>
+<li><strong>Prohozené strany</strong> (záměna hlasů dvou stran, která zlepší shodu s okolím o Δχ² &gt; 25; jen v obcích s alespoň 10 okrsky – v menších obcích tvoří okolí jiné místní části, kde mají místní kandidátky jiné voliče), duplicitní vektory hlasů, preferenční výkyvy kandidátů, neplatné hlasy, rozdíl obálek, změna účasti oproti 2022.</li></ul>
 <h2>4. Globální testy</h2><p>Klimkův otisk (účast × podíl), celá procenta (Kobak et al.), test poslední číslice (Beber & Scacco) včetně korekce na strukturu komunálních voleb, 2BL (Mebane), rozdělení účasti. Vše srovnáno s lety 2018 a 2022.</p>
 <h2>5. Materialita</h2><p>Každá detekovaná chyba byla „opravena“ na nejpravděpodobnější hodnotu (konzervativní i horní varianta) a pro dotčené zastupitelstvo byl znovu spočítán počet mandátů stran i pořadí zvolených kandidátů; vyhodnocena je změna oproti oficiálnímu výsledku. Navíc je pro každé zastupitelstvo spočítána nejmenší změna hlasů, která by mandáty změnila.</p>
 <h2>6. Škála jistoty a úmyslu</h2><p><strong>Jistota chyby</strong> vyjadřuje pravděpodobnost, že zveřejněný údaj neodpovídá skutečně odevzdaným hlasům. Je odvozena z počtu nezávislých linií důkazů, extrémnosti (z-skóre, p-hodnoty po korekci na overdisperzi) a z logických omezení volebního systému.
@@ -42,4 +44,4 @@ a 57 zastupitelstev MČ; registr pražských nálezů byl jednotlivě ověřen v
 <footer class="wrap foot">Autor: <a href="https://www.facebook.com/martinsuchan85">Martin Suchan</a>. Nezávislá analýza veřejných otevřených dat ČSÚ (stav k 11. 10. 2026),
 vytvořená s pomocí AI modelu Claude Opus 5.5; může obsahovat chyby. Statistické nálezy nejsou důkazem úmyslného jednání; označují místa,
 kde je vhodné ověřit originální zápisy okrskových komisí. Závazné jsou jen výsledky vyhlášené Státní volební komisí. Vygenerováno 11. 10. 2026.</footer>
-<div id="tip" role="tooltip" hidden></div><script src="assets/hledat.js"></script><script src="assets/app.js"></script></body></html>
+<div id="tip" role="tooltip" hidden></div><script src="assets/app.js"></script></body></html>

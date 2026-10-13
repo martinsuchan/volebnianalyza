@@ -1,0 +1,13 @@
+{
+ "typo:572152/2:57215201:1:3": {
+  "kontrola": "Michal Kropáček (č. 3) má v okrsku 2 21 hlasů z 37 lístků (lídr 15), v okrsku 1 29 hlasů. Malá místní část s preferencí místního kandidáta, překlep není pravděpodobný.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 16 hlasů, tj. hlasy 1,8 voliče při 9 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Michal Kropáček (č. 3): vyřazeno při kontrole nálezů s dopadem – Malá místní část s preferencí místního kandidáta, překlep není pravděpodobný.. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

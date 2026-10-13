@@ -7,7 +7,8 @@ from anomalies import prep
 import svg
 from svg import E, fmt
 from sablona import page as _page, fig, badge_j, badge_d, filters, write_assets, link, AUTHOR_URL, GEN, OUT, JLAB, DOPAD_RANK
-from units import units
+from units import units, okres_url, okres_label
+import unicodedata
 
 os.makedirs(os.path.join(OUT, 'assets'), exist_ok=True); os.makedirs(os.path.join(OUT, 'data'), exist_ok=True)
 MAGZK = MAGISTRAT * 100 + 1
@@ -427,8 +428,10 @@ def page_method():
     body = '''<h1>Metodika, zdroje a omezení</h1>
 <h2>1. Data</h2><p>Byla stažena kompletní okrsková data ČSÚ (věty T/3 – voliči, obálky, platné lístky, hlasy; věty HL – hlasy stran a všech kandidátů), registry stran a kandidátů
 a číselníky pro komunální volby 2018, 2022 a 2026; dále všech 165 průběžných XML dávek z volební noci 2026 (časy zpracování, příznak opakovaného zaslání) a hranice okrsků.
-Zpracována jsou krajská města a sídla všech obcí s rozšířenou působností a pověřených obecních úřadů (seznam na stránce <a href="kv/index.html">Komunální volby 2026</a>).
-U menších obcí s několika okrsky je srovnání se sousedními okrsky slabé; nálezy se tam opírají hlavně o vnitřní logiku zápisu a o rok 2022. Praha: 1 120 okrsků, Zastupitelstvo hl. m. Prahy (65 mandátů)
+Zpracovány jsou všechny obce, v nichž se volilo (seznam okresů a obcí na stránce <a href="kv/index.html">Komunální volby 2026</a>).
+U menších obcí s několika okrsky je srovnání se sousedními okrsky slabé a u obcí s jediným okrskem (asi 4 900 obcí) nemožné; nálezy se tam opírají o vnitřní logiku zápisu
+(aritmetika, součty stran a kandidátů, překlepy u kandidátů), nezávislý přepočet mandátů a rok 2022. Obce s méně než 4 okrsky mají vlastní stránku jen tehdy,
+když detektory něco našly; ostatní jsou řádkem v přehledu svého okresu (těsný výsledek a opravy během volební noci uvádí přímo tabulka okresu). Praha: 1 120 okrsků, Zastupitelstvo hl. m. Prahy (65 mandátů)
 a 57 zastupitelstev MČ; registr pražských nálezů byl jednotlivě ověřen v datech. U ostatních měst počítají stejné detektory a registr nálezů sestavuje šablona
 (<code>findings_auto.py</code>); kontrola jednotlivých nálezů v datech (prováděná AI modelem podle zadání <code>review/ZADANI.md</code>) se zapisuje do souborů <code>review/&lt;obec&gt;.json</code> a stav kontroly je uveden u každého nálezu. Metodika senátních voleb je popsána na <a href="senat/index.html#metodika">stránce Senátu</a>.</p>
 <h2>2. Deterministické kontroly integrity</h2><ul class="l">
@@ -444,7 +447,7 @@ a 57 zastupitelstev MČ; registr pražských nálezů byl jednotlivě ověřen v
 <li><strong>Chybějící balík lístků strany:</strong> medián hlasů kandidátů strany ≈ počet lístků s křížkem u strany; silný nález vyžaduje shodu deficitu strany a deficitu okrsku (dvě nezávislé linie důkazů).</li>
 <li><strong>Nulové hlasy</strong> strany při vysokém očekávání (vzor z případu NSS Blansko 2025), Poissonova pravděpodobnost s korekcí na overdisperzi.</li>
 <li><strong>Překlepy u kandidátů:</strong> hodnota se výrazně liší od sousedů na listině a jedna vložená/vypuštěná číslice ji vrací na jejich úroveň; <strong>propady</strong> uprostřed listiny jsou logicky nemožné, protože každý lístek s křížkem u strany přiděluje hlas všem kandidátům v pořadí do počtu mandátů (§ 40 odst. 2).</li>
-<li><strong>Prohozené strany</strong> (záměna hlasů dvou stran, která zlepší shodu s okolím o Δχ² &gt; 25), duplicitní vektory hlasů, preferenční výkyvy kandidátů, neplatné hlasy, rozdíl obálek, změna účasti oproti 2022.</li></ul>
+<li><strong>Prohozené strany</strong> (záměna hlasů dvou stran, která zlepší shodu s okolím o Δχ² &gt; 25; jen v obcích s alespoň 10 okrsky – v menších obcích tvoří okolí jiné místní části, kde mají místní kandidátky jiné voliče), duplicitní vektory hlasů, preferenční výkyvy kandidátů, neplatné hlasy, rozdíl obálek, změna účasti oproti 2022.</li></ul>
 <h2>4. Globální testy</h2><p>Klimkův otisk (účast × podíl), celá procenta (Kobak et al.), test poslední číslice (Beber & Scacco) včetně korekce na strukturu komunálních voleb, 2BL (Mebane), rozdělení účasti. Vše srovnáno s lety 2018 a 2022.</p>
 <h2>5. Materialita</h2><p>Každá detekovaná chyba byla „opravena“ na nejpravděpodobnější hodnotu (konzervativní i horní varianta) a pro dotčené zastupitelstvo byl znovu spočítán počet mandátů stran i pořadí zvolených kandidátů; vyhodnocena je změna oproti oficiálnímu výsledku. Navíc je pro každé zastupitelstvo spočítána nejmenší změna hlasů, která by mandáty změnila.</p>
 <h2>6. Škála jistoty a úmyslu</h2><p><strong>Jistota chyby</strong> vyjadřuje pravděpodobnost, že zveřejněný údaj neodpovídá skutečně odevzdaným hlasům. Je odvozena z počtu nezávislých linií důkazů, extrémnosti (z-skóre, p-hodnoty po korekci na overdisperzi) a z logických omezení volebního systému.
@@ -474,6 +477,18 @@ def page_data(extra=()):
     b = pd.read_pickle(f'{RES}/batches_2026.pkl'); b.to_csv(os.path.join(OUT, 'data/xml_davky_praha_2026.csv'), index=False, encoding='utf-8-sig'); files.append(('xml_davky_praha_2026.csv', 'Pražské záznamy z XML dávek volební noci'))
     pd.read_csv(f'{RES}/integrity.csv').to_csv(os.path.join(OUT, 'data/integrita_2018_2026.csv'), index=False, encoding='utf-8-sig'); files.append(('integrita_2018_2026.csv', 'Výsledky deterministických kontrol'))
     files += list(extra)
+    rows = []
+    for u in UL:
+        sm = summ_of(u) if u['kod'] != MAGISTRAT else None
+        rows.append(dict(kod=u['kod'], obec=u['nazev'], okres=u['okres_nazev'], kraj=u['kraj'], typ=u['typ'], okrsku=u['okrsku'], volicu=u['volicu'],
+                         ucast=round(u['ucast'], 4) if u['ucast'] is not None else None, mandatu=u['mandatu'], volby_konany=u['volby'],
+                         zpracovano=sm is not None or u['kod'] == MAGISTRAT, vlastni_stranka=u['stranka'], kandidatek=sm.get('kandidatek') if sm else None,
+                         nalezu=sm['nal'] if sm else None, nalezu_s_dopadem=sm['nal_vysl'] if sm else None, rozhodujici_rezerva_obec=sm.get('rez_obec') if sm else None,
+                         tesny_vysledek='tight' in klice(sm), opravy_v_noci='batches' in klice(sm), prepocet_mandatu_souhlasi=sm.get('rep_ok') if sm else None,
+                         rozhodl_los=bool(sm.get('los')) if sm else None,
+                         url=u['url']))
+    pd.DataFrame(rows).to_csv(os.path.join(OUT, 'data/obce_prehled_2026.csv'), index=False, encoding='utf-8-sig')
+    files.append(('obce_prehled_2026.csv', 'Všechny obce: okrsky, voliči, nálezy, rozhodující rezerva zastupitelstva obce, těsný výsledek, opravy během volební noci'))
     for u in UL:
         s = summ_of(u) if u['kod'] != MAGISTRAT and u['stav'] == 'hotovo' else None
         files += [tuple(x) for x in (s['files'] if s else [])]
@@ -527,7 +542,7 @@ def all_findings(SF):
         out.append(dict(gid=f'Praha {r.id}', volby='kv', uzemi='Praha', misto=misto, typ=r.typ, subjekt=str(r.subjekt), jistota=int(r.jistota),
                         dopad=r.dopad_kat, url=f'{PD}nalezy.html#{r.id}', kraj=PHA['kraj'], obec='krajske'))
     for u in UL:
-        s = summ_of(u) if u['kod'] != MAGISTRAT and u['stav'] == 'hotovo' else None
+        s = summ_of(u) if u['kod'] != MAGISTRAT and u['stav'] == 'hotovo' and u['stranka'] else None
         for f in (s['findings'] if s else []):
             misto = f['zastupitelstvo'] + (f' · okrsek {f["OID"].split("/")[1]}' if f['OID'].count('/') == 1 else f' ({f["MC"]})'[:140])
             out.append(dict(gid=f'{u["nazev"]} {f["id"]}', volby='kv', uzemi=u['nazev'], misto=f'{u["nazev"]} – {misto}', typ=f['typ'],
@@ -559,7 +574,7 @@ def page_all_findings(AF):
     body += filters('t-all', [
         ('volby', 'Volby', [('kv', 'Komunální 2026'), ('senat', 'Senát 2026')]),
         ('kraj', 'Kraj', sorted({(d['kraj'], d['kraj']) for d in AF if d['kraj']})),
-        ('obec', 'Obec', [('krajske', 'krajská města'), ('orp', 'obce s rozšířenou působností'), ('pou', 'obce s pověřeným obecním úřadem')]),
+        ('obec', 'Obec', OBEC_FILTR),
         ('uzemi', 'Území', sorted({(d['uzemi'], d['uzemi']) for d in AF})),
         ('jistota', 'Jistota alespoň', [(5, 'Jistá'), (4, 'Velmi vysoká'), (3, 'Vysoká'), (2, 'Střední')]),
         ('dopad', 'Dopad alespoň', [(3, 'Mění / může změnit výsledek'), (2, 'Těsný výsledek')])])
@@ -568,9 +583,42 @@ def page_all_findings(AF):
           crumbs=[('Přehled', 'index.html'), ('Všechny nálezy', None)])
 
 
+_SUMM = {}
+
+
 def summ_of(u):
-    p = os.path.join(ROOT, 'data', 'results', 'kv', u['slug'], 'summary.json')
-    return json.load(open(p, encoding='utf-8')) if os.path.exists(p) else None
+    if u['slug'] not in _SUMM:
+        p = os.path.join(ROOT, 'data', 'results', 'kv', u['slug'], 'summary.json')
+        _SUMM[u['slug']] = json.load(open(p, encoding='utf-8')) if os.path.exists(p) else None
+    return _SUMM[u['slug']]
+
+
+def norm(t):
+    return unicodedata.normalize('NFKD', t).encode('ascii', 'ignore').decode().lower()
+
+
+TYPLAB = {'krajske': 'krajské město', 'orp': 'ORP', 'pou': 'POU'}
+DRUH1 = {'města': 'město', 'obce': 'obec', 'městyse': 'městys'}
+OBEC_FILTR = [('krajske', 'krajská města'), ('orp', 'obce s rozšířenou působností'), ('pou', 'obce s pověřeným obecním úřadem'), ('obec', 'ostatní obce')]
+
+
+def typ_lab(u):
+    return TYPLAB.get(u['typ'], DRUH1[u.get('druh', 'obce')])
+
+
+def okresy():
+    G = {}
+    for u in UL:
+        G.setdefault(u['okres'], []).append(u)
+    return sorted(G.values(), key=lambda g: (g[0]['krajkod'], norm(g[0]['okres_nazev'])))
+
+
+def klice(s):
+    """Klíče nálezů obce (starší souhrny bez klíče: podle typu)."""
+    if not s:
+        return set()
+    return {f.get('klic') or ('tight' if f['typ'].startswith('Výsledek těsnější') else ('batches' if f['typ'].startswith('Opraveno během') else f['id']))
+            for f in s['findings']}
 
 
 def unit_summary(u):
@@ -587,59 +635,146 @@ def unit_summary(u):
 
 def page_kv_index():
     rows = ''
-    for u in sorted(UL, key=lambda u: (u['stav'] != 'hotovo', -u['volicu'])):
-        s = unit_summary(u)
+    for u in sorted((u for u in UL if u['stranka'] or u['typ'] != 'obec'), key=lambda u: (u['stav'] != 'hotovo', -u['volicu'])):
+        s = unit_summary(u) if u['stranka'] else None
         done = s is not None
         name = f'<a href="{link("kv/index.html", u["url"])}">{E(u["nazev"])}</a>' if done else E(u['nazev'])
         st = '<span class="st st-done">zpracováno</span>' if done else '<span class="st st-plan">v přípravě</span>'
         rez_txt = f'{n0(s["rez"])} hl. – {E(s["rez_z"])}' if done else '–'
         rows += (f'<tr id="u-{u["kod"]}" data-kraj="{E(u["kraj"])}" data-stav="{u["stav"]}" data-typ="{u["typ"]}"><td data-v="{E(u["nazev"])}">{name}'
-                 + {'krajske': ' <span class="sub">krajské město</span>', 'orp': ' <span class="sub">ORP</span>', 'pou': ' <span class="sub">POU</span>'}[u['typ']]
-                 + f'</td><td>{E(u["kraj"])}</td>'
+                 f' <span class="sub">{typ_lab(u)}</span></td><td><a href="{link("kv/index.html", okres_url(u))}">{E(u["okres_nazev"])}</a></td>'
                  f'<td class="num">{len(u["mc"])}</td><td class="num" data-v="{u["okrsku"]}">{n0(u["okrsku"])}</td><td class="num" data-v="{u["volicu"]}">{n0(u["volicu"])}</td>'
                  f'<td>{st}</td><td class="num" data-v="{s["nal_vysl"] if done else -1}">{s["nal_vysl"] if done else "–"}</td>'
                  f'<td class="num" data-v="{s["nal"] if done else -1}">{s["nal"] if done else "–"}</td>'
                  f'<td data-v="{s["rez"] if done else 1e9}">{rez_txt}</td></tr>')
-    n_done = sum(u['stav'] == 'hotovo' for u in UL)
+    orows = ''
+    for g in okresy():
+        u0 = g[0]; S = [summ_of(u) for u in g]
+        orows += (f'<tr data-kraj="{E(u0["kraj"])}"><td data-v="{E(norm(u0["okres_nazev"]))}"><a href="{link("kv/index.html", okres_url(u0))}">{E(okres_label(u0))}</a></td>'
+                  f'<td>{E(u0["kraj"])}</td><td class="num">{len(g)}</td><td class="num">{sum(u["stranka"] for u in g)}</td>'
+                  f'<td class="num">{sum(s["nal_vysl"] for u, s in zip(g, S) if s and u["stranka"])}</td><td class="num">{sum("tight" in klice(s) for s in S)}</td></tr>')
+    obce = [u for u in UL if u['volby']]
+    n_done = sum(u['stav'] == 'hotovo' for u in obce)
+    n_str = sum(u['stranka'] for u in UL)
     volicu_mil = f'{sum(u["volicu"] for u in UL) / 1e6:.1f}'.replace('.', ',')
     nk = sum(u['typ'] == 'krajske' for u in UL); no = sum(u['typ'] == 'orp' for u in UL); np_ = sum(u['typ'] == 'pou' for u in UL)
-    sk = f'{nk} krajských měst, {no} dalších obcí s rozšířenou působností (ORP) a {np_} dalších obcí s pověřeným obecním úřadem (POU)'
-    stav_txt = (f'Zpracováno je všech {sk}; ostatní obce mohou přibýt později.' if n_done == len(UL) else
-                f'Zpracováno {n_done} z {len(UL)} obcí ({sk}); ostatní připravujeme.')
+    nob = sum(u['typ'] == 'obec' for u in obce)
+    sk = f'{nk} krajských měst, {no} dalších obcí s rozšířenou působností (ORP), {np_} dalších obcí s pověřeným obecním úřadem (POU) a {n0(nob)} ostatních obcí'
+    stav_txt = (f'Zpracovány jsou všechny obce, v nichž se volilo: {sk}.' if n_done == len(obce) else
+                f'Zpracováno {n0(n_done)} z {n0(len(obce))} obcí ({sk}); ostatní připravujeme.')
+    bez = [u for u in UL if not u['volby']]
+    bez_txt = f' V {len(bez)} obcích se volby nekonaly ({", ".join(E(u["nazev"]) for u in bez)}).' if bez else ''
     body = f'''<h1>Komunální volby 2026</h1>
 <p class="lead">Forenzní analýza okrskových dat pro zastupitelstva obcí a jejich městských částí či obvodů. {stav_txt}
 Obec nebo městskou část najdete i vyhledáváním v záhlaví.</p>
 <div class="tiles">
-<div class="tile"><div class="l">Obcí</div><div class="v">{len(UL)}</div><div class="s">{nk} krajských měst + {no} ORP + {np_} POU, {n_done} zpracováno</div></div>
-<div class="tile"><div class="l">Okrsků</div><div class="v">{n0(sum(u["okrsku"] for u in UL))}</div><div class="s">ve sledovaných obcích</div></div>
+<div class="tile"><div class="l">Obcí</div><div class="v">{n0(len(obce))}</div><div class="s">{n0(n_str)} s vlastní stránkou, ostatní v přehledu okresu</div></div>
+<div class="tile"><div class="l">Okrsků</div><div class="v">{n0(sum(u["okrsku"] for u in UL))}</div><div class="s">ve všech obcích</div></div>
 <div class="tile"><div class="l">Městských částí / obvodů</div><div class="v">{sum(len(u["mc"]) for u in UL)}</div><div class="s">s vlastním zastupitelstvem</div></div>
-<div class="tile"><div class="l">Voličů</div><div class="v">{volicu_mil} mil.</div><div class="s">v seznamech sledovaných obcí</div></div>
+<div class="tile"><div class="l">Voličů</div><div class="v">{volicu_mil} mil.</div><div class="s">v seznamech</div></div>
 </div>
-<h2>Obce</h2><p class="sub">Nálezy s dopadem = mění nebo mohou změnit mandáty či zvolené kandidáty. Rozhodující rezerva = nejmenší počet hlasů, který by v některém
-zastupitelstvu obce změnil rozdělení mandátů nebo vedl k rovnosti rozhodované losem. Řadit lze kliknutím na záhlaví sloupce.</p>'''
-    body += filters('t-units', [('kraj', 'Kraj', sorted({(u['kraj'], u['kraj']) for u in UL})),
-                                ('typ', 'Obec', [('krajske', 'krajská města'), ('orp', 'obce s rozšířenou působností'), ('pou', 'obce s pověřeným obecním úřadem')]),
+<h2 id="okresy">Okresy</h2><p class="sub">Přehled okresu obsahuje všechny jeho obce včetně výsledků kontrol u obcí bez vlastní stránky. Těsné výsledky = zastupitelstva obcí,
+kde o mandátu rozhodlo nejvýše 30 hlasů nebo hlasy nejvýše 3 voličů.{bez_txt}</p>'''
+    body += filters('t-okresy', [('kraj', 'Kraj', sorted({(u['kraj'], u['kraj']) for u in UL}))])
+    body += ('<div class="card tw"><table id="t-okresy" class="sortable"><thead><tr><th>Okres</th><th>Kraj</th><th class="num">Obcí</th><th class="num">S vlastní stránkou</th>'
+             f'<th class="num">Nálezy s dopadem</th><th class="num">Těsné výsledky</th></tr></thead><tbody>{orows}</tbody></table></div>')
+    body += ('<h2 id="obce">Obce s vlastní stránkou</h2><p class="sub">Krajská města, obce s rozšířenou působností (ORP) a s pověřeným obecním úřadem (POU), obce se 4 a více okrsky '
+             'a menší obce, kde detektory něco našly. Nálezy s dopadem = mění nebo mohou změnit mandáty či zvolené kandidáty. Rozhodující rezerva = nejmenší počet hlasů, který by v některém '
+             'zastupitelstvu obce změnil rozdělení mandátů nebo vedl k rovnosti rozhodované losem. Řadit lze kliknutím na záhlaví sloupce.</p>')
+    body += filters('t-units', [('kraj', 'Kraj', sorted({(u['kraj'], u['kraj']) for u in UL})), ('typ', 'Obec', OBEC_FILTR),
                                 ('stav', 'Stav', [('hotovo', 'zpracováno'), ('pripravuje', 'v přípravě')])])
-    body += ('<div class="card tw"><table id="t-units" class="sortable"><thead><tr><th>Obec</th><th>Kraj</th><th class="num">MČ / MO</th><th class="num">Okrsků</th>'
+    body += ('<div class="card tw"><table id="t-units" class="sortable"><thead><tr><th>Obec</th><th>Okres</th><th class="num">MČ / MO</th><th class="num">Okrsků</th>'
              '<th class="num">Voličů</th><th>Stav</th><th class="num">Nálezy s dopadem</th><th class="num">Nálezů celkem</th><th>Rozhodující rezerva</th></tr></thead>'
              f'<tbody>{rows}</tbody></table></div>')
     body += ('<h2>Jak číst výsledky obce</h2><ul class="l"><li><strong>Přehled</strong> – závěr, registr nálezů obce, těsné výsledky a tabulka městských částí.</li>'
              '<li><strong>Nálezy</strong> – detail každého nálezu s důkazy, mírou jistoty, simulací dopadu a odkazy na volby.gov.cz.</li>'
-             '<li><strong>Mapa okrsků</strong> – kde se nálezy nacházejí.</li><li><strong>Forenzní testy</strong> – globální testy celé populace okrsků a srovnání s lety 2018 a 2022.</li></ul>')
-    _page('kv/index.html', 'Komunální volby 2026', body, 'Přehled obcí s forenzní analýzou komunálních voleb 2026', section='kv',
+             '<li><strong>Mapa okrsků</strong> – kde se nálezy nacházejí.</li><li><strong>Forenzní testy</strong> – globální testy celé populace okrsků a srovnání s lety 2018 a 2022.</li>'
+             '<li><strong>Přehled okresu</strong> – všechny obce okresu; u menších obcí bez vlastní stránky výsledky kontrol přímo v tabulce.</li></ul>')
+    _page('kv/index.html', 'Komunální volby 2026', body, 'Přehled okresů a obcí s forenzní analýzou komunálních voleb 2026', section='kv',
           crumbs=[('Přehled', 'index.html'), ('Komunální volby 2026', None)])
+
+
+def pct(v):
+    return f'{100 * v:.1f} %'.replace('.', ',') if v else '–'
+
+
+def page_okresy():
+    """Přehled okresu: všechny obce; menší obce bez vlastní stránky mají výsledky kontrol přímo v řádku (kotva #o-<kód obce>)."""
+    for g in okresy():
+        u0 = g[0]; path = okres_url(u0); lab = okres_label(u0)
+        rows = ''
+        for u in sorted(g, key=lambda u: norm(u['nazev'])):
+            sm = summ_of(u) if u['kod'] != MAGISTRAT else None
+            k = klice(sm)
+            nm = u['nazev'].replace(f' (okres {u["okres_nazev"]})', '').replace(f'okres {u["okres_nazev"]}, ', '')
+            vg = f'{VG_APP}!__1_{u["krajkod"]}_{u["okres"]}_{u["kod"]}'
+            name = f'<a href="{link(path, u["url"])}">{E(nm)}</a>' if u['stranka'] else E(nm)
+            pozn = []
+            if not u['volby']:
+                pozn.append('volby se nekonaly')
+            elif sm is None and u['kod'] != MAGISTRAT:
+                pozn.append('zatím nezpracováno')
+            if 'tight' in k:
+                pozn.append('těsný výsledek')
+            if 'batches' in k:
+                pozn.append('opraveno během volební noci')
+            if sm is not None and sm.get('los'):
+                pozn.append('o mandátu rozhodl los (shodný počet hlasů)')
+            if sm is not None and sm.get('rep_ok') is False:
+                pozn.append('přepočet mandátů se liší od oficiálního')
+            if sm is not None and not u['stranka'] and not pozn:
+                pozn.append('bez nálezu')
+            if u['kod'] == MAGISTRAT:
+                nal = f'<a href="{link(path, u["url"])}">registr Prahy</a>'
+            elif u['stranka'] and sm is not None:
+                nal = f'<a href="{link(path, u["url"].replace("index.html", "nalezy.html"))}">{sm["nal"]}</a>' if sm['nal'] else '0'
+                nal += f' <span class="sub">({sm["nal_vysl"]} s dopadem)</span>' if sm['nal_vysl'] else ''
+            else:
+                nal = '–'
+            rz = sm.get('rez_obec') if sm else None
+            rz_txt = '–' if rz is None else (f'<strong>{n0(rz)}</strong>' if 'tight' in k else n0(rz))
+            rows += (f'<tr id="o-{u["kod"]}" data-typ="{u["typ"]}"><td data-v="{E(norm(nm))}">{name}<br><span class="sub">{typ_lab(u)} · '
+                     f'<a href="{vg}" target="_blank" rel="noopener">výsledky na volby.gov.cz</a></span></td>'
+                     f'<td class="num">{u["okrsku"]}</td><td class="num" data-v="{u["volicu"]}">{n0(u["volicu"])}</td>'
+                     f'<td class="num" data-v="{u["ucast"] or 0}">{pct(u["ucast"])}</td>'
+                     f'<td class="num">{u["mandatu"]}</td><td class="num">{sm.get("kandidatek", "–") if sm else "–"}</td><td data-v="{sm["nal"] if sm else -1}">{nal}</td>'
+                     f'<td class="num" data-v="{rz if rz is not None else 1e9}">{rz_txt}</td><td>{", ".join(pozn)}</td></tr>')
+        S = [summ_of(u) for u in g]
+        n_str = sum(u['stranka'] for u in g)
+        nv = sum(s['nal_vysl'] for u, s in zip(g, S) if s and u['stranka'])
+        nt = sum('tight' in klice(s) for s in S)
+        body = f'''<h1>{E(lab)} – komunální volby 2026</h1>
+<p class="lead">Všech {len(g)} obcí okresu ({E(u0["kraj"])}). Obce s vlastní stránkou mají odkaz; u ostatních uvádí výsledky kontrol přímo tabulka.</p>
+<div class="tiles">
+<div class="tile"><div class="l">Obcí</div><div class="v">{len(g)}</div><div class="s">{n_str} s vlastní stránkou</div></div>
+<div class="tile"><div class="l">Okrsků</div><div class="v">{n0(sum(u["okrsku"] for u in g))}</div><div class="s">{n0(sum(u["volicu"] for u in g))} voličů</div></div>
+<div class="tile"><div class="l">Nálezy s dopadem</div><div class="v">{nv}</div><div class="s">mění / mohou změnit mandáty</div></div>
+<div class="tile"><div class="l">Těsné výsledky</div><div class="v">{nt}</div><div class="s">zastupitelstev obcí</div></div>
+</div>
+<p class="sub">U obcí bez vlastní stránky (méně než 4 okrsky a žádný nález) jsme ověřili aritmetiku zápisů, součty hlasů stran a kandidátů proti oficiálním výsledkům,
+nezávislý přepočet mandátů, překlepy u kandidátů a opakovaně zaslané okrsky z volební noci; srovnání se sousedními okrsky u obce s jediným okrskem možné není.
+Rozhodující rezerva = nejmenší počet hlasů, který by v zastupitelstvu obce změnil rozdělení mandátů nebo vedl k rovnosti rozhodované losem; <strong>tučně</strong> těsné výsledky
+(nejvýše 30 hlasů nebo hlasy nejvýše 3 voličů – každý volič má tolik hlasů, kolik je mandátů). Řadit lze kliknutím na záhlaví sloupce.</p>'''
+        body += filters('t-obce', [('typ', 'Obec', OBEC_FILTR)])
+        body += ('<div class="card tw"><table id="t-obce" class="sortable"><thead><tr><th>Obec</th><th class="num">Okrsků</th><th class="num">Voličů</th><th class="num">Účast</th>'
+                 '<th class="num">Mandátů</th><th class="num">Kandidátek</th><th>Nálezy</th><th class="num">Rozhodující rezerva (hlasů)</th><th>Poznámka</th></tr></thead>'
+                 f'<tbody>{rows}</tbody></table></div>')
+        _page(path, f'{lab} – komunální volby 2026', body, f'Forenzní audit komunálních voleb 2026 – všechny obce: {lab}', section='kv',
+              crumbs=[('Přehled', 'index.html'), ('Komunální volby 2026', 'kv/index.html'), (lab, None)])
 
 
 def page_home(AF):
     # na úvodní stránce: vše, co mění nebo může změnit výsledek; těsné výsledky jen pro Prahu, krajská města a Senát (ORP v registru)
-    top = [d for d in AF if DOPAD_RANK.get(d['dopad'], 1) >= 3 or (DOPAD_RANK.get(d['dopad'], 1) == 2 and d['obec'] not in ('orp', 'pou'))]
+    top = [d for d in AF if DOPAD_RANK.get(d['dopad'], 1) >= 3 or (DOPAD_RANK.get(d['dopad'], 1) == 2 and d['obec'] not in ('orp', 'pou', 'obec'))]
     n_done = sum(u['stav'] == 'hotovo' for u in UL)
     nk_done = sum(u['stav'] == 'hotovo' and u['typ'] == 'krajske' for u in UL)
     no_done = sum(u['stav'] == 'hotovo' and u['typ'] == 'orp' for u in UL)
     np_done = sum(u['stav'] == 'hotovo' and u['typ'] == 'pou' for u in UL)
+    nob_done = sum(u['stav'] == 'hotovo' and u['typ'] == 'obec' for u in UL)
+    nob_str = sum(u['stav'] == 'hotovo' and u['typ'] == 'obec' and u['stranka'] for u in UL)
     other_txt = ''
     for grp, lab, n in (('krajske', 'Ostatní krajská města', nk_done - 1), ('orp', 'Obce s rozšířenou působností', no_done),
-                        ('pou', 'Obce s pověřeným obecním úřadem', np_done)):
+                        ('pou', 'Obce s pověřeným obecním úřadem', np_done), ('obec', 'Ostatní obce s vlastní stránkou', nob_str)):
         oth = [d for d in AF if d['volby'] == 'kv' and d['uzemi'] != 'Praha' and d['obec'] == grp]
         if not oth:
             continue
@@ -650,22 +785,23 @@ def page_home(AF):
                          (' (viz tabulka níže)' if ov else ''))
                       + f'. Registry těchto obcí sestavuje šablona; jednotlivě v datech ověřeno (AI kontrolou) {n_ok} z {len(oth)} nálezů.</p>')
     body = f'''<h1>Forenzní audit voleb 2026</h1>
-<p class="lead">Nezávislá analýza okrskových dat ČSÚ z voleb 9.–10. 10. 2026: komunální volby ve {nk_done} krajských městech,
-{no_done} dalších obcích s rozšířenou působností a {np_done} dalších obcích s pověřeným obecním úřadem a 1. kolo senátních voleb ve 27 obvodech. Hledáme chyby v zápisech okrskových komisí a známky manipulace a posuzujeme, zda mohly změnit výsledek.</p>
+<p class="lead">Nezávislá analýza okrskových dat ČSÚ z voleb 9.–10. 10. 2026: komunální volby v {n0(n_done)} obcích ({nk_done} krajských městech,
+{no_done} dalších obcích s rozšířenou působností, {np_done} dalších obcích s pověřeným obecním úřadem a {n0(nob_done)} ostatních obcích) a 1. kolo senátních voleb ve 27 obvodech. Hledáme chyby v zápisech okrskových komisí a známky manipulace a posuzujeme, zda mohly změnit výsledek.</p>
 <form class="searchbig" role="search" onsubmit="return false"><label class="vh" for="q-home">Najít obec, městskou část nebo senátní obvod</label>
 <input id="q-home" type="search" data-search placeholder="Najděte obec, městskou část nebo senátní obvod…" autocomplete="off" enterkeyhint="search"></form>
 <div class="verdict"><p><strong>Závěr:</strong> V datech nejsou známky systematické ani koordinované manipulace; výsledky jsou ze součtu okrsků plně reprodukovatelné.
 Našli jsme ale konkrétní chyby v zápisech: v <strong>Praze 10</strong> překlep, který mění 2 mandáty, v <strong>Praze 15</strong> chybějící hlasy, které mohou změnit 1 mandát.
 V senátním obvodu <strong>Žďár nad Sázavou</strong> rozhodl o postupu do 2. kola jediný hlas.</p>{other_txt}</div>
 <div class="hubs">
-<a class="hub" href="kv/index.html"><h3>Komunální volby 2026 →</h3><p>Zpracováno {n_done} obcí – krajská města, obce s rozšířenou působností a s pověřeným obecním úřadem ({n0(sum(u["okrsku"] for u in UL if u["stav"] == "hotovo"))} okrsků).
-Seznam obcí s počty nálezů a rozhodujícími rezervami.</p></a>
+<a class="hub" href="kv/index.html"><h3>Komunální volby 2026 →</h3><p>Zpracováno {n0(n_done)} obcí ({n0(sum(u["okrsku"] for u in UL if u["stav"] == "hotovo"))} okrsků).
+Přehledy okresů a obcí s počty nálezů a rozhodujícími rezervami.</p></a>
 <a class="hub" href="senat/index.html"><h3>Senát 2026, 1. kolo →</h3><p>5 021 okrsků ve 27 obvodech, srovnání s komunálními volbami okrsek po okrsku.
 Proč bylo senátních obálek o 13 % méně a kde rozhodly jednotky hlasů.</p></a>
 <a class="hub" href="nalezy.html"><h3>Všechny nálezy →</h3><p>Společný registr {len(AF)} nálezů s filtrem podle voleb, území, jistoty a dopadu.</p></a>
 </div>
 <h2>Nálezy, které mění nebo mohou změnit výsledek, a těsné výsledky</h2>
-<p class="sub">Těsné výsledky v obcích s rozšířenou působností a s pověřeným obecním úřadem jsou v <a href="nalezy.html">registru všech nálezů</a> (filtr Dopad).</p>
+<p class="sub">Těsné výsledky v obcích s rozšířenou působností, s pověřeným obecním úřadem a v ostatních obcích jsou v <a href="nalezy.html">registru všech nálezů</a> (filtr Dopad)
+a v <a href="kv/index.html#okresy">přehledech okresů</a>.</p>
 <div class="card tw"><table class="sortable">{FIND_HEAD}<tbody>{findings_rows(top, "index.html")}</tbody></table></div>
 <p class="sub"><a href="nalezy.html">Zobrazit všech {len(AF)} nálezů →</a></p>
 <h2>O analýze</h2><ul class="l">
@@ -678,14 +814,16 @@ Proč bylo senátních obálek o 13 % méně a kde rozhodly jednotky hlasů.</p>
 def search_entries(AF, se_obvody):
     S = []
     for u in UL:
-        S.append((f'{u["nazev"]} – komunální volby' + ('' if u['stav'] == 'hotovo' else ' (v přípravě)'),
-                  u['url'] if u['stav'] == 'hotovo' else f'kv/index.html#u-{u["kod"]}'))
+        S.append((f'{u.get("nazev_plny", u["nazev"])} – komunální volby' + ('' if u['stav'] == 'hotovo' or not u['volby'] else ' (v přípravě)')
+                  + ('' if u['volby'] else ' (nekonaly se)'), u['url']))
+    for g in okresy():
+        S.append((f'{okres_label(g[0])} – přehled obcí', okres_url(g[0])))
     for u in UL:
         for m in u['mc']:
-            if u['stav'] == 'hotovo':
+            if u['stav'] == 'hotovo' and u['stranka']:
                 S.append((f'{m["nazev"]} – městská část ({u["nazev"]})', f'{u["url"].rsplit("/", 1)[0]}/index.html#mc-{m["kod"]}'))
             else:
-                S.append((f'{m["nazev"]} – městská část/obvod ({u["nazev"]}, v přípravě)', f'kv/index.html#u-{u["kod"]}'))
+                S.append((f'{m["nazev"]} – městská část/obvod ({u["nazev"]}, v přípravě)', u['url']))
     for o, nm in se_obvody:
         S.append((f'Senát – obvod {o} {nm}', f'senat/index.html#obvod-{o}'))
     for d in AF:
@@ -699,7 +837,7 @@ import build_senat
 se_files = build_senat.build(_page, fig, badge_j, badge_d, AUTHOR_URL)
 AF = all_findings(build_senat.findings())
 page_index(); page_findings(); page_map(); page_tests(); page_method(); page_data(se_files)
-page_kv_index(); page_all_findings(AF); page_home(AF)
+page_kv_index(); page_okresy(); page_all_findings(AF); page_home(AF)
 write_assets(search_entries(AF, [(int(o), n) for o, n in build_senat.obvn.items() if o in set(build_senat.t5.OBVOD)]))
 for old in ('mapa.html', 'testy.html', 'senat.html'):  # stránky z původní (jen pražské) struktury
     if os.path.exists(os.path.join(OUT, old)):

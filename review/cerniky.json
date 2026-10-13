@@ -1,0 +1,13 @@
+{
+ "typo:599301/1:59930101:1:4": {
+  "kontrola": "Pavel Poselt (č. 4) má 4 hlasy, ostatní 20–36; kandidátka má 5 kandidátů na 5 mandátů, lístků s křížkem u strany je tedy nejvýše 4 a ostatní hlasy jsou preferenční. Nízká obliba kandidáta je přirozené vysvětlení, doklad překlepu chybí.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 11 hlasů, tj. hlasy 2,2 voliče při 5 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Pavel Poselt (č. 4): vyřazeno při kontrole nálezů s dopadem – 4) má 4 hlasy, ostatní 20–36. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Luboš Gebhart (č. 3): 24 hlasů v rozpětí listiny (ostatní do 35). Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ },
+ "swap:544248/1:54424801:1:2": {
+  "kontrola": "Obec má 4 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí. Profil preferenčních hlasů kandidátů odpovídá vlastní straně (odchylka 0,80 proti 0,89 při prohození), prohozený zápis by nesl profil druhé strany.",
+  "vyradit": true
+ }
+}

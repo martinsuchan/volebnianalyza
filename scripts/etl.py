@@ -2,7 +2,7 @@
 import glob, os, sys
 import pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import P as OUT, MAGISTRAT
+from common import P as OUT, MAGISTRAT, MEMO
 
 RAW = os.path.join(os.path.dirname(__file__), '..', 'data', 'raw')
 
@@ -11,8 +11,11 @@ def rd(year, kind, name):
     f = glob.glob(os.path.join(RAW, f'kv{year}', pat, 'csv', name))[0]
     # celostátní tabulky se při zpracování mnoha obcí čtou opakovaně – mezipaměť v pickle (obnoví se při změně zdroje)
     cache = os.path.join(OUT, '..', '..', '_celostatni', f'kv{year}_{name}.pkl')
+    if ('kv', year, name) in MEMO:  # dávkový běh: tabulka už je v paměti (volající ji jen filtruje, nemění)
+        return MEMO[('kv', year, name)]
     if os.path.exists(cache) and os.path.getmtime(cache) >= os.path.getmtime(f):
-        return pd.read_pickle(cache)
+        MEMO[('kv', year, name)] = pd.read_pickle(cache)
+        return MEMO[('kv', year, name)]
     df = pd.read_csv(f, sep=';', encoding='cp1250', low_memory=False)
     os.makedirs(os.path.dirname(cache), exist_ok=True)
     df.to_pickle(cache)

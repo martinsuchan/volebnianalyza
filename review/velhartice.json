@@ -1,0 +1,9 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 44 hlasů, tj. hlasy 2,9 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 2 hodnot: lídr kandidátky (Lenka Horejšová, 25 hlasů) – preference lídra; Vladislav Vlach (č. 4) je silný(á) i v okrsku 2 (4 hlasů, 2. na listině). Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

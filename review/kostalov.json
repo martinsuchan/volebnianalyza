@@ -1,0 +1,10 @@
+{
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: lídr kandidátky (Alexandra Špačková, 27 hlasů) – preference lídra. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ },
+ "swap:577235/1:57723501:2:4": {
+  "kontrola": "Obec má 2 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí. Profil hlasů kandidátů záměnu nepotvrzuje (rozdíl odchylek pod 20 %).",
+  "vyradit": true
+ }
+}

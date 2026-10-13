@@ -62,11 +62,19 @@ def threshold_matters(V, NC, M, seats, p, do_prahu):
     return False
 
 
+SEAT_COLS = ['rok', 'ZK', 'zastupitelstvo', 'mandatu', 'strana', 'nazev', 'hlasy', 'ncand', 'pct_prep', 'pct_oficial', 'mand_vypocet', 'mand_oficial',
+             'hlasy_k_zisku', 'hlasy_k_ztrate', 'volici_k_zisku', 'volici_k_ztrate', 'do_prahu', 'prah_rozhoduje']
+CAND_COLS = ['rok', 'ZK', 'zastupitelstvo', 'strana', 'porcislo', 'jmeno', 'hlasy', 'prah_pref', 'rozdil_k_prahu', 'mandat_vypocet', 'mandat_oficial',
+             'preskoceni', 'poradi_vypocet', 'strana_mandatu']
+
+
 def run(year):
     d = load(year); ros, rk, cm = d['ros'], d['rk'], d['councils']
     rows, crows = [], []
     for zk, g in ros.groupby('ZK'):
         g = g[g.NCAND.fillna(0) > 0]
+        if not len(g) or g.HLASY_STR.isna().any():  # řádné volby zrušené a opakované (např. 2018 → 26. 1. 2019): bez výsledků
+            continue
         M = int(cm.MANDATY[zk]); V = dict(zip(g.POR_STR_HL, g.HLASY_STR.astype(int)))
         NC = dict(zip(g.POR_STR_HL, g.NCAND.astype(int)))
         seats, q, pct, lw, fl = allocate(V, NC, M)
@@ -98,7 +106,8 @@ def run(year):
                                   rozdil_k_prahu=int(r.POCHLASU) - thr, mandat_vypocet=r.PORCISLO in elected,
                                   mandat_oficial=r.MANDAT == 'A', preskoceni=r.PRESKOCENI,
                                   poradi_vypocet=order.index(r.PORCISLO) + 1, strana_mandatu=seats[p]))
-    return pd.DataFrame(rows), pd.DataFrame(crows)
+    S = pd.DataFrame(rows, columns=SEAT_COLS)
+    return S, pd.DataFrame(crows, columns=CAND_COLS)
 
 
 if __name__ == '__main__':

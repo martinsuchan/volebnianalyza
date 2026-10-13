@@ -1,0 +1,13 @@
+{
+ "typo:571083/1:57108301:4:1": {
+  "kontrola": "Lídr Lukáš Bouček má v okrsku 1 26 hlasů; nejvíc hlasů na listině má i v okrscích 2 (15), 3 (9) a 4 (32). Preference lídra.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 18 hlasů, tj. hlasy 2,0 voliče při 9 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Lukáš Bouček (č. 1): vyřazeno při kontrole nálezů s dopadem – Lídr Lukáš Bouček má v okrsku 1 26 hlasů. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 6 hlasů, tj. hlasy 0,9 voliče při 7 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: lídr kandidátky (Jiří Hándl, 29 hlasů) – preference lídra. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ },
+ "swap:546291/1:54629101:1:2": {
+  "kontrola": "Obec má 2 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí – stejná dvojice stran je v jiném okrsku obce „prohozená“ opačně, jde o rozložení voličů mezi částmi obce, ne o záměnu řádků.",
+  "vyradit": true
+ }
+}

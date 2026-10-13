@@ -9,12 +9,15 @@ Nezkontrolované nálezy jsou označeny stav_kontroly='automaticky'.
 import sys, os, json, re
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import RES, ROOT, load, MAGISTRAT, UNIT
+from common import RES, ROOT, load, MAGISTRAT, UNIT, druh as druh_zast
 
 Y = 2026
 JISTOTA = {5: 'Jistá (deterministický rozpor)', 4: 'Velmi vysoká (≥ 95 %)', 3: 'Vysoká (80–95 %)', 2: 'Střední (50–80 %)', 1: 'Nízká (< 50 %)'}
 MO_MESTA = {554821, 554791, 555134, 554804}  # Ostrava, Plzeň, Pardubice, Ústí n. L. mají městské obvody (MO)
 n0 = lambda v: f'{int(round(v)):,}'.replace(',', ' ')
+
+
+SWAP_MIN_OKRSKU = 10  # záměny stran se hledají jen v obcích s alespoň tolika okrsky
 
 
 def pl(n, one, few, many):
@@ -79,7 +82,7 @@ def build():
     d = load(Y); cm = d['councils']; ros = d['ros']; t3 = d['t3']
     jednotka = 'MO' if MAGISTRAT in MO_MESTA else 'MČ'
     mesto = cm.NAZEVZAST[MAGISTRAT * 100 + 1]
-    zname = lambda zk: 'Zastupitelstvo města' if int(zk) // 100 == MAGISTRAT else f'Zastupitelstvo {jednotka} {cm.NAZEVZAST[int(zk)]}'
+    zname = lambda zk: f'Zastupitelstvo {druh_zast()}' if int(zk) // 100 == MAGISTRAT else f'Zastupitelstvo {jednotka} {cm.NAZEVZAST[int(zk)]}'
     pname = ros.set_index(['ZK', 'POR_STR_HL']).ZKRATKAO30
     mcmap = t3.drop_duplicates('OID').set_index('OID').MC
     mat = pd.read_pickle(f'{RES}/materiality_{Y}.pkl')
@@ -221,6 +224,10 @@ def build():
     # 3c) záměna hlasů dvou stran
     W = pd.read_pickle(f'{RES}/swaps_{Y}.pkl')
     obal = t3.drop_duplicates('OID').set_index('OID').ODEVZ_OBAL
+    # v obcích s několika okrsky tvoří „okolí“ jiné místní části a kandidátky místních částí v nich přirozeně vítězí:
+    # kontrola 46 takových nálezů v obcích pod 10 okrsků žádnou záměnu nepotvrdila (13. 10. 2026)
+    if t3[t3.TYPZASTUP == 1].OID.nunique() < SWAP_MIN_OKRSKU:
+        W = W.iloc[:0]
     for r in (W[W.zisk_chi2 >= 60].itertuples() if len(W) else []):
         if (r.ZK, r.OID) in covered or obal.get(r.OID, 0) < 100:  # malé okrsky: časté falešné záměny (kontrola Ústí n. L.)
             continue
@@ -249,7 +256,7 @@ def build():
                       'Propad uprostřed listiny je logicky nemožný (lístek s křížkem u strany dává hlas všem kandidátům do počtu mandátů)',
                 jistota=3, umysl='Nízká – vzorec odpovídá překlepu', dopad=detail(m), dopad_kat=mat_kat(m), doporuceni='Ověřit zápis okrsku a hlasy kandidáta.')
     if len(T):
-        add(klic='typos:souhrn', typ='Překlepy a propady u hlasů kandidátů (souhrn)', ZK=0, OID='', MC='více částí města', zastupitelstvo='všechna zastupitelstva',
+        add(klic='typos:souhrn', typ='Překlepy a propady u hlasů kandidátů (souhrn)', ZK=0, OID='', MC='více částí města' if has_mc else 'více okrsků', zastupitelstvo='všechna zastupitelstva' if has_mc else f'zastupitelstvo {druh_zast()}',
             subjekt=f'{pl(len(T), "hodnota", "hodnoty", "hodnot")} v {pl(T.OID.nunique(), "okrsku", "okrscích", "okrscích")}',
             zjisteni=f'{(T.typ == "vlozena_cislice").sum()}× vložená číslice, {(T.typ == "vypadla_cislice").sum()}× vypadlá číslice, {(T.typ == "propad").sum()}× nelogický propad uprostřed listiny.',
             dukaz='U vložených/vypadlých číslic vrací úprava jedné číslice hodnotu sousedních kandidátů; propad uprostřed listiny je logicky nemožný.',
@@ -299,7 +306,7 @@ def build():
     if len(g):
         add(klic='gap', typ='Velký rozdíl vydaných a odevzdaných obálek', ZK=0, OID=', '.join(g.index), MC=', '.join(sorted(set(g.MC.astype(str)))),
             zastupitelstvo='všechna zastupitelstva', subjekt=f'{len(g)} okrsků ({int(g.gap.min())}–{int(g.gap.max())} obálek)',
-            zjisteni='Voliči převzali obálku, která v urně chybí.', dukaz='Poissonův test vůči průměru města', jistota=2,
+            zjisteni='Voliči převzali obálku, která v urně chybí.', dukaz=f'Poissonův test vůči průměru {druh_zast()}', jistota=2,
             umysl='Nelze posoudit z dat – voliči, kteří odešli, i chyba evidence', dopad='Výsledek okrsku neovlivňuje (hlasy odpovídají odevzdaným obálkám).',
             dopad_kat='Bez vlivu', doporuceni='Ověřit komentář komise v zápisu.')
     # 8) rozpory mezi lístkem města a MČ/MO (k ověření)
@@ -321,10 +328,10 @@ def build():
     # 9) těsné výsledky
     tight = fr[(fr.krit <= 30) | (fr.krit / fr.M <= 3)].sort_values('krit')  # do 30 hlasů nebo do 3 voličů se všemi hlasy
     if len(tight):
-        add(klic='tight', typ='Výsledek těsnější než běžná chybovost sčítání', ZK=0, OID='', MC=', '.join(tight.z), zastupitelstvo=f'zastupitelstva města a {jednotka}',
+        add(klic='tight', typ='Výsledek těsnější než běžná chybovost sčítání', ZK=0, OID='', MC=', '.join(tight.z), zastupitelstvo=f'zastupitelstva města a {jednotka}' if has_mc else f'zastupitelstvo {druh_zast()}',
             subjekt=pl(len(tight), 'zastupitelstvo', 'zastupitelstva', 'zastupitelstev'),
             zjisteni='O mandátu nebo 5% hranici rozhodlo jen několik hlasů: ' + ', '.join(
-                f'{r.z} ({"zastupitelstvo města" if int(r.Index) // 100 == MAGISTRAT else jednotka}, {r.M} mandátů) {pl(int(r.krit), "hlas", "hlasy", "hlasů")}'
+                f'{r.z} ({"zastupitelstvo " + druh_zast() if int(r.Index) // 100 == MAGISTRAT else jednotka}, {r.M} mandátů) {pl(int(r.krit), "hlas", "hlasy", "hlasů")}'
                 for r in tight.itertuples()) + '.',
             dukaz='Rezerva je menší než hlasy jednoho až dvou voličů; drobné chyby (±1–5 hlasů) nejsou statisticky viditelné.', jistota=1,
             umysl='Bez indikace', dopad='Mandát může změnit jakákoli drobná chyba v kterémkoli okrsku zastupitelstva.', dopad_kat='Těsný výsledek',

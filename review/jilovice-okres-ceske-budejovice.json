@@ -1,0 +1,11 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 12 hlasů, tj. hlasy 0,8 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "missing:544639/5:54463901": {
+  "kontrola": "Ověřeno v datech: v okrsku 5 připadá na lístek 57 % možných hlasů (ostatní okrsky 91–93 %); nízké bylo využití v tomto okrsku už v roce 2022 (70 %), část rozdílu je tedy místní zvyk. Při rozdělení ~482 hlasů podle schodků stran by se změnily mandáty (Jílovicko 9 → 8, Stačilo! 1 → 2); rozhodující rezerva je 12 hlasů.",
+  "jistota": 1,
+  "dopad_kat": "Může změnit mandáty",
+  "dopad": "Pokud by chybějící hlasy patřily stranám podle jejich schodku proti okolí, změnily by se mandáty (Jílovicko 9 → 8, Stačilo! 1 → 2); při rozdělení podle podílů se nemění. Rozhodující rezerva zastupitelstva je 12 hlasů."
+ }
+}

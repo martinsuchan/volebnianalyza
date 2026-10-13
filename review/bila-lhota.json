@@ -1,0 +1,10 @@
+{
+ "typo:500623/5:50062301:2:10": {
+  "kontrola": "Pavel Sedlář (č. 10) má v okrsku 5 69 hlasů; ve stejném okrsku mají vysoké hodnoty i další kandidáti listiny (č. 12 56, č. 1 50, č. 6 49). Vzorec odpovídá místním kandidátům této části obce, ne překlepu.",
+  "vyradit": true
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Pavel Sedlář (č. 10): vyřazeno při kontrole nálezů s dopadem – 10) má v okrsku 5 69 hlasů. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

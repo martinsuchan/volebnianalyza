@@ -1,0 +1,13 @@
+{
+ "typo:596647/3:59664701:4:13": {
+  "kontrola": "Pavel Bradáč (č. 13) má v okrsku 3 39 hlasů ze 44 lístků; v okrsku 2 má 27 hlasů (čtvrtý na listině). Odpovídá místní preferenci v malé části obce.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 1 hlasů, tj. hlasy 0,1 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 2 hodnot: Jana Mošnerová (č. 14): 22 hlasů v rozpětí listiny (ostatní do 21); Pavel Bradáč (č. 13): vyřazeno při kontrole nálezů s dopadem – 13) má v okrsku 3 39 hlasů ze 44 lístků. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

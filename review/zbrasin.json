@@ -1,0 +1,13 @@
+{
+ "typo:566977/2:56697701:1:1": {
+  "kontrola": "Lídryně Pavla Balážová má v okrsku 2 28 hlasů; nejvíc hlasů na listině má i v okrscích 1 (64) a 3 (41), v roce 2022 měla 73 hlasů. Preference lídryně.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 9 hlasů, tj. hlasy 1,0 voliče při 9 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech: 2 z 3 hodnot vysvětluje skutečná preference nebo nemožná oprava (Pavla Balážová (č. 1): vyřazeno při kontrole nálezů s dopadem – Lídryně Pavla Balážová má v okrsku 2 28 hlasů; Luděk Menzl (č. 5): 25 hlasů v rozpětí listiny (ostatní do 30)). Bez nahlédnutí do zápisu nelze rozhodnout: Radek Taraba (č. 9): 21 hlasů (ostatní 3–13), preference jinde ani v roce 2022 nedoložena. Simulace oprav mandáty ani zvolené nemění.",
+  "jistota": 2
+ }
+}

@@ -15,11 +15,19 @@ RES0 = os.path.join(ROOT, 'data', 'results')
 CITIES = {'praha': 554782, 'brno': 582786, 'ostrava': 554821, 'plzen': 554791, 'liberec': 563889, 'olomouc': 500496,
           'usti-nad-labem': 554804, 'hradec-kralove': 569810, 'ceske-budejovice': 544256, 'pardubice': 555134,
           'zlin': 585068, 'jihlava': 586846, 'karlovy-vary': 554961}
-_REG = os.path.join(P0, 'units_2026.json')  # registr jednotek (scripts/units.py) – doplní sídla ORP
+_REG = os.path.join(P0, 'units_2026.json')  # registr jednotek (scripts/units.py) – doplní ostatní obce
+DRUH = {}  # slug -> 'města' | 'obce' | 'městyse' (2. pád, „zastupitelstvo …“)
 if os.path.exists(_REG):
     import json as _json
     for _u in _json.load(open(_REG, encoding='utf-8')):
         CITIES.setdefault(_u['slug'], _u['kod'])
+        DRUH[_u['slug']] = _u.get('druh', 'města')
+MEMO = {}  # celostátní tabulky načtené v tomto procesu (dávkové zpracování obcí v run_obce.py)
+
+
+def druh():
+    """Druh zastupitelstva analyzované jednotky ve 2. pádě (zastupitelstvo obce / města / městyse)."""
+    return DRUH.get(UNIT, 'města')
 UNIT = os.environ.get('AUDIT_UNIT', 'praha')
 MAGISTRAT = CITIES[UNIT]  # kód zastupitelstva města (historický název z pražské verze)
 P = os.path.join(P0, 'kv', UNIT)
@@ -32,13 +40,18 @@ MAIN_DATE = {2018: 20181005, 2022: 20220923}
 def load(year):
     d = {k: pd.read_pickle(os.path.join(P, f'{k}_{year}.pkl'))
          for k in ('t3', 'hl', 'rz', 'ros', 'rk', 'cvs', 'cns')}
+    datum = MAIN_DATE.get(year)
+    if datum and 'DATUMVOLEB' in d['t3']:  # řádné volby se v obci nekonaly (nikdo nekandidoval) → nejbližší nové volby
+        dd = sorted(d['t3'][d['t3'].KODZASTUP == MAGISTRAT].DATUMVOLEB.dropna().unique())
+        if dd and datum not in dd:
+            datum = int(dd[0])
     if year in MAIN_DATE:  # drop repeated/supplementary elections
         for k in ('t3', 'hl', 'ros', 'rk'):
             if 'DATUMVOLEB' in d[k]:
-                d[k] = d[k][d[k].DATUMVOLEB == MAIN_DATE[year]].copy()
+                d[k] = d[k][d[k].DATUMVOLEB == datum].copy()
     rz = d['rz']
     if 'DATUMVOLEB' in rz:
-        rz = rz[rz.DATUMVOLEB == MAIN_DATE[year]]
+        rz = rz[rz.DATUMVOLEB == datum]
     d['rz'] = rz
     # council key ZK = KODZASTUP*100+COBVODU (Praha 9 had 2 electoral districts in 2018)
     rz = rz.copy()

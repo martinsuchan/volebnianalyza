@@ -1,0 +1,10 @@
+{
+ "typo:556335/1:55633501:2:4": {
+  "kontrola": "Milan Matas (č. 4) má nejméně hlasů na listině i v okrscích 2 (17), 3 (12) a 4 (2); nízká hodnota v okrsku 1 (11) je skutečná, nejde o propad.",
+  "vyradit": true
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Milan Matas (č. 4): vyřazeno při kontrole nálezů s dopadem – 4) má nejméně hlasů na listině i v okrscích 2 (17), 3 (12) a 4 (2). Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 15 hlasů, tj. hlasy 1,0 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Bez nahlédnutí do zápisu nelze rozhodnout: Jaromír Trnka (č. 7): 12 hlasů (ostatní 28–119, oprava na 49 možná). Simulace oprav mandáty ani zvolené nemění.",
+  "jistota": 2
+ }
+}

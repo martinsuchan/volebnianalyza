@@ -1,0 +1,13 @@
+{
+ "typo:566021/3:56602101:2:5": {
+  "kontrola": "Radek Růžička (č. 5) má v okrsku 3 26 hlasů (ostatní 5–16); nejvíc hlasů na listině má i v okrsku 5 (12, shodně s č. 1 a 2). Odpovídá místní preferenci v jeho části obce.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 5 hlasů, tj. hlasy 0,6 voliče při 9 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Radek Růžička (č. 5): vyřazeno při kontrole nálezů s dopadem – 5) má v okrsku 3 26 hlasů (ostatní 5–16). Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

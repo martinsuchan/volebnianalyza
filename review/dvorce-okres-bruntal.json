@@ -1,0 +1,13 @@
+{
+ "typo:597317/1:59731701:2:6": {
+  "kontrola": "Adriana Martínková (č. 6) má 29 hlasů, ostatní 53–109; hlasy na listině se liší převážně preferenčně (lístků s křížkem u strany je nejvýše 29), takže nižší obliba kandidátky je přirozené vysvětlení a propad není logicky nemožný.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 5 hlasů, tj. hlasy 0,6 voliče při 9 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Adriana Martínková (č. 6): vyřazeno při kontrole nálezů s dopadem – 6) má 29 hlasů, ostatní 53–109. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

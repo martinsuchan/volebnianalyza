@@ -1,0 +1,10 @@
+{
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Daniela Mazurová (č. 5): 41 hlasů v rozpětí listiny (ostatní do 75). Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ },
+ "swap:598968/5:59896801:2:6": {
+  "kontrola": "Obec má 5 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí. Profil preferenčních hlasů kandidátů odpovídá vlastní straně (odchylka 0,67 proti 0,71 při prohození), prohozený zápis by nesl profil druhé strany.",
+  "vyradit": true
+ }
+}

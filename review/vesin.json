@@ -1,0 +1,13 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 5 hlasů, tj. hlasy 0,5 voliče při 11 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Bořivoj Maule (č. 6) je slabý(á) i v okrsku 2 (26 hlasů). Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ },
+ "swap:541508/1:54150801:1:3": {
+  "kontrola": "Obec má 2 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí – stejná dvojice stran je v jiném okrsku obce „prohozená“ opačně, jde o rozložení voličů mezi částmi obce, ne o záměnu řádků.",
+  "vyradit": true
+ }
+}

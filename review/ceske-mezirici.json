@@ -1,0 +1,9 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 21 hlasů, tj. hlasy 1,4 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech: 1 z 2 hodnot vysvětluje skutečná preference nebo nemožná oprava (Petr Němeček (č. 11): 20 hlasů v rozpětí listiny (ostatní do 31)). Bez nahlédnutí do zápisu nelze rozhodnout: Jana Jančurová (č. 6): 3 hlasů (ostatní 5–36, oprava na 33 možná). Simulace oprav mandáty ani zvolené nemění.",
+  "jistota": 2
+ }
+}

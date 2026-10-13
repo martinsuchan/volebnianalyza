@@ -1,0 +1,13 @@
+{
+ "typo:589977/2:58997701:2:9": {
+  "kontrola": "Josef Sekanina (č. 9) má v okrsku 2 (40 lístků) 28 hlasů, v okrsku 1 72 hlasů; kandidátka je společná pro Rozstání a Baldovec a místní preference v menší části obce je přirozené vysvětlení.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 17 hlasů, tj. hlasy 1,9 voliče při 9 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 2 hodnot: Antonín Dvořák (č. 8): 29 hlasů v rozpětí listiny (ostatní do 31); Josef Sekanina (č. 9): vyřazeno při kontrole nálezů s dopadem – 9) má v okrsku 2 (40 lístků) 28 hlasů, v okrsku 1 72 hlasů. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

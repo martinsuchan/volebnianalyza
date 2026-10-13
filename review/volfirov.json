@@ -1,0 +1,9 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 12 hlasů, tj. hlasy 1,1 voliče při 11 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "swap:547441/3:54744101:1:4": {
+  "kontrola": "Obec má 4 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí. Profil preferenčních hlasů kandidátů odpovídá vlastní straně (odchylka 0,71 proti 0,71 při prohození), prohozený zápis by nesl profil druhé strany.",
+  "vyradit": true
+ }
+}

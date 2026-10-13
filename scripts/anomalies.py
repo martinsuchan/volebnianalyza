@@ -39,7 +39,8 @@ def precinct_metrics(year):
     m['gap'] = m.VYD_OBALKY - m.ODEVZ_OBAL
     m['inv_mag'] = 1 - m.PLAT_LISTKY / m.ODEVZ_OBAL
     m['inv_mc'] = 1 - m.PLAT_MC / m.ODEVZ_OBAL
-    m['vpb_mag'] = m.PL_HL_CELK / m.PLAT_LISTKY / int(t3[t3.TYPZASTUP == 1].MANDATY.iloc[0])  # mandáty zastupitelstva města (Praha 65)
+    mand = t3[t3.TYPZASTUP == 1].MANDATY  # mandáty zastupitelstva města (Praha 65); prázdné, pokud se v daném roce v obci nevolilo
+    m['vpb_mag'] = m.PL_HL_CELK / m.PLAT_LISTKY / (int(mand.iloc[0]) if len(mand) else np.nan)
     m['vpb_mc'] = m.PLHL_MC / m.PLAT_MC / m.M_MC
     m['d_valid'] = m.PLAT_LISTKY - m.PLAT_MC
     for col in ('turnout', 'inv_mag', 'inv_mc'):

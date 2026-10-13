@@ -1,0 +1,13 @@
+{
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 44 hlasů, tj. hlasy 2,9 voliče při 15 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech: 1 z 2 hodnot vysvětluje skutečná preference nebo nemožná oprava (Martin Minář (č. 4) je silný(á) i v okrsku 2 (5 hlasů, 6. na listině)). Bez nahlédnutí do zápisu nelze rozhodnout: Radek Bouda (č. 5): 32 hlasů (ostatní 5–20), preference jinde ani v roce 2022 nedoložena. Simulace oprav mandáty ani zvolené nemění.",
+  "jistota": 2
+ },
+ "swap:544426/1:54442601:1:5": {
+  "kontrola": "Obec má 7 okrsky; očekávání „podle sousedních okrsků“ vychází z jiných místních částí. Obě kandidátky jsou místní sdružení a v okrsku své části přirozeně vítězí. Profil preferenčních hlasů kandidátů odpovídá vlastní straně (odchylka 0,53 proti 0,58 při prohození), prohozený zápis by nesl profil druhé strany.",
+  "vyradit": true
+ }
+}

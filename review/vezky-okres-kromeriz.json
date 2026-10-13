@@ -1,0 +1,9 @@
+{
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Marek Sas (č. 5): 39 hlasů v rozpětí listiny (ostatní do 62). Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ },
+ "batches": {
+  "kontrola": "Ověřeno v XML dávkách volební noci: okrsek 1: zapsani volici 352 → 286. Finální data odpovídají poslední dávce; informativní nález bez vlivu."
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "typo:595403/1:59540301:1:4": {
+  "kontrola": "Oprava 13 → 84 by zvýšila platné hlasy nad fyzické maximum okrsku (lístky × mandáty, poměr 1,017), navrhovaná oprava proto není možná; nízký počet hlasů kandidátky je skutečný.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 25 hlasů, tj. hlasy 2,8 voliče při 9 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Kateřina Deiss (č. 4): vyřazeno při kontrole nálezů s dopadem – Oprava 13 → 84 by zvýšila platné hlasy nad fyzické maximum okrsku (lístky × mandáty, poměr 1,017), navrhovaná oprava proto není možná. Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

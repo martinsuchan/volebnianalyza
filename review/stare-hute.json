@@ -1,0 +1,13 @@
+{
+ "typo:592587/1:59258701:1:5": {
+  "kontrola": "Oprava 18 → 62 by zvýšila využití hlasů na 99,4 % fyzického maxima okrsku a hodnota 18 není výrazně pod dalšími kandidáty listiny (22, 24); nejde o propad.",
+  "vyradit": true
+ },
+ "tight": {
+  "kontrola": "Rezerva ověřena nezávislým přepočtem mandátů: rozhodlo 12 hlasů, tj. hlasy 1,7 voliče při 7 mandátech. Informativní nález – chyba v datech zjištěna není, výsledek je jen citlivý na drobné chyby sčítání."
+ },
+ "typos:souhrn": {
+  "kontrola": "Ověřeno v datech u všech 1 hodnot: Oldřich Jedlička (č. 5): vyřazeno při kontrole nálezů s dopadem – Oprava 18 → 62 by zvýšila využití hlasů na 99,4 % fyzického maxima okrsku a hodnota 18 není výrazně pod dalšími kandidáty listiny (22, 24). Hodnoty odpovídají skutečné preferenci kandidátů nebo navrhovaná oprava není možná – nejde o překlepy.",
+  "vyradit": true
+ }
+}

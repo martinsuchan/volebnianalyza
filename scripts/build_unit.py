@@ -7,12 +7,12 @@ a CSV do report/data/<slug>/.
 import sys, os, json, math, re
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import RES, P, ROOT, load, MAGISTRAT, HCOLS, UNIT
+from common import RES, P, ROOT, load, MAGISTRAT, HCOLS, UNIT, druh
 from anomalies import prep
 import svg
 from svg import E, fmt
 from sablona import page as _page, fig, badge_j, badge_d, filters, link, OUT, DOPAD_RANK
-from units import units
+from units import units, okres_url, okres_label
 from findings_auto import MO_MESTA
 
 Y = 2026
@@ -42,7 +42,8 @@ fr = s26.groupby('ZK').agg(z=('zastupitelstvo', 'first'), M=('mandatu', 'first')
 fr['thr'] = s26[s26.prah_rozhoduje].assign(a=lambda x: x.do_prahu.abs()).groupby('ZK').a.min()  # jen strany, jimž hranice mění mandáty
 fr['krit'] = fr[['gain', 'lose', 'thr']].min(axis=1); fr['vol'] = fr.krit / fr.M
 fr = fr.sort_values('vol')
-zlabel = lambda zk: f'{MESTO} (město)' if int(zk) == CITY_ZK else cm.NAZEVZAST[int(zk)]
+DRUH1 = {'města': 'město', 'obce': 'obec', 'městyse': 'městys'}[druh()]  # 1. pád do závorek a popisků
+zlabel = lambda zk: f'{MESTO} ({DRUH1})' if int(zk) == CITY_ZK else cm.NAZEVZAST[int(zk)]
 
 
 # ------------------------------------------------------------------ odkazy na volby.gov.cz
@@ -63,7 +64,7 @@ def vg_links(oid, zk=None, strana=None, both=False):
     kods = [MAGISTRAT] + ([mc_kod] if mc_kod else []) if both or zk is None else [int(zk) // 100]
     out = []
     for k in kods:
-        lab = 'město' if k == MAGISTRAT else JED
+        lab = DRUH1 if k == MAGISTRAT else JED
         s = f'<a href="{vg_url(k, okr)}" {A}>okrsek {okr} – {lab}</a>'
         if strana:
             s += f' · <a href="{vg_url(k, okr, strana)}" {A}>hlasy kandidátů strany č. {int(strana)}</a>'
@@ -110,7 +111,7 @@ def chart_years():
     keys = ['ins', 'drop', 'dip', 'stack', 'zero', 'gap', 'a2']
     ch = svg.hbars(cats, [(str(y), [YC[y][k] for k in keys]) for y in (2018, 2022, 2026)], ['--series-3', '--series-2', '--series-1'], label_w=270)
     tb = svg.table(['Typ'] + [str(y) for y in (2018, 2022, 2026)], [[c] + [YC[y][k] for y in (2018, 2022, 2026)] for c, k in zip(cats, keys)])
-    return fig(f'Stejné detektory, tři volby – {MESTO}', 'Počet nálezů podle typu (' + ('město + ' + JED if HAS_MC else 'zastupitelstvo města') + '), komunální volby 2018, 2022 a 2026', ch,
+    return fig(f'Stejné detektory, tři volby – {MESTO}', 'Počet nálezů podle typu (' + ('město + ' + JED if HAS_MC else f'zastupitelstvo {druh()}') + '), komunální volby 2018, 2022 a 2026', ch,
                svg.legend([('2018', '--series-3', 'rect'), ('2022', '--series-2', 'rect'), ('2026', '--series-1', 'rect')]), tb,
                'Počty zachycené detektory po automatickém vyřazení zjevných falešných poplachů (stejná pravidla pro všechny tři roky); u roku 2026 navíc bez hodnot, '
                'které vyřadila kontrola v datech. Roky 2018 a 2022 kontrolou neprošly a slouží jako kalibrační základna; data z nich neobsahují počet platných lístků, '
@@ -195,7 +196,7 @@ def chart_klimek():
         ymax = min(1.0, max(0.6, math.ceil(max(p[1] for p in pts) * 10) / 10)) if pts else 0.6
         out.append(svg.scatter(pts, xlabel='Volební účast', ylabel=f'Podíl {k["strana"][:22]}', ymax=ymax,
                                title=f'{y}: vítěz {k["strana"][:30]} (ρ = {k["spearman"]:.2f})'.replace('.', ',')))
-    return fig('Otisk volebních dat (Klimek et al.)', 'Každá tečka je okrsek: účast vs. podíl vítězné strany v zastupitelstvu města', f'<div class="two">{out[0]}{out[1]}</div>', '',
+    return fig('Otisk volebních dat (Klimek et al.)', 'Každá tečka je okrsek: účast vs. podíl vítězné strany v zastupitelstvu ' + druh(), f'<div class="two">{out[0]}{out[1]}</div>', '',
                note='Při vhazování lístků vzniká „ocas“ okrsků s extrémní účastí a extrémním podílem vítěze a druhý shluk u 100 %.')
 
 
@@ -208,14 +209,14 @@ def tests_tables():
          '<div class="tw"><table><thead><tr><th>Rok</th><th class="num">Účast = celé %</th><th class="num">Očekáváno</th><th class="num">p</th><th>Vítěz</th><th class="num">Podíl ≈ celé %</th><th class="num">Očekáváno</th><th class="num">p</th></tr></thead><tbody>'
          + ''.join('<tr>' + ''.join(f'<td{" class=num" if i not in (0, 4) else ""}>{E(str(c))}</td>' for i, c in enumerate(r)) + '</tr>' for r in rows) + '</tbody></table></div></figure>')
     g = lambda y, lab, key, f='{:.3f}': (f.format(dc[str(y)][lab][key]).replace('.', ',') if dc[str(y)].get(lab) and dc[str(y)][lab].get(key) is not None else '–')
-    trs = [('Poslední číslice – lídři kandidátek ≥ 100, město (p)', [g(y, 'magistrat', 'ld_c1_100_p') for y in (2018, 2022, 2026)])]
+    trs = [(f'Poslední číslice – lídři kandidátek ≥ 100, {DRUH1} (p)', [g(y, 'magistrat', 'ld_c1_100_p') for y in (2018, 2022, 2026)])]
     if HAS_MC:
         trs += [(f'Poslední číslice – lídři ≥ 100, {JED} (p)', [g(y, 'mc', 'ld_c1_100_p') for y in (2018, 2022, 2026)]),
                 (f'Poslední číslice – hlasy stran {JED} s počtem mandátů nedělitelným 5 (p)', [g(y, 'mc', 'ld_party_M_not5_p') for y in (2018, 2022, 2026)])]
     trs.append(('Poslední číslice – počty voličů, obálek, hlasů v zápisech (p)', [f'{fp[str(y)]["digits"]["t3"]["p"]:.3f}'.replace('.', ',') for y in (2018, 2022, 2026)]))
     # konkrétní odchylky roku 2026 (p < 0,01) s popisem nejčastější koncovky
     odch = []
-    cand = [('lídři kandidátek ≥ 100, město', (dc['2026'].get('magistrat') or {}).get('ld_c1_100_p'), (dc['2026'].get('magistrat') or {}).get('ld_c1_100')),
+    cand = [(f'lídři kandidátek ≥ 100, {DRUH1}', (dc['2026'].get('magistrat') or {}).get('ld_c1_100_p'), (dc['2026'].get('magistrat') or {}).get('ld_c1_100')),
             ('počty v zápisech', fp['2026']['digits']['t3']['p'], fp['2026']['digits']['t3']['last_digit'])]
     if HAS_MC:
         cand.append((f'lídři kandidátek ≥ 100, {JED}', (dc['2026'].get('mc') or {}).get('ld_c1_100_p'), (dc['2026'].get('mc') or {}).get('ld_c1_100')))
@@ -257,7 +258,7 @@ def map_svg(status):
 
 # ------------------------------------------------------------------ stránky
 def page(fn, title, body, desc=''):
-    crumbs = [('Přehled', 'index.html'), ('Komunální volby 2026', 'kv/index.html')]
+    crumbs = [('Přehled', 'index.html'), ('Komunální volby 2026', 'kv/index.html'), (okres_label(U), okres_url(U))]
     crumbs += [(MESTO, None)] if fn == 'index.html' else [(MESTO, PD + 'index.html'), (title, None)]
     _page(PD + fn, f'{title} – {MESTO}' if fn != 'index.html' else f'Komunální volby 2026 – {MESTO}', body, desc, section='kv', crumbs=crumbs, tabs=TABS)
 
@@ -291,16 +292,32 @@ def mc_table():
             '<th>Nálezy</th><th class="num">Překlepy u kandidátů</th><th class="num">Rozhodující rezerva (hlasů)</th></tr></thead><tbody>' + rows + '</tbody></table></div>')
 
 
+def prepocet():
+    """(souhlasí, zastupitelstva s losem): rozdíl jen mezi kandidátkami se shodným počtem hlasů znamená, že o mandátu rozhodl los,
+    který přepočet zopakovat nemůže."""
+    ok, los = True, []
+    for zk, g in s26.groupby('ZK'):
+        mm = g[g.mand_vypocet != g.mand_oficial]
+        if not len(mm):
+            continue
+        if mm.hlasy.nunique() == 1 and mm.mand_vypocet.sum() == mm.mand_oficial.sum():
+            los.append(zlabel(zk))
+        else:
+            ok = False
+    return ok, los
+
+
 def page_index():
     i26 = [x for x in integ if x['rok'] == Y][0]
     n_zast = 1 + len(U['mc'])
-    rep_ok = bool((s26.mand_vypocet == s26.mand_oficial).all())
+    rep_ok, los = prepocet()
+    los_txt = f' (v zastupitelstvu {", ".join(los)} rozhodl při shodném počtu hlasů o mandátu los)' if los else ''
     nv = F[F.dopad_kat.isin(['Mění mandáty', 'Mění zvolené', 'Může změnit mandáty'])] if len(F) else F
     nzk = int((F.stav_kontroly == 'zkontrolováno').sum()) if len(F) else 0
     tight = fr[(fr.krit <= 30) | (fr.vol <= 3)]
     pbad = [y for y in ('2026',) if fp[y]['integer']['turnout_integer_p'] < 0.0005 or (dc[y]['magistrat'] or {}).get('ld_c1_100_p', 1) < 0.0005
             or fp[y]['digits']['t3']['p'] < 0.0005]  # Bonferroniho korekce přes ~100 testů napříč městy
-    verdict = ('<p><strong>Závěr:</strong> ' + ('Celkové výsledky jsou plně reprodukovatelné z okrskových dat a nezávislý přepočet mandátů souhlasí u všech zastupitelstev. ' if rep_ok else
+    verdict = ('<p><strong>Závěr:</strong> ' + (f'Celkové výsledky jsou plně reprodukovatelné z okrskových dat a nezávislý přepočet mandátů souhlasí u všech zastupitelstev{los_txt}. ' if rep_ok else
                'Nezávislý přepočet mandátů se u některého zastupitelstva liší – viz nálezy. ')
                + ('Globální forenzní testy jsou v normě a srovnatelné s lety 2018 a 2022. ' if not pbad else 'Některý z globálních testů vykazuje odchylku – viz Forenzní testy. ') + '</p>')
     if len(nv):
@@ -310,7 +327,7 @@ def page_index():
     if len(tight):
         verdict += '<p><strong>Těsné výsledky:</strong> ' + ', '.join(f'{E(zlabel(z))} – rozhodlo {n0(r.krit)} hlasů' for z, r in tight.iterrows()) + '.</p>'
     body = f'''<h1>Komunální volby 2026 – {E(MESTO)}</h1>
-<p class="lead">Analýza všech {n0(i26["okrsku"])} volebních okrsků a {n0(i26["zaznamu_t3"])} okrskových zápisů (zastupitelstvo města{f" a {len(U['mc'])} zastupitelstev {JED_PL}" if U['mc'] else ""}),
+<p class="lead">Analýza všech {n0(i26["okrsku"])} volebních okrsků a {n0(i26["zaznamu_t3"])} okrskových zápisů (zastupitelstvo {druh()}{f" a {len(U['mc'])} zastupitelstev {JED_PL}" if U['mc'] else ""}),
 {n0(i26["stran_overeno"])} stranických a {n0(i26["kandidatu_overeno"])} kandidátních výsledků z otevřených dat ČSÚ, porovnaná s volbami 2018 a 2022.</p>
 <p class="sub">Nálezy vytvořily stejné detektory jako u Prahy a registr byl sestaven automaticky; {f"zkontrolováno {nzk} z {len(F)} nálezů (stav je uveden u každého nálezu)" if len(F) else "detektory v obci nenašly nic, co by bylo třeba ověřit"}.
 Každý nález obsahuje proklik na výsledky okrsku na volby.gov.cz.</p>
@@ -328,8 +345,8 @@ u nálezů bez určené strany srovnání rozsahu chyby s rozhodující rezervou
     body += chart_years() + chart_margins() + mc_table()
     body += '<h2>Co jsme ověřili</h2><ul class="l">' + ''.join(f'<li>{x}</li>' for x in [
         f'Součty okrsků proti oficiálním výsledkům u všech {n0(i26["stran_overeno"])} stran a {n0(i26["kandidatu_overeno"])} kandidátů (2026).',
-        'Nezávislý přepočet mandátů (5% klauzule s přepočtem pro neúplné kandidátky, d’Hondt, 10% preferenční pravidlo) ' + ('souhlasí u všech zastupitelstev.' if rep_ok else 'se u některého zastupitelstva liší.'),
-        'Aritmetika zápisů, shoda obálek mezi lístky, nulové a chybějící hlasy stran, chybějící balíky lístků, překlepy u kandidátů, rozdíly mezi lístky města a ' + JED + '.',
+        'Nezávislý přepočet mandátů (5% klauzule s přepočtem pro neúplné kandidátky, d’Hondt, 10% preferenční pravidlo) ' + (f'souhlasí u všech zastupitelstev{los_txt}.' if rep_ok else 'se u některého zastupitelstva liší.'),
+        'Aritmetika zápisů, shoda obálek mezi lístky, nulové a chybějící hlasy stran, chybějící balíky lístků, překlepy u kandidátů' + (', rozdíly mezi lístky města a ' + JED if HAS_MC else '') + '.',
         'Globální testy (Klimek, celá procenta, poslední číslice) a srovnání četnosti nálezů s lety 2018 a 2022.'
     ]) + '</ul>'
     page('index.html', 'Přehled', body, f'Forenzní audit komunálních voleb 2026 – {MESTO}')
@@ -402,25 +419,49 @@ def page_tests():
     page('testy.html', 'Forenzní testy', body, f'Globální forenzní testy – {MESTO}')
 
 
-def write_outputs():
-    od = os.path.join(OUT, 'data', UNIT); os.makedirs(od, exist_ok=True)
+STRANKA_OKRSKU = 4  # obce s menším počtem okrsků (typ 'obec') dostanou vlastní stránku jen s nálezem; jinak jsou řádkem v přehledu okresu
+INFORMATIVNI = ('tight', 'batches')  # těsný výsledek a opravy během volební noci ukáže tabulka okresu
+
+
+def ma_stranku():
+    if U['typ'] != 'obec' or U['okrsku'] >= STRANKA_OKRSKU:
+        return True
+    return bool(len(F)) and any(str(k) not in INFORMATIVNI for k in F.klic)
+
+
+def write_outputs(stranka=True):
+    od = os.path.join(OUT, 'data', UNIT)
     files = []
-    if len(F):
-        F.to_csv(os.path.join(od, 'nalezy_2026.csv'), index=False, encoding='utf-8-sig'); files.append((f'{UNIT}/nalezy_2026.csv', f'{MESTO}: registr nálezů'))
-    if len(T):
-        T.to_csv(os.path.join(od, 'preklepy_kandidati_2026.csv'), index=False, encoding='utf-8-sig'); files.append((f'{UNIT}/preklepy_kandidati_2026.csv', f'{MESTO}: překlepy a propady u kandidátů'))
-    seats.to_csv(os.path.join(od, 'mandaty_prepocet_2018_2026.csv'), index=False, encoding='utf-8-sig'); files.append((f'{UNIT}/mandaty_prepocet_2018_2026.csv', f'{MESTO}: přepočet mandátů a rezervy'))
-    pd.read_pickle(f'{RES}/precinct_{Y}.pkl').to_csv(os.path.join(od, 'okrsky_metriky_2026.csv'), encoding='utf-8-sig'); files.append((f'{UNIT}/okrsky_metriky_2026.csv', f'{MESTO}: metriky okrsků'))
+    if stranka:
+        os.makedirs(od, exist_ok=True)
+        if len(F):
+            F.to_csv(os.path.join(od, 'nalezy_2026.csv'), index=False, encoding='utf-8-sig'); files.append((f'{UNIT}/nalezy_2026.csv', f'{MESTO}: registr nálezů'))
+        if len(T):
+            T.to_csv(os.path.join(od, 'preklepy_kandidati_2026.csv'), index=False, encoding='utf-8-sig'); files.append((f'{UNIT}/preklepy_kandidati_2026.csv', f'{MESTO}: překlepy a propady u kandidátů'))
+        seats.to_csv(os.path.join(od, 'mandaty_prepocet_2018_2026.csv'), index=False, encoding='utf-8-sig'); files.append((f'{UNIT}/mandaty_prepocet_2018_2026.csv', f'{MESTO}: přepočet mandátů a rezervy'))
+        pd.read_pickle(f'{RES}/precinct_{Y}.pkl').to_csv(os.path.join(od, 'okrsky_metriky_2026.csv'), encoding='utf-8-sig'); files.append((f'{UNIT}/okrsky_metriky_2026.csv', f'{MESTO}: metriky okrsků'))
+    else:  # bez vlastní stránky: odstranit případné starší výstupy
+        import shutil
+        for d in (od, os.path.join(OUT, PD)):
+            shutil.rmtree(d, ignore_errors=True)
     nv = F[F.dopad_kat.isin(['Mění mandáty', 'Mění zvolené', 'Může změnit mandáty'])] if len(F) else F
-    summ = dict(kod=MAGISTRAT, slug=UNIT, nazev=MESTO, url=PD + 'index.html', nal=int(len(F)), nal_vysl=int(len(nv)),
+    c26 = ros[(ros.ZK == CITY_ZK) & (ros.NCAND.fillna(0) > 0)]
+    rk0 = fr.loc[CITY_ZK] if CITY_ZK in fr.index else None
+    summ = dict(kod=MAGISTRAT, slug=UNIT, nazev=MESTO, stranka=bool(stranka), url=PD + 'index.html' if stranka else '', nal=int(len(F)), nal_vysl=int(len(nv)),
                 nal_zkontrolovano=int((F.stav_kontroly == 'zkontrolováno').sum()) if len(F) else 0,
                 rez=float(fr.krit.iloc[0]) if len(fr) else None, rez_z=zlabel(fr.index[0]) if len(fr) else '',
+                # přehled okresu: údaje zastupitelstva obce
+                kandidatek=int(len(c26)), rep_ok=prepocet()[0], los=prepocet()[1],
+                preklepu=int(len(T)), rez_obec=float(rk0.krit) if rk0 is not None and rk0.krit == rk0.krit else None,
                 files=files,
-                findings=[dict(id=r.id, zastupitelstvo=r.zastupitelstvo, OID=str(r.OID), MC=str(r.MC), typ=r.typ, subjekt=str(r.subjekt), jistota=int(r.jistota),
-                               dopad_kat=r.dopad_kat, stav=r.stav_kontroly) for r in F.itertuples()] if len(F) else [])
+                findings=[dict(id=r.id, klic=str(r.klic), zastupitelstvo=r.zastupitelstvo, OID=str(r.OID), MC=str(r.MC), typ=r.typ, subjekt=str(r.subjekt), jistota=int(r.jistota),
+                               dopad_kat=r.dopad_kat, stav=r.stav_kontroly, zjisteni=str(r.zjisteni)) for r in F.itertuples()] if len(F) else [])
     json.dump(summ, open(f'{RES}/summary.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 
 if __name__ == '__main__':
-    page_index(); page_findings(); page_map(); page_tests(); write_outputs()
-    print('ok', UNIT, len(F))
+    st = ma_stranku()
+    if st:
+        page_index(); page_findings(); page_map(); page_tests()
+    write_outputs(st)
+    print('ok', UNIT, len(F), 'stránka' if st else 'jen přehled okresu')
