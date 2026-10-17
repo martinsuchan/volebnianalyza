@@ -15,6 +15,7 @@ Nezávislá analýza otevřených okrskových dat ČSÚ:
   - Praha má registr nálezů jednotlivě ověřený v datech.
   - U ostatních obcí registr sestavuje šablona; kontrolu jednotlivých nálezů v datech provádějí AI agenti podle `review/ZADANI.md` a zapisuje se do `review/<obec>.json`.
 - **Senátní volby 2026, 1. kolo:** 27 obvodů. Srovnání okrsek po okrsku s komunálními volbami konanými ve stejný den a se senátními volbami 2018, 2020 a 2022.
+- **Senátní volby 2026, 2. kolo (16.–17. 10.):** 22 obvodů. Reprodukce oficiálních výsledků, srovnání každého okrsku s 1. kolem a se 2. koly let 2018–2022.
 
 **Výstupy:**
 
@@ -22,7 +23,7 @@ Nezávislá analýza otevřených okrskových dat ČSÚ:
   - `kv/index.html` – přehled okresů a obcí s vlastní stránkou;
   - `kv/okres/<okres>.html` – všechny obce okresu s výsledky kontrol;
   - `kv/<obec>/` – stránky obce se záložkami Přehled, Nálezy, Mapa okrsků a Forenzní testy;
-  - `senat/index.html` – senátní volby;
+  - `senat/index.html` – senátní volby, 1. kolo; `senat/kolo2.html` – 2. kolo;
   - `nalezy.html` – společný registr všech nálezů s filtry;
   - `metodika.html` a `data.html`.
 - `report/manazersky_report.md` a `report/senat_manazersky_report.md` – manažerská shrnutí.
@@ -95,8 +96,8 @@ open report/index.html        # na Linuxu: xdg-open report/index.html
 | 3 | `anomalies.py`, `missing.py`, `stacks.py`, `typos.py` | prostorový model hlasů, chybějící balíky lístků, překlepy u kandidátů |
 | 4 | `batches.py`, `fingerprints.py` | XML dávky volební noci, globální forenzní testy |
 | 5 | `materiality.py`, `findings.py` / `findings_auto.py` | simulace oprav a dopadu na mandáty, registr nálezů (Praha ručně, ostatní šablonou) |
-| 6 | `se_etl.py`, `se_audit.py` | senátní volby: data, kontroly, srovnání s KV, testy |
-| 7 | `build_unit.py` (stránky měst), `build_site.py` (+ `build_senat.py`, `sablona.py`, `units.py`, `svg.py`) | generování statického webu: šablona stránek, registr obcí, grafy |
+| 6 | `se_etl.py`, `se_audit.py`, `se_kolo2.py` | senátní volby: data, kontroly, srovnání s KV, testy; 2. kolo (z CSV ČSÚ, dokud není zveřejněno, z XML dávek volební noci) |
+| 7 | `build_unit.py` (stránky měst), `build_site.py` (+ `build_senat.py`, `build_senat2.py`, `sablona.py`, `units.py`, `svg.py`) | generování statického webu: šablona stránek, registr obcí, grafy |
 
 `run_all.py` spouští kroky 1–5 pro každé město, pak krok 6 a 7. Navíc:
 

@@ -550,7 +550,7 @@ def all_findings(SF):
                             jistota=int(f['jistota']), dopad=f['dopad_kat'], url=f'kv/{u["slug"]}/nalezy.html#{f["id"]}', kraj=u['kraj'], obec=u['typ']))
     for f in SF:
         out.append(dict(gid=f'Senát {f["id"]}', volby='senat', uzemi='Senát 2026', misto=f['misto'], typ=f['typ'], subjekt='', jistota=int(f['jistota']),
-                        dopad=f['dopad'], url=f'senat/index.html#{f["id"]}', kraj='', obec=''))
+                        dopad=f['dopad'], url=f.get('url') or f'senat/index.html#{f["id"]}', kraj='', obec=''))
     out.sort(key=lambda d: (-DOPAD_RANK.get(d['dopad'], 1), -d['jistota']))
     return out
 
@@ -786,15 +786,17 @@ def page_home(AF):
                       + f'. Registry těchto obcí sestavuje šablona; jednotlivě v datech ověřeno (AI kontrolou) {n_ok} z {len(oth)} nálezů.</p>')
     body = f'''<h1>Forenzní audit voleb 2026</h1>
 <p class="lead">Nezávislá analýza okrskových dat ČSÚ z voleb 9.–10. 10. 2026: komunální volby v {n0(n_done)} obcích ({nk_done} krajských městech,
-{no_done} dalších obcích s rozšířenou působností, {np_done} dalších obcích s pověřeným obecním úřadem a {n0(nob_done)} ostatních obcích) a 1. kolo senátních voleb ve 27 obvodech. Hledáme chyby v zápisech okrskových komisí a známky manipulace a posuzujeme, zda mohly změnit výsledek.</p>
+{no_done} dalších obcích s rozšířenou působností, {np_done} dalších obcích s pověřeným obecním úřadem a {n0(nob_done)} ostatních obcích) a senátní volby (1. kolo ve 27 obvodech, 2. kolo 16.–17. 10. ve 22 obvodech). Hledáme chyby v zápisech okrskových komisí a známky manipulace a posuzujeme, zda mohly změnit výsledek.</p>
 <form class="searchbig" role="search" onsubmit="return false"><label class="vh" for="q-home">Najít obec, městskou část nebo senátní obvod</label>
 <input id="q-home" type="search" data-search placeholder="Najděte obec, městskou část nebo senátní obvod…" autocomplete="off" enterkeyhint="search"></form>
 <div class="verdict"><p><strong>Závěr:</strong> V datech nejsou známky systematické ani koordinované manipulace; výsledky jsou ze součtu okrsků plně reprodukovatelné.
 Našli jsme ale konkrétní chyby v zápisech: v <strong>Praze 10</strong> překlep, který mění 2 mandáty, v <strong>Praze 15</strong> chybějící hlasy, které mohou změnit 1 mandát.
-V senátním obvodu <strong>Žďár nad Sázavou</strong> rozhodl o postupu do 2. kola jediný hlas.</p>{other_txt}</div>
+V senátním obvodu <strong>Žďár nad Sázavou</strong> rozhodl o postupu do 2. kola jediný hlas; ve 2. kole (16.–17. 10.) tam zvítězil právě postupující Josef Klement. Data 2. kola jsou bez známek manipulace a výsledky všech 22 obvodů jsou ze součtu okrsků reprodukovatelné.</p>{other_txt}</div>
 <div class="hubs">
 <a class="hub" href="kv/index.html"><h3>Komunální volby 2026 →</h3><p>Zpracováno {n0(n_done)} obcí ({n0(sum(u["okrsku"] for u in UL if u["stav"] == "hotovo"))} okrsků).
 Přehledy okresů a obcí s počty nálezů a rozhodujícími rezervami.</p></a>
+<a class="hub" href="senat/kolo2.html"><h3>Senát 2026, 2. kolo →</h3><p>Zvolení senátoři ve 22 obvodech, srovnání každého okrsku s 1. kolem.
+Žďár nad Sázavou: vyhrál Josef Klement, který do 2. kola postoupil o jediný hlas.</p></a>
 <a class="hub" href="senat/index.html"><h3>Senát 2026, 1. kolo →</h3><p>5 021 okrsků ve 27 obvodech, srovnání s komunálními volbami okrsek po okrsku.
 Proč bylo senátních obálek o 13 % méně a kde rozhodly jednotky hlasů.</p></a>
 <a class="hub" href="nalezy.html"><h3>Všechny nálezy →</h3><p>Společný registr {len(AF)} nálezů s filtrem podle voleb, území, jistoty a dopadu.</p></a>
@@ -826,6 +828,8 @@ def search_entries(AF, se_obvody):
                 S.append((f'{m["nazev"]} – městská část/obvod ({u["nazev"]}, v přípravě)', u['url']))
     for o, nm in se_obvody:
         S.append((f'Senát – obvod {o} {nm}', f'senat/index.html#obvod-{o}'))
+        if o in set(build_senat2.V.OBVOD) if build_senat2.HAS else False:
+            S.append((f'Senát 2. kolo – obvod {o} {nm}', f'senat/kolo2.html#obvod-{o}'))
     for d in AF:
         S.append((f'{d["gid"]} – {d["typ"]} ({d["misto"]})', d['url']))
     S += [('Všechny nálezy', 'nalezy.html'), ('Metodika a zdroje', 'metodika.html'), ('Data ke stažení', 'data.html')]
@@ -835,7 +839,9 @@ def search_entries(AF, se_obvody):
 fig_years = chart_years(); fig_margins = chart_margins(); fig_intent = chart_intent()
 import build_senat
 se_files = build_senat.build(_page, fig, badge_j, badge_d, AUTHOR_URL)
-AF = all_findings(build_senat.findings())
+import build_senat2
+se_files += build_senat2.build(_page, fig, badge_j, badge_d, AUTHOR_URL)
+AF = all_findings(build_senat.findings() + build_senat2.findings())
 page_index(); page_findings(); page_map(); page_tests(); page_method(); page_data(se_files)
 page_kv_index(); page_okresy(); page_all_findings(AF); page_home(AF)
 write_assets(search_entries(AF, [(int(o), n) for o, n in build_senat.obvn.items() if o in set(build_senat.t5.OBVOD)]))

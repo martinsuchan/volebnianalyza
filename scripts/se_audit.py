@@ -310,10 +310,11 @@ def fingerprints(y):
 
 
 # ---------------------------------------------------------------- 5. XML dávky
-def batches():
+def batches(slozka='davky'):
+    """Záznamy okrsků z XML dávek volební noci (slozka 'davky' = 1. kolo, 'davky_k2' = 2. kolo)."""
     ns = {'s': 'http://www.volby.cz/senat/'}
     rows = []
-    for f in sorted(glob.glob(os.path.join(ROOT, 'data/raw/se2026/davky/d*.xml'))):
+    for f in sorted(glob.glob(os.path.join(ROOT, f'data/raw/se2026/{slozka}/d*.xml'))):
         r = ET.parse(f).getroot()
         d = r.find('s:DAVKA', ns)
         for ok in r.findall('s:OKRSEK', ns):

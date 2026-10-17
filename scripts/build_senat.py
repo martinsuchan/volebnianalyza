@@ -34,6 +34,7 @@ inv = pd.read_pickle(f'{RES}/se_invalid.pkl')
 bch = pd.read_pickle(f'{RES}/se_batch_changes.pkl')
 recsw = pd.read_pickle(f'{RES}/se_record_swaps.pkl')
 cand = {y: pd.read_pickle(f'{RES}/se_cand_{y}.pkl') for y in (2018, 2020, 2022, 2026)}
+V2 = pd.read_pickle(f'{RES}/se2_vysledky.pkl').set_index('OBVOD') if os.path.exists(f'{RES}/se2_vysledky.pkl') else None  # 2. kolo (se_kolo2.py)
 NAZ = x26.set_index('OID').NAZOBEC.to_dict()
 OBV = x26.set_index('OID').OBVOD.to_dict()
 
@@ -180,12 +181,13 @@ def findings():
                   hodnoceni='Nejpravděpodobnější vysvětlení: komise zapsala jako vydané senátní obálky všem voličům, i těm, kteří je odmítli. Sečtené hlasy to neovlivňuje. '
                             'Méně pravděpodobné, ale v těsném obvodu podstatné: část obálek nebyla započtena.',
                   doporuceni='Ověřit zápis okrskové komise v Šumvaldu (počet obálek v urně).', odkazy=links('505218/1') + '<br>' + dist_link(66)))
-    F.append(dict(id='S04', typ='Záměna okrskových zápisů', misto='Obvod Příbram (18), Příbram – okrsky 2 a 25', jistota=4, dopad='Bez vlivu',
+    F.append(dict(id='S04', typ='Záměna okrskových zápisů', misto='Obvod Příbram (18), Příbram – okrsky 2 a 25', jistota=5 if V2 is not None else 4, dopad='Bez vlivu',
                   zjisteni='Senátní výsledky okrsků 2 a 25 jsou zjevně prohozené: okrsek 2 má v senátních datech 492 zapsaných voličů, okrsek 25 má 719. '
                            'V komunálních volbách je to přesně naopak (724 a 492).',
                   dukaz='Historie potvrzuje komunální údaje: okrsek 2 měl 746 voličů (Senát 2020) a 740 (KV 2022), okrsek 25 525 a 518. '
                         'Sedí i vydané obálky: senátní okrsek 2 223 / komunální okrsek 25 226; senátní okrsek 25 263 / komunální okrsek 2 276.',
-                  hodnoceni='Logický rozpor potvrzený dvěma zdroji. Chyba nejspíš vznikla při zadání čísla okrsku.',
+                  hodnoceni='Logický rozpor potvrzený dvěma zdroji' + ('; potvrdilo ho i 2. kolo, kde má okrsek 2 722 a okrsek 25 493 zapsaných voličů (nález K2-02)' if V2 is not None else '') +
+                            '. Chyba nejspíš vznikla při zadání čísla okrsku.',
                   doporuceni='Opravit data okrsků (ČSÚ). Oba okrsky leží ve stejném obvodu, součty a výsledek se tedy nemění.',
                   odkazy=links('539911/2') + '<br>' + links('539911/25')))
     F.append(dict(id='S05', typ='Překlep v počtu vydaných obálek', misto='Obvod Frýdek-Místek (69), Frýdek-Místek – okrsek 33', jistota=3, dopad='Bez vlivu',
@@ -218,7 +220,9 @@ def findings():
                   zjisteni='V senátních datech je o 95–111 zapsaných voličů méně než v komunálních, přestože se oba seznamy liší jen občany EU (obvykle o 0–3 voliče).',
                   dukaz='Historie potvrzuje komunální údaje: Žatec 7 – Senát 2020 869, KV 2022 820, KV 2026 795, Senát 2026 693; Slušovice 2 – 1 295 / 1 287 / 1 274 / 1 163; '
                         'Ostrožská Nová Ves 2 – 1 189 / 1 174 / 1 142 / 1 042 (rozdíl jediné číslice); Příbram 21 – 657 / 637 / 658 / 563.',
-                  hodnoceni='Pravděpodobné chyby v údaji o zapsaných voličích v zápisu T/5. Ovlivňují jen vykázanou účast.', doporuceni='Opravit údaje (ČSÚ).',
+                  hodnoceni='Pravděpodobné chyby v údaji o zapsaných voličích v zápisu T/5. Ovlivňují jen vykázanou účast.' + (
+                      ' Zápisy 2. kola potvrdily komunální údaje v Žatci 7 (795), Slušovicích 2 (1 265) a Ostrožské Nové Vsi 2 (1 140); v Příbrami 21 mají obě kola Senátu shodně kolem 560 voličů, '
+                      'tam se chyba nepotvrdila (nález K2-02).' if V2 is not None else ''), doporuceni='Opravit údaje (ČSÚ).',
                   odkazy='<br>'.join(links(o) for o in ['566985/7', '585777/2', '592463/2', '539911/21'])))
     F.append(dict(id='S11', typ='Neobvykle nízký podíl senátních obálek', misto='Podlesí, Únanov, Tři Dvory a další', jistota=1, dopad='Bez vlivu',
                   zjisteni='V Podlesí (obvod 18) odevzdalo senátní obálku 76 % voličů komunálních voleb, v okolních okrscích 99,7 %. Podobně Únanov (77 % proti 94 %) a Tři Dvory (75 % proti 94 %).',
@@ -241,6 +245,8 @@ def districts_table(F):
     rows = ''
     for r in mg.sort_values('OBVOD').itertuples():
         res = f'{E(r.prvni)} zvolen v 1. kole' if r.zvolen_1k else f'postupují {E(r.prvni)} a {E(r.druhy)}'
+        if V2 is not None and r.OBVOD in V2.index:
+            res += f'<br><span class="sub">2. kolo: zvolen <a href="kolo2.html#obvod-{r.OBVOD}">{E(V2.vitez[r.OBVOD])}</a></span>'
         rez = (f'{n0(r.rozdil_nad_50)} nad 50 %' if r.zvolen_1k else f'{n0(r.rozdil_2_3)} (2. vs 3. místo)')
         rows += (f'<tr id="obvod-{r.OBVOD}"><td data-v="{r.OBVOD}">{r.OBVOD}</td><td data-v="{E(obvn[r.OBVOD])}"><a href="{se_url(r.OBVOD)}" {A}>{E(obvn[r.OBVOD])}</a></td>'
                  f'<td>{res}</td><td class="num" data-v="{r.presun_50 if r.zvolen_1k else r.rozdil_2_3}">{rez}</td>'
@@ -332,7 +338,7 @@ def build(page, fig, badge_j, badge_d, AUTHOR_URL):
                     f'<dt>Doporučení</dt><dd>{E(f["doporuceni"])}</dd><dt>Ověřit na volby.gov.cz</dt><dd>{f["odkazy"]}</dd></dl></article>' for f in F)
     rmin, rmax = dist.r.min(), dist.r.max()
     n_ok = len(t5)
-    body = f'''<p class="kicker">Senát 2026 · souvisí s <a href="../kv/index.html">komunálními volbami 2026</a></p>
+    body = (('<div class="card" style="margin-top:16px"><strong>2. kolo (16.–17. 10. 2026):</strong> <a href="kolo2.html">výsledky a forenzní audit 2. kola →</a></div>') if V2 is not None else '') + f'''<p class="kicker">Senát 2026 · souvisí s <a href="../kv/index.html">komunálními volbami 2026</a></p>
 <h1>Senátní volby 2026, 1. kolo: forenzní audit a srovnání s komunálními volbami</h1>
 <p class="lead">Analýza všech {n0(n_ok)} okrsků ve 27 senátních obvodech (9.–10. 10. 2026), {len(rk)} kandidátů a 156 XML dávek volební noci,
 porovnaná okrsek po okrsku s komunálními volbami konanými ve stejný den a se senátními volbami 2018, 2020 a 2022.</p>

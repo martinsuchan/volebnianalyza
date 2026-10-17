@@ -18,7 +18,7 @@ from common import CITIES
 
 KV_STEPS = ['etl', 'geo', 'integrity', 'seats', 'anomalies', 'missing', 'stacks', 'year2018', 'typos', 'batches',
             'fingerprints', 'materiality', 'findings', 'build_unit']
-GLOBAL_STEPS = ['se_etl', 'se_audit', 'build_site']
+GLOBAL_STEPS = ['se_etl', 'se_audit', 'se_kolo2', 'build_site']
 
 
 def year2018():

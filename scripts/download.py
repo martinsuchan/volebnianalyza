@@ -5,7 +5,7 @@ Použití:  python scripts/download.py [--force]
 Stahuje (jen standardní knihovna Pythonu):
   - okrskové CSV, registry a číselníky KV 2018, 2022, 2026 a Senátu 2018, 2020, 2022, 2026
     (názvy souborů se zjišťují z indexových stránek volby.gov.cz/opendata, protože ČSÚ při opravách dat mění datum v názvu)
-  - XML dávky volební noci 2026 (KV i Senát, 1. kolo)
+  - XML dávky volební noci 2026 (KV, Senát 1. a 2. kolo) a souhrnné výsledky Senátu 2026 (vysledky.xml, obě kola)
   - hranice volebních okrsků 2022 (GeoJSON)
 Již stažené soubory se přeskakují (--force je stáhne znovu).
 """
@@ -31,7 +31,10 @@ DATASETS = [  # (složka v data/raw, indexová stránka otevřených dat)
 BATCHES = [  # (cílová složka, URL dávky se zástupným číslem)
     ('kv2026/davky', '/appdata/kv2026/20261009/odata/okrsky/vysledky_okrsky_{n:05d}.xml'),
     ('se2026/davky', '/appdata/senat/20261009/odata/okrsky/K1/vysledky_okrsky_{n:05d}.xml'),
+    ('se2026/davky_k2', '/appdata/senat/20261009/odata/okrsky/K2/vysledky_okrsky_{n:05d}.xml'),
 ]
+# souhrnné výsledky (oficiální součty obvodů a zvolení) – stahují se vždy znovu, protože se během sčítání mění
+SUMMARIES = [('se2026/vysledky_souhrn.xml', '/appdata/senat/20261009/odata/vysledky.xml')]
 GEO = ('geo/vol_okrsky_2022g100.geojson', '/opendata/kv2022/geo/vol_okrsky_2022g100.geojson')
 
 
@@ -122,6 +125,11 @@ if __name__ == '__main__':
     os.makedirs(RAW, exist_ok=True)
     datasets()
     batches()
+    for rel, url in SUMMARIES:
+        data = get(BASE + url)
+        if data is not None:
+            open(os.path.join(RAW, rel), 'wb').write(data)
+            print(f'{rel}: staženo (aktuální stav)')
     path, new = save(GEO[0], BASE + GEO[1])
     print(f'{GEO[0]}: {"staženo" if new else "už existuje"}')
     print('Hotovo. Data jsou v', RAW)
