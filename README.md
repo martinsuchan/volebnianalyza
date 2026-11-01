@@ -30,6 +30,7 @@ Nezávislá analýza otevřených okrskových dat ČSÚ:
 - `report/data/*.csv` – mezivýsledky ke stažení (`obce_prehled_2026.csv` – souhrn všech obcí).
 - `data/obce_2026.csv` – pevná tabulka adres obcí na webu (kód obce → `kv/<slug>/`, název, název s okresem). Přes 600 jmen nese v ČR více obcí;
   stejnojmenné obce odliší okres, případně kód obce. Jednou přidělená adresa se nemění, nové obce se do tabulky jen doplňují (`scripts/units.py`).
+- `soudy/` – evidence soudních podání ke komunálním volbám 2026 a jejich vazby na nálezy (podklad pro vyhodnocení po přepočtech; viz `soudy/README.md`).
 
 Autor: [Martin Suchan](https://www.facebook.com/martinsuchan85) · Licence: MIT (viz `LICENSE`).
 
