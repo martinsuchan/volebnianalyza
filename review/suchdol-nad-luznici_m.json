@@ -1,0 +1,13 @@
+{
+ "m:547280/1:54728001": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: Naše Suchdolsko má celou kandidátku na 44–134 místo 80–182 a okrsku chybí hlasy ~34 lístků (z = −10,7). Jde o tentýž okrsek jako N01: součty stran v zápisu sedí, okrsek 1 (střed města) se liší strukturou hlasování (soustředěné osobní hlasy KDU-ČSL, méně hlasů na lístek, podobně nízký je i okrsek 5) a nižší podíl Našeho Suchdolska může být skutečný. Výsledek je velmi těsný (rezerva 11 hlasů), takže by mandát změnilo už ~300 hlasů pro Naše Suchdolsko.",
+  "jistota": 1,
+  "dopad_kat": "Může změnit mandáty",
+  "dopad": "Kdyby chybějící hlasy okrsku patřily Našemu Suchdolsku (stačí ~300 z ~576), změní se mandáty: Naše Suchdolsko 9 → 10, KDU-ČSL 2 → 1. Podle kontroly N01 jde ale pravděpodobně o skutečné chování voličů."
+ },
+ "m:citlivost": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: seznam obsahuje jen hodnoty, jejichž překlep by změnil výsledek; žádná z nich se neodlišuje od okolí ani od ostatních kandidátů, nejde tedy o zjištěnou chybu. Slouží jako vodítko pro kontrolu zápisů v zastupitelstvech s rezervou 10–50 hlasů."
+ }
+}

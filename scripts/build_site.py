@@ -464,13 +464,14 @@ a 57 zastupitelstev MČ; registr pražských nálezů byl jednotlivě ověřen v
 <li><strong>Prohozené strany</strong> (záměna hlasů dvou stran, která zlepší shodu s okolím o Δχ² &gt; 25; jen v obcích s alespoň 10 okrsky – v menších obcích tvoří okolí jiné místní části, kde mají místní kandidátky jiné voliče), duplicitní vektory hlasů, preferenční výkyvy kandidátů, neplatné hlasy, rozdíl obálek, změna účasti oproti 2022.</li></ul>
 <h3 id="pravidla-m">Doplňková pravidla (listopad 2026, nálezy řady M)</h3>
 <p>Po srovnání se soudními podáními a s jinou nezávislou analýzou jsme doplnili pravidla, která vycházejí z logiky lístku: křížek u strany dává hlas všem prvním kandidátům do počtu mandátů,
-takže mají aspoň tolik hlasů, kolik je takových lístků. Pravidla jsme použili v Praze, krajských městech a obcích s rozšířenou působností; každý nález jsme jednotlivě ověřili v datech.
+takže mají aspoň tolik hlasů, kolik je takových lístků. Pravidla jsme použili ve všech obcích (v malých obcích v omezené podobě, viz níže); každý nález jsme jednotlivě ověřili v datech.
 Dosavadní nálezy N zůstaly beze změny; nové nálezy mají v každé obci čísla M01 a dál a čísla vyřazených nálezů se znovu nepoužijí. Přehled s příklady a nejvážnějšími nálezy je na stránce <a href="pravidla.html">Nová pravidla (nálezy M)</a>.</p><ul class="l">
 <li><strong>Propad pod základ kandidátky</strong> – kandidát (i první nebo poslední) výrazně pod ostatními, nemusí jít o nulu.</li>
 <li><strong>Posunutý úsek kandidátky</strong> – souvislá část kandidátky (začátek, střed, konec; i „hlasy z lístků s křížkem u strany jen u kandidáta č. 1“) je níž než zbytek, a to proti sousedním okrskům i uvnitř kandidátky.</li>
 <li><strong>Rozptýlené nuly</strong> – nuly uprostřed kandidátky, jejíž ostatní kandidáti mají podobné nenulové hodnoty (případ Praha 12, okrsek 12025).</li>
 <li><strong>Chybějící balík bez podmínky na podíl strany</strong> – posun celé kandidátky proti okolí a stejně velký schodek hlasů celého okrsku; nízké využití hlasů už v roce 2022 jistotu snižuje.</li>
 <li>Na kandidátkách s 20 a více kandidáty jsou nulový úsek, propad prvních kandidátů nebo propad uprostřed s návratem na původní úroveň vzory, které lístky vytvořit nemohou (jistota velmi vysoká); na kratších kandidátkách mohou odpovídat i několika voličům, kteří označili stejné kandidáty jednotlivě.</li>
+<li><strong>Malé obce</strong> – srovnání se sousedními okrsky většinou nejde (4 898 obcí má jediný okrsek). Ve více okrskových obcích hledáme okrsek, kterému proti roku 2022 kleslo využití hlasů absolutně aspoň o 10 p. b. a zároveň aspoň o 15 p. b. víc než ostatním okrskům obce (ty mají stejné kandidátky, takže se změny kandidátek odečtou); schodek ostatních pravidel musí potvrdit pokles proti roku 2022. Propad posledních kandidátů se nehlásí u kandidátek s víc kandidáty než mandáty (podpora kandidáta za hranicí mandátů křížkem u strany i u něj ubere hlas posledním kandidátům).</li>
 <li><strong>Okrsky s nedostatkem hlasů bez určené strany</strong>, <strong>neobvykle mnoho neplatných lístků</strong> proti okolí a <strong>kritické hodnoty těsných výsledků</strong> – hodnoty, jejichž věrohodný překlep (záměna dvou číslic) by změnil mandát (případ Býkev).</li></ul>
 <h2>4. Globální testy</h2><p>Klimkův otisk (účast × podíl), celá procenta (Kobak et al.), test poslední číslice (Beber & Scacco) včetně korekce na strukturu komunálních voleb, 2BL (Mebane), rozdělení účasti. Vše srovnáno s lety 2018 a 2022.</p>
 <h2>5. Materialita</h2><p>Každá detekovaná chyba byla „opravena“ na nejpravděpodobnější hodnotu (konzervativní i horní varianta) a pro dotčené zastupitelstvo byl znovu spočítán počet mandátů stran i pořadí zvolených kandidátů; vyhodnocena je změna oproti oficiálnímu výsledku. Navíc je pro každé zastupitelstvo spočítána nejmenší změna hlasů, která by mandáty změnila.</p>
@@ -884,6 +885,9 @@ def page_pravidla(AF):
           ('Uherské Hradiště', 'M01', 'Uherské Hradiště, okrsek 13')]),
         ('Okrsek s nezapsanými hlasy bez určené strany', 'Okrsku chybí hlasy proti sousedním okrskům (využití hlasů z ≤ −5), ale žádná kandidátka nemá jasný vzor. '
          'Dopad se počítá rozdělením chybějících hlasů podle podílů stran v okolí.', [('Praha', 'M91', 'Praha 4, okrsek 4011')]),
+        ('Pokles využití hlasů proti roku 2022 (malé obce)', 'V obcích s několika okrsky okrsek, kterému proti roku 2022 kleslo využití hlasů výrazně víc než ostatním okrskům '
+         'téže obce. Ostatní okrsky volily ze stejných kandidátek, takže se změny kandidátek odečtou; okrsky musí mít podobnou velikost jako v roce 2022.',
+         [('Liběšice (okres Louny)', 'M01', 'Liběšice, okrsek 3'), ('Liberk', 'M01', 'Liberk, okrsek 2')]),
         ('Neobvykle mnoho neplatných lístků', 'Podíl neplatných lístků aspoň trojnásobný proti okolí. V malých obcích a městských částech je to často běžné (voliči označí víc kandidátů, '
          'než je mandátů), samo o sobě to chybu nedokazuje.', [('Praha', 'M119', 'Praha – souhrn')]),
         ('Kritické hodnoty těsných výsledků', 'U zastupitelstev s rezervou 10–50 hlasů pravidlo vypíše okrskové hodnoty, jejichž věrohodný překlep (záměna dvou číslic, jiná číslice) '
@@ -895,7 +899,7 @@ def page_pravidla(AF):
             's jinou nezávislou analýzou, které ukázaly chyby, jež dosavadní detektory nezachytily. Nové nálezy mají v každé obci čísla M01 a dál; dosavadní nálezy N '
             'zůstaly beze změny, takže odkazy na ně platí.</p>')
     body += ('<div class="tiles">'
-             f'<div class="tile"><div class="l">Nálezů M</div><div class="v">{len(AM)}</div><div class="s">v {n_uz} obcích (Praha, krajská města, ORP)</div></div>'
+             f'<div class="tile"><div class="l">Nálezů M</div><div class="v">{len(AM)}</div><div class="s">v {n_uz} obcích (všechny zpracované obce)</div></div>'
              f'<div class="tile"><div class="l">S vlivem na výsledek</div><div class="v">{len(vliv)}</div><div class="s">mění nebo mohou změnit mandáty či zvolené</div></div>'
              f'<div class="tile"><div class="l">Jistota velmi vysoká</div><div class="v">{int(jis.get(4, 0))}</div><div class="s">vzor, který lístky vytvořit nemohou</div></div>'
              f'<div class="tile"><div class="l">Vyřazeno po kontrole</div><div class="v">{vyr}</div><div class="s">čísla se znovu nepoužijí</div></div></div>')
@@ -917,7 +921,8 @@ def page_pravidla(AF):
                           'Chybějící balík lístků bez podmínky na podíl strany': 'Chybějící balík hlasovacích lístků',
                           'Okrsek s nezapsanými hlasy bez určené strany': 'Nezapsané hlasy části lístků',
                           'Neobvykle mnoho neplatných lístků': 'Neobvykle mnoho neplatných lístků (souhrn)',
-                          'Kritické hodnoty těsných výsledků': 'Kritické hodnoty těsných výsledků (k ověření v zápisech)'}.get(nadpis, nadpis), 0))
+                          'Kritické hodnoty těsných výsledků': 'Kritické hodnoty těsných výsledků (k ověření v zápisech)',
+                          'Pokles využití hlasů proti roku 2022 (malé obce)': 'Nezapsané hlasy části lístků (srovnání s rokem 2022)'}.get(nadpis, nadpis), 0))
         body += (f'<div class="card"><h3>{E(nadpis)}</h3><p>{E(popis)}</p><p class="sub">Nálezů (podle hlavního vzoru): {n} · příklady: '
                  + ', '.join(ref(u, i, t) for u, i, t in prik if u == 'Praha' or u in slug_of) + '</p></div>')
     body += ukazka('M07', 'Praha 11, okrsek 11059 – SPOLU pro Prahu: hlasy kandidátů', 'Kandidáti č. 34–39 mají nulu, kandidáti před nimi i za nimi jsou na úrovni lístků s křížkem u strany')
@@ -939,8 +944,10 @@ def page_pravidla(AF):
                  'otevřete detail s grafem hlasů kandidátů a odkazy na volby.gov.cz.</p>'
                  f'<div class="card tw"><table class="sortable">{FIND_HEAD}<tbody>{findings_rows(jiste, "pravidla.html")}</tbody></table></div>')
     body += ('<h2>Rozsah a omezení</h2><ul class="l">'
-             '<li>Pravidla jsme zatím použili v Praze, krajských městech a obcích s rozšířenou působností; obce s pověřeným obecním úřadem a malé obce je zatím nemají.</li>'
-             '<li>Srovnání s okolím potřebuje aspoň 4 okrsky; v obcích s jedním okrskem zbývá jen kontrola uvnitř kandidátky.</li>'
+             '<li>Pravidla jsme použili ve všech obcích. V malých obcích (mimo krajská města, ORP a POU) jen v omezené podobě: kontroly uvnitř kandidátky, srovnání okrsků s rokem 2022 '
+             'proti ostatním okrskům téže obce a bez souhrnů těsných výsledků a neplatných lístků, které by u tisíců malých zastupitelstev nic nerozlišily.</li>'
+             '<li>Srovnání s okolím potřebuje aspoň 4 okrsky; v obcích s jedním okrskem zbývá jen kontrola uvnitř kandidátky. V menších městech tvoří „okolí“ jiné části obce '
+             's odlišnou podporou stran, proto tam posun celé kandidátky bereme opatrněji.</li>'
              '<li>Statistický nález není důkazem úmyslu a nenahrazuje kontrolu zápisu nebo přepočet lístků. Závazné jsou jen výsledky vyhlášené volebními orgány.</li>'
              '<li>Podrobný popis pravidel je v <a href="metodika.html#pravidla-m">Metodice</a>, kód v souborech <code>scripts/pravidla.py</code> a <code>scripts/findings_m.py</code>.</li></ul>')
     _page('pravidla.html', 'Nová pravidla (nálezy M)', body, 'Doplňková pravidla pro hledání chyb v zápisech okrskových komisí (listopad 2026) a nejvážnější nálezy řady M',

@@ -24,10 +24,17 @@ import functools
 
 
 @functools.lru_cache(maxsize=1)
-def M_OBCE():
-    """Jednotky, na které se už použila doplňková pravidla (řada M): krajská města a obce s rozšířenou působností (listopad 2026)."""
+def MALE_OBCE():
+    """Obce mimo krajská města, ORP a POU – doplňková pravidla v režimu pro malé obce (findings_m.build_m, male=True)."""
     import units as _u
-    return {u['slug'] for u in _u.units() if u['typ'] in ('krajske', 'orp')}
+    return {u['slug'] for u in _u.units() if u['typ'] == 'obec'}
+
+
+@functools.lru_cache(maxsize=1)
+def M_OBCE():
+    """Jednotky, na které se použila doplňková pravidla (řada M, listopad 2026): všechny obce; ostatní obce (typ obec) v režimu pro malé obce."""
+    import units as _u
+    return {u['slug'] for u in _u.units() if u['typ'] in ('krajske', 'orp', 'pou', 'obec')}
 
 
 def pl(n, one, few, many):
@@ -396,7 +403,8 @@ def build():
         kryto |= set(zip(T0.OID, T0.ZK.astype(int), T0.strana.astype(int))) if len(T0) else set()
         lab = {'města': 'město', 'obce': 'obec', 'městyse': 'městys'}.get(druh_zast(), 'město')
         out += build_m(d, zname, mcmap, _outcome, kryto, kryto_okrsky, mag=lab, jed=jednotka,
-                       oba=f'{lab} i {jednotka}' if has_mc else lab, stav=True)
+                       oba=f'{lab} i {jednotka}' if has_mc else lab, stav=True,
+                       male=UNIT in MALE_OBCE())
     Fd = pd.DataFrame(out)
     if len(Fd):
         Fd['jistota_text'] = Fd.jistota.map(JISTOTA)

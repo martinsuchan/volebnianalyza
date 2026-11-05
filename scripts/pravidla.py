@@ -55,7 +55,7 @@ def odstoupivsi(d):
     return {(int(r.ZK), int(r.POR_STR_HL), int(r.PORCISLO)) for r in rk.itertuples() if r.PLATNOST != 'A'}
 
 
-def p1_p2_p3(vecs, vyrazeni):
+def p1_p2_p3(vecs, vyrazeni, konec_nc=False):
     """P1 propady pod základ, P2 posunuté úseky, P3 rozptýlené nuly."""
     rows = []
     for g in vecs:
@@ -115,6 +115,10 @@ def p1_p2_p3(vecs, vyrazeni):
                     continue
                 if slaby[k] or (g['ZK'], g['strana'], k + 1) in vyrazeni:
                     continue
+                # kandidátka s víc kandidáty než mandáty: kdo podpoří kandidáta za hranicí mandátů křížkem u strany i u něj, ubere hlas
+                # posledním kandidátům do počtu mandátů – jejich propad je legitimní (kontrola Slepotic, listopad 2026)
+                if konec_nc and g['NC'] > g['M'] and k >= K - 3:
+                    continue
                 if not np.isnan(p).any() and p[k] < 0.6 * np.median(p):  # kandidát je slabý i v okolí
                     continue
                 gap = q - v[k]
@@ -161,6 +165,45 @@ def p4(vecs, MS):
                              chybi=float(-strana), okrsek_hlasu=float(okrsek), shoda=float(shoda), z_vpb=float(m.z_vpb), vpb=float(m.vpb), vpb_ocek=float(m.vpb_ocek),
                              hodnoty=v.astype(int).tolist(), okoli=np.round(p).astype(int).tolist(), sila=float(abs(m.z_vpb))))
     return pd.DataFrame(rows)
+
+
+def vpb_okrsku(t):
+    """Využití hlasů okrsků = platné hlasy / (platné lístky × mandáty), index (OID, ZK); v roce 2022 chybí počet platných lístků (použijí se odevzdané obálky)."""
+    t = t[t.ZK.notna() & (t.MANDATY > 0)].drop_duplicates(['OID', 'ZK']).copy()
+    t['lis'] = t.PLAT_LISTKY.where(t.PLAT_LISTKY.notna(), t.ODEVZ_OBAL)
+    t['v'] = t.PL_HL_CELK / (t.lis * t.MANDATY)
+    return t.set_index(['OID', 'ZK'])[['v', 'lis', 'MANDATY', 'PLAT_LISTKY']]
+
+
+def pokles_2022(t26, t22, podobnost=0.35):
+    """Změna využití hlasů okrsku proti roku 2022 {(OID, ZK): v26 − v22}; jen okrsky podobné velikosti (hranice se nezměnily)."""
+    a, b = vpb_okrsku(t26), vpb_okrsku(t22)
+    out = {}
+    for i in a.index.intersection(b.index):
+        if abs(a.loc[i, 'lis'] / max(b.loc[i, 'lis'], 1) - 1) <= podobnost:
+            out[i] = float(a.loc[i, 'v'] - b.loc[i, 'v'])
+    return out
+
+
+def p5_kontrola(t26, t22, pokles=0.15, abs_pokles=0.10, min_listku=10, min_kontrola=50):
+    """P5b (malé obce se 2 a více okrsky): okrsek, kterému proti roku 2022 kleslo využití hlasů – absolutně aspoň o abs_pokles
+    a zároveň aspoň o `pokles` víc než ostatním okrskům téže obce (stejné kandidátky, změny kandidátek se odečtou).
+    Kontrolní okrsky musí mít aspoň min_kontrola lístků a všechny okrsky podobnou velikost jako v roce 2022."""
+    a = vpb_okrsku(t26)
+    dl = pokles_2022(t26, t22)
+    out = []
+    for zk, g in a.groupby(level='ZK'):
+        idx = [i for i in g.index if i in dl]
+        for i in idx:
+            ctrl = [dl[j] for j in idx if j != i and a.loc[j, 'lis'] >= min_kontrola]
+            if not ctrl:
+                continue
+            kontrola = float(np.median(ctrl)); rel = dl[i] - kontrola
+            lis = float(a.loc[i, 'PLAT_LISTKY']); chybi_listku = -rel * lis
+            if dl[i] <= -abs_pokles and rel <= -pokles and chybi_listku >= min_listku:
+                out.append(dict(pravidlo='P5b', OID=i[0], ZK=int(zk), vpb=float(a.loc[i, 'v']), vpb22=float(a.loc[i, 'v'] - dl[i]), kontrola=kontrola, rel=rel,
+                                PLAT_LISTKY=lis, M=int(a.loc[i, 'MANDATY']), chybi_listku=chybi_listku, chybi_hlasu=chybi_listku * float(a.loc[i, 'MANDATY'])))
+    return pd.DataFrame(out, columns=['pravidlo', 'OID', 'ZK', 'vpb', 'vpb22', 'kontrola', 'rel', 'PLAT_LISTKY', 'M', 'chybi_listku', 'chybi_hlasu'])
 
 
 def p5(MS, zmin=-5, min_listku=10):

@@ -205,28 +205,28 @@
 558109,Nepomuk,Plzeň-jih,Plzeňský kraj,orp,3,2807,0.5191,15,True,True,True,7.0,0.0,0.0,267.0,False,False,True,False,kv/nepomuk/index.html
 559075,Kralovice,Plzeň-sever,Plzeňský kraj,orp,6,2744,0.5496,15,True,True,True,4.0,0.0,0.0,66.0,False,False,True,False,kv/kralovice/index.html
 589624,Konice,Prostějov,Olomoucký kraj,orp,6,2192,0.5046,15,True,True,True,6.0,0.0,0.0,256.0,False,False,True,False,kv/konice/index.html
-563099,Jirkov,Chomutov,Ústecký kraj,pou,13,14863,0.275,25,True,True,True,9.0,3.0,0.0,193.0,False,False,True,False,kv/jirkov/index.html
+563099,Jirkov,Chomutov,Ústecký kraj,pou,13,14863,0.275,25,True,True,True,9.0,5.0,0.0,193.0,False,False,True,False,kv/jirkov/index.html
 563129,Klášterec nad Ohří,Chomutov,Ústecký kraj,pou,11,11214,0.334,21,True,True,True,5.0,0.0,0.0,1313.0,False,False,True,False,kv/klasterec-nad-ohri/index.html
 567639,Krupka,Teplice,Ústecký kraj,pou,11,10375,0.4066,21,True,True,True,8.0,0.0,0.0,128.0,False,False,True,False,kv/krupka/index.html
 538132,Čelákovice,Praha-východ,Středočeský kraj,pou,11,8999,0.5345,21,True,True,True,4.0,0.0,0.0,276.0,False,False,True,False,kv/celakovice/index.html
 560383,Chodov,Sokolov,Karlovarský kraj,pou,11,10251,0.3032,21,True,True,True,5.0,1.0,0.0,127.0,False,False,True,False,kv/chodov/index.html
 539325,Jesenice (okres Praha-západ),Praha-západ,Středočeský kraj,pou,6,6695,0.5099,21,True,True,True,5.0,0.0,0.0,167.0,False,False,True,False,kv/jesenice-okres-praha-zapad/index.html
-539244,Hostivice,Praha-západ,Středočeský kraj,pou,5,6470,0.5291,15,True,True,True,5.0,1.0,0.0,10.0,True,False,True,False,kv/hostivice/index.html
+539244,Hostivice,Praha-západ,Středočeský kraj,pou,5,6470,0.5291,15,True,True,True,5.0,2.0,0.0,10.0,True,False,True,False,kv/hostivice/index.html
 599921,Studénka,Nový Jičín,Moravskoslezský kraj,pou,8,7415,0.39,21,True,True,True,4.0,0.0,0.0,405.0,False,False,True,False,kv/studenka/index.html
 539627,Roztoky,Praha-západ,Středočeský kraj,pou,7,6348,0.5832,21,True,True,True,5.0,0.0,0.0,905.0,False,False,True,False,kv/roztoky/index.html
 567515,Duchcov,Teplice,Ústecký kraj,pou,7,6854,0.3462,21,True,True,True,8.0,1.0,0.0,7.0,True,False,True,False,kv/duchcov/index.html
 580350,Choceň,Ústí nad Orlicí,Pardubický kraj,pou,9,6548,0.4855,21,True,True,True,4.0,1.0,0.0,422.0,False,False,True,False,kv/chocen/index.html
-565709,Štětí,Litoměřice,Ústecký kraj,pou,12,6542,0.34,21,True,True,True,8.0,2.0,0.0,35.0,True,True,True,False,kv/steti/index.html
+565709,Štětí,Litoměřice,Ústecký kraj,pou,12,6542,0.34,21,True,True,True,8.0,4.0,0.0,35.0,True,True,True,False,kv/steti/index.html
 599808,Příbor,Nový Jičín,Moravskoslezský kraj,pou,10,6741,0.4609,21,True,True,True,8.0,0.0,0.0,67.0,False,False,True,False,kv/pribor/index.html
 573965,Červený Kostelec,Náchod,Královéhradecký kraj,pou,12,6599,0.4536,25,True,True,True,4.0,2.0,0.0,68.0,True,False,True,False,kv/cerveny-kostelec/index.html
 564095,Hrádek nad Nisou,Liberec,Liberecký kraj,pou,9,6257,0.3964,25,True,True,True,2.0,0.0,0.0,548.0,False,False,True,False,kv/hradek-nad-nisou/index.html
 535451,Benátky nad Jizerou,Mladá Boleslav,Středočeský kraj,pou,6,5615,0.4545,23,True,True,True,4.0,0.0,0.0,622.0,False,False,True,False,kv/benatky-nad-jizerou/index.html
 555380,Nejdek,Karlovy Vary,Karlovarský kraj,pou,12,5984,0.3182,15,True,True,True,6.0,1.0,0.0,4.0,True,False,True,False,kv/nejdek/index.html
 538957,Úvaly,Praha-východ,Středočeský kraj,pou,3,5310,0.5162,15,True,True,True,5.0,0.0,0.0,615.0,False,False,True,False,kv/uvaly/index.html
-598879,Vratimov,Ostrava-město,Moravskoslezský kraj,pou,5,6078,0.4386,17,True,True,True,7.0,1.0,0.0,12.0,True,False,True,False,kv/vratimov/index.html
+598879,Vratimov,Ostrava-město,Moravskoslezský kraj,pou,5,6078,0.4386,17,True,True,True,7.0,2.0,0.0,12.0,True,False,True,False,kv/vratimov/index.html
 553069,Sezimovo Ústí,Tábor,Jihočeský kraj,pou,8,5617,0.4718,21,True,True,True,6.0,0.0,0.0,219.0,False,False,True,False,kv/sezimovo-usti/index.html
 581917,Letovice,Blansko,Jihomoravský kraj,pou,16,5303,0.4984,21,True,True,True,5.0,0.0,0.0,453.0,False,False,True,False,kv/letovice/index.html
-585513,Napajedla,Zlín,Zlínský kraj,pou,6,5693,0.5022,21,True,True,True,7.0,1.0,0.0,24.0,True,False,True,False,kv/napajedla/index.html
+585513,Napajedla,Zlín,Zlínský kraj,pou,6,5693,0.5022,21,True,True,True,7.0,2.0,0.0,24.0,True,False,True,False,kv/napajedla/index.html
 550752,Staré Město,Uherské Hradiště,Zlínský kraj,pou,5,5314,0.5169,17,True,True,True,3.0,0.0,0.0,194.0,False,False,True,False,kv/stare-mesto/index.html
 538574,Odolena Voda,Praha-východ,Středočeský kraj,pou,4,4609,0.4578,15,True,True,True,6.0,0.0,0.0,279.0,False,False,True,False,kv/odolena-voda/index.html
 553271,Veselí nad Lužnicí,Tábor,Jihočeský kraj,pou,7,4993,0.4296,21,True,True,True,8.0,0.0,0.0,84.0,False,False,True,False,kv/veseli-nad-luznici/index.html
@@ -235,15 +235,15 @@
 588491,Hulín,Kroměříž,Zlínský kraj,pou,7,5271,0.4658,17,True,True,True,7.0,0.0,0.0,217.0,False,False,True,False,kv/hulin/index.html
 564117,Chrastava,Liberec,Liberecký kraj,pou,5,4950,0.4564,19,True,True,True,3.0,0.0,0.0,1402.0,False,False,True,False,kv/chrastava/index.html
 580538,Letohrad,Ústí nad Orlicí,Pardubický kraj,pou,6,4896,0.5831,21,True,True,True,4.0,0.0,0.0,665.0,False,False,True,False,kv/letohrad/index.html
-561835,Mimoň,Česká Lípa,Liberecký kraj,pou,6,5117,0.4122,17,True,True,True,4.0,0.0,0.0,523.0,False,False,True,False,kv/mimon/index.html
-585751,Slavičín,Zlín,Zlínský kraj,pou,8,5048,0.5422,21,True,True,True,7.0,0.0,0.0,278.0,False,False,True,False,kv/slavicin/index.html
+561835,Mimoň,Česká Lípa,Liberecký kraj,pou,6,5117,0.4122,17,True,True,True,4.0,1.0,0.0,523.0,False,False,True,False,kv/mimon/index.html
+585751,Slavičín,Zlín,Zlínský kraj,pou,8,5048,0.5422,21,True,True,True,7.0,1.0,0.0,278.0,False,False,True,False,kv/slavicin/index.html
 576859,Týniště nad Orlicí,Rychnov nad Kněžnou,Královéhradecký kraj,pou,8,4806,0.4985,17,True,True,True,4.0,0.0,0.0,518.0,False,False,True,False,kv/tyniste-nad-orlici/index.html
-574082,Hronov,Náchod,Královéhradecký kraj,pou,8,4865,0.5135,21,True,True,True,6.0,0.0,0.0,555.0,False,False,True,False,kv/hronov/index.html
+574082,Hronov,Náchod,Královéhradecký kraj,pou,8,4865,0.5135,21,True,True,True,6.0,1.0,0.0,555.0,False,False,True,False,kv/hronov/index.html
 593559,Rousínov,Vyškov,Jihomoravský kraj,pou,9,4326,0.5414,15,True,True,True,7.0,0.0,0.0,265.0,False,False,True,False,kv/rousinov/index.html
-571041,Třebechovice pod Orebem,Hradec Králové,Královéhradecký kraj,pou,7,4578,0.4718,21,True,True,True,5.0,0.0,0.0,123.0,False,False,True,False,kv/trebechovice-pod-orebem/index.html
+571041,Třebechovice pod Orebem,Hradec Králové,Královéhradecký kraj,pou,7,4578,0.4718,21,True,True,True,5.0,1.0,0.0,123.0,False,False,True,False,kv/trebechovice-pod-orebem/index.html
 588032,Třešť,Jihlava,Kraj Vysočina,pou,7,4494,0.4419,21,True,True,True,3.0,0.0,0.0,212.0,False,False,True,False,kv/trest/index.html
 530841,Týnec nad Sázavou,Benešov,Středočeský kraj,pou,12,4575,0.4175,17,True,True,True,4.0,0.0,0.0,644.0,False,False,True,False,kv/tynec-nad-sazavou/index.html
-514055,Kojetín,Přerov,Olomoucký kraj,pou,8,4623,0.4465,21,True,True,True,6.0,1.0,0.0,12.0,True,False,True,False,kv/kojetin/index.html
+514055,Kojetín,Přerov,Olomoucký kraj,pou,8,4623,0.4465,21,True,True,True,6.0,2.0,0.0,12.0,True,False,True,False,kv/kojetin/index.html
 542164,Nové Strašecí,Rakovník,Středočeský kraj,pou,5,4415,0.5203,21,True,True,True,6.0,0.0,0.0,88.0,False,False,True,False,kv/nove-straseci/index.html
 544485,Hluboká nad Vltavou,České Budějovice,Jihočeský kraj,pou,7,4366,0.5909,21,True,True,True,8.0,0.0,0.0,166.0,False,False,True,False,kv/hluboka-nad-vltavou/index.html
 577308,Lomnice nad Popelkou,Semily,Liberecký kraj,pou,7,4366,0.5366,17,True,True,True,3.0,0.0,0.0,536.0,False,False,True,False,kv/lomnice-nad-popelkou/index.html
@@ -252,13 +252,13 @@
 596973,Velká Bíteš,Žďár nad Sázavou,Kraj Vysočina,pou,9,4092,0.5376,21,True,True,True,7.0,1.0,0.0,639.0,False,False,True,False,kv/velka-bites/index.html
 561134,Planá,Tachov,Plzeňský kraj,pou,5,4159,0.4318,15,True,True,True,6.0,0.0,0.0,127.0,False,False,True,False,kv/plana/index.html
 553654,Holýšov,Plzeň-jih,Plzeňský kraj,pou,6,3871,0.4516,15,True,True,True,4.0,0.0,0.0,58.0,False,False,True,False,kv/holysov/index.html
-599352,Fulnek,Nový Jičín,Moravskoslezský kraj,pou,11,4434,0.5115,15,True,True,True,6.0,0.0,0.0,432.0,False,False,True,False,kv/fulnek/index.html
+599352,Fulnek,Nový Jičín,Moravskoslezský kraj,pou,11,4434,0.5115,15,True,True,True,6.0,1.0,0.0,432.0,False,False,True,False,kv/fulnek/index.html
 579777,Úpice,Trutnov,Královéhradecký kraj,pou,6,4337,0.4362,15,True,True,True,5.0,0.0,0.0,196.0,False,False,True,False,kv/upice/index.html
 585114,Brumov-Bylnice,Zlín,Zlínský kraj,pou,5,4347,0.6156,21,True,True,True,6.0,0.0,0.0,193.0,False,False,True,False,kv/brumov-bylnice/index.html
 533017,Unhošť,Kladno,Středočeský kraj,pou,4,3923,0.5442,19,True,True,True,7.0,0.0,0.0,211.0,False,False,True,False,kv/unhost/index.html
 538299,Kamenice,Praha-východ,Středočeský kraj,pou,2,3831,0.5594,15,True,True,True,4.0,0.0,0.0,349.0,False,False,True,False,kv/kamenice/index.html
 587711,Polná,Jihlava,Kraj Vysočina,pou,7,4188,0.5289,21,True,True,True,6.0,1.0,0.0,8.0,True,False,True,False,kv/polna/index.html
-539333,Jílové u Prahy,Praha-západ,Středočeský kraj,pou,6,3806,0.5547,15,True,True,True,5.0,0.0,0.0,473.0,False,False,True,False,kv/jilove-u-prahy/index.html
+539333,Jílové u Prahy,Praha-západ,Středočeský kraj,pou,6,3806,0.5547,15,True,True,True,5.0,1.0,0.0,473.0,False,False,True,False,kv/jilove-u-prahy/index.html
 558371,Starý Plzenec,Plzeň-město,Plzeňský kraj,pou,5,4152,0.5323,17,True,True,True,6.0,0.0,0.0,243.0,False,False,True,False,kv/stary-plzenec/index.html
 586587,Strážnice,Hodonín,Jihomoravský kraj,pou,4,4359,0.5623,21,True,True,True,8.0,0.0,0.0,65.0,False,False,True,False,kv/straznice/index.html
 553786,Kdyně,Domažlice,Plzeňský kraj,pou,10,3891,0.5032,15,True,True,True,6.0,0.0,0.0,123.0,False,False,True,False,kv/kdyne/index.html
@@ -275,10 +275,10 @@
 535443,Bělá pod Bezdězem,Mladá Boleslav,Středočeský kraj,pou,5,3724,0.5091,21,True,True,True,7.0,0.0,0.0,90.0,False,False,True,False,kv/bela-pod-bezdezem/index.html
 534633,Zruč nad Sázavou,Kutná Hora,Středočeský kraj,pou,7,3663,0.4797,15,True,True,True,5.0,0.0,0.0,94.0,False,False,True,False,kv/zruc-nad-sazavou/index.html
 552054,Bechyně,Tábor,Jihočeský kraj,pou,7,3941,0.494,15,True,True,True,8.0,0.0,0.0,89.0,False,False,True,False,kv/bechyne/index.html
-568988,Ledeč nad Sázavou,Havlíčkův Brod,Kraj Vysočina,pou,6,3776,0.4846,15,True,True,True,5.0,0.0,0.0,122.0,False,False,True,False,kv/ledec-nad-sazavou/index.html
+568988,Ledeč nad Sázavou,Havlíčkův Brod,Kraj Vysočina,pou,6,3776,0.4846,15,True,True,True,5.0,1.0,0.0,122.0,False,False,True,False,kv/ledec-nad-sazavou/index.html
 549771,Protivín,Písek,Jihočeský kraj,pou,11,3765,0.5952,21,True,True,True,7.0,0.0,0.0,262.0,False,False,True,False,kv/protivin/index.html
 544779,Lišov,České Budějovice,Jihočeský kraj,pou,4,3554,0.5574,21,True,True,True,7.0,0.0,0.0,99.0,False,False,True,False,kv/lisov/index.html
-566624,Postoloprty,Louny,Ústecký kraj,pou,12,3631,0.3495,15,True,True,True,4.0,0.0,0.0,89.0,False,False,True,False,kv/postoloprty/index.html
+566624,Postoloprty,Louny,Ústecký kraj,pou,12,3631,0.3495,15,True,True,True,4.0,1.0,0.0,89.0,False,False,True,False,kv/postoloprty/index.html
 597961,Vrbno pod Pradědem,Bruntál,Moravskoslezský kraj,pou,7,4036,0.5173,17,True,True,True,4.0,0.0,0.0,420.0,False,False,True,False,kv/vrbno-pod-pradedem/index.html
 588512,Chropyně,Kroměříž,Zlínský kraj,pou,5,3831,0.4936,17,True,True,True,8.0,0.0,0.0,53.0,False,False,True,False,kv/chropyne/index.html
 576883,Vamberk,Rychnov nad Kněžnou,Královéhradecký kraj,pou,6,3507,0.4582,15,True,True,True,4.0,0.0,0.0,82.0,False,False,True,False,kv/vamberk/index.html
@@ -289,28 +289,28 @@
 592048,Bojkovice,Uherské Hradiště,Zlínský kraj,pou,6,3447,0.4853,21,True,True,True,5.0,0.0,0.0,107.0,False,False,True,False,kv/bojkovice/index.html
 533416,Kostelec nad Černými lesy,Praha-východ,Středočeský kraj,pou,4,2976,0.5178,15,True,True,True,7.0,0.0,0.0,320.0,False,False,True,False,kv/kostelec-nad-cernymi-lesy/index.html
 541231,Rožmitál pod Třemšínem,Příbram,Středočeský kraj,pou,11,3447,0.5341,15,True,True,True,9.0,1.0,0.0,2.0,True,False,True,False,kv/rozmital-pod-tremsinem/index.html
-502146,Hlubočky,Olomouc,Olomoucký kraj,pou,4,3371,0.4278,15,True,True,True,5.0,1.0,0.0,11.0,True,False,True,False,kv/hlubocky/index.html
+502146,Hlubočky,Olomouc,Olomoucký kraj,pou,4,3371,0.4278,15,True,True,True,5.0,2.0,0.0,11.0,True,False,True,False,kv/hlubocky/index.html
 592749,Uherský Ostroh,Uherské Hradiště,Zlínský kraj,pou,4,3468,0.4625,17,True,True,True,4.0,0.0,0.0,698.0,False,False,True,False,kv/uhersky-ostroh/index.html
 574341,Police nad Metují,Náchod,Královéhradecký kraj,pou,5,3180,0.5066,17,True,True,True,5.0,1.0,0.0,7.0,True,False,True,False,kv/police-nad-metuji/index.html
 579297,Hostinné,Trutnov,Královéhradecký kraj,pou,4,3393,0.5246,21,True,True,True,4.0,0.0,0.0,861.0,False,False,True,False,kv/hostinne/index.html
-590754,Jaroměřice nad Rokytnou,Třebíč,Kraj Vysočina,pou,8,3221,0.5551,21,True,True,True,8.0,1.0,0.0,25.0,True,False,True,False,kv/jaromerice-nad-rokytnou/index.html
+590754,Jaroměřice nad Rokytnou,Třebíč,Kraj Vysočina,pou,8,3221,0.5551,21,True,True,True,8.0,2.0,0.0,25.0,True,False,True,False,kv/jaromerice-nad-rokytnou/index.html
 569321,Přibyslav,Havlíčkův Brod,Kraj Vysočina,pou,3,3039,0.5413,15,True,True,True,5.0,0.0,0.0,150.0,False,False,True,False,kv/pribyslav/index.html
 590789,Jemnice,Třebíč,Kraj Vysočina,pou,6,3156,0.5181,21,True,True,True,6.0,0.0,0.0,130.0,False,False,True,False,kv/jemnice/index.html
-597996,Zlaté Hory,Jeseník,Olomoucký kraj,pou,7,3042,0.4139,15,True,True,True,8.0,1.0,0.0,11.0,True,False,True,False,kv/zlate-hory/index.html
-534382,Sázava,Benešov,Středočeský kraj,pou,5,2990,0.5151,15,True,True,True,3.0,1.0,0.0,34.0,True,False,True,False,kv/sazava/index.html
-564265,Nové Město pod Smrkem,Liberec,Liberecký kraj,pou,4,2916,0.5223,17,True,True,True,7.0,1.0,0.0,25.0,True,False,True,False,kv/nove-mesto-pod-smrkem/index.html
+597996,Zlaté Hory,Jeseník,Olomoucký kraj,pou,7,3042,0.4139,15,True,True,True,8.0,2.0,0.0,11.0,True,False,True,False,kv/zlate-hory/index.html
+534382,Sázava,Benešov,Středočeský kraj,pou,5,2990,0.5151,15,True,True,True,3.0,2.0,0.0,34.0,True,False,True,False,kv/sazava/index.html
+564265,Nové Město pod Smrkem,Liberec,Liberecký kraj,pou,4,2916,0.5223,17,True,True,True,7.0,2.0,0.0,25.0,True,False,True,False,kv/nove-mesto-pod-smrkem/index.html
 573094,Lázně Bělohrad,Jičín,Královéhradecký kraj,pou,7,2923,0.5238,15,True,True,True,3.0,1.0,0.0,100.0,False,True,True,False,kv/lazne-belohrad/index.html
 546089,České Velenice,Jindřichův Hradec,Jihočeský kraj,pou,3,2307,0.3771,15,True,True,True,3.0,0.0,0.0,367.0,False,False,True,False,kv/ceske-velenice/index.html
 548111,Kamenice nad Lipou,Pelhřimov,Kraj Vysočina,pou,5,2843,0.4819,15,True,True,True,4.0,0.0,0.0,110.0,False,False,True,False,kv/kamenice-nad-lipou/index.html
 561631,Jablonné v Podještědí,Liberec,Liberecký kraj,pou,7,2968,0.4744,17,True,True,True,5.0,0.0,0.0,141.0,False,False,True,False,kv/jablonne-v-podjestedi/index.html
-550671,Volary,Prachatice,Jihočeský kraj,pou,3,2907,0.5415,15,True,True,True,5.0,1.0,0.0,38.0,True,False,True,False,kv/volary/index.html
-547280,Suchdol nad Lužnicí,Jindřichův Hradec,Jihočeský kraj,pou,7,2837,0.4674,17,True,True,True,5.0,3.0,1.0,10.0,True,False,True,False,kv/suchdol-nad-luznici/index.html
-540013,Březnice,Příbram,Středočeský kraj,pou,4,2772,0.4459,15,True,True,True,4.0,1.0,0.0,24.0,True,False,True,False,kv/breznice/index.html
-562351,Benešov nad Ploučnicí,Děčín,Ústecký kraj,pou,3,2841,0.4509,15,True,True,True,7.0,0.0,0.0,49.0,False,False,True,False,kv/benesov-nad-ploucnici/index.html
+550671,Volary,Prachatice,Jihočeský kraj,pou,3,2907,0.5415,15,True,True,True,5.0,2.0,0.0,38.0,True,False,True,False,kv/volary/index.html
+547280,Suchdol nad Lužnicí,Jindřichův Hradec,Jihočeský kraj,pou,7,2837,0.4674,17,True,True,True,5.0,5.0,2.0,10.0,True,False,True,False,kv/suchdol-nad-luznici/index.html
+540013,Březnice,Příbram,Středočeský kraj,pou,4,2772,0.4459,15,True,True,True,4.0,2.0,0.0,24.0,True,False,True,False,kv/breznice/index.html
+562351,Benešov nad Ploučnicí,Děčín,Ústecký kraj,pou,3,2841,0.4509,15,True,True,True,7.0,1.0,0.0,49.0,False,False,True,False,kv/benesov-nad-ploucnici/index.html
 555657,Toužim,Karlovy Vary,Karlovarský kraj,pou,3,2826,0.4391,15,True,True,True,8.0,0.0,0.0,150.0,False,False,True,False,kv/touzim/index.html
 545341,Zliv,České Budějovice,Jihočeský kraj,pou,3,2784,0.4573,15,True,True,True,4.0,0.0,0.0,421.0,False,False,True,False,kv/zliv/index.html
 582646,Velké Opatovice,Blansko,Jihomoravský kraj,pou,6,2820,0.5273,15,True,True,True,6.0,0.0,0.0,85.0,False,False,True,False,kv/velke-opatovice/index.html
-572411,Třemošnice,Chrudim,Pardubický kraj,pou,4,2370,0.427,15,True,True,True,3.0,0.0,0.0,305.0,False,False,True,False,kv/tremosnice/index.html
+572411,Třemošnice,Chrudim,Pardubický kraj,pou,4,2370,0.427,15,True,True,True,3.0,1.0,0.0,305.0,False,False,True,False,kv/tremosnice/index.html
 565164,Libochovice,Litoměřice,Ústecký kraj,pou,5,2744,0.418,15,True,True,True,3.0,0.0,0.0,343.0,False,False,True,False,kv/libochovice/index.html
 554294,Staňkov,Domažlice,Plzeňský kraj,pou,5,2649,0.4715,15,True,True,True,3.0,0.0,0.0,562.0,False,False,True,False,kv/stankov/index.html
 594156,Hrušovany nad Jevišovkou,Znojmo,Jihomoravský kraj,pou,2,2681,0.5438,15,True,True,True,8.0,1.0,0.0,8.0,True,False,True,False,kv/hrusovany-nad-jevisovkou/index.html
@@ -321,46 +321,46 @@
 571539,Chrast,Chrudim,Pardubický kraj,pou,5,2474,0.5081,15,True,True,True,3.0,0.0,0.0,212.0,False,False,True,False,kv/chrast/index.html
 533041,Velvary,Kladno,Středočeský kraj,pou,4,2439,0.4941,15,True,True,True,3.0,0.0,0.0,261.0,False,False,True,False,kv/velvary/index.html
 570877,Smiřice,Hradec Králové,Královéhradecký kraj,pou,3,2407,0.4022,15,True,True,True,3.0,0.0,0.0,228.0,False,False,True,False,kv/smirice/index.html
-576590,Opočno,Rychnov nad Kněžnou,Královéhradecký kraj,pou,4,2425,0.5266,15,True,True,True,5.0,0.0,0.0,72.0,False,False,True,False,kv/opocno/index.html
+576590,Opočno,Rychnov nad Kněžnou,Královéhradecký kraj,pou,4,2425,0.5266,15,True,True,True,5.0,1.0,0.0,72.0,False,False,True,False,kv/opocno/index.html
 534498,Uhlířské Janovice,Kutná Hora,Středočeský kraj,pou,3,2423,0.5019,15,True,True,True,5.0,0.0,0.0,128.0,False,False,True,False,kv/uhlirske-janovice/index.html
 579874,Žacléř,Trutnov,Královéhradecký kraj,pou,4,2492,0.4482,17,True,True,True,5.0,1.0,0.0,51.0,True,False,True,False,kv/zacler/index.html
 580376,Jablonné nad Orlicí,Ústí nad Orlicí,Pardubický kraj,pou,4,2242,0.5152,15,True,True,True,4.0,0.0,0.0,164.0,False,False,True,False,kv/jablonne-nad-orlici/index.html
-558362,Spálené Poříčí,Plzeň-jih,Plzeňský kraj,pou,8,2224,0.5,15,True,True,True,5.0,2.0,0.0,25.0,True,False,True,False,kv/spalene-porici/index.html
+558362,Spálené Poříčí,Plzeň-jih,Plzeňský kraj,pou,8,2224,0.5,15,True,True,True,5.0,3.0,0.0,25.0,True,False,True,False,kv/spalene-porici/index.html
 551970,Volyně,Strakonice,Jihočeský kraj,pou,5,2407,0.5019,15,True,True,True,6.0,0.0,0.0,209.0,False,False,True,False,kv/volyne/index.html
 564061,Hodkovice nad Mohelkou,Liberec,Liberecký kraj,pou,2,2326,0.5739,15,True,True,True,2.0,0.0,0.0,952.0,False,False,True,False,kv/hodkovice-nad-mohelkou/index.html
 594458,Miroslav,Znojmo,Jihomoravský kraj,pou,5,2392,0.5966,15,True,True,True,4.0,0.0,0.0,110.0,False,False,True,False,kv/miroslav/index.html
 588768,Morkovice-Slížany,Kroměříž,Zlínský kraj,pou,3,2339,0.5267,15,True,True,True,6.0,0.0,0.0,208.0,False,False,True,False,kv/morkovice-slizany/index.html
-593117,Ivanovice na Hané,Vyškov,Jihomoravský kraj,pou,3,2381,0.4259,15,True,True,True,4.0,0.0,0.0,540.0,False,False,True,False,kv/ivanovice-na-hane/index.html
-560537,Loket,Sokolov,Karlovarský kraj,pou,2,2465,0.4929,15,True,True,True,8.0,1.0,0.0,40.0,True,False,True,False,kv/loket/index.html
+593117,Ivanovice na Hané,Vyškov,Jihomoravský kraj,pou,3,2381,0.4259,15,True,True,True,4.0,1.0,0.0,540.0,False,False,True,False,kv/ivanovice-na-hane/index.html
+560537,Loket,Sokolov,Karlovarský kraj,pou,2,2465,0.4929,15,True,True,True,8.0,2.0,0.0,40.0,True,False,True,False,kv/loket/index.html
 563960,Český Dub,Liberec,Liberecký kraj,pou,4,2030,0.4532,15,True,True,True,2.0,0.0,0.0,82.0,False,False,True,False,kv/cesky-dub/index.html
 575071,Chvaletice,Pardubice,Pardubický kraj,pou,3,2214,0.4512,15,True,True,True,6.0,0.0,0.0,200.0,False,False,True,False,kv/chvaletice/index.html
-559351,Plasy,Plzeň-sever,Plzeňský kraj,pou,8,2267,0.5637,15,True,True,True,9.0,1.0,0.0,13.0,True,False,True,False,kv/plasy/index.html
-537489,Městec Králové,Nymburk,Středočeský kraj,pou,5,2235,0.477,15,True,True,True,5.0,1.0,0.0,39.0,True,False,True,False,kv/mestec-kralove/index.html
-535532,Hanušovice,Šumperk,Olomoucký kraj,pou,3,2393,0.5361,15,True,True,True,5.0,0.0,0.0,49.0,False,False,True,False,kv/hanusovice/index.html
+559351,Plasy,Plzeň-sever,Plzeňský kraj,pou,8,2267,0.5637,15,True,True,True,9.0,2.0,0.0,13.0,True,False,True,False,kv/plasy/index.html
+537489,Městec Králové,Nymburk,Středočeský kraj,pou,5,2235,0.477,15,True,True,True,5.0,2.0,0.0,39.0,True,False,True,False,kv/mestec-kralove/index.html
+535532,Hanušovice,Šumperk,Olomoucký kraj,pou,3,2393,0.5361,15,True,True,True,5.0,1.0,0.0,49.0,False,False,True,False,kv/hanusovice/index.html
 578193,Jevíčko,Svitavy,Pardubický kraj,pou,2,2229,0.5518,15,True,True,True,5.0,0.0,0.0,126.0,False,False,True,False,kv/jevicko/index.html
 568635,Golčův Jeníkov,Havlíčkův Brod,Kraj Vysočina,pou,2,2147,0.5384,15,True,True,True,6.0,0.0,0.0,139.0,False,False,True,False,kv/golcuv-jenikov/index.html
-565814,Úštěk,Litoměřice,Ústecký kraj,pou,7,2260,0.5004,15,True,True,True,3.0,1.0,0.0,12.0,True,False,True,False,kv/ustek/index.html
+565814,Úštěk,Litoměřice,Ústecký kraj,pou,7,2260,0.5004,15,True,True,True,3.0,2.0,0.0,12.0,True,False,True,False,kv/ustek/index.html
 586714,Velká nad Veličkou,Hodonín,Jihomoravský kraj,pou,2,2295,0.5969,15,True,True,True,5.0,0.0,0.0,530.0,False,False,True,False,kv/velka-nad-velickou/index.html
-597678,Moravský Beroun,Olomouc,Olomoucký kraj,pou,6,2229,0.4056,15,True,True,True,2.0,0.0,0.0,113.0,False,False,True,False,kv/moravsky-beroun/index.html
-563404,Vejprty,Chomutov,Ústecký kraj,pou,3,2269,0.4425,15,True,True,True,5.0,1.0,0.0,38.0,True,False,True,False,kv/vejprty/index.html
+597678,Moravský Beroun,Olomouc,Olomoucký kraj,pou,6,2229,0.4056,15,True,True,True,2.0,1.0,0.0,113.0,False,False,True,False,kv/moravsky-beroun/index.html
+563404,Vejprty,Chomutov,Ústecký kraj,pou,3,2269,0.4425,15,True,True,True,5.0,2.0,0.0,38.0,True,False,True,False,kv/vejprty/index.html
 588601,Koryčany,Kroměříž,Zlínský kraj,pou,5,2170,0.5184,15,True,True,True,6.0,0.0,0.0,162.0,False,False,True,False,kv/korycany/index.html
 552704,Mladá Vožice,Tábor,Jihočeský kraj,pou,3,2141,0.4764,15,True,True,True,2.0,0.0,0.0,273.0,False,False,True,False,kv/mlada-vozice/index.html
 545848,Vyšší Brod,Český Krumlov,Jihočeský kraj,pou,2,1753,0.5556,15,True,True,True,6.0,0.0,0.0,111.0,False,False,True,False,kv/vyssi-brod/index.html
 586803,Ždánice,Hodonín,Jihomoravský kraj,pou,2,2068,0.558,15,True,True,True,6.0,0.0,0.0,283.0,False,False,True,False,kv/zdanice/index.html
-570451,Nechanice,Hradec Králové,Královéhradecký kraj,pou,6,1986,0.5428,15,True,True,True,5.0,0.0,0.0,72.0,False,False,True,False,kv/nechanice/index.html
-536148,Javorník,Jeseník,Olomoucký kraj,pou,3,2097,0.5088,15,True,True,True,7.0,0.0,0.0,215.0,False,False,True,False,kv/javornik/index.html
+570451,Nechanice,Hradec Králové,Královéhradecký kraj,pou,6,1986,0.5428,15,True,True,True,5.0,1.0,0.0,72.0,False,False,True,False,kv/nechanice/index.html
+536148,Javorník,Jeseník,Olomoucký kraj,pou,3,2097,0.5088,15,True,True,True,7.0,1.0,0.0,215.0,False,False,True,False,kv/javornik/index.html
 560260,Zbiroh,Rokycany,Plzeňský kraj,pou,5,1972,0.466,15,True,True,True,4.0,0.0,0.0,103.0,False,False,True,False,kv/zbiroh/index.html
 559211,Město Touškov,Plzeň-sever,Plzeňský kraj,pou,2,1919,0.518,15,True,True,True,4.0,0.0,0.0,347.0,False,False,True,False,kv/mesto-touskov/index.html
 550442,Netolice,Prachatice,Jihočeský kraj,pou,4,2000,0.5375,15,True,True,True,3.0,0.0,0.0,459.0,False,False,True,False,kv/netolice/index.html
 584550,Klobouky u Brna,Břeclav,Jihomoravský kraj,pou,3,1911,0.5217,15,True,True,True,3.0,0.0,0.0,184.0,False,False,True,False,kv/klobouky-u-brna/index.html
-577456,Rokytnice nad Jizerou,Semily,Liberecký kraj,pou,2,2036,0.5884,15,True,True,True,4.0,1.0,0.0,40.0,True,False,True,False,kv/rokytnice-nad-jizerou/index.html
-548561,Počátky,Pelhřimov,Kraj Vysočina,pou,2,1954,0.5107,15,True,True,True,3.0,1.0,0.0,39.0,True,False,True,False,kv/pocatky/index.html
+577456,Rokytnice nad Jizerou,Semily,Liberecký kraj,pou,2,2036,0.5884,15,True,True,True,4.0,2.0,0.0,40.0,True,False,True,False,kv/rokytnice-nad-jizerou/index.html
+548561,Počátky,Pelhřimov,Kraj Vysočina,pou,2,1954,0.5107,15,True,True,True,3.0,2.0,0.0,39.0,True,False,True,False,kv/pocatky/index.html
 544868,Nové Hrady,České Budějovice,Jihočeský kraj,pou,3,1957,0.6152,15,True,True,True,3.0,0.0,0.0,421.0,False,False,True,False,kv/nove-hrady/index.html
 568350,Velké Březno,Ústí nad Labem,Ústecký kraj,pou,2,1966,0.4919,15,True,True,True,5.0,0.0,0.0,75.0,False,False,True,False,kv/velke-brezno/index.html
 573493,Sobotka,Jičín,Královéhradecký kraj,pou,2,1829,0.4822,15,True,True,True,3.0,0.0,0.0,324.0,False,False,True,False,kv/sobotka/index.html
 542911,Karolinka,Vsetín,Zlínský kraj,pou,2,1934,0.56,15,True,True,True,3.0,0.0,0.0,52.0,False,False,True,False,kv/karolinka/index.html
 597350,Horní Benešov,Bruntál,Moravskoslezský kraj,pou,3,1806,0.4906,15,True,True,True,4.0,0.0,0.0,180.0,False,False,True,False,kv/horni-benesov/index.html
-547166,Slavonice,Jindřichův Hradec,Jihočeský kraj,pou,3,1868,0.538,15,True,True,True,5.0,1.0,0.0,30.0,True,False,True,False,kv/slavonice/index.html
+547166,Slavonice,Jindřichův Hradec,Jihočeský kraj,pou,3,1868,0.538,15,True,True,True,5.0,2.0,0.0,30.0,True,False,True,False,kv/slavonice/index.html
 533807,Týnec nad Labem,Kolín,Středočeský kraj,pou,2,1677,0.3512,11,True,True,True,1.0,0.0,0.0,4186.0,False,False,True,False,kv/tynec-nad-labem/index.html
 555762,Žlutice,Karlovy Vary,Karlovarský kraj,pou,2,1793,0.5042,15,True,True,True,4.0,0.0,0.0,115.0,False,False,True,False,kv/zlutice/index.html
 573060,Kopidlno,Jičín,Královéhradecký kraj,pou,5,1667,0.5027,15,True,True,True,5.0,0.0,0.0,301.0,False,False,True,False,kv/kopidlno/index.html
@@ -368,37 +368,37 @@
 533424,Kouřim,Kolín,Středočeský kraj,pou,2,1575,0.6102,15,True,True,True,3.0,0.0,0.0,209.0,False,False,True,False,kv/kourim/index.html
 545511,Horní Planá,Český Krumlov,Jihočeský kraj,pou,2,1668,0.5594,15,True,True,True,4.0,0.0,0.0,68.0,False,False,True,False,kv/horni-plana/index.html
 568058,Libouchec,Ústí nad Labem,Ústecký kraj,pou,1,1589,0.4915,15,True,True,True,4.0,0.0,0.0,139.0,False,False,True,False,kv/libouchec/index.html
-579734,Svoboda nad Úpou,Trutnov,Královéhradecký kraj,pou,1,1465,0.5058,15,True,True,True,5.0,1.0,0.0,39.0,True,False,True,False,kv/svoboda-nad-upou/index.html
-589756,Němčice nad Hanou,Prostějov,Olomoucký kraj,pou,2,1555,0.5093,15,True,True,True,7.0,1.0,0.0,17.0,True,False,True,False,kv/nemcice-nad-hanou/index.html
+579734,Svoboda nad Úpou,Trutnov,Královéhradecký kraj,pou,1,1465,0.5058,15,True,True,True,5.0,2.0,0.0,39.0,True,False,True,False,kv/svoboda-nad-upou/index.html
+589756,Němčice nad Hanou,Prostějov,Olomoucký kraj,pou,2,1555,0.5093,15,True,True,True,7.0,2.0,0.0,17.0,True,False,True,False,kv/nemcice-nad-hanou/index.html
 560120,Radnice,Rokycany,Plzeňský kraj,pou,1,1391,0.5622,15,True,True,True,4.0,1.0,0.0,7.0,True,False,True,False,kv/radnice/index.html
-590673,Hrotovice,Třebíč,Kraj Vysočina,pou,2,1424,0.4979,15,True,True,True,4.0,1.0,0.0,24.0,True,False,True,False,kv/hrotovice/index.html
+590673,Hrotovice,Třebíč,Kraj Vysočina,pou,2,1424,0.4979,15,True,True,True,4.0,2.0,0.0,24.0,True,False,True,False,kv/hrotovice/index.html
 559628,Všeruby,Plzeň-sever,Plzeňský kraj,pou,1,1296,0.6435,15,True,True,True,2.0,0.0,0.0,481.0,False,False,True,False,kv/vseruby/index.html
 571911,Nasavrky,Chrudim,Pardubický kraj,pou,1,1349,0.55,15,True,True,True,5.0,0.0,0.0,53.0,False,False,True,False,kv/nasavrky/index.html
 541834,Jesenice (okres Rakovník),Rakovník,Středočeský kraj,pou,2,1298,0.4738,15,True,True,True,4.0,0.0,0.0,53.0,False,False,True,False,kv/jesenice-okres-rakovnik/index.html
 549592,Mirovice,Písek,Jihočeský kraj,pou,2,1200,0.5983,15,True,True,True,2.0,0.0,0.0,493.0,False,False,True,False,kv/mirovice/index.html
 556955,Plánice,Klatovy,Plzeňský kraj,pou,8,1350,0.6111,15,True,True,True,4.0,0.0,0.0,160.0,False,False,True,False,kv/planice/index.html
-574538,Teplice nad Metují,Náchod,Královéhradecký kraj,pou,3,1300,0.5738,11,True,True,True,7.0,1.0,0.0,29.0,True,False,True,False,kv/teplice-nad-metuji/index.html
+574538,Teplice nad Metují,Náchod,Královéhradecký kraj,pou,3,1300,0.5738,11,True,True,True,7.0,2.0,0.0,29.0,True,False,True,False,kv/teplice-nad-metuji/index.html
 554111,Poběžovice,Domažlice,Plzeňský kraj,pou,2,1233,0.2782,15,True,True,True,1.0,0.0,0.0,3575.0,False,False,True,False,kv/pobezovice/index.html
-535052,Mšeno,Mělník,Středočeský kraj,pou,1,1145,0.5039,15,True,True,True,2.0,1.0,0.0,33.0,True,False,True,False,kv/mseno/index.html
+535052,Mšeno,Mělník,Středočeský kraj,pou,1,1145,0.5039,15,True,True,True,2.0,2.0,0.0,33.0,True,False,True,False,kv/mseno/index.html
 556432,Kašperské Hory,Klatovy,Plzeňský kraj,pou,1,1142,0.5613,15,True,True,True,4.0,1.0,0.0,3.0,True,False,True,False,kv/kasperske-hory/index.html
 542725,Horní Lideč,Vsetín,Zlínský kraj,pou,1,1104,0.6576,15,True,True,True,4.0,0.0,0.0,220.0,False,False,True,False,kv/horni-lidec/index.html
 549584,Mirotice,Písek,Jihočeský kraj,pou,3,987,0.4995,15,True,True,True,3.0,0.0,0.0,70.0,False,False,True,False,kv/mirotice/index.html
 559202,Manětín,Plzeň-sever,Plzeňský kraj,pou,3,994,0.6328,13,True,True,True,4.0,1.0,0.0,5.0,True,False,True,False,kv/manetin/index.html
-597716,Osoblaha,Bruntál,Moravskoslezský kraj,pou,1,785,0.4229,9,True,True,True,3.0,1.0,0.0,12.0,True,False,True,False,kv/osoblaha/index.html
+597716,Osoblaha,Bruntál,Moravskoslezský kraj,pou,1,785,0.4229,9,True,True,True,3.0,2.0,0.0,12.0,True,False,True,False,kv/osoblaha/index.html
 560740,Bezdružice,Tachov,Plzeňský kraj,pou,1,697,0.5897,15,True,True,True,3.0,0.0,0.0,107.0,False,False,True,False,kv/bezdruzice/index.html
-595098,Vranov nad Dyjí,Znojmo,Jihomoravský kraj,pou,1,627,0.6699,15,True,True,True,3.0,2.0,0.0,33.0,True,True,True,False,kv/vranov-nad-dyji/index.html
+595098,Vranov nad Dyjí,Znojmo,Jihomoravský kraj,pou,1,627,0.6699,15,True,True,True,3.0,3.0,0.0,33.0,True,True,True,False,kv/vranov-nad-dyji/index.html
 541982,Křivoklát,Rakovník,Středočeský kraj,pou,1,522,0.6245,7,True,True,True,3.0,0.0,0.0,69.0,False,False,True,False,kv/krivoklat/index.html
-537501,Milovice (okres Nymburk),Nymburk,Středočeský kraj,obec,7,9038,0.3679,15,True,True,True,9.0,0.0,0.0,581.0,False,False,True,False,kv/milovice-okres-nymburk/index.html
+537501,Milovice (okres Nymburk),Nymburk,Středočeský kraj,obec,7,9038,0.3679,15,True,True,True,9.0,1.0,0.0,581.0,False,False,True,False,kv/milovice-okres-nymburk/index.html
 533203,Králův Dvůr,Beroun,Středočeský kraj,obec,8,7269,0.4314,19,True,True,True,4.0,0.0,0.0,462.0,False,False,True,False,kv/kraluv-dvur/index.html
 567507,Dubí,Teplice,Ústecký kraj,obec,7,6460,0.4088,17,True,True,True,5.0,0.0,0.0,91.0,False,False,True,False,kv/dubi/index.html
 599107,Rychvald,Karviná,Moravskoslezský kraj,obec,7,6255,0.395,15,True,True,True,9.0,1.0,0.0,59.0,False,False,True,False,kv/rychvald/index.html
-599085,Petřvald (okres Karviná),Karviná,Moravskoslezský kraj,obec,6,5911,0.3773,15,True,True,True,6.0,0.0,0.0,483.0,False,False,True,False,kv/petrvald-okres-karvina/index.html
+599085,Petřvald (okres Karviná),Karviná,Moravskoslezský kraj,obec,6,5911,0.3773,15,True,True,True,6.0,1.0,0.0,483.0,False,False,True,False,kv/petrvald-okres-karvina/index.html
 598798,Šenov,Ostrava-město,Moravskoslezský kraj,obec,4,5399,0.4634,17,True,True,True,6.0,0.0,0.0,369.0,False,False,True,False,kv/senov/index.html
 586161,Dubňany,Hodonín,Jihomoravský kraj,obec,5,5110,0.5297,21,True,True,True,6.0,1.0,0.0,9.0,True,False,True,False,kv/dubnany/index.html
 583391,Modřice,Brno-venkov,Jihomoravský kraj,obec,4,3725,0.5173,15,True,True,True,6.0,1.0,0.0,36.0,True,False,True,False,kv/modrice/index.html
 554529,Františkovy Lázně,Cheb,Karlovarský kraj,obec,6,4257,0.5055,15,True,True,True,5.0,1.0,0.0,17.0,True,False,True,False,kv/frantiskovy-lazne/index.html
 545252,Zubří (okres Vsetín),Vsetín,Zlínský kraj,obec,5,4403,0.5201,21,True,True,True,4.0,0.0,0.0,205.0,False,False,True,False,kv/zubri-okres-vsetin/index.html
-550744,Kunovice (okres Uherské Hradiště),Uherské Hradiště,Zlínský kraj,obec,5,4340,0.4919,17,True,True,True,5.0,0.0,0.0,390.0,False,False,True,False,kv/kunovice-okres-uherske-hradiste/index.html
+550744,Kunovice (okres Uherské Hradiště),Uherské Hradiště,Zlínský kraj,obec,5,4340,0.4919,17,True,True,True,5.0,1.0,0.0,390.0,False,False,True,False,kv/kunovice-okres-uherske-hradiste/index.html
 539236,Horoměřice,Praha-západ,Středočeský kraj,obec,2,3502,0.5523,15,True,True,False,3.0,0.0,0.0,175.0,False,False,True,False,kv/okres/praha-zapad.html#o-539236
 531723,Rudná (okres Praha-západ),Praha-západ,Středočeský kraj,obec,3,3794,0.5356,15,True,True,False,5.0,1.0,0.0,7.0,True,False,True,False,kv/okres/praha-zapad.html#o-531723
 507270,Hradec nad Moravicí,Opava,Moravskoslezský kraj,obec,9,4342,0.5509,21,True,True,True,5.0,1.0,0.0,437.0,False,False,True,False,kv/hradec-nad-moravici/index.html
@@ -409,7 +409,7 @@
 598062,Bystřice (okres Frýdek-Místek),Frýdek-Místek,Moravskoslezský kraj,obec,5,4304,0.503,15,True,True,True,5.0,0.0,0.0,270.0,False,False,True,False,kv/bystrice-okres-frydek-mistek/index.html
 539309,Chýně,Praha-západ,Středočeský kraj,obec,2,2881,0.2398,15,True,True,False,1.0,0.0,0.0,7067.0,False,False,True,False,kv/okres/praha-zapad.html#o-539309
 599077,Petrovice u Karviné,Karviná,Moravskoslezský kraj,obec,5,4097,0.4713,21,True,True,True,3.0,0.0,0.0,425.0,False,False,True,False,kv/petrovice-u-karvine/index.html
-507971,Ludgeřovice,Opava,Moravskoslezský kraj,obec,4,4002,0.529,19,True,True,True,5.0,1.0,0.0,329.0,False,False,True,False,kv/ludgerovice/index.html
+507971,Ludgeřovice,Opava,Moravskoslezský kraj,obec,4,4002,0.529,19,True,True,True,5.0,2.0,0.0,329.0,False,False,True,False,kv/ludgerovice/index.html
 562564,Jílové,Děčín,Ústecký kraj,obec,4,4087,0.3888,21,True,True,True,4.0,0.0,0.0,336.0,False,False,True,False,kv/jilove/index.html
 599158,Těrlicko,Karviná,Moravskoslezský kraj,obec,4,4002,0.5602,15,True,True,True,5.0,0.0,0.0,92.0,False,False,True,False,kv/terlicko/index.html
 583588,Oslavany,Brno-venkov,Jihomoravský kraj,obec,4,3828,0.3576,21,True,True,True,5.0,1.0,0.0,4.0,True,False,True,False,kv/oslavany/index.html
@@ -426,7 +426,7 @@
 506214,Bolatice,Opava,Moravskoslezský kraj,obec,3,3672,0.5349,17,True,True,False,4.0,0.0,0.0,270.0,False,False,True,False,kv/okres/opava.html#o-506214
 567779,Osek (okres Teplice),Teplice,Ústecký kraj,obec,4,3851,0.4552,21,True,True,True,5.0,0.0,0.0,78.0,False,False,True,False,kv/osek-okres-teplice/index.html
 534935,Kostelec nad Labem,Mělník,Středočeský kraj,obec,4,3241,0.3897,15,True,True,True,2.0,0.0,0.0,613.0,False,False,True,False,kv/kostelec-nad-labem/index.html
-599549,Klimkovice,Ostrava-město,Moravskoslezský kraj,obec,4,3545,0.5205,17,True,True,True,5.0,0.0,0.0,293.0,False,False,True,False,kv/klimkovice/index.html
+599549,Klimkovice,Ostrava-město,Moravskoslezský kraj,obec,4,3545,0.5205,17,True,True,True,5.0,1.0,0.0,293.0,False,False,True,False,kv/klimkovice/index.html
 575640,Sezemice (okres Pardubice),Pardubice,Pardubický kraj,obec,8,3262,0.5383,15,True,True,True,5.0,0.0,0.0,326.0,False,False,True,False,kv/sezemice-okres-pardubice/index.html
 552739,Horní Suchá,Karviná,Moravskoslezský kraj,obec,4,3589,0.4542,15,True,True,True,4.0,0.0,0.0,110.0,False,False,True,False,kv/horni-sucha/index.html
 539597,Psáry,Praha-západ,Středočeský kraj,obec,1,3193,0.5227,15,True,True,False,2.0,0.0,0.0,382.0,False,False,True,False,kv/okres/praha-zapad.html#o-539597
@@ -447,13 +447,13 @@
 538311,Klecany,Praha-východ,Středočeský kraj,obec,2,2644,0.5019,15,True,True,False,3.0,0.0,0.0,53.0,False,False,True,False,kv/okres/praha-vychod.html#o-538311
 554014,Návsí,Frýdek-Místek,Moravskoslezský kraj,obec,3,3146,0.4949,15,True,True,False,8.0,0.0,0.0,84.0,False,False,True,False,kv/okres/frydek-mistek.html#o-554014
 586510,Ratíškovice,Hodonín,Jihomoravský kraj,obec,3,3242,0.5885,15,True,True,False,6.0,1.0,0.0,23.0,True,False,True,False,kv/okres/hodonin.html#o-586510
-563811,Smržovka,Jablonec nad Nisou,Liberecký kraj,obec,4,2994,0.5063,17,True,True,True,6.0,0.0,0.0,192.0,False,False,True,False,kv/smrzovka/index.html
+563811,Smržovka,Jablonec nad Nisou,Liberecký kraj,obec,4,2994,0.5063,17,True,True,True,6.0,1.0,0.0,192.0,False,False,True,False,kv/smrzovka/index.html
 586943,Brtnice,Jihlava,Kraj Vysočina,obec,10,3011,0.5722,21,True,True,True,6.0,0.0,0.0,368.0,False,False,True,False,kv/brtnice/index.html
 584983,Velké Bílovice,Břeclav,Jihomoravský kraj,obec,3,3060,0.5062,15,True,True,False,2.0,0.0,0.0,346.0,False,False,True,False,kv/okres/breclav.html#o-584983
 598569,Paskov,Frýdek-Místek,Moravskoslezský kraj,obec,4,3200,0.4537,17,True,True,True,5.0,0.0,0.0,84.0,False,False,True,False,kv/paskov/index.html
 545821,Velešín,Český Krumlov,Jihočeský kraj,obec,3,2998,0.468,15,True,True,False,4.0,0.0,0.0,101.0,False,False,True,False,kv/okres/cesky-krumlov.html#o-545821
 585211,Fryšták,Zlín,Zlínský kraj,obec,4,3123,0.5405,17,True,True,True,5.0,0.0,0.0,94.0,False,False,True,False,kv/frystak/index.html
-506702,Dolní Benešov,Opava,Moravskoslezský kraj,obec,4,3202,0.4766,15,True,True,True,5.0,0.0,0.0,305.0,False,False,True,False,kv/dolni-benesov/index.html
+506702,Dolní Benešov,Opava,Moravskoslezský kraj,obec,4,3202,0.4766,15,True,True,True,5.0,1.0,0.0,305.0,False,False,True,False,kv/dolni-benesov/index.html
 539198,Dobřichovice,Praha-západ,Středočeský kraj,obec,3,2837,0.5157,15,True,True,False,3.0,1.0,0.0,26.0,True,False,True,False,kv/okres/praha-zapad.html#o-539198
 561681,Kamenický Šenov,Česká Lípa,Liberecký kraj,obec,5,3067,0.4105,15,True,True,True,3.0,0.0,0.0,263.0,False,False,True,False,kv/kamenicky-senov/index.html
 539643,Řevnice,Praha-západ,Středočeský kraj,obec,4,2819,0.5995,15,True,True,True,8.0,1.0,0.0,31.0,True,False,True,False,kv/revnice/index.html
@@ -467,7 +467,7 @@
 584223,Zbýšov (okres Brno-venkov),Brno-venkov,Jihomoravský kraj,obec,3,2942,0.4313,15,True,True,False,5.0,1.0,0.0,7.0,True,False,True,False,kv/okres/brno-venkov.html#o-584223
 582824,Bílovice nad Svitavou,Brno-venkov,Jihomoravský kraj,obec,2,2847,0.5852,15,True,True,False,3.0,0.0,0.0,91.0,False,False,True,False,kv/okres/brno-venkov.html#o-582824
 598453,Mosty u Jablunkova,Frýdek-Místek,Moravskoslezský kraj,obec,3,3027,0.4609,11,True,True,False,4.0,0.0,0.0,280.0,False,False,True,False,kv/okres/frydek-mistek.html#o-598453
-535672,Dobrovice,Mladá Boleslav,Středočeský kraj,obec,9,2675,0.5682,15,True,True,True,4.0,2.0,0.0,39.0,True,False,True,False,kv/dobrovice/index.html
+535672,Dobrovice,Mladá Boleslav,Středočeský kraj,obec,9,2675,0.5682,15,True,True,True,4.0,3.0,0.0,39.0,True,False,True,False,kv/dobrovice/index.html
 540501,Nový Malín,Šumperk,Olomoucký kraj,obec,3,2920,0.5795,15,True,True,False,4.0,1.0,0.0,34.0,True,False,True,False,kv/okres/sumperk.html#o-540501
 584622,Lanžhot,Břeclav,Jihomoravský kraj,obec,3,2958,0.4648,21,True,True,False,4.0,0.0,0.0,139.0,False,False,True,False,kv/okres/breclav.html#o-584622
 583413,Moravany (okres Brno-venkov),Brno-venkov,Jihomoravský kraj,obec,2,2406,0.5403,15,True,True,False,6.0,0.0,0.0,57.0,False,False,True,False,kv/okres/brno-venkov.html#o-583413
@@ -499,7 +499,7 @@
 567621,Košťany,Teplice,Ústecký kraj,obec,5,2612,0.4751,15,True,True,True,4.0,0.0,0.0,385.0,False,False,True,False,kv/kostany/index.html
 513458,Vestec (okres Praha-západ),Praha-západ,Středočeský kraj,obec,1,1819,0.5063,15,True,True,False,3.0,0.0,0.0,367.0,False,False,True,False,kv/okres/praha-zapad.html#o-513458
 583910,Střelice (okres Brno-venkov),Brno-venkov,Jihomoravský kraj,obec,2,2452,0.6122,15,True,True,False,4.0,0.0,0.0,286.0,False,False,True,False,kv/okres/brno-venkov.html#o-583910
-506753,Háj ve Slezsku,Opava,Moravskoslezský kraj,obec,5,2685,0.5829,21,True,True,True,4.0,1.0,0.0,48.0,True,False,True,False,kv/haj-ve-slezsku/index.html
+506753,Háj ve Slezsku,Opava,Moravskoslezský kraj,obec,5,2685,0.5829,21,True,True,True,4.0,2.0,0.0,48.0,True,False,True,False,kv/haj-ve-slezsku/index.html
 539961,Libina,Šumperk,Olomoucký kraj,obec,5,2658,0.4951,15,True,True,True,5.0,0.0,0.0,90.0,False,False,True,False,kv/libina/index.html
 505650,Velký Týnec,Olomouc,Olomoucký kraj,obec,3,2473,0.5928,11,True,True,False,3.0,0.0,0.0,318.0,False,False,True,False,kv/okres/olomouc.html#o-505650
 539066,Zeleneč,Praha-východ,Středočeský kraj,obec,2,2315,0.6272,15,True,True,False,2.0,0.0,0.0,192.0,False,False,True,False,kv/okres/praha-vychod.html#o-539066
@@ -626,7 +626,7 @@
 564591,Bohušovice nad Ohří,Litoměřice,Ústecký kraj,obec,3,1918,0.4578,15,True,True,False,5.0,0.0,0.0,200.0,False,False,True,False,kv/okres/litomerice.html#o-564591
 598348,Krmelín,Frýdek-Místek,Moravskoslezský kraj,obec,2,1915,0.5901,15,True,True,False,5.0,0.0,0.0,402.0,False,False,True,False,kv/okres/frydek-mistek.html#o-598348
 592102,Buchlovice,Uherské Hradiště,Zlínský kraj,obec,2,1992,0.6345,15,True,True,False,6.0,0.0,0.0,89.0,False,False,True,False,kv/okres/uherske-hradiste.html#o-592102
-566551,Peruc,Louny,Ústecký kraj,obec,7,1924,0.5707,15,True,True,True,4.0,0.0,0.0,242.0,False,False,True,False,kv/peruc/index.html
+566551,Peruc,Louny,Ústecký kraj,obec,7,1924,0.5707,15,True,True,True,4.0,1.0,0.0,242.0,False,False,True,False,kv/peruc/index.html
 536270,Luštěnice,Mladá Boleslav,Středočeský kraj,obec,3,1663,0.2532,15,True,True,False,1.0,0.0,0.0,3459.0,False,False,True,False,kv/okres/mlada-boleslav.html#o-536270
 599689,Mořkov,Nový Jičín,Moravskoslezský kraj,obec,2,1959,0.388,15,True,True,False,1.0,0.0,0.0,6177.0,False,False,True,False,kv/okres/novy-jicin.html#o-599689
 538680,Pyšely,Benešov,Středočeský kraj,obec,2,1721,0.6241,9,True,True,False,4.0,0.0,0.0,276.0,False,False,True,False,kv/okres/benesov.html#o-538680
@@ -859,12 +859,12 @@
 546674,Lomnice nad Lužnicí,Jindřichův Hradec,Jihočeský kraj,obec,1,1469,0.6065,11,True,True,False,7.0,1.0,0.0,29.0,True,False,True,False,kv/okres/jindrichuv-hradec.html#o-546674
 539856,Všenory,Praha-západ,Středočeský kraj,obec,1,1376,0.6323,9,True,True,False,3.0,0.0,0.0,206.0,False,False,True,False,kv/okres/praha-zapad.html#o-539856
 579432,Lánov,Trutnov,Královéhradecký kraj,obec,2,1408,0.5277,15,True,True,False,3.0,1.0,0.0,24.0,True,False,True,False,kv/okres/trutnov.html#o-579432
-571091,Všestary (okres Hradec Králové),Hradec Králové,Královéhradecký kraj,obec,6,1406,0.591,15,True,True,True,2.0,0.0,0.0,297.0,False,False,True,False,kv/vsestary-okres-hradec-kralove/index.html
+571091,Všestary (okres Hradec Králové),Hradec Králové,Královéhradecký kraj,obec,6,1406,0.591,15,True,True,True,2.0,1.0,0.0,297.0,False,False,True,False,kv/vsestary-okres-hradec-kralove/index.html
 500046,Libhošť,Nový Jičín,Moravskoslezský kraj,obec,1,1413,0.6561,15,True,True,False,2.0,0.0,0.0,103.0,False,False,True,False,kv/okres/novy-jicin.html#o-500046
 585467,Lukov (okres Zlín),Zlín,Zlínský kraj,obec,1,1394,0.5832,15,True,True,False,3.0,0.0,0.0,81.0,False,False,True,False,kv/okres/zlin.html#o-585467
 564877,Hoštka (okres Litoměřice),Litoměřice,Ústecký kraj,obec,1,1369,0.531,15,True,True,False,5.0,0.0,0.0,65.0,False,False,True,False,kv/okres/litomerice.html#o-564877
 594067,Hodonice (okres Znojmo),Znojmo,Jihomoravský kraj,obec,1,1418,0.4859,11,True,True,False,5.0,0.0,0.0,120.0,False,False,True,False,kv/okres/znojmo.html#o-594067
-544442,Dubné,České Budějovice,Jihočeský kraj,obec,4,1373,0.354,15,True,True,True,1.0,0.0,0.0,3760.0,False,False,True,False,kv/dubne/index.html
+544442,Dubné,České Budějovice,Jihočeský kraj,obec,4,1373,0.354,15,True,True,True,1.0,1.0,0.0,3760.0,False,False,True,False,kv/dubne/index.html
 505081,Senice na Hané,Olomouc,Olomoucký kraj,obec,3,1452,0.5978,15,True,True,False,5.0,0.0,0.0,174.0,False,False,True,False,kv/okres/olomouc.html#o-505081
 537357,Kounice,Nymburk,Středočeský kraj,obec,1,1271,0.716,9,True,True,False,4.0,1.0,0.0,8.0,True,False,True,False,kv/okres/nymburk.html#o-537357
 545198,Vidče,Vsetín,Zlínský kraj,obec,1,1411,0.6371,15,True,True,False,2.0,0.0,0.0,93.0,False,False,True,False,kv/okres/vsetin.html#o-545198
@@ -973,7 +973,7 @@
 553450,Blížejov,Domažlice,Plzeňský kraj,obec,5,1218,0.5107,11,True,True,True,3.0,0.0,0.0,121.0,False,False,True,False,kv/blizejov/index.html
 577928,Bystré (okres Svitavy),Svitavy,Pardubický kraj,obec,1,1210,0.614,15,True,True,False,2.0,0.0,0.0,93.0,False,False,True,False,kv/okres/svitavy.html#o-577928
 570869,Smidary,Hradec Králové,Královéhradecký kraj,obec,5,1254,0.5821,15,True,True,True,3.0,0.0,0.0,219.0,False,False,True,False,kv/smidary/index.html
-561151,Přimda,Tachov,Plzeňský kraj,obec,4,949,0.4868,15,True,True,True,2.0,0.0,0.0,159.0,False,False,True,False,kv/primda/index.html
+561151,Přimda,Tachov,Plzeňský kraj,obec,4,949,0.4868,15,True,True,True,2.0,1.0,0.0,159.0,False,False,True,False,kv/primda/index.html
 550167,Čkyně,Prachatice,Jihočeský kraj,obec,2,1240,0.3815,15,True,True,False,1.0,0.0,0.0,3926.0,False,False,True,False,kv/okres/prachatice.html#o-550167
 563340,Spořice,Chomutov,Ústecký kraj,obec,1,1261,0.5852,11,True,True,False,2.0,0.0,0.0,347.0,False,False,True,False,kv/okres/chomutov.html#o-563340
 544396,Liptál,Vsetín,Zlínský kraj,obec,1,1245,0.5871,15,True,True,False,3.0,0.0,0.0,230.0,False,False,True,False,kv/okres/vsetin.html#o-544396
@@ -1000,7 +1000,7 @@
 564711,Čížkovice,Litoměřice,Ústecký kraj,obec,1,1219,0.5726,15,True,True,False,4.0,0.0,0.0,205.0,False,False,True,False,kv/okres/litomerice.html#o-564711
 531995,Zaječov,Beroun,Středočeský kraj,obec,1,1210,0.6165,9,True,True,False,6.0,1.0,0.0,21.0,True,False,True,False,kv/okres/beroun.html#o-531995
 505501,Újezd (okres Olomouc),Olomouc,Olomoucký kraj,obec,1,1220,0.5074,11,True,True,False,3.0,0.0,0.0,142.0,False,False,True,False,kv/okres/olomouc.html#o-505501
-500861,Bouzov,Olomouc,Olomoucký kraj,obec,9,1209,0.6642,15,True,True,True,5.0,1.0,0.0,182.0,False,False,True,False,kv/bouzov/index.html
+500861,Bouzov,Olomouc,Olomoucký kraj,obec,9,1209,0.6642,15,True,True,True,5.0,2.0,0.0,182.0,False,False,True,False,kv/bouzov/index.html
 589764,Nezamyslice (okres Prostějov),Prostějov,Olomoucký kraj,obec,1,1172,0.5725,15,True,True,False,3.0,0.0,0.0,251.0,False,False,True,False,kv/okres/prostejov.html#o-589764
 554545,Hazlov,Cheb,Karlovarský kraj,obec,1,1237,0.5449,9,True,True,False,5.0,0.0,0.0,202.0,False,False,True,False,kv/okres/cheb.html#o-554545
 536971,Žďár (okres Mladá Boleslav),Mladá Boleslav,Středočeský kraj,obec,3,1171,0.5867,9,True,True,False,3.0,0.0,0.0,322.0,False,False,True,False,kv/okres/mlada-boleslav.html#o-536971
@@ -1117,7 +1117,7 @@
 557137,Strážov,Klatovy,Plzeňský kraj,obec,1,1086,0.4448,15,True,True,False,1.0,0.0,0.0,3513.0,False,False,True,False,kv/okres/klatovy.html#o-557137
 569186,Okrouhlice,Havlíčkův Brod,Kraj Vysočina,obec,5,1076,0.6571,15,True,True,True,3.0,0.0,0.0,396.0,False,False,True,False,kv/okrouhlice/index.html
 507113,Holasovice,Opava,Moravskoslezský kraj,obec,4,1121,0.5665,15,True,True,True,20.0,1.0,0.0,10.0,True,False,True,False,kv/holasovice/index.html
-572179,Rosice (okres Chrudim),Chrudim,Pardubický kraj,obec,4,1102,0.6044,15,True,True,True,3.0,0.0,0.0,193.0,False,False,True,False,kv/rosice-okres-chrudim/index.html
+572179,Rosice (okres Chrudim),Chrudim,Pardubický kraj,obec,4,1102,0.6044,15,True,True,True,3.0,1.0,0.0,193.0,False,False,True,False,kv/rosice-okres-chrudim/index.html
 567523,Háj u Duchcova,Teplice,Ústecký kraj,obec,1,1104,0.615,9,True,True,False,3.0,0.0,0.0,51.0,False,False,True,False,kv/okres/teplice.html#o-567523
 545074,Staré Hodějovice,České Budějovice,Jihočeský kraj,obec,1,1058,0.3762,9,True,True,False,1.0,0.0,0.0,2391.0,False,False,True,False,kv/okres/ceske-budejovice.html#o-545074
 561207,Stráž (okres Tachov),Tachov,Plzeňský kraj,obec,1,982,0.5224,9,True,True,False,2.0,0.0,0.0,293.0,False,False,True,False,kv/okres/tachov.html#o-561207
@@ -1139,7 +1139,7 @@
 559776,Dobřív,Rokycany,Plzeňský kraj,obec,1,1049,0.5234,9,True,True,False,2.0,0.0,0.0,216.0,False,False,True,False,kv/okres/rokycany.html#o-559776
 533998,Církvice (okres Kutná Hora),Kutná Hora,Středočeský kraj,obec,2,1040,0.649,9,True,True,False,4.0,1.0,0.0,12.0,True,False,True,False,kv/okres/kutna-hora.html#o-533998
 540498,Kosova Hora,Příbram,Středočeský kraj,obec,1,1078,0.5807,15,True,True,False,2.0,0.0,0.0,338.0,False,False,True,False,kv/okres/pribram.html#o-540498
-558915,Hromnice,Plzeň-sever,Plzeňský kraj,obec,4,1074,0.338,15,True,True,True,1.0,0.0,0.0,3252.0,False,False,True,False,kv/hromnice/index.html
+558915,Hromnice,Plzeň-sever,Plzeňský kraj,obec,4,1074,0.338,15,True,True,True,1.0,1.0,0.0,3252.0,False,False,True,False,kv/hromnice/index.html
 545481,Frymburk (okres Český Krumlov),Český Krumlov,Jihočeský kraj,obec,1,1069,0.6099,9,True,True,False,4.0,0.0,0.0,81.0,False,False,True,False,kv/okres/cesky-krumlov.html#o-545481
 549843,Sepekov,Písek,Jihočeský kraj,obec,2,1105,0.3701,15,True,True,False,1.0,0.0,0.0,4135.0,False,False,True,False,kv/okres/pisek.html#o-549843
 560545,Lomnice (okres Sokolov),Sokolov,Karlovarský kraj,obec,1,1097,0.4512,11,True,True,False,2.0,0.0,0.0,83.0,False,False,True,False,kv/okres/sokolov.html#o-560545
@@ -1219,7 +1219,7 @@
 531944,Vráž (okres Beroun),Beroun,Středočeský kraj,obec,1,977,0.3429,15,True,True,False,1.0,0.0,0.0,2939.0,False,False,True,False,kv/okres/beroun.html#o-531944
 560251,Volduchy,Rokycany,Plzeňský kraj,obec,1,939,0.5687,9,True,True,False,2.0,0.0,0.0,276.0,False,False,True,False,kv/okres/rokycany.html#o-560251
 568554,Rybí,Nový Jičín,Moravskoslezský kraj,obec,1,1024,0.6143,15,True,True,False,2.0,0.0,0.0,240.0,False,False,True,False,kv/okres/novy-jicin.html#o-568554
-577693,Vysoké nad Jizerou,Semily,Liberecký kraj,obec,3,1028,0.3512,15,True,True,False,1.0,0.0,0.0,3340.0,False,False,True,False,kv/okres/semily.html#o-577693
+577693,Vysoké nad Jizerou,Semily,Liberecký kraj,obec,3,1028,0.3512,15,True,True,True,1.0,1.0,0.0,3340.0,False,False,True,False,kv/vysoke-nad-jizerou/index.html
 525804,Bohdíkov,Šumperk,Olomoucký kraj,obec,3,1071,0.5994,15,True,True,False,5.0,0.0,0.0,117.0,False,False,True,False,kv/okres/sumperk.html#o-525804
 583219,Kobylnice (okres Brno-venkov),Brno-venkov,Jihomoravský kraj,obec,1,999,0.5716,15,True,True,False,3.0,0.0,0.0,103.0,False,False,True,False,kv/okres/brno-venkov.html#o-583219
 540935,Obecnice,Příbram,Středočeský kraj,obec,2,1024,0.5732,15,True,True,False,3.0,0.0,0.0,163.0,False,False,True,False,kv/okres/pribram.html#o-540935
@@ -1327,7 +1327,7 @@
 568732,Ženklava,Nový Jičín,Moravskoslezský kraj,obec,1,919,0.5626,9,True,True,False,3.0,0.0,0.0,83.0,False,False,True,False,kv/okres/novy-jicin.html#o-568732
 553981,Mrákov,Domažlice,Plzeňský kraj,obec,1,900,0.6844,9,True,True,False,3.0,0.0,0.0,300.0,False,False,True,False,kv/okres/domazlice.html#o-553981
 586188,Hroznová Lhota,Hodonín,Jihomoravský kraj,obec,1,959,0.6475,15,True,True,False,4.0,0.0,0.0,187.0,False,False,True,False,kv/okres/hodonin.html#o-586188
-556751,Nalžovské Hory,Klatovy,Plzeňský kraj,obec,7,931,0.2922,15,True,True,True,1.0,0.0,0.0,2187.0,False,False,True,False,kv/nalzovske-hory/index.html
+556751,Nalžovské Hory,Klatovy,Plzeňský kraj,obec,7,931,0.2922,15,True,True,True,1.0,1.0,0.0,2187.0,False,False,True,False,kv/nalzovske-hory/index.html
 583430,Moravské Knínice,Brno-venkov,Jihomoravský kraj,obec,1,862,0.681,7,True,True,False,2.0,0.0,0.0,309.0,False,False,True,False,kv/okres/brno-venkov.html#o-583430
 591904,Vladislav,Třebíč,Kraj Vysočina,obec,3,926,0.6998,15,True,True,False,2.0,0.0,0.0,385.0,False,False,True,False,kv/okres/trebic.html#o-591904
 530212,Načeradec,Benešov,Středočeský kraj,obec,1,878,0.5558,15,True,True,False,3.0,0.0,0.0,164.0,False,False,True,False,kv/okres/benesov.html#o-530212
@@ -1336,7 +1336,7 @@
 579971,Bystřec,Ústí nad Orlicí,Pardubický kraj,obec,1,904,0.6615,15,True,True,False,2.0,0.0,0.0,91.0,False,False,True,False,kv/okres/usti-nad-orlici.html#o-579971
 586013,Žlutava,Zlín,Zlínský kraj,obec,1,921,0.6319,9,True,True,False,5.0,0.0,0.0,143.0,False,False,True,False,kv/okres/zlin.html#o-586013
 570656,Praskačka,Hradec Králové,Královéhradecký kraj,obec,3,910,0.6956,11,True,True,False,2.0,0.0,0.0,91.0,False,False,True,False,kv/okres/hradec-kralove.html#o-570656
-500623,Bílá Lhota,Olomouc,Olomoucký kraj,obec,7,917,0.5812,15,True,True,True,3.0,0.0,0.0,237.0,False,False,True,False,kv/bila-lhota/index.html
+500623,Bílá Lhota,Olomouc,Olomoucký kraj,obec,7,917,0.5812,15,True,True,True,3.0,1.0,0.0,237.0,False,False,True,False,kv/bila-lhota/index.html
 567868,Zabrušany,Teplice,Ústecký kraj,obec,1,967,0.3444,15,True,True,False,1.0,0.0,0.0,3109.0,False,False,True,False,kv/okres/teplice.html#o-567868
 570834,Skřivany,Hradec Králové,Královéhradecký kraj,obec,1,879,0.5358,9,True,True,False,3.0,0.0,0.0,187.0,False,False,True,False,kv/okres/hradec-kralove.html#o-570834
 508373,Mokré Lazce,Opava,Moravskoslezský kraj,obec,1,923,0.7237,9,True,True,False,5.0,0.0,0.0,152.0,False,False,True,False,kv/okres/opava.html#o-508373
@@ -1369,7 +1369,7 @@
 584843,Přibice,Brno-venkov,Jihomoravský kraj,obec,1,893,0.589,9,True,True,False,2.0,0.0,0.0,265.0,False,False,True,False,kv/okres/brno-venkov.html#o-584843
 576336,Javornice,Rychnov nad Kněžnou,Královéhradecký kraj,obec,1,871,0.5591,11,True,True,False,3.0,0.0,0.0,40.0,False,False,True,False,kv/okres/rychnov-nad-kneznou.html#o-576336
 537811,Sokoleč,Nymburk,Středočeský kraj,obec,1,850,0.6106,9,True,True,False,2.0,0.0,0.0,87.0,False,False,True,False,kv/okres/nymburk.html#o-537811
-544639,Jílovice (okres České Budějovice),České Budějovice,Jihočeský kraj,obec,5,873,0.606,15,True,True,True,3.0,2.0,1.0,12.0,True,False,True,False,kv/jilovice-okres-ceske-budejovice/index.html
+544639,Jílovice (okres České Budějovice),České Budějovice,Jihočeský kraj,obec,5,873,0.606,15,True,True,True,3.0,3.0,1.0,12.0,True,False,True,False,kv/jilovice-okres-ceske-budejovice/index.html
 556637,Měčín,Klatovy,Plzeňský kraj,obec,6,930,0.4742,15,True,True,True,1.0,0.0,0.0,3303.0,False,False,True,False,kv/mecin/index.html
 541575,Žulová,Jeseník,Olomoucký kraj,obec,2,953,0.5666,15,True,True,False,6.0,1.0,0.0,20.0,True,False,True,False,kv/okres/jesenik.html#o-541575
 542032,Lubná (okres Rakovník),Rakovník,Středočeský kraj,obec,1,845,0.5633,11,True,True,False,4.0,1.0,0.0,31.0,True,False,True,False,kv/okres/rakovnik.html#o-542032
@@ -1429,7 +1429,7 @@
 530948,Vrchotovy Janovice,Benešov,Středočeský kraj,obec,1,849,0.364,15,True,True,False,1.0,0.0,0.0,2021.0,False,False,True,False,kv/okres/benesov.html#o-530948
 533670,Chrustenice,Beroun,Středočeský kraj,obec,1,794,0.6297,11,True,True,False,3.0,0.0,0.0,103.0,False,False,True,False,kv/okres/beroun.html#o-533670
 545210,Vigantice,Vsetín,Zlínský kraj,obec,1,847,0.6446,9,True,True,False,2.0,0.0,0.0,222.0,False,False,True,False,kv/okres/vsetin.html#o-545210
-546500,Jarošov nad Nežárkou,Jindřichův Hradec,Jihočeský kraj,obec,4,890,0.6449,15,True,True,True,5.0,1.0,0.0,5.0,True,False,True,False,kv/jarosov-nad-nezarkou/index.html
+546500,Jarošov nad Nežárkou,Jindřichův Hradec,Jihočeský kraj,obec,4,890,0.6449,15,True,True,True,5.0,2.0,0.0,5.0,True,False,True,False,kv/jarosov-nad-nezarkou/index.html
 535001,Liběchov,Mělník,Středočeský kraj,obec,2,828,0.3575,9,True,True,False,1.0,0.0,0.0,1609.0,False,False,True,False,kv/okres/melnik.html#o-535001
 552020,Hlušovice,Olomouc,Olomoucký kraj,obec,1,798,0.6165,9,True,True,False,2.0,0.0,0.0,325.0,False,False,True,False,kv/okres/olomouc.html#o-552020
 595071,Višňové,Znojmo,Jihomoravský kraj,obec,1,893,0.6618,11,True,True,False,3.0,0.0,0.0,219.0,False,False,True,False,kv/okres/znojmo.html#o-595071
@@ -1455,7 +1455,7 @@
 552577,Pstruží,Frýdek-Místek,Moravskoslezský kraj,obec,1,836,0.6148,11,True,True,False,3.0,0.0,0.0,43.0,False,False,True,False,kv/okres/frydek-mistek.html#o-552577
 535583,Březno (okres Mladá Boleslav),Mladá Boleslav,Středočeský kraj,obec,1,799,0.5932,15,True,True,False,2.0,0.0,0.0,76.0,False,False,True,False,kv/okres/mlada-boleslav.html#o-535583
 578509,Osík,Svitavy,Pardubický kraj,obec,1,823,0.6258,11,True,True,False,3.0,1.0,0.0,31.0,True,False,True,False,kv/okres/svitavy.html#o-578509
-574546,Kramolna,Náchod,Královéhradecký kraj,obec,3,904,0.4834,7,True,True,False,1.0,0.0,0.0,272.0,False,False,True,False,kv/okres/nachod.html#o-574546
+574546,Kramolna,Náchod,Královéhradecký kraj,obec,3,904,0.4834,7,True,True,True,1.0,1.0,0.0,272.0,False,False,True,False,kv/kramolna/index.html
 532274,Družec,Kladno,Středočeský kraj,obec,1,869,0.5581,9,True,True,False,1.0,0.0,0.0,2890.0,False,False,True,False,kv/okres/kladno.html#o-532274
 535290,Vojkovice (okres Mělník),Mělník,Středočeský kraj,obec,1,596,0.5067,7,True,True,False,3.0,0.0,0.0,79.0,False,False,True,False,kv/okres/melnik.html#o-535290
 549452,Chyšky,Písek,Jihočeský kraj,obec,2,853,0.5826,15,True,True,False,3.0,0.0,0.0,86.0,False,False,True,False,kv/okres/pisek.html#o-549452
@@ -1949,7 +1949,7 @@
 530115,Maršovice (okres Benešov),Benešov,Středočeský kraj,obec,3,639,0.6682,11,True,True,False,4.0,1.0,0.0,17.0,True,False,True,False,kv/okres/benesov.html#o-530115
 537152,Hořátev,Nymburk,Středočeský kraj,obec,1,613,0.7879,9,True,True,False,2.0,1.0,0.0,9.0,True,False,True,False,kv/okres/nymburk.html#o-537152
 555835,Bolešiny,Klatovy,Plzeňský kraj,obec,5,624,0.3798,9,True,True,True,1.0,0.0,0.0,1526.0,False,False,True,False,kv/bolesiny/index.html
-566357,Liběšice (okres Louny),Louny,Ústecký kraj,obec,4,661,0.7005,9,True,True,True,2.0,0.0,0.0,76.0,False,False,True,False,kv/libesice-okres-louny/index.html
+566357,Liběšice (okres Louny),Louny,Ústecký kraj,obec,4,661,0.7005,9,True,True,True,2.0,1.0,0.0,76.0,False,False,True,False,kv/libesice-okres-louny/index.html
 573124,Libuň,Jičín,Královéhradecký kraj,obec,3,642,0.4907,7,True,True,False,1.0,0.0,0.0,210.0,False,False,True,False,kv/okres/jicin.html#o-573124
 533351,Chrášťany (okres Kolín),Kolín,Středočeský kraj,obec,3,590,0.6034,9,True,True,False,2.0,0.0,0.0,93.0,False,False,True,False,kv/okres/kolin.html#o-533351
 540315,Hvožďany (okres Příbram),Příbram,Středočeský kraj,obec,4,643,0.6687,11,True,True,True,2.0,0.0,0.0,222.0,False,False,True,False,kv/hvozdany-okres-pribram/index.html
@@ -2213,7 +2213,7 @@
 562050,Sloup v Čechách,Česká Lípa,Liberecký kraj,obec,1,605,0.5372,11,True,True,False,3.0,0.0,0.0,52.0,False,False,True,False,kv/okres/ceska-lipa.html#o-562050
 562076,Sosnová (okres Česká Lípa),Česká Lípa,Liberecký kraj,obec,1,590,0.6576,15,True,True,False,4.0,0.0,0.0,100.0,False,False,True,False,kv/okres/ceska-lipa.html#o-562076
 544761,Lipí,České Budějovice,Jihočeský kraj,obec,2,544,0.511,7,True,True,False,1.0,0.0,0.0,181.0,False,False,True,False,kv/okres/ceske-budejovice.html#o-544761
-576450,Liberk,Rychnov nad Kněžnou,Královéhradecký kraj,obec,3,562,0.6263,9,True,True,False,6.0,1.0,0.0,7.0,True,False,True,False,kv/okres/rychnov-nad-kneznou.html#o-576450
+576450,Liberk,Rychnov nad Kněžnou,Královéhradecký kraj,obec,3,562,0.6263,9,True,True,True,6.0,2.0,1.0,7.0,True,False,True,False,kv/liberk/index.html
 577545,Stružinec,Semily,Liberecký kraj,obec,2,571,0.5552,7,True,True,False,2.0,0.0,0.0,193.0,False,False,True,False,kv/okres/semily.html#o-577545
 539341,Jíloviště,Praha-západ,Středočeský kraj,obec,1,532,0.7049,9,True,True,False,2.0,0.0,0.0,151.0,False,False,True,False,kv/okres/praha-zapad.html#o-539341
 531901,Újezd (okres Beroun),Beroun,Středočeský kraj,obec,1,531,0.6478,7,True,True,False,2.0,0.0,0.0,48.0,False,False,True,False,kv/okres/beroun.html#o-531901
@@ -2386,7 +2386,7 @@
 503142,Jívová,Olomouc,Olomoucký kraj,obec,1,515,0.6641,7,True,True,False,3.0,0.0,0.0,77.0,False,False,True,False,kv/okres/olomouc.html#o-503142
 538159,Hájek (okres Karlovy Vary),Karlovy Vary,Karlovarský kraj,obec,1,533,0.3865,7,True,True,False,1.0,0.0,0.0,995.0,False,False,True,False,kv/okres/karlovy-vary.html#o-538159
 563803,Skuhrov (okres Jablonec nad Nisou),Jablonec nad Nisou,Liberecký kraj,obec,1,491,0.4521,7,True,True,False,1.0,0.0,0.0,1156.0,False,False,True,False,kv/okres/jablonec-nad-nisou.html#o-563803
-567141,Havraň,Most,Ústecký kraj,obec,2,521,0.499,9,True,True,False,1.0,0.0,0.0,1510.0,False,False,True,False,kv/okres/most.html#o-567141
+567141,Havraň,Most,Ústecký kraj,obec,2,521,0.499,9,True,True,True,1.0,1.0,0.0,1510.0,False,False,True,False,kv/havran/index.html
 574686,Žďár nad Metují,Náchod,Královéhradecký kraj,obec,1,521,0.6296,9,True,True,False,3.0,0.0,0.0,52.0,False,False,True,False,kv/okres/nachod.html#o-574686
 594270,Krhovice,Znojmo,Jihomoravský kraj,obec,1,487,0.4928,9,True,True,False,2.0,1.0,0.0,20.0,True,False,True,False,kv/okres/znojmo.html#o-594270
 597074,Vír,Žďár nad Sázavou,Kraj Vysočina,obec,1,537,0.7095,15,True,True,False,4.0,1.0,0.0,42.0,True,False,True,False,kv/okres/zdar-nad-sazavou.html#o-597074
@@ -2430,7 +2430,7 @@
 547719,Častrov,Pelhřimov,Kraj Vysočina,obec,2,490,0.6265,9,True,True,False,2.0,0.0,0.0,74.0,False,False,True,False,kv/okres/pelhrimov.html#o-547719
 550558,Svatá Maří,Prachatice,Jihočeský kraj,obec,1,513,0.6881,9,True,True,False,4.0,1.0,0.0,3.0,True,False,True,False,kv/okres/prachatice.html#o-550558
 552089,Tovéř,Olomouc,Olomoucký kraj,obec,1,527,0.6603,7,True,True,False,2.0,0.0,0.0,52.0,False,False,True,False,kv/okres/olomouc.html#o-552089
-558346,Soběkury,Plzeň-jih,Plzeňský kraj,obec,2,500,0.46,11,True,True,False,1.0,0.0,0.0,1385.0,False,False,True,False,kv/okres/plzen-jih.html#o-558346
+558346,Soběkury,Plzeň-jih,Plzeňský kraj,obec,2,500,0.46,11,True,True,True,1.0,1.0,0.0,1385.0,False,False,True,False,kv/sobekury/index.html
 565792,Třebušín,Litoměřice,Ústecký kraj,obec,1,497,0.6036,9,True,True,False,2.0,0.0,0.0,164.0,False,False,True,False,kv/okres/litomerice.html#o-565792
 566306,Krásný Dvůr,Louny,Ústecký kraj,obec,1,522,0.5881,9,True,True,False,5.0,1.0,0.0,22.0,True,False,True,False,kv/okres/louny.html#o-566306
 588521,Kostelany,Kroměříž,Zlínský kraj,obec,3,493,0.6694,9,True,True,False,2.0,0.0,0.0,96.0,False,False,True,False,kv/okres/kromeriz.html#o-588521
@@ -2458,7 +2458,7 @@
 577596,Tatobity,Semily,Liberecký kraj,obec,2,480,0.5813,9,True,True,False,2.0,0.0,0.0,47.0,False,False,True,False,kv/okres/semily.html#o-577596
 591769,Studenec (okres Třebíč),Třebíč,Kraj Vysočina,obec,1,467,0.6467,9,True,True,False,12.0,1.0,0.0,2.0,True,False,True,False,kv/okres/trebic.html#o-591769
 566152,Domoušice,Louny,Ústecký kraj,obec,2,516,0.5659,11,True,True,False,3.0,0.0,0.0,60.0,False,False,True,False,kv/okres/louny.html#o-566152
-530093,Loket (okres Benešov),Benešov,Středočeský kraj,obec,5,486,0.7593,11,True,True,True,17.0,1.0,0.0,4.0,True,False,True,False,kv/loket-okres-benesov/index.html
+530093,Loket (okres Benešov),Benešov,Středočeský kraj,obec,5,486,0.7593,11,True,True,True,17.0,2.0,0.0,4.0,True,False,True,False,kv/loket-okres-benesov/index.html
 532495,Koleč,Kladno,Středočeský kraj,obec,1,446,0.6211,9,True,True,False,2.0,0.0,0.0,110.0,False,False,True,False,kv/okres/kladno.html#o-532495
 547581,Božejov,Pelhřimov,Kraj Vysočina,obec,1,506,0.753,13,True,True,False,2.0,0.0,0.0,151.0,False,False,True,False,kv/okres/pelhrimov.html#o-547581
 553492,Závada,Opava,Moravskoslezský kraj,obec,1,495,0.4141,9,True,True,False,1.0,0.0,0.0,1243.0,False,False,True,False,kv/okres/opava.html#o-553492
@@ -2941,7 +2941,7 @@
 531766,Stašov (okres Beroun),Beroun,Středočeský kraj,obec,1,376,0.4601,7,True,True,False,1.0,0.0,0.0,125.0,False,False,True,False,kv/okres/beroun.html#o-531766
 535214,Střemy,Mělník,Středočeský kraj,obec,2,400,0.77,9,True,True,False,4.0,0.0,0.0,107.0,False,False,True,False,kv/okres/melnik.html#o-535214
 539112,Stará Voda (okres Cheb),Cheb,Karlovarský kraj,obec,1,440,0.3295,9,True,True,False,1.0,0.0,0.0,625.0,False,False,True,False,kv/okres/cheb.html#o-539112
-556629,Malý Bor,Klatovy,Plzeňský kraj,obec,2,406,0.4236,9,True,True,False,1.0,0.0,0.0,1109.0,False,False,True,False,kv/okres/klatovy.html#o-556629
+556629,Malý Bor,Klatovy,Plzeňský kraj,obec,2,406,0.4236,9,True,True,True,1.0,1.0,0.0,1109.0,False,False,True,False,kv/maly-bor/index.html
 593249,Kučerov,Vyškov,Jihomoravský kraj,obec,1,380,0.6789,9,True,True,False,5.0,0.0,0.0,65.0,False,False,True,False,kv/okres/vyskov.html#o-593249
 594601,Pavlice,Znojmo,Jihomoravský kraj,obec,1,409,0.6944,9,True,True,False,2.0,0.0,0.0,142.0,False,False,True,False,kv/okres/znojmo.html#o-594601
 531715,Rpety,Beroun,Středočeský kraj,obec,1,407,0.5504,7,True,True,False,2.0,0.0,0.0,167.0,False,False,True,False,kv/okres/beroun.html#o-531715
@@ -3264,7 +3264,7 @@
 594997,Tvořihráz,Znojmo,Jihomoravský kraj,obec,1,335,0.5134,7,True,True,False,1.0,0.0,0.0,769.0,False,False,True,False,kv/okres/znojmo.html#o-594997
 531286,Bratčice (okres Kutná Hora),Kutná Hora,Středočeský kraj,obec,1,335,0.6,7,True,True,False,9.0,1.0,0.0,12.0,True,False,True,False,kv/okres/kutna-hora.html#o-531286
 535923,Chocnějovice,Mladá Boleslav,Středočeský kraj,obec,2,347,0.6571,9,True,True,False,5.0,1.0,0.0,5.0,True,False,True,False,kv/okres/mlada-boleslav.html#o-535923
-544744,Libín,České Budějovice,Jihočeský kraj,obec,3,337,0.6617,9,True,True,False,4.0,1.0,0.0,11.0,True,False,True,False,kv/okres/ceske-budejovice.html#o-544744
+544744,Libín,České Budějovice,Jihočeský kraj,obec,3,337,0.6617,9,True,True,True,4.0,2.0,1.0,11.0,True,False,True,False,kv/libin/index.html
 546585,Jiřetín pod Bukovou,Jablonec nad Nisou,Liberecký kraj,obec,1,376,0.4335,7,True,True,False,2.0,0.0,0.0,97.0,False,False,True,False,kv/okres/jablonec-nad-nisou.html#o-546585
 571563,Jenišovice (okres Chrudim),Chrudim,Pardubický kraj,obec,2,345,0.3884,9,True,True,False,1.0,0.0,0.0,770.0,False,False,True,False,kv/okres/chrudim.html#o-571563
 572365,Horní Újezd (okres Svitavy),Svitavy,Pardubický kraj,obec,1,349,0.6648,9,True,True,False,15.0,1.0,0.0,13.0,True,False,True,False,kv/okres/svitavy.html#o-572365
@@ -3411,7 +3411,7 @@
 534153,Krchleby (okres Kutná Hora),Kutná Hora,Středočeský kraj,obec,2,325,0.6738,7,True,True,False,2.0,0.0,0.0,74.0,False,False,True,False,kv/okres/kutna-hora.html#o-534153
 536989,Žerčice,Mladá Boleslav,Středočeský kraj,obec,1,333,0.6907,7,True,True,False,2.0,0.0,0.0,76.0,False,False,True,False,kv/okres/mlada-boleslav.html#o-536989
 552780,Křtomil,Přerov,Olomoucký kraj,obec,1,332,0.6235,7,True,True,False,2.0,0.0,0.0,50.0,False,False,True,False,kv/okres/prerov.html#o-552780
-554260,Srbice (okres Domažlice),Domažlice,Plzeňský kraj,obec,3,328,0.6402,7,True,True,False,9.0,1.0,0.0,2.0,True,False,True,False,kv/okres/domazlice.html#o-554260
+554260,Srbice (okres Domažlice),Domažlice,Plzeňský kraj,obec,3,328,0.6402,7,True,True,True,9.0,2.0,1.0,2.0,True,False,True,False,kv/srbice-okres-domazlice/index.html
 571326,Lichoceves,Praha-západ,Středočeský kraj,obec,1,317,0.7666,7,True,True,False,2.0,0.0,0.0,158.0,False,False,True,False,kv/okres/praha-zapad.html#o-571326
 571636,Němčice (okres Kolín),Kolín,Středočeský kraj,obec,1,315,0.5175,7,True,True,False,1.0,1.0,0.0,116.0,False,True,True,False,kv/okres/kolin.html#o-571636
 574490,Suchý Důl,Náchod,Královéhradecký kraj,obec,1,331,0.5227,9,True,True,False,1.0,0.0,0.0,1010.0,False,False,True,False,kv/okres/nachod.html#o-574490
@@ -3730,7 +3730,7 @@
 548804,Lampertice,Trutnov,Královéhradecký kraj,obec,1,294,0.4626,9,True,True,False,2.0,1.0,0.0,6.0,True,False,True,False,kv/okres/trutnov.html#o-548804
 550205,Horní Vltavice,Prachatice,Jihočeský kraj,obec,1,279,0.3262,9,True,True,False,1.0,0.0,0.0,451.0,False,False,True,False,kv/okres/prachatice.html#o-550205
 555169,Horní Blatná,Karlovy Vary,Karlovarský kraj,obec,1,285,0.6561,7,True,True,False,3.0,1.0,0.0,15.0,True,False,True,False,kv/okres/karlovy-vary.html#o-555169
-559806,Hlohovice,Rokycany,Plzeňský kraj,obec,4,282,0.6915,7,True,True,True,2.0,1.0,0.0,4.0,True,False,True,False,kv/hlohovice/index.html
+559806,Hlohovice,Rokycany,Plzeňský kraj,obec,4,282,0.6915,7,True,True,True,2.0,2.0,1.0,4.0,True,False,True,False,kv/hlohovice/index.html
 560855,Erpužice,Tachov,Plzeňský kraj,obec,1,294,0.7075,5,True,True,False,2.0,0.0,0.0,38.0,False,False,True,False,kv/okres/tachov.html#o-560855
 564516,Vlastibořice,Liberec,Liberecký kraj,obec,1,281,0.5338,7,True,True,False,1.0,0.0,0.0,107.0,False,False,True,False,kv/okres/liberec.html#o-564516
 583090,Hvozdec (okres Brno-venkov),Brno-venkov,Jihomoravský kraj,obec,1,276,0.7391,7,True,True,False,2.0,0.0,0.0,122.0,False,False,True,False,kv/okres/brno-venkov.html#o-583090

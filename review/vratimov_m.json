@@ -1,0 +1,11 @@
+{
+ "m:598879/5:59887901": {
+  "id": "M01",
+  "kontrola": "Vyřazeno po kontrole v datech: Vratimováci s rozumem mají v okrsku 5 nižší celou kandidátku (9–18 místo 29–47), č. 14 ale 62 hlasů (místní kandidát). Ve městě s 5 okrsky tvoří okolí jiné části obce s odlišnou podporou stran a okrsku chybí jen málo hlasů (z = −2,3). Vzor odpovídá místní podpoře, ne nedopsanému úseku; simulovaná změna mandátu proto není podložená.",
+  "vyradit": true
+ },
+ "m:citlivost": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: seznam obsahuje jen hodnoty, jejichž překlep by změnil výsledek; žádná z nich se neodlišuje od okolí ani od ostatních kandidátů, nejde tedy o zjištěnou chybu. Slouží jako vodítko pro kontrolu zápisů v zastupitelstvech s rezervou 10–50 hlasů."
+ }
+}
