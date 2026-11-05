@@ -1,0 +1,19 @@
+{
+ "m:502081/2021:55480401": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: Vaše Ústí č. 37 má 0 hlasů, ostatní 97–111. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:567892/1005:55480401": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: JEDNO ÚSTÍ má celou kandidátku na 100–120 místo 160–175; okrsku na lístku města chybí hlasy ~52 lístků (z = −9,4, v roce 2022 normální), lístek MČ je v pořádku. Rovnoměrný posun celé kandidátky spolu s podobně velkým schodkem hlasů okrsku odpovídá nezapočtenému balíku lístků s křížkem u strany."
+ },
+ "m:502316/4015:50231601": {
+  "id": "M03",
+  "kontrola": "Ověřeno v datech: JEDNO ÚSTÍ (30–45 místo 54–68) a Za lepší Střekov (4–16 místo 25–35, zůstaly jen osobní hlasy) mají kandidátku níž a okrsku na lístku MČ chybí hlasy ~19 lístků (z = −6,5). Okrsek je malý (147 lístků) a součet posunů je větší než schodek.",
+  "jistota": 3
+ },
+ "m:balik_slabe": {
+  "id": "M04",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "m:555088/28:55508801": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: Hnutí pro Havířov má u č. 21–24 jen 2–5 hlasů, kandidáti před i za nimi 32–50 (okolí ~30–37 u všech). Doplnění hlasů z lístků s křížkem u strany (~4 × 33 hlasů) mění mandáty: Hnutí pro Havířov 4 → 5, ANO 13 → 12; rezerva strany na zisk mandátu je 103 hlasů. Okrsku chybí hlasy (z = −2,2), v roce 2022 bylo využití normální. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:555088/41:55508801": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: SPOLEČNĚ PRO HAVÍŘOV má u č. 42–43 4 a 2 hlasy, ostatní 43–52. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:555088/38:55508801": {
+  "id": "M03",
+  "kontrola": "Ověřeno v datech: SPD má 0 u č. 42–43, ostatní 29–38. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ }
+}

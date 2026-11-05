@@ -1,0 +1,11 @@
+{
+ "m:532819/1:53281901": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: ANO má celou kandidátku na 13–32 místo 40–65 a okrsku chybí hlasy ~29 lístků (z = −6,5, v roce 2022 +1,5). ANO bylo v okrsku slabší i v roce 2022 (z = −2,6), část posunu je skutečná nižší podpora; jistota snížena na vysokou.",
+  "jistota": 3
+ },
+ "m:balik_slabe": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ }
+}

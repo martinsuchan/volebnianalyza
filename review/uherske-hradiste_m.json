@@ -1,0 +1,13 @@
+{
+ "m:592005/13:59200501": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: ANO má celou kandidátku na 27–42 místo 54–76 a okrsku chybí hlasy ~60 lístků (z = −13,8, v roce 2022 normální) – jde o tentýž okrsek jako N01. ANO bylo v okrsku stejně slabé i v roce 2022 (813 hlasů proti ~1 600 očekávaným), posun kandidátky je proto z velké části skutečná místní podpora a schodek nelze přiřadit jen ANO. Změna mandátů (ANO 5 → 6, Hradišťáci 8 → 7) by nastala jen při přiřazení ~30 chybějících lístků ANO, realistický odhad z N01 je pod rezervou 481 hlasů. Okrsek je předmětem návrhu 73 A 33/2026 (KS Brno).",
+  "jistota": 2,
+  "dopad_kat": "Může změnit mandáty",
+  "dopad": "Pokud by chybějící hlasy (~30 lístků) patřily ANO, mění se mandáty: ANO 2011 5 → 6, Hradišťáci 8 → 7 (rezerva 481 hlasů). Vzhledem k výsledku ANO v okrsku v roce 2022 je to málo pravděpodobné – viz N01."
+ },
+ "m:balik_slabe": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ }
+}

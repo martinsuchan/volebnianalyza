@@ -1,0 +1,10 @@
+{
+ "m:citlivost": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: seznam obsahuje jen hodnoty, jejichž překlep by změnil výsledek; žádná z nich se neodlišuje od okolí ani od ostatních kandidátů, nejde tedy o zjištěnou chybu. Slouží jako vodítko pro kontrolu zápisů v zastupitelstvech s rezervou 10–50 hlasů."
+ },
+ "m:563871/9:56387101": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: chybí hlasy ~12 lístků (z = −6,1); okrsek je malý (139 lístků). Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají."
+ }
+}

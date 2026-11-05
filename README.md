@@ -104,7 +104,7 @@ open report/index.html        # na Linuxu: xdg-open report/index.html
 
 - Mezi kroky 3 a 4 dopočítá detektory pro srovnávací rok 2018 (`python scripts/run_all.py year2018`).
 - Pro Prahu se v kroku 5 použije ručně psaný `findings.py`.
-- Doplňková pravidla z listopadu 2026 (`pravidla.py`: propad pod základ kandidátky, posunutý úsek, rozptýlené nuly, chybějící balík, neplatné lístky, kritické hodnoty těsných výsledků) přidává `findings_m.py` jako nálezy řady M (zatím jen Praha). Nálezy N zůstávají beze změny; čísla M jsou zamčená v `review/praha_m.json`, kde je i výsledek kontroly.
+- Doplňková pravidla z listopadu 2026 (`pravidla.py`: propad pod základ kandidátky, posunutý úsek, rozptýlené nuly, chybějící balík, neplatné lístky, kritické hodnoty těsných výsledků) přidává `findings_m.py` jako nálezy řady M – v Praze (`findings.py`) a v krajských městech a obcích s rozšířenou působností (`findings_auto.py`, seznam `M_OBCE`). Nálezy N zůstávají beze změny; čísla M jsou zamčená v `review/<obec>_m.json` (Praha `review/praha_m.json`), kde je i výsledek kontroly; vyřazená čísla se znovu nepoužijí.
 - Pro ostatní města se použije šablona `findings_auto.py` a stránky města vygeneruje `build_unit.py`.
 - Kontrola nálezů (AI agenti, případně člověk): zadání je v `review/ZADANI.md`, výsledky v `review/<obec>.json` (podle klíče nálezu). Generátor je při dalším běhu použije.
 

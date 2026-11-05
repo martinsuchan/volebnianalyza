@@ -1,0 +1,13 @@
+{
+ "m:596230/9:59623001": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: Lepší Nové Město má celou kandidátku asi o 19 hlasů níž (26–60 místo 44–78) a okrsku chybí hlasy ~13 lístků (z = −5,5). Chybět může jen tolik hlasů, kolik okrsku schází (~296); s tolika hlasy se mandáty nemění (rezerva strany 388 hlasů) – změnu ukazuje jen horní odhad z posunu kandidátky (~444).",
+  "jistota": 3,
+  "dopad_kat": "Bez vlivu",
+  "dopad": "Doplnění chybějících ~296 hlasů okrsku straně Lepší Nové Město mandáty nemění (rezerva 388 hlasů); změnu by přineslo až ~444 hlasů podle posunu kandidátky, což je víc, než okrsku chybí."
+ },
+ "m:balik_slabe": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ }
+}

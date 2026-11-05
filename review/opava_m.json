@@ -1,0 +1,27 @@
+{
+ "m:555321/40:50592701": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: OK Změna pro Opavu č. 39 má 1 hlas, ostatní 59–91. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:citlivost": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: seznam obsahuje jen hodnoty, jejichž překlep by změnil výsledek; žádná z nich se neodlišuje od okolí ani od ostatních kandidátů, nejde tedy o zjištěnou chybu. Slouží jako vodítko pro kontrolu zápisů v zastupitelstvech s rezervou 10–50 hlasů."
+ },
+ "m:555321/22:50592701": {
+  "id": "M03",
+  "kontrola": "Ověřeno v datech: OK Změna pro Opavu má celou kandidátku na 33–56 místo 47–71; okrsku chybí hlasy ~14 lístků (z = −4,8, v roce 2022 −1,1); okrsek je malý (196 lístků)."
+ },
+ "m:555321/3:50592701": {
+  "id": "M04",
+  "kontrola": "Ověřeno v datech: chybí hlasy ~10 lístků (z = −5,2); okrsek je malý (161 lístků). Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají."
+ },
+ "m:555321/31:50592701": {
+  "id": "M05",
+  "kontrola": "Ověřeno v datech: chybí hlasy ~20 lístků (z = −5,2, v roce 2022 +0,4). Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají.",
+  "jistota": 3
+ },
+ "m:neplatne": {
+  "id": "M06",
+  "kontrola": "Ověřeno v datech: podíl neplatných lístků je výrazně vyšší než v sousedních okrscích, žádná strana ale nemá současně odpovídající schodek. Může jít o protestní hlasování nebo o označení více kandidátů, než je mandátů; za chybu to samo nepovažujeme. Zvýšený podíl mají okrsky připojených městských částí (x001), kde voliči častěji označují víc kandidátů, než je mandátů."
+ }
+}

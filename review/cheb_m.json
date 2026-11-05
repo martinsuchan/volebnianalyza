@@ -1,0 +1,10 @@
+{
+ "m:554481/32:55448101": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: VOLBA PRO MĚSTO CHEB má celou kandidátku na 26–56 místo 51–85; okrsku chybí hlasy ~31 lístků (z = −9,1, v roce 2022 −0,8), posun odpovídá ~27 lístkům. Rovnoměrný posun celé kandidátky spolu s podobně velkým schodkem hlasů okrsku odpovídá nezapočtenému balíku lístků s křížkem u strany."
+ },
+ "m:balik_slabe": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ }
+}

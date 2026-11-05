@@ -1,0 +1,92 @@
+{
+ "m:546224/15023:55482101": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: OK pro Ostravu má 0 u 37 z 55 kandidátů, ostatní 8–11; okrsku na lístku města chybí hlasy ~48 lístků (z = −11,2, v roce 2022 normální), schodek je i na lístku MČ. Nuly mezi stejnými nenulovými hodnotami nemohou vzniknout z lístků s křížkem u strany – jde o chybu zápisu nebo přepisu."
+ },
+ "m:546135/11037:54613501": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: srdcOVA má celou kandidátku na 2–10 místo 29–38 (v okrsku zůstaly jen osobní hlasy); okrsku chybí hlasy ~65 lístků na lístku MČ (z = −15,5) i ~47 lístků na lístku města (M16), v roce 2022 bylo využití normální. Rovnoměrný posun celé kandidátky spolu s podobně velkým schodkem hlasů okrsku odpovídá nezapočtenému balíku lístků s křížkem u strany."
+ },
+ "m:545911/8042:55482101": {
+  "id": "M03",
+  "kontrola": "Ověřeno v datech: STAROSTOVÉ pro OSTRAVU mají u č. 22–23 po 1 hlasu, kandidáti před i za nimi 17–24. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:546135/11017:54613501": {
+  "id": "M04",
+  "kontrola": "Ověřeno v datech: Ostravak má u č. 44–45 po 1 hlasu, ostatní 25–29. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:546135/11066:54613501": {
+  "id": "M05",
+  "kontrola": "Ověřeno v datech: ANO č. 45 a srdcOVA č. 45 mají 0 hlasů, ostatní 84–100, resp. 35–49 – komise zřejmě nedopsala poslední řádek. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:554561/3001:55482101": {
+  "id": "M06",
+  "kontrola": "Ověřeno v datech: srdcOVA má č. 55 s nulou a celou kandidátku na 85–111 místo 119–152, ANO na 94–122 místo 132–168; okrsku chybí hlasy ~85 lístků (z = −7,0, v roce 2022 −1,0). ANO bylo v okrsku slabší i v roce 2022 (z = −4,2), část jeho posunu je skutečná nižší podpora; nula u č. 55 je chyba."
+ },
+ "m:546135/11011:55482101": {
+  "id": "M07",
+  "kontrola": "Ověřeno v datech: Motoristé č. 1 má 5 hlasů, ostatní 31–38 (v okolí má č. 1 ~46). První kandidát dostává hlas z každého lístku s křížkem u strany, nemůže mít méně než ostatní – nejspíš vypadlá číslice."
+ },
+ "m:554227/23002:55482101": {
+  "id": "M08",
+  "kontrola": "Ověřeno v datech: srdcOVA má celou kandidátku na 21–27 místo 35–48 a okrsku chybí hlasy ~28 lístků (z = −8,1). Velmi nízké využití hlasů měl okrsek ale i v roce 2022 (68,1 % proti 83,5 %), schodek je tedy z velké části místní zvyklost; jistota snížena na střední.",
+  "jistota": 2
+ },
+ "m:546224/15038:54622401": {
+  "id": "M09",
+  "kontrola": "Ověřeno v datech: Porubská výzva má celou kandidátku na 48–54 místo 63–83; okrsku na lístku MČ chybí hlasy ~30 lístků (z = −6,2, v roce 2022 −1,2), posun odpovídá ~18 lístkům."
+ },
+ "m:554537/18003:55453701": {
+  "id": "M10",
+  "kontrola": "Ověřeno v datech: Ostravská levice má v okrsku jen osobní hlasy (0–8 místo 12–22); okrsku na lístku MČ chybí hlasy ~17 lístků (z = −5,5, v roce 2022 normální). U tak malých čísel je jistota nižší.",
+  "jistota": 3
+ },
+ "m:citlivost": {
+  "id": "M11",
+  "kontrola": "Ověřeno v datech: seznam obsahuje jen hodnoty, jejichž překlep by změnil výsledek; žádná z nich se neodlišuje od okolí ani od ostatních kandidátů, nejde tedy o zjištěnou chybu. Slouží jako vodítko pro kontrolu zápisů v zastupitelstvech s rezervou 10–50 hlasů."
+ },
+ "m:554332/1001:55482101": {
+  "id": "M12",
+  "kontrola": "Ověřeno v datech: ANO č. 51 má 89 hlasů, kandidáti před i za ním 184–209 – nejspíš vypadlá číslice (189). Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu.",
+  "jistota": 4
+ },
+ "m:554669/2002:55482101": {
+  "id": "M13",
+  "kontrola": "Ověřeno v datech: ANO má celou kandidátku na 72–84 místo 114–133; okrsku chybí hlasy ~47 lístků (z = −5,0, v roce 2022 −1,1), posun odpovídá ~47 lístkům."
+ },
+ "m:554685/21002:55482101": {
+  "id": "M14",
+  "kontrola": "Ověřeno v datech: Motoristé mají celou kandidátku na 14–19 (č. 1 37) místo 33–38 (č. 1 55); na lístku města chybí hlasy ~29 lístků (z = −4,9), na lístku MČ dokonce z = −13,5, v roce 2022 bylo využití normální."
+ },
+ "m:546224/15003:55482101": {
+  "id": "M15",
+  "kontrola": "Ověřeno v datech: ANO má celou kandidátku na 46–56 místo 71–85; okrsku chybí hlasy ~18 lístků (z = −4,7, v roce 2022 +0,8)."
+ },
+ "m:546135/11037:55482101": {
+  "id": "M16",
+  "kontrola": "Ověřeno v datech: na lístku města chybí hlasy ~47 lístků (z = −7,2), na lístku MČ ~65 lístků (M02), v roce 2022 bylo využití normální. Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají.",
+  "jistota": 3
+ },
+ "m:545911/8004:55482101": {
+  "id": "M17",
+  "kontrola": "Ověřeno v datech: na lístku města chybí hlasy ~20 lístků (z = −5,7, v roce 2022 normální); okrsek je malý (120 lístků). Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají.",
+  "jistota": 3
+ },
+ "m:554561/3002:55482101": {
+  "id": "M18",
+  "kontrola": "Ověřeno v datech: na lístku města chybí hlasy ~73 lístků (z = −5,3, v roce 2022 −1,2); ve vedlejším okrsku 3001 téže části chybí ~85 lístků (M06). Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají.",
+  "jistota": 3
+ },
+ "m:546046/19019:54604601": {
+  "id": "M19",
+  "kontrola": "Ověřeno v datech: na lístku MČ chybí hlasy ~13 lístků (z = −5,2); okrsek je malý (182 lístků) a mírně nižší využití měl i v roce 2022. Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají."
+ },
+ "m:balik_slabe": {
+  "id": "M20",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ },
+ "m:neplatne": {
+  "id": "M21",
+  "kontrola": "Ověřeno v datech: podíl neplatných lístků je výrazně vyšší než v sousedních okrscích, žádná strana ale nemá současně odpovídající schodek. Může jít o protestní hlasování nebo o označení více kandidátů, než je mandátů; za chybu to samo nepovažujeme."
+ }
+}

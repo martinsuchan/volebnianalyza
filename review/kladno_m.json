@@ -1,0 +1,11 @@
+{
+ "m:532053/15:53205301": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: VOLBA PRO KLADNO č. 33 má 0 hlasů, ostatní 97–115. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu.",
+  "jistota": 4
+ },
+ "m:532053/7:53205301": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: ODS má celou kandidátku na 18–28 místo 30–35; okrsku chybí hlasy ~16 lístků (z = −4,6, v roce 2022 −0,3); posun odpovídá ~10 lístkům."
+ }
+}

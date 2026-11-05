@@ -1,0 +1,15 @@
+{
+ "m:556891/1002:56388901": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: Starostové pro Liberecký kraj mají celou kandidátku na 56–75 místo 86–115 a okrsku chybí hlasy ~32 lístků (z = −5,2). Větší schodek měl okrsek ale i v roce 2022 (78,8 % proti 89,5 %), jistota snížena na střední.",
+  "jistota": 2
+ },
+ "m:balik_slabe": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ },
+ "m:neplatne": {
+  "id": "M03",
+  "kontrola": "Ověřeno v datech: podíl neplatných lístků je výrazně vyšší než v sousedních okrscích, žádná strana ale nemá současně odpovídající schodek. Může jít o protestní hlasování nebo o označení více kandidátů, než je mandátů; za chybu to samo nepovažujeme. Čtyři ze čtyř okrsků se zvýšeným podílem leží ve Vratislavicích nad Nisou – opakování v celé městské části ukazuje spíš na místní praxi komisí nebo voličů než na nahodilé chyby; zápisy je vhodné porovnat."
+ }
+}

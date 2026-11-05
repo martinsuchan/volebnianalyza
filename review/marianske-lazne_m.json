@@ -1,0 +1,9 @@
+{
+ "m:554642/15:55464201": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: ANO a Nezávislí mají kandidátku na 60–100 místo 91–152 a okrsku chybí hlasy ~30 lístků (~628 hlasů, z = −6,7, v roce 2022 normální). Posun není rovnoměrný (hodnoty jsou spíš úměrně nižší) a ANO bylo v okrsku slabší i v roce 2022 (z = −1,7). Mandát (ANO 8 → 9, Naše Česko 2 → 1) by se změnil, jen kdyby prakticky celý schodek okrsku patřil ANO (rezerva 627 hlasů). Ve městě běží návrh 57 A 76/2026 (KS Plzeň) na neplatnost voleb.",
+  "jistota": 2,
+  "dopad_kat": "Může změnit mandáty",
+  "dopad": "Mandáty by se změnily (ANO 2011 a Nezávislí 8 → 9, Naše Česko 2 → 1), jen pokud by ANO patřilo prakticky všech ~628 chybějících hlasů okrsku (rezerva 627 hlasů)."
+ }
+}

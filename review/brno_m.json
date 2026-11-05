@@ -1,0 +1,160 @@
+{
+ "m:551198/3023:55119801": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: Bystrčáci, Piráti, TOP 09 a nezávislí mají v okrsku č. 1 54 hlasů (v okolí ~50), ale č. 2–27 jen 1–20 (v okolí 35–55). Lístky s křížkem u strany tedy byly připsány jen lídrovi – ostatním kandidátům chybí po ~38 hlasech. Okrsku na lístku MČ současně chybí hlasy ~37 lístků (z = −5,8), což odpovídá ~1 000 nezapsaným hlasům. Rezerva strany na zisk mandátu je 959 hlasů, odhad chybějících hlasů 990–1 090 – mandát (Bystrčáci 3 → 4, ANO 5 → 4) se změní, pokud jde o ~36 a víc lístků. Stejný okrsek napadá návrh 65 A 13/2026 (KS Brno, strana Bystrčáci).",
+  "dopad_kat": "Může změnit mandáty",
+  "dopad": "Doplnění hlasů z lístků s křížkem u strany kandidátům č. 2–27 (~990–1 090 hlasů podle počtu lístků) mění mandáty: Bystrčáci, Piráti, TOP 09 a nezávislí 3 → 4, ANO 2011 5 → 4 (rezerva 959 hlasů)."
+ },
+ "m:551031/20016:58278601": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: Za Lužánky má hlasy jen u č. 1–5 a č. 30 (17–18), ostatní kandidáti 0; Lidovci a Starostové mají celou kandidátku asi o 22 hlasů níž. Okrsku na lístku města chybí hlasy ~39 lístků (z = −12,4), lístek MČ je v pořádku. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:550973/23006:58278601": {
+  "id": "M03",
+  "kontrola": "Ověřeno v datech: ODS, TOP 09 a nezávislí mají 0 u č. 52–55 (č. 51 má 30), Lidovci a Starostové 0 u č. 55; okrsku chybí hlasy ~37 lístků (z = −13,3, v roce 2022 −4,3). Nuly u Restartu (5 hlasů u tří kandidátů) mohou být u tak malé strany skutečné. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:550973/23044:58278601": {
+  "id": "M04",
+  "kontrola": "Ověřeno v datech: Za Lužánky má hlasy jen u č. 1–4 (10–14), ostatní kandidáti 0–1; okrsku chybí hlasy ~18 lístků (z = −4,6, v roce 2022 normální). Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:551279/26005:58278601": {
+  "id": "M05",
+  "kontrola": "Ověřeno v datech: Piráti a Fakt Brno TU! mají 0 u č. 54–55, ostatní 24–30. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:551252/15001:58278601": {
+  "id": "M06",
+  "kontrola": "Ověřeno v datech: Restart pro Brno má 0 u č. 23–28, kandidáti před i za nimi 7–10. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:551244/19001:55124401": {
+  "id": "M07",
+  "kontrola": "Ověřeno v datech: Hnutí Marka Viskota i Spolek Za zdravé Řečkovice mají 0 u posledního kandidáta (č. 23), ostatní 59–152 – komise zřejmě nedopsala poslední řádek. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:550973/23018:58278601": {
+  "id": "M08",
+  "kontrola": "Ověřeno v datech: ZELENÉ BRNO má celou kandidátku na 23–32 místo 46–69; okrsku na lístku města chybí hlasy ~70 lístků (z = −11,3, v roce 2022 −2,0), lístek MČ je v pořádku. Rovnoměrný posun celé kandidátky spolu s podobně velkým schodkem hlasů okrsku odpovídá nezapočtenému balíku lístků s křížkem u strany."
+ },
+ "m:551082/1012:55108201": {
+  "id": "M09",
+  "kontrola": "Ověřeno v datech: Lidovci č. 21 Vladimír Malach má 34 hlasů proti 102–129 u ostatních (v okolí 76). U posledního kandidáta úplné kandidátky se mohou projevit lístky s křížkem u strany i u kandidátů jiných stran, tak velký propad je ale neobvyklý. Nízké hodnoty PRO BOhunice (č. 2, 9, 13–19, 21 kolem 33, ostatní kolem 60) se opakují i v okrsku 1009 – odpovídají spíš doporučení voličům, koho označit, než chybě zápisu.",
+  "jistota": 2
+ },
+ "m:550990/27009:55099001": {
+  "id": "M10",
+  "kontrola": "Ověřeno v datech: SPD má 0 u č. 23–24, č. 22 i č. 25 mají 13–14. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:551031/20039:58278601": {
+  "id": "M11",
+  "kontrola": "Ověřeno v datech: Lidovci a Starostové mají u č. 50–51 57 a 56 hlasů, kandidáti před nimi i za nimi 85–120. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:551007/13008:58278601": {
+  "id": "M12",
+  "kontrola": "Ověřeno v datech: ANO č. 55 a Piráti č. 55 mají 0 hlasů, ostatní 70–77, resp. 40–54 – komise zřejmě nedopsala poslední řádek. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:551007/13015:55100701": {
+  "id": "M13",
+  "kontrola": "Ověřeno v datech: ODS a TOP 09 (36–43 místo ~58) i Piráti a Zelení (22–29 místo ~48) mají celou kandidátku níž; hlasy chybí na obou lístcích – MČ ~29 lístků (z = −7,9) i město ~25 lístků (z = −5,4, M20), v roce 2022 bylo využití normální. Rovnoměrný posun celé kandidátky spolu s podobně velkým schodkem hlasů okrsku odpovídá nezapočtenému balíku lístků s křížkem u strany."
+ },
+ "m:551406/7001:58278601": {
+  "id": "M14",
+  "kontrola": "Ověřeno v datech: ANO č. 55 má 0 hlasů, ostatní 57–67 (celá kandidátka je v okrsku slabší i v roce 2022). Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:551031/20026:55103101": {
+  "id": "M15",
+  "kontrola": "Ověřeno v datech: Hnutí SOL má celou kandidátku na 70–90 místo 96–140; okrsku na lístku MČ chybí hlasy ~74 lístků (z = −7,4, v roce 2022 −2,2), schodek je i na lístku města (M25). Rovnoměrný posun celé kandidátky spolu s podobně velkým schodkem hlasů okrsku odpovídá nezapočtenému balíku lístků s křížkem u strany."
+ },
+ "m:551066/4001:58278601": {
+  "id": "M16",
+  "kontrola": "Ověřeno v datech: Lidovci a Starostové mají celou kandidátku na 51–65 místo 79–95; okrsku na lístku města chybí hlasy ~33 lístků (z = −6,9, v roce 2022 −1,4). Rovnoměrný posun celé kandidátky spolu s podobně velkým schodkem hlasů okrsku odpovídá nezapočtenému balíku lístků s křížkem u strany."
+ },
+ "m:551031/20025:58278601": {
+  "id": "M17",
+  "kontrola": "Ověřeno v datech: Za Lužánky má celou kandidátku na 6–18 místo 25–38; okrsku chybí hlasy ~34 lístků (z = −6,2, v roce 2022 −0,9). Rovnoměrný posun celé kandidátky spolu s podobně velkým schodkem hlasů okrsku odpovídá nezapočtenému balíku lístků s křížkem u strany."
+ },
+ "m:551147/11005:58278601": {
+  "id": "M18",
+  "kontrola": "Ověřeno v datech: Lidovci a Starostové mají celou kandidátku na 47–81 místo 95–120; okrsku na lístku města chybí hlasy ~37 lístků (z = −6,1, v roce 2022 0,1), lístek MČ je v pořádku. Rovnoměrný posun celé kandidátky spolu s podobně velkým schodkem hlasů okrsku odpovídá nezapočtenému balíku lístků s křížkem u strany."
+ },
+ "m:551368/28001:58278601": {
+  "id": "M19",
+  "kontrola": "Ověřeno v datech: ODS, TOP 09 (61–95 místo 93–122) i Piráti (7–20 místo 30–46) mají celou kandidátku níž a okrsku chybí hlasy ~42 lístků (z = −6,0, v roce 2022 −1,3). Součet posunů obou stran (~51 lístků) je o něco větší než schodek.",
+  "jistota": 3
+ },
+ "m:551007/13015:58278601": {
+  "id": "M20",
+  "kontrola": "Ověřeno v datech: Lidovci a Starostové (33–43 místo ~63) i ODS, TOP 09 (26–38 místo ~53) mají celou kandidátku níž, hlasy chybí na obou lístcích okrsku (město z = −5,4, MČ z = −7,9, M13). Součet posunů (~46 lístků) je větší než schodek na lístku města (~25 lístků).",
+  "jistota": 3
+ },
+ "m:550990/27013:55099001": {
+  "id": "M21",
+  "kontrola": "Ověřeno v datech: ANO (23–33 místo ~49) a Zelení (9–20 místo ~25) mají celou kandidátku níž a okrsku chybí hlasy ~18 lístků (z = −5,2, v roce 2022 normální). ANO bylo v okrsku slabší i v roce 2022 (z = −2,8), část posunu je proto skutečná nižší podpora.",
+  "jistota": 3
+ },
+ "m:citlivost": {
+  "id": "M22",
+  "kontrola": "Ověřeno v datech: seznam obsahuje jen hodnoty, jejichž překlep by změnil výsledek; žádná z nich se neodlišuje od okolí ani od ostatních kandidátů, nejde tedy o zjištěnou chybu. Slouží jako vodítko pro kontrolu zápisů v zastupitelstvech s rezervou 10–50 hlasů."
+ },
+ "m:551082/1009:55108201": {
+  "id": "M23",
+  "kontrola": "Vyřazeno po kontrole v datech: PRO BOhunice má u č. 13–19 a 21 kolem 37 hlasů a u ostatních kolem 60 – stejný vzor se opakuje v okrsku 1012, nízké hodnoty odpovídají lístkům s křížkem u strany a vyšší hodnoty shodným osobním hlasům pro vybrané kandidáty. Jde o doporučení voličům (koho označit), ne o chybu zápisu.",
+  "vyradit": true
+ },
+ "m:551058/29005:58278601": {
+  "id": "M24",
+  "kontrola": "Vyřazeno po kontrole v datech: Piráti mají od č. 18 plynulý pokles (22 → 14) proti rovnoměrnému okolí ~25, využití hlasů okrsku je normální (z = 0,6) – žádné hlasy nechybí. Vzor odpovídá lístkům s křížkem u strany a zároveň u kandidátů jiných stran.",
+  "vyradit": true
+ },
+ "m:551031/20026:58278601": {
+  "id": "M25",
+  "kontrola": "Ověřeno v datech: ZELENÉ BRNO má č. 1–33 kolem 21 hlasů a č. 34–55 shodně jen 4–6 (okolí ~35 u všech); okrsku chybí hlasy ~34 lístků (z = −4,6), schodek je i na lístku MČ (z = −7,4, M15). Plochý skok na jednom místě dělené hlasování nevysvětlí. Úsek začíná kandidátem č. 34 – stejné místo se opakuje i v dalších městech (Praha, Brno, Pardubice, Zlín, Karviná), chyba nejspíš vzniká na stejném místě tiskopisu, možná při přechodu na další stranu.",
+  "jistota": 4
+ },
+ "m:551295/21005:58278601": {
+  "id": "M26",
+  "kontrola": "Ověřeno v datech: Lidovci a Starostové (73–86 místo ~115) a ODS, TOP 09 (49–61 místo ~78) mají celou kandidátku níž a okrsku chybí hlasy ~41 lístků (z = −4,5, v roce 2022 −0,3)."
+ },
+ "m:551198/3005:58278601": {
+  "id": "M27",
+  "kontrola": "Ověřeno v datech: ZELENÉ BRNO má celou kandidátku na 7–11 místo 18–31; okrsku chybí hlasy ~14 lístků (z = −4,2, v roce 2022 −0,5), posun odpovídá ~15 lístkům."
+ },
+ "m:551244/19009:58278601": {
+  "id": "M28",
+  "kontrola": "Ověřeno v datech: Za Lužánky má celou kandidátku asi o 10 hlasů níž; hlasy chybí na obou lístcích okrsku (město z = −4,1, MČ z = −3,6), v roce 2022 bylo využití nadprůměrné."
+ },
+ "m:551147/11003:58278601": {
+  "id": "M29",
+  "kontrola": "Ověřeno v datech: na lístku města chybí hlasy ~102 lístků (77,0 % proti 94,3 %, z = −6,9, v roce 2022 −1,5); lístek MČ je jen mírně pod okolím. Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají.",
+  "jistota": 3
+ },
+ "m:550990/27024:58278601": {
+  "id": "M30",
+  "kontrola": "Ověřeno v datech: na lístku města chybí hlasy ~53 lístků (z = −6,9, v roce 2022 −1,1). Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají.",
+  "jistota": 3
+ },
+ "m:550990/27003:58278601": {
+  "id": "M31",
+  "kontrola": "Ověřeno v datech: na lístku města chybí hlasy ~31 lístků (z = −6,5, v roce 2022 +1,1). Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají.",
+  "jistota": 3
+ },
+ "m:551007/13007:55100701": {
+  "id": "M32",
+  "kontrola": "Ověřeno v datech: na lístku MČ chybí hlasy ~78 lístků (z = −6,0, v roce 2022 +1,0), lístek města je v pořádku. Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají.",
+  "jistota": 3
+ },
+ "m:551031/20012:55103101": {
+  "id": "M33",
+  "kontrola": "Ověřeno v datech: na lístku MČ chybí hlasy ~18 lístků (z = −5,6); okrsek je malý (180 lístků) a mírně nižší využití měl i v roce 2022 (z = −1,9). Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají."
+ },
+ "m:550990/27011:58278601": {
+  "id": "M34",
+  "kontrola": "Ověřeno v datech: na lístku města chybí hlasy ~33 lístků (z = −5,2, v roce 2022 −0,5), lístek MČ je v pořádku. Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají.",
+  "jistota": 3
+ },
+ "m:balik_slabe": {
+  "id": "M35",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ },
+ "m:neplatne": {
+  "id": "M36",
+  "kontrola": "Ověřeno v datech: podíl neplatných lístků je výrazně vyšší než v sousedních okrscích, žádná strana ale nemá současně odpovídající schodek. Může jít o protestní hlasování nebo o označení více kandidátů, než je mandátů; za chybu to samo nepovažujeme."
+ }
+}

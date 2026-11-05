@@ -1,0 +1,12 @@
+{
+ "m:588296/2:58829601": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: NEZÁVISLÍ mají u 9 kandidátů nulu a u ostatních 4–10 hlasů (v okolí 2–9). U tak malé strany může jít i o několik voličů, kteří označili kandidáty jednotlivě; jistota snížena na střední.",
+  "jistota": 2
+ },
+ "m:588296/20:58829601": {
+  "id": "M02",
+  "kontrola": "Vyřazeno po kontrole v datech: Zdravé Kroměřížsko má v okrsku jen 0–9 hlasů na kandidáta, okrsek je ale malý (147 lístků) a stejně nízké využití hlasů měl i v roce 2022 (83,4 %, letos 82,6 %). Nízké využití hlasů měl okrsek stejně i v roce 2022, schodek je tedy místní zvyklost a chybějící balík nepotvrzuje.",
+  "vyradit": true
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "m:544256/68:54425601": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: SPD má 0 u č. 38–45 (č. 37 má 7), ANO a Naše Česko mají 0 u č. 45 (ostatní 49–62, resp. 95–127) – komise zřejmě nedopsala konce řádků. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:544256/82:54425601": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: ODS, OBČANÉ PRO BUDĚJOVICE i Piráti mají 0 u posledního kandidáta (č. 45), ostatní 44–137 – komise zřejmě nedopsala poslední řádek. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:544256/13:54425601": {
+  "id": "M03",
+  "kontrola": "Ověřeno v datech: OBČANÉ PRO BUDĚJOVICE A STAROSTOVÉ mají celou kandidátku na 12–20 místo 22–34; okrsku chybí hlasy ~13 lístků (z = −5,0, v roce 2022 −0,3); okrsek je malý (173 lístků)."
+ },
+ "m:544256/79:54425601": {
+  "id": "M04",
+  "kontrola": "Ověřeno v datech: chybí hlasy ~78 lístků (z = −6,5); mírně nižší využití měl okrsek i v roce 2022 (z = −2,0), letos je schodek ale mnohem větší. Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají.",
+  "jistota": 3
+ },
+ "m:balik_slabe": {
+  "id": "M05",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ },
+ "m:neplatne": {
+  "id": "M06",
+  "kontrola": "Ověřeno v datech: podíl neplatných lístků je výrazně vyšší než v sousedních okrscích, žádná strana ale nemá současně odpovídající schodek. Může jít o protestní hlasování nebo o označení více kandidátů, než je mandátů; za chybu to samo nepovažujeme."
+ }
+}

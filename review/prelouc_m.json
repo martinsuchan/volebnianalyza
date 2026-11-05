@@ -1,0 +1,11 @@
+{
+ "m:575500/6:57550001": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: NEZÁVISLÍ PRO PŘELOUČ mají kandidátku na 13–30 místo 42–116 a okrsku chybí hlasy ~28 lístků (z = −6,9, v roce 2022 normální); posun (~41 lístků) je větší než schodek.",
+  "jistota": 3
+ },
+ "m:575500/14:57550001": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: chybí hlasy ~12 lístků (z = −7,5); okrsek je velmi malý (44 lístků). Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají."
+ }
+}

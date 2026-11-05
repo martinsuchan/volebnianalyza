@@ -1,16 +1,17 @@
-"""Doplňkové nálezy Prahy (řada M) z pravidel v pravidla.py – listopad 2026, po srovnání se soudními podáními a jinou analýzou.
+"""Doplňkové nálezy (řada M) z pravidel v pravidla.py – listopad 2026, po srovnání se soudními podáními a jinou analýzou.
+Volá je findings.py (Praha) i findings_auto.py (ostatní obce).
 
-Nálezy N01–N17 (findings.py) zůstávají beze změny. Nové nálezy dostávají čísla M01, M02, …, která jsou zamčená v review/praha_m.json
+Nálezy N zůstávají beze změny. Nové nálezy dostávají čísla M01, M02, …, která jsou zamčená v review/<obec>_m.json (Praha: praha_m.json)
 podle klíče nálezu (klic): při dalším běhu má stejný nález stejné číslo, nové nálezy dostanou další volná čísla. Ve stejném souboru je
 i výsledek kontroly nálezu v datech (pole kontrola, případně vyradit / jistota / dopad_kat).
 Nálezy jsou seskupeny po okrscích a lístcích (jeden zápis = jeden nález), aby odpovídaly tomu, co lze ověřit v jednom zápisu komise.
 """
 import json, os
 import numpy as np, pandas as pd
-from common import RES, ROOT, MAGISTRAT
+from common import RES, ROOT, MAGISTRAT, UNIT
 import pravidla as PR
 
-REVIEW = os.path.join(ROOT, 'review', 'praha_m.json')
+VYCHOZI = 'Automaticky podle doplňkových pravidel (listopad 2026), jednotlivě zatím neověřeno; graf hlasů kandidátů je u nálezu.'
 n0 = lambda v: f'{int(round(v)):,}'.replace(',', ' ')
 pc = lambda v: f'{100 * v:.1f} %'.replace('.', ',')
 
@@ -23,21 +24,30 @@ def _krit(seats):
     return fr
 
 
-def build_m(d, zname, mcmap, outcome, kryto, kryto_okrsky):
-    """kryto: {(OID, ZK, strana)} už pokryté nálezy N; kryto_okrsky: {(OID, ZK)} okrsky s nálezem N na úrovni celého okrsku."""
+def build_m(d, zname, mcmap, outcome, kryto, kryto_okrsky, mag='magistrát', jed='MČ', oba='magistrát i MČ', stav=False):
+    """kryto: {(OID, ZK, strana)} už pokryté nálezy N; kryto_okrsky: {(OID, ZK)} okrsky s nálezem N na úrovni celého okrsku.
+    mag / jed / oba: označení lístku města, městských částí a obou v souhrnech; stav=True doplní stav_kontroly (šablona obcí)."""
+    REVIEW = os.path.join(ROOT, 'review', f'{UNIT}_m.json')
     from anomalies import prep
     _, t3, hl, ros, nb = prep(2026)
     rk, cm = d['rk'], d['councils']
     MS = pd.read_pickle(f'{RES}/missing_2026.pkl')
-    MS22 = pd.read_pickle(f'{RES}/missing_2022.pkl').set_index(['OID', 'ZK'])  # nízké využití hlasů už v roce 2022 = místní zvyk
+    p22 = f'{RES}/missing_2022.pkl'  # nízké využití hlasů už v roce 2022 = místní zvyk
+    MS22 = pd.read_pickle(p22) if os.path.exists(p22) else pd.DataFrame(columns=['OID', 'ZK', 'vpb', 'vpb_ocek', 'z_vpb'])
+    MS22 = MS22.set_index(['OID', 'ZK'])
     SH = pd.read_pickle(f'{RES}/shares_2026.pkl')
     PM = pd.read_pickle(f'{RES}/precinct_2026.pkl')
     seats = pd.read_csv(f'{RES}/seats.csv'); fr = _krit(seats)
     vecs = PR.vektory(d, nb)
     R = pd.concat([PR.p1_p2_p3(vecs, PR.odstoupivsi(d)), PR.p4(vecs, MS)], ignore_index=True)
-    R = R[[(r.OID, int(r.ZK), int(r.strana)) not in kryto for r in R.itertuples()]]
+    for c in ('pravidlo', 'ZK', 'strana', 'nazev', 'OID', 'K', 'M', 'posun', 'sila', 'chybi', 'z_vpb', 'shoda', 'hodnoty', 'od', 'do', 'pozice', 'hodnota', 'zaklad'):
+        if c not in R:  # pravidla, která v obci nic nenašla, nedodají své sloupce
+            R[c] = pd.Series(dtype=object)
+    R = R[np.array([(r.OID, int(r.ZK), int(r.strana)) not in kryto for r in R.itertuples()], dtype=bool)]  # prázdný seznam by vybral sloupce
     R5 = PR.p5(MS)
-    R5 = R5[[(r.OID, int(r.ZK)) not in kryto_okrsky for r in R5.itertuples()]]
+    if not len(R5):
+        R5 = pd.DataFrame(columns=['OID', 'ZK'])
+    R5 = R5[np.array([(r.OID, int(r.ZK)) not in kryto_okrsky for r in R5.itertuples()], dtype=bool)]
     jm = {(int(r.ZK), int(r.POR_STR_HL), int(r.PORCISLO)): f'{r.JMENO} {r.PRIJMENI}' for r in rk.itertuples()}
     pn = {(int(r.ZK), int(r.POR_STR_HL)): str(r.ZKRATKAO30) for r in ros.itertuples()}
 
@@ -82,27 +92,26 @@ def build_m(d, zname, mcmap, outcome, kryto, kryto_okrsky):
                 hod = r.hodnota if isinstance(r.hodnota, list) else [r.hodnota]
                 casti.append(f'{nm}: {kand} má {", ".join(map(str, hod))} hlasů, ostatní kandidáti kolem {n0(r.zaklad)}')
                 for k, h in zip(r.pozice, hod):
-                    dC[(p, k)] = dC.get((p, k), 0) + int(round(r.zaklad - h)); dV[p] = dV.get(p, 0) + int(round(r.zaklad - h))
+                    dC[(p, k)] = max(dC.get((p, k), 0), int(round(r.zaklad - h)))
             elif r.pravidlo == 'P2':
                 if r.od == 2 and r.do == r.K:
                     casti.append(f'{nm}: hlasy z lístků s křížkem u strany jsou připsány jen kandidátovi č. 1, kandidáti č. 2–{int(r.do)} mají o ~{n0(-r.posun)} hlasů méně než v okolí')
                 else:
                     casti.append(f'{nm}: kandidáti č. {int(r.od)}–{int(r.do)} mají o ~{n0(-r.posun)} hlasů méně než zbytek kandidátky (proti sousedním okrskům), chybí ~{n0(r.chybi)} hlasů')
                 for k in range(int(r.od), int(r.do) + 1):
-                    dC[(p, k)] = dC.get((p, k), 0) + int(round(-r.posun))
-                dV[p] = dV.get(p, 0) + int(round(r.chybi))
+                    dC[(p, k)] = max(dC.get((p, k), 0), int(round(-r.posun)))
             elif r.pravidlo == 'P3':
                 casti.append(f'{nm}: {len(r.pozice)} z {r.K} kandidátů má 0 hlasů (rozeseto po celé kandidátce), ostatní mají po ~{n0(r.zaklad)}')
                 for k in r.pozice:
-                    dC[(p, k)] = dC.get((p, k), 0) + int(round(r.zaklad))
-                dV[p] = dV.get(p, 0) + int(round(r.chybi))
+                    dC[(p, k)] = max(dC.get((p, k), 0), int(round(r.zaklad)))
             elif r.pravidlo == 'P4':
                 smer = 'nižší' if r.posun < 0 else 'vyšší'
                 casti.append(f'{nm}: celá kandidátka je proti sousedním okrskům {smer} o ~{n0(abs(r.posun))} hlasů na kandidáta '
                              f'({"chybí" if r.posun < 0 else "přebývá"} ~{n0(abs(r.chybi))} hlasů, tj. lístky ~{n0(abs(r.posun))} voličů s křížkem u strany)')
-                for k in range(1, r.K + 1):
-                    dC[(p, k)] = dC.get((p, k), 0) - int(round(r.posun))
-                dV[p] = dV.get(p, 0) - int(round(r.posun * r.K))
+                for k in range(1, r.K + 1):  # posun dolů i nahoru; s posunutým úsekem téže strany se nesčítá (bere se větší oprava)
+                    o = -int(round(r.posun)); dC[(p, k)] = o if (p, k) not in dC else (max(dC[(p, k)], o) if o > 0 else min(dC[(p, k)], o))
+        for (p, k), v in dC.items():  # doplněné hlasy strany = součet oprav jejích kandidátů (bez dvojího započtení)
+            dV[p] = dV.get(p, 0) + v
         if p5 or (m is not None and m.z_vpb <= -3 and len(g)):
             casti.append(f'okrsek jako celek má na tomto lístku jen {pc(m.vpb)} možných hlasů (sousední okrsky {pc(m.vpb_ocek)}), chybí ~{n0(m.chybi_hlasu)} hlasů, '
                          f'tj. hlasy ~{n0(m.chybi_listku)} lístků' + (f' (nízké využití hlasů měl okrsek i v roce 2022: {pc(MS22.loc[(oid, zk)].vpb)} proti {pc(MS22.loc[(oid, zk)].vpb_ocek)})' if zvyk else ''))
@@ -165,17 +174,17 @@ def build_m(d, zname, mcmap, outcome, kryto, kryto_okrsky):
     if len(R6):
         R6 = R6.sort_values('z', ascending=False)
         F.append(dict(klic='m:neplatne', priorita=3, typ='Neobvykle mnoho neplatných lístků (souhrn)', ZK=0, OID=', '.join(R6.OID.drop_duplicates()), MC=', '.join(sorted(set(R6.MC.astype(str)))),
-                      zastupitelstvo='magistrát i MČ', subjekt=f'{len(R6)} lístků v {R6.OID.nunique()} okrscích',
+                      zastupitelstvo=oba, subjekt=f'{len(R6)} lístků v {R6.OID.nunique()} okrscích',
                       zjisteni='Podíl neplatných lístků je aspoň trojnásobkem sousedních okrsků: ' + '; '.join(
-                          f'{r.OID.split("/")[1]} ({"magistrát" if r.listek == "mag" else r.MC}): {r.neplatnych} z {n0(r.obalek)} ({pc(r.podil)}, okolí {pc(r.okoli)})' for r in R6.head(12).itertuples()) + '.',
+                          f'{r.OID.split("/")[1]} ({mag if r.listek == "mag" else r.MC}): {r.neplatnych} z {n0(r.obalek)} ({pc(r.podil)}, okolí {pc(r.okoli)})' for r in R6.head(12).itertuples()) + '.',
                       dukaz='Robustní z-skóre podílu neplatných lístků proti 8 sousedním okrskům ≥ 5. Vzor „balík lístků uznaný za neplatný“ (jako u Senátu) by se projevil i schodkem některé strany.',
                       jistota=1, umysl='Nelze posoudit – protestní hlasování, lístky jiného zastupitelstva v obálce i chybné vyčlenění platných lístků', dopad='Nesimulováno – strana nebyla určena.',
                       dopad_kat='Bez vlivu', doporuceni='Prověřit zápisy okrsků s nejvyšším podílem; při současném schodku strany ověřit, zda nejde o balík platných lístků.', _sila=0.0, strana_m=None))
     if len(slabe):
         F.append(dict(klic='m:balik_slabe', priorita=3, typ='Možné chybějící balíky lístků – slabší případy (souhrn)', ZK=0, OID=', '.join(slabe.OID.drop_duplicates()),
-                      MC=', '.join(sorted(set(slabe.OID.map(mcmap).astype(str)))), zastupitelstvo='magistrát i MČ', subjekt=f'{len(slabe)} kandidátek v {slabe.OID.nunique()} okrscích',
+                      MC=', '.join(sorted(set(slabe.OID.map(mcmap).astype(str)))), zastupitelstvo=oba, subjekt=f'{len(slabe)} kandidátek v {slabe.OID.nunique()} okrscích',
                       zjisteni='Celá kandidátka je proti okolí posunutá a okrsku chybí (přebývá) obdobně velký počet hlasů, ale odchylka okrsku je jen mírná (|z| 3–4): ' + '; '.join(
-                          f'{r.OID.split("/")[1]} {r.nazev} ({"magistrát" if r.ZK // 100 == MAGISTRAT else mcmap.get(r.OID, "")}): {"−" if r.posun < 0 else "+"}{n0(abs(r.posun))} na kandidáta'
+                          f'{r.OID.split("/")[1]} {r.nazev} ({mag if r.ZK // 100 == MAGISTRAT else mcmap.get(r.OID, "")}): {"−" if r.posun < 0 else "+"}{n0(abs(r.posun))} na kandidáta'
                           for r in slabe.sort_values('sila', ascending=False).head(12).itertuples()) + '.',
                       dukaz='Stejný vzor jako u chybějícího balíku, ale schodek hlasů okrsku je v pásmu běžné variability; odlišit od nižší podpory strany v okrsku nelze.',
                       jistota=1, umysl='Bez indikace', dopad='Nesimulováno jednotlivě.', dopad_kat='Bez vlivu', doporuceni='Ověřit jen při jiném podnětu.', _sila=0.0, strana_m=None))
@@ -191,10 +200,10 @@ def build_m(d, zname, mcmap, outcome, kryto, kryto_okrsky):
         txt = []
         for zk, k, x in crit:
             x = x.drop_duplicates(['OID', 'strana', 'porcislo']).head(6)
-            txt.append(f'{cm.NAZEVZAST[zk] if zk // 100 != MAGISTRAT else "magistrát"} (rezerva {n0(k)} hl.): ' + ', '.join(
+            txt.append(f'{cm.NAZEVZAST[zk] if zk // 100 != MAGISTRAT else mag} (rezerva {n0(k)} hl.): ' + ', '.join(
                 f'okrsek {o.split("/")[1]} {pn.get((zk, s), s)} č. {c} {z} → {v}' for o, s, c, z, v in zip(x.OID, x.strana, x.porcislo, x.zapsano, x.varianta)))
         F.append(dict(klic='m:citlivost', priorita=2, typ='Kritické hodnoty těsných výsledků (k ověření v zápisech)', ZK=0, OID=', '.join(sorted({o for _, _, x in crit for o in x.OID})),
-                      MC=', '.join(cm.NAZEVZAST[zk] for zk, _, _ in crit), zastupitelstvo='MČ', subjekt=f'{len(crit)} zastupitelstev',
+                      MC=', '.join(cm.NAZEVZAST[zk] for zk, _, _ in crit), zastupitelstvo=jed if all(zk // 100 != MAGISTRAT for zk, _, _ in crit) else (mag if len(crit) == 1 else oba), subjekt=f'{len(crit)} zastupitelstev',
                       zjisteni='Okrskové hodnoty, jejichž věrohodný překlep (záměna dvou číslic nebo jedna jiná číslice, výsledek v rozpětí kandidátky v okrsku) by změnil mandát nebo zvoleného kandidáta: '
                                + '; '.join(txt) + '.' + (' U rezervy pod 10 hlasů (' + ', '.join(f'{cm.NAZEVZAST[int(z)]} {n0(k)} hl.' for z, k in mini.krit.items()) +
                                                         ') změní výsledek jakákoli chyba o několik hlasů v kterémkoli okrsku; seznam hodnot by nic nerozlišil.' if len(mini) else ''),
@@ -209,7 +218,8 @@ def build_m(d, zname, mcmap, outcome, kryto, kryto_okrsky):
     for f in nove:
         n = max(used, default=0) + 1; used.add(n)
         rv[f['klic']] = dict(id=f'M{n:02d}')
-    json.dump(rv, open(REVIEW, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    if rv or os.path.exists(REVIEW):  # obce bez nálezu M soubor nedostanou
+        json.dump(rv, open(REVIEW, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     out = []
     for f in F:
         r = rv[f['klic']]
@@ -220,7 +230,9 @@ def build_m(d, zname, mcmap, outcome, kryto, kryto_okrsky):
                 f[k] = r[k]
         if 'jistota' in r and 'priorita' not in r and f['priorita'] in (2, 3) and f['ZK']:
             f['priorita'] = 2 if f['jistota'] >= 4 else 3
-        f['id'] = r['id']; f['kontrola'] = r.get('kontrola') or 'Automaticky podle doplňkových pravidel (listopad 2026), jednotlivě zatím neověřeno; graf hlasů kandidátů je u nálezu.'
+        f['id'] = r['id']; f['kontrola'] = r.get('kontrola') or ('' if stav else VYCHOZI)
+        if stav:
+            f['stav_kontroly'] = 'zkontrolováno' if r.get('kontrola') else 'automaticky'
         f.setdefault('MC', mcmap.get(f['OID'], ''))
         f.pop('_sila', None)
         out.append(f)

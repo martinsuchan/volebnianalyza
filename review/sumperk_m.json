@@ -1,0 +1,15 @@
+{
+ "m:523704/16:52370401": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: NEZÁVISLÁ VOLBA má celou kandidátku na 29–63 místo 51–77; okrsku chybí hlasy ~31 lístků (z = −7,9, v roce 2022 normální), posun odpovídá ~26 lístkům. Rovnoměrný posun celé kandidátky spolu s podobně velkým schodkem hlasů okrsku odpovídá nezapočtenému balíku lístků s křížkem u strany."
+ },
+ "m:523704/21:52370401": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: STAROSTOVÉ A NEZÁVISLÍ mají kandidátku na 10–36 místo 29–52 (hodnoty nerovnoměrné) a okrsku chybí hlasy ~23 lístků (z = −5,5, v roce 2022 normální).",
+  "jistota": 3
+ },
+ "m:523704/26:52370401": {
+  "id": "M03",
+  "kontrola": "Ověřeno v datech: chybí hlasy ~13 lístků (z = −5,1); okrsek je malý (210 lístků). Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají."
+ }
+}

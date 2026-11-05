@@ -1,0 +1,11 @@
+{
+ "m:592731/7:59273101": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: ODS a nezávislí mají kandidátku na 9–35 místo 25–54 (hodnoty nerovnoměrné) a okrsku chybí hlasy ~17 lístků (z = −5,4, v roce 2022 −0,9).",
+  "jistota": 3
+ },
+ "m:balik_slabe": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ }
+}

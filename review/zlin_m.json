@@ -1,0 +1,14 @@
+{
+ "m:585068/8:58506801": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: STAROSTOVÉ A NEZÁVISLÍ mají č. 1–33 v souladu s okolím (72–100), od č. 34 jsou hodnoty o ~17 nižší (45–62 místo 62–76), další průběh je s okolím rovnoběžný. Skok na jednom místě dělené hlasování nevysvětlí, na celé hlasy okrsku ale vliv nemá (využití hlasů je normální). Simulace opravy mění zvoleného kandidáta v pořadí strany. Úsek začíná kandidátem č. 34 – stejné místo se opakuje i v dalších městech (Praha, Brno, Pardubice, Zlín, Karviná), chyba nejspíš vzniká na stejném místě tiskopisu, možná při přechodu na další stranu."
+ },
+ "m:585068/64:58506801": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: ZLÍN SRDCEM a Piráti (16–40 místo 22–58) a Zlín 21 (43–86 místo 80–131) mají celou kandidátku níž a okrsku chybí hlasy ~35 lístků (z = −4,5, v roce 2022 0,0); součet posunů (~53 lístků) je větší než schodek."
+ },
+ "m:balik_slabe": {
+  "id": "M03",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ }
+}

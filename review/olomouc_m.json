@@ -1,0 +1,32 @@
+{
+ "m:500496/78:50049601": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: PŘÍSAHA má u 11 kandidátů po 5–7 hlasech a ostatní 0 (v okolí ~2–3 u všech). U tak malé strany může jít i o pět voličů, kteří označili stejné kandidáty jednotlivě; jistota snížena na střední.",
+  "jistota": 2
+ },
+ "m:500496/41:50049601": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: ANO č. 45 má 0 hlasů, ostatní 133–146; okrsku chybí hlasy ~18 lístků (z = −3,6). Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500496/62:50049601": {
+  "id": "M03",
+  "kontrola": "Ověřeno v datech: KDU-ČSL má č. 44 4 a č. 45 0 hlasů, ANO č. 45 0 hlasů (ostatní 28–45, resp. 62–71) – komise zřejmě nedopsala poslední řádek. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500496/16:50049601": {
+  "id": "M04",
+  "kontrola": "Ověřeno v datech: spOLečně č. 45 má 0 hlasů, ostatní 38–62. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500496/83:50049601": {
+  "id": "M05",
+  "kontrola": "Ověřeno v datech: ProOlomouc má kandidátku na 29–63 místo 43–70 a okrsku chybí hlasy ~32 lístků (z = −4,2, v roce 2022 −1,1); posun strany vysvětluje ~15 lístků."
+ },
+ "m:500496/6:50049601": {
+  "id": "M06",
+  "kontrola": "Ověřeno v datech: chybí hlasy ~18 lístků (z = −7,9, v roce 2022 normální). Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají.",
+  "jistota": 3
+ },
+ "m:balik_slabe": {
+  "id": "M07",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ }
+}

@@ -307,6 +307,15 @@ def prepocet():
     return ok, los
 
 
+def m_txt():
+    """Poznámka k řadě M (doplňková pravidla, listopad 2026) – jen u obcí, kde pravidla něco našla."""
+    nm = int(F.id.str.startswith('M').sum()) if len(F) else 0
+    if not nm:
+        return ''
+    return (f' Nálezy M01–M{F[F.id.str.startswith("M")].id.str[1:].astype(int).max():02d} ({nm}) přidala doplňková pravidla z listopadu 2026 '
+            '(<a href="../../metodika.html#pravidla-m">popis</a>); čísla nálezů N zůstala beze změny.')
+
+
 def page_index():
     i26 = [x for x in integ if x['rok'] == Y][0]
     n_zast = 1 + len(U['mc'])
@@ -330,7 +339,7 @@ def page_index():
 <p class="lead">Analýza všech {n0(i26["okrsku"])} volebních okrsků a {n0(i26["zaznamu_t3"])} okrskových zápisů (zastupitelstvo {druh()}{f" a {len(U['mc'])} zastupitelstev {JED_PL}" if U['mc'] else ""}),
 {n0(i26["stran_overeno"])} stranických a {n0(i26["kandidatu_overeno"])} kandidátních výsledků z otevřených dat ČSÚ, porovnaná s volbami 2018 a 2022.</p>
 <p class="sub">Nálezy vytvořily stejné detektory jako u Prahy a registr byl sestaven automaticky; {f"zkontrolováno {nzk} z {len(F)} nálezů (stav je uveden u každého nálezu)" if len(F) else "detektory v obci nenašly nic, co by bylo třeba ověřit"}.
-Každý nález obsahuje proklik na výsledky okrsku na volby.gov.cz.</p>
+Každý nález obsahuje proklik na výsledky okrsku na volby.gov.cz.{m_txt()}</p>
 <div class="verdict">{verdict}</div>
 <div class="tiles">
 <div class="tile"><div class="l">Okrsků analyzováno</div><div class="v">{n0(i26["okrsku"])}</div><div class="s">{n0(i26["zaznamu_t3"])} zápisů, {n_zast} {"zastupitelstvo" if n_zast == 1 else ("zastupitelstva" if 2 <= n_zast <= 4 else "zastupitelstev")}</div></div>
@@ -368,6 +377,9 @@ def page_findings():
             ch = vpb_council_chart(int(parts[2]), parts[1])
         elif parts[0] == 'typo':
             ch = cand_vector_chart(int(parts[2]), int(parts[3]), parts[1], f'{zlabel(parts[2])}, okrsek {parts[1].split("/")[1]}: hlasy kandidátů strany', 'Hodnota kandidáta z nálezu proti sousedům na listině')
+        elif parts[0] == 'm' and len(parts) == 3 and getattr(r, 'strana_m', None) == getattr(r, 'strana_m', None) and getattr(r, 'strana_m', None) is not None and int(r.priorita) <= 2:
+            ch = cand_vector_chart(int(parts[2]), int(r.strana_m), parts[1], f'{zlabel(parts[2])}, okrsek {parts[1].split("/")[1]} – {r.subjekt}: hlasy kandidátů',
+                                   'Hlasy kandidátů strany v okrsku proti mediánu sousedních okrsků (doplňková pravidla)')
         stav = ('<span class="st st-done">zkontrolováno</span> ' + E(str(r.kontrola))) if r.stav_kontroly == 'zkontrolováno' else '<span class="st st-plan">automaticky, zatím neověřeno</span>'
         links = finding_links(r)
         body += (f'<article class="card find p{int(r.priorita)}" id="{r.id}"><h3>{r.id} · {E(r.typ)}</h3><p class="sub">{E(r.zastupitelstvo)} · {E(str(r.MC))[:200]}'

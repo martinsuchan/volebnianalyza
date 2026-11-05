@@ -1,0 +1,10 @@
+{
+ "m:598917/41:59891701": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: ANO má č. 1–33 kolem 20–27 hlasů a č. 34–41 jen 0–4 (okolí ~27). Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu. Úsek začíná kandidátem č. 34 – stejné místo se opakuje i v dalších městech (Praha, Brno, Pardubice, Zlín, Karviná), chyba nejspíš vzniká na stejném místě tiskopisu, možná při přechodu na další stranu."
+ },
+ "m:balik_slabe": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ }
+}

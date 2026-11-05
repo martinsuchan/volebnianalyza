@@ -1,0 +1,11 @@
+{
+ "m:562335/14:56233501": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: Volba pro Děčín má kandidátku na 12–44 místo 28–63 (hodnoty nerovnoměrné) a okrsku chybí hlasy ~15 lístků (z = −4,8). Okrsek se od roku 2022 zmenšil (447 → 254 lístků), srovnání s minulými volbami je proto nespolehlivé; jistota snížena na střední.",
+  "jistota": 2
+ },
+ "m:neplatne": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: podíl neplatných lístků je výrazně vyšší než v sousedních okrscích, žádná strana ale nemá současně odpovídající schodek. Může jít o protestní hlasování nebo o označení více kandidátů, než je mandátů; za chybu to samo nepovažujeme."
+ }
+}

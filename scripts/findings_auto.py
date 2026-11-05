@@ -20,6 +20,16 @@ n0 = lambda v: f'{int(round(v)):,}'.replace(',', ' ')
 SWAP_MIN_OKRSKU = 10  # záměny stran se hledají jen v obcích s alespoň tolika okrsky
 
 
+import functools
+
+
+@functools.lru_cache(maxsize=1)
+def M_OBCE():
+    """Jednotky, na které se už použila doplňková pravidla (řada M): krajská města a obce s rozšířenou působností (listopad 2026)."""
+    import units as _u
+    return {u['slug'] for u in _u.units() if u['typ'] in ('krajske', 'orp')}
+
+
 def pl(n, one, few, many):
     """Český tvar podle čísla: 1 okrsek, 2–4 okrsky, 5+ okrsků."""
     return f'{n} ' + (one if n == 1 else few if 2 <= n <= 4 else many)
@@ -371,6 +381,22 @@ def build():
         f['id'] = f'N{i:02d}'
         f['priorita'] = 1 if f['dopad_kat'] in ('Mění mandáty', 'Mění zvolené', 'Může změnit mandáty') else (
             4 if f['klic'] == 'batches' else (2 if f['jistota'] >= 4 or f['dopad_kat'] == 'Těsný výsledek' else 3))
+    # ---- doplňková pravidla (řada M, listopad 2026): čísla zamčená v review/<obec>_m.json, nálezy N se nemění.
+    # Za vysvětlené se berou všechny nálezy N včetně vyřazených kontrolou (jinak by pravidla znovu hlásila ověřený planý poplach).
+    if UNIT in M_OBCE():
+        from findings_m import build_m
+        kryto, kryto_okrsky = set(), {(o, int(z)) for z, o in covered}
+        for f in F:
+            p = str(f['klic']).split(':')
+            if p[0] in ('stack', 'zero', 'row', 'typo') and len(p) >= 4:
+                kryto.add((p[1], int(p[2]), int(p[3])))
+            elif p[0] == 'missing':
+                kryto_okrsky.add((p[1], int(p[2])))
+        T0 = pd.read_pickle(f'{RES}/typos_{Y}.pkl')
+        kryto |= set(zip(T0.OID, T0.ZK.astype(int), T0.strana.astype(int))) if len(T0) else set()
+        lab = {'města': 'město', 'obce': 'obec', 'městyse': 'městys'}.get(druh_zast(), 'město')
+        out += build_m(d, zname, mcmap, _outcome, kryto, kryto_okrsky, mag=lab, jed=jednotka,
+                       oba=f'{lab} i {jednotka}' if has_mc else lab, stav=True)
     Fd = pd.DataFrame(out)
     if len(Fd):
         Fd['jistota_text'] = Fd.jistota.map(JISTOTA)

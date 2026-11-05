@@ -122,7 +122,7 @@ def p1_p2_p3(vecs, vyrazeni):
                     rows.append(dict(pravidlo='P1', ZK=g['ZK'], strana=g['strana'], nazev=g['nazev'], OID=oid, K=K, M=g['M'], pozice=[k + 1],
                                      hodnota=int(v[k]), zaklad=float(q), hodnoty=v.astype(int).tolist(), chybi=float(gap), sila=float(gap / spread)))
     R = pd.DataFrame(rows)
-    if len(R):  # sousední propady v jednom okrsku a straně sloučit (např. č. 19–20)
+    if len(R) and (R.pravidlo == 'P1').any():  # sousední propady v jednom okrsku a straně sloučit (např. č. 19–20)
         p1 = R[R.pravidlo == 'P1'].sort_values('pozice')
         merged = []
         for (zk, s, o), grp in p1.groupby(['ZK', 'strana', 'OID']):

@@ -1,0 +1,11 @@
+{
+ "m:598810/13:59881001": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: KDU-ČSL má č. 1–21 kolem 11–28 hlasů, č. 22–27 jen 1–2 (okolí 9–13). Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:598810/34:59881001": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: Volte Třinec (16–47 místo 42–80) a NEZÁVISLÍ (29–59 místo 63–89) mají kandidátku níž a okrsku chybí hlasy ~30 lístků (z = −6,1). Nízké využití hlasů měl okrsek i v roce 2022 (81,8 % proti 89,1 %), část schodku je místní zvyklost; jistota snížena na střední.",
+  "jistota": 2
+ }
+}

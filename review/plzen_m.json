@@ -1,0 +1,44 @@
+{
+ "m:554774/8001:55479101": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: SPD má u č. 44–47 po 2 hlasech, ostatní 20–26. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:546003/3016:54600301": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: Piráti mají 0 u č. 32–33, ostatní 20–28. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:545970/1004:54597001": {
+  "id": "M03",
+  "kontrola": "Ověřeno v datech: Chceme Plzeň č. 33 má 1 hlas, ostatní 50–56. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:545988/2007:54598801": {
+  "id": "M04",
+  "kontrola": "Ověřeno v datech: Chceme Plzeň č. 31 má 0 hlasů, ostatní 44–51. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:citlivost": {
+  "id": "M05",
+  "kontrola": "Ověřeno v datech: seznam obsahuje jen hodnoty, jejichž překlep by změnil výsledek; žádná z nich se neodlišuje od okolí ani od ostatních kandidátů, nejde tedy o zjištěnou chybu. Slouží jako vodítko pro kontrolu zápisů v zastupitelstvech s rezervou 10–50 hlasů."
+ },
+ "m:545970/1005:55479101": {
+  "id": "M06",
+  "kontrola": "Ověřeno v datech: na lístku města chybí hlasy ~11 lístků (z = −17,8); okrsek má jen 52 platných lístků, v roce 2022 bylo využití normální. Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají."
+ },
+ "m:546003/3040:55479101": {
+  "id": "M07",
+  "kontrola": "Ověřeno v datech: hlasy chybějí na obou lístcích – město ~19 lístků (z = −5,6) i MČ (z = −3,3), v roce 2022 bylo využití normální. Hlasy nelze přiřadit konkrétní straně; na mandáty vliv nemají.",
+  "jistota": 3
+ },
+ "m:554766/7001:55479101": {
+  "id": "M08",
+  "kontrola": "Ověřeno v datech: ANO a nezávislí mají celou kandidátku na 129–155 místo 193–238 a okrsku chybí hlasy ~80 lístků (z = −5,1). Nízké využití hlasů měl okrsek i v roce 2022 (83,0 % proti 91,7 %), letos je schodek větší; jistota zůstává střední."
+ },
+ "m:546003/3014:55479101": {
+  "id": "M09",
+  "kontrola": "Vyřazeno po kontrole v datech: využití hlasů okrsku je letos stejné jako v roce 2022 (83,7 %, resp. 84,2 %). Nízké využití hlasů měl okrsek stejně i v roce 2022, schodek je tedy místní zvyklost a chybějící balík nepotvrzuje.",
+  "vyradit": true
+ },
+ "m:balik_slabe": {
+  "id": "M10",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ }
+}

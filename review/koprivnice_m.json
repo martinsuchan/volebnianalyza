@@ -1,0 +1,11 @@
+{
+ "m:599565/20:59956501": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: KRÁSNÁ KOPŘIVNICE (37–199 místo 110–227) a Sdružení nezávislých (8–71 místo 19–104) mají kandidátku níž a okrsku chybí hlasy ~35 lístků (z = −7,6, v roce 2022 −0,3); součet posunů je větší než schodek.",
+  "jistota": 3
+ },
+ "m:balik_slabe": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů okrsku shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu je vhodné uvedené okrsky zkontrolovat."
+ }
+}
