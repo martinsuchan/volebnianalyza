@@ -1,0 +1,509 @@
+{
+ "m:538213/20010:53821301": {
+  "id": "M01",
+  "kontrola": "Ověřeno v datech: kandidáti Místních mají v okrsku 14–24 hlasů proti 27–42 v okolí a okrsku chybí hlasy asi 23 lístků; v roce 2022 měl okrsek využití hlasů normální (89,4 % proti 88,3 %). Strana ale byla v tomto okrsku slabší i v roce 2022 (5,3 % proti mediánu MČ 6,4 %), část schodku proto může být skutečně nižší podpora.",
+  "jistota": 2,
+  "dopad_kat": "Může změnit mandáty",
+  "dopad": "Pokud jde o chybějící balík lístků Místních (~13 lístků s křížkem u strany, ~332 hlasů), změnily by se mandáty: Místní pro Horní Počernice 1 → 2, Hnutí Šance pro Počernice 4 → 3. Jistotu snižuje to, že strana byla v okrsku slabší už v roce 2022.",
+  "doporuceni": "Ověřit zápis okrsku 20010 (počet hlasů kandidátů Místních pro Horní Počernice), případně přepočítat lístky – rozhodující rezerva je malá."
+ },
+ "m:500224/10028:55478201": {
+  "id": "M02",
+  "kontrola": "Ověřeno v datech: SPOLU č. 63–65 mají 0 hlasů (ostatní 45–52), STAN i Piráti mají 0 u č. 65, SPD a JSME PRAHA mají nuly rozeseté mezi stejnými hodnotami ~11. Okrsku chybí hlasy ~43 lístků (z = −10,6), v roce 2022 bylo využití hlasů normální. Ve stejném okrsku chybí i hlasy posledních kandidátů na lístku MČ (M14) – komise zřejmě nedopsala konce řádků zápisu. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500143/5029:50014301": {
+  "id": "M03",
+  "kontrola": "Ověřeno v datech: SEN PRO PRAHU 5 má u č. 40–41 nuly (ostatní 33–43), SPD má 24 nul mezi hodnotami 13. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500119/4029:55478201": {
+  "id": "M04",
+  "kontrola": "Ověřeno v datech: ANO č. 65 má 0 hlasů (ostatní 42–45, v okolí ~28), SPD má 25 nul rozesetých mezi hodnotami 11–13. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500178/6071:50017801": {
+  "id": "M05",
+  "kontrola": "Ověřeno v datech: ODS a KDU-ČSL mají č. 1–8 kolem 55 a č. 9–45 jen kolem 14 (č. 27 dokonce 3); STAN a PRAHA 6 SOBĚ mají celou kandidátku asi o 40 % pod okolím. Okrsku chybí hlasy ~55 lístků (z = −16,1), v roce 2022 bylo využití hlasů normální a lístek magistrátu ve stejném okrsku je v pořádku. Jde o kombinaci nedopsaného úseku a nezapočtených balíků lístků."
+ },
+ "m:500208/8014:55478201": {
+  "id": "M06",
+  "kontrola": "Ověřeno v datech: SPOLU č. 1–51 mají 75–88 hlasů, č. 52–65 jen 1–10 (okolí ~63). Plynulý pokles ke konci kandidátky dělené hlasování vysvětlí, skok o 65 hlasů mezi dvěma kandidáty ne. Využití hlasů okrsku je nižší než v okolí (z = −2,8), v roce 2022 bylo normální."
+ },
+ "m:547034/11059:55478201": {
+  "id": "M07",
+  "kontrola": "Ověřeno v datech: SPOLU č. 34–39 mají 0 hlasů, kandidáti před i za nimi 57–66. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu. Úsek začíná kandidátem č. 34 stejně jako v dalších okrscích (8 úseků) – chyba se opakuje na stejném místě tiskopisu, možná při přechodu na další stranu."
+ },
+ "m:500119/4054:55478201": {
+  "id": "M08",
+  "kontrola": "Ověřeno v datech: SPD č. 1–11 mají 13–16 hlasů, č. 12–65 jen 0–5 (okolí ~10 u všech). Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500097/3042:55478201": {
+  "id": "M09",
+  "kontrola": "Ověřeno v datech: ANO č. 34–40 mají 0 hlasů, kandidáti před i za nimi 41–46. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu. Úsek začíná kandidátem č. 34 stejně jako v dalších okrscích (8 úseků) – chyba se opakuje na stejném místě tiskopisu, možná při přechodu na další stranu."
+ },
+ "m:500208/8075:50020801": {
+  "id": "M10",
+  "kontrola": "Ověřeno v datech: ODS č. 1–4 mají 13–36 hlasů, ostatní 58–71. První kandidáti dostávají hlas z každého lístku s křížkem u strany a nemohou mít méně než zbytek kandidátky – jde o chybu zápisu nebo přepisu (možná vypadlé číslice). Využití hlasů okrsku je mírně nižší (z = −2,6)."
+ },
+ "m:500119/4005:50011901": {
+  "id": "M11",
+  "kontrola": "Ověřeno v datech: Piráti i SPD mají od č. 34 do konce kandidátky téměř nuly (Piráti 3–7 místo ~28, SPD 0–2 místo ~8); propad začíná u obou stran na stejném místě a okrsku chybí hlasy ~15 lístků (z = −5,1, v roce 2022 normální). Odpovídá to nedopsané části zápisu. Úsek začíná kandidátem č. 34 stejně jako v dalších okrscích (8 úseků) – chyba se opakuje na stejném místě tiskopisu, možná při přechodu na další stranu."
+ },
+ "m:500119/4050:50011901": {
+  "id": "M12",
+  "kontrola": "Ověřeno v datech: ANO č. 24–26 mají 0 hlasů, ostatní 52–61. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:547107/12022:55478201": {
+  "id": "M13",
+  "kontrola": "Ověřeno v datech: STAN č. 63–65 mají 0 hlasů, č. 62 má 62. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500224/10028:50022401": {
+  "id": "M14",
+  "kontrola": "Ověřeno v datech: Společně pro Prahu 10 č. 42–45 a ANO č. 45 mají 0 hlasů, ostatní 45–51, resp. 37–38. Ve stejném okrsku chybí i konce kandidátek na lístku magistrátu (M02). Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:539694/13003:55478201": {
+  "id": "M15",
+  "kontrola": "Ověřeno v datech: ANO č. 64–65 mají 0 hlasů (ostatní 77–85), SPOLU č. 65 má 0 (nižší hodnota č. 64, 46 hlasů, odpovídá dělenému hlasování). Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500178/6078:55478201": {
+  "id": "M16",
+  "kontrola": "Ověřeno v datech: SPD má 0 hlasů u většiny kandidátů včetně č. 4, 6, 8 a 9, ostatní mají 14–16; využití hlasů okrsku je nižší (z = −3,8, v roce 2022 normální). Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500143/5053:55478201": {
+  "id": "M17",
+  "kontrola": "Ověřeno v datech: ANO č. 31–33 mají 0 hlasů (ostatní 40–48), PRAHA SOBĚ č. 65 má 2 hlasy (č. 64 má 187 – rozdíl se týká jen posledního kandidáta). Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:547107/12019:55478201": {
+  "id": "M18",
+  "kontrola": "Ověřeno v datech: Piráti č. 62–65 mají 0 hlasů, č. 61 má 33. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500216/9037:55478201": {
+  "id": "M19",
+  "kontrola": "Ověřeno v datech: STAN č. 63–65 mají 0 hlasů, č. 62 má 33. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500119/4089:55478201": {
+  "id": "M20",
+  "kontrola": "Ověřeno v datech: Piráti č. 62–65 mají 0 hlasů, č. 61 má 21. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500119/4044:50011901": {
+  "id": "M21",
+  "kontrola": "Ověřeno v datech: ANO č. 44–45 mají 0 hlasů, ostatní 46–52. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500178/6027:50017801": {
+  "id": "M22",
+  "kontrola": "Ověřeno v datech: SPD má hlasy jen u č. 1–4 a č. 12 (9–11), ostatní kandidáti 0. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500143/5043:50014301": {
+  "id": "M23",
+  "kontrola": "Ověřeno v datech: ODS a ANO mají 0 u č. 40–41, PRAHA 5 SOBĚ u č. 41 a TOP Lidovci u č. 38–41; kandidáti před nimi mají 15–76 podle strany. Konce kandidátek čtyř stran v jednom zápisu – komise zřejmě nedopsala poslední řádky. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500186/7031:55478201": {
+  "id": "M24",
+  "kontrola": "Ověřeno v datech: SPD č. 1–9 a č. 27 mají 0 hlasů, ostatní 9–10. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500186/7006:55478201": {
+  "id": "M25",
+  "kontrola": "Ověřeno v datech: PRAHA SOBĚ č. 65 má 2 hlasy, č. 64 má 158 a ostatní 162–182 (rozdíl se týká jen posledního kandidáta, ~160 hlasů). Využití hlasů okrsku je nižší (z = −2,8, v roce 2022 normální). Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500208/8081:55478201": {
+  "id": "M26",
+  "kontrola": "Ověřeno v datech: Motoristé č. 1–33 mají 8–12 hlasů, č. 34–65 jen 2 (okolí ~7 u všech). Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500216/9014:55478201": {
+  "id": "M27",
+  "kontrola": "Ověřeno v datech: ANO č. 64–65 mají 0 hlasů, ostatní 38–43; okrsku navíc chybí hlasy ~18 lístků (z = −3,9, v roce 2022 normální). Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500224/10106:50022401": {
+  "id": "M28",
+  "kontrola": "Ověřeno v datech: JSME PRAHA 10 č. 38–45 mají 1–2 hlasy, ostatní 12–17. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:547174/17001:54717401": {
+  "id": "M29",
+  "kontrola": "Ověřeno v datech: ANO č. 23 má 0 hlasů (ostatní 63–87), ŘEPY SOBĚ č. 21–23 mají 0 (ostatní 25–36). Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500208/8060:55478201": {
+  "id": "M30",
+  "kontrola": "Ověřeno v datech: STAN č. 65 má 0 hlasů (ostatní 48–65), Piráti č. 63–65 mají 0 (ostatní 15–26). Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500119/4026:50011901": {
+  "id": "M31",
+  "kontrola": "Ověřeno v datech: ANO (29–30 místo ~49) i SPOLU (72–77 místo ~100) mají celou kandidátku rovnoměrně níž; okrsku chybí hlasy ~47 lístků na lístku MČ (z = −12,1) a ~49 lístků na lístku magistrátu (M37), v roce 2022 bylo využití hlasů normální. Rovnoměrný posun celé kandidátky spolu se stejně velkým schodkem hlasů odpovídá nezapočteným balíkům lístků s křížkem u strany."
+ },
+ "m:500143/5076:50014301": {
+  "id": "M32",
+  "kontrola": "Ověřeno v datech: ANO č. 41 má 0 hlasů (ostatní 50–61), Naše Praha 5 č. 37–41 mají 0 (ostatní 8–15). Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500186/7012:50018601": {
+  "id": "M33",
+  "kontrola": "Ověřeno v datech: SPOLU PRO PRAHU 7 má celou kandidátku na 36–48 místo ~61; okrsku chybí hlasy ~51 lístků (z = −11,7), v roce 2022 bylo využití normální. Stejný posun SPOLU je i na lístku magistrátu ve stejném okrsku (M35) – odpovídá nezapočtenému balíku lístků SPOLU na obou lístcích."
+ },
+ "m:500224/10031:55478201": {
+  "id": "M34",
+  "kontrola": "Ověřeno v datech: STAN č. 65 má 0 hlasů, č. 64 má 116 a ostatní 119–142. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500186/7012:55478201": {
+  "id": "M35",
+  "kontrola": "Ověřeno v datech: SPOLU má celou kandidátku na 29–41 místo ~59; okrsku chybí hlasy ~48 lístků (z = −10,9), v roce 2022 bylo využití normální. Stejný posun SPOLU je i na lístku MČ (M33)."
+ },
+ "m:500143/5053:50014301": {
+  "id": "M36",
+  "kontrola": "Ověřeno v datech: SEN PRO PRAHU 5 č. 41 má 0 hlasů, ostatní 100–147 (v okolí má č. 41 ~78). Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500119/4026:55478201": {
+  "id": "M37",
+  "kontrola": "Ověřeno v datech: SPOLU má celou kandidátku na 54–57 místo ~75; okrsku chybí hlasy ~49 lístků (z = −9,7), v roce 2022 bylo využití normální. Ve stejném okrsku chybí hlasy i na lístku MČ (M31)."
+ },
+ "m:500143/5076:55478201": {
+  "id": "M38",
+  "kontrola": "Ověřeno v datech: poslední kandidáti PRAHA SOBĚ i Pirátů mají v okrsku 0, ostatní kandidáti 77–99, resp. kolem 40 – vynechaný poslední řádek zápisu."
+ },
+ "m:539694/13029:53969401": {
+  "id": "M39",
+  "kontrola": "Ověřeno v datech: okrsku na lístku MČ chybí hlasy ~28 lístků (z = −8,7, v roce 2022 −1,4); PRAHA 13 SOBĚ má celou kandidátku asi o 11 hlasů níž (15–20 místo 24–33). Schodek je jistý, posun PRAHA 13 SOBĚ ale vysvětluje jen asi 11 z ~28 lístků – zbytek nelze přiřadit konkrétní straně."
+ },
+ "m:547361/14028:54736101": {
+  "id": "M40",
+  "kontrola": "Ověřeno v datech: MY pro Prahu 14 č. 31 má 0 hlasů, č. 30 má 69 a ostatní 69–89. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500208/8013:50020801": {
+  "id": "M41",
+  "kontrola": "Ověřeno v datech: STAN + TOP 09 má celou kandidátku na 18–22 místo ~46; okrsku na lístku MČ chybí hlasy ~46 lístků (z = −8,6), v roce 2022 bylo využití nadprůměrné. Odpovídá nezapočtenému balíku lístků s křížkem u strany. Ve stejném okrsku je na lístku magistrátu nedopsaný konec kandidátky ANO (M71)."
+ },
+ "m:547034/11046:54703401": {
+  "id": "M42",
+  "kontrola": "Ověřeno v datech: TOP 09 a Starostové č. 35 má 0 hlasů, ostatní 62–74. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:547298/27001:55478201": {
+  "id": "M43",
+  "kontrola": "Ověřeno v datech: Piráti č. 65 má 0 hlasů, ostatní 55–74. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:539589/45001:53958901": {
+  "id": "M44",
+  "kontrola": "Ověřeno v datech: jediná kandidátka v MČ (9 kandidátů na 9 mandátů); č. 2 František Neubauer má 59 hlasů, ostatní 155–169. V roce 2022 měl 123 hlasů, v řadě s ostatními (116–133). Nejpravděpodobnější je vypadlá číslice (159). Sousední okrsky se stejným lístkem nejsou, skutečně nižší podporu proto nelze vyloučit; zvoleni jsou všichni kandidáti, výsledek se nemění.",
+  "jistota": 3
+ },
+ "m:547107/12041:55478201": {
+  "id": "M45",
+  "kontrola": "Ověřeno v datech: STAN č. 65 má 0 hlasů, ostatní 55–65. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:547361/14021:55478201": {
+  "id": "M46",
+  "kontrola": "Ověřeno v datech: PRAHA SOBĚ č. 65 má 0 hlasů, ostatní 52–65. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500119/4124:50011901": {
+  "id": "M47",
+  "kontrola": "Ověřeno v datech: SPOLU pro PRAHU 4 má celou kandidátku na 37–59 místo ~78; okrsku chybí hlasy ~26 lístků (z = −7,1, v roce 2022 −1,1). Odpovídá nezapočtenému balíku lístků s křížkem u strany."
+ },
+ "m:500119/4078:50011901": {
+  "id": "M48",
+  "kontrola": "Ověřeno v datech: ANO č. 45 má 0 hlasů, ostatní 47–50. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:538213/20011:55478201": {
+  "id": "M49",
+  "kontrola": "Ověřeno v datech: ANO má celou kandidátku na 72–78 místo ~100; okrsku na lístku magistrátu chybí hlasy ~65 lístků (z = −6,9, v roce 2022 −1,6). Posun ANO vysvětluje asi 26 lístků, zbytek schodku nelze přiřadit. Ve stejné MČ je nález M01 (okrsek 20010)."
+ },
+ "m:500097/3045:50009701": {
+  "id": "M50",
+  "kontrola": "Ověřeno v datech: TOP 09 + STAN má celou kandidátku na 149–203 místo 222–261; okrsku na lístku MČ chybí hlasy ~87 lístků (z = −6,8), v roce 2022 bylo využití normální a lístek magistrátu ve stejném okrsku je v pořádku. Odpovídá nezapočtenému balíku lístků s křížkem u strany."
+ },
+ "m:500089/2038:50008901": {
+  "id": "M51",
+  "kontrola": "Ověřeno v datech: ANO č. 19 a 20 mají 5 a 4 hlasy, ostatní 48–57. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu. Ve stejném okrsku je na lístku magistrátu nález N03."
+ },
+ "m:500119/4132:55478201": {
+  "id": "M52",
+  "kontrola": "Ověřeno v datech: PRAHA SOBĚ (11–14 místo ~23) a STAN (17–19 místo ~33) mají celou kandidátku rovnoměrně níž a využití hlasů je nižší než v okolí. Okrsek je ale malý (156 lístků) a nízké využití hlasů měl i v roce 2022 (84,0 %, letos 86,0 %), na lístku MČ obdobně. Schodek proto může být místní zvyklost a nižší výsledek obou stran skutečný; jistota snížena na střední.",
+  "jistota": 2
+ },
+ "m:539864/56005:55478201": {
+  "id": "M53",
+  "kontrola": "Ověřeno v datech: SPOLU (69–74 místo ~98) a PRAHA SOBĚ (46–55 místo ~71) mají celou kandidátku rovnoměrně níž a okrsku chybí hlasy ~34 lístků (z = −6,7, v roce 2022 −1,4). Posun dvou stran zároveň je méně obvyklý než u jednoho balíku a součet posunů (~47 lístků) je větší než schodek; jistota snížena na vysokou.",
+  "jistota": 3
+ },
+ "m:539694/13015:55478201": {
+  "id": "M54",
+  "kontrola": "Ověřeno v datech: ANO č. 65 má 0 hlasů, ostatní 38–41. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500119/4072:55478201": {
+  "id": "M55",
+  "kontrola": "Ověřeno v datech: kandidát č. 65 ANO má 0 hlasů, všech ostatních 64 kandidátů 38–39 (téměř jen lístky s křížkem u strany) – logicky nemožné."
+ },
+ "m:500216/9043:55478201": {
+  "id": "M56",
+  "kontrola": "Ověřeno v datech: PRAHA SOBĚ má celou kandidátku na 25–41 místo ~50; okrsku chybí hlasy ~24 lístků (z = −5,5) a posun strany odpovídá ~21 lístkům. Okrsek v roce 2022 neexistoval, srovnání s minulými volbami chybí."
+ },
+ "m:500224/10059:55478201": {
+  "id": "M57",
+  "kontrola": "Ověřeno v datech: STAN má celou kandidátku na 58–88 místo ~100; okrsku na lístku magistrátu chybí hlasy ~55 lístků (z = −5,4, v roce 2022 0,0), lístek MČ je v pořádku. Posun STAN vysvětluje ~28 lístků."
+ },
+ "m:547301/28003:55478201": {
+  "id": "M58",
+  "kontrola": "Ověřeno v datech: ANO má celou kandidátku na 47–52 místo ~71 a okrsku chybí hlasy ~30 lístků (z = −5,2). Nižší využití hlasů měl okrsek ale i v roce 2022 (z = −2,1) a ANO tu bylo slabší i tehdy; místní zvyklost vysvětluje velkou část schodku. Jistota snížena na střední.",
+  "jistota": 2
+ },
+ "m:539678/48001:55478201": {
+  "id": "M59",
+  "kontrola": "Ověřeno v datech: ANO má celou kandidátku na 44–50 místo ~70 a okrsku chybí hlasy ~37 lístků (z = −5,1). V roce 2022 bylo využití hlasů jen mírně nižší (z = −1,5), ANO tu ale bylo slabší i tehdy (z = −1,6); jistota snížena na vysokou.",
+  "jistota": 3
+ },
+ "m:500208/8004:50020801": {
+  "id": "M60",
+  "kontrola": "Ověřeno v datech: ODS má celou kandidátku na 16–21 místo ~33; okrsku na lístku MČ chybí hlasy ~13 lístků (z = −5,0, v roce 2022 −0,7) a posun ODS odpovídá ~16 lístkům."
+ },
+ "m:500143/5064:55478201": {
+  "id": "M61",
+  "kontrola": "Ověřeno v datech: všech 65 kandidátů SPOLU má v okrsku 23–24 hlasů (bez jediného osobního hlasu navíc), okolí 32–39; okrsku chybí hlasy (85,7 % proti 93,9 %)."
+ },
+ "m:citlivost": {
+  "id": "M62",
+  "kontrola": "Ověřeno v datech: seznam obsahuje jen hodnoty, jejichž překlep by změnil výsledek; žádná z nich se neodlišuje od okolí ani od ostatních kandidátů, nejde tedy o zjištěnou chybu. Slouží jako vodítko pro kontrolu zápisů v zastupitelstvech s rezervou 10–50 hlasů."
+ },
+ "m:500208/8027:55478201": {
+  "id": "M63",
+  "kontrola": "Ověřeno v datech: Motoristé mají 0 hlasů u 48 z 65 kandidátů, ostatní 10–13. Nuly mezi stejnými nenulovými hodnotami nemohou vzniknout z lístků s křížkem u strany ani z jednotlivých křížků – jde o chybu zápisu nebo přepisu. Stejný vzor se u malých stran na lístku magistrátu opakuje v několika okrscích (M02, M04, M16, M64, M65, M67, M70)."
+ },
+ "m:547310/26003:55478201": {
+  "id": "M64",
+  "kontrola": "Ověřeno v datech: Spojená levice (0 nebo 7–8) a SEN PRO PRAHU (0 nebo 5–6) mají nuly rozeseté mezi stejnými hodnotami, STAN má 0 u č. 65 (ostatní 98–120). Nízké využití hlasů měl okrsek i v roce 2022, schodek tedy sám nic nedokazuje; vzory na kandidátkách ale z lístků vzniknout nemohou. Nuly mezi stejnými nenulovými hodnotami nemohou vzniknout z lístků s křížkem u strany ani z jednotlivých křížků – jde o chybu zápisu nebo přepisu."
+ },
+ "m:539694/13007:55478201": {
+  "id": "M65",
+  "kontrola": "Ověřeno v datech: Motoristé mají 0 hlasů u 39 z 65 kandidátů, ostatní 4–8. Nuly mezi stejnými nenulovými hodnotami nemohou vzniknout z lístků s křížkem u strany ani z jednotlivých křížků – jde o chybu zápisu nebo přepisu."
+ },
+ "m:547107/12025:54710701": {
+  "id": "M66",
+  "kontrola": "Ověřeno v datech: 8 kandidátů TOP 09 má 8–11 hlasů, ostatní nulu, rozesetou po celé kandidátce; strana má v okrsku 72 hlasů proti ~550 podle okolí. Okrsek napadá i návrh u MS Praha (17 A 65/2026).",
+  "jistota": 4
+ },
+ "m:539694/13050:55478201": {
+  "id": "M67",
+  "kontrola": "Ověřeno v datech: Motoristé mají hlasy jen u 6 kandidátů (6–10), ostatní 0. Okrsku navíc na lístku magistrátu chybí hlasy ~66 lístků (z = −9,0, v roce 2022 normální), lístek MČ je v pořádku – nezapsané hlasy jsou zjevně i u dalších stran, jejich rozdělení ze zveřejněných dat určit nelze. Ani doplnění všech ~4 300 hlasů nemůže změnit mandáty magistrátu (rezerva 42 222 hlasů). Nuly mezi stejnými nenulovými hodnotami nemohou vzniknout z lístků s křížkem u strany ani z jednotlivých křížků – jde o chybu zápisu nebo přepisu.",
+  "jistota": 4
+ },
+ "m:500178/6089:50017801": {
+  "id": "M68",
+  "kontrola": "Ověřeno v datech: 5 kandidátů KSČM má po 5 hlasech, 18 nulu; v okolí mají všichni kandidáti 3–5 hlasů. Malá čísla – může jít i o pět voličů, kteří křížkovali stejné kandidáty.",
+  "jistota": 2
+ },
+ "m:500143/5046:55478201": {
+  "id": "M69",
+  "kontrola": "Ověřeno v datech: Motoristé č. 1–46 mají 8–14 hlasů, č. 47–65 shodně 3 (okolí ~11). Skok o 5–6 hlasů na jednom místě by vyžadoval, aby všichni voliči s křížkem u strany označili přesně stejný počet kandidátů jiných stran; pravděpodobnější je chyba zápisu. U malých čísel ale nelze vyloučit shodné hlasování několika voličů."
+ },
+ "m:500186/7013:55478201": {
+  "id": "M70",
+  "kontrola": "Ověřeno v datech: Motoristé mají hlasy jen u č. 1–4, 6, 9, 14 a 27 (10–11), ostatní 0. Nuly mezi stejnými nenulovými hodnotami nemohou vzniknout z lístků s křížkem u strany ani z jednotlivých křížků – jde o chybu zápisu nebo přepisu.",
+  "jistota": 4
+ },
+ "m:500208/8013:55478201": {
+  "id": "M71",
+  "kontrola": "Ověřeno v datech: ANO č. 1–45 mají 18–19 hlasů, č. 46–65 jen 9–11 (okolí ~21 u všech). Skok na jednom místě dělené hlasování nevysvětlí; pravděpodobná chyba zápisu. Ve stejném okrsku chybí na lístku MČ hlasy ~46 lístků (M41)."
+ },
+ "m:500119/4049:50011901": {
+  "id": "M72",
+  "kontrola": "Ověřeno v datech: SPD č. 24–32 mají po 4 hlasech, kandidáti před nimi i za nimi 9–17. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500143/5006:55478201": {
+  "id": "M73",
+  "kontrola": "Ověřeno v datech: SPD č. 1–6 mají 0 hlasů, ostatní 6–9. První kandidáti dostávají hlas z každého lístku s křížkem u strany a nemohou mít méně než zbytek kandidátky – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500208/8100:50020801": {
+  "id": "M74",
+  "kontrola": "Ověřeno v datech: Piráti č. 42–45 mají 0 hlasů (ostatní 13–16), 8žije č. 44–45 mají 0 (ostatní 25–31). Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:547158/42002:55478201": {
+  "id": "M75",
+  "kontrola": "Ověřeno v datech: Motoristé č. 1 má 18 hlasů, ostatní 1–3 (jen č. 14–15 a 34–35 mají 6 a 11); v okolí mají všichni kandidáti 10–14, což odpovídá lístkům s křížkem u strany. V okrsku tyto lístky chybí – komise je buď připsala jen lídrovi, nebo je nezapočetla. Podíl strany je proti okolí nízký (z = −2,0); schodek hlasů okrsku u tak malé strany patrný není."
+ },
+ "m:539694/13049:53969401": {
+  "id": "M76",
+  "kontrola": "Ověřeno v datech: Zelení a Piráti č. 15–16 mají po 10 hlasech, kandidáti před nimi i za nimi 32–46. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500089/2008:50008901": {
+  "id": "M77",
+  "kontrola": "Ověřeno v datech: ANO č. 1–31 mají 33–36 hlasů, č. 32–35 shodně 13; okrsku chybí hlasy ~16 lístků (z = −3,2, v roce 2022 normální). Shodný skok o 20 hlasů u čtyř posledních kandidátů dělené hlasování nevysvětlí – jde o chybu zápisu nebo přepisu.",
+  "jistota": 4
+ },
+ "m:539007/55001:55478201": {
+  "id": "M78",
+  "kontrola": "Ověřeno v datech: kandidáti č. 64 a 65 SPD mají 1 a 0 hlasů, všichni ostatní 20–25 – nedopsaný konec řádku zápisu."
+ },
+ "m:547034/11058:55478201": {
+  "id": "M79",
+  "kontrola": "Ověřeno v datech: SPD č. 34–36 mají 0 hlasů, kandidáti před i za nimi 13–17. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu. Úsek začíná kandidátem č. 34 stejně jako v dalších okrscích (8 úseků) – chyba se opakuje na stejném místě tiskopisu, možná při přechodu na další stranu."
+ },
+ "m:500224/10103:55478201": {
+  "id": "M80",
+  "kontrola": "Ověřeno v datech: SPD č. 34–36 mají 0 hlasů, kandidáti před i za nimi 9–14. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu. Úsek začíná kandidátem č. 34 stejně jako v dalších okrscích (8 úseků) – chyba se opakuje na stejném místě tiskopisu, možná při přechodu na další stranu."
+ },
+ "m:500143/5063:50014301": {
+  "id": "M81",
+  "kontrola": "Ověřeno v datech: TOP Lidovci č. 39–41 mají 0 hlasů, č. 38 má 19. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:547107/12007:54710701": {
+  "id": "M82",
+  "kontrola": "Ověřeno v datech: Starostové se Změnou č. 7–8 mají 17–18 hlasů a č. 30 16 hlasů, ostatní 40–63. Takový vzor nemohou vytvořit lístky s křížkem u strany (dávají hlas všem kandidátům) a sousední okrsky ho nemají – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500224/10085:50022401": {
+  "id": "M83",
+  "kontrola": "Ověřeno v datech: Starostové, Vlasta a Lidovci č. 1–33 mají 31–44 hlasů, od č. 34 hodnoty klesají z 22 na 15 (okolí ~29). Skok o 9 hlasů na jednom místě je neobvyklý a začíná na stejném místě (č. 34) jako další úseky v jiných okrscích; plynulý pokles za ním ale odpovídá i dělenému hlasování."
+ },
+ "m:500224/10082:50022401": {
+  "id": "M84",
+  "kontrola": "Ověřeno v datech: ANO č. 44–45 mají 0 hlasů, ostatní 20–21. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:538361/34002:55478201": {
+  "id": "M85",
+  "kontrola": "Ověřeno v datech: SPOLU č. 65 má 0 hlasů, č. 64 má 74 a ostatní 74–88. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu.",
+  "jistota": 4
+ },
+ "m:500224/10014:55478201": {
+  "id": "M86",
+  "kontrola": "Vyřazeno po kontrole v datech: okrsek je velmi malý (93 lístků) a stejně nízké využití hlasů na lístku magistrátu měl i v roce 2022 (74,8 %, letos 74,8 %); nižší výsledek STAN (7–9 místo ~22) proto chybějící balík nepotvrzuje.",
+  "vyradit": true
+ },
+ "m:500186/7003:55478201": {
+  "id": "M87",
+  "kontrola": "Ověřeno v datech: ANO č. 65 má 0 hlasů, č. 64 má 46 a ostatní 48–52. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu.",
+  "jistota": 4
+ },
+ "m:500119/4076:50011901": {
+  "id": "M88",
+  "kontrola": "Ověřeno v datech: u SPD i ANO mají v okrsku kandidáti č. 44 a 45 nulu, ostatní kandidáti 16–22 (SPD), resp. obdobně u ANO – nedopsaný konec řádků zápisu."
+ },
+ "m:500178/6042:50017801": {
+  "id": "M89",
+  "kontrola": "Vyřazeno po kontrole v datech: TOP 09 má č. 1–2 kolem 40 a dál plynulý pokles z 22 na 8. Využití hlasů okrsku je normální (z = −0,3), žádné hlasy tedy nechybí; vzor odpovídá osobním hlasům pro dva první kandidáty a dělenému hlasování (křížek u strany spolu s kandidáty jiných stran), ne chybě zápisu.",
+  "vyradit": true
+ },
+ "m:500224/10036:50022401": {
+  "id": "M90",
+  "kontrola": "Ověřeno v datech: TOP 09 SPOLU č. 44–45 mají 0 hlasů, ostatní 14–25. Poslední kandidáti mohou mít o něco méně hlasů kvůli lístkům s křížkem u strany a zároveň u kandidátů jiných stran, pokles na nulu u všech voličů strany najednou ale takto vzniknout nemůže – jde o chybu zápisu nebo přepisu."
+ },
+ "m:500119/4011:55478201": {
+  "id": "M91",
+  "kontrola": "Ověřeno v datech: na lístku magistrátu chybí hlasy ~28 lístků (81,1 % proti 95,1 % v okolí, z = −9,2), v roce 2022 bylo využití normální a lístek MČ ve stejném okrsku je v pořádku. Žádná kandidátka nemá jasný vzor, nezapsané hlasy proto nelze přiřadit straně; na mandáty vliv nemají.",
+  "jistota": 4
+ },
+ "m:500178/6022:50017801": {
+  "id": "M92",
+  "kontrola": "Ověřeno v datech: Piráti mají v okrsku jen osobní hlasy (2–19), hlasy z lístků s křížkem u strany chybějí téměř úplně (okolí ~35 u všech kandidátů); podíl strany je výrazně pod okolím (z = −3,2), v roce 2022 byl normální. Žádná jiná strana nemá odpovídající přebytek, o záměnu tedy nejde. Okrsek má ale nízké využití hlasů dlouhodobě (2022: 87,0 %), schodek sám proto chybějící balík nepotvrzuje."
+ },
+ "m:500097/3027:55478201": {
+  "id": "M93",
+  "kontrola": "Ověřeno v datech: PRAHA SOBĚ má kandidátku na 11–55 místo 71–91 a okrsku na lístku magistrátu chybí hlasy ~46 lístků (z = −4,9, v roce 2022 −1,2); schodek je i na lístku MČ (z = −3,1). Posun strany (~44 lístků) a schodek si odpovídají."
+ },
+ "m:500216/9002:55478201": {
+  "id": "M94",
+  "kontrola": "Ověřeno v datech: SPOLU má celou kandidátku na 36–49 místo ~57; okrsku chybí hlasy ~29 lístků (z = −4,8, v roce 2022 −0,8). Posun SPOLU vysvětluje ~18 lístků; okrsek je malý (194 lístků)."
+ },
+ "m:500178/6064:50017801": {
+  "id": "M95",
+  "kontrola": "Ověřeno v datech: STAN má kandidátku na 21–51 místo 55–79 a pokles ke konci je strmější než v okolí; okrsku chybí hlasy ~20 lístků (z = −4,8). Nižší využití hlasů měl okrsek i v roce 2022 (z = −2,5), část schodku je tedy místní zvyklost; jistota snížena na střední.",
+  "jistota": 2
+ },
+ "m:500208/8089:50020801": {
+  "id": "M96",
+  "kontrola": "Ověřeno v datech: PATRIOTI mají celou kandidátku na 39–56 (č. 1 82) místo 58–70 (č. 1 93); okrsku chybí hlasy ~19 lístků (z = −4,7, v roce 2022 0,0), posun strany odpovídá ~16 lístkům."
+ },
+ "m:500119/4002:55478201": {
+  "id": "M97",
+  "kontrola": "Ověřeno v datech: PRAHA SOBĚ má celou kandidátku na 26–40 místo ~44; okrsku na lístku magistrátu chybí hlasy ~12 lístků (z = −4,6, v roce 2022 +0,6), posun strany odpovídá ~13 lístkům."
+ },
+ "m:500178/6057:55478201": {
+  "id": "M98",
+  "kontrola": "Ověřeno v datech: Piráti mají kandidátku na 24–66 místo 63–93; okrsku na lístku magistrátu chybí hlasy ~69 lístků (z = −4,5, v roce 2022 +0,1), lístek MČ je v pořádku. Posun Pirátů vysvětluje ~35 lístků, zbytek schodku nelze přiřadit."
+ },
+ "m:500143/5067:50014301": {
+  "id": "M99",
+  "kontrola": "Ověřeno v datech: SEN PRO PRAHU 5 má celou kandidátku na 29–49 místo 41–57; okrsku chybí hlasy ~16 lístků (z = −4,4, v roce 2022 nadprůměrné), posun odpovídá ~14 lístkům."
+ },
+ "m:500224/10072:50022401": {
+  "id": "M100",
+  "kontrola": "Ověřeno v datech: Starostové, Vlasta a Lidovci mají kandidátku na 19–25 místo ~36; okrsku chybí hlasy ~12 lístků (z = −4,4, v roce 2022 normální), posun odpovídá ~14 lístkům."
+ },
+ "m:500143/5012:55478201": {
+  "id": "M101",
+  "kontrola": "Ověřeno v datech: STAN má kandidátku na 41–48 místo ~57; okrsku na lístku magistrátu chybí hlasy ~18 lístků (z = −4,4, v roce 2022 −0,4), lístek MČ je v pořádku; posun odpovídá ~15 lístkům."
+ },
+ "m:500054/1020:50005401": {
+  "id": "M102",
+  "kontrola": "Ověřeno v datech: Starostové, KDU-ČSL mají kandidátku na 24–39 místo 37–46; okrsku chybí hlasy ~16 lístků (z = −4,3, v roce 2022 −0,8), posun odpovídá ~11 lístkům."
+ },
+ "m:547387/15003:55478201": {
+  "id": "M103",
+  "kontrola": "Ověřeno v datech: na lístku magistrátu mají kandidáti PRAHA SOBĚ i SPOLU v okrsku rovnoměrně o ~30 hlasů méně než v okolí a okrsku chybí hlasy (88,3 % proti 96,0 %). Jde o tentýž okrsek 15003 jako nález N02 (lístek MČ)."
+ },
+ "m:539791/53001:55478201": {
+  "id": "M104",
+  "kontrola": "Ověřeno v datech: STAN (61–83 místo 83–109) a SEN PRO PRAHU (3–13 místo 17–24) mají celou kandidátku níž a okrsku na lístku magistrátu chybí hlasy ~21 lístků (z = −4,0, v roce 2022 +1,1). Součet posunů obou stran (~37 lístků) je větší než schodek, část proto může být skutečně nižší podpora."
+ },
+ "m:539864/56004:55478201": {
+  "id": "M105",
+  "kontrola": "Ověřeno v datech: ANO má celou kandidátku na 58–63 místo ~103 a okrsku na lístku magistrátu chybí hlasy ~36 lístků (z = −4,0, v roce 2022 normální). ANO bylo ale v tomto okrsku stejně slabé i v roce 2022 (z = −2,2), posun strany je proto z velké části skutečný; jistota snížena na střední.",
+  "jistota": 2
+ },
+ "m:547034/11008:55478201": {
+  "id": "M106",
+  "kontrola": "Ověřeno v datech: na lístku magistrátu chybí hlasy ~25 lístků (z = −7,3), v roce 2022 bylo využití normální a lístek MČ je v pořádku. Žádná kandidátka nemá jasný vzor, hlasy nelze přiřadit straně; mandáty se nemění.",
+  "jistota": 3
+ },
+ "m:500089/2015:50008901": {
+  "id": "M107",
+  "kontrola": "Ověřeno v datech: na lístku MČ chybí hlasy ~28 lístků (z = −6,5, v roce 2022 −1,6), lístek magistrátu je v pořádku. Při rozdělení podle podílů stran v okolí se mandáty nemění; chybějící hlasy (~979) jsou ale řádově stejné jako rezerva zastupitelstva (938 hlasů), při případném přepočtu v MČ Praha 2 je vhodné okrsek zkontrolovat.",
+  "jistota": 3
+ },
+ "m:539694/13042:53969401": {
+  "id": "M108",
+  "kontrola": "Ověřeno v datech: Zelení a Piráti (7–12 místo ~22) a ODS (34–43 místo ~49) mají celou kandidátku níž a okrsku na lístku MČ chybí hlasy ~26 lístků (z = −6,2). Nižší využití hlasů měl okrsek i v roce 2022 (z = −4,0), část schodku je proto místní zvyklost; jistota zůstává střední."
+ },
+ "m:547387/15001:54738701": {
+  "id": "M109",
+  "kontrola": "Ověřeno v datech: na lístku MČ chybí hlasy ~39 lístků (z = −5,9, v roce 2022 −1,8), lístek magistrátu je v pořádku. Hlasy nelze přiřadit straně; při rozdělení podle okolí se mandáty nemění, chybějící hlasy (~1 212) jsou ale blízko rezervy zastupitelstva (1 275 hlasů). Ve stejné MČ je nález N02 (okrsek 15003).",
+  "jistota": 3
+ },
+ "m:500186/7009:50018601": {
+  "id": "M110",
+  "kontrola": "Ověřeno v datech: hlasy chybějí na obou lístcích – MČ ~29 lístků (z = −5,5) i magistrát (z = −4,5), v roce 2022 bylo využití normální. Hlasy nelze přiřadit straně; mandáty se nemění.",
+  "jistota": 3
+ },
+ "m:547158/42001:55478201": {
+  "id": "M111",
+  "kontrola": "Vyřazeno po kontrole v datech: SPOLU má celou kandidátku níž (64–73 místo ~108), ale stejně slabé bylo SPOLU v okrsku i v roce 2022 (z = −2,0) a stejně nízké bylo i využití hlasů (2022: 85,7 % proti 92,2 %, letos 86,7 % proti 94,3 %). Vzor odpovídá místním poměrům, ne chybějícímu balíku.",
+  "vyradit": true
+ },
+ "m:547361/14012:55478201": {
+  "id": "M112",
+  "kontrola": "Vyřazeno po kontrole v datech: nízké využití hlasů na lístku magistrátu měl okrsek stejně i v roce 2022 (82,4 %, letos 82,1 %), schodek proto chybějící balík nepotvrzuje; samotný nižší výsledek SPOLU (52–57 místo ~75) může být skutečný.",
+  "vyradit": true
+ },
+ "m:500178/6014:55478201": {
+  "id": "M113",
+  "kontrola": "Ověřeno v datech: na lístku magistrátu chybí hlasy ~29 lístků (z = −5,3, v roce 2022 +0,8), lístek MČ je jen mírně pod okolím. Hlasy nelze přiřadit straně; mandáty se nemění.",
+  "jistota": 3
+ },
+ "m:538949/21007:55478201": {
+  "id": "M114",
+  "kontrola": "Ověřeno v datech: na lístku magistrátu chybí hlasy ~24 lístků (z = −5,2); nižší využití hlasů měl okrsek ale i v roce 2022 (z = −2,1) a letos je nižší i na lístku MČ (z = −3,0). Část schodku je proto místní zvyklost; jistota zůstává střední."
+ },
+ "m:500208/8005:50020801": {
+  "id": "M115",
+  "kontrola": "Ověřeno v datech: na lístku MČ chybí hlasy ~13 lístků (z = −5,1, v roce 2022 nadprůměrné), lístek magistrátu je v pořádku. Okrsek je malý (172 lístků); hlasy nelze přiřadit straně, mandáty se nemění.",
+  "jistota": 3
+ },
+ "m:500224/10109:55478201": {
+  "id": "M116",
+  "kontrola": "Vyřazeno po kontrole v datech: okrsek je velmi malý (96 lístků) a nízké využití hlasů měl i v roce 2022 (83,4 %, letos 87,9 %); nižší výsledek STAN (9–12 místo ~19, tj. ~10 lístků) chybějící balík nepotvrzuje.",
+  "vyradit": true
+ },
+ "m:500186/7002:55478201": {
+  "id": "M117",
+  "kontrola": "Ověřeno v datech: STAN má celou kandidátku na 37–58 místo ~76 a okrsku na lístku magistrátu chybí hlasy ~29 lístků (z = −4,3); posun STAN odpovídá ~30 lístkům. V roce 2022 měl okrsek na lístku magistrátu ještě mnohem větší schodek (74,8 % proti 93,1 %), lístek MČ byl v obou letech v pořádku. Nejde o stálou zvyklost (letos je využití jiné), opakovaný schodek spíš ukazuje na opakovanou chybu při sčítání lístků magistrátu.",
+  "jistota": 3
+ },
+ "m:balik_slabe": {
+  "id": "M118",
+  "kontrola": "Ověřeno v datech: souhrn případů, kde se posun kandidátky a schodek (přebytek) hlasů shodují, ale odchylka okrsku je jen mírná (|z| 3–4). Jednotlivě je nelze považovat za chybu; při případném přepočtu v dané MČ je vhodné okrsky zkontrolovat."
+ },
+ "m:neplatne": {
+  "id": "M119",
+  "kontrola": "Ověřeno v datech: většina případů jsou malé MČ s jedním nebo několika okrsky (Březiněves, Troja, Štěrboholy, Běchovice, Lochkov, Nedvězí, Klánovice) a vysoký podíl neplatných lístků se týká lístku MČ. V malých obcích je to běžné (voliči označí víc kandidátů, než je mandátů) a srovnání s okolím, kde se volí do jiné MČ, je jen orientační – za chybu to považovat nelze. Výrazně se odlišují okrsek 46003 v Řeporyjích (lístek magistrátu 15,3 %, lístek MČ jen 1,7 %) a okrsek 12009 ve velké MČ Praha 12 (11,0 %); tam je vhodné zkontrolovat zápis. Údaje o neplatných lístcích z roku 2022 nejsou k dispozici."
+ }
+}

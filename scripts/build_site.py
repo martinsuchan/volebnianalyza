@@ -277,6 +277,17 @@ def map_svg():
 # ------------------------------------------------------------------ pages
 def page_index():
     nf = F[F.priorita <= 2]
+    FN = F[F.id.str.startswith('N')]; FM = F[F.id.str.startswith('M')]
+    fmv = FM[FM.dopad_kat.isin(['Mění mandáty', 'Mění zvolené', 'Může změnit mandáty'])]
+    m_txt = ('' if not len(FM) else
+             f'<p><strong>Doplňková kontrola (listopad 2026):</strong> po srovnání se soudními podáními a s jinou nezávislou analýzou jsme přidali pravidla pro další vzory chyb v zápisech '
+             f'(propad kandidáta pod lístky s křížkem u strany, posunutý úsek kandidátky, rozptýlené nuly, chybějící balík bez podmínky na podíl strany, neplatné lístky, kritické hodnoty těsných výsledků). '
+             f'Přibylo {len(FM)} nálezů M01–M{FM.id.str[1:].astype(int).max():02d}, z toho {len(fmv)} s možným vlivem na výsledek'
+             + (': ' + '; '.join(f'<a href="nalezy.html#{r.id}">{r.id}</a> {E(str(r.MC))} – {E(r.typ.lower())} ({E(r.dopad_kat.lower())})' for r in fmv.itertuples()) if len(fmv) else '')
+             + '. Nálezy N01–N17 zůstaly beze změny'
+             + ('; chybějící čísla M patří nálezům vyřazeným po kontrole v datech a znovu se nepoužijí'
+                if len(FM) < FM.id.str[1:].astype(int).max() else '')
+             + '. <a href="../../metodika.html#pravidla-m">Popis pravidel</a>.</p>')
     rows = ''.join(f'<tr><td><a href="nalezy.html#{r.id}">{r.id}</a></td><td>{E(r.zastupitelstvo)}<br><span class="sub">'
                    + (finding_links(r) if str(r.OID).count('/') == 1 else E(str(r.OID)[:40]))
                    + '</span></td>'
@@ -292,12 +303,12 @@ z okrskových dat a nezávislý přepočet mandátů souhlasí na 100 %. Globál
 <p><strong>Nalezli jsme ale konkrétní chyby v okrskových zápisech, z nichž dvě mohou změnit složení zastupitelstva MČ:</strong>
 v <strong>Praze 10</strong> pravděpodobný překlep (165 místo ~16 hlasů) drží stranu Naše Praha 10 nad 5% hranicí – po opravě by <strong>2 mandáty připadly jiným stranám</strong>;
 v <strong>Praze 15</strong> chybí v okrsku 15003 hlasy zhruba 196 lístků, což <strong>může změnit 1 mandát</strong>. Obě místa doporučujeme bezodkladně ověřit přepočtem –
-lhůta pro návrh k Městskému soudu v Praze je <strong>10 dnů od vyhlášení výsledků Státní volební komisí</strong> (§ 60 zák. č. 491/2001 Sb.).</p></div>
+lhůta pro návrh k Městskému soudu v Praze je <strong>10 dnů od vyhlášení výsledků Státní volební komisí</strong> (§ 60 zák. č. 491/2001 Sb.).</p>{m_txt}</div>
 <div class="tiles">
 <div class="tile"><div class="l">Okrsků analyzováno</div><div class="v">{n_ok:,}</div><div class="s">2 240 zápisů, 100 % pokrytí</div></div>
 <div class="tile"><div class="l">Reprodukce výsledků</div><div class="v">100 %</div><div class="s">330 stran, 8 607 kandidátů, mandáty i pořadí</div></div>
 <div class="tile"><div class="l">Nálezy měnící mandáty</div><div class="v">1 + 1</div><div class="s">Praha 10 (jistá změna), Praha 15 (možná změna)</div></div>
-<div class="tile"><div class="l">Potvrzené chyby bez dopadu</div><div class="v">{int((F.typ.str.startswith("Chybějící") | F.typ.str.startswith("Nulové")).sum()) - 1} + {len(pd.read_pickle(f"{RES}/typos_2026.pkl"))}</div><div class="s">chybějící balíky / nulové strany + překlepy u kandidátů</div></div>
+<div class="tile"><div class="l">Potvrzené chyby bez dopadu</div><div class="v">{int((FN.typ.str.startswith("Chybějící") | FN.typ.str.startswith("Nulové")).sum()) - 1} + {len(pd.read_pickle(f"{RES}/typos_2026.pkl"))}</div><div class="s">chybějící balíky / nulové strany + překlepy u kandidátů</div></div>
 <div class="tile"><div class="l">Známky manipulace</div><div class="v">žádné</div><div class="s">směr chyb je nahodilý</div></div>
 </div>'''.replace(f'{n_ok:,}', f'{n_ok:,}'.replace(',', ' '))
     body += '<h2>Registr nálezů podle priority</h2><p class="sub">Jistota = pravděpodobnost, že zveřejněný údaj neodpovídá skutečnosti. Dopad = výsledek simulace opravy a nového přepočtu mandátů a pořadí kandidátů.</p>'
@@ -334,7 +345,9 @@ def page_findings():
                                        'Kandidát č. 24 má 165 hlasů, ostatní 15–29; jeho průměr ve zbylých okrscích odpovídá hlasům pro stranu', 24),
               'N02': chart_15003(), 'N03': chart_2038()}
     for r in F.sort_values(['priorita', 'jistota'], ascending=[True, False]).itertuples():
-        if r.typ.startswith('Chybějící balík') and r.id not in charts and str(r.OID).count('/') == 1:
+        if r.id.startswith('M') and str(r.OID).count('/') == 1 and pd.notna(getattr(r, 'strana_m', None)) and r.priorita <= 2:  # graf jen u silných a významných nálezů (velikost stránky)
+            charts[r.id] = cand_vector_chart(int(r.ZK), int(r.strana_m), r.OID, f'{r.MC}, okrsek {r.OID.split("/")[1]} – {r.subjekt}: hlasy kandidátů', 'Okrsek proti mediánu sousedních okrsků')
+        elif r.typ.startswith('Chybějící balík') and r.id not in charts and str(r.OID).count('/') == 1:
             zk = int(r.ZK); p = int(ros26[(ros26.ZK == zk) & (ros26.ZKRATKAO30 == r.subjekt)].POR_STR_HL.iloc[0])
             charts[r.id] = cand_vector_chart(zk, p, r.OID, f'{r.MC}, okrsek {r.OID.split("/")[1]} – {r.subjekt}: hlasy kandidátů',
                                              'Celá kandidátka je posunutá dolů o stejný počet hlasů – chybí lístky s křížkem u strany')
@@ -343,6 +356,7 @@ def page_findings():
                  f'<dt>Subjekt</dt><dd>{E(r.subjekt)}</dd><dt>Zjištění</dt><dd>{E(r.zjisteni)}</dd><dt>Důkaz</dt><dd>{E(r.dukaz)}</dd>'
                  f'<dt>Jistota chyby</dt><dd>{E(r.jistota_text)}</dd><dt>Indikace úmyslu</dt><dd>{E(r.umysl)}</dd><dt>Dopad</dt><dd>{E(r.dopad)}</dd>'
                  f'<dt>Doporučení</dt><dd>{E(r.doporuceni)}</dd>'
+                 + (f'<dt>Stav kontroly</dt><dd>{E(str(r.kontrola))}</dd>' if isinstance(getattr(r, 'kontrola', None), str) and r.kontrola else '')
                  + (f'<dt>Ověřit na volby.gov.cz</dt><dd>{finding_links(r)}</dd>' if finding_links(r) else '')
                  + f'</dl>{charts.get(r.id, "")}</article>')
         if r.id.startswith('N11'):
@@ -448,6 +462,14 @@ a 57 zastupitelstev MČ; registr pražských nálezů byl jednotlivě ověřen v
 <li><strong>Nulové hlasy</strong> strany při vysokém očekávání (vzor z případu NSS Blansko 2025), Poissonova pravděpodobnost s korekcí na overdisperzi.</li>
 <li><strong>Překlepy u kandidátů:</strong> hodnota se výrazně liší od sousedů na listině a jedna vložená/vypuštěná číslice ji vrací na jejich úroveň; <strong>propady</strong> uprostřed listiny jsou logicky nemožné, protože každý lístek s křížkem u strany přiděluje hlas všem kandidátům v pořadí do počtu mandátů (§ 40 odst. 2).</li>
 <li><strong>Prohozené strany</strong> (záměna hlasů dvou stran, která zlepší shodu s okolím o Δχ² &gt; 25; jen v obcích s alespoň 10 okrsky – v menších obcích tvoří okolí jiné místní části, kde mají místní kandidátky jiné voliče), duplicitní vektory hlasů, preferenční výkyvy kandidátů, neplatné hlasy, rozdíl obálek, změna účasti oproti 2022.</li></ul>
+<h3 id="pravidla-m">Doplňková pravidla (listopad 2026, nálezy řady M v Praze)</h3>
+<p>Po srovnání se soudními podáními a s jinou nezávislou analýzou jsme doplnili pravidla, která vycházejí z logiky lístku: křížek u strany dává hlas všem prvním kandidátům do počtu mandátů,
+takže mají aspoň tolik hlasů, kolik je takových lístků. Nálezy N01–N17 zůstaly beze změny; nové nálezy mají čísla M01 a dál.</p><ul class="l">
+<li><strong>Propad pod základ kandidátky</strong> – kandidát (i první nebo poslední) výrazně pod ostatními, nemusí jít o nulu.</li>
+<li><strong>Posunutý úsek kandidátky</strong> – souvislá část kandidátky (začátek, střed, konec; i „hlasy z lístků s křížkem u strany jen u kandidáta č. 1“) je níž než zbytek, a to proti sousedním okrskům i uvnitř kandidátky.</li>
+<li><strong>Rozptýlené nuly</strong> – nuly uprostřed kandidátky, jejíž ostatní kandidáti mají podobné nenulové hodnoty (případ Praha 12, okrsek 12025).</li>
+<li><strong>Chybějící balík bez podmínky na podíl strany</strong> – posun celé kandidátky proti okolí a stejně velký schodek hlasů celého okrsku; nízké využití hlasů už v roce 2022 jistotu snižuje.</li>
+<li><strong>Okrsky s nedostatkem hlasů bez určené strany</strong>, <strong>neobvykle mnoho neplatných lístků</strong> proti okolí a <strong>kritické hodnoty těsných výsledků</strong> – hodnoty, jejichž věrohodný překlep (záměna dvou číslic) by změnil mandát (případ Býkev).</li></ul>
 <h2>4. Globální testy</h2><p>Klimkův otisk (účast × podíl), celá procenta (Kobak et al.), test poslední číslice (Beber & Scacco) včetně korekce na strukturu komunálních voleb, 2BL (Mebane), rozdělení účasti. Vše srovnáno s lety 2018 a 2022.</p>
 <h2>5. Materialita</h2><p>Každá detekovaná chyba byla „opravena“ na nejpravděpodobnější hodnotu (konzervativní i horní varianta) a pro dotčené zastupitelstvo byl znovu spočítán počet mandátů stran i pořadí zvolených kandidátů; vyhodnocena je změna oproti oficiálnímu výsledku. Navíc je pro každé zastupitelstvo spočítána nejmenší změna hlasů, která by mandáty změnila.</p>
 <h2>6. Škála jistoty a úmyslu</h2><p><strong>Jistota chyby</strong> vyjadřuje pravděpodobnost, že zveřejněný údaj neodpovídá skutečně odevzdaným hlasům. Je odvozena z počtu nezávislých linií důkazů, extrémnosti (z-skóre, p-hodnoty po korekci na overdisperzi) a z logických omezení volebního systému.

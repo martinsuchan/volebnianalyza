@@ -152,6 +152,14 @@ def build():
                'Společná simulace mění výsledek v: ' + ', '.join(zmena) + '.'),
         dopad_kat='Bez vlivu' if not zmena else 'Mění zvolené',
         doporuceni='Detektor byl doplněn po kontrole krajských měst; jednotlivé řádky zatím nebyly ručně ověřeny. Zavést v programu ČSÚ kontrolu nul za blokem kandidátů.')
+    # ---- řada M: doplňková pravidla (listopad 2026); nálezy N výše zůstávají beze změny
+    from findings_m import build_m
+    T = pd.read_pickle(f'{RES}/typos_{Y}.pkl'); S = pd.read_pickle(f'{RES}/stacks_{Y}.pkl'); S = S[S.tri != 'slaby']
+    kryto = (set(zip(T.OID, T.ZK.astype(int), T.strana.astype(int))) | {(r.OID, int(r.ZK), int(r.strana)) for r in S.itertuples()}
+             | set(zip(RW.OID, RW.ZK.astype(int), RW.strana.astype(int))) | {('500089/2038', MAGISTRAT * 100 + 1, p) for p in range(19, 25)})
+    kryto_okrsky = ({('547387/15003', 54738701), ('500089/2038', MAGISTRAT * 100 + 1)} | {(r.OID, int(r.ZK)) for r in S.itertuples()}
+                    | set(zip(RW.OID, RW.ZK.astype(int))))
+    F += build_m(d, zname, mcmap, outcome, kryto, kryto_okrsky)
     Fd = pd.DataFrame(F)
     Fd['jistota_text'] = Fd.jistota.map(JISTOTA)
     return Fd
