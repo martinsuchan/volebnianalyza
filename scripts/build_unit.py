@@ -136,8 +136,11 @@ def cand_vector_chart(zk, p, oid, title, sub):
     X = g[[HCOLS[i - 1] for i in valid]].astype(float); X.columns = valid
     n = t[t.ZK == zk].set_index('OID').PLAT_LISTKY
     nbs = [o for o in nb.get(oid, []) if o in X.index]
-    if not nbs:
-        return ''
+    if not nbs:  # obec s jediným okrskem: jen tvar kandidátky bez srovnání se sousedy
+        ser = [('Okrsek ' + oid.split('/')[1], X.loc[oid].tolist())]
+        ch = svg.lines(valid, ser, ['--critical'], xlabel='Pořadí kandidáta', ylabel='Hlasy')
+        tb = svg.table(['Pořadí', 'Hlasy'], [[c, int(X.loc[oid, c])] for c in valid])
+        return fig(title, sub.split(' proti ')[0] + ' (obec nemá jiný okrsek ke srovnání)' if ' proti ' in sub else sub, ch, svg.legend([(ser[0][0], '--critical', 'line')]), tb)
     scaled = X.loc[nbs].div(n[nbs], axis=0).median() * n[oid]
     ser = [('Okrsek ' + oid.split('/')[1], X.loc[oid].tolist()), ('Medián sousedních okrsků (přepočteno na velikost okrsku)', scaled.round(1).tolist())]
     ch = svg.lines(valid, ser, ['--critical', '--series-1'], xlabel='Pořadí kandidáta', ylabel='Hlasy')
@@ -166,6 +169,39 @@ def vpb_council_chart(zk, oid):
     ch = svg.columns(cats, (100 * s.vpb).round(1).tolist(), highlight={i for i, o in enumerate(s.OID) if o == oid}, ylabel='% využitých hlasů',
                      tips=[f'Okrsek {c}: {v:.1f} % hlasů na platný lístek' for c, v in zip(cats, 100 * s.vpb)], xlab_every=max(1, len(cats) // 20))
     return fig(f'{zlabel(zk)}: využití hlasů na lístek v okrscích', 'Podíl zapsaných hlasů z maxima (platné lístky × počet mandátů); červeně okrsek z nálezu', ch)
+
+
+_T22 = []
+pc1 = lambda v: f'{v:.1f}'.replace('.', ',').replace(',0', '') if v is not None else ''
+
+
+def vpb_years_chart(zk, oid):
+    """Využití hlasů okrsků zastupitelstva v letech 2022 a 2026 – důkaz u nálezů okrsku jako celku (P5/P5b)."""
+    import pravidla as PR
+    if not _T22:
+        try:
+            _T22.append(load(2022)['t3'])
+        except Exception:
+            _T22.append(None)
+    a = PR.vpb_okrsku(t3[t3.ZK == zk]) if len(t3) else None
+    if a is None or len(a) < 1 or (oid, zk) not in a.index:
+        return ''
+    if len(a) > 30:  # velká města: srovnání se sousedy v jednom roce
+        return vpb_council_chart(zk, oid)
+    b = PR.vpb_okrsku(_T22[0][_T22[0].ZK == zk]) if _T22[0] is not None and len(_T22[0]) else None
+    oids = sorted(a.index.get_level_values(0), key=lambda o: int(o.split('/')[1]) if o.split('/')[1].isdigit() else o)
+    cats = [f'Okrsek {o.split("/")[1]}' + (' (nález)' if o == oid else '') for o in oids]
+    v26 = [round(100 * float(a.loc[(o, zk), 'v']), 1) for o in oids]
+    v22 = [round(100 * float(b.loc[(o, zk), 'v']), 1) if b is not None and (o, zk) in b.index else None for o in oids]
+    lis = [int(a.loc[(o, zk), 'lis']) for o in oids]
+    ser = ([('2022', v22)] if any(v is not None for v in v22) else []) + [('2026', v26)]
+    ch = svg.hbars(cats, ser, ['--series-2', '--series-1'][-len(ser):], label_w=170, unit=' %', value_fmt=pc1, ticks=[0, 25, 50, 75, 100])
+    tb = svg.table(['Okrsek', 'Lístků 2026', 'Využití 2022 (%)', 'Využití 2026 (%)'],
+                   [[c, l, '–' if x is None else pc1(x), pc1(y)] for c, l, x, y in zip(cats, lis, v22, v26)])
+    return fig(f'{zlabel(zk)}: využití hlasů na lístek v okrscích, 2022 a 2026',
+               'Zapsané hlasy jako podíl z maxima (lístky × počet mandátů). Nalezený okrsek je označen; ostatní okrsky volily ze stejných kandidátek.',
+               ch, svg.legend([(n, c, 'rect') for (n, _), c in zip(ser, ['--series-2', '--series-1'][-len(ser):])]), tb,
+               'V roce 2022 chybí v datech počet platných lístků, místo něj je použit počet odevzdaných obálek (využití je proto o něco nižší).')
 
 
 def chart_vpb():
@@ -377,9 +413,11 @@ def page_findings():
             ch = vpb_council_chart(int(parts[2]), parts[1])
         elif parts[0] == 'typo':
             ch = cand_vector_chart(int(parts[2]), int(parts[3]), parts[1], f'{zlabel(parts[2])}, okrsek {parts[1].split("/")[1]}: hlasy kandidátů strany', 'Hodnota kandidáta z nálezu proti sousedům na listině')
-        elif parts[0] == 'm' and len(parts) == 3 and getattr(r, 'strana_m', None) == getattr(r, 'strana_m', None) and getattr(r, 'strana_m', None) is not None and int(r.priorita) <= 2:
+        elif parts[0] == 'm' and len(parts) == 3 and getattr(r, 'strana_m', None) == getattr(r, 'strana_m', None) and getattr(r, 'strana_m', None) is not None:
             ch = cand_vector_chart(int(parts[2]), int(r.strana_m), parts[1], f'{zlabel(parts[2])}, okrsek {parts[1].split("/")[1]} – {r.subjekt}: hlasy kandidátů',
                                    'Hlasy kandidátů strany v okrsku proti mediánu sousedních okrsků (doplňková pravidla)')
+        elif parts[0] == 'm' and len(parts) == 3:
+            ch = vpb_years_chart(int(parts[2]), parts[1])
         stav = ('<span class="st st-done">zkontrolováno</span> ' + E(str(r.kontrola))) if r.stav_kontroly == 'zkontrolováno' else '<span class="st st-plan">automaticky, zatím neověřeno</span>'
         links = finding_links(r)
         body += (f'<article class="card find p{int(r.priorita)}" id="{r.id}"><h3>{r.id} · {E(r.typ)}</h3><p class="sub">{E(r.zastupitelstvo)} · {E(str(r.MC))[:200]}'

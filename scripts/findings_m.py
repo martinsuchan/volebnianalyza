@@ -202,8 +202,8 @@ def build_m(d, zname, mcmap, outcome, kryto, kryto_okrsky, mag='magistrát', jed
             if (r.OID, int(r.ZK)) in kryto_okrsky:
                 continue
             zk, oid = int(r.ZK), r.OID
-            txt = (f'okrsek má na lístku jen {pc(r.vpb)} možných hlasů (v roce 2022 {pc(r.vpb22)}), ostatní okrsky obce se změnily o '
-                   f'{100 * r.kontrola:+.1f}'.replace('.', ',') + ' p. b.' + f'; chybí ~{n0(r.chybi_hlasu)} hlasů, tj. hlasy ~{n0(r.chybi_listku)} lístků')
+            txt = (f'okrsek má na lístku jen {pc(r.vpb)} možných hlasů (v roce 2022 {pc(r.vpb22)}), kontrolní okrsky obce se změnily o '
+                   f'{100 * r.kontrola:+.1f}'.replace('.', ',') + ' p. b. (medián okrsků s aspoň 50 lístky a podobnou velikostí jako v roce 2022)' + f'; chybí ~{n0(r.chybi_hlasu)} hlasů, tj. hlasy ~{n0(r.chybi_listku)} lístků')
             hit = [f for f in F if f['klic'] == f'm:{oid}:{zk}']
             if hit and 'v roce 2022' in hit[0]['zjisteni']:
                 continue
