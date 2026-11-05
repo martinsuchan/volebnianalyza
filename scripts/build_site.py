@@ -465,7 +465,7 @@ a 57 zastupitelstev MČ; registr pražských nálezů byl jednotlivě ověřen v
 <h3 id="pravidla-m">Doplňková pravidla (listopad 2026, nálezy řady M)</h3>
 <p>Po srovnání se soudními podáními a s jinou nezávislou analýzou jsme doplnili pravidla, která vycházejí z logiky lístku: křížek u strany dává hlas všem prvním kandidátům do počtu mandátů,
 takže mají aspoň tolik hlasů, kolik je takových lístků. Pravidla jsme použili v Praze, krajských městech a obcích s rozšířenou působností; každý nález jsme jednotlivě ověřili v datech.
-Dosavadní nálezy N zůstaly beze změny; nové nálezy mají v každé obci čísla M01 a dál a čísla vyřazených nálezů se znovu nepoužijí.</p><ul class="l">
+Dosavadní nálezy N zůstaly beze změny; nové nálezy mají v každé obci čísla M01 a dál a čísla vyřazených nálezů se znovu nepoužijí. Přehled s příklady a nejvážnějšími nálezy je na stránce <a href="pravidla.html">Nová pravidla (nálezy M)</a>.</p><ul class="l">
 <li><strong>Propad pod základ kandidátky</strong> – kandidát (i první nebo poslední) výrazně pod ostatními, nemusí jít o nulu.</li>
 <li><strong>Posunutý úsek kandidátky</strong> – souvislá část kandidátky (začátek, střed, konec; i „hlasy z lístků s křížkem u strany jen u kandidáta č. 1“) je níž než zbytek, a to proti sousedním okrskům i uvnitř kandidátky.</li>
 <li><strong>Rozptýlené nuly</strong> – nuly uprostřed kandidátky, jejíž ostatní kandidáti mají podobné nenulové hodnoty (případ Praha 12, okrsek 12025).</li>
@@ -824,6 +824,8 @@ Přehledy okresů a obcí s počty nálezů a rozhodujícími rezervami.</p></a>
 <a class="hub" href="senat/index.html"><h3>Senát 2026, 1. kolo →</h3><p>5 021 okrsků ve 27 obvodech, srovnání s komunálními volbami okrsek po okrsku.
 Proč bylo senátních obálek o 13 % méně a kde rozhodly jednotky hlasů.</p></a>
 <a class="hub" href="nalezy.html"><h3>Všechny nálezy →</h3><p>Společný registr {len(AF)} nálezů s filtrem podle voleb, území, jistoty a dopadu.</p></a>
+<a class="hub" href="pravidla.html"><h3>Nová pravidla (nálezy M) →</h3><p>Listopad 2026: kontroly vycházející z logiky hlasovacího lístku, podnícené soudními návrhy.
+Co hledají a které nálezy jsou nejvážnější (Brno-Bystrc, Havířov).</p></a>
 </div>
 <h2>Nálezy, které mění nebo mohou změnit výsledek, a těsné výsledky</h2>
 <p class="sub">Těsné výsledky v obcích s rozšířenou působností, s pověřeným obecním úřadem a v ostatních obcích jsou v <a href="nalezy.html">registru všech nálezů</a> (filtr Dopad)
@@ -835,6 +837,114 @@ a v <a href="kv/index.html#okresy">přehledech okresů</a>.</p>
 <li>Postupy, omezení a literaturu popisuje <a href="metodika.html">Metodika</a>; mezivýsledky jsou v sekci <a href="data.html">Data</a>, výpočet lze zopakovat skripty v repozitáři.</li>
 <li>Analýza vznikla s pomocí AI modelu Claude Opus 5.5 a může obsahovat chyby. Statistický nález není důkazem úmyslu; závazné jsou jen výsledky vyhlášené Státní volební komisí.</li></ul>'''
     _page('index.html', 'Přehled', body, 'Forenzní audit komunálních a senátních voleb 2026 z otevřených dat ČSÚ', section='home')
+
+
+def page_pravidla(AF):
+    """Stránka o doplňkových pravidlech (listopad 2026) a nálezech řady M s odkazy na nejvážnější z nich."""
+    import glob, re
+    jeM = lambda d: d['volby'] == 'kv' and re.search(r' M\d+$', d['gid'])
+    AM = [d for d in AF if jeM(d)]
+    # počty a vyřazené nálezy z kontrolních souborů review/<obec>_m.json
+    vyr, rvs = 0, 0
+    for p in glob.glob(os.path.join(ROOT, 'review', '*_m.json')):
+        rv = json.load(open(p, encoding='utf-8')); rvs += 1
+        vyr += sum(1 for v in rv.values() if v.get('vyradit'))
+    n_uz = len({d['uzemi'] for d in AM})
+    base = lambda t: t.replace(' (více stran)', '')
+    typy = pd.Series([base(d['typ']) for d in AM]).value_counts()
+    jis = pd.Series([d['jistota'] for d in AM]).value_counts()
+    vliv = [d for d in AM if DOPAD_RANK.get(d['dopad'], 1) >= 3]
+    jiste = [d for d in AM if d['jistota'] >= 4 and DOPAD_RANK.get(d['dopad'], 1) < 3]
+    slug_of = {u['nazev']: u['slug'] for u in UL}
+    ref = lambda uz, i, txt=None: (f'<a href="{PD if uz == "Praha" else "kv/" + slug_of[uz] + "/"}nalezy.html#{i}">'
+                                   f'{E(txt or (uz + " " + i))}</a>')
+
+    def ukazka(i, title, sub):
+        r = F[F.id == i]
+        if not len(r) or r.strana_m.isna().iloc[0]:
+            return ''
+        r = r.iloc[0]
+        return cand_vector_chart(int(r.ZK), int(r.strana_m), r.OID, title, sub)
+
+    rules = [
+        ('Propad kandidáta pod základ kandidátky', 'Každý lístek s křížkem u strany dává hlas všem prvním kandidátům do počtu mandátů, takže žádný z nich nemůže mít méně hlasů, '
+         'než kolik je takových lístků. Pravidlo hledá kandidáta (i prvního nebo posledního), který je výrazně pod ostatními – nemusí jít o nulu, typicky vypadlá nebo jiná číslice.',
+         [('Říčany', 'M01', 'Říčany, č. 15: 130 místo ~230'), ('Jihlava', 'M02', 'Jihlava, STAN č. 37: 2 hlasy'), ('Praha', 'M44', 'Přední Kopanina: 59 místo ~159')]),
+        ('Posunutý úsek kandidátky', 'Souvislá část kandidátky (začátek, střed i konec) má méně hlasů než zbytek, a to proti sousedním okrskům i uvnitř kandidátky v okrsku. '
+         'Patří sem nedopsané konce řádků, vynechané řádky uprostřed i případ, kdy komise připsala hlasy z lístků s křížkem u strany jen kandidátovi č. 1.',
+         [('Brno', 'M01', 'Brno-Bystrc: hlasy strany jen u lídra'), ('Havířov', 'M01', 'Havířov: č. 21–24 téměř bez hlasů'), ('Praha', 'M07', 'Praha 11: SPOLU č. 34–39 s nulou'),
+          ('Praha', 'M10', 'Praha 8: ODS č. 1–4 pod ostatními')]),
+        ('Rozptýlené nuly v kandidátce', 'Nuly uprostřed kandidátky, jejíž ostatní kandidáti mají podobné nenulové hodnoty. Na dlouhé kandidátce nemohou vzniknout z žádné kombinace '
+         'lístků; nejčastěji se objevují u menších stran na lístku města. Podnětem byl soudní návrh k okrsku 12025 v Praze 12 (TOP 09: nula u 27 z 35 kandidátů).',
+         [('Praha', 'M66', 'Praha 12, okrsek 12025'), ('Ostrava', 'M01', 'Ostrava-Poruba: 37 nul z 55')]),
+        ('Chybějící balík lístků bez podmínky na podíl strany', 'Celá kandidátka je proti okolí posunutá dolů o stejný počet hlasů a okrsku zároveň chybí podobně velký počet hlasů. '
+         'Dosavadní detektor vyžadoval i výrazně nižší podíl strany, takže menší balíky nezachytil. Nízké využití hlasů už v roce 2022 a slabší výsledek strany '
+         'v témže okrsku v minulých volbách jistotu snižují.',
+         [('Praha', 'M33', 'Praha 7: SPOLU na lístku MČ'), ('Praha', 'M35', 'Praha 7: SPOLU na lístku magistrátu'), ('Ostrava', 'M02', 'Ostrava-Jih: srdcOVA'),
+          ('Uherské Hradiště', 'M01', 'Uherské Hradiště, okrsek 13')]),
+        ('Okrsek s nezapsanými hlasy bez určené strany', 'Okrsku chybí hlasy proti sousedním okrskům (využití hlasů z ≤ −5), ale žádná kandidátka nemá jasný vzor. '
+         'Dopad se počítá rozdělením chybějících hlasů podle podílů stran v okolí.', [('Praha', 'M91', 'Praha 4, okrsek 4011')]),
+        ('Neobvykle mnoho neplatných lístků', 'Podíl neplatných lístků aspoň trojnásobný proti okolí. V malých obcích a městských částech je to často běžné (voliči označí víc kandidátů, '
+         'než je mandátů), samo o sobě to chybu nedokazuje.', [('Praha', 'M119', 'Praha – souhrn')]),
+        ('Kritické hodnoty těsných výsledků', 'U zastupitelstev s rezervou 10–50 hlasů pravidlo vypíše okrskové hodnoty, jejichž věrohodný překlep (záměna dvou číslic, jiná číslice) '
+         'by změnil mandát nebo zvoleného kandidáta. Nejde o zjištěnou chybu, ale o vodítko pro kontrolu zápisů – podnětem byl případ Býkev, kde soud kvůli záměně 114 a 141 '
+         'zrušil volbu kandidáta.', [('Praha', 'M62', 'Praha – souhrn')]),
+    ]
+    body = ('<h1>Nová pravidla pro hledání chyb (nálezy M)</h1>'
+            '<p class="lead">V listopadu 2026 jsme analýzu doplnili o pravidla, která vycházejí přímo z logiky hlasovacího lístku. Podnětem byly soudní návrhy a srovnání '
+            's jinou nezávislou analýzou, které ukázaly chyby, jež dosavadní detektory nezachytily. Nové nálezy mají v každé obci čísla M01 a dál; dosavadní nálezy N '
+            'zůstaly beze změny, takže odkazy na ně platí.</p>')
+    body += ('<div class="tiles">'
+             f'<div class="tile"><div class="l">Nálezů M</div><div class="v">{len(AM)}</div><div class="s">v {n_uz} obcích (Praha, krajská města, ORP)</div></div>'
+             f'<div class="tile"><div class="l">S vlivem na výsledek</div><div class="v">{len(vliv)}</div><div class="s">mění nebo mohou změnit mandáty či zvolené</div></div>'
+             f'<div class="tile"><div class="l">Jistota velmi vysoká</div><div class="v">{int(jis.get(4, 0))}</div><div class="s">vzor, který lístky vytvořit nemohou</div></div>'
+             f'<div class="tile"><div class="l">Vyřazeno po kontrole</div><div class="v">{vyr}</div><div class="s">čísla se znovu nepoužijí</div></div></div>')
+    body += '<h2>Nálezy s vlivem na výsledek</h2>'
+    if vliv:
+        body += (f'<div class="card tw"><table class="sortable">{FIND_HEAD}<tbody>{findings_rows(vliv, "pravidla.html")}</tbody></table></div>'
+                 '<p class="sub">„Může změnit“ znamená, že výsledek se změní jen při určitém rozsahu nebo přiřazení chybějících hlasů – podrobnosti a protiargumenty jsou u nálezu.</p>')
+    body += '<h2>Princip: co lístek s křížkem u strany dovoluje</h2>'
+    body += ('<p>Volič, který označí stranu, dá hlas všem jejím prvním kandidátům do počtu volených členů zastupitelstva. Pokud zároveň označí kandidáty jiných stran, '
+             'dostane z označené strany hlas jen tolik kandidátů v pořadí, kolik zbývá do počtu mandátů. Z toho plynou dvě pravidla, o která se nové kontroly opírají:</p><ul class="l">'
+             '<li>Hodnoty kandidátů jedné strany v okrsku mají společný <strong>základ</strong> – počet lístků s křížkem u strany. Kandidát nemůže mít méně, osobní hlasy jen přidávají.</li>'
+             '<li>Lístky s křížkem u strany a zároveň u kandidátů jiných stran snižují hlasy <strong>jen ke konci kandidátky a plynule</strong>. Nula uprostřed, skok mezi dvěma '
+             'sousedními kandidáty nebo první kandidáti pod ostatními tak vzniknout nemohou.</li></ul>'
+             '<p>Každý okrsek srovnáváme s mediánem 8 nejbližších okrsků téhož zastupitelstva, přepočteným na jeho počet platných lístků.</p>')
+    body += '<h2>Pravidla</h2>'
+    for nadpis, popis, prik in rules:
+        n = int(typy.get({'Propad kandidáta pod základ kandidátky': 'Propad hlasů kandidáta pod počet lístků s křížkem u strany',
+                          'Posunutý úsek kandidátky': 'Posunutý úsek kandidátky (nedopsané hlasy části kandidátů)',
+                          'Chybějící balík lístků bez podmínky na podíl strany': 'Chybějící balík hlasovacích lístků',
+                          'Okrsek s nezapsanými hlasy bez určené strany': 'Nezapsané hlasy části lístků',
+                          'Neobvykle mnoho neplatných lístků': 'Neobvykle mnoho neplatných lístků (souhrn)',
+                          'Kritické hodnoty těsných výsledků': 'Kritické hodnoty těsných výsledků (k ověření v zápisech)'}.get(nadpis, nadpis), 0))
+        body += (f'<div class="card"><h3>{E(nadpis)}</h3><p>{E(popis)}</p><p class="sub">Nálezů (podle hlavního vzoru): {n} · příklady: '
+                 + ', '.join(ref(u, i, t) for u, i, t in prik if u == 'Praha' or u in slug_of) + '</p></div>')
+    body += ukazka('M07', 'Praha 11, okrsek 11059 – SPOLU pro Prahu: hlasy kandidátů', 'Kandidáti č. 34–39 mají nulu, kandidáti před nimi i za nimi jsou na úrovni lístků s křížkem u strany')
+    body += ukazka('M66', 'Praha 12, okrsek 12025 – TOP 09: hlasy kandidátů', 'Nuly rozeseté po celé kandidátce – případ ze soudního návrhu, který dosavadní detektory nezachytily')
+    body += ukazka('M35', 'Praha 7, okrsek 7012 – SPOLU pro Prahu: hlasy kandidátů', 'Celá kandidátka je posunutá dolů o ~27 hlasů a okrsku chybí hlasy ~48 lístků')
+    body += ('<h2>Jak jsme nálezy ověřovali</h2><ul class="l">'
+             f'<li>Každý z {len(AM) + vyr} nálezů jsme jednotlivě ověřili v datech (kontrola s pomocí AI): hodnoty kandidátů proti okolí, využití hlasů v roce 2022, '
+             f'výsledek strany v minulých volbách a druhý lístek ve stejném okrsku. Výsledek je u každého nálezu v poli „Stav kontroly“; {vyr} nálezů jsme vyřadili.</li>'
+             '<li><strong>Místní zvyklost</strong>: má-li okrsek stejně nízké využití hlasů i v roce 2022, schodek chybu nepotvrzuje (většina vyřazených nálezů).</li>'
+             '<li><strong>Krátké kandidátky a malé strany</strong>: u kandidátek pod 20 kandidátů a u stran s několika hlasy může vzor odpovídat i několika voličům, kteří označili '
+             'stejné kandidáty jednotlivě – jistota je nižší.</li>'
+             '<li><strong>Doporučení voličům</strong>: shodně vyšší hodnoty u vybraných kandidátů ve více okrscích (např. Brno-Bohunice) odpovídají kampani „koho označit“, ne chybě.</li>'
+             '<li><strong>Dopad</strong> počítáme simulací opravy a nového přepočtu mandátů; doplnit lze nejvýš tolik hlasů, kolik okrsku chybí.</li></ul>')
+    body += ('<h2>Opakující se místo chyby: kandidát č. 34</h2><p>Nedopsaný úsek kandidátky začíná u kandidáta č. 34 v mnoha okrscích různých měst (Praha, Brno, Pardubice, Zlín, '
+             'Karviná). Chyba se zřejmě opakuje na stejném místě tiskopisu nebo vstupní aplikace, možná při přechodu na další stranu. Ověřit to lze jen v zápisech; '
+             'pro kontrolu do budoucna by stačilo porovnat součet hlasů kandidátů s počtem platných lístků × mandátů.</p>')
+    if jiste:
+        body += (f'<h2>Další nálezy s velmi vysokou jistotou ({len(jiste)})</h2><p class="sub">Chyby, které podle simulace nemění výsledek. Řazení podle jistoty; kliknutím na ID '
+                 'otevřete detail s grafem hlasů kandidátů a odkazy na volby.gov.cz.</p>'
+                 f'<div class="card tw"><table class="sortable">{FIND_HEAD}<tbody>{findings_rows(jiste, "pravidla.html")}</tbody></table></div>')
+    body += ('<h2>Rozsah a omezení</h2><ul class="l">'
+             '<li>Pravidla jsme zatím použili v Praze, krajských městech a obcích s rozšířenou působností; obce s pověřeným obecním úřadem a malé obce je zatím nemají.</li>'
+             '<li>Srovnání s okolím potřebuje aspoň 4 okrsky; v obcích s jedním okrskem zbývá jen kontrola uvnitř kandidátky.</li>'
+             '<li>Statistický nález není důkazem úmyslu a nenahrazuje kontrolu zápisu nebo přepočet lístků. Závazné jsou jen výsledky vyhlášené volebními orgány.</li>'
+             '<li>Podrobný popis pravidel je v <a href="metodika.html#pravidla-m">Metodice</a>, kód v souborech <code>scripts/pravidla.py</code> a <code>scripts/findings_m.py</code>.</li></ul>')
+    _page('pravidla.html', 'Nová pravidla (nálezy M)', body, 'Doplňková pravidla pro hledání chyb v zápisech okrskových komisí (listopad 2026) a nejvážnější nálezy řady M',
+          section='nalezy', crumbs=[('Přehled', 'index.html'), ('Nová pravidla (nálezy M)', None)])
 
 
 def search_entries(AF, se_obvody):
@@ -867,7 +977,7 @@ import build_senat2
 se_files += build_senat2.build(_page, fig, badge_j, badge_d, AUTHOR_URL)
 AF = all_findings(build_senat.findings() + build_senat2.findings())
 page_index(); page_findings(); page_map(); page_tests(); page_method(); page_data(se_files)
-page_kv_index(); page_okresy(); page_all_findings(AF); page_home(AF)
+page_kv_index(); page_okresy(); page_all_findings(AF); page_pravidla(AF); page_home(AF)
 write_assets(search_entries(AF, [(int(o), n) for o, n in build_senat.obvn.items() if o in set(build_senat.t5.OBVOD)]))
 for old in ('mapa.html', 'testy.html', 'senat.html'):  # stránky z původní (jen pražské) struktury
     if os.path.exists(os.path.join(OUT, old)):
