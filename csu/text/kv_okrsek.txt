@@ -1,0 +1,427 @@
+ČESKÝ STATISTICKÝ ÚŘAD                                                                               Volby 2026
+                                                                                           Praha, 8. října 2026
+
+Postup pořízení a zpracování výsledků voleb do zastupitelstev obcí okrskovou volební komisí na počítači
+
+Stažení programu z internetu:
+- V aplikaci si vyhledáte svou obec podle jejího názvu nebo kódu nebo dle územní příslušnosti.
+- Soubor KVokrsek.exe uložte do adresáře na disk nebo technický nosič; tímto máte připravenu instalaci.
+
+Instalace programu – instalace musí být prováděna pod uživatelem Windows, pod kterým bude program
+spouštěn:
+- Upozorňujeme, že program je určen pouze pro operační systémy Windows 10 a 11 a nainstalovaným
+
+   Microsoft Edge WebView2 v min. verze 120 (standardní součást prohlížeče MS Edge ve Windows 10 i 11).
+- Spusťte KVokrsek.exe z technického nosiče nebo adresáře, kam jste si instalaci nakopírovali.
+- Dále komunikujte s instalačním programem:
+
+   ● při první instalaci jakéhokoli programu pro zpracování výsledků voleb, resp. po odinstalování všech dříve
+   instalovaných volebních programů, lze vybrat adresář pro instalaci všech volebních programů (pomocí tlačítka
+   Procházet v okně "Výběr adresáře");
+   ● v okně "Číslo obce a okrsku" zadejte číslo obce a okrsku (obdrželi jste na školení okrskových volebních
+   komisí od zaměstnanců ČSÚ), údaje vždy potvrďte klávesou Enter; pokračujte stisknutím tlačítka Instalovat;
+   ● instalační program vytvoří na ploše ikonu "Obce-Pořízení číslo_okrsku " (pro spuštění programu) a
+   "Odinstalovat Volby 2026" (pro odinstalování programu), současně vytvoří v nabídce Start podnabídku
+   Volby2026 se zástupci "Obce-Pořízení číslo_okrsku " a "Odinstalovat Volby 2026".
+- Zkontrolujte, zda je v pořádku datum a čas, datum a čas je součástí tisknutých zápisů a příloh.
+- Volbou Nápověda – Zkušební tisk si můžete ověřit správnost tisku před zpracováním výsledků.
+
+Spuštění programu:
+
+- Pokud jste použili standardní postup instalace, najdete zástupce pro spuštění programů na ploše.
+
+- Program spustíte dvojím kliknutím na ikonu "Obce-Pořízení číslo_okrsku ".
+
+- Úvodní obrazovka má dvě menu (Okrsek a Nápověda); ve spodní části je zobrazena identifikace okrsku.
+
+V menu Okrsek můžete data pořídit a kontrolovat, data exportovat na technický nosič pro přebírací místo ČSÚ
+
+a vytisknout zápis okrskové volební komise, vč. hlasovacího lístku a vytisknout pomocný sčítací arch pro
+
+počítání platných hlasů pro jednotlivé kandidáty.
+
+- V nabídce Pořízení a oprava dat zapisujete dle záložek:
+
+- T/3 - odd. I               vyplnění údajů o průběhu hlasování (tiskopis T/3 - část I.),
+
+- T/3 - odd. II              pořízení údajů oddílu II. tiskopisu T/3 (první strana),
+
+- T/3 - odd. II pokračování  pořízení údajů oddílu II. tiskopisu T/3 (druhá strana) - údaje o počtech hlasů
+
+                             pro strany (vyplní se automaticky dle pořízených údajů z hlasovacího lístku),
+
+- HL                         pořízení hlasů pro jednotlivé kandidáty,
+
+- T/3 - odd. III             vyplnění údajů k podepsání a předání zápisu (tiskopis T/3 část III.).
+
+- Pokud se na okrsku zpracovávají dva typy voleb (volby za dva typy zastupitelstev, tj. pro město a městskou
+
+část/obvod), pořizují se data (resp. kontrolují, exportují a tisknou zápisy, pomocné sčítací archy) za každý typ
+
+samostatně (výběr z podmenu), pouze údaje na záložce T/3 - odd. I a T/3 - odd. III jsou shodné – je aktivní
+
+možnost výběru za typ zastupitelstva.
+
+- Všechna kontrolní čísla a čísla posledního kandidáta, který získal platné hlasy, se vypočítávají automaticky;
+
+tyto funkce však zaručují pouze formální výpočet, věcnou správnost zjištěných a zadaných údajů musí členové
+
+komise zkontrolovat sami (např. přehození hlasů pro kandidáty, špatně zadaný počet obálek aj.).
+
+- Po formuláři se pohybujete klávesou Enter (vždy na následující údaj), nebo klávesou TAB ve směru dopředu,
+
+kombinací kláves SHIFT+TAB ve směru dozadu nebo šipkami, dále kurzorem myši a stisknutím levého tlačítka
+
+na pozici údaje, který chcete editovat. Mezi záložkami se pohybujete umístěním kurzoru myši na název záložky
+
+a následným stisknutím levého tlačítka myši, nebo pomocí kláves PageUp a PageDown.
+
+Pořízení a oprava dat:
+- Před zahájením zpracování zápisu OVK T/3 a jeho přílohy je nutné, aby okrsková volební komise ověřila, zda
+
+   má k dispozici poslední stav přehledu odvolaných kandidátů, tj. stav k zahájení hlasování, odvolaným
+   kandidátům nesmí být pořízeny hlasy.
+- Každý zapsaný údaj potvrďte klávesou Enter.
+- Nejdříve vyplňte na záložce T/3 - odd. I základní údaje o průběhu hlasování jako např. hodina zahájení
+   hlasování, případné důvody odročení atd., nehodící se texty (označené *) ) program automaticky přeškrtne
+   podle vámi vyplněných údajů na této záložce; každý zapsaný údaj potvrďte klávesou Enter.
+- Na záložce T/3 - odd. II vyplňte údaje pro zápis T/3 odd. II týkající se počtu osob zapsaných do výpisu ze
+   seznamu voličů a jeho dodatku, počtu vydaných úředních obálek, počtu odevzdaných úředních obálek, počtu
+   hlasovacích lístků, které jsou platným hlasem voliče a celkového počtu platných hlasů ve volebním okrsku.
+- Platné hlasy pro jednotlivé kandidáty, a to vždy pro stranu, jejíž název je zobrazen v horní části obrazovky,
+   pořizujete na záložce HL; hlasy zapisujte postupně dle pořadí na hlasovacím lístku. Věnujte pozornost výběru
+   strany a jménu (pořadí) kandidáta, předejdete tak nesprávnému zadání hlasů jiným kandidátům. Výběr strany
+   můžete provést po stisknutí tlačítka  vpravo od názvu strany a vlastním výběrem strany z rozvinuté nabídky.
+- Při pořizování jsou data interaktivně kontrolována a uživatel je o případných nesrovnalostech informován
+   prostřednictvím chybových hlášení (po stisku Ignorovat nebo Pokračovat je možno pořizovat údaje dále bez
+   opravy, chyba v datech však zůstává).
+
+- Na záložce T/3 - odd. III zadejte údaje z části III tiskopisu T/3, je kontrolována vyplněnost všech položek (vč.
+   položek pro jména členů komise) kromě údaje o dále přítomných osobách.
+
+- Ukončení pořízení zápisu můžete provést stiskem klávesy F2, příp. stisknutím tlačítka Uložit na záložce Zápis.
+   Po uložení dat je spuštěn a zobrazen kontrolní chod, který je možné vytisknout tlačítkem Tisk.
+
+- Chyby signalizované kontrolami opravíte znovu v nabídce Pořízení a oprava dat.
+- Pokud jsou data bez chyb, je ihned po pořízení umožněno provést export dat a tisk zápisu OVK.
+
+Kontroly dat:
+- Program obsahuje dva stupně kontrol, tzv. interaktivní a dávkové. Interaktivní jsou prováděny okamžitě po
+
+   zápisu údaje a stisknutí klávesy Enter, dávkové se vykonávají po stisknutí tlačítka Uložit při ukončení
+   pořizování dat.
+- Chyby jsou dále rozděleny na propustitelné (chyby P* uvedeny v části b) v seznamu chyb níže), upozornění
+   (informativní hlášky) (chyby I* uvedeny v části c) v seznamu chyb níže) a závažné (chyby Z* uvedeny v části a)
+   v seznamu chyb níže). Pokud údaje signalizované jako propustitelné chyby nebo upozornění odpovídají
+   zjištěné skutečnosti, nesnažte se je odstranit, jde spíše o logickou správnost údajů, která může signalizovat
+   např. špatné pořízení údajů formálně vyhovující kontrolám (export viz následující bod).
+- Obsahují-li údaje závažnou chybu, nelze data exportovat ani vytisknout zápis a je nutné zjistit příčinu a údaje
+   opravit. Upozornění a propustitelné chyby nemají vliv na export dat a tisk zápisu. Seznam chyb najdete
+   v nápovědě a v úplném návodu k programu.
+
+Výstup pro přebírací místo ČSÚ (PM):
+ Výstup pro PM je rozdělen do dvou fází, a to uložení dat na technický nosič a vytisknutí dvou stejnopisů zápisu
+
+   T/3 a opisu hlasovacího lístku.
+ vlastní výstup provedete dle následujícího postupu (toto lze provést pouze na bezchybném zápisu):
+
+   • Export je umožněn přímo po ukončení pořizování nebo vyberte z menu Okrsek nabídku Export dat a tisk
+         zápisu, informaci o povolení tisku a zápisu a informaci o založení technického nosiče potvrďte tlačítkem
+         OK.
+
+   • Vyberte zařízení (popř. adresář), na které chcete exportovat data, stiskněte OK a přečtěte si následující
+         informaci o provedení exportu. Zkontrolujte přítomnost souboru správného jména na technickém nosiči
+         (jméno souboru je složeno z písmen "OO" pro obec/město, "OC" pro městskou část/obvod, čísla obce
+         a čísla okrsku [OO999999.00999, resp. OC999999.00999], obsah souboru není čitelný).
+
+   • Je proveden automatický tisk celého zápisu v počtu kopií dle Vašeho zadání a zároveň je zobrazen na
+         obrazovce (preview). Tisk T/3 a hlasovacího lístku můžete opticky zkontrolovat proti vytisknutému zápisu
+         (v zobrazeném zápisu lze listovat klávesami PageDown a PageUp nebo stiskem tlačítek  nebo , text na
+         obrazovce posunete pomocí lišty vpravo nebo dole). Po stisknutí tlačítka Nastavení tiskárny můžete volit
+         tiskárnu, počet kopií, čísla stránek k tisku, případný další tisk spustíte stiskem tlačítka Tisk. Okno
+         prohlížeče nezavírejte, nejdříve zkontrolujte správnost a úplnost všech tisků.
+
+   • Po ukončeném tisku zkontrolujte náležitosti vytištěných formulářů, a to i z hlediska obsahové
+         správnosti údajů, pokud jste neopustili okno Preview, můžete opakovat tisk potřebné stránky.
+
+   • Tlačítko Zavřít ukončuje prohlížení zápisu (preview).
+   • POZOR: v patičce všech stran zápisu (vč. opisu hlasovacího lístku) je kromě základních identifikací
+
+         také uvedeno souhrnné kontrolní číslo, číslo strany a počet všech stran zápisu a datum a čas tisku
+         zápisu. Na všech stránkách zápisu musí být shodné údaje v patičce (kromě aktuálního čísla strany).
+         Na přebírací místo lze odevzdat s technickým nosičem pouze zápis, který je vytištěn současně při
+         exportu!
+         Upozornění: Při opakovaném exportu je nutno znovu vytisknout celý zápis.
+ Zápis T/3 a opis hlasovacího lístku podepište na obou stejnopisech (pozor na počet podpisů, zapisovatel se
+   podepisuje pouze na zvláštní kolonce).
+
+Co předáváte přebíracímu místu ČSÚ:
+ jeden ze dvou stejnopisů zápisu T/3, vč. opisu hlasovacího lístku a další přílohy (jejich počet je uveden na
+
+   přední straně zápisu T/3) – vše podepsané;
+ technický nosič s daty, pokud jste úspěšně zpracovali výsledky na počítači.
+
+Přejeme Vám klidnou a bezchybnou práci při zpracování výsledků voleb do zastupitelstev obcí.
+Seznam chyb v datových souborech
+
+Pozn.: Ve vysvětlení kontrol je uváděn odkaz na příslušnou kapitolu Pokynů pro okrskové volební komise (dále
+jen "Pokyny").
+
+a) závažné chyby, jedná se o chyby, které musí být před vytvořením zápisu opraveny; je nutno zkontrolovat
+hodnoty (postup zjištění) a opravit dle skutečnosti:
+
+Číslo  Vysvětlující text
+Z03
+       Nepřípustné zastupitelstvo [(číslo)]
+       V daném zastupitelstvu se nekonají volby.
+
+Z05    Chybné číslo obvodu
+
+       Zadané číslo volebního obvodu neodpovídá hodnotě přípustné pro zadaný okrsek.
+
+Z07    Chybný typ zastupitelstva
+
+       Zadaná hodnota typu zastupitelstva neodpovídá hodnotě přípustné pro zadaný okrsek (kap. 6
+
+       Pokynů).
+
+Z08    Vydáno více obálek, než je počet zapsaných voličů
+
+       Počet voličů, kterým byla vydána úřední obálka, musí být menší nebo shodný s počtem osob
+
+       zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem (kap. 7 Pokynů).
+
+Z09    Více platných hlasů, než mohli voliči dát
+
+       Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany) musí být menší nebo
+
+       shodný s počtem hlasovacích lístků s platným hlasem vynásobený počtem volených zastupitelů
+
+       (kap. 11 a 12 Pokynů).
+
+Z10    Chybný počet kandidujících volebních stran
+
+       Počet volebních stran ve volebním okrsku (dle hlasovacího lístku) musí být shodný s počtem
+
+       volebních stran uvedených na hlasovacím lístku (kap. 14 Pokynů).
+
+Z11    Počet volebních stran s hlasy > počet volebních stran
+
+       Počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas, musí být menší
+
+       nebo roven počtu volebních stran ve volebním okrsku (dle hlasovacího lístku) (kap. 14 Pokynů).
+
+Z12    Počet volebních stran s hlasy je roven nule
+
+       Pokud je počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany) větší než 0,
+
+       pak počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas, nesmí být
+
+       roven nule (kap. 14 Pokynů).
+
+Z13    Celkový počet platných hlasů je roven nule
+
+       Pokud je počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas (větší
+
+       než 0), pak počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany) nesmí
+
+       být roven nule (kap. 12 Pokynů).
+
+Z17    Strana nekandiduje v tomto zastupitelstvu/volebním obvodu
+
+       Na hlasovacím lístku jsou vyplněny hlasy pro stranu, která v zastupitelstvu (volebním obvodu
+
+       zastupitelstva) nekandiduje.
+
+Z19    Počet hlasů pro stranu > počet hlasů celkem
+
+       Počet platných hlasů pro každou stranu musí být menší nebo roven hodnotě uvedené v položce
+
+       "Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany)" (kap. 13 a 14
+
+       Pokynů).
+
+Z20    Součet hlasů pro strany je různý od počtu hlasů celkem
+
+       Součet platných hlasů za všechny strany se musí rovnat hodnotě uvedené v položce "Počet
+
+       platných hlasů ve volebním okrsku (celkem pro všechny volební strany) (kap. 14 Pokynů).
+
+Z22    Počet hlasů pro kandidáta > počet hlasů pro stranu (kand. číslo)
+
+       Počet hlasů pro jednotlivého kandidáta musí být menší nebo roven celkovému počtu hlasů pro tuto
+
+       stranu (kap. 12 a 13 Pokynů).
+
+Z23    Počet hlasů pro kandidáta je větší, než mohl dostat (kand. číslo)
+
+       Počet hlasů pro jednotlivého kandidáta v rámci volební strany musí být menší nebo roven počtu
+
+       hlasovacích lístků, které jsou platným hlasem voliče (kap. 11 a 12 Pokynů).
+Z25    Součet hlasů kandidátů je různý od počtu hlasů pro stranu
+
+       Součet hlasů pro všechny kandidáty strany musí být roven celkovému počtu hlasů pro tuto stranu
+
+       (kap. 12 a 13 Pokynů).
+
+Z26    Platné hlasy u nekandidujícího kandidáta (číslo)
+
+       Na hlasovacím lístku má vyplněny hlasy kandidát s pořadovým číslem větším, než je maximální
+
+       pořadové číslo kandidáta na hlasovacím lístku pro tuto stranu (kap. 10 a 12 Pokynů).
+
+Z32    Platné hlasy u neplatného kandidáta (číslo)
+
+       Na hlasovacím lístku má vyplněny hlasy kandidát, který byl odvolán nebo se vzdal kandidatury
+
+       (kap. 10 a 12 Pokynů).
+
+Z34    Nevyplněn / chybný některý z údajů záložce T/3 - odd. III (seznam položek)
+
+       Na záložce T/3 - odd. III není vyplněn nebo je vyplněn chybně některý z doplňovaných údajů (kap.
+
+       16 Pokynů):
+
+       a) není vyplněn počet členů komise celkem;
+
+       b) není vyplněn počet přítomných členů komise;
+
+       c) počet přítomných členů není nadpoloviční většina;
+
+       d) počet přítomných členů > než celkový počet;
+
+       e) není vyplněno jméno pověřené osoby pověřené předáním zápisu
+
+       f) není vyplněno jméno zapisovatele;
+
+       g) není vyplněno jméno ostatního člena komise.
+
+Z35    Nesouhlasí počet volebních stran s hlasy
+
+       Počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas, musí být stejný
+
+       jako počet stran s vyplněnými hlasy na hlasovacím lístku (kap. 14 Pokynů).
+
+Z44    Počet voličů s voličskými průkazy > počet vydaných obálek
+
+       Počet voličů, kteří hlasovali na voličský průkaz, musí být menší nebo shodný s počtem voličů,
+
+       kterým byly vydány úřední obálky (kap. 8 a 9 Pokynů).
+
+Z46    Celkový počet platných hlasů je menší, než je počet hlasovacích lístků s platným hlasem
+
+       Počet platných hlasů v okrsku celkem nesmí být menší, než je počet hlasovacích lístků, které jsou
+
+       platným hlasem voliče (kap. 11 a 12 Pokynů).
+
+.
+
+b) propustitelné chyby, jedná se o chyby, které mohou nastat jen v opravdu výjimečných případech, lze je
+propustit po ověření správnosti zjištění a zápisu údaje:
+
+Číslo  Vysvětlující text
+P01
+       Počet zapsaných voličů je roven nule
+       Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem nesmí být roven nule
+       (kap. 6 Pokynů).
+
+P02    Vydané obálky jsou rovny nule
+
+       Počet voličů, kterým byly vydány úřední obálky, nesmí být roven nule (kap. 7 Pokynů).
+
+P03    Odevzdané obálky jsou rovny nule
+
+       Počet odevzdaných úředních obálek nesmí být roven nule (kap. 9 Pokynů).
+
+P04    Odevzdáno více obálek, než bylo vydáno
+
+       Počet odevzdaných úředních obálek musí být menší nebo shodný s počtem voličů, kterým byla
+
+       vydána úřední obálka (kap. 9 Pokynů).
+
+P06    Více hlasovacích lístků s platným hlasem, než je odevzdaných obálek
+
+       Počet hlasovacích lístků s platným hlasem celkem musí být menší nebo shodný s počtem
+
+       odevzdaných úředních obálek (kap. 9 a 11 Pokynů).
+
+P07    Počet hlasovacích lístků s platným hlasem je roven nule
+
+       Počet hlasovacích lístků s platným hlasem nesmí být roven nule (kap. 11 Pokynů).
+c) upozornění (informativní hlášky), jedná se o chyby upozorňující na méně pravděpodobné jevy, které ale mohou
+nastat; zkontrolovat, zda podezřelé hodnoty opravdu odpovídají reálně zjištěnému stavu:
+
+Číslo  Vysvětlující text
+I01
+       100% volební účast
+       Voleb se zúčastnily všechny osoby zapsané do výpisu ze seznamu voličů a jeho dodatku celkem -
+       zkontrolovat, zda se opravdu voleb zúčastnily (tj. byly jim okrskovou volební komisí vydány úřední
+       obálky pro hlasování) všechny osoby zapsané do výpisů ze seznamu voličů (tj. u všech voličů ve
+       výpisech si komise učinila záznam o vydání úřední obálky). Zkontrolovat správné zjištění údajů o
+       vydaných úředních obálkách a počtu osob v seznamech voličů (kap. 6 Pokynů).
+
+I02    Odevzdaných obálek je méně než 80 % vydaných
+
+       Odevzdaných úředních obálek je méně než 80 % vydaných úředních obálek a absolutní rozdíl je
+
+       větší než 10 - zkontrolovat správnost zjištění a zapsání údajů o odevzdaných a vydaných obálkách
+
+       (kap. 9 Pokynů).
+
+I03    Počet zapsaných voličů >= 2000
+
+       Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem by neměl být větší než
+
+       1999 - zkontrolovat zjištění údaje o počtu osob v seznamech voličů (kap. 6 Pokynů).
+
+I04    Malá volební účast
+
+       Voleb se zúčastnilo méně než 10 % osob zapsaných do výpisu ze seznamu voličů a jeho dodatku
+
+       celkem - zkontrolovat správnost zjištění a zapsání údajů o odevzdaných obálkách, příp. i počtu
+
+       osob v seznamech voličů (kap. 6 a 7 Pokynů).
+
+I05    Hlasovacích lístků s platným hlasem je méně než 85 % odevzdaných obálek
+
+       Počet hlasovacích lístků s platným hlasem je méně než 85 % odevzdaných úředních obálek a
+
+       absolutní rozdíl je větší než 2 (kap. 9 a 11 Pokynů).
+
+I06    Počet zapsaných voličů neodpovídá očekáváné hodnotě xxxxx
+
+       Rozdíl mezi počtem osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem
+
+       a předpokládaným počtem voličů (= očekávaná hodnota) musí být:
+
+       buď v rozmezí -9 až +14 absolutně, nebo v rozmezí -17 % až +30 %.
+
+I07    Velká volební účast
+
+       Voleb se zúčastnilo více než 90 % osob zapsaných do výpisu ze seznamu voličů a jeho dodatku
+
+       celkem (kap. 6 a 7 Pokynů).
+
+I15    Počet voličů s voličskými průkazy je více než 10 % vydaných obálek
+
+       Počet voličů, kteří hlasovali na voličský průkaz, je více než 10 % z vydaných úředních obálek (kap.
+
+       8 Pokynů).
+
+I16    Málo platných hlasů vzhledem k hlasovacím lístkům s platným hlasem
+
+       Je-li počet kandidátů alespoň dvakrát větší, než je počet volených zastupitelů, pak počet platných
+
+       hlasů ve volebním okrsku (celkem pro všechny volební strany) nesmí být menší než 60 % hlasů,
+
+       které mohli voliči dát (počet hlasovacích lístků s platným hlasem * počet volených zastupitelů).
+
+       V případě menšího násobku úměrně klesá hraniční procento (= 60 % * počet kandidátů/(2*počet
+
+       volených zastupitelů)) (kap. 11 a 12 Pokynů).
+
+Poznámka: informace k pořizování a opravám jsou v kapitole 5.1 plného návodu; při řešení chyb je vhodné
+nejprve zkontrolovat, zda nejde o překlep při zápisu zjištěného údaje a následně překontrolovat správnost
+postupu zjištění a zápisu údaje/údajů podle Pokynů pro okrskové volební komise, které jsou pro členy komisí
+k dispozici i v elektronické podobě na internetové stránce volby.gov.cz.
+

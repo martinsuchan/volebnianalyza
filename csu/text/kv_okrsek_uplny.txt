@@ -1,0 +1,638 @@
+                      Volby do zastupitelstev obcí
+
+                Pořízení dat okrskovými volebními komisemi
+
+                                                       Praha, 8. října 2026
+
+Obsah:
+
+1 Informace o aplikaci ........................................................................................................................ 1
+   1.1 Obecné informace .................................................................................................................. 1
+   1.2 Technická specifikace ............................................................................................................ 2
+
+2 Tisk a všeobecná doporučení ......................................................................................................... 2
+3 Instalace aplikace ........................................................................................................................... 2
+4 Spuštění aplikace............................................................................................................................ 5
+5 Popis aplikace ................................................................................................................................. 5
+
+   5.1 Pořizování a oprava dat okrsku.............................................................................................. 5
+   5.2 Export dat a tisk zápisu .......................................................................................................... 8
+   5.3 Zrušení dat okrsku ................................................................................................................. 9
+6 Deinstalace aplikace ....................................................................................................................... 9
+7 Seznam chyb v datových souborech ............................................................................................ 10
+
+1 Informace o aplikaci
+
+1.1 Obecné informace
+
+Tato aplikace umožňuje pořízení výsledků hlasování ve volebním okrsku ve volbách do zastupitelstev
+obcí, jejich kontrolu, opravu, tisk zápisu a export dat pro zpracování na územně příslušném pracovišti
+ČSÚ (dále jen "přebírací místo"). V rámci jedné instalace lze pořídit data za oba typy zastupitelstev,
+pokud se v daném okrsku volí do zastupitelstva města i zastupitelstva městské části nebo městského
+obvodu. Část údajů o průběhu voleb se v případě dvou typů zastupitelstev vyplňuje pouze jednou a je
+stejná pro oba zápisy.
+
+Spuštění aplikace se provádí kliknutím na ikonu "Obce-pořízení číslo_okrsku" (resp. přes volbu Start –
+Obce-pořízení číslo_okrsku).
+
+Vstupem je pracovní verze tiskopisu T/3 a hlasovací lístek, výstupem je vyplněný tiskopis T/3 Zápis
+o průběhu a výsledku hlasování ve volebním okrsku, jeho příloha - souhrnný hlasovací lístek nebo
+pomocný sčítací arch a data na technickém nosiči.
+
+Export dat lze provést na flash disk s USB rozhraním (dále jen "USB disk"). Dále je umožněn export i
+do adresáře na lokálním disku k následnému nakopírování na technický nosič. K exportu dat
+nepoužívejte zápis na externí disk.
+
+Nápovědu lze kdykoliv vyvolat kliknutím na položku Nápověda v menu nebo stisknutím klávesy F1.
+
+Na dolním řádku okna je trvale zobrazeno číslo a název obce, číslo okrsku, číslo a název okresu.
+ČSÚ  Volby do zastupitelstev obcí – program pro okrskové volební komise
+
+1.2 Technická specifikace
+
+Tato aplikace je určena pro počítače s operačním systémem Windows 10 a 11 a nainstalovaným
+Microsoft Edge WebView2 v min. verzi 120 (standardní součást prohlížeče MS Edge ve Windows
+10 i 11), laserovou nebo inkoustovou tiskárnu. Minimální požadovaný diskový prostor je 50 MB.
+
+Jaká verze Microsoft Edge WebView2 Runtime je na počítači/notebooku nainstalována, lze ověřit
+takto:
+
+          • otevřete Průzkumník souborů a přejděte na tuto cestu:
+                C:\Program Files (x86)\Microsoft\EdgeWebView\Application
+
+          • Název složky, kterou uvnitř uvidíte (např. 131.0.2903.51), je přesné číslo verze
+                WebView2 (s nejnovějším datem)
+
+2 Tisk a všeobecná doporučení
+
+     • Před spuštěním zkontrolujte nastavení systémového data a času (zobrazeno i v informačním
+          okně po spuštění aplikace);
+
+     • Neprovádějte žádné zásahy do používaných souborů.
+
+     • Všechny tisky (kromě protokolu o instalaci) jsou prováděny pomocí preview, tzn., že
+          příslušná tisková sestava je zobrazena na obrazovce a k jejímu vytištění je třeba stisknout
+          tlačítko Tisk, a poté uzavřít okno.
+
+     • Tisk zápisu o výsledku hlasování je prováděn automaticky v počtu kopií dle zadání, poté je
+          zobrazeno preview zápisu k případnému dodatečnému vytisknutí další kopie zápisu. Pro
+          vytisknutí další kopie je nutno buď stisknout tlačítko Tisk tolikrát, kolik chcete kopií, nebo
+          v nastavení tiskárny (tlačítko Nastavení tiskárny) nastavit počet kopií, popř. nastavit čísla
+          stránek, která chcete vytisknout a potvrdit tlačítkem OK, potom stisknout tlačítko Tisk. Na
+          přebírací místo musí být odevzdán s technickým nosičem pouze zápis, který je
+          vytisknut současně při exportu!
+
+     • Tisk pomocného sčítacího formuláře (volby z menu Okrsek – Sčítací arch) slouží
+          k vytisknutí pomocného formuláře pro sčítání hlasů. K vytisknutí pouze vybraných stran
+          použijete nastavení tiskárny (tlačítko Nastavení tiskárny), kde zadáte rozsah stran, které
+          chcete tisknout, popř. počet kopií, nastavení potvrdíte tlačítkem OK, potom stiskněte tlačítko
+          Tisk.
+          Lze jej vytisknout ve třech variantách:
+                o A4 na šířku: na stránku se vejde max. 33 kandidátů (další kandidáti nad 33 jsou na
+                     druhé stránce), počet čárek je 150;
+                o A4 na výšku: na stránku se vejde až 55 kandidátů (další jsou na další stránce), ale
+                     počet čárek je jen 80;
+                o A3 na výšku: na stránku se vejdou všichni kandidáti a počet čárek je 150.
+
+     • Zkušební tisk slouží k ověření správnosti tisků před zpracováním výsledků (volba z menu
+          Nápověda – Zkušební tisk).
+
+     • Výběr tiskárny pro tisk (volba z menu Okrsek – Výběr tiskárny) umožňuje zvolit tiskárnu, na
+          kterou bude prováděn tisk sestav; lze si vybrat z tiskáren nainstalovaných ve Windows.
+
+3 Instalace aplikace
+
+Na jednom počítači je možná instalace jen jedné obce (městské části, městského obvodu) pro
+libovolný počet okrsků. Instalační program si automaticky zjistí, která obec byla na počítači
+dříve nainstalována.
+Při první instalaci je možné si vybrat adresář, kam bude program nainstalován. Při každé další
+se automaticky provádí instalace do stejného adresáře.
+
+     -2-
+ČSÚ  Volby do zastupitelstev obcí – program pro okrskové volební komise
+
+Obsah instalace: KVokrsek.exe (demoverze KVokrsek1_demo.exe pro jeden typ zastupitelstva, resp.
+KVokrsek2_demo.exe pro dva typy zastupitelstev).
+
+Pro úspěšné dokončení instalace je nutno mít připojenou tiskárnu. Nepoužívejte tiskárnu připojenou
+přes wifi.
+
+Postup instalace:
+     • spusťte KVokrsek.exe z technického nosiče, popř. adresáře, kde máte instalaci
+          nakopírovánu;
+     • v úvodním okně potvrďte pokračování instalace stisknutím tlačítka "Spustit instalaci";
+
+• dále zadejte požadované údaje zobrazované v průběhu instalace a jejich zadání potvrďte
+     klávesou ENTER:
+          - při první instalaci (pokud již nebyly nainstalovány programy pro jiné volby,
+                resp. byly všechny předchozí instalace všech voleb odinstalovány-odebrány):
+
+                     • Cílová složka: automaticky je nastaven adresář pro instalaci c:\volby
+                                • pokud nechcete provést instalaci do předem nabídnutého adresáře,
+                                      tlačítkem Procházet si zvolte jiný adresář (musí být předem vytvořen.
+                                      případně si jej můžete vytvořit pomocí Vytvořit novou složku);
+
+                     • pokračujte tlačítkem Další;
+          - při první instalaci prvního okrsku (resp. po odinstalování všech předchozích
+
+                instalací):
+
+                                                            -3-
+ČSÚ  Volby do zastupitelstev obcí – program pro okrskové volební komise
+
+                     • Číslo obce: zadejte číslo obce dle identifikace okrsku (v demoverzi zadejte
+                           číslo 999999);
+
+                     • Číslo okrsku: zadejte číslo okrsku dle identifikace okrsku (v demoverzi zadejte
+                           číslo 999);
+
+          - při instalaci dalšího okrsku stejné obce:
+
+                     • Číslo obce: je vyplněno a nelze změnit
+                     • Číslo okrsku: zadejte číslo okrsku dle identifikace okrsku;
+• po zadání všech údajů stiskněte tlačítko Instalovat;
+• potvrďte tlačítkem Další v okně "Průběh Instalace" dokončení kopírování souborů;
+• na tiskárně se vytiskne protokol o instalaci;
+• poté stisknutím tlačítka Dokončit instalaci programu ukončíte:
+
+• po nakopírování souborů se na ploše vytvoří ikona "Obce-Pořízení číslo_okrsku" pro spuštění
+     programu a ikona "Odinstalovat Volby 2026" pro odinstalování programu. Současně se
+     v nabídce Start vytvoří zástupce "Obce-Pořízení číslo_okrsku" a "Odinstalovat Volby 2026".
+
+                                                            -4-
+ČSÚ  Volby do zastupitelstev obcí – program pro okrskové volební komise
+
+4 Spuštění aplikace
+
+Spuštění aplikace se provádí kliknutím na ikonu "Obce-pořízení číslo_okrsku" (resp. přes volbu Start –
+Obce-pořízení číslo_okrsku). Po spuštění se objeví základní nabídka ve formě menu. Zobrazí se také
+informační okno s aktuálním datem, časem (tyto údaje se uvádějí do zápisu) a licenčním číslem
+programu.
+
+5 Popis aplikace
+
+     • Nápověda pro jednotlivé akce lze kdykoliv vyvolat stisknutím klávesy F1.
+     • Některé akce je možno vyvolat stisknutím speciální klávesy (hot-key), která je uvedena vedle
+
+          názvu akce v menu.
+
+Upozornění: Pokud se na okrsku pořizují data za dva typy zastupitelstev, tzn., že se volí do
+zastupitelstva města a zároveň i do zastupitelstva městské části (obvodu), při výběru položek z menu
+Pořizování a oprava dat, Zrušení pořízených dat a Export dat a tisk zápisu se zobrazí podmenu
+s výběrem, za který typ zastupitelstva (1=zastupitelstvo města, 2=zastupitelstvo městské
+části/městského obvodu) chcete požadovanou akci provádět.
+
+5.1 Pořizování a oprava dat okrsku
+
+Základem pořizování je pracovní verze vyplněného tiskopisu T/3 - Zápis o průběhu a výsledku
+hlasování ve volebním okrsku a Hlasovací lístek nebo pomocné sčítací archy. V průběhu pořizování
+jsou prováděny interaktivní kontroly. Pokud se vyskytne chyba, je možno ji buď chybu opravit, nebo
+potvrdit / ignorovat. Při výběru volby Opravit se kurzor vrátí na právě pořízenou položku. Při výběru
+volby Potvrdit / Ignorovat se kurzor přesune na následující položku a lze dokončit pořizování dat.
+Ignorujete-li závažnou chybu, tzn. chybu, která nesmí být v zápise obsažena, musíte ji opravit ještě
+před tiskem zápisu a vytvořením exportu dat pro předání na přebíracím místě.
+Pomocí šipky lze otevřít vysvětlení vztahující se k dané chybě.
+
+                                                                  -5-
+ČSÚ                                     Volby do zastupitelstev obcí – program pro okrskové volební komise
+
+Existují tři typy chyb:
+     a) závažné chyby - chyby, které musí být před vytvořením zápisu opraveny (viz seznam chyb
+          v kap. 7, bod a)),
+     b) propustitelné chyby - chyby, které mohou nastat jen ve výjimečných případech (viz seznam
+          chyb v kap. 7, bod b)),
+     c) upozornění (informativní hlášky) - chyby upozorňující na méně pravděpodobné jevy, které ale
+          mohou nastat (viz seznam chyb v kap. 7, bod c)).
+
+Pokud údaje signalizující propustitelné chyby nebo upozornění odpovídají skutečnosti, neopravujte je,
+zápis o průběhu a výsledku hlasování (i export dat) se vytvoří. Na přebíracím místě budete vyzváni
+k uvedení možné příčiny těchto chyb (např. skutečně odvolili všichni oprávnění voliči apod.) a budete
+podepisovat protokol.
+
+Jsou-li v datech jakékoliv závažné chyby, nelze vytvořit export dat ani vytisknout zápis.
+
+Po vybrání volby Okrsek – Pořízení a oprava dat z menu nebo stisknutím klávesy F2 (klávesa F2 nrní
+funkční, pokud se na okrsku zpracovávají dva typy zastupitelstev) se objeví pořizovací formulář.
+
+Celý pořizovací formulář má 5 záložek:
+
+- T/3 - odd. I                          vyplnění údajů o průběhu hlasování (tiskopis T/3 - část I.),
+
+- T/3 - odd. II                         pořízení údajů z první strany tiskopisu T/3 (část II.),
+
+- T/3 - odd. II pokračování             prohlížení údajů z druhé strany tiskopisu T/3 (část II.) -
+
+                                        vyplňuje se automaticky,
+
+- HL                                    pořízení údajů z hlasovacího lístku,
+
+- T/3 - odd. III                        vyplnění údajů o komisi k podepsání a předání zápisu
+
+                                        (tiskopis T/3 - část III.).
+
+Mezi políčky se lze pomocí kláves ENTER a TAB (SHIFT+TAB pro pohyb zpět) nebo myší. Mezi
+záložkami lze přecházet automaticky z posledního pořizovacího políčka záložky (viz níže), tlačítkem
+Pokračovat nebo pomocí klávesy PgDn (PageDown). Na předchozí záložku přejdete klávesou PgUp
+(PageUp).
+
+Na první záložce T/3 - odd. I je vyplněna identifikace okrsku, tj. číslo obce, číslo okrsku, kontrolní číslo
+1, název obce, název zastupitelstva a číslo volebního obvodu. Na této záložce se pořizují údaje o
+průběhu hlasování (zahájení, ukončení, přerušení, odročení, prodloužení), zda byly podány stížnosti a
+na kolika listech, zda byla použita přenosná volební schránka. Volbu na přepínačích nebylo/bylo
+odročeno, nebylo/bylo prodlouženo, nebylo/bylo přerušeno, byly/nebyly podány stížnosti, resp.
+byla/nebyla použita přenosná schránka proveďte kliknutím myši na příslušném kroužku.
+
+Na druhé záložce T/3 - odd. II je automaticky vyplněna identifikace okrsku, tj. číslo obce, číslo okrsku,
+kontrolní číslo 1, název obce, název zastupitelstva, číslo volebního obvodu a typ voleného
+zastupitelstva.
+
+                                                                  -6-
+ČSÚ  Volby do zastupitelstev obcí – program pro okrskové volební komise
+
+Na této záložce dále vyplníte celkový počet osob zapsaných do výpisu ze seznamu voličů, počet
+vydaných a odevzdaných úředních obálek, počet hlasovacích lístků s platným hlasem a počet
+platných hlasů v okrsku celkem. Údaje o počtu kandidujících volebních stran, počtu volebních stran,
+které získaly alespoň jeden platný hlas, a kontrolní číslo 2 se plní automaticky podle zadaných údajů.
+Po vyplnění počtu platných hlasů v okrsku přeskočí kurzor automaticky na záložku HL.
+
+V rozbalovacím seznamu je uveden seznam volebních stran v pořadí, ve kterém jsou uvedeny na
+hlasovacím lístku. Ze seznamu vyberte stranu, pro kterou chcete pořizovat data. V seznamu se
+můžete pohybovat pomocí šipek nebo myši (seznam se rozbalí po stisknutí šipky na kraji políčka).
+Na této záložce pořídíte hlasy pro jednotlivé kandidáty. Po pořízení hlasů poslednímu kandidujícímu
+kandidátovi se kurzor přesune zpět na výběr strany, kde se automaticky nabídne další strana;
+v případě poslední strany se kurzor po vyplnění hlasů poslednímu kandidátovi této strany přesune na
+záložku T/3 - odd. III. Údaj o počtu hlasů pro stranu je automaticky napočítáván.
+Na poslední záložce T/3 - odd. III vyplníte počet členů komise celkem a přítomných, jméno a příjmení
+zapisovatele (vyplněnost těchto všech údajů je kontrolována). Podle zadaného počtu přítomných
+členů komise se vygeneruje tabulka s počtem řádků odpovídající počtu ostatních členů komise (bez
+zapisovatele), kam doplníte jména všech členů komise přítomných podpisu zápisu (bez zapisovatele)
+(vyplněnost všech jmen je kontrolována). Dále vyberete ze seznamu osobu/osoby pověřené předáním
+zápisu ČSÚ (vyplněnost položky je kontrolována) a případně i jména dále přítomných osob v době
+vyhotovení zápisu.
+
+                                                                  -7-
+ČSÚ  Volby do zastupitelstev obcí – program pro okrskové volební komise
+
+Pořizování dokončíte stisknutím tlačítka Uložit v horní liště (tlačítko lze stisknout i kdykoli v průběhu
+pořizování), po jeho stisknutí se spustí dávkové kontroly, jejichž výsledky se zobrazí v protokolu
+o kontrolách, který lze vytisknout (tisk - kap. 2).
+
+Pokud jsou data bez chyb nebo obsahují jen propustitelné chyby (viz seznam chyb kap. 7, bod b)) či
+upozornění (viz seznam chyb v kap. 7, bod c)), lze ihned po pořízení umožněno provést export dat a
+tisk zápisu OVK (kap. 5.2).
+
+Upozornění: Pokud se na okrsku pořizují data za dva typy zastupitelstev, tzn., že se volí do
+zastupitelstva města a zároveň i do zastupitelstva městské části (obvodu), a jsou již pořízena data za
+obě hlasování, provede se před exportem dat navíc kontrola, zda jsou shodné údajů o počtu voličů,
+počtu vydaných a odevzdaných obálek v obou zápisech. Pokud je zjištěn rozdíl, zobrazí se
+upozornění. Pokud tyto údaje v zápisech nejsou shodné, budete při přejímce odmítnuti.
+
+Stisknutím tlačítka Zrušit v horní liště nebo zavřením okna můžete pořizování kdykoliv ukončit. Změny
+provedené na aktuální záložce se neuloží a kontroly se neprovedou.
+
+Při přechodu mezi jednotlivými záložkami a při změně strany na záložce HL dochází k ukládání dat na
+disk.
+
+5.2 Export dat a tisk zápisu
+
+Po výběru volby Okrsek – Export dat a tisk zápisu lze provést na základě výsledku kontrol export dat
+a tisk celého zápisu T/3 a opisu souhrnného hlasovacího lístku.
+
+Data lze exportovat na USB disk (vyjímatelné zařízení) nebo do adresáře Export (vytvořeného
+v adresáři, kam byla provedena instalace), ze kterého je možno soubor nakopírovat na libovolný
+technický nosič. Seznam zařízení pro export je nabízen v závislosti na vybavení použitého počítače a
+na vložených technických nosičích.
+
+Před zvolením této volby je potřeba mít technický nosič, na který chcete export provést,
+vložený/zasunutý do počítače. Tlačítko Znovu načíst zařízení slouží k znovunačtení seznamu
+přístupných zařízení s vloženým (připojeným) nosičem, pokud není v seznamu uvedeno zařízení, na
+které chcete data exportovat (uživatel zapomněl založit nosič před spuštěním exportu).
+
+Po spuštění se zobrazí sdělení, zda lze vytvořit export dat a vytisknout zápis s výsledky.
+
+Upozornění: Pokud se na okrsku pořizují data za dva typy zastupitelstev, tzn., že se volí do
+zastupitelstva města a zároveň i do zastupitelstva městské části (obvodu), a jsou již pořízena data za
+obě hlasování, provede se před exportem dat navíc kontrola, zda jsou shodné údajů o počtu voličů,
+
+                                                                  -8-
+ČSÚ  Volby do zastupitelstev obcí – program pro okrskové volební komise
+
+počtu vydaných a odevzdaných obálek v obou zápisech. Pokud je zjištěn rozdíl, zobrazí se
+upozornění. Pokud tyto údaje v zápisech nejsou shodné, budete při přejímce odmítnuti.
+
+V případě, že lze data exportovat, objeví se následující okno (seznam zařízení je variabilní):
+
+          • ze seznamu nabízených zařízení vyberte to, na které chcete data exportovat (seznam se
+                rozbalí stisknutím tlačítka se šipkou); pokud je připojen USB disk, je pro export nabízen
+                přednostně;
+
+          • po stisknutí tlačítka Uložit jsou data exportována na zvolený cíl; současně se provede tisk
+                zápisu (viz tisk - kap. 2);
+
+          • vyberete-li volbu Zrušit, data se neexportují ani se nevytiskne zápis.
+
+Po úspěšně provedeném exportu je zobrazena informace, kam byl soubor s daty uložen.
+
+Poté se zobrazí okno pro zadání počtu kopií zápisu o výsledku hlasování, které mají být automaticky
+vytištěny (nejméně jedna kopie). Zápis o výsledku hlasování musí být vyhotoven ve dvou
+stejnopisech (viz tisk - kap. 2).
+
+Upozornění: Na přebírací místo musí být odevzdán s technickým nosičem pouze zápis, který
+                     je vytištěn současně s exportem!
+
+                     Při případném opakovaném exportu je nutné znovu vytisknout celý zápis (vč.
+                     opisu hlasovacího lístku), jinak nebude možné exportovaná data použít při
+                     přejímce.
+
+                     Zápis je nutno vytisknout vcelku během jednoho spuštění, tzn., nezavírejte okno
+                     (preview) se zápisem o výsledku hlasování, dokud nemáte celý zápis v pořádku
+                     vytisknut. Zápis musí být vytištěn dvakrát.
+
+5.3 Zrušení dat okrsku
+
+Po výběru volby Okrsek – Zrušení pořízených dat lze zrušit všechna dosud pořízená data. Jedná se
+o data pořízená na záložkách T/3 - odd. II, T/3 - odd. II pokračování a HL. Údaje o průběhu voleb
+(záložky T/3 - odd. I a T/3 - odd. III) zůstávají zachovány (nedojde k jejich smazání).
+
+6 Deinstalace aplikace
+
+Odinstalování aplikace se provádí kliknutím na ikonu "Odinstalovat Volby 2026", popř. v nabídce Start
+zástupce "Odinstalovat Volby 2026", kde ze seznamu vyberte aplikaci, kterou chcete odinstalovat.
+Program smaže příslušné adresáře a zástupce.
+
+     -9-
+ČSÚ                                  Volby do zastupitelstev obcí – program pro okrskové volební komise
+
+7 Seznam chyb v datových souborech
+
+Pozn.: Ve vysvětlení kontrol je uváděn odkaz na příslušnou kapitolu Pokynů pro okrskové volební komise (dále
+jen "Pokyny").
+
+a) závažné chyby, jedná se o chyby, které musí být před vytvořením zápisu opraveny; je nutno zkontrolovat
+hodnoty (postup zjištění) a opravit dle skutečnosti:
+
+Číslo  Vysvětlující text
+Z03
+       Nepřípustné zastupitelstvo [(číslo)]
+       V daném zastupitelstvu se nekonají volby.
+
+Z05    Chybné číslo obvodu
+
+       Zadané číslo volebního obvodu neodpovídá hodnotě přípustné pro zadaný okrsek.
+
+Z07    Chybný typ zastupitelstva
+
+       Zadaná hodnota typu zastupitelstva neodpovídá hodnotě přípustné pro zadaný okrsek (kap. 6
+
+       Pokynů).
+
+Z08    Vydáno více obálek, než je počet zapsaných voličů
+
+       Počet voličů, kterým byla vydána úřední obálka, musí být menší nebo shodný s počtem osob
+
+       zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem (kap. 7 Pokynů).
+
+Z09    Více platných hlasů, než mohli voliči dát
+
+       Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany) musí být menší nebo
+
+       shodný s počtem hlasovacích lístků s platným hlasem vynásobený počtem volených zastupitelů
+
+       (kap. 11 a 12 Pokynů).
+
+Z10    Chybný počet kandidujících volebních stran
+
+       Počet volebních stran ve volebním okrsku (dle hlasovacího lístku) musí být shodný s počtem
+
+       volebních stran uvedených na hlasovacím lístku (kap. 14 Pokynů).
+
+Z11    Počet volebních stran s hlasy > počet volebních stran
+
+       Počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas, musí být menší
+
+       nebo roven počtu volebních stran ve volebním okrsku (dle hlasovacího lístku) (kap. 14 Pokynů).
+
+Z12    Počet volebních stran s hlasy je roven nule
+
+       Pokud je počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany) větší než 0,
+
+       pak počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas, nesmí být
+
+       roven nule (kap. 14 Pokynů).
+
+Z13    Celkový počet platných hlasů je roven nule
+
+       Pokud je počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas (větší
+
+       než 0), pak počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany) nesmí
+
+       být roven nule (kap. 12 Pokynů).
+
+Z17    Strana nekandiduje v tomto zastupitelstvu/volebním obvodu
+
+       Na hlasovacím lístku jsou vyplněny hlasy pro stranu, která v zastupitelstvu (volebním obvodu
+
+       zastupitelstva) nekandiduje.
+
+Z19    Počet hlasů pro stranu > počet hlasů celkem
+
+       Počet platných hlasů pro každou stranu musí být menší nebo roven hodnotě uvedené v položce
+
+       "Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany)" (kap. 13 a 14
+
+       Pokynů).
+
+Z20    Součet hlasů pro strany je různý od počtu hlasů celkem
+
+       Součet platných hlasů za všechny strany se musí rovnat hodnotě uvedené v položce "Počet
+
+       platných hlasů ve volebním okrsku (celkem pro všechny volební strany) (kap. 14 Pokynů).
+
+Z22    Počet hlasů pro kandidáta > počet hlasů pro stranu (kand. číslo)
+
+       Počet hlasů pro jednotlivého kandidáta musí být menší nebo roven celkovému počtu hlasů pro tuto
+
+       stranu (kap. 12 a 13 Pokynů).
+
+                                         - 10 -
+ČSÚ                            Volby do zastupitelstev obcí – program pro okrskové volební komise
+
+Z23    Počet hlasů pro kandidáta je větší, než mohl dostat (kand. číslo)
+
+       Počet hlasů pro jednotlivého kandidáta v rámci volební strany musí být menší nebo roven počtu
+
+       hlasovacích lístků, které jsou platným hlasem voliče (kap. 11 a 12 Pokynů).
+
+Z25    Součet hlasů kandidátů je různý od počtu hlasů pro stranu
+
+       Součet hlasů pro všechny kandidáty strany musí být roven celkovému počtu hlasů pro tuto stranu
+
+       (kap. 12 a 13 Pokynů).
+
+Z26    Platné hlasy u nekandidujícího kandidáta (číslo)
+
+       Na hlasovacím lístku má vyplněny hlasy kandidát s pořadovým číslem větším, než je maximální
+
+       pořadové číslo kandidáta na hlasovacím lístku pro tuto stranu (kap. 10 a 12 Pokynů).
+
+Z32    Platné hlasy u neplatného kandidáta (číslo)
+
+       Na hlasovacím lístku má vyplněny hlasy kandidát, který byl odvolán nebo se vzdal kandidatury
+
+       (kap. 10 a 12 Pokynů).
+
+Z34    Nevyplněn / chybný některý z údajů záložce T/3 - odd. III (seznam položek)
+
+       Na záložce T/3 - odd. III není vyplněn nebo je vyplněn chybně některý z doplňovaných údajů (kap.
+
+       16 Pokynů):
+
+       a) není vyplněn počet členů komise celkem;
+
+       b) není vyplněn počet přítomných členů komise;
+
+       c) počet přítomných členů není nadpoloviční většina;
+
+       d) počet přítomných členů > než celkový počet;
+
+       e) není vyplněno jméno pověřené osoby pověřené předáním zápisu
+
+       f) není vyplněno jméno zapisovatele;
+
+       g) není vyplněno jméno ostatního člena komise.
+
+Z35    Nesouhlasí počet volebních stran s hlasy
+
+       Počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas, musí být stejný
+
+       jako počet stran s vyplněnými hlasy na hlasovacím lístku (kap. 14 Pokynů).
+
+Z44    Počet voličů s voličskými průkazy > počet vydaných obálek
+
+       Počet voličů, kteří hlasovali na voličský průkaz, musí být menší nebo shodný s počtem voličů,
+
+       kterým byly vydány úřední obálky (kap. 8 a 9 Pokynů).
+
+Z46    Celkový počet platných hlasů je menší, než je počet hlasovacích lístků s platným hlasem
+
+       Počet platných hlasů v okrsku celkem nesmí být menší, než je počet hlasovacích lístků, které jsou
+
+       platným hlasem voliče (kap. 11 a 12 Pokynů).
+
+.
+
+b) propustitelné chyby, jedná se o chyby, které mohou nastat jen v opravdu výjimečných případech, lze je
+propustit po ověření správnosti zjištění a zápisu údaje:
+
+Číslo  Vysvětlující text
+P01
+       Počet zapsaných voličů je roven nule
+       Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem nesmí být roven nule
+       (kap. 6 Pokynů).
+
+P02    Vydané obálky jsou rovny nule
+
+       Počet voličů, kterým byly vydány úřední obálky, nesmí být roven nule (kap. 7 Pokynů).
+
+P03    Odevzdané obálky jsou rovny nule
+
+       Počet odevzdaných úředních obálek nesmí být roven nule (kap. 9 Pokynů).
+
+P04    Odevzdáno více obálek, než bylo vydáno
+
+       Počet odevzdaných úředních obálek musí být menší nebo shodný s počtem voličů, kterým byla
+
+       vydána úřední obálka (kap. 9 Pokynů).
+
+P06    Více hlasovacích lístků s platným hlasem, než je odevzdaných obálek
+
+       Počet hlasovacích lístků s platným hlasem celkem musí být menší nebo shodný s počtem
+
+       odevzdaných úředních obálek (kap. 9 a 11 Pokynů).
+
+P07    Počet hlasovacích lístků s platným hlasem je roven nule
+
+       Počet hlasovacích lístků s platným hlasem nesmí být roven nule (kap. 11 Pokynů).
+
+                                              - 11 -
+ČSÚ                                 Volby do zastupitelstev obcí – program pro okrskové volební komise
+
+c) upozornění (informativní hlášky), jedná se o chyby upozorňující na méně pravděpodobné jevy, které ale mohou
+nastat; zkontrolovat, zda podezřelé hodnoty opravdu odpovídají reálně zjištěnému stavu:
+
+Číslo  Vysvětlující text
+I01
+       100% volební účast
+       Voleb se zúčastnily všechny osoby zapsané do výpisu ze seznamu voličů a jeho dodatku celkem -
+       zkontrolovat, zda se opravdu voleb zúčastnily (tj. byly jim okrskovou volební komisí vydány úřední
+       obálky pro hlasování) všechny osoby zapsané do výpisů ze seznamu voličů (tj. u všech voličů ve
+       výpisech si komise učinila záznam o vydání úřední obálky). Zkontrolovat správné zjištění údajů o
+       vydaných úředních obálkách a počtu osob v seznamech voličů (kap. 6 Pokynů).
+
+I02    Odevzdaných obálek je méně než 80 % vydaných
+
+       Odevzdaných úředních obálek je méně než 80 % vydaných úředních obálek a absolutní rozdíl je
+
+       větší než 10 - zkontrolovat správnost zjištění a zapsání údajů o odevzdaných a vydaných obálkách
+
+       (kap. 9 Pokynů).
+
+I03    Počet zapsaných voličů >= 2000
+
+       Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem by neměl být větší než
+
+       1999 - zkontrolovat zjištění údaje o počtu osob v seznamech voličů (kap. 6 Pokynů).
+
+I04    Malá volební účast
+
+       Voleb se zúčastnilo méně než 10 % osob zapsaných do výpisu ze seznamu voličů a jeho dodatku
+
+       celkem - zkontrolovat správnost zjištění a zapsání údajů o odevzdaných obálkách, příp. i počtu
+
+       osob v seznamech voličů (kap. 6 a 7 Pokynů).
+
+I05    Hlasovacích lístků s platným hlasem je méně než 85 % odevzdaných obálek
+
+       Počet hlasovacích lístků s platným hlasem je méně než 85 % odevzdaných úředních obálek a
+
+       absolutní rozdíl je větší než 2 (kap. 9 a 11 Pokynů).
+
+I06    Počet zapsaných voličů neodpovídá očekáváné hodnotě xxxxx
+
+       Rozdíl mezi počtem osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem
+
+       a předpokládaným počtem voličů (= očekávaná hodnota) musí být:
+
+       buď v rozmezí -9 až +14 absolutně, nebo v rozmezí -17 % až +30 %.
+
+I07    Velká volební účast
+
+       Voleb se zúčastnilo více než 90 % osob zapsaných do výpisu ze seznamu voličů a jeho dodatku
+
+       celkem (kap. 6 a 7 Pokynů).
+
+I15    Počet voličů s voličskými průkazy je více než 10 % vydaných obálek
+
+       Počet voličů, kteří hlasovali na voličský průkaz, je více než 10 % z vydaných úředních obálek (kap.
+
+       8 Pokynů).
+
+I16    Málo platných hlasů vzhledem k hlasovacím lístkům s platným hlasem
+
+       Je-li počet kandidátů alespoň dvakrát větší, než je počet volených zastupitelů, pak počet platných
+
+       hlasů ve volebním okrsku (celkem pro všechny volební strany) nesmí být menší než 60 % hlasů,
+
+       které mohli voliči dát (počet hlasovacích lístků s platným hlasem * počet volených zastupitelů).
+
+       V případě menšího násobku úměrně klesá hraniční procento (= 60 % * počet kandidátů/(2*počet
+
+       volených zastupitelů)) (kap. 11 a 12 Pokynů).
+
+Poznámka: informace k pořizování a opravám jsou v kapitole 5.1 tohoto plného návodu; při řešení chyb je vhodné
+nejprve zkontrolovat, zda nejde o překlep při zápisu zjištěného údaje a následně překontrolovat správnost
+postupu zjištění a zápisu údaje/údajů podle Pokynů pro okrskové volební komise, které jsou pro členy komisí
+k dispozici i v elektronické podobě na internetové stránce volby.gov.cz.
+
+                                       - 12 -
+

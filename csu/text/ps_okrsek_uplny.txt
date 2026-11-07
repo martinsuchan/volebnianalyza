@@ -1,0 +1,492 @@
+                       Volby do Poslanecké sněmovny
+                              Parlamentu ČR - 2025
+
+                     Pořízení dat okrskovými volebními komisemi
+
+                                                      Praha, 12. září 2025
+
+Obsah:
+
+1 Informace o aplikaci ........................................................................................................................ 1
+   1.1 Obecné informace.................................................................................................................. 1
+   1.2 Technická specifikace ............................................................................................................ 1
+
+2 Tisk a všeobecná doporučení ......................................................................................................... 2
+3 Instalace aplikace ........................................................................................................................... 2
+4 Spuštění aplikace............................................................................................................................ 4
+5 Popis aplikace................................................................................................................................. 4
+
+   5.1 Pořizování a oprava dat okrsku.............................................................................................. 4
+       5.1.1 Kontroly dat........................................................................................................................ 7
+       5.1.2 Export dat a tisk zápisu...................................................................................................... 7
+
+   5.2 Zrušení dat okrsku ................................................................................................................. 8
+6 Deinstalace aplikace ....................................................................................................................... 8
+7 Přílohy ............................................................................................................................................. 9
+
+   7.1 Příloha č. 1 - Seznam chyb v datových souborech................................................................ 9
+
+1 Informace o aplikaci
+
+1.1 Obecné informace
+
+Tato aplikace umožňuje pořízení výsledků hlasování ve volebním okrsku ve volbách do Poslanecké
+sněmovny Parlamentu ČR, jejich kontrolu, opravu, tisk zápisu a export dat pro zpracování na
+pracovišti ČSÚ vytvořené na pověřeném obecním úřadu, úřadu městské části nebo městského
+obvodu (dále jen “přebírací místo“).
+
+Spuštění aplikace se provádí pod systémem Windows kliknutím na ikonu “PS-pořízení číslo_okrsku“
+(resp. přes volbu Start - Volby2025 - PS-pořízení číslo_okrsku).
+
+Vstupem je pracovní verze tiskopisu T/4a a jeho přílohy a výstupem je vytisknutý tiskopis T/4a Zápis
+o průběhu a výsledku hlasování ve volebním okrsku a jeho přílohy č. 1 - Výsledky hlasování pro
+politické strany, politická hnutí a koalice ve volebním okrsku a data na technickém nosiči.
+
+Export dat je možno provést na flash disk s USB rozhraním (dále jen “USB disk“). Dále je umožněn
+export i do adresáře na lokální disk k případnému nakopírování na technický nosič (USB disk).
+K exportu dat nepoužívejte zápis na externí disk.
+
+Nápovědu lze kdykoliv vyvolat kliknutím na položku Nápověda v menu nebo stisknutím klávesy F1.
+
+Na dolní řádce okna je trvale zobrazeno číslo a název obce, číslo okrsku, číslo a název volebního
+kraje.
+
+1.2 Technická specifikace
+
+Tato aplikace je vytvořena v Delphi v. 12 a je určena pro počítač s operačním systémem Windows 10
+a 11 a laserovou nebo inkoustovou tiskárnu. Minimální požadovaný diskový prostor je 50 MB.
+ČSÚ  Volby do Poslanecké sněmovny - program pro okrskové volební komise
+
+2 Tisk a všeobecná doporučení
+
+      Před spuštěním zkontrolujte nastavení systémového data a času (zobrazeno i v informačním
+          okně po spuštění aplikace).
+
+      Neprovádějte žádné zásahy do používaných souborů.
+
+      Všechny tisky (kromě protokolu o instalaci) jsou prováděny pomocí preview, tzn., že je
+          příslušná tisková sestava zobrazena na obrazovce a k jejímu vytisknutí na tiskárnu je třeba
+          stisknout tlačítko Tisk, a poté uzavřít okno.
+
+      Tisk zápisu o výsledku hlasování je prováděn automaticky v počtu kopií dle zadání, poté je
+          zobrazeno preview zápisu k případnému dodatečnému vytisknutí další kopie zápisu. Pro
+          vytisknutí další kopie je nutno buď stisknout tlačítko Tisk tolikrát, kolik chcete kopií, nebo
+          v nastavení tiskárny (ikonka s tiskárnou ) nastavit počet kopií, popř. nastavit čísla stránek,
+          která chcete vytisknout, a potvrdit tlačítkem OK, potom stisknout tlačítko Tisk. Na přebírací
+          místo lze odevzdat s technickým nosičem pouze zápis, který je vytisknut současně při
+          exportu!
+
+      Tisk pomocného sčítacího archu (volba z menu Okrsek - Sčítací arch) slouží k vytisknutí
+          pomocného archu pro sčítání přednostních hlasů. K vytisknutí pouze vybraných stran
+          použijete nastavení tiskárny (ikonka s tiskárnou ), kde zadáte rozsah stran, které chcete
+          vytisknout, popř. počet kopií, nastavení potvrdíte tlačítkem OK, potom stiskněte tlačítko Tisk.
+
+      Zkušební tisk slouží k ověření správnosti tisků před zpracováním výsledků (volba z menu
+          Nápověda - Zkušební tisk).
+
+      Výběr tiskárny pro tisk (volby z menu Okrsek - Výběr tiskárny) umožňuje zvolit tiskárnu, na
+          kterou bude prováděn tisk sestav; lze si vybrat z tiskáren nainstalovaných ve Windows.
+
+3 Instalace aplikace
+
+Na jednom počítači je možná instalace jen jedné a té samé obce (městské části, městského
+obvodu) pro libovolný počet okrsků, instalační program si automaticky zjistí, která obec byla
+na počítači dříve nainstalována.
+Při první instalaci je možno si vybrat adresář, kam bude program nainstalován, při každé další
+se automaticky provádí instalace do stejného adresáře.
+
+Obsah instalace: PSokrsek.exe (demoverze PSkrsek_demo.exe).
+
+Pro úspěšné dokončení instalace je nutno mít připojenu tiskárnu, nepoužívejte tiskárnu připojenou
+přes wifi.
+
+Postup instalace:
+      spusťte PSokrsek.exe z technického nosiče, popř. adresáře, kde máte soubor nakopírován;
+      v úvodním okně potvrďte pokračování instalace stisknutím tlačítka "Spustit instalaci";
+     
+
+     -2-
+ČSÚ  Volby do Poslanecké sněmovny - program pro okrskové volební komise
+
+ zadejte a klávesou ENTER potvrďte požadované údaje zobrazované v průběhu instalace:
+
+          - při první instalaci (pokud nebyly již nainstalovány programy pro jiné volby,
+                resp. byly všechny předchozí instalace všech voleb odinstalovány-odebrány):
+
+                      Instalovat na disk: vyberte disk pro instalaci - změna zadáním písmena
+                           příslušného disku, automaticky je předvyplněn adresář pro instalaci (nabízen
+                           seznam možných disků, instalace je povolena pouze na lokální disk):
+
+                      Adresář: pokud nechcete provádět instalaci do předem nabídnutého
+                           adresáře, tlačítkem Změnit adresář si zvolte jiný (ten musí být předem
+                           vytvořen, podadresář Volby se v něm vytvoří automaticky při instalaci);
+
+                      pokračovat tlačítkem Pokračovat;
+          - při první instalaci prvního okrsku (resp. po odinstalování všech předchozích
+
+                instalací):
+
+                      Číslo obce - zadejte číslo obce dle identifikace okrsku (v demoverzi zadejte
+                           číslo 999999);
+
+                      Číslo okrsku - zadejte číslo okrsku dle identifikace okrsku (v demoverzi
+                           zadejte číslo 999);
+
+          - při instalaci dalšího okrsku stejné obce:
+                      Číslo obce - je vyplněno a nelze změnit
+                      Číslo okrsku - zadejte číslo okrsku dle identifikace okrsku;
+
+ po zadání všech údajů stiskněte tlačítko Instalovat; na tiskárně se vytiskne protokol o instalaci;
+ po nainstalování se pro spuštění programu vytvoří na ploše ikona “PS-Pořízení číslo_okrsku“.
+
+     Současně se vytvoří v nabídce Start podnabídka Volby2025 se zástupci “PS-Pořízení
+     číslo_okrsku“ a “Odebrat2025“ ;
+
+                                                            -3-
+ČSÚ  Volby do Poslanecké sněmovny - program pro okrskové volební komise
+
+4 Spuštění aplikace
+
+Spuštění aplikace se provádí pod systémem Windows kliknutím na ikonu “PS-pořízení číslo_okrsku“
+(resp. přes volbu Start - Volby2025 - PS-pořízení číslo_okrsku). Po spuštění se objeví základní
+nabídka ve formě menu. Dále je zobrazeno informační okno s aktuálním datem, časem (tyto údaje se
+uvádějí do zápisu) a licenčním číslem programu.
+
+5 Popis aplikace
+
+      Nápověda je kdykoliv vyvolatelná stisknutím klávesy F1
+      Některé akce je možno vyvolat stisknutím speciální jedné klávesy (hot-key), která je uvedena
+
+          vedle názvu akce v menu
+
+5.1 Pořizování a oprava dat okrsku
+
+Základem pořizování je pracovní verze vyplněného tiskopisu T/4a - Zápis o průběhu a výsledku
+hlasování ve volebním okrsku a jeho Přílohy č. 1 - Výsledky hlasování pro politické strany, politická
+hnutí a koalice ve volebním okrsku nebo pomocné sčítací archy. V průběhu pořizování jsou prováděny
+interaktivní kontroly. Pokud se vyskytne chyba, je možno buď chybu opravit, nebo potvrdit/ignorovat.
+Při vybrání volby Opravit se kurzor vrátí na právě pořízenou položku (popř. první položku, kde mohla
+chyba vzniknout). Při vybrání volby Potvrdit nebo Ignorovat se kurzor přesune na následující položku a
+lze dokončit pořizování dat. Ignorujete-li závažnou chybu, tzn. chybu, která nesmí být v zápise
+obsažena, musíte ji opravit ještě před tiskem zápisu a vytvářením exportu dat pro předání na
+přebíracím místě.
+
+Existují tři typy chyb:
+     a) závažné chyby - chyby, které musí být před vytvořením zápisu opraveny (chyba, která je
+          v seznamu v kap. 7.1 v bodě a)),
+     b) propustitelné chyby - chyby, které mohou nastat jen ve výjimečných případech (chyba, která je
+          v seznamu chyb v kap. 7.1 v bodě b)),
+     c) upozornění (informativní hlášky) - chyby upozorňující na méně pravděpodobné jevy, které ale
+          mohou nastat (chyba, která je v seznamu chyb v kap. 7.1 v bodě c)).
+
+Pokud údaje signalizující propustitelné chyby nebo upozornění odpovídají skutečnosti, neopravujte je,
+zápis o průběhu a výsledku hlasování (i export dat) se vytvoří. Na přebíracím místě budete vyzváni
+k uvedení možné příčiny těchto chyb (např. opravdu odvolili všichni oprávnění voliči, apod.) a budete
+podepisovat protokol.
+
+Jsou-li v datech jakékoliv závažné chyby, nelze vytvořit export dat ani vytisknout zápis.
+
+                                                                  -4-
+ČSÚ  Volby do Poslanecké sněmovny - program pro okrskové volební komise
+
+Vybráním volby Okrsek - Pořízení a oprava dat z menu, resp. stisknutím klávesy F2 z okna menu, se
+objeví pořizovací formulář.
+
+Celý pořizovací formulář je tvořen 4 záložkami:
+      T/4 - odd. I vyplnění údajů o průběhu hlasování (tiskopis T/4a - část I.);
+      T/4 - odd. II pořízení údajů z části II. tiskopisu T/4a včetně zaškrtnutí stran, které získaly
+                                alespoň jeden platný hlas;
+      Příloha č. 1 pořízení údajů z příloh k tiskopisu T/4a;
+      T/4 - odd. III vyplnění údajů o komisi (tiskopisu T/4a - část III.)
+
+Pohyb mezi políčky je pomocí kláves ENTER, TAB (SHIFT+TAB pro pohyb zpět) nebo myší. Přechod
+mezi záložkami je buď automaticky z posledního pořizovacího políčka záložky (viz níže), tlačítkem
+Pokračovat nebo pomocí klávesy PgDn (PageDown). Na předchozí záložku se dostanete klávesou
+PgUp (PageUp).
+
+Na první záložce T/4 - odd. I je automaticky vyplněna identifikace okrsku, tj. číslo obce, číslo okrsku,
+kontrolní číslo 1 a název obce. Zde se pořídí údaje o průběhu hlasování (zahájení, ukončení,
+přerušení, odročení, prodloužení), zda byly podány stížnosti a na kolika listech, zda byla použita
+přenosná volební schránka. Výběr na přepínačích nebylo odročeno/bylo odročeno, nebylo
+prodlouženo/bylo prodlouženo, nebylo přerušeno/bylo přerušeno, byly/nebyly podány stížnosti, resp.
+byla/nebyla použita přenosná schránka proveďte pomocí kliknutí myši na příslušný kroužek.
+
+Na druhé záložce T/4 - odd. II je automaticky vyplněna identifikace okrsku, tj. číslo obce, číslo okrsku
+a kontrolní číslo 1 a název obce.
+
+Na této záložce dále vyplníte (potvrdíte) počet osob zapsaných do výpisů ze seznamů, počet
+vydaných a odevzdaných obálek, počet platných hlasů celkem.
+
+                                                                  -5-
+ČSÚ  Volby do Poslanecké sněmovny - program pro okrskové volební komise
+
+V dolní části dále zaškrtnete strany, které v daném okrsku obdržely alespoň jeden platný hlas.
+Zaškrtnutí se provede kliknutím myši na čtvereček (resp. název strany) nebo stisknutím mezerníku na
+straně, na níž se nachází kurzor. Pohyb po seznamu stran je klávesou ENTER nebo šipkami.
+
+Klávesou PgDn (PageDown), klávesou ENTER na poslední straně v seznamu k zaškrtnutí stran nebo
+stisknutím tlačítka Pokračovat přejdete na záložku Příloha č. 1.
+
+V rozvinujícím se seznamu je uveden seznam stran, které získaly alespoň jeden platný hlas (seznam
+stran zaškrtnutých na záložce T/4 - odd. II). Ze seznamu si vyberte stranu, pro kterou chcete pořizovat
+data. Pohyb po rozvinutém seznamu je pomocí šipek nebo myši (seznam se rozvine po stisknutí šipky
+na kraji políčka). Pomocí šipek se mění obsah políčka i při zavřeném seznamu.
+
+Na této záložce pořídíte hlasy celkem pro vybranou stranu. Dále pořídíte přednostní hlasy pro
+kandidáty (násobky jsou vyplňovány automaticky). Pokud má strana méně než 36 kandidátů, přeskočí
+kurzor po pořízení hlasů poslednímu kandujícímu kandidátovi na položku o posledním kandidátovi,
+který získal alespoň jeden hlas (obsah položky poslední kandidát nelze měnit). Odtud se klávesou
+ENTER dostanete zpět na výběr strany, kde se automaticky nabídne další zaškrtnutá strana,
+v případě poslední zaškrtnuté strany se kurzor přesune na záložku T/4 - odd. III.
+
+Na poslední záložce T/4 - odd. III vyplníte počet členů komise celkem a přítomných (vyplněnost těchto
+dvou údajů je kontrolována), jména dále přítomných osob, jména osoby/osob pověřených předáním
+zápisu ČSÚ a jméno a příjmení zapisovatele (vyplněnost těchto dvou údajů je kontrolována). Podle
+zadaného počtu přítomných členů komise se vygeneruje tabulka s počtem řádků odpovídající počtu
+ostatních členů komise (bez zapisovatele), kam se doplní jména všech podpisu zápisu přítomných
+členů komise (bez zapisovatele) (vyplněnost všech jmen je testována), pro pohyb mezi řádky tabulky
+nelze použít klávesu TAB.
+
+     -6-
+ČSÚ  Volby do Poslanecké sněmovny - program pro okrskové volební komise
+
+Celé pořizování končí stisknutím tlačítka Uložit na záložce T/4 - odd. III nebo kdykoliv stisknutím
+klávesy F2. Po uložení dat následuje spuštění dávkových kontrol, o jejichž výsledku je zobrazen
+protokol o kontrolách, který je možno vytisknout (tisk - kap. 2).
+
+Pokud jsou data bez chyb nebo obsahují jen propustitelné chyby [seznam chyb kap. 7.1 - bod b)] nebo
+upozornění [seznam chyb kap. 7.1 - bod c)], je ihned po pořízení umožněno provést export dat a tisk
+zápisu OVK (kap. 5.1.2).
+
+Stisknutím tlačítka Zrušit (na záložce T/4 - odd. II) nebo zavřením okna můžete pořizování kdykoliv
+ukončit bez uložení změn provedených na právě aktuální záložce a provedení kontrol.
+
+Při přechodu mezi jednotlivými záložkami nebo změně strany na záložce Příloha č. 1 dochází
+k ukládání dat na disk.
+
+5.1.1 Kontroly dat
+
+Vybráním volby Okrsek - Kontroly je možno provést kompletní kontroly pořízených dat. Program se
+chová stejně jako při spuštění kontrol po volbě Uložit při pořizování dat, tzn. je zobrazen protokol
+o kontrolách.
+
+5.1.2 Export dat a tisk zápisu
+
+Vybráním volby Okrsek - Export dat a tisk zápisu lze provést na základě výsledku kontrol export dat a
+tisk celého zápisu T/4a a jeho přílohy č. 1.
+
+Export dat je umožněn na USB disk (vyjímatelné zařízení) nebo do adresáře Export (vytvořen
+v adresáři Volby, kam byla provedena instalace), ze kterého je možno soubor nakopírovat na libovolný
+technický nosič (USB disk). Seznam zařízení pro export je nabízen v závislosti na vložených
+technických nosičích.
+
+Před zvolením této volby je potřeba mít technický nosič, na který chcete export provést, připojen
+k počítači. Tlačítko Znovu načíst zařízení slouží k znovunačtení seznamu přístupných zařízení
+s vloženým (připojeným) nosičem, pokud není v seznamu uvedeno zařízení, na něž chcete data
+exportovat (uživatel zapomněl založit nosič před spuštěním exportu).
+
+Po spuštění se objeví sdělení, zda je možno vytvořit export dat a vytisknout zápis s výsledky.
+
+V případě, že lze data exportovat, objeví se následující okno (seznam zařízení je variabilní):
+
+      ze seznamu nabízených zařízení si vyberte to, na které chcete data exportovat (seznam
+          se rozvine stisknutím tlačítka se šipkou), pokud je připojen USB disk, je pro export
+          nabízen přednostně;
+
+      po stisknutí tlačítka Uložit jsou data exportována na zvolený cíl; současně se provede tisk
+          zápisu (tisk - kap. 2);
+
+      vyberete-li volbu Zrušit, data se neexportují ani se neprovede tisk zápisu.
+
+                                                            -7-
+ČSÚ  Volby do Poslanecké sněmovny - program pro okrskové volební komise
+
+Po úspěšně provedeném exportu je zobrazena informace, kam byl soubor s daty uložen. Pokud byl
+export prováděn na USB disk, k jeho odebrání/odpojení lze použít tlačítko .
+
+Poté je zobrazeno okno pro zadání počtu kopií zápisu o výsledku hlasování, které budou automaticky
+vytisknuty (minimálně jedenkrát). Zápis o výsledku hlasování je nutno vyhotovit ve dvou kopiích (tisk -
+kap. 2).
+
+Upozornění: Na přebírací místo lze odevzdat s technickým nosičem pouze zápis, který je
+                     vytisknut SOUČASNĚ při exportu!
+
+                     Při případném opakovaném exportu je nutno znovu vytisknout celý zápis, jinak
+                     nebude možno exportovaná dat použít při přejímce.
+
+                     Zápis je nutno vytisknout vcelku během jednoho spuštění, tzn., nezavírejte okno
+                     (preview) se zápisem o výsledku hlasování, dokud nemáte celý zápis v pořádku
+                     vytisknut. Zápis musí být vytisknut dvakrát.
+
+                     Zkontrolujte si, zda technický nosič, který budete odevzdávat na PM, obsahuje
+                     soubor s daty. Soubor má jméno OPoooooo.kkkkk (kde oooooo = číslo obce,
+                     kkkkk = číslo okrsku, např. OP529303.00001).
+
+5.2 Zrušení dat okrsku
+
+Vybráním volby Okrsek - Zrušení pořízených dat je možno zrušit všechna dosud pořízená data. Jedná
+se o data pořízená na záložkách T/4 - odd. II a Příloha č. 1. Údaje o průběhu voleb (záložky T/4 - odd.
+I a T/4 - odd. III) zůstávají zachovány (nedochází k jejich smazání).
+
+6 Deinstalace aplikace
+
+Odinstalování aplikace se provádí kliknutím na zástupce “Odebrat2025“ v nabídce Start - (Všechny
+programy) - Volby2025, kde si vyberete ze seznamu aplikaci, kterou chcete odinstalovat. Program
+smaže příslušné adresáře a zástupce.
+
+     -8-
+ČSÚ        Volby do Poslanecké sněmovny - program pro okrskové volební komise
+
+7 Přílohy
+
+7.1 Příloha č. 1 - Seznam chyb v datových souborech
+
+Pozn.: Ve vysvětlení kontrol je uváděn odkaz na příslušnou kapitolu Pokynů pro okrskové volební komise (dále
+jen "Pokyny").
+
+a) závažné chyby, jedná se o chyby, které musí být před vytvořením zápisu opraveny; je nutno zkontrolovat
+hodnoty (postup zjištění) a opravit dle skutečnosti:
+
+Číslo         Vysvětlující text
+Z08
+       Vydáno více obálek než je počet zapsaných voličů
+       Počet voličů, kterým byly vydány úřední obálky, musí být menší nebo shodný s počtem osob zapsaných
+       do výpisů ze stálého a zvláštního seznamu voličů celkem (kap. 7 Pokynů).
+
+Z15 Zakroužkovaná strana nekandiduje v tomto kraji (číslo)
+           Na tiskopise T/4 je zakroužkováno (strana dostala platný hlas) číslo strany, která v tomto volebním kraji
+           nekandiduje - kontrola na registr kandidátních listin (kap. 11 Pokynů).
+
+Z17 Strana nekandiduje v tomto volebním kraji
+           Příloha č. 1 k tiskopisu T/4 je vyplněna pro stranu, která v tomto volebním kraji nekandiduje, kontrola
+           proti registru kandidátních listin (kap. 11 Pokynů).
+
+Z19 Počet hlasů pro stranu > počet hlasů celkem
+           Počet platných hlasů pro každou stranu musí být menší nebo roven počtu platných hlasů ve volebním
+           okrsku celkem (kap. 11 Pokynů).
+
+Z20 Součet hlasů pro strany je různý od počtu hlasů celkem
+           Součet platných hlasů pro jednotlivé strany (uvedený na příloze č. 1) se musí rovnat počtu platných
+           hlasů ve volebním okrsku celkem (uvedený na tiskopise T/4) (kap. 10 a 11 Pokynů).
+
+Z22 Počet hlasů pro kandidáta > počet hlasů pro stranu (kand. číslo)
+           Počet přednostních hlasů u kandidáta musí být menší nebo roven počtu hlasů pro stranu (kap. 13
+           Pokynů).
+
+Z24 Součet hlasů kandidátů > 4 * počet hlasů pro stranu
+           Součet přednostních hlasů pro všechny kandidáty každé strany smí být roven maximálně čtyřnásobku
+           počtu hlasů pro tuto stranu (kap. 13 Pokynů).
+
+Z26 Přednostní hlasy u nekandidujícího kandidáta (číslo)
+           Na příloze č. 1 k tiskopisu T/4 má vyplněny přednostní hlasy kandidát s pořadovým číslem větším, než je
+           maximální pořadové číslo kandidáta na hlasovacím lístku strany (kap. 13 Pokynů).
+
+Z34 Nevyplněn / chybný některý z údajů na záložce T/4 - odd. III (seznam položek)
+           Na záložce Zápis - odd. III není vyplněn nebo je vyplněn chybně některý z doplňovaných údajů (kap. 14
+           Pokynů):
+           a) není vyplněn počet členů komise celkem;
+           b) není vyplněn počet přítomných členů komise;
+           c) počet přítomných členů není nadpoloviční většina;
+           d) počet přítomných členů > než celkový počet;
+           e) není vyplněno jméno pověřené osoby;
+           f) není vyplněno jméno zapisovatele;
+           g) není vyplněno jméno ostatního člena komise.
+
+Z37 Chybí příloha č. 1 k T/4 pro stranu (číslo)
+           Pro zakroužkovanou stranu na tiskopisu T/4 neexistuje příloha č. 1 k tiskopisu T/4 nebo je vyplněna pro
+           stranu s nulovým počtem platných hlasů (kap. 11 Pokynů).
+
+b) propustitelné chyby, jedná se o chyby, které mohou nastat jen v opravdu výjimečných případech, lze je
+propustit po ověření správnosti zjištění a zápisu údaje:
+
+Číslo Vysvětlující text
+P01 Počet zapsaných voličů je roven nule
+
+                                          -9-
+ČSÚ    Volby do Poslanecké sněmovny - program pro okrskové volební komise
+
+           Počet osob zapsaných do výpisů ze stálého a zvláštního seznamu voličů celkem nesmí být roven nule
+           (kap. 6 Pokynů).
+
+P02 Vydané obálky jsou rovny nule
+           Počet voličů, kterým byly vydány úřední obálky, nesmí být roven nule (kap. 7 Pokynů).
+
+P03 Odevzdané obálky jsou rovny nule
+           Počet odevzdaných úředních obálek nesmí být roven nule (kap. 8 Pokynů).
+
+P04 Odevzdáno více obálek, než bylo vydáno
+           Počet odevzdaných úředních obálek musí být menší nebo shodný s počtem voličů, kterým byly vydány
+           úřední obálky (kap. 8 Pokynů).
+
+P05 Platné hlasy celkem jsou rovny nule
+           Počet platných hlasů ve volebním okrsku celkem nesmí být roven nule (kap. 10 Pokynů).
+
+P06 Více platných hlasů, než je odevzdaných obálek
+           Počet platných hlasů ve volebním okrsku celkem musí být menší nebo shodný s počtem odevzdaných
+           úředních obálek (kap. 10 Pokynů).
+
+c) upozornění (informativní hlášky), jedná se o chyby upozorňující na méně pravděpodobné jevy, které ale mohou
+nastat; zkontrolovat, zda podezřelé hodnoty opravdu odpovídají reálně zjištěnému stavu:
+
+Číslo  Vysvětlující text
+I01
+       100% volební účast
+       Voleb se zúčastnily všechny osoby zapsané do výpisů ze stálého a zvláštního seznamu voličů celkem
+       (kap. 6 a 7 Pokynů).
+
+I02 Odevzdaných obálek je méně než 80 % vydaných
+           Odevzdaných úředních obálek je méně než 80 % vydaných úředních obálek a absolutní rozdíl je větší
+           než 10 (kap. 7 a 8 Pokynů).
+
+I03 Počet zapsaných voličů >= 2000
+           Počet osob zapsaných do výpisů ze stálého a zvláštního seznamu voličů celkem nesmí být větší nebo
+           roven 2000 (kap. 6 Pokynů).
+
+I04 Malá účast v hlasování
+           Voleb se zúčastnilo méně než 10 % osob zapsaných do výpisů ze stálého a zvláštního seznamu voličů
+           celkem a současně vydaných obálek je méně nebo rovno 150 (kap. 6 a 7 Pokynů).
+
+I05 Platných hlasů je méně než 90 % odevzdaných obálek
+           Počet platných hlasů ve volebním okrsku celkem je méně než 90 % odevzdaných úředních obálek a
+           absolutní rozdíl je větší než 2 (kap. 9 Pokynů).
+
+I06 Počet zapsaných voličů neodpovídá očekáváné hodnotě xxxxx
+           Rozdíl mezi počtem osob zapsaných do výpisů ze stálého a zvláštního seznamu celkem a počtem voličů
+           vedeným v registru okrsků musí být:
+           buď v rozmezí -9 až +14 absolutně, nebo v rozmezí -17 % až +30 %.
+
+I07 Velká volební účast
+           Voleb se zúčastnilo více než 88 % osob zapsaných do výpisů ze stálého a zvláštního seznamu voličů
+           celkem (kap. 6 a 7 Pokynů).
+
+I08 Příliš mnoho využitých přednostních hlasů celkem za okrsek
+           Pokud je odevzdáno celkově alespoň 5 platných hlasů, pak celkový počet uplatněných přednostních
+           hlasů za všechny strany má být menší než 60 % z teoreticky možných přednostních hlasů (kap. 13
+           Pokynů).
+
+I09 Málo nebo žádné přednostní hlasy celkem za okrsek
+           Pokud je odevzdáno celkově alespoň 15 platných hlasů, pak celkový počet uplatněných přednostních
+           hlasů za všechny strany má být alespoň 1 % z teoreticky možných přednostních hlasů (kap. 13 Pokynů).
+
+I10 Příliš mnoho využitých přednostních hlasů pro stranu č.: xx, xx, …
+
+       - 10 -
+ČSÚ  Volby do Poslanecké sněmovny - program pro okrskové volební komise
+
+           Pokud je pro volební stranu odevzdáno alespoň 15 hlasů, pak počet uplatněných přednostních hlasů
+           v rámci této strany má být menší než 80 % z teoreticky možných přednostních hlasů pro stranu (kap. 13
+           Pokynů).
+
+I11 Málo využitých přednostních hlasů pro stranu č.: xx, xx, …
+           Pokud je pro volební stranu odevzdáno alespoň 60 hlasů, pak v rámci této strany mají být uplatněny
+           alespoň 2 přednostní hlasy (kap. 13 Pokynů).
+
+Poznámka: Pokud nastane chyba I08 nebo I09, chyby I10 A I11 se již neprovádí.
+
+Poznámka: informace k pořizování a opravám jsou v kapitole 5.1 tohoto plného návodu; při řešení chyb je vhodné
+nejprve zkontrolovat, zda nejde o překlep při zápisu zjištěného údaje a následně překontrolovat správnost
+postupu zjištění a zápisu údaje/údajů podle Pokynů pro okrskové volební komise, které jsou pro členy komisí
+k dispozici i v elektronické podobě na internetové stránce volby.cz.
+
+     - 11 -
+

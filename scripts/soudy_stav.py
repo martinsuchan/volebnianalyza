@@ -51,15 +51,23 @@ def vyrok(t):
     if not re.search(r'U ?S ?N ?E ?S ?E ?N ?Í|R ?O ?Z ?S ?U ?D ?E ?K', t[:1500]):
         return ''
     m = re.search(r't ?a ?k ?t ?o ?:\s*(.{0,600})', t)
-    return re.split(r'O ?d ?ů ?v ?o ?d ?n ?ě ?n ?í', m.group(1))[0].strip() if m else ''
+    if not m:
+        return ''
+    v = re.split(r'O ?d ?ů ?v ?o ?d ?n ?ě ?n ?í', m.group(1))[0].strip()
+    if v.startswith('II'):  # pdftotext občas přesune výrok I. před slovo „takto:“
+        p = re.search(r'\bI\.\s.*$', t[max(0, m.start() - 500):m.start()])
+        if p:
+            v = p.group(0).strip() + ' ' + v
+    return v
 
 
 def stav(v):
-    if re.search(r'je neplatn|[Vv]yslovuje se neplatnost|vyhlašuje se|za zvolen', v): return 'vyhověno'
-    if re.search(r'z ?a ?m ?í ?t ?á', v): return 'zamítnuto'
-    if re.search(r'o ?d ?m ?í ?t ?á', v): return 'odmítnuto'
-    if 'zastavuje' in v: return 'zastaveno'
-    if 'postupuje' in v: return 'postoupeno'
+    s = v.replace(' ', '').lower()  # soudy píšou výrok často proloženě („j e n e p l a t n á“)
+    if re.search(r'jeneplatn|vyslovujeseneplatnost|vyhlašuje|zazvolen|řádnězvolen|zvolenýmčlenem|pořadínáhradník', s): return 'vyhověno'
+    if re.search(r'zamít(á|aj)', s): return 'zamítnuto'
+    if re.search(r'odmít(á|aj)', s): return 'odmítnuto'
+    if 'zastavuje' in s: return 'zastaveno'
+    if 'postupuje' in s: return 'postoupeno'
     return ''
 
 

@@ -1,0 +1,466 @@
+               Volby do Senátu Parlamentu ČR - 2026
+
+                Pořízení dat okrskovými volebními komisemi
+
+                                                       Praha, 8. října 2026
+
+Obsah:
+
+1 Informace o aplikaci ........................................................................................................................ 1
+   1.1 Obecné informace .................................................................................................................. 1
+   1.2 Technická specifikace ............................................................................................................ 1
+
+2 Tisk a všeobecná doporučení ......................................................................................................... 2
+3 Instalace aplikace ........................................................................................................................... 2
+4 Spuštění aplikace............................................................................................................................ 4
+5 Popis aplikace ................................................................................................................................. 5
+
+   5.1 Pořizování a oprava dat okrsku.............................................................................................. 5
+   5.2 Export dat a tisk zápisu .......................................................................................................... 8
+   5.3 Zrušení dat okrsku ................................................................................................................. 9
+6 Deinstalace aplikace ....................................................................................................................... 9
+7 Seznam chyb v datových souborech .............................................................................................. 9
+
+1 Informace o aplikaci
+
+1.1 Obecné informace
+
+Tato aplikace umožňuje pořízení výsledků hlasování ve volebním okrsku ve volbách do Senátu
+Parlamentu ČR, jejich kontrolu, opravu, tisk zápisu a export dat pro zpracování na pracovišti ČSÚ
+vytvořené na pověřeném obecním úřadu, úřadu městské části nebo městského obvodu (dále jen
+"přebírací místo").
+
+Spuštění aplikace se provádí kliknutím na ikonu "Senát-pořízení 1K číslo_okrsku.číslo_obvodu" pro
+1. kolo, resp. "Senát-pořízení 2K číslo_okrsku.číslo_obvodu" pro 2. kolo (resp. přes volbu Start –
+Senát-pořízení…).
+
+Vstupem jsou pracovní verze tiskopisu T/5 a výstupem je vyplněný tiskopis T/5 Zápis o průběhu a
+výsledku hlasování ve volebním okrsku a data na technickém nosiči.
+
+Export dat lze provést na flash disk s USB rozhraním (dále jen "USB disk"). Dále je umožněn export i
+do adresáře na lokálním disku k následnému nakopírování na technický nosič. K exportu dat
+nepoužívejte zápis na externí disk.
+
+Nápovědu lze kdykoliv vyvolat kliknutím na položku Nápověda v menu nebo stisknutím klávesy F1.
+
+Na dolním řádku okna je trvale zobrazeno číslo a název obce, číslo okrsku, kolo voleb a číslo a název
+volebního obvodu.
+
+1.2 Technická specifikace
+
+Tato aplikace je určena pro počítače s operačním systémem Windows 10 a 11 a nainstalovaným
+Microsoft Edge WebView2 v min. verzi 120 (standardní součást prohlížeče MS Edge ve Windows
+10 i 11), laserovou nebo inkoustovou tiskárnu. Minimální požadovaný diskový prostor je 50 MB.
+ČSÚ  Volby do Senátu Parlamentu ČR – program pro okrskové volební komise
+
+Jaká verze Microsoft Edge WebView2 Runtime je na počítači/notebooku nainstalována, lze ověřit
+takto:
+
+          • otevřete Průzkumník souborů a přejděte na tuto cestu:
+                C:\Program Files (x86)\Microsoft\EdgeWebView\Application
+
+          • Název složky, kterou uvnitř uvidíte (např. 131.0.2903.51), je přesné číslo verze
+                WebView2 (s nejnovějším datem)
+
+2 Tisk a všeobecná doporučení
+
+     • Před spuštěním zkontrolujte nastavení systémového data a času (zobrazeno i v informačním
+          okně po spuštění aplikace);
+
+     • Neprovádějte žádné zásahy do používaných souborů.
+
+     • Všechny tisky (kromě protokolu o instalaci) jsou prováděny pomocí preview, tzn., že je
+          příslušná tisková sestava zobrazena na obrazovce a k jejímu vytištění je třeba stisknout
+          tlačítko Tisk, a poté uzavřít okno.
+
+     • Tisk zápisu o výsledku hlasování je prováděn automaticky v počtu kopií dle zadání, poté je
+          zobrazeno preview zápisu k případnému dodatečnému vytisknutí další kopie zápisu. Pro
+          vytisknutí další kopie je nutno buď stisknout tlačítko Tisk tolikrát, kolik chcete kopií, nebo
+          v nastavení tiskárny (tlačítko Nastavení tiskárny) nastavit počet kopií, popř. nastavit čísla
+          stránek, která chcete vytisknout a potvrdit tlačítkem OK, potom stisknout tlačítko Tisk. Na
+          přebírací místo musí být odevzdán s technickým nosičem pouze zápis, který je
+          vytisknut současně při exportu!
+
+     • Zkušební tisk slouží k ověření správnosti tisků před zpracováním výsledků (volba z menu
+          Nápověda – Zkušební tisk).
+
+     • Výběr tiskárny pro tisk (volba z menu Okrsek – Výběr tiskárny) umožňuje zvolit tiskárnu, na
+          kterou bude prováděn tisk sestav; lze si vybrat z tiskáren nainstalovaných ve Windows.
+
+3 Instalace aplikace
+
+Na jednom počítači je možná instalace jen jedné obce (městské části, městského obvodu) pro
+libovolný počet okrsků. Instalační program si automaticky zjistí, která obec byla na počítač
+dříve nainstalována.
+Při první instalaci je možné si vybrat adresář, kam bude program nainstalován. Při každé další
+se automaticky provádí instalace do stejného adresáře.
+
+Obsah instalace: SEokrsek.exe, resp. SEokrsek2.exe pro 2. kolo
+                        (demoverze - SEokrsek_demo.exe, resp. SEokrsek2_demo.exe pro 2. kolo).
+
+Pro úspěšné dokončení instalace je nutno mít připojenou tiskárnu. Nepoužívejte tiskárnu připojenou
+přes wifi.
+
+Postup instalace:
+     • spusťte SEokrsek.exe z technického nosiče, popř. adresáře, kde máte instalaci
+          nakopírovánu;
+     • v úvodním okně potvrďte pokračování instalace stisknutím tlačítka "Spustit instalaci";
+
+     -2-
+ČSÚ  Volby do Senátu Parlamentu ČR – program pro okrskové volební komise
+
+• dále zadejte požadované údaje zobrazované v průběhu instalace a jejich zadání potvrďte je
+     klávesou ENTER:
+          - při první instalaci (pokud již nebyly nainstalovány programy pro jiné volby,
+                resp. byly všechny předchozí instalace všech voleb odinstalovány-odebrány):
+
+                     • Cílová složka: automaticky je nastaven adresář pro instalaci c:\volby
+                                • pokud nechcete provést instalaci do předem nabídnutého adresáře,
+                                      tlačítkem Procházet si zvolte jiný adresář (musí být předem vytvořen.
+                                      případně si jej můžete vytvořit pomocí Vytvořit novou složku);
+
+                     • pokračujte tlačítkem Další;
+          - při první instalaci prvního okrsku (resp. po odinstalování všech předchozích
+
+                instalací):
+
+                     • Číslo obce - zadejte číslo obce dle identifikace okrsku (v demoverzi zadejte
+                           číslo 999999)
+
+                     • Číslo okrsku - zadejte číslo okrsku dle identifikace okrsku (v demoverzi
+                           zadejte číslo 999)
+
+                                                            -3-
+ČSÚ                                      Volby do Senátu Parlamentu ČR – program pro okrskové volební komise
+     - při instalaci dalšího okrsku stejné obce:
+
+                     • Číslo obce: je vyplněno a nelze změnit
+                     • Číslo okrsku: zadejte číslo okrsku dle identifikace okrsku
+
+• po zadání všech údajů stiskněte tlačítko Instalovat;
+• potvrďte tlačítkem Další v okně "Průběh Instalace" dokončení kopírování souborů;
+• na tiskárně se vytiskne protokol o instalaci
+• poté stisknutím tlačítka Dokončit ukončíte instalaci programu:
+
+     • po nakopírování souborů se na ploše vytvoří ikona "Senát-pořízení 1K
+          číslo_okrsku.číslo_obvodu" pro 1. kolo, resp. "Senát-pořízení 2K číslo_okrsku.číslo_obvodu"
+          pro 2. kolo voleb pro spuštění programu a ikona "Odinstalovat Volby 2026" pro odinstalování
+          programu. Současně se v nabídce Start vytvoří zástupci "Senát-pořízení 1K
+          číslo_okrsku.číslo_obvodu", resp. "Senát-pořízení 2K číslo_okrsku.číslo_obvodu" a
+          "Odinstalovat Volby 2026".
+
+4 Spuštění aplikace
+
+Spuštění aplikace se provádí kliknutím na ikonu "Senát-pořízení 1K číslo_okrsku.číslo_obvodu" pro 1.
+kolo, resp. "Senát-pořízení 2K číslo_okrsku.číslo_obvodu" pro 2. kolo (resp. přes volbu Start – Senát-
+pořízení....). Po spuštění se objeví základní nabídka ve formě menu. Zobrazí se také informační okno
+s aktuálním datem, časem (tyto údaje se uvádějí do zápisu) a licenčním číslem programu.
+
+                                                                  -4-
+ČSÚ  Volby do Senátu Parlamentu ČR – program pro okrskové volební komise
+
+5 Popis aplikace
+
+     • Nápověda pro jednotlivé akce lze kdykoliv vyvolat stisknutím klávesy F1.
+     • Některé akce je možno vyvolat stisknutím speciální klávesy (hot-key), která je uvedena vedle
+
+          názvu akce v menu.
+
+5.1 Pořizování a oprava dat okrsku
+
+Základem pořizování je pracovní verze tiskopisu T/5 - Zápis o průběhu a výsledku hlasování ve
+volebním okrsku. V průběhu pořizování jsou prováděny interaktivní kontroly. Pokud se vyskytne
+chyba, je možno ji buď chybu opravit, nebo potvrdit/ignorovat. Při výběru volby Opravit se kurzor vrátí
+na právě pořízenou položku (popř. první položku, kde mohla chyba vzniknout). Při výběru volby
+Potvrdit / Ignorovat se kurzor přesune na následující položku a lze dokončit pořizování dat. Ignorujete-
+li závažnou chybu, tzn. chybu, která nesmí být v zápise obsažena, musíte ji opravit ještě před tiskem
+zápisu a vytvořením exportu dat pro předání na přebíracím místě.
+
+Existují tři typy chyb:
+     a) závažné chyby - chyby, které musí být před vytvořením zápisu opraveny (viz seznam chyb
+          v kap. 7, bod a)),
+     b) propustitelné chyby - chyby, které mohou nastat jen ve výjimečných případech (viz seznamu
+          chyb v kap. 7, bod b)),
+     c) upozornění (informativní hlášky) - chyby upozorňující na méně pravděpodobné jevy, které ale
+          mohou nastat (viz seznam chyb v kap. 7, bod c)).
+
+Pokud údaje signalizující propustitelné chyby nebo upozornění odpovídají skutečnosti, neopravujte je,
+zápis o průběhu a výsledku hlasování (i export dat) se vytvoří. Na PM budete vyzváni k uvedení
+možné příčiny těchto chyb (např. skutečně odvolili všichni oprávnění voliči apod.) a budete
+podepisovat protokol.
+
+Jsou-li v datech jakékoliv závažné chyby, nelze vytvořit export dat ani vytisknout zápis.
+
+                                                                  -5-
+ČSÚ                          Volby do Senátu Parlamentu ČR – program pro okrskové volební komise
+
+Po vybrání volby Okrsek - Pořízení dat nebo stisknutím klávesy F2 se objeví pořizovací formulář.
+
+Celý pořizovací formulář má 4 záložky:
+
+• T/5 - odd. I                          vyplnění údajů o průběhu hlasování (tiskopis T/5 - část I.),
+
+• T/5 - odd. II                         pořízení údajů z první strany tiskopisu T/5 (část II.),
+
+• T/5 - odd. II pokračování             pořízení údajů z druhé strany tiskopisu T/5 (část II. -
+
+                                        pokračování) - počty hlasů pro jednotlivé kandidáty,
+
+• T/5 - odd. III                        vyplnění údajů o komisi k podepsání a předání zápisu
+
+                                        (tiskopis T/5 - část III.).
+
+Mezi políčky se lze pomocí kláves ENTER a TAB (SHIFT+TAB pro pohyb zpět) nebo myší. Mezi
+záložkami lze přecházet automaticky z posledního pořizovacího políčka záložky (viz níže), tlačítkem
+Pokračovat nebo pomocí klávesy PgDn (PageDown). Na předchozí záložku se dostanete klávesou
+PgUp (PageUp).
+
+Na první záložce T/5 - odd. I je vyplněna identifikace okrsku, tj. číslo obce, číslo okrsku, kontrolní číslo
+1, a název obce. Na této záložce se pořizují údaje o průběhu hlasování (zahájení, ukončení,
+přerušení, odročení, prodloužení), zda byly podány stížnosti a na kolika listech, zda byla použita
+přenosná volební schránka. Volbu na přepínačích nebylo odročeno/bylo odročeno, nebylo
+prodlouženo/bylo prodlouženo, nebylo přerušeno/bylo přerušeno, byly/nebyly podány stížnosti, resp.
+byla/nebyla použita přenosná schránka proveďte kliknutím myši na příslušný kroužek.
+
+Na druhé záložce T/5 - odd. II. je automaticky vyplněna identifikace okrsku, tj. číslo obce, číslo okrsku,
+kontrolní číslo 1, název obce, číslo obvodu a kolo voleb.
+
+Na této záložce dále vyplníte (potvrdíte) počet osob zapsaných do výpisů ze seznamů, počet
+vydaných a odevzdaných úředních obálek, počet platných hlasů celkem. Kontrolní číslo 2 se plní
+automaticky podle zadaných údajů.
+
+                                                                  -6-
+ČSÚ  Volby do Senátu Parlamentu ČR – program pro okrskové volební komise
+
+Po vyplnění počtu platných hlasů celkem se kurzor přesune automaticky na záložku T/5 - odd. II
+pokračování.
+
+Na této záložce pořídíte hlasy pro jednotlivé kandidáty (násobky jsou vyplňovány automaticky).
+U platných kandidátů je vyplněno jméno kandidáta, u neplatných nebo nekandidujících je jméno
+proškrtnuto. Kontrolní číslo 3, Kontrolní číslo 4 a Poslední kandidát se plní automaticky podle
+zadaných údajů. Po pořízení hlasů poslednímu platnému kandidátovi se kurzor přesune na tlačítko
+Pokračovat a poté na záložku T/5 - odd. III.
+
+Na poslední záložce T/5 - odd. III vyplníte počet členů komise celkem a přítomných, jméno a příjmení
+zapisovatele (vyplněnost těchto všech údajů je kontrolována). Podle zadaného počtu přítomných
+členů komise se vygeneruje tabulka s počtem řádků odpovídající počtu ostatních členů komise (bez
+zapisovatele), kam doplníte jména všech členů komise přítomných podpisu zápisu (bez zapisovatele)
+(vyplněnost všech jmen je kontrolována), pro pohyb mezi řádky tabulky nelze použít klávesu TAB.
+Dále vyplníte jména osoby/osob pověřených předáním zápisu ČSÚ (vyplněnost položky je
+kontrolována) a případně i jména dále přítomných osob v době vyhotovení zápisu.
+
+Pořizování dokončíte stisknutím tlačítka Uložit v horní liště (tlačítko lze stisknout i kdykoli v průběhu
+pořizování), po jeho stisknutí se spustí dávkové kontroly, jejichž výsledky se zobrazí v protokolu
+o kontrolách, který lze vytisknout (tisk - kap. 0).
+Pokud jsou data bez chyb nebo obsahují jen propustitelné chyby (viz seznam chyb kap. 7, bod b)) či
+upozornění (viz seznam chyb kap. 7, bod c)), lze ihned po pořízení umožněno provést export dat a tisk
+zápisu OVK (kap. 5.2).
+
+                                                                  -7-
+ČSÚ  Volby do Senátu Parlamentu ČR – program pro okrskové volební komise
+
+Stisknutím tlačítka Zrušit v horní liště nebo zavřením okna můžete pořizování kdykoliv ukončit. Změny
+provedené na aktuální záložce se neuloží a kontroly se neprovedou.
+
+Při přechodu mezi jednotlivými záložkami dochází k ukládání dat na disk.
+
+5.2 Export dat a tisk zápisu
+
+Po výběru volby Okrsek – Export dat a tisk zápisu lze provést na základě výsledku kontrol export dat a
+tisk celého zápisu T/5.
+
+Data lze exportovat na USB disk (vyjímatelné zařízení) nebo do adresáře Export (vytvořeného
+v adresáři, kam byla provedena instalace), ze kterého je možno soubor nakopírovat na libovolný
+technický nosič. Seznam zařízení pro export je nabízen v závislosti na vybavení použitého počítače a
+na vložených technických nosičích.
+
+Před zvolením této volby je potřeba mít technický nosič, na který chcete export provést,
+vložený/zasunutý do počítače. Tlačítko Znovu načíst zařízení slouží k znovunačtení seznamu
+přístupných zařízení s vloženým (připojeným) nosičem, pokud není v seznamu uvedeno zařízení, na
+které chcete data exportovat (uživatel zapomněl založit nosič před spuštěním exportu).
+
+Po spuštění se zobrazí sdělení, zda lze vytvořit export dat a vytisknout zápis s výsledky.
+
+V případě, že lze data exportovat, objeví se následující okno (seznam zařízení je variabilní):
+
+          • ze seznamu nabízených zařízení vyberte to, na které chcete data exportovat (seznam se
+                rozbalí stisknutím tlačítka se šipkou); pokud je připojen USB disk, je pro export nabízen
+                přednostně;
+
+          • po stisknutí tlačítka Uložit jsou data exportována na zvolený cíl; současně se provede tisk
+                zápisu (viz tisk - kap. 0);
+
+          • vyberete-li volbu Zrušit, data se neexportují ani se nevytiskne zápisu.
+
+Po úspěšně provedeném exportu je zobrazena informace, kam byl soubor s daty uložen.
+
+Poté se zobrazí okno pro zadání počtu kopií zápisu o výsledku hlasování, které budou automaticky
+vytištěny (nejméně jedna kopie). Zápis o výsledku hlasování je nutno vyhotovit ve dvou kopiích (viz
+tisk - kap. 0).
+
+Upozornění: Na přebírací místo musí být odevzdán s technickým nosičem pouze zápis, který
+                     je vytištěn současně při exportu!
+
+                     Při případném opakovaném exportu je nutné znovu vytisknout celý zápis, jinak
+                     nebude možné exportovaná data použít při přejímce.
+
+                     Zápis je nutno vytisknout vcelku během jednoho spuštění, tzn., nezavírejte okno
+                     (preview) se zápisem o výsledku hlasování, dokud nemáte celý zápis v pořádku
+                     vytisknut. Zápis musí být vytištěn dvakrát.
+
+                                                                  -8-
+ČSÚ    Volby do Senátu Parlamentu ČR – program pro okrskové volební komise
+
+5.3 Zrušení dat okrsku
+
+Po výběru volby Okrsek – Zrušení pořízených dat lze zrušit všechna dosud pořízená data. Jedná se
+o data pořízená na záložkách T/5 - odd. III a T/5 - odd. II pokračování. Údaje o průběhu voleb (záložky
+T/5 - odd. I a T/5 - odd. III) zůstávají zachovány (nedojde k jejich smazání).
+
+6 Deinstalace aplikace
+
+Odinstalování aplikace se provádí kliknutím na ikonu "Odinstalovat Volby 2026", popř. v nabídce Start
+zástupce "Odinstalovat Volby 2026", kde ze seznamu vyberte aplikaci, kterou chcete odinstalovat.
+Program smaže příslušné adresáře a zástupce.
+
+7 Seznam chyb v datových souborech
+
+Pozn.: Ve vysvětlení kontrol je uváděn odkaz na příslušnou kapitolu Pokynů pro okrskové volební komise (dále
+jen "Pokyny").
+
+a) závažné chyby, jedná se o chyby, které musí být před vytvořením zápisu opraveny; je nutno zkontrolovat
+hodnoty (postup zjištění) a opravit dle skutečnosti:
+
+Číslo  Vysvětlující text
+Z05
+       Chybné číslo obvodu [(číslo)]
+       Číslo obvodu neodpovídá zadanému okrsku (kap. 5 Pokynů).
+
+Z06 Chybné číslo kola [(číslo)]
+           Číslo kola neodpovídá aktuálně zpracovávanému kolu voleb do Senátu (kap. 5 Pokynů).
+
+Z08 Vydáno více obálek, než je počet zapsaných voličů
+           Počet voličů, kterým byly vydány úřední obálky, musí být menší nebo shodný s počtem osob zapsaných
+           do výpisů ze stálého a zvláštního seznamu celkem (kap. 6 Pokynů).
+
+Z19 Počet hlasů pro kandidáta > počet hlasů celkem (kand. číslo)
+           Počet platných hlasů pro kandidáta musí být menší nebo roven počtu platných hlasů ve volebním okrsku
+           celkem (kap. 10 a 11 Pokynů).
+
+Z20 Součet platných hlasů kandidátů <> počet platných hlasů celkem
+           Součet platných hlasů pro všechny kandidáty se musí rovnat počtu platných hlasů ve volebním okrsku
+           celkem (kap. 10 a 11 Pokynů).
+
+Z26 Platné hlasy u nekandidujícího kandidáta (číslo)
+           Jsou vyplněny hlasy pro kandidáta s číslem větším, než je maximální číslo kandidáta pro daný obvod
+           (kap. 9 a 11 Pokynů).
+
+Z32 Hlasy pro neplatného kandidáta (číslo)
+           Jsou vyplněny hlasy pro neplatného kandidáta (kap. 9 a 11 Pokynů).
+
+Z33 Hlasy ve 2. kole voleb pro neplatného kandidáta (číslo)
+           Jsou vyplněny hlasy pro kandidáta, který nepostoupil do druhého kola voleb do Senátu (kap. 9 a 16
+           Pokynů).
+
+Z34 Nevyplněn / chybný některý z údajů záložce T/5 - odd. III (seznam položek)
+           Na záložce T/5 - odd. III není vyplněn nebo je vyplněn chybně některý z doplňovaných údajů (kap. 12
+           Pokynů):
+           a) není vyplněn počet členů komise celkem;
+           b) není vyplněn počet přítomných členů komise;
+           c) počet přítomných členů není nadpoloviční většina;
+           d) počet přítomných členů > než celkový počet;
+           e) není vyplněno jméno pověřené osoby
+           f) není vyplněno jméno zapisovatele;
+           g) není vyplněno jméno ostatního člena komise.
+
+       -9-
+ČSÚ    Volby do Senátu Parlamentu ČR – program pro okrskové volební komise
+
+Z44 Počet voličů s voličskými průkazy > počet vydaných obálek
+           Počet voličů, kteří hlasovali na voličský průkaz, musí být menší nebo shodný s počtem voličů, kterým
+           byly vydány úřední obálky (kap. 6 a 8 Pokynů).
+
+b) propustitelné chyby, jedná se o chyby, které mohou nastat jen v opravdu výjimečných případech, lze je
+propustit po ověření správnosti zjištění a zápisu údaje:
+
+Číslo  Vysvětlující text
+P01
+       Počet zapsaných voličů je roven nule
+       Počet osob zapsaných do výpisů ze stálého a zvláštního seznamu celkem nesmí být roven nule (kap. 5
+       Pokynů).
+
+P02 Vydané obálky jsou rovny nule
+           Počet voličů, kterým byly vydány úřední obálky, nesmí být roven nule (kap. 6 Pokynů).
+
+P03 Odevzdané obálky jsou rovny nule
+           Počet odevzdaných úředních obálek nesmí být roven nule (kap. 8 Pokynů).
+
+P04 Odevzdáno více obálek, než bylo vydáno
+           Počet odevzdaných úředních obálek musí být menší nebo shodný s počtem voličů, kterým byly vydány
+           úřední obálky (kap. 8 Pokynů).
+
+P05 Platné hlasy celkem jsou rovny nule
+           Počet platných hlasů ve volebním okrsku celkem nesmí být roven nule (kap. 10 Pokynů).
+
+P06 Více platných hlasů, než je odevzdaných obálek
+           Počet platných hlasů ve volebním okrsku celkem musí být menší nebo shodný s počtem odevzdaných
+           úředních obálek (kap. 10 Pokynů).
+
+c) upozornění (informativní hlášky), jedná se o chyby upozorňující na méně pravděpodobné jevy, které ale mohou
+nastat; zkontrolovat, zda podezřelé hodnoty opravdu odpovídají reálně zjištěnému stavu:
+
+Číslo  Vysvětlující text
+I01
+       100% volební účast
+       Voleb se zúčastnily všechny osoby zapsané do výpisů ze stálého a zvláštního seznamu celkem
+       zkontrolovat, zda se opravdu voleb zúčastnily (tj. byly jim okrskovou volební komisí vydány úřední obálky
+       pro hlasování) všechny osoby zapsané do výpisů ze seznamu voličů (tj. u všech voličů ve výpisech si
+       komise učinila záznam o vydání úřední obálky). Zkontrolovat správné zjištění údajů o vydaných úředních
+       obálkách a počtu osob v seznamech voličů (viz kap. 5 Pokynů).
+
+I02 Odevzdaných obálek je méně než 80 % vydaných
+           Odevzdaných úředních obálek je méně než 80 % vydaných úředních obálek a absolutní rozdíl je větší
+           než 10 - zkontrolovat správnost zjištění a zapsání údajů o odevzdaných a vydaných obálkách (kap. 8
+           Pokynů).
+
+I03 Počet zapsaných voličů >= 2000
+           Počet osob zapsaných do výpisů ze stálého a zvláštního seznamu celkem nesmí být větší než 1999 -
+           zkontrolovat zjištění údaje o počtu osob v seznamech voličů (kap. 5 Pokynů).
+
+I04 Malá volební účast
+           Pro 1. kolo: Voleb se zúčastnilo méně než 10 % osob zapsaných do výpisů ze stálého a zvláštního
+           seznamu celkem - zkontrolovat správnost zjištění a zapsání údajů o odevzdaných obálkách, příp. i počtu
+           osob v seznamech voličů (kap. 5 a 6 Pokynů).
+           Pro 2. kolo: Voleb se zúčastnilo méně než 5 % osob zapsaných do výpisů ze stálého a zvláštního
+           seznamu celkem - zkontrolovat správnost zjištění a zapsání údajů o odevzdaných obálkách, příp. i počtu
+           osob v seznamech voličů (kap. 5 a 6 Pokynů).
+
+       - 10 -
+ČSÚ  Volby do Senátu Parlamentu ČR – program pro okrskové volební komise
+
+I05 Platných hlasů je méně než 75 % odevzdaných obálek
+           Platných hlasů ve volebním okrsku celkem je méně než 75 % odevzdaných úředních obálek -
+           zkontrolovat správnost zjištění a zapsání údajů o odevzdaných obálkách a o celkovém počtu platných
+           hlasů pro všechny kandidáty (kap. 8 a 10 Pokynů).
+
+I06 Počet zapsaných voličů neodpovídá očekáváné hodnotě xxxxx
+           Rozdíl mezi počtem osob zapsaných do výpisů ze stálého a zvláštního seznamu celkem a
+           předpokládaným počtem voličů (= očekávaná hodnota) musí být:
+           buď v rozmezí -9 až +14 absolutně, nebo v rozmezí -17 % až +30 %.
+
+I07 Velká volební účast
+           Voleb se zúčastnilo více než 80 % osob zapsaných do výpisu ze seznamu voličů celkem - zkontrolovat
+           správnost zjištění a zapsání údajů o odevzdaných obálkách, příp. i počtu osob v seznamech voličů (kap.
+           5 Pokynů).
+
+I15 Počet voličů s voličskými průkazy je více než 10 % vydaných obálek
+           Počet voličů, kteří hlasovali na voličský průkaz, je více než 10 % z vydaných úředních obálek (kap. 8
+           Pokynů).
+
+Poznámka: informace k pořizování a opravám jsou v kapitole 5.1 tohoto plného návodu; při řešení chyb je vhodné
+nejprve zkontrolovat, zda nejde o překlep při zápisu zjištěného údaje a následně překontrolovat správnost
+postupu zjištění a zápisu údaje/údajů podle Pokynů pro okrskové volební komise, které jsou pro členy komisí
+k dispozici i v elektronické podobě na internetové stránce volby.gov.cz.
+
+     - 11 -
+

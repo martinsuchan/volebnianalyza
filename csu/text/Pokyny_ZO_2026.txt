@@ -1,0 +1,1601 @@
+                                                                                        ČESKÝ STATISTICKÝ ÚŘAD
+                                                                                                  Č.j.: CSU-520065/2026
+
+   POKYNY
+
+     PRO OKRSKOVÉ VOLEBNÍ KOMISE
+
+                 ZJIŠŤOVÁNÍ VÝSLEDKŮ HLASOVÁNÍ VE VOLEBNÍM OKRSKU
+REALIZACE ZÁVAZNÉHO SYSTÉMU ZJIŠŤOVÁNÍ A ZPRACOVÁNÍ VÝSLEDKŮ VOLEB
+
+                                                2026
+                                      OBSAH
+
+    Informace ke zpracování Zápisu o průběhu a výsledku hlasování ve volebním okrsku (tiskopisu T/3)…. 3
+
+      Okrsková volební komise postupuje dle následujících kroků a je povinna:
+
+      1. Zajistit, aby ve volební místnosti byly přítomny pouze oprávněné osoby ......................................... 4
+      2. Určit pořadí zpracování výsledků hlasování v okrsku při společném konání voleb ............................ 4
+      3. Vyčlenit nepoužité hlasovací lístky................................................................................................... 5
+      4. Zapečetit nepoužité hlasovací lístky a nepoužité úřední obálky ....................................................... 5
+      5. Vyplnit identifikační a časové údaje do Zápisu (tiskopisu T/3).......................................................... 5
+      6. Vyplnit typ voleného zastupitelstva a údaj o počtu osob v seznamech voličů ................................... 6
+      7. Zjistit počet voličů, kterým byly vydány úřední obálky ..................................................................... 7
+      8. Zjistit počet voličů, kteří hlasovali na voličský průkaz....................................................................... 8
+      9. Zjistit počet odevzdaných úředních obálek ...................................................................................... 8
+     10. Posoudit platnost hlasů a přidělit hlasy jednotlivým kandidátům ................................................... 9
+     11. Zjistit počet hlasovacích lístků, které jsou platným hlasem voliče ................................................. 13
+     12. Zjistit počet hlasů pro jednotlivé kandidáty .................................................................................. 13
+     13. Zjistit počet hlasů pro volební strany ............................................................................................ 15
+     14. Zjistit počet hlasů ve volebním okrsku celkem .............................................................................. 17
+     15. Dokončit a zkontrolovat Zápis ...................................................................................................... 18
+     16. Podepsat Zápis a souhrnný hlasovací lístek (2 stejnopisy) ............................................................. 19
+     17. Předat výsledky hlasování ČSÚ ..................................................................................................... 20
+     18. Převzít doklady o uložení výsledků hlasování do systému ČSÚ ...................................................... 21
+     19. Uložit volební dokumentaci a ukončit zasedání komise ve dnech voleb ........................................ 21
+
+Český statistický úřad (dále jen „ČSÚ“) podle § 12 odst. 1 písm. b) zákona č. 88/2024 Sb., o správě voleb,
+ve znění pozdějších předpisů (dále jen „ZSV“), vypracovává systém zjišťování výsledků voleb, jehož součástí
+jsou Pokyny pro okrskové volební komise (dále jen „Pokyny“). Pokyny konkretizují postup okrskových volebních
+komisí v návaznosti na příslušná ustanovení ZSV a zákona č. 491/2001 Sb., o volbách do zastupitelstev obcí
+a o změně některých zákonů, ve znění pozdějších předpisů (dále jen „volební zákon“), a obsahují vzor tiskopisu
+Zápisu o průběhu a výsledku hlasování ve volebním okrsku. Tyto Pokyny jsou základním metodickým
+materiálem pro okrskové volební komise při zjišťování výsledků hlasování.
+
+Obce, v nichž ČSÚ vytváří svá pracoviště (dále jen „přebírací místa“) jsou stanoveny v Příloze č. 1 vyhlášky
+č. 353/2025 Sb., o provedení zákona o správě voleb (dále jen „vyhláška“), území spadající pod jednotlivá
+pracoviště budou zveřejněna na webových stránkách ČSÚ a členům okrskových volebních komisí bude
+příslušné přebírací místo sděleno při školení.
+
+Pod pojmem „zastupitelstvo obce“ se rozumí rovněž zastupitelstvo městysu, města, zastupitelstvo územně
+členěného statutárního města a zastupitelstvo hl. m. Prahy. Pokud se uvádí pojem „zastupitelstvo městské
+části nebo městského obvodu“, rozumí se tím zastupitelstva městských částí hl. m. Prahy a zastupitelstva
+městských částí nebo městských obvodů v územně členěných statutárních městech.
+
+V Pokynech je v příkladu uvedena vzorová obec Sebranice:
+
+                    volí se 7 členů zastupitelstva,
+                    kandidát č. 4 (GH) volební strany A a kandidát č. 5 (EG) volební strany H se do 48 hodin
+
+                        před zahájením voleb vzdali své kandidatury, ostatní kandidáti jsou platní,
+                    volební strany A a C využily možnost navrhnout o třetinu větší počet kandidátů, než je počet
+
+                        volených zastupitelů (dle § 22 odst. 2 volebního zákona).
+
+Kontakt na pracovníka ČSÚ bude sdělen při školení okrskových volebních komisí:….……………………..
+
+Důležité internetové stránky:         www.volby.cz
+(Pokyny pro okrskové volební komise,  ………………………………………………………………………
+programové vybavení ČSÚ, pomocné
+sčítací archy, příklady vyhodnocení
+hlasů.)
+
+                                            PC TIP  Příklad  Upozornění Kontrola
+
+                                      2
+  Informace ke zpracování Zápisu o průběhu a výsledku hlasování ve volebním okrsku
+  (tiskopisu T/3) okrskovou volební komisí
+
+Způsoby zpracování výsledků hlasování ve volebním okrsku (dále jen „okrsek“) okrskovou volební
+komisí (dále jen „komise“):
+
+a) ruční do tištěného tiskopisu T/3:
+
+      komise vyhotoví ve dvou stejnopisech Zápis o průběhu a výsledku hlasování ve volebním
+          okrsku (dále jen „Zápis“),
+
+      povinnou přílohou k Zápisu je souhrnný hlasovací lístek označený „Výsledky za okrsek č....“,
+          který komise vyhotoví rovněž ve dvou stejnopisech a na kterém zapíše zjištěné počty hlasů pro
+          jednotlivé kandidáty a volební strany,
+
+      všechny číselné údaje v předtištěných rastrech tiskopisu se vyplňují k pravému okraji, volná místa
+          vlevo zůstávají prázdná - nedoplňují se nulami,
+
+      v dalších samostatných přílohách k Zápisu se uvádí: stručný obsah oznámení a stížností, které byly
+          komisi podány, usnesení, která komise přijala, a jejich stručné zdůvodnění,
+
+      tiskopis T/3 má komise k dispozici před začátkem sčítání hlasů.
+
+b) s využitím výpočetní techniky a zapsáním údajů do programového vybavení ČSÚ:
+
+      komise může pro vyhotovení Zápisu využít počítač, v tom případě využije programové vybavení ČSÚ
+          (dále jen „program ČSÚ“), dle § 65 odst. 3 ZSV,
+
+      tiskové výstupy z programu ČSÚ nahrazují tiskopis T/3 (Zápis) a souhrnný hlasovací lístek,
+          po vytištění členové komise vytištěný Zápis a souhrnný hlasovací lístek zkontrolují a podepíší,
+
+      k vybavení komisí počítačem s tiskárnou budou podle svých možností nápomocné příslušné obecní
+          a městské úřady, pověřené obecní úřady, úřady městských částí, úřady městských obvodů, krajské
+          úřady, magistráty měst a Magistrát hl. m. Prahy; technické parametry počítače a tiskárny sdělí ČSÚ ve
+          spolupráci s výše uvedenými úřady (je možné i použití počítače zajištěného členem komise),
+
+      program ČSÚ, včetně návodu k jeho instalaci a použití, lze získat na internetové adrese www.volby.cz,
+      obsluhu počítače a programu ČSÚ ve volební místnosti při sčítání hlasů a zpracování Zápisu,
+
+          včetně souhrnného hlasovacího lístku, musí provádět člen komise (instalaci před ukončením
+          hlasování mohou provést i jiné osoby),
+      v programu jsou již zaneseny volební strany a jejich kandidáti pro příslušné zastupitelstvo,
+      po spuštění programu ČSÚ vyplní komise všechny zjištěné údaje a program ČSÚ sám vypočte kontrolní
+          čísla a součty,
+      v průběhu vkládání údajů jsou kontrolovány logické vazby mezi nimi, komise je tak na
+          případné chybné nebo podezřelé údaje upozorněna a může je ihned potvrdit nebo opravit,
+      program ČSÚ provede po vložení všech údajů závěrečné kontroly, pokud nejsou zjištěny chyby
+          v logických vazbách, provede komise export dat na technický nosič a zároveň na připojené
+          tiskárně vytiskne dva stejnopisy Zápisu a souhrnného hlasovacího lístku,
+      na počítači je potřebné předem zkontrolovat, zda je správně nastaveno datum a čas,
+      více o práci s programem ČSÚ bude uvedeno také při školení komisí.
+
+          Všichni členové komise se seznámí s metodickými Pokyny (elektronicky jsou všem k dispozici na
+          www.volby.cz pod odkazem Pokyny pro okrskové volební komise) a budou v souladu s nimi postupovat.
+
+          Tyto Pokyny jsou připraveny tak, aby umožnily ruční zpracování Zápisu. Při využití počítače je metodika
+          stejná a u každého kroku je současně uvedena informace pro zpracování výsledků hlasování na počítači
+          (ikona PC TIP).
+
+          V případě, že ve volebním okrsku probíhají i volby do zastupitelstva městské části nebo městského
+          obvodu, zpracuje komise samostatný Zápis a souhrnný hlasovací lístek ve dvojím
+          stejnopise i o těchto volbách.
+
+                                                                  3
+Pro zjištění výsledku hlasování v okrsku komise postupuje dle následujících kroků
+a je povinna:
+
+  1. Zajistit, aby ve volební místnosti byly přítomny pouze oprávněné osoby
+
+      Bezprostředně po ukončení hlasování a uzavření volební místnosti (§ 52 odst. 1 ZSV
+          a § 63 odst. 1 ZSV), přistoupí komise ke zjištění výsledků hlasování v okrsku.
+
+      Práce se provádějí ve volební místnosti (§ 62 odst. 1 ZSV).
+      Komise při sčítání hlasů používá negumovatelné červeně píšící propisovací tužky.
+      V místnosti, kde komise sčítá hlasy, mají právo být přítomni (§ 62 odst. 2 ZSV):
+
+                o zaměstnanci ČSÚ s pověřením (dále jen „pověřený zaměstnanec ČSÚ”),
+                o zaměstnanci územních samosprávných celků zařazení do úřadů územních samosprávných
+
+                     celků, kteří mají osvědčení,
+                o osoby vykonávající kontrolu,
+                o členové Státní volební komise a jejího sekretariátu,
+                o osoby, kterým umožnila přítomnost Státní volební komise,
+                o pozorovatelé mezinárodních organizací (§ 54 ZSV).
+      Členové komise a ti, kdo mají právo být přítomni ve volební místnosti při sčítání hlasů, nesmí
+          poskytovat informace o průběhu a dílčích výsledcích voleb, a to až do předání Zápisu do dalšího
+          zpracování. Výjimkou je údaj o počtu voličů, kteří již hlasovali (§ 53 odst. 1 a 3 ZSV).
+      V případě závažných důvodů pro přerušení práce při sčítání hlasů musí komise:
+                o informovat příslušné přebírací místo ČSÚ, obecní úřad, pověřený obecní úřad a krajský úřad
+
+                     či Magistrát hl. m. Prahy (§ 63 odst. 4 ZSV),
+                o volební místnost a veškeré materiály v ní uložené zabezpečit obdobně jako při přerušení
+
+                     hlasování (§ 51 ZSV), tj. zapečetit volební schránky a volební dokumenty.
+
+  2. Určit pořadí zpracování výsledků hlasování v okrsku při společném konání voleb
+
+      Konají-li se volby do zastupitelstev obcí samostatně, přistoupí komise ke kroku 3 těchto Pokynů.
+      Při společném konání voleb do zastupitelstev obcí s jiným druhem voleb příp. referendem
+
+          (dále jen „volby“) postupuje komise takto:
+                o práce na zjišťování výsledků hlasování ve všech společně konaných volbách musí v komisi
+                     probíhat postupně, vždy podle Pokynů pro daný druh voleb (např. Senát PČR; pro krajská
+                     a místní referenda ČSÚ Pokyny nepřipravuje),
+                o odevzdané úřední obálky pro volby, jejichž výsledky se komise rozhodne zjišťovat až
+                     jako druhé (další) v pořadí, musí být dočasně uloženy do prázdné volební schránky,
+                o předseda komise za přítomnosti ostatních členů tuto schránku zapečetí proti možnosti vložit
+                     do ní dodatečně úřední obálky nebo je z ní vyjímat, a proti možnosti jejího otevření,
+                o komise pokračuje krokem 3 Pokynů pro druh voleb vybraný ke zpracování jako první v pořadí,
+                     dokud není podepsán Zápis v jednom druhu voleb, nelze zahájit zjišťování výsledků
+                     hlasování v dalším druhu voleb (s výjimkou počtu osob zapsaných do výpisů ze seznamů
+                     voličů a počtu vydaných a odevzdaných úředních obálek),
+                o bezprostředně po podepsání Zápisu musí být uloženy všechny volební dokumenty vztahující
+                     se k právě zpracovaným volbám (úřední obálky, hlasovací lístky apod. - výpisy ze seznamů
+                     voličů však jen v případě, že neslouží i k vyhodnocení účasti v dalších druzích voleb),
+                o po podepsání Zápisu pro jeden druh voleb komise vyjme odevzdané úřední obálky pro další
+                     druh voleb, dříve uložené ve volební schránce, a dále postupuje dle Pokynů pro právě
+                     zpracovávaný druh voleb,
+                o vzhledem k tomu, že Zápisy předává komise na stejném přebíracím místě ČSÚ, člen komise,
+                     pověřený předáním Zápisu, vykoná jen jednu cestu se všemi Zápisy najednou (jen ve
+                     výjimečných problematických případech lze, po dohodě s ČSÚ, předat Zápisy postupně).
+
+          V případě společného konání voleb do zastupitelstev obcí s dalším druhem voleb se mohou
+          údaje o počtech voličů, vydaných a odevzdaných úředních obálek lišit podle druhu voleb.
+
+                                                                  4
+3. Vyčlenit nepoužité hlasovací lístky
+
+    Počet vyčleněných nepoužitých hlasovacích lístků je závislý na způsobu práce komise při
+        zjišťování hlasů pro jednotlivé kandidáty, tedy pokud bude komise zpracovávat Zápis:
+              o ručně bez použití pomocných sčítacích archů, musí vyčlenit tři hlasovací lístky (jeden pro
+                   čárkování hlasů a dva jako budoucí souhrnné hlasovací lístky – přílohy ke stejnopisům Zápisu),
+              o ručně s použitím pomocných sčítacích archů, musí vyčlenit dva hlasovací lístky
+                   (budoucí souhrnné hlasovací lístky – přílohy ke stejnopisům Zápisu, žádný pro čárkování),
+              o na počítači bez použití pomocných sčítacích archů, musí vyčlenit jeden hlasovací lístek
+                   (jen pro čárkování hlasů, souhrnný hlasovací lístek se vytiskne automaticky z programu ČSÚ),
+              o na počítači s použitím pomocných sčítacích archů, nemusí vyčlenit žádný hlasovací lístek
+                   (souhrnný hlasovací lístek se vytiskne automaticky z programu ČSÚ).
+
+    Předseda komise vyčlení podle zvoleného způsobu práce potřebný počet nepoužitých
+        hlasovacích lístků, v záhlaví je označí slovy „Výsledky za okrsek č....“, doplní číslo okrsku
+        a podepíše je; případně připraví pomocné sčítací archy, což doporučujeme (hlavně v okrscích
+        s vyšší volební účastí).
+
+    Pokud existuje kandidát, který se do 48 hodin před zahájením hlasování vzdal kandidatury, nebo
+        jehož kandidatura byla zmocněncem volební strany odvolána (dále jen „odvolaný kandidát”), zapíše
+        komise do rámečku před jeho jménem písmeno „N“ (těmto kandidátům komise případné hlasy
+        nezapíše).
+
+    Takto označené hlasovací lístky předseda komise vloží do obálky a tu odloží mimo plochu,
+        na které bude komise sčítat hlasy.
+
+    Jestliže v okrsku probíhají také volby do zastupitelstva městské části nebo městského obvodu,
+        vyčlení a označí obdobným způsobem potřebný počet hlasovacích lístků i pro tyto volby.
+
+        Pomocné sčítací archy je možné vytisknout programem ČSÚ, případně je lze získat na
+        internetové adrese www.volby.cz. Písmeno „N“ je u odvolaných kandidátů již vyplněno.
+
+4. Zapečetit nepoužité hlasovací lístky a nepoužité úřední obálky
+
+    Předseda komise dá odděleně zapečetit (§ 63 odst. 1 ZSV):
+              o zbylé nepoužité hlasovací lístky,
+              o nepoužité úřední obálky.
+
+    V označené obálce/krabici (dále jen „obálka“) je odloží mimo plochu, kde bude komise sčítat hlasy.
+
+5. Vyplnit identifikační a časové údaje do Zápisu (tiskopisu T/3)
+
+    Zapisovatel komise do Zápisu vyplní:
+              o údaje o okrsku a volbách (číslo okrsku, název obce, okres, datum konání voleb),
+              o čas zahájení a ukončení hlasování,
+              o popř. čas odročení, prodloužení nebo přerušení hlasování s uvedením důvodu,
+              o informace o případných stížnostech, které byly komisi podány,
+              o informaci o využití přenosné volební schránky.
+
+    Následně zapisovatel vyplní identifikaci volebního okrsku (číslo obce, číslo okrsku, kontrolní číslo 1),
+        tuto identifikaci předal komisi pracovník ČSÚ.
+
+        Komise zapíše údaje do programu ČSÚ na záložce „T/3 – odd. I“. Identifikační údaje o okrsku
+        jsou programem ČSÚ vyplněny automaticky (byly zadány již při instalaci).
+
+                                                                5
+Ve vzorové obci Sebranice postupovala komise následovně:
+
+                         ZÁPIS O PRŮBĚHU A VÝSLEDKU HLASOVÁNÍ VE VOLEBNÍM OKRSKU
+                                                                                                                                                  T/3
+
+  Ve volebním okrsku č. .....1.....v obci (městysu, městě, městské části, městském obvodu)…………….
+  …….............Sebranice..................…......... okres .….............Blansko......................................... proběhlo ve dnech (dne)
+   …….…...xx. a xx. xx. 20xx...............…… hlasování ve volbách do zastupitelstva obce (městysu, města, městské části,
+  městského obvodu)……………....................Sebranice.........……………………….……………………………………..…………
+
+                                                                                      I.
+
+  Předseda komise zahájil hlasování první den voleb v ..........14:00.........hodin.
+  Předseda komise ukončil hlasování první den voleb v …...…22:00……hodin.
+  Předseda komise zahájil hlasování druhý den voleb v .............8:00.......hodin.
+
+  Předseda komise ukončil hlasování druhý den voleb v .........14:00.......hodin.
+
+Zahájení hlasování nebylo x) bylo x) odročeno dne……...…o................hodin..............minut z důvodu......………………………….
+........................................................................................................................................................................................................
+
+Doba hlasování nebyla x) byla x) prodloužena dne…………o..................hodin…............minut z důvodu……………………….…..
+........................................................................................................................................................................................................
+
+Hlasování nebylo x) bylo x) přerušeno dne…………..na dobu od ................... do .................... hodin z důvodu.. ………….………
+….....................................................................................................................................................................................................
+
+Při hlasování a zjišťování výsledků hlasování nebyly x) byly x) okrskové volební komisi podány stížnosti nebo
+oznámení. Jejich stručný obsah, přijatá usnesení a jejich stručné zdůvodnění jsou uvedeny v příloze na
+.......... listech.
+
+Ve volebním okrsku nebyla x) byla x) použita přenosná volební schránka.
+
+                               II.
+
+Byly zjištěny výsledky hlasování uvedené v tomto oddílu a na přiloženém označeném hlasovacím lístku.
+
+Identifikace volebního okrsku                                                   Obec                  Okrsek             xx)
+
+                                                                         582310                                1  KČ 1
+
+                                                                                                                   6
+
+6. Vyplnit typ voleného zastupitelstva a údaj o počtu osob v seznamech voličů
+
+   Zapisovatel vyplní kódem typ voleného zastupitelstva následovně:
+             o 1 = zastupitelstvo obce, města nebo městysu,
+             o 2 = zastupitelstvo městské části nebo městského obvodu.
+
+   Komise zjistí celkový počet osob zapsaných do výpisu ze stálého seznamu voličů a jeho
+        dodatku tak, že sečte:
+             o všechny osoby obecním úřadem zapsané do výpisu ze stálého seznamu voličů, včetně těch
+                   osob, které byly do výpisu ze stálého seznamu voličů komisí zapsány v průběhu hlasování na
+                   základě voličem prokázaného práva hlasovat v tomto okrsku,
+             o všechny osoby z dodatku výpisu ze stálého seznamu voličů, včetně těch osob, které byly do
+                   dodatku výpisu ze stálého seznamu komisí zapsány v průběhu hlasování na základě voličem
+                   prokázaného práva hlasovat v tomto okrsku.
+
+   Údaj zapíše do Zápisu jako „Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku
+        celkem“.
+
+                               6
+Ve vzorové obci Sebranice postupovala komise následovně:
+
+Komise zjistila, že do výpisu ze stálého seznamu voličů bylo před otevřením volební místnosti zapsáno
+501 osob a další 4 osoby byly zapsány v průběhu hlasování na základě ověření, že volič je oprávněn
+hlasovat v tomto okrsku. V dodatku ke stálému seznamu voličů bylo před otevřením volební místnosti
+zapsáno 8 osob a další 2 osoby byly zapsány v průběhu hlasování na základě ověření, že jsou oprávněny
+hlasovat v tomto okrsku. Celkový počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku
+po ukončení hlasování činí celkem: 501+4+8+2=515.
+
+Typ voleného zastupitelstva                                                        1
+
+Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem             515
+
+Počet voličů, kterým byly vydány úřední obálky
+Počet voličů, kteří hlasovali na voličský průkaz
+Počet odevzdaných úředních obálek
+Počet hlasovacích lístků, které jsou platným hlasem voliče
+
+Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany)
+
+Počet volebních stran ve volebním okrsku (dle hlasovacího lístku)
+Počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas
+
+Kontrolní číslo 2
+
+        Komise zapíše údaj do programu ČSÚ na záložce „T/3 – odd. II“, typ zastupitelstva je vyplněn.
+
+7. Zjistit počet voličů, kterým byly vydány úřední obálky
+
+    Komise zjistí počet voličů, kterým před hlasováním vydala úřední obálku pro volby do
+        zastupitelstva obce a které si označila ve výpisu ze stálého seznamu voličů a jeho dodatku
+        (na jednotném a výrazném označení voliče se komise dohodla před zahájením hlasování), a tento
+        počet zapíše do Zápisu jako „Počet voličů, kterým byly vydány úřední obálky“.
+
+        Úřední obálkou není obálka, ve které byly voličům doručeny hlasovací lístky do místa bydliště.
+
+Ve vzorové obci Sebranice postupovala komise následovně:
+Vyhodnocením záznamů o vydání úřední obálky ve výpisu ze stálého seznamu voličů a jeho dodatku komise
+zjistila, že vydala 370 úředních obálek.
+
+Typ voleného zastupitelstva                                                               1
+Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem             515
+                                                                                   3 70
+Počet voličů, kterým byly vydány úřední obálky
+Počet voličů, kteří hlasovali na voličský průkaz
+Počet odevzdaných úředních obálek
+Počet hlasovacích lístků, které jsou platným hlasem voliče
+Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany)
+Počet volebních stran ve volebním okrsku (dle hlasovacího lístku)
+Počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas
+Kontrolní číslo 2
+
+Počet voličů, kterým byly vydány úřední obálky, je menší než celkový počet osob zapsaných do
+výpisu ze stálého seznamu voličů a jeho dodatku nebo je s tímto počtem shodný. Shodný může být
+pouze tehdy, jestliže se všichni voliči osobně zúčastnili voleb – tj. ve výpisu ze stálého seznamu voličů
+a jeho dodatku jsou všichni dohodnutým způsobem označeni, že jim komise vydala úřední obálku.
+
+Komise zapíše údaj do programu ČSÚ na záložce „T/3 – odd. II“.
+
+                                                        7
+8. Zjistit počet voličů, kteří hlasovali na voličský průkaz
+
+ Vzhledem k tomu, že na voličský průkaz bude ve volbách do zastupitelstev obcí možné hlasovat
+     až od roku 2027, komise do Zápisu zapíše nulu (údaj je již od roku 2026 povinnou součástí Zápisu).
+
+Ve vzorové obci Sebranice postupovala komise následovně:                                             1
+                                                                                              515
+           Typ voleného zastupitelstva                                                        3 70
+           Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem
+                                                                                                     0
+           Počet voličů, kterým byly vydány úřední obálky
+           Počet voličů, kteří hlasovali na voličský průkaz
+           Počet odevzdaných úředních obálek
+           Počet hlasovacích lístků, které jsou platným hlasem voliče
+           Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany)
+           Počet volebních stran ve volebním okrsku (dle hlasovacího lístku)
+           Počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas
+           Kontrolní číslo 2
+
+Komise do programu ČSÚ nic nezapisuje, údaj je v roce 2026 vyplněn automaticky.
+
+9. Zjistit počet odevzdaných úředních obálek
+
+ Předseda komise dá otevřít volební schránky (včetně přenosné) a jejich obsah vysypat na
+     plochu pro sčítání hlasů.
+
+ Komise obsah všech volebních schránek po vysypání smísí.
+
+          Komise posoudí na pracovní plochu vysypaný a smíchaný obsah všech volebních schránek:
+
+odložit       volně vhozené hlasovací lístky                 jiné písemnosti,                     odložit
+s vyznačením  (nevložené do úřední obálky)                   různé předměty,                           do
+důvodu                                                       neúřední obálky
+neplatnosti              jsou neplatné                                                        označené
+do označené     (§ 64 odst. 2 písm. c) ZSV)                                                       obálky
+obálky
+a zapečetit
+
+odložit       při společném konání voleb           úřední obálky                                 spočítat
+a zapečetit          (příp. referenda):                pro volby                                    a dále
+do volební
+schránky         úřední obálky pro jiné       do zastupitelstev obcí                          posuzovat
+                   volby než pro volby                                                               jejich
+                 do zastupitelstev obcí                                                             obsah
+                 (příp. pro referendum)
+
+ Komise zjistí počet úředních obálek pro volby do zastupitelstva obce, které se nalézaly ve
+     volebních schránkách a tento počet zapíše do Zápisu jako „Počet odevzdaných úředních
+     obálek“.
+
+Jestliže v okrsku probíhají také volby do zastupitelstva městské části nebo městského obvodu, jsou
+údaje o celkovém počtu osob zapsaných do výpisu ze stálého seznamu voličů a jeho dodatku a počtu
+vydaných a odevzdaných úředních obálek stejné i pro tyto volby (oba hlasovací lístky voliči vkládají do
+téže úřední obálky).
+
+                                                        8
+Ve vzorové obci Sebranice postupovala komise následovně:                                             1
+Po otevření volebních schránek komise spočítala 370 odevzdaných úředních obálek.              515
+                                                                                              3 70
+           Typ voleného zastupitelstva
+           Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem                    0
+                                                                                              3 70
+           Počet voličů, kterým byly vydány úřední obálky
+           Počet voličů, kteří hlasovali na voličský průkaz
+           Počet odevzdaných úředních obálek
+           Počet hlasovacích lístků, které jsou platným hlasem voliče
+           Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany)
+           Počet volebních stran ve volebním okrsku (dle hlasovacího lístku)
+           Počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas
+           Kontrolní číslo 2
+
+        Počet odevzdaných úředních obálek je menší než počet voličů, kterým byly vydány úřední obálky,
+        nebo je s tímto počtem shodný.
+
+        Komise zapíše údaj do programu ČSÚ na záložce „T/3 – odd. II“.
+
+10. Posoudit platnost hlasů a přidělit hlasy jednotlivým kandidátům
+
+   Komise postupně otevírá odevzdané úřední obálky.
+   Členové komise nemohou obsah právě otevřené úřední obálky odložit, dokud hlasovací lístek
+
+        do ní vložený neposoudili (viz schéma Posuzování obsahu právě otevřené úřední obálky, str. 11).
+   Komise důsledně kontroluje počet hlasovacích lístků vložených do úřední obálky.
+   Do hlasovacího lístku může nahlížet každý člen komise; předseda komise kontroluje správnost
+
+        posuzování a sčítání hlasů (§ 63 odst. 3 ZSV).
+   Komise pracuje společně, o platnosti hlasů a jejich přidělení jednotlivým kandidátům nemohou
+
+        členové komise rozhodovat samostatně.
+   Platnost hlasu potvrdí s konečnou platností komise (§ 64 odst. 1 ZSV), komise je schopná se
+
+        usnášet, je-li přítomna nadpoloviční většina všech jejích členů, usnesení je přijato, vyslovila-li se pro něj
+        nadpoloviční většina přítomných členů komise (§ 42 odst. 1 ZSV), z toho vyplývá, že v případě rovnosti
+        hlasů není usnesení přijato.
+   Komise odloží do označené obálky předměty a jiné písemnosti, jako například vzkazy, osobní
+        dokumenty, voličem vytvořené hlasovací lístky, příp. hlasovací lístky pro jiné volby (např. pro jiný druh
+        voleb, pro jiný rok voleb, pro jiné zastupitelstvo).
+   V každé úřední obálce má být jeden hlasovací lístek pro stejný typ voleného zastupitelstva, je-li
+        v úřední obálce více než jeden hlasovací lístek pro volbu téhož zastupitelstva, jde pro tento typ
+        zastupitelstva o neplatný hlas (§ 64 odst. 2 písm. d) ZSV).
+
+        Pokud ve volebním okrsku probíhají také volby do zastupitelstva městské části nebo městského
+        obvodu, volič oba hlasovací lístky vkládá do jedné úřední obálky (ta pak může obsahovat dva hlasovací
+        lístky, každý pro jiný typ zastupitelstva). Hlasovací lístky pro každý typ zastupitelstva posuzuje komise
+        samostatně, pro další vyhodnocení hlasů ukládá hlasovací lístky odděleně.
+
+   Jsou-li na hlasovacím lístku údaje o jednotlivých volebních stranách nebo kandidátech škrtány nebo
+        dopisovány, k takovýmto úpravám komise nepřihlíží (komise takové úpravy ignoruje), a posuzuje jej
+        dále z hlediska platnosti hlasu.
+
+   Poškození nebo přeložení hlasovacího lístku nemá vliv na jeho platnost, pokud jsou z něho patrné
+        potřebné údaje (§ 64 odst. 4 ZSV), zejména to, že se jedná o hlasovací lístek pro právě
+        zpracovávané volby a je z něho patrná vůle voliče.
+
+                                                                9
+     Pokud jsou hlasovací lístky oboustranné, komise důsledně kontroluje i jejich zadní stranu.
+     Za platné označení kandidáta se považuje křížek v rámečku před jménem kandidáta.
+     Za platné označení volební strany se považuje křížek ve čtverečku před jejím názvem.
+ Křížek v rámečku nebo čtverečku může být:
+
+          o z rohu do rohu ( „x“),
+          o ze strany na stranu ( „+“),
+ Nepřihlíží se k žádným dalším značkám (kroužek, odškrtnutí „fajfkou“ apod.).
+ Jestliže volič udělal křížek:
+          o částečně mimo vyznačený rámeček kandidáta a je zřejmé, kterého kandidáta chtěl
+
+                označit, komise takové označení uzná za platné označení kandidáta,
+          o zcela mimo rámeček kandidáta, přes dva či více rámečků nebo mezi rámečky, komise
+
+                k tomu nepřihlíží, nejde o označení kandidáta,
+          o obdobně komise postupuje při posuzování označení volební strany ve čtverečku před jejím
+
+                názvem.
+ Hlasy pro jednotlivé kandidáty zjišťuje komise čárkovací metodou ( //// // … atd.) na:
+
+          o jednom z uschovaných hlasovacích lístků, označených „Výsledky za okrsek č….“,
+          o nebo označeném pomocném sčítacím archu (z programu ČSÚ nebo www.volby.cz).
+ Neplatné hlasy komise s vyznačením důvodu neplatnosti odloží do označené obálky, kterou
+     následně zapečetí a odloží mimo plochu, na které sčítá hlasy.
+
+                                                            10
+•  Komise po otevření odevzdané úřední obálky posoudí její obsah:
+
+                                  Posuzování obsahu právě otevřené úřední obálky:
+
+   NEPLATNÝ HLAS                                hlasovací lístek není                NEPLATNÝ HLAS
+   odložit mimo plochu                      na předepsaném tiskopise                 odložit mimo plochu
+   do označené obálky             dle vzoru vyvěšeného ve volební místnosti          do označené obálky
+                                            (§ 64 odst. 2 písm. a) ZSV)
+   NEPLATNÝ HLAS                                                                     označit slovem „Prázdná“
+   Komise lístky spojí, první              hlasovací lístek je přetržený             a odložit – obálka zůstává
+   označí slovy „Neplatný hlas“,             (§ 64 odst. 2 písm. b) ZSV)             započtena v počtu
+   předseda komise podepíše                                                          odevzdaných,
+   a odloží mimo plochu                   více než jeden hlasovací lístek            ale neobsahuje platný hlas
+   do označené obálky.                 pro volby do téhož zastupitelstva
+                                                                                     NEPLATNÝ HLAS
+   NEPLATNÝ HLAS                            (§ 64 odst. 2 písm. d) ZSV)              odložit mimo plochu
+   odložit mimo plochu                                                               do označené obálky
+   do označené obálky                         prázdná úřední obálka
+                                              (neobsahuje platný hlas)               PLATNÝ HLAS VOLIČE
+                                                                                     Komise zapíše čárky (hlasy)
+                                       na hlasovacím lístku není vyznačen            jednotlivým označeným
+                                  žádný křížek ani u strany ani u kandidáta          platným kandidátům
+                                                                                     (pokud jsou mezi označenými
+                                    (§ 41 odst. 1 písm. a) volebního zákona)         kandidáty odvolaní kandidáti,
+                                                                                     čárka se jim nezapíše).
+                                        na hlasovacím lístku je označena
+                                          více než jedna volební strana               PLATNÝ HLAS VOLIČE
+                                    (§ 41 odst. 1 písm. b) volebního zákona)          Komise zapíše čárky (hlasy)
+                                                                                      nejprve jednotlivým
+   NEPLATNÝ HLAS                        na hlasovacím lístku je označeno více         označeným platným
+   odložit mimo plochu            jednotlivých kandidátů, než je počet volených       kandidátům a následně tolika
+   do označené obálky                                                                 platným kandidátům
+                                     členů zastupitelstva, komise nerozlišuje,        označené volební strany,
+   PLATNÝ HLAS VOLIČE                  zda jde o kandidáty platné či odvolané         kolik činí rozdíl do počtu
+   Komise zapíše čárky                 (§ 41 odst. 1 písm. c) volebního zákona)       volených členů zastupitelstva,
+   (hlasy) tolika platným                                                             a to v pořadí dle
+   kandidátům této volební          (k označení kandidátů volební strany, kterou      hlasovacího lístku. Pokud
+   strany, kolik se volí členů    volič zároveň označil křížkem ve čtverečku před     jsou mezi nimi odvolaní
+   zastupitelstva, a to v pořadí  jejím názvem, se nepřihlíží – do počtu jednotlivě   kandidáti, vynechají se, čárka
+   dle hlasovacího lístku.                                                            se zapíše následujícímu
+   Pokud jsou mezi nimi                      označených se nezapočítávají)            platnému kandidátovi.
+   odvolaní kandidáti, vynechají             (§ 41 odst. 2 volebního zákona)
+   se, čárka se zapíše
+   následujícímu platnému                        na hlasovacím lístku jsou
+   kandidátovi.                          označeni pouze jednotliví kandidáti,
+                                         maximálně do výše počtu volených
+   PLATNÝ HLAS VOLIČE
+   Komise zapíše čárky                              členů zastupitelstva
+   (hlasy) tolika platným              (§ 40 odst. 2 písm. a) volebního zákona)
+   kandidátům této volební
+   strany, kolik se volí členů              na hlasovacím lístku je označena
+   zastupitelstva, a to v pořadí                   jedna volební strana
+   dle hlasovacího lístku.
+   Pokud jsou mezi nimi                (§ 40 odst. 2 písm. b) volebního zákona)
+   odvolaní kandidáti,
+   vynechají se, čárka se               na hlasovacím lístku je označena jedna
+   zapíše následujícímu                         volební strana a zároveň
+   platnému kandidátovi.
+                                     jednotliví kandidáti jiných volebních stran,
+                                         maximálně do výše počtu volených
+                                                    členů zastupitelstva
+
+                                       (§ 40 odst. 2 písm. c) volebního zákona)
+
+                                       na hlasovacím lístku je označena jedna
+                                                volební strana a zároveň
+
+                                        jednotliví kandidáti této volební strany
+                                      (k označení kandidátů se v tomto případě
+                                      nepřihlíží § 41 odst. 2 volebního zákona).
+
+                                  11
+Příklady postupu a rozhodnutí komise při posuzování platnosti hlasu v závislosti na způsobu
+úpravy hlasovacího lístku voličem:
+
+Příklad č. 1:
+Na hlasovacím lístku jsou platným způsobem označeni pouze jednotliví kandidáti v celkovém počtu
+8 kandidátů; do zastupitelstva obce se volí 7 členů.
+
+Rozhodnutí: Neplatný hlas – jednotlivě je označeno více kandidátů, než kolik se volí členů
+zastupitelstva (§ 41 odst. 1 písm. c) volebního zákona).
+
+Příklad č. 2:
+Na hlasovacím lístku je platným způsobem označena volební strana se 7 kandidáty a jednotlivě
+dalších 5 kandidátů jiných volebních stran; do zastupitelstva obce se volí 7 členů.
+
+Rozhodnutí: Platný hlas – nejprve se počítají hlasy pro 5 jednotlivě označených kandidátů a dále hlasy
+pro první dva kandidáty označené volební strany (§ 40 odst. 2 písm. c) volebního zákona).
+
+Příklad č. 3:
+Na hlasovacím lístku je platným způsobem označena volební strana se 7 kandidáty, v jejím rámci jsou
+ještě označeni 3 kandidáti a jednotlivě je označeno dalších 5 kandidátů jiných volebních stran; do
+zastupitelstva obce se volí 7 členů.
+
+Rozhodnutí: Platný hlas – nejprve se počítají hlasy pro 5 jednotlivě označených kandidátů z jiných
+volebních stran a dále hlasy pro první dva kandidáty označené volební strany; k označení tří
+kandidátů této volební strany se vůbec nepřihlíží (§ 40 odst. 2 písm. c) a § 41 odst. 2 volebního zákona).
+
+Příklad č. 4:
+Na hlasovacím lístku je platným způsobem označena volební strana se 7 kandidáty a jednotlivě
+dalších 7 kandidátů jiných volebních stran; do zastupitelstva obce se volí 7 členů.
+
+Rozhodnutí: Platný hlas – nejprve se počítají hlasy pro 7 jednotlivě označených kandidátů a žádný
+hlas kandidátům z označené volební strany – tato označená volební strana tedy nezíská žádný hlas
+(§ 40 odst. 2 písm. c) volebního zákona).
+
+Příklad č. 5:
+Na hlasovacím lístku je platným způsobem jednotlivě označeno 5 kandidátů různých volebních stran
+a dvě volební strany, jedna se 7, druhá s 5 kandidáty; do zastupitelstva obce se volí 7 členů.
+
+Rozhodnutí: Neplatný hlas – je označena více než jedna volební strana (§ 41 odst. 1 písm. b) volebního
+zákona).
+
+Příklad č. 6:
+Na hlasovacím lístku jsou platným způsobem označeni pouze jednotliví kandidáti v celkovém počtu
+8 kandidátů, jeden z nich byl do 48 hodin před zahájením voleb odvolán; do zastupitelstva obce se
+volí 7 členů.
+
+Rozhodnutí: Neplatný hlas – jednotlivě je označeno více kandidátů, než kolik se volí členů
+zastupitelstva – ke skutečnosti, že volič hlasoval pro odvolaného kandidáta, se dle § 41 odst. 1
+písm. c) volebního zákona nepřihlíží).
+
+Příklad č. 7:
+Na hlasovacím lístku jsou platným způsobem označeni pouze jednotliví kandidáti v celkovém počtu
+7 kandidátů, jeden z nich se do 48 hodin před zahájením voleb vzdal kandidatury; do zastupitelstva
+obce se volí 7 členů.
+
+Rozhodnutí: Platný hlas – počítají se hlasy pro 6 platných kandidátů, hlas pro odvolaného kandidáta,
+který se vzdal kandidatury, však komise nezapočítá.
+
+Příklady jsou v prezentaci „Vyhodnocení hlasů ve volbách do zastupitelstev obcí“ na
+www.volby.cz a www.csu.gov.cz.
+
+                                                        12
+11. Zjistit počet hlasovacích lístků, které jsou platným hlasem voliče
+
+ Komise sečte všechny hlasovací lístky, které neodložila jako neplatný hlas a podle kterých
+     čárkovala hlasy pro jednotlivé kandidáty. Tento počet zapíše do Zápisu jako „Počet hlasovacích
+     lístků, které jsou platným hlasem voliče“.
+
+     Ve vzorové obci Sebranice postupovala komise následovně:
+      Komise zjistila, že platné hlasy voličů byly uvedeny na 360 hlasovacích lístcích.
+
+Typ voleného zastupitelstva                                                               1
+Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem             515
+Počet voličů, kterým byly vydány úřední obálky                                     3 70
+Počet voličů, kteří hlasovali na voličský průkaz
+Počet odevzdaných úředních obálek                                                         0
+Počet hlasovacích lístků, které jsou platným hlasem voliče                         3 70
+Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany)        3 60
+Počet volebních stran ve volebním okrsku (dle hlasovacího lístku)
+Počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas
+Kontrolní číslo 2
+
+Počet hlasovacích lístků, které jsou platným hlasem voliče je menší, než počet odevzdaných úředních
+obálek nebo je s tímto počtem shodný. Shodný může být pouze tehdy, pokud všechny odevzdané
+úřední obálky obsahovaly hlasovací lístky s platným hlasy, tzn., že komise žádný hlasovací lístek nebo
+prázdnou úřední obálku neodložila.
+
+Jestliže v okrsku probíhají také volby do zastupitelstva městské části nebo městského obvodu může
+být údaj o počtu hlasovacích lístků, které jsou platným hlasem voliče, odlišný pro každý typ voleného
+zastupitelstva.
+
+Komise zapíše údaj do programu ČSÚ na záložce „T/3 – odd. II“.
+
+12. Zjistit počet hlasů pro jednotlivé kandidáty
+
+    Sčítaní hlasů (čárek) pro kandidáty neprovádí jednotliví členové komise samostatně.
+    Čárky pro každého kandidáta komise sečte a zjištěný počet hlasů zapíše do rámečku před
+
+        jménem příslušného kandidáta na vyčleněný hlasovací lístek nebo pomocný sčítací arch.
+    Jestliže kandidát nezískal žádný hlas, komise do rámečku zapíše nulu, u odvolaných kandidátů je již
+
+        zapsáno písmeno „N”.
+
+13
+Ve vzorové obci Sebranice postupovala komise následovně:
+
+a) s využitím pomocného sčítacího archu (vhodné zvolit při vyšším počtu voličů)
+
+  Komise zaznamenala hlasy pro jednotlivé kandidáty u volební strany č. 1, obdobně bude postupovat
+  u všech dalších volebních stran.
+
+           Stra na č. 1                                   Pomocný sčítací arch pro sčítání hlasů kandidátů                           Obec: Sebra ni ce
+           Vol ební s tra na : Volební strana A                                                                                      Okrs ek: 1
+                                                                            Za s tupi tel s tvo: Sebra ni ce, obvod: 1
+
+Celkem     Pořadové číslo, jméno a příjmení      10       20  30  40              50          60      70  80               90 100 110 120 130 140 150
+  119
+  119      1. Jméno 1 Příjmení 1             //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// . . . . . . . . . . . . . . . . . . . . . . . . 1.
+  119
+   N       2. Jméno 2 Příjmení 2             //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// . . . . . . . . . . . . . . . . . . . . . . . . 2.
+  108
+           3. Jméno 3 Příjmení 3             //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// . . . . . . . . . . . . . . . . . . . . . . . . 3.
+
+           4. Jméno 4 Příjmení 4             . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.
+
+           5. Jméno 5 Příjmení 5             //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// /// . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.
+
+104 6. Jméno 6 Příjmení 6                    //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6.
+
+104 7. Jméno 7 Příjmení 7                    //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7.
+
+31 8. Jméno 8 Příjmení 8                     //// //// //// //// //// //// / . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8.
+
+29 9. Jméno 9 Příjmení 9                     //// //// //// //// //// //// . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9.
+
+b) nebo s využitím označeného hlasovacího lístku, vyčleněného a podepsaného předsedou komise
+
+(vhodné při nízkém počtu voličů; v této ukázce pro nedostatek místa některé čárky nahrazeny „atd.“)
+
+                                                                  HLASOVACÍ LÍSTEK
+
+                                                 Pro volby do zastupitelstva obce ve dnech xx. a xx. xx. 20xx
+
+Obec Sebranice                                                                                                                  VÝSLEDKY ZA OKRSEK Č.: 1
+
+Do zastupitelstva obce se volí 7 členů                                                                                               Podpis předsedy komise
+
+                Volební strana A                              Volební strana B                            Volební strana C           Volební strana D
+                vylosované číslo 1                            vylosované číslo 2                          vylosované číslo 3         vylosované číslo 4
+
+119        1. AB //// //// //// //// atd.            101      1. OP //// //// //// //// atd.      7       1. FE //// //         62   1. ZX //// //// //// //// atd.
+
+119        2. CD //// //// //// //// atd.            101      2. RS //// //// //// //// atd.      8       2. HG //// ///
+
+119        3. EF //// //// //// //// atd.            102      3. TU //// //// //// //// atd.      0       3. JI
+
+        N  4. GH                                     103      4. VW //// //// //// //// atd.      14      4. LK //// //// ////
+
+108        5. IJ //// //// //// //// atd.            102      5. XZ //// //// //// //// atd.      12      5. NM //// //// //
+
+104        6. KL //// //// //// //// atd.                                                         8       6. PO //// ///
+
+104        7. MN //// //// //// //// atd.                                                         9       7. SR //// ////
+
+31         8. BA //// //// //// //// atd.                                                         1       8. UT /
+
+29         9. DC //// //// //// //// atd.                                                         0       9. VZ
+
+                Volební strana E                              Volební strana F                            Volební strana G           Volební strana H
+                vylosované číslo 5                            vylosované číslo 6                          vylosované číslo 7         vylosované číslo 8
+
+32         1. AZ //// //// //// //// atd.            63       1. CV //// //// //// //// atd.      11      1. DU //// //// /     125  1. AC //// //// //// //// atd.
+
+32         2. BW //// //// //// //// atd.                                                                                       181  2. BD //// //// //// //// atd.
+
+                                                                                                                                177  3. CE //// //// //// //// atd.
+
+                                                                                                                                194  4. DF //// //// //// //// atd.
+
+                                                                                                                                N    5. EG
+
+                                                                                                                                180  6. FH //// //// //// //// atd.
+
+                                                                                                                                125  7. GI //// //// //// //// atd.
+
+Počet hlasů pro jednotlivého kandidáta je menší než počet hlasovacích lístků, které jsou platným hlasem
+voliče nebo je s tímto počtem shodný.
+
+                                                                  14
+13. Zjistit počet hlasů pro volební strany
+
+   Počet hlasů pro volební stranu je součet všech hlasů, které obdrželi všichni její kandidáti.
+   Komise sečte na hlasovacím lístku označeném „Výsledky za okrsek č....“ nebo na pomocném sčítacím
+
+        archu hlasy všech kandidátů volební strany a výsledek zapíše do čtverečku před názvem volební
+        strany.
+   Pokud čtvereček před názvem volební strany chybí (tj. má jen jednoho kandidáta), platí počet
+        hlasů zapsaný v rámečku před jménem kandidáta jako počet hlasů pro volební stranu
+        (viz strana D, F, G).
+
+Ve vzorové obci Sebranice postupovala komise následovně:
+
+př.: strana č. 1: 119+119+119+108+104+104+31+29=733
+
+Obdobně bude komise postupovat u všech dalších volebních stran.
+
+a) s využitím pomocného sčítacího archu
+
+733         Stra na č. 1                               Pomocný sčítací arch pro sčítání hlasů kandidátů                           Obec: Sebrani ce
+            Vol ební s tra na : Volební strana A                                                                                  Okrs ek: 1
+                                                                         Za s tupitels tvo: Sebra nice, obvod: 1
+
+Celkem      Pořadové číslo, jméno a příjmení      10   20  30  40                      50  60      70  80             90 100 110 120 130 140 150
+  119
+  119       1. Jméno 1 Příjmení 1             //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// . . . . . . . . . . . . . . . . . . . . . . . . 1.
+  119
+   N        2. Jméno 2 Příjmení 2             //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// . . . . . . . . . . . . . . . . . . . . . . . . 2.
+  108
+            3. Jméno 3 Příjmení 3             //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// . . . . . . . . . . . . . . . . . . . . . . . . 3.
+
+            4. Jméno 4 Příjmení 4             . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4.
+
+            5. Jméno 5 Příjmení 5             //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// /// . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5.
+
+104 6. Jméno 6 Příjmení 6                     //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6.
+
+104 7. Jméno 7 Příjmení 7                     //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7.
+
+31 8. Jméno 8 Příjmení 8                      //// //// //// //// //// //// / . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8.
+
+29 9. Jméno 9 Příjmení 9                      //// //// //// //// //// //// . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9.
+
+b) nebo s využitím označeného hlasovacího lístku, vyčleněného a podepsaného předsedou komise
+
+                                                               HLASOVACÍ LÍSTEK
+
+                                                      Pro volby do zastupitelstva obce ve dnech xx. a xx. xx. 20xx
+
+Obec Sebranice                                                                                                               VÝSLEDKY ZA OKRSEK Č.: 1
+
+Do zastupitelstva obce se volí 7 členů                                                                                          Podpis předsedy komise
+
+     733        Volební strana A                  509      Volební strana B                    59      Volební strana C           Volební strana D
+                vylosované číslo 1                         vylosované číslo 2                          vylosované číslo 3         vylosované číslo 4
+
+     119    1. AB //// //// //// //// atd.        101  1. OP //// //// //// //// atd.          7       1. FE //// //         62   1. ZX //// //// //// //// atd.
+
+     119    2. CD //// //// //// //// atd.        101  2. RS //// //// //// //// atd.          8       2. HG //// ///
+
+     119    3. EF //// //// //// //// atd.        102  3. TU //// //// //// //// atd.          0       3. JI
+
+        N   4. GH                                 103  4. VW //// //// //// //// atd.          14      4. LK //// //// ////
+
+     108    5. IJ //// //// //// //// atd.        102  5. XZ //// //// //// //// atd.          12      5. NM //// //// //
+
+     104    6. KL //// //// //// //// atd.                                                     8       6. PO //// ///
+
+     104    7. MN //// //// //// //// atd.                                                     9       7. SR //// ////
+
+        31  8. BA //// //// //// //// atd.                                                     1       8. UT /
+
+        29  9. DC //// //// //// //// atd.                                                     0       9. VZ
+
+        64      Volební strana E                           Volební strana F                            Volební strana G      982  Volební strana H
+                vylosované číslo 5                         vylosované číslo 6                          vylosované číslo 7         vylosované číslo 8
+
+        32  1. AZ //// //// //// //// atd.        63   1. CV //// //// //// //// atd.          11      1. DU //// //// /     125  1. AC //// //// //// //// atd.
+
+        32  2. BW //// //// //// //// atd.                                                                                   181  2. BD //// //// //// //// atd.
+
+                                                                                                                             177  3. CE //// //// //// //// atd.
+
+                                                                                                                             194  4. DF //// //// //// //// atd.
+
+                                                                                                                             N    5. EG
+
+                                                                                                                             180  6. FH //// //// //// //// atd.
+
+                                                                                                                             125  7. GI //// //// //// //// atd.
+
+                                                               15
+ Komise zjištěné údaje zapíše na zadní stranu Zápisu do řádku podle vylosovaného čísla strany.
+
+ Komise následně:
+
+              o dopočítá kontrolní číslo, které získá jako součet předtištěného pořadového čísla strany
+                    a počtu platných hlasů, které tato strana získala,
+
+              o uvede pořadové číslo posledního kandidáta této volební strany podle hlasovacího
+                    lístku, který ještě získal platné hlasy (tj. alespoň jeden platný hlas),
+
+              o prázdné řádky předtištěného rastru komise proškrtne.
+
+Ve vzorové obci Sebranice postupovala komise následovně:
+
+Např. strana č. 1: 1+733=734  strana č. 2: 2+509=511              strana č. 3: 3+59=62
+
+Obdobně bude komise postupovat u všech dalších volebních stran.
+
+Poř. Počet       Kontrolní číslo Číslo Poř. Počet  Kontrolní číslo Číslo Poř. Počet      Kontrolní číslo Číslo
+
+stra- hlasů pro  sl.1+sl.2  posl. stra- hlasů pro      sl.5+sl.6  posl. stra- hlasů pro  sl.9+sl.10  posl.
+
+ny *) stranu                kand. ny *) stranu                    kand. ny *) stranu                 kand.
+
+sl.1 sl.2        sl.3         sl.4 sl.5 sl.6           sl.7       sl.8 sl.9 sl.10        sl.11       sl.12
+
+1.   733         7 3 4 9 16.                                      31.
+
+2.   509         5 1 1 5 17.                                      32.
+
+3.   59                6 2 8 18.                                  33.
+
+4.   62                6 6 1 19.                                  34.
+
+5.   64                6 9 2 20.                                  35.
+
+6.   63                6 9 1 21.                                  36.
+
+7.   11                1 8 1 22.                                  37.
+
+8.   982         9 9 0 7 23.                                      38.
+
+9.                            24.                                 39.
+
+10.                           25.                                 40.
+
+11.                           26.                                 41.
+
+12.                           27.                                 42.
+
+13.                           28.                                 43.
+
+14.                           29.                                 44.
+
+15.                           30.                                 45.
+
+Poznámka: proškrtnout nevyplněné kolonky je možné i jinými způsoby
+
+Součet hlasů pro kandidáty volební strany musí být roven celkovému počtu hlasů pro volební stranu.
+
+Počet hlasů pro jednotlivého kandidáta v rámci volební strany je menší než počet platných hlasů pro
+tuto volební stranu. Shodný může být jedině tehdy, pokud hlasy získal pouze jeden kandidát.
+
+Komise při využití programu ČSÚ tyto údaje nezadává; program ČSÚ počty hlasů pro strany,
+kontrolní čísla a číslo posledního kandidáta doplní automaticky poté, co komise
+v následujících krocích zapíše počty hlasů pro kandidáty volebních stran na záložce „HL“.
+Odvolaným kandidátům nelze v programu ČSÚ zapsat žádné údaje.
+
+                                                   16
+14. Zjistit počet hlasů ve volebním okrsku celkem
+
+ Komise sečte všechny platné hlasy pro všechny volební strany a výsledek zapíše do Zápisu jako
+     „Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany)“.
+
+Údaj „Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany)“ bývá
+zpravidla výrazně větší než předchozí údaj „Počet hlasovacích lístků, které jsou platným hlasem
+voliče“. Je to dáno skutečností, že každý volič může udělit tolik hlasů, kolik se volí členů
+zastupitelstva obce.
+
+ Komise vyplní počet volebních stran ve volebním okrsku (dle hlasovacího lístku).
+
+ Komise dále doplní počet volebních stran, které ve volebním okrsku získaly alespoň jeden
+     platný hlas.
+
+ Následně komise dopočítá kontrolní číslo 2 jako součet údajů:
+          o typ voleného zastupitelstva,
+          o počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem,
+          o počet voličů, kterým byly vydány úřední obálky,
+          o počet voličů, kteří hlasovali na voličský průkaz,
+          o počet odevzdaných úředních obálek,
+          o počet hlasovacích lístků, které jsou platným hlasem voliče,
+          o počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany),
+          o počet volebních stran ve volebním okrsku (dle hlasovacího lístku),
+          o počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas.
+
+     Ve vzorové obci Sebranice postupovala komise následovně:
+
+Typ voleného zastupitelstva                                                        1
+
+Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem             515
+
+Počet voličů, kterým byly vydány úřední obálky                                     3 70
+Počet voličů, kteří hlasovali na voličský průkaz                                          0
+Počet odevzdaných úředních obálek
+Počet hlasovacích lístků, které jsou platným hlasem voliče                         3 70
+                                                                                   3 60
+
+Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany)        2 4 83
+
+Počet volebních stran ve volebním okrsku (dle hlasovacího lístku)                  8
+
+Počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas  8
+
+Kontrolní číslo 2                                                                  4 1 15
+
+Počet platných hlasů ve volebním okrsku celkem může být nejvýše roven součinu počtu volených
+členů zastupitelstva a počtu hlasovacích lístků, které jsou platným hlasem voliče.
+Např.: vzorová obec Sebranice - maximální počet odevzdaných hlasů je 2 520 (7x360).
+
+Součet platných hlasů pro volební strany v okrsku se musí rovnat počtu platných hlasů v okrsku celkem.
+
+Počet volebních stran, které v okrsku získaly platné hlasy, je menší než počet volebních stran na
+hlasovacím lístku nebo je s tímto počtem shodný.
+Je-li údaj o počtu platných hlasů v okrsku celkem větší než nula, pak údaj o počtu volebních stran,
+které získaly platné hlasy, nesmí být nulový a naopak.
+
+Komise zapíše údaj o počtu platných hlasů ve volebním okrsku (celkem pro všechny volební
+strany) na záložce „T/3 – odd. II“, další údaje program ČSÚ doplní automaticky.
+
+                             17
+15. Dokončit a zkontrolovat Zápis
+
+ Komise vyplní ve dvou stejnopisech souhrnný hlasovací lístek (tj. předem vyčleněný, označený
+     a předsedou komise v kroku 3 podepsaný = povinná příloha k Zápisu), a to podle:
+
+o vyčleněného označeného hlasovacího lístku, na který komise čárkovala,
+o nebo pomocných sčítacích archů.
+
+Ve vzorové obci Sebranice postupovala komise následovně:                                                               VÝSLEDKY ZA OKRSEK Č.: 1
+
+                                                                                   HLASOVACÍ LÍSTEK
+                                                         Pro volby do zastupitelstva obce ve dnech xx. a xx. xx. 20xx
+
+  Obec Sebranice
+
+Do zastupitelstva obce se volí 7 členů                                                                                     Podpis předsedy komise
+
+     Volební strana A                        Volební strana B        Volební strana C                                       Volební strana D
+                                                                                                                            vylosované číslo 4
+733  vylosované číslo 1                 509  vylosované číslo 2  59  vylosované číslo 3
+
+119  1. AB                              101  1. OP               7   1. FE                                             62   1. ZX
+
+119  2. CD                              101  2. RS               8   2. HG
+
+119  3. EF                              102  3. TU               0   3. JI
+
+N    4. GH                              103  4. VW               14  4. LK
+
+108  5. IJ                              102  5. XZ               12  5. NM
+
+104  6. KL                                                       8   6. PO
+
+104  7. MN                                                       9   7. SR
+
+31   8. BA                                                       1   8. UT
+
+29   9. DC                                                       0   9. VZ
+
+     Volební strana E                        Volební strana F        Volební strana G                                       Volební strana H
+                                             vylosované číslo 6      vylosované číslo 7
+64   vylosované číslo 5                                                                                                982  vylosované číslo 8
+
+32   1. AZ                              63   1. CV               11  1. DU                                             125  1. AC
+
+32   2. BW                                                                                                             181  2. BD
+
+                                                                                                                       177  3. CE
+
+                                                                                                                       194  4. DF
+
+                                                                                                                       N    5. EG
+
+                                                                                                                       180  6. FH
+
+                                                                                                                       125  7. GI
+
+ Komise zkontroluje údaje na Zápisu (tiskopis T/3) a souhrnném hlasovacím lístku v obou
+     stejnopisech (v případě, že ve volebním okrsku probíhají i volby do zastupitelstva městské části
+     nebo městského obvodu, zpracuje komise samostatný Zápis a souhrnný hlasovací lístek ve dvojím
+     stejnopise i o těchto volbách).
+
+          o V samostatných přílohách k Zápisu se uvádí stručný obsah oznámení a stížností, které byly
+                komisi podány, usnesení, která komise přijala, a jejich stručné zdůvodnění.
+
+ Po kontrole Zápisu komise odloží v zapečetěných označených obálkách:
+          o hlasovací lístky, podle kterých čárkovala hlasy pro kandidáty a pro volební strany,
+          o všechny předem vyčleněné a označené hlasovací lístky, na které zapisovala čárky,
+          o pomocné sčítací archy, pokud byly použity.
+
+     V případě využití programu ČSÚ komise zapíše údaje o počtu hlasů pro jednotlivé kandidáty na
+     záložce „HL“, program ČSÚ provede předepsané kontroly automaticky a upozorní na případné
+     chyby v logických vazbách mezi údaji.
+
+                                                             18
+16. Podepsat Zápis a souhrnný hlasovací lístek (2 stejnopisy)
+
+ Komise vyplní počet všech jejích členů a jako další údaj zapíše počet z nich přítomných v době
+     vyhotovení Zápisu.
+
+ Zapisovatel komise doplní datum a hodinu vyhotovení Zápisu a potvrdí tento údaj vyplněním svého
+     jména, příjmení a svým podpisem. Takto potvrdí a podepíše také oba souhrnné hlasovací lístky.
+
+ Poté se na oba stejnopisy Zápisu, včetně obou souhrnných hlasovacích lístků, uvedou jména,
+     příjmení (hůlkovým písmem) a podpisy všech ostatních přítomných členů komise.
+
+ Dále komise zapíše jméno a příjmení člena komise pověřeného předáním Zápisu ČSÚ
+     a k opravám případných chyb v Zápisu na místě (hůlkovým písmem).
+
+ Pokud některý z členů komise Zápis odmítl podepsat, uvedou se důvody v samostatné příloze k Zápisu.
+
+     Ve vzorové obci Sebranice postupovala komise následovně:
+     V obci Sebranice bylo přítomno 6 členů komise:
+
+                                                                        III.
+
+Z celkového počtu ......6..... členů okrskové volební komise je v době vyhotovení zápisu přítomno
+...6......, tj. nadpoloviční většina.
+
+Dále byli přítomni:…...................................................................................................................................…………..
+
+Zápis byl přečten za účasti nadpoloviční většiny členů okrskové volební komise a schválen nadpoloviční většinou
+přítomných členů komise.
+
+Hodina, den, měsíc a rok vyhotovení zápisu:……………...……16:30, xx. xx. 20xx……………...……….……….
+
+Jméno, příjmení a podpis zapisovatele:………………...………EMA TICHÁ……………………………...…………...
+
+Jména, příjmení a podpisy ostatních členů komise:  ……...................................... ………………………...…….
+
+….MARIE NOVOTNÁ…... ……………..…………… ...KAREL STARÝ……….. ………...………………….
+
+….JAROSLAV NOVÁK… ………………………….. ...JANA ČERMÁKOVÁ… …….…............................
+
+…..PETR KOMÁREK…... …………………………. ….......................................... …………………………….
+
+………..…....................................... …....…………........... ............…….......................... ………..…........................
+
+Člen okrskové volební komise (z výše uvedených) pověřený předáním zápisu Českému statistickému úřadu na
+
+územně příslušném pracovišti a k opravám případných chyb v zápisu na místě ………...KAREL STARÝ...............
+
+                                                                                                                    jméno a příjmení
+
+Zápis odmítl podepsat (jméno, příjmení a podpis): ......................................................................................................
+Důvody odmítnutí jsou uvedeny v samostatné příloze k zápisu.
+
+V případě zpracování Zápisu pomocí programu ČSÚ:
+  o komise zapíše údaje na záložce „T/3 – odd. III“,
+  o program ČSÚ automaticky provede kontroly a upozorní na případné chyby v logických
+        vazbách mezi údaji, komise je může ihned opravit,
+  o v případě, že se v kontrolách za okrsek objeví upozornění na údaj, který však nelze ze
+        strany komise opravit, protože byl takto skutečně zjištěn (nejde o chybu při počítání nebo
+        překlep při pořizování Zápisu), bude komise při předání ČSÚ vyzvána k uvedení
+        vysvětlení a podepsání protokolu,
+  o komise kompletní Zápis vytiskne ve 2 vyhotoveních a zároveň exportuje data na
+        technický nosič (flash disk), poté zkontroluje přítomnost datového souboru na nosiči
+        (pouze podle názvu souboru; je šifrovaný a nelze ho otevřít a zkontrolovat obsah),
+  o po kontrole údajů zapisovatel na obou stejnopisech Zápisu zkontroluje vytištěné datum
+        a čas a vše svým podpisem potvrdí, stejně tak podepíše i oba stejnopisy souhrnného
+        hlasovacího lístku,
+  o poté ke svým jménům a příjmením doplní podpisy i ostatní přítomní členové komise,
+        a to na obou stejnopisech Zápisu (včetně obou souhrnných hlasovacích lístků).
+
+V okrsku, kde probíhají volby do městské části nebo městského obvodu, provede komise kroky
+č. 10–16 také pro další typ zastupitelstva. V programu ČSÚ jsou záložky „T/3 – odd. I“ a „T/3 – odd. III“
+společné pro oba typy zastupitelstva.
+
+V případě společného konání voleb po podepsání Zápisu pro jeden druh voleb, přistoupí komise ke
+zpracování dalšího druhu voleb. Vyjme odevzdané úřední obálky pro další druh voleb, předem
+uložené ve volební schránce, a dále postupuje dle Pokynů pro právě zpracovávaný druh voleb.
+
+                                                        19
+17. Předat výsledky hlasování ČSÚ
+
+    Určený člen komise uvedený v Zápisu předá v obálce na příslušné přebírací místo ČSÚ
+        (jehož sídlo sdělí komisi Český statistický úřad ve spolupráci s obecním úřadem; bude uvedeno i na
+        internetové adrese www.volby.cz):
+
+              jeden stejnopis Zápisu podepsaný členy komise,
+              jeden souhrnný hlasovací lístek podepsaný členy komise,
+              případně technický nosič s výsledky hlasování (export z programu ČSÚ).
+
+    Člen komise předávající Zápis může být vyzván k předložení průkazu člena komise.
+    Konají-li se volby do zastupitelstva městské části nebo městského obvodu, předá komise výše
+
+        uvedené i za tyto volby.
+    Při společném konání voleb předá určený člen komise Zápisy (a příp. přílohy) za všechny druhy
+
+        zpracovaných voleb; výsledky krajských či místních referend se na přebírací místa ČSÚ nepředávají.
+    Ostatní členové komise vyčkají ve volební místnosti, protože pověřený zaměstnanec ČSÚ může,
+
+        prostřednictvím zástupců komise předávajících Zápis, žádat vysvětlení některých skutečností
+        uvedených v Zápisu, opravu eventuálních chyb v Zápisu nebo vyhotovení a předání nového Zápisu.
+    Komise musí vyhotovit a předat Zápis do 24 hodin po ukončení hlasování (§ 66 odst. 5 ZSV).
+    Po předání Zápisu (popř. technického nosiče s výsledky hlasování) určeným členem komise
+        zkontroluje pověřený zaměstnanec ČSÚ výskyt případných chyb a nedostatků.
+    Jestliže se v předávaném Zápisu vyskytnou chyby,
+
+              jejichž oprava je možná bez využití materiálů uložených ve volební místnosti (příp. po
+              telefonickém ověření), provedou se opravy na místě v součinnosti člena komise pověřeného
+              k opravám případných chyb v Zápisu a pracovníků ČSÚ; tímto způsobem lze opravovat pouze
+              chyby:
+
+                  o ve slovním popisu územní příslušnosti okrsku v záhlaví tiskopisu,
+                  o v oddílu I.,
+                  o v identifikaci okrsku v oddílu II.,
+                  o v kontrolním čísle 2 v oddílu II.,
+                  o v kontrolních číslech k hlasům pro jednotlivé volební strany a v údajích o pořadovém čísle
+
+                       posledního kandidáta s hlasy na zadní straně tiskopisu.
+                  Postupuje se tak, že opravu provede člen komise, pověřený k opravám případných chyb
+                  na místě, přeškrtnutím původního údaje (tak, aby zůstal čitelný) a vedle nebo nad něj napíše
+                  správný údaj, opravu pověřený zástupce komise podepíše a parafuje ji určený vyškolený
+                  zaměstnanec ČSÚ.
+              Všechny ostatní chyby v Zápisu nebo přiloženém souhrnném hlasovacím lístku jsou
+              důvodem k odmítnutí Zápisu. Pověřený zaměstnanec ČSÚ:
+                  o vypracuje ve dvou vyhotoveních Záznam o odmítnutí a jedno vyhotovení záznamu předá
+
+                       zástupci komise,
+                  o uvede důvod odmítnutí a stanoví lhůtu pro odstranění chyb a předání nového Zápisu,
+
+                       resp. opraveného, s přihlédnutím k charakteru chyb a dopravní vzdálenosti do volební
+                       místnosti a zpět na přebírací místo ČSÚ; lhůta může být v případě hodném zvláštního zřetele
+                       stanovena i tak, že přesáhne dobu 24 hodin od ukončení hlasování (§ 66 odst. 3 a 5 ZSV).
+
+        Na přiloženém souhrnném hlasovacím lístku s výsledky hlasování v okrsku nelze ve spolupráci
+        s pracovníky ČSÚ opravovat žádný údaj.
+
+        Na přebíracím místě ČSÚ lze odevzdat s daty na technickém nosiči pouze Zápis (včetně
+        souhrnného hlasovacího lístku), který byl vytištěn současně s exportem těchto dat na technický
+        nosič.
+
+                                                               20
+18. Převzít doklady o uložení výsledků hlasování do systému ČSÚ
+
+    Bezprostředně po bezchybném uložení převzatých výsledků hlasování v okrsku do systému
+        zpracování v ČSÚ obdrží zástupce komise:
+
+               opis výsledku hlasování v okrsku,
+               protokol o bezchybném převzetí výsledků hlasování v okrsku do dalšího zpracování,
+               ústní pokyn k ukončení zasedání komise ve dnech voleb (není dotčen § 43 ZSV).
+
+    Předání těchto dokladů (vždy v jednom vyhotovení) a ústního pokynu je zároveň potvrzením
+        o bezchybném převzetí výsledků z daného okrsku do dalšího zpracování (§ 66 odst. 4 ZSV).
+
+    Zástupci komise si mohou na místě ověřit, že údaje zanesené ČSÚ do dalšího zpracování souhlasí
+        s údaji v Zápisu (porovnáním s opisem uložených dat nebo, mají-li přístup na internet, s údaji na
+        www.volby.cz).
+
+19. Uložit volební dokumentaci a ukončit zasedání komise ve dnech voleb
+    Komise vyčká návratu svých zástupců z přebíracího místa ČSÚ.
+    Komise do druhého stejnopisu Zápisu, který zůstal ve volební místnosti, promítne případné opravy
+        provedené na přebíracím místě ČSÚ.
+    Komise poté do označených obálek postupně zapečetí výpis ze stálého seznamu voličů a jeho
+        dodatek a dále druhý stejnopis Zápisu (včetně souhrnného hlasovacího lístku) spolu s doklady
+        o převzetí výsledků hlasování do dalšího zpracování v ČSÚ.
+    Komise předá do úschovy obecnímu úřadu zapečetěnou volební dokumentaci pro
+         volby do zastupitelstva obce, která obsahuje v jednotlivých označených zapečetěných obálkách:
+
+               nepoužité úřední obálky,
+               hlasovací lístky volně vhozené do volební schránky,
+               neplatné hlasy z úředních obálek,
+               odevzdané úřední obálky,
+               hlasovací lístky, podle kterých se čárkovalo,
+               pomocné hlasovací lístky, příp. pomocné sčítací archy, použité pro čárkování,
+               výpis ze stálého seznamu voličů a jeho dodatek,
+               Zápis o průběhu a výsledku hlasování v okrsku a souhrnný hlasovací lístek (2. stejnopis),
+               a doklady od ČSÚ (opis výsledku hlasování a protokol o bezchybném převzetí výsledků),
+               příp. i další materiály, vzniklé v průběhu voleb (např. zápis o provedené kontrole).
+    Dále předá do úschovy obecnímu úřadu obálku s nepoužitými hlasovacími lístky a obálku s jinými
+        písemnostmi a předměty.
+    Činnost komise při volbách je ukončena zpravidla patnáctým dnem po vyhlášení výsledků voleb
+        do zastupitelstev obcí Státní volební komisí (podrobněji viz § 43 ZSV).
+
+                                                                21
+                                                                    Přílohy:
+Příloha č. 1 – Vzor Zápisu o průběhu a výsledku hlasování ve volebním okrsku (tiskopis T/3)
+Příloha č. 2 – Vzor Záznamu o odmítnutí zápisu o průběhu a výsledku hlasování ve volebním okrsku Českým
+
+                   statistickým úřadem
+Příloha č. 3 – Ukázka vyplněného Zápisu o průběhu a výsledku hlasování ve volebním okrsku (tiskopis T/3)
+Příloha č. 4 – Ukázka vyplněného souhrnného hlasovacího lístku (povinná příloha k tiskopisu T/3) při ručním
+
+                  zpracování
+
+                                                                 22
+                               Příloha č. 1 – Vzor tiskopisu T/3
+
+ZÁPIS O PRŮBĚHU A VÝSLEDKU HLASOVÁNÍ VE VOLEBNÍM OKRSKU
+                                                                                                                        T/3
+
+Ve volebním okrsku č. ................. v obci (městysu, městě, městské části, městském obvodu) .....………..……..…
+.........................………..…………............ okres .…................................................... proběhlo ve dnech (dne)
+...........................…..…… hlasování ve volbách do zastupitelstva obce (městysu, města, městské části,
+městského obvodu) ...................................…………....………………………………………………………………...
+
+                                                                         I.
+Předseda komise zahájil hlasování první den voleb v ....................... hodin.
+Předseda komise ukončil hlasování první den voleb v ………………. hodin.
+Předseda komise zahájil hlasování druhý den voleb v ...................... hodin.
+Předseda komise ukončil hlasování druhý den voleb v ..................... hodin.
+
+Zahájení hlasování nebylo x) bylo x) odročeno dne…………..….….o...........hodin...........minut z důvodu…………
+................................................................................................................................................................................
+Doba hlasování nebyla x) byla x) prodloužena dne…….………..….o...........hodin...........minut z důvodu.................
+………………………………………………………………………………………………………………………………...
+Hlasování nebylo x) bylo x) přerušeno dne……….….….na dobu od................do.................hodin z důvodu…..…..
+................................................................................................................................................................................
+
+Při hlasování a zjišťování výsledků hlasování nebyly x) byly x) okrskové volební komisi podány stížnosti nebo
+oznámení. Jejich stručný obsah, přijatá usnesení a jejich stručné zdůvodnění jsou uvedeny v příloze na
+.......... listech.
+
+Ve volebním okrsku nebyla x) byla x) použita přenosná volební schránka.
+
+                               II.
+
+Byly zjištěny výsledky hlasování uvedené v tomto oddílu a na přiloženém označeném hlasovacím lístku.         xx)
+
+                                                                                    Obec  Okrsek      KČ1
+
+Identifikace volebního okrsku
+
+Typ voleného zastupitelstva
+Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem
+Počet voličů, kterým byly vydány úřední obálky
+Počet voličů, kteří hlasovali na voličský průkaz
+Počet odevzdaných úředních obálek
+Počet hlasovacích lístků, které jsou platným hlasem voliče
+Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany)
+Počet volebních stran ve volebním okrsku (dle hlasovacího lístku)
+Počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas
+Kontrolní číslo 2
+
+x) nehodící se škrtněte
+xx) KČ1 … kontrolní číslo 1
+
+                               23
+                            II. – pokračování
+
+Poř. Počet             Číslo Poř. Počet                       Číslo Poř. Počet                        Číslo
+stra- hlasů pro
+ny *) stranu     Kontrolní číslo posl. stra- hlasů pro  Kontrolní číslo posl. stra- hlasů pro  Kontrolní číslo posl.
+sl.1 sl.2
+                 sl.1+sl.2 kand. ny *) stranu           sl.5+sl.6 kand. ny *) stranu           sl.9+sl.10 kand.
+ 1.
+                 sl.3  sl.4 sl.5 sl.6                   sl.7  sl.8 sl.9 sl.10                  sl.11  sl.12
+
+                       16.                                    31.
+
+2.                     17.                                    32.
+
+3.                     18.                                    33.
+
+4.                     19.                                    34.
+
+5.                     20.                                    35.
+
+6.                     21.                                    36.
+
+7.                     22.                                    37.
+
+8.                     23.                                    38.
+
+9.                     24.                                    39.
+
+10.                    25.                                    40.
+
+11.                    26.                                    41.
+
+12.                    27.                                    42.
+
+13.                    28.                                    43.
+
+14.                    29.                                    44.
+
+15.                    30.                                    45.
+
+                                                                        III.
+Z celkového počtu .................... členů okrskové volební komise je v době vyhotovení zápisu přítomno
+.............., tj. nadpoloviční většina.
+Dále byli přítomni: .............................................................................................................................................…..
+
+Zápis byl přečten za účasti nadpoloviční většiny členů okrskové volební komise a schválen nadpoloviční
+většinou přítomných členů komise.
+
+Hodina, den, měsíc a rok vyhotovení zápisu: ………………………………………………………………...…………
+
+Jméno, příjmení a podpis zapisovatele: ………………………….…………………………………………………..….
+
+Jména, příjmení a podpisy ostatních členů komise: ........................................ …………………………….….
+
+........................................ ........................................ ........................................ .............................................
+
+........................................ ........................................ ........................................ .............................................
+
+........................................ ........................................ ........................................ .............................................
+
+........................................ ........................................ ........................................ .............................................
+Člen okrskové volební komise (z výše uvedených) pověřený předáním zápisu Českému statistickému úřadu na
+územně příslušném pracovišti a k opravám případných chyb v zápisu na místě .....................................................
+
+                                                                                                                  jméno a příjmení
+Zápis odmítl podepsat (jméno, příjmení a podpis): .................................................................................................
+Důvody odmítnutí jsou uvedeny v samostatné příloze k zápisu.
+
+*) volební strany se uvádí v pořadí dle hlasovacího lístku (ve sloupcích 4, 8 a 12 se uvádí číslo posledního kandidáta, který v rámci této
+volební strany získal alespoň jeden platný hlas)
+
+                                                                 24
+                               Příloha č. 2 – Záznam o odmítnutí
+
+Záznam o odmítnutí zápisu o průběhu a výsledku hlasování ve volebním okrsku
+                                    Českým statistickým úřadem
+
+Volby do zastupitelstva obce (města, městské části, městského obvodu): ..............................………….……….…
+..............................................................................................................................................................…..……….
+konané ve dnech (dne): ..................................…….
+
+Identifikace volebního okrsku      Obec                           Okrsek KČ1
+                                   .........……………                 .......... .......
+
+Územní příslušnost volebního okrsku slovy (obec, městská část, městský obvod, okres):
+..............................................................................................................................................................……..…….
+..............................................................................................................................................................………..….
+Zápis byl odmítnut z důvodu:
+..............................................................................................................................................................…..……….
+..............................................................................................................................................................……..…….
+..............................................................................................................................................................………..….
+..............................................................................................................................................................………..….
+a pro odstranění chyb a předání nového zápisu byla stanovena lhůta (den a hodina):
+...............................................................................................................................................................…………..
+…..…......................................................................................................................................................................
+
+            datum záznamu, jméno, příjmení a podpis pověřeného zaměstnance Českého statistického úřadu
+
+                               25
+                      Příloha č. 3 – Ukázka vyplněného Zápisu
+
+ZÁPIS O PRŮBĚHU A VÝSLEDKU HLASOVÁNÍ VE VOLEBNÍM OKRSKU
+                                                                                                                        T/3
+
+Ve volebním okrsku č. .......1.......... v obci (městysu, městě, městské části, městském obvodu) .....……………..…
+...........Sebranice..............…………............ okres .…............Blansko......................... proběhlo ve dnech (dne)
+…......xx. a xx. xx. 20xx.......… hlasování ve volbách do zastupitelstva obce (městysu, města, městské části,
+městského obvodu) ..............Sebranice.......…………....……………………………………………………………...
+
+                                                                         I.
+Předseda komise zahájil hlasování první den voleb v .........14:00..............hodin.
+Předseda komise ukončil hlasování první den voleb v …….22:00…..…….hodin.
+Předseda komise zahájil hlasování druhý den voleb v .........8:00...............hodin.
+Předseda komise ukončil hlasování druhý den voleb v ........14:00............ hodin.
+
+Zahájení hlasování nebylo x) bylo x) odročeno dne…………..….….o...........hodin...........minut z důvodu……..……
+................................................................................................................................................................................
+Doba hlasování nebyla x) byla x) prodloužena dne…….………..….o...........hodin...........minut z důvodu.................
+………………………………………………………………………………………………………………………………...
+Hlasování nebylo x) bylo x) přerušeno dne……….….….na dobu od................do.................hodin z důvodu…..…..
+................................................................................................................................................................................
+
+Při hlasování a zjišťování výsledků hlasování nebyly x) byly x) okrskové volební komisi podány stížnosti nebo
+oznámení. Jejich stručný obsah, přijatá usnesení a jejich stručné zdůvodnění jsou uvedeny v příloze na
+.......... listech.
+
+Ve volebním okrsku nebyla x) byla x) použita přenosná volební schránka.
+
+                               II.
+
+Byly zjištěny výsledky hlasování uvedené v tomto oddílu a na přiloženém označeném hlasovacím lístku.          xx)
+
+                                                                         Obec      Okrsek             KČ1
+
+Identifikace volebního okrsku       58231 0                                                1           6
+
+Typ voleného zastupitelstva                                                                       1
+Počet osob zapsaných do výpisu ze seznamu voličů a jeho dodatku celkem                  515
+Počet voličů, kterým byly vydány úřední obálky                                          370
+Počet voličů, kteří hlasovali na voličský průkaz
+Počet odevzdaných úředních obálek                                                                 0
+Počet hlasovacích lístků, které jsou platným hlasem voliče                              370
+                                                                                        360
+Počet platných hlasů ve volebním okrsku (celkem pro všechny volební strany)
+Počet volebních stran ve volebním okrsku (dle hlasovacího lístku)                  2483
+Počet volebních stran, které ve volebním okrsku získaly alespoň jeden platný hlas                 8
+Kontrolní číslo 2                                                                                 8
+
+x) nehodící se škrtněte                                                            4115
+xx) KČ1 … kontrolní číslo 1
+
+                                                                 26
+                                  II. – pokračování
+
+Poř. Počet             Číslo Poř. Počet                       Číslo Poř. Počet                        Číslo
+stra- hlasů pro
+ny *) stranu     Kontrolní číslo posl. stra- hlasů pro  Kontrolní číslo posl. stra- hlasů pro  Kontrolní číslo posl.
+
+sl.1 sl.2        sl.1+sl.2 kand. ny *) stranu           sl.5+sl.6 kand. ny *) stranu           sl.9+sl.10 kand.
+
+                 sl.3  sl.4 sl.5 sl.6                   sl.7  sl.8 sl.9 sl.10                  sl.11  sl.12
+
+1.   733         7 3 4 9 16.                                  31.
+
+2.   509         5 1 1 5 17.                                  32.
+
+3.   59                6 2 8 18.                              33.
+
+4.   62                6 6 1 19.                              34.
+
+5.   64                6 9 2 20.                              35.
+
+6.   63                6 9 1 21.                              36.
+
+7.   11                1 8 1 22.                              37.
+
+8.   982         9 9 0 7 23.                                  38.
+
+9.                     24.                                    39.
+
+10.                    25.                                    40.
+
+11.                    26.                                    41.
+
+12.                    27.                                    42.
+
+13.                    28.                                    43.
+
+14.                    29.                                    44.
+
+15.                    30.                                    45.
+
+                                                                        III.
+Z celkového počtu .........6........... členů okrskové volební komise je v době vyhotovení zápisu přítomno
+.......6......., tj. nadpoloviční většina.
+Dále byli přítomni: .............................................................................................................................................…..
+
+Zápis byl přečten za účasti nadpoloviční většiny členů okrskové volební komise a schválen nadpoloviční
+většinou přítomných členů komise.
+
+Hodina, den, měsíc a rok vyhotovení zápisu: ………17:05, xx. xx. 20xx………….……………………...…………
+
+Jméno, příjmení a podpis zapisovatele: ………………… EMA TICHÁ …………….………...………….…………..
+
+Jména, příjmení a podpisy ostatních členů komise: ………………………………. …......………….……………..
+
+..MARIE NOVOTNÁ……. ……………………………. ….KAREL STARÝ.……… ……….………………………
+
+..JAROSLAV NOVÁK…. …………………………….. …JAN KRÁTKÝ………… ...…………………...………..
+
+..PETR KOMÁREK......... ........................................ ........................................ . ............................................
+
+........................................ ........................................ ........................................ .............................................
+Člen okrskové volební komise (z výše uvedených) pověřený předáním zápisu Českému statistickému úřadu na
+územně příslušném pracovišti a k opravám případných chyb v zápisu na místě .........KAREL STARÝ..................
+
+                                                                                                              jméno a příjmení
+Zápis odmítl podepsat (jméno, příjmení a podpis): .................................................................................................
+Důvody odmítnutí jsou uvedeny v samostatné příloze k zápisu.
+
+*) volební strany se uvádí v pořadí dle hlasovacího lístku (ve sloupcích 4, 8 a 12 se uvádí číslo posledního kandidáta, který v rámci této
+volební strany získal alespoň jeden platný hlas)
+
+                                                                 27
+Příloha č. 4 – Ukázka vyplněného souhrnného hlasovacího lístku (povinná příloha k tiskopisu T/3) při
+ručním zpracování
+
+Obec Sebranice                                                   HLASOVACÍ LÍSTEK
+Do zastupitelstva obce se volí 7 členů  Pro volby do zastupitelstva obce ve dnech xx. a xx. xx. 20xx
+
+                                                                                                                                   VÝSLEDKY ZA OKRSEK Č.: 1
+
+                                                                                                             Podpis předsedy komise (při ručním zpracování)
+
+     Volební strana A                        Volební strana B            Volební strana C         Volební strana D
+                                                                                                  vylosované číslo 4
+733  vylosované číslo 1                 509  vylosované číslo 2      59  vylosované číslo 3
+
+119  1. AB                              101  1. OP                   7   1. FE               62   1. ZX
+
+119  2. CD                              101  2. RS                   8   2. HG
+
+119  3. EF                              102  3. TU                   0   3. JI
+
+N    4. GH                              103  4. VW                   14  4. LK
+
+108  5. IJ                              102  5. XZ                   12  5. NM
+
+104  6. KL                                                           8   6. PO
+
+104  7. MN                                                           9   7. SR
+
+31   8. BA                                                           1   8. UT
+
+29   9. DC                                                           0   9. VZ
+
+     Volební strana E                        Volební strana F            Volební strana G         Volební strana H
+                                             vylosované číslo 6          vylosované číslo 7
+64   vylosované číslo 5                                                                      982  vylosované číslo 8
+
+32   1. AZ                              63   1. CV                   11  1. DU               125  1. AC
+
+32   2. BW                                                                                   181  2. BD
+
+Jméno, příjmení          EMA TICHÁ                                                           177  3. CE
+a podpis zapisovatele:
+
+                                                                                             194  4. DF
+
+Jména, příjmení a podpisy MARIE NOVOTNÁ                              KAREL STARÝ             N    5. EG
+ostatních členů komise:                                              JAN KRÁTKÝ
+                                                                                             180  6. FH
+                                         JAROSLAV NOVÁK
+
+                         PETR KOMÁREK                                                        125  7. GI
+
+                                                                 28
+

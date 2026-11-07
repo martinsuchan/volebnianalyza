@@ -1,7 +1,7 @@
 # Soudní podání ke komunálním volbám 2026
 
 Evidence všech řízení o neplatnosti voleb, hlasování nebo volby kandidáta ke komunálním volbám 9.–10. 10. 2026,
-která byla k 1. 11. 2026 vyvěšena na elektronických úředních deskách soudů, a jejich vazba na nálezy této analýzy.
+která byla k 1. 11. 2026 vyvěšena na elektronických úředních deskách soudů (doplněno k 7. 11. 2026), a jejich vazba na nálezy této analýzy.
 Slouží k závěrečnému vyhodnocení po rozhodnutí soudů: **které nálezy ukázaly na skutečnou chybu a kde oprava změnila
 složení zastupitelstva.**
 
@@ -11,9 +11,11 @@ Složka není součástí publikovaného webu (`report/`).
 
 | Soubor | Obsah |
 |---|---|
-| `podani_2026.csv` | Jeden řádek na řízení (207): 33 Městský soud v Praze, 174 krajské soudy. Stav k 1. 11. 2026 a prázdné sloupce pro výsledek. |
+| `podani_2026.csv` | Jeden řádek na řízení (233): 33 Městský soud v Praze, 200 krajské soudy. Stav k 1. 11. 2026, rozhodnutí a výsledky přepočtů k 7. 11. 2026. |
+| `soudni_podani_praha_2026.pdf`, `soudni_podani_kraje_2026.pdf` | PDF přehledy pro Prahu a kraje (výstup `scripts/soudy_pdf.py`). |
 | `stav_<datum>.csv` | Výstup `scripts/soudy_stav.py` – rozhodnutí nalezená na deskách k danému dni (navržený stav a výrok). |
 | `../scripts/soudy_stav.py` | Stáhne aktuální úřední desky, najde usnesení k řízením z CSV a vytáhne výrok. |
+| `../scripts/soudy_pdf.py` | Vytvoří oba PDF přehledy z CSV (vyžaduje `reportlab`; `python scripts/soudy_pdf.py [adresář]`). |
 
 Stažené PDF se ukládají do `data/raw/soudy/` (není v gitu).
 
@@ -24,6 +26,7 @@ Stažené PDF se ukládají do `data/raw/soudy/` (není v gitu).
 - `navrhovatel` – volební strana, nebo „volič“ (jména soukromých osob neuvádíme; u Prahy uvedeni kandidáti z veřejných kandidátních listin).
 - `predmet`, `okrsky_v_podani` – co podání napadá (stručně) a okrsky v něm zmíněné (u krajů vytaženo automaticky, může obsahovat šum).
 - `stav_2026_11_01` – stav k 1. 11. 2026: běží / běží (spojeno) / odmítnuto / zamítnuto / zastaveno / vyhověno.
+- `nalezy_m`, `odkaz_m` – nálezy řady M (doplňková pravidla z listopadu 2026) ve stejném okrsku, jaký podání napadá (u měst s MČ/MO i ve stejné MČ).
 - `nalezy`, `vztah`, `nalez_popis`, `odkaz_nalez` – vazba na náš nález (ID v registru obce) a její síla:
   - **přesná** – podání napadá stejný okrsek a stejnou vadu jako nález;
   - **částečná** – shoda u části napadených okrsků;
@@ -39,6 +42,40 @@ Stažené PDF se ukládají do `data/raw/soudy/` (není v gitu).
   - `nalez_potvrzen` – ano / ne / částečně (zda přepočet potvrdil chybu, kterou nález označil);
   - `zmena_slozeni` – ano / ne (zda se změnilo složení zastupitelstva nebo zvolení kandidáti);
   - `poznamka` – zjištěné skutečné počty hlasů apod.
+
+## Stav k 7. 11. 2026 – rozhodnutí
+
+Soudy rozhodly ve 139 z 233 řízení (17× vyhověno, 91× zamítnuto, 27× odmítnuto, 4× zastaveno). 26 řízení přibylo na deskách
+až po 1. 11. (hlavně KS Ostrava – Karviná, Havířov, Heřmanovice, Ostrava; KS Ústí – Pulečný, Velké Hamry).
+
+**Soud změnil výsledek (zvolené, mandáty nebo pořadí náhradníků) ve 12 obcích a MČ:**
+
+| Místo | Řízení | Co soud zjistil | Nález analýzy |
+|---|---|---|---|
+| Praha 10 | 5 A 68 (+ 5 spojených) | 10043: Křehlík 15 místo 165 → Naše Praha 10 pod 5 %; 10028: komise zjistila 11 643 z 12 574 hlasů | N01, N17 – **potvrzeno** (M02, M14 ve stejném okrsku) |
+| Praha 15 | 17 A 63 | 15003: nezapočtený balík Patnáctky, neplatná volba M. Nauče | N02 – **potvrzeno** |
+| Praha 3 | 15 A 67 | 3052: Klusáková 35 místo 353 → pořadí náhradníků | N11 – **potvrzeno** |
+| Plzeň 1 | 77 A 88 | 1024: Chvalová 325 místo ~35 | N01 – **potvrzeno** |
+| Most | 115 A 6 | okrsek 30: VIZE pro Most, 30 ze 45 kandidátů s 0 | N01 – **potvrzeno** |
+| Havířov | 21 A 11 | okrsek 28: kandidátům č. 21–24 chybělo po 32 hlasech z lístků s křížkem u strany | **M01 – potvrzeno** |
+| Karviná | 21 A 8 | okrsek 40: +13 hlasů SPD → nad 5 %, 2 mandáty | N01/N03 (okrsek 26) – stejný dopad, jiný okrsek (částečně) |
+| Býkev | 54 A 55 | 114 místo 141 (přehozené číslice) | mezera |
+| Horní Němčice | 52 A 7 | nezapočtené lístky s křížkem u strany | mezera |
+| Chomutov | 115 A 5 | okrsek 22: poslední dvě kandidátky bez hlasů z 31 lístků s křížkem u strany | mezera |
+| Pulečný | 64 A 5 | nezapočtená část hlasů (jediný okrsek) | mezera |
+| Moldava | 116 A 7 | hlasování neplatné – voliči nepřipuštěni (seznam voličů) | mimo rozsah analýzy |
+
+**Zamítnuté návrhy s přesnou vazbou:**
+- Praha 3 / 3038 (N11) a Brno-střed / 23038 (N31): chybu soud nebo volební orgán připustil, na výsledek ale neměla vliv.
+- Ostrava – Moravská Ostrava a Přívoz / 8010 (N07, N17): soud přepočet neprovedl, statistická odchylka podle něj sama nestačí.
+
+**Nálezy M ve stejném okrsku jako podání má 18 řízení**, mj. Praha 12 / 12025 (M66 – rozptýlené nuly u TOP 09; k 1. 11. vedeno jako mezera),
+Brno-Bystrc / 3023 (M01), Uherské Hradiště / 13 (M01), Kladno / 7 (M02) a Havířov / 28 (M01).
+
+**Poučení pro pravidla:**
+- Tři ze čtyř mezer jsou nezapočtené lístky s křížkem u strany v malých obcích s jediným okrskem nebo u posledních kandidátů kandidátky.
+  Pomohlo by srovnání hlasů posledních kandidátů s počtem lístků s křížkem u strany.
+- Býkev je záměna číslic.
 
 ## Stav k 1. 11. 2026 – souhrn
 

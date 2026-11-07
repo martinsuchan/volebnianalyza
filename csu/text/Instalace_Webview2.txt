@@ -1,0 +1,45 @@
+Instalace, případně aktualizace Microsoft Edge WebView2 Runtime
+
+Důležité na úvod
+
+Je nutné zmínit, že vlastní instalaci musí spouštět uživatel s administrátorským oprávněním.
+
+Níže uvedený postup řeší jak "online", tak především „offline“ variantu instalace, při které není nutné, aby
+výpočetní technika (VT), na které chcete pořizovat data, byla přímo připojená k internetu.
+
+Pro samotné stažení instalačního souboru je přístup k internetu nutný. Lze jej řešit přes jiné zařízení a stažený
+soubor pak na potřebnou techniku instalovat z flash disku. Velikost stahovaného souboru je do 210 MB.
+
+Vlastní postup.
+    1. Aktuální verze Microsoft Edge WebView2 Runtime (zkráceně WV2) se stahuje ze stránek Microsoftu na
+         této adrese:
+         https://developer.microsoft.com/cs-cz/microsoft-edge/webview2#download
+
+    2. Z výše uvedené stránky lze stáhnout různé verze instalátorů WV2, pro vás je důležitá tato část:
+
+3. Pro 64bitový systém klikáte na
+
+Pro 32bitový systém klikáte na     .
+
+Pokud typ systému nevíte, zjistíte ho přes tlačítko Start na Hlavním panelu. Kliknete pravým tlačítkem
+myši na Start, z menu vyberete Systém a zde hledáte „Typ systému“.
+Popř. je tento údaj uveden v chybovém hlášení při instalaci programu pro okrskové volební komise:
+    4. Po kliknutí na vybraný odkaz se vám zobrazí okno s akceptací podmínek Microsoftu, kterou je nutno
+         kliknutím na „accept-and-download“ potvrdit. Případný dotaz, co chcete udělat se souborem,
+         doporučujeme řešit volbou „Uložit jako“.
+
+    5. Instalační soubor se vám uloží do vámi zvoleného umístění a bude se jmenovat:
+         MicrosoftEdgeWebView2RuntimeInstallerX86.exe
+         nebo
+         MicrosoftEdgeWebView2RuntimeInstallerX64.exe.
+         Názvy odpovídají vaší předchozí volbě dle typu vašeho OS.
+
+    6. Vlastní instalaci spustíte tak, že kliknete pravým tlačítkem na soubor a z menu vyberete „Spustit
+         jako správce“. Začne probíhat instalování.
+
+         Po úspěšném skončení instalace se zobrazené okno samo zavře.
+    7. Po dokončení instalace doporučujeme provést restart celé VT.
+
+Tímto by mělo být zajištěno požadované minimální SW vybavení pro provoz aplikace pro vyhotovení zápisu o
+průběhu a výsledku hlasování na technickém nosiči program pro okrskové volební komise.
+
