@@ -10,10 +10,10 @@ Scenarios are applied per finding and jointly; seats (§45) and the preferential
 import sys, os, math, json
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(__file__))
-from common import load, RES, UNIT
+from common import load, RES, UNIT, ROK
 from seats import allocate
 
-Y = 2026
+Y = ROK
 
 
 def outcome(ros, rk, cm, zk, dV=None, dC=None):
@@ -54,7 +54,7 @@ def corrections():
             corr.append(dict(id=f'S-{r.OID}-{r.ZK}-{r.strana}-{lab}', druh=f'chybějící balík ({lab})', ZK=r.ZK, OID=r.OID,
                              dV={r.strana: k * width}, dC={(r.strana, c): k for c in pos},
                              popis=f'{r.nazev}: +{k} lístků × {width} hlasů'))
-    if UNIT != 'praha':
+    if UNIT != 'praha' or Y != 2026:
         # nulové hlasy strany při vysokém očekávání: doplnit očekávaný počet lístků s křížkem u strany
         Z = pd.read_pickle(f'{RES}/zeros_{Y}.pkl')
         Z = Z[(Z.rok == Y) & (Z.p_conservative < 1e-3)] if len(Z) else Z

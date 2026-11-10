@@ -1,0 +1,10 @@
+{
+ "row:545970/1048:54597001:1": {
+  "kontrola": "Ověřeno v datech: Plzeň 1, okrsek 1048: kandidáti PLZEŇ 1 V SRDCI – ČSSD a NK č. 1, 4, 9, 16, 17 a 18 mají po 8–9 hlasech (lístky s křížkem u strany, v sousedních okrscích mají všichni kandidáti 6–11), ostatních 21 kandidátů má 0. Lístky s křížkem u strany dávají hlas všem kandidátům, nuly uprostřed řádku tedy vznikly vynecháním buněk při přepisu (obdobný vzor v Mostě 2026 soud přepočtem potvrdil). Doplnění ~96 hlasů posune stranu přes 5% hranici v obvodu Plzeň 1: 1 mandát místo ANO.",
+  "jistota": 4
+ },
+ "stack:545988/2028:54598801:1": {
+  "kontrola": "Ověřeno v datech: Plzeň 2-Slovany, okrsek 2028: kandidáti SPOLU mají po 13–42 hlasech, v sousedních okrscích po 109–141. Okrsku zároveň chybí hlasy ~96 lístků (využití hlasů 60 % proti 84 % v okolí; v roce 2018 měl tentýž okrsek 87 %, normální hodnotu). Obě nezávislé linie odpovídají nezapočtenému balíku ~96 lístků s křížkem u SPOLU. Doplnění mění mandát v zastupitelstvu obvodu (SPOLU 11 → 12, PRO PLZEŇ 4 → 3).",
+  "jistota": 4
+ }
+}

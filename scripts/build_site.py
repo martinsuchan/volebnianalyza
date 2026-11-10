@@ -825,6 +825,10 @@ Přehledy okresů a obcí s počty nálezů a rozhodujícími rezervami.</p></a>
 <a class="hub" href="senat/index.html"><h3>Senát 2026, 1. kolo →</h3><p>5 021 okrsků ve 27 obvodech, srovnání s komunálními volbami okrsek po okrsku.
 Proč bylo senátních obálek o 13 % méně a kde rozhodly jednotky hlasů.</p></a>
 <a class="hub" href="nalezy.html"><h3>Všechny nálezy →</h3><p>Společný registr {len(AF)} nálezů s filtrem podle voleb, území, jistoty a dopadu.</p></a>
+<a class="hub" href="kv2022/index.html"><h3>Komunální volby 2022 →</h3><p>Zpětná analýza voleb 2022 stejnými detektory a pravidly ve všech obcích,
+nálezy po krajích a srovnání s rozhodnutími soudů.</p></a>
+<a class="hub" href="kv2018/index.html"><h3>Komunální volby 2018 →</h3><p>Zpětná analýza voleb 2018 ve všech obcích, nálezy po krajích
+a srovnání s rozhodnutími soudů (Šenov, Brno-Kohoutovice, Brno-střed, Praha 4).</p></a>
 <a class="hub" href="pravidla.html"><h3>Nová pravidla (nálezy M) →</h3><p>Listopad 2026: kontroly vycházející z logiky hlasovacího lístku, podnícené soudními návrhy.
 Co hledají a které nálezy jsou nejvážnější (Brno-Bystrc, Havířov).</p></a>
 </div>
@@ -973,7 +977,10 @@ def search_entries(AF, se_obvody):
             S.append((f'Senát 2. kolo – obvod {o} {nm}', f'senat/kolo2.html#obvod-{o}'))
     for d in AF:
         S.append((f'{d["gid"]} – {d["typ"]} ({d["misto"]})', d['url']))
-    S += [('Všechny nálezy', 'nalezy.html'), ('Metodika a zdroje', 'metodika.html'), ('Data ke stažení', 'data.html')]
+    S += [('Všechny nálezy', 'nalezy.html'), ('Metodika a zdroje', 'metodika.html'), ('Data ke stažení', 'data.html'),
+          ('Komunální volby 2022 – zpětná analýza a soudy', 'kv2022/index.html'), ('Komunální volby 2018 – zpětná analýza a soudy', 'kv2018/index.html')]
+    from units import slug as _slug
+    S += [(f'Komunální volby {r} – {k}', f'kv{r}/{_slug(k)}.html') for r in (2022, 2018) for k in sorted({u['kraj'] for u in UL})]
     return S
 
 
@@ -985,6 +992,8 @@ se_files += build_senat2.build(_page, fig, badge_j, badge_d, AUTHOR_URL)
 AF = all_findings(build_senat.findings() + build_senat2.findings())
 page_index(); page_findings(); page_map(); page_tests(); page_method(); page_data(se_files)
 page_kv_index(); page_okresy(); page_all_findings(AF); page_pravidla(AF); page_home(AF)
+import build_kv_zpetne
+build_kv_zpetne.build()  # zpětná analýza KV 2022 a 2018 (report/kv2022/, report/kv2018/)
 write_assets(search_entries(AF, [(int(o), n) for o, n in build_senat.obvn.items() if o in set(build_senat.t5.OBVOD)]))
 for old in ('mapa.html', 'testy.html', 'senat.html'):  # stránky z původní (jen pražské) struktury
     if os.path.exists(os.path.join(OUT, old)):

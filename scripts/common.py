@@ -35,6 +35,10 @@ RES = os.path.join(RES0, 'kv', UNIT)
 os.makedirs(P, exist_ok=True); os.makedirs(RES, exist_ok=True); os.makedirs(RES0, exist_ok=True)
 HCOLS = [f'HLASY_{i:02d}' for i in range(1, 71)]
 MAIN_DATE = {2018: 20181005, 2022: 20220923}
+# analyzovaný rok registru nálezů (findings_auto, materiality, findings_m); 2022 = zpětná analýza (listopad 2026)
+ROK = int(os.environ.get('AUDIT_YEAR', '2026'))
+PREDCHOZI = {2026: 2022, 2022: 2018, 2018: None}  # srovnávací (předchozí) volby; 2014 v datech není
+REVIEW_DIR = os.path.join(ROOT, 'review') if ROK == 2026 else os.path.join(ROOT, 'review', str(ROK))
 
 
 def load(year):

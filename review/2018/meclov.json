@@ -1,0 +1,10 @@
+{
+ "typo:553913/1:55391301:2:3": {
+  "kontrola": "Vyřazeno po kontrole v datech: ANO č. 3 má 137 hlasů; hlasy kandidátky jsou 30–162. Hlasy kandidátů strany se v okrsku silně liší (voliči volí jednotlivé kandidáty), takže hodnota nevybočuje a nejde o překlep.",
+  "vyradit": true
+ },
+ "typo:553913/1:55391301:2:2": {
+  "kontrola": "Vyřazeno po kontrole v datech: ANO č. 2 má 30 hlasů; hlasy kandidátky jsou 30–162. Hlasy kandidátů strany se v okrsku silně liší (voliči volí jednotlivé kandidáty), takže hodnota nevybočuje a nejde o překlep.",
+  "vyradit": true
+ }
+}

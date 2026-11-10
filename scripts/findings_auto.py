@@ -9,9 +9,9 @@ Nezkontrolované nálezy jsou označeny stav_kontroly='automaticky'.
 import sys, os, json, re
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import RES, ROOT, load, MAGISTRAT, UNIT, druh as druh_zast
+from common import RES, ROOT, load, MAGISTRAT, UNIT, ROK, REVIEW_DIR, druh as druh_zast
 
-Y = 2026
+Y = ROK
 JISTOTA = {5: 'Jistá (deterministický rozpor)', 4: 'Velmi vysoká (≥ 95 %)', 3: 'Vysoká (80–95 %)', 2: 'Střední (50–80 %)', 1: 'Nízká (< 50 %)'}
 MO_MESTA = {554821, 554791, 555134, 554804}  # Ostrava, Plzeň, Pardubice, Ústí n. L. mají městské obvody (MO)
 n0 = lambda v: f'{int(round(v)):,}'.replace(',', ' ')
@@ -309,7 +309,8 @@ def build():
     exp0 = float(p0.sum())
     from scipy import stats as _st
     p_exc = float(_st.poisson.sf(len(z0) - 1, max(exp0, 1e-9))) if len(z0) else 1.0
-    if len(z0) and p_exc < 0.01 and len(z0) >= 2 * exp0:
+    ma_listky = t3.PLAT_LISTKY.notna().any()  # 2018/2022: počet platných lístků v datech chybí (nahrazen obálkami) – test nelze provést
+    if ma_listky and len(z0) and p_exc < 0.01 and len(z0) >= 2 * exp0:
         add(klic='inv0', typ='Nulový počet neplatných lístků' + (' na obou lístcích' if z0.PLAT_MC.notna().all() else ''), ZK=0, OID=', '.join(z0.index), MC=', '.join(sorted(set(z0.MC.astype(str)))),
             zastupitelstvo='všechna zastupitelstva', subjekt=pl(len(z0), 'okrsek', 'okrsky', 'okrsků'),
             zjisteni=f'Počet platných lístků se rovná počtu odevzdaných obálek v {len(z0)} okrscích se 100 a více obálkami; při městské míře neplatnosti '
@@ -354,7 +355,8 @@ def build():
             umysl='Bez indikace', dopad='Mandát může změnit jakákoli drobná chyba v kterémkoli okrsku zastupitelstva.', dopad_kat='Těsný výsledek',
             doporuceni='Zvážit preventivní kontrolní přepočet.')
     # 10) opravy během volební noci (informativně)
-    B = pd.read_pickle(f'{RES}/batch_changes_{Y}.pkl')
+    pb = f'{RES}/batch_changes_{Y}.pkl'  # XML dávky z volební noci máme jen pro rok 2026
+    B = pd.read_pickle(pb) if os.path.exists(pb) else pd.DataFrame()
     if len(B):
         ch = [o for (o, k), r in B.iterrows() if any(r[c] != r[c + '_last'] for c in ('ZAPSANI_VOLICI', 'VYDANE_OBALKY', 'ODEVZDANE_OBALKY', 'PLATNE_LISTKY', 'PLATNE_HLASY'))]
         only_hl = not any(r[c] != r[c + '_last'] for (o, k), r in B.iterrows() for c in ('ZAPSANI_VOLICI', 'VYDANE_OBALKY', 'ODEVZDANE_OBALKY', 'PLATNE_LISTKY'))
@@ -366,7 +368,7 @@ def build():
             jistota=5, umysl='Žádná – oprava během zpracování', dopad='Ve finálních datech bez vlivu.', dopad_kat='Bez vlivu', doporuceni='Žádné.')
 
     # ---- kontrola (review) a pořadí
-    rv_path = os.path.join(ROOT, 'review', f'{UNIT}.json')
+    rv_path = os.path.join(REVIEW_DIR, f'{UNIT}.json')
     rv = json.load(open(rv_path, encoding='utf-8')) if os.path.exists(rv_path) else {}
     out = []
     for f in F:

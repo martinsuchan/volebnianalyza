@@ -1,0 +1,10 @@
+{
+ "typo:546224/15072:54622401:10:9": {
+  "kontrola": "Ověřeno v datech: Poruba, okrsek 15072: SPD č. 9 má 131 hlasů, ostatních 44 kandidátů 12–16. Ostatní kandidáti strany mají téměř stejný počet hlasů (lístky s křížkem u strany), hodnota s jednou číslicí navíc je jednoznačný překlep. Oprava mění pořadí zvolených uvnitř SPD.",
+  "jistota": 4
+ },
+ "missing:546046/19025:54604601": {
+  "kontrola": "Ověřeno v datech: Slezská Ostrava, okrsek 19025: okrsku chybí hlasy ~24 lístků (využití hlasů 74 % proti 90 %, z = −12,7) a několik kandidátek je rovnoměrně pod okolím (Slezská pro život 2–5 hlasů na kandidáta proti 10–15, Ostravak 3–8 proti 14–20, ODS 16 proti 24) – odpovídá nezapočteným lístkům s křížkem u stran. Rezerva zastupitelstva obvodu je jen 37 hlasů.",
+  "jistota": 3
+ }
+}

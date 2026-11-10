@@ -11,13 +11,17 @@ Složka není součástí publikovaného webu (`report/`).
 
 | Soubor | Obsah |
 |---|---|
-| `podani_2026.csv` | Jeden řádek na řízení (233): 33 Městský soud v Praze, 200 krajské soudy. Stav k 1. 11. 2026, rozhodnutí a výsledky přepočtů k 7. 11. 2026. |
+| `podani_2026.csv` | Jeden řádek na řízení (233): 33 Městský soud v Praze, 200 krajské soudy. Stav k 1. 11. 2026, rozhodnutí a výsledky přepočtů k 9. 11. 2026. |
 | `soudni_podani_praha_2026.pdf`, `soudni_podani_kraje_2026.pdf` | PDF přehledy pro Prahu a kraje (výstup `scripts/soudy_pdf.py`). |
 | `stav_<datum>.csv` | Výstup `scripts/soudy_stav.py` – rozhodnutí nalezená na deskách k danému dni (navržený stav a výrok). |
 | `../scripts/soudy_stav.py` | Stáhne aktuální úřední desky, najde usnesení k řízením z CSV a vytáhne výrok. |
 | `../scripts/soudy_pdf.py` | Vytvoří oba PDF přehledy z CSV (vyžaduje `reportlab`; `python scripts/soudy_pdf.py [adresář]`). |
+| `podani_2022.csv` | Řízení ke KV 2022 (78): rozhodnutí krajských soudů o neplatnosti volby kandidáta, hlasování nebo voleb z vyhledávače NSS + Hrčava. Sloupce: soud, spis, obec, slug, mc, rozhodnuti, prepocet (soud skutečně přepočítal hlasy / přezkoumal lístky), poznamka, okrsky (zmíněné v rozhodnutí), odkaz. Bez jmen účastníků. Srovnání se zpětnou analýzou 2022 je na webu v `report/kv2022/index.html`. |
+| `podani_2018.csv` | Řízení ke KV 2018 (174) ze stejného zdroje + Praha 4 (14 A 213/2018) podle odborné analýzy. Stejné sloupce; `prepocet` je vyplněn jen u řízení, kde soud výsledek změnil. Část obcí je v rozhodnutích anonymizována („O.“) a nemá slug. Srovnání na webu v `report/kv2018/index.html`. |
+| `../scripts/soudy_historie.py` | Sestaví `podani_2022.csv` a `podani_2018.csv` (`python scripts/soudy_historie.py 2022`, resp. `2018`: vyhledání, stažení, rozbor; ruční údaje jsou v tabulkách ve skriptu). |
+| `historie_2018_2022.md` | Rešerše: kde soudy v letech 2018 a 2022 změnily složení zastupitelstva a jaké chyby uznaly. |
 
-Stažené PDF se ukládají do `data/raw/soudy/` (není v gitu).
+Stažené PDF se ukládají do `data/raw/soudy/`, `data/raw/soudy2022/` a `data/raw/soudy2018/` (není v gitu).
 
 ## Sloupce `podani_2026.csv`
 
@@ -42,6 +46,29 @@ Stažené PDF se ukládají do `data/raw/soudy/` (není v gitu).
   - `nalez_potvrzen` – ano / ne / částečně (zda přepočet potvrdil chybu, kterou nález označil);
   - `zmena_slozeni` – ano / ne (zda se změnilo složení zastupitelstva nebo zvolení kandidáti);
   - `poznamka` – zjištěné skutečné počty hlasů apod.
+
+## Stav k 9. 11. 2026 – rozhodnutí
+
+Soudy rozhodly ve 171 z 233 řízení (22× vyhověno, 116× zamítnuto, 29× odmítnuto, 4× zastaveno); 62 řízení běží
+(mj. Uherské Hradiště 73 A 33, Praha 12 17 A 65 a 3 A 115, Praha 2 17 A 66, Praha 1 12 A 92, Černá v Pošumaví 52 A 13).
+Nová volební řízení na deskách od 7. 11. nepřibyla. Opravená data ČSÚ zatím nevydal (otevřená data KV 2026 jsou stále z 11. 10.).
+
+**Nově soud změnil výsledek ve 4 dalších obcích a MČ (celkem 16):**
+
+| Místo | Řízení | Co soud zjistil | Nález analýzy |
+|---|---|---|---|
+| Kladno | 51 A 85 + 51 A 86 (spojeno) | okrsek 29: KLADEŇÁCI 3 477 místo 287 hlasů; okrsek 1: KLADEŇÁCI 4 660 místo 2 352 a SPD 556 místo 2 586 (hlasy KLADEŇÁKŮ připsány SPD) → ODS 5 → 4, KLADEŇÁCI 10 → 11 | N01 (okrsek 29) – **potvrzeno**, schodek ale větší (+3 190 proti odhadu +1 980 až +2 640); okrsek 1 – **mezera** |
+| Brno-Bystrc | 65 A 13 | okrsek 3023: Bystrčáci 1 262 místo 274 hlasů – komise nepřipsala hlasy z lístků s křížkem u strany kandidátům č. 2–27 → ANO 5 → 4, Bystrčáci 3 → 4 | **M01 – potvrzeno** (odhad ~990–1 090, skutečně +988) |
+| Praha-Petrovice | 8 A 70 | okrsek 44001: lídr Žijeme Petrovice 144 místo 232 hlasů (chybný součet dvou sčítacích archů 56 + 88) → mění se zvolení Žijeme Petrovice a 1 mandát přechází na JSME SDRUŽENÍ OBČANŮ PETROVIC | **mezera** – jen N15 (těsný výsledek); detektor nadměrných hlasů okrsek zachytil (z = 12,9), nález nevznikl |
+| Slavětín (okres Louny) | 115 A 7 | hlasování neplatné – v obálkách s lístky byl leták volební strany | mimo rozsah analýzy |
+
+**Zamítnuto s přesnou vazbou:** Liberec 64 A 11 (N02) – soud přepočet neprovedl, statistické odchylky u kandidátů bez další indicie nestačí;
+nález tím není potvrzen ani vyvrácen.
+
+**Poučení pro pravidla:**
+- Kladno, okrsek 1: přesun hlasů mezi dvěma stranami v jednom okrsku (jedna strana −2 300, druhá +2 000, z-skóre podílu −3,7 a +9,5).
+  Analýza obě odchylky měla v datech, ale nespojila je do nálezu. Detektor záměn hledá jen záměny mezi okrsky, ne mezi stranami.
+- Petrovice: chyba v součtu sčítacích archů u jednoho kandidáta. Detektor nadměrných hlasů ji zachytil, do nálezů se ale nedostala, protože nadbytek u lídra kandidátky se bere jako běžný.
 
 ## Stav k 7. 11. 2026 – rozhodnutí
 

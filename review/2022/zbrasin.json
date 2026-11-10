@@ -1,0 +1,10 @@
+{
+ "typo:566977/1:56697701:2:3": {
+  "kontrola": "Vyřazeno po kontrole v datech: Za obec krásnější č. 3 má v okrsku 1 6 hlasů, ostatní 7–41. Hlasy kandidátů strany se v okrsku silně liší (voliči volí jednotlivé kandidáty), takže hodnota nevybočuje a nejde o překlep.",
+  "vyradit": true
+ },
+ "typo:566977/2:56697701:2:8": {
+  "kontrola": "Vyřazeno po kontrole v datech: Za obec krásnější č. 8 má v okrsku 2 (46 voličů) 6 hlasů, ostatní 9–37. Hlasy kandidátů strany se v okrsku silně liší (voliči volí jednotlivé kandidáty), takže hodnota nevybočuje a nejde o překlep.",
+  "vyradit": true
+ }
+}

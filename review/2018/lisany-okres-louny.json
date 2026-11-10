@@ -1,0 +1,10 @@
+{
+ "typo:566411/1:56641101:2:6": {
+  "kontrola": "Vyřazeno po kontrole v datech: KSČM č. 6 má 13 hlasů, ostatní 19–57; jediný okrsek obce. Hlasy kandidátů strany se v okrsku silně liší (voliči volí jednotlivé kandidáty), takže hodnota nevybočuje a nejde o překlep.",
+  "vyradit": true
+ },
+ "typo:566411/1:56641101:1:6": {
+  "kontrola": "Vyřazeno po kontrole v datech: ČSSD č. 6 má 10 hlasů, ostatní 19–65; jediný okrsek obce. Hlasy kandidátů strany se v okrsku silně liší (voliči volí jednotlivé kandidáty), takže hodnota nevybočuje a nejde o překlep.",
+  "vyradit": true
+ }
+}
