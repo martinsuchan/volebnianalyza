@@ -1,4 +1,4 @@
-"""Stránka report/senat.html – forenzní audit 1. kola senátních voleb 2026 a srovnání s KV 2026.
+"""Stránka report/senat/index.html – forenzní audit 1. a 2. kola senátních voleb 2026 (2. kolo z build_senat2.casti) a srovnání s KV 2026.
 Volá se z build_site.py (sdílí šablonu stránky, styly a grafy)."""
 import json, os
 import numpy as np, pandas as pd
@@ -236,26 +236,37 @@ OBVODY_NALEZU = {'S01': [51], 'S02': [75], 'S03': [66], 'S04': [18], 'S05': [69]
                  'S10': [6, 78, 81, 18], 'S11': [18, 54, 42]}
 
 
-def districts_table(F):
-    """Přehled všech 27 obvodů s kotvami obvod-NN (cíl vyhledávání v záhlaví webu)."""
+def districts_table(F, F2=(), strana=None):
+    """Přehled všech 27 obvodů (1. i 2. kolo) s kotvami obvod-NN (cíl vyhledávání v záhlaví webu a přesměrování ze staré stránky 2. kola)."""
     ids = {}
     for f in F:
         for o in OBVODY_NALEZU.get(f['id'], []):
             ids.setdefault(o, []).append(f['id'])
+    for f in F2:
+        for o in f['obvody']:
+            ids.setdefault(o, []).append(f['id'])
+    strana = strana or {}
     rows = ''
     for r in mg.sort_values('OBVOD').itertuples():
         res = f'{E(r.prvni)} zvolen v 1. kole' if r.zvolen_1k else f'postupují {E(r.prvni)} a {E(r.druhy)}'
-        if V2 is not None and r.OBVOD in V2.index:
-            res += f'<br><span class="sub">2. kolo: zvolen <a href="kolo2.html#obvod-{r.OBVOD}">{E(V2.vitez[r.OBVOD])}</a></span>'
         rez = (f'{n0(r.rozdil_nad_50)} nad 50 %' if r.zvolen_1k else f'{n0(r.rozdil_2_3)} (2. vs 3. místo)')
+        if V2 is not None and r.OBVOD in V2.index:
+            v = V2.loc[r.OBVOD]
+            obrat = '' if v.vitez_1k_poradi == 1 else f' <span class="sub">(v 1. kole {v.vitez_1k_poradi}.)</span>'
+            k2 = (f'<td data-v="{E(v.vitez)}"><strong>{E(v.vitez)}</strong>{obrat}<br><span class="sub">{E(strana.get((r.OBVOD, v.CKAND_v), ""))}</span><br>'
+                  f'<span class="sub">{n0(v.hlasy_v)} ({pct(v.podil_v)}) : {n0(v.hlasy_p)} {E(v.porazeny)} · účast {pct(v.ucast_k2)}</span></td>'
+                  f'<td class="num" data-v="{v.k_obratu}">{n0(v.k_obratu)}</td>')
+        else:
+            k2 = f'<td data-v="{E(r.prvni) if r.zvolen_1k else ""}"><span class="sub">{"nekonalo se (zvolen v 1. kole)" if r.zvolen_1k else "–"}</span></td><td class="num" data-v="-1">–</td>'
         rows += (f'<tr id="obvod-{r.OBVOD}"><td data-v="{r.OBVOD}">{r.OBVOD}</td><td data-v="{E(obvn[r.OBVOD])}"><a href="{se_url(r.OBVOD)}" {A}>{E(obvn[r.OBVOD])}</a></td>'
                  f'<td>{res}</td><td class="num" data-v="{r.presun_50 if r.zvolen_1k else r.rozdil_2_3}">{rez}</td>'
-                 f'<td class="num" data-v="{dist.r[r.OBVOD]:.4f}">{pct(dist.r[r.OBVOD])}</td>'
+                 f'<td class="num" data-v="{dist.r[r.OBVOD]:.4f}">{pct(dist.r[r.OBVOD])}</td>{k2}'
                  f'<td data-v="{len(ids.get(r.OBVOD, []))}">' + ', '.join(f'<a href="#{i}">{i}</a>' for i in ids.get(r.OBVOD, [])) + '</td></tr>')
-    return ('<h2 id="obvody">Obvody</h2><p class="sub">Název vede na výsledky obvodu na volby.gov.cz. Rozdíl = počet hlasů mezi 2. a 3. místem, '
-            'u zvolených v 1. kole rezerva nad nadpoloviční většinou. Řadit lze kliknutím na záhlaví.</p>'
-            '<div class="card tw"><table class="sortable"><thead><tr><th class="num">Č.</th><th>Obvod</th><th>Výsledek 1. kola</th><th class="num">Rozdíl hlasů</th>'
-            '<th class="num">Senátní / komunální obálky</th><th>Nálezy</th></tr></thead><tbody>' + rows + '</tbody></table></div>')
+    return ('<h2 id="obvody">Výsledky obvodů a zvolení senátoři</h2><p class="sub">Název vede na výsledky obvodu na volby.gov.cz. Rozdíl = počet hlasů mezi 2. a 3. místem, '
+            'u zvolených v 1. kole rezerva nad nadpoloviční většinou. „Hlasů k obratu“ = kolik hlasů by ve 2. kole muselo přejít od vítěze k poraženému, aby se výsledek obrátil; '
+            'u vítězů, kteří v 1. kole nebyli první, je uvedeno jejich pořadí v 1. kole. Řadit lze kliknutím na záhlaví.</p>'
+            '<div class="card tw"><table class="sortable"><thead><tr><th class="num">Č.</th><th>Obvod</th><th>1. kolo</th><th class="num">Rozdíl hlasů</th>'
+            '<th class="num">Senátní / komunální obálky</th><th>2. kolo: zvolen</th><th class="num">Hlasů k obratu</th><th>Nálezy</th></tr></thead><tbody>' + rows + '</tbody></table></div>')
 
 
 # ------------------------------------------------------------------ tabulky testů
@@ -331,33 +342,45 @@ def write_csv():
 # ------------------------------------------------------------------ stránka
 def build(page, fig, badge_j, badge_d, AUTHOR_URL):
     F = findings()
-    reg = ''.join(f'<tr><td><a href="#{f["id"]}">{f["id"]}</a></td><td>{E(f["misto"])}</td><td>{E(f["typ"])}</td><td>{badge_j(f["jistota"])}</td><td>{badge_d(f["dopad"])}</td></tr>' for f in F)
-    cards = ''.join(f'<article class="card find p{1 if f["dopad"] != "Bez vlivu" else 3}" id="{f["id"]}"><h3>{f["id"]} · {E(f["typ"])}</h3><p class="sub">{E(f["misto"])}</p>'
+    import build_senat2 as b2  # 2. kolo: obsah pro tutéž stránku
+    K2 = b2.casti(fig)
+    F2 = K2['F'] if K2 else []
+    reg = ''.join(f'<tr><td><a href="#{f["id"]}">{f["id"]}</a></td><td>{"2." if f["id"].startswith("K2") else "1."}</td><td>{E(f["misto"])}</td><td>{E(f["typ"])}</td>'
+                  f'<td>{badge_j(f["jistota"])}</td><td>{badge_d(f["dopad"])}</td></tr>' for f in F + F2)
+    cards = ''.join(f'<article class="card find p{1 if f["dopad"] != "Bez vlivu" else 3}" id="{f["id"]}"><h3>{f["id"]} · {E(f["typ"])}</h3><p class="sub">{"2. kolo · " if f["id"].startswith("K2") else ""}{E(f["misto"])}</p>'
                     f'<div style="margin-top:8px">{badge_j(f["jistota"])} {badge_d(f["dopad"])}</div><dl>'
                     f'<dt>Zjištění</dt><dd>{E(f["zjisteni"])}</dd><dt>Důkaz</dt><dd>{E(f["dukaz"])}</dd><dt>Hodnocení</dt><dd>{E(f["hodnoceni"])}</dd>'
-                    f'<dt>Doporučení</dt><dd>{E(f["doporuceni"])}</dd><dt>Ověřit na volby.gov.cz</dt><dd>{f["odkazy"]}</dd></dl></article>' for f in F)
+                    f'<dt>Doporučení</dt><dd>{E(f["doporuceni"])}</dd><dt>Ověřit na volby.gov.cz</dt><dd>{f["odkazy"]}</dd></dl></article>' for f in F + F2)
     rmin, rmax = dist.r.min(), dist.r.max()
     n_ok = len(t5)
-    body = (('<div class="card" style="margin-top:16px"><strong>2. kolo (16.–17. 10. 2026):</strong> <a href="kolo2.html">výsledky a forenzní audit 2. kola →</a></div>') if V2 is not None else '') + f'''<p class="kicker">Senát 2026 · souvisí s <a href="../kv/index.html">komunálními volbami 2026</a></p>
-<h1>Senátní volby 2026, 1. kolo: forenzní audit a srovnání s komunálními volbami</h1>
-<p class="lead">Analýza všech {n0(n_ok)} okrsků ve 27 senátních obvodech (9.–10. 10. 2026), {len(rk)} kandidátů a 156 XML dávek volební noci,
-porovnaná okrsek po okrsku s komunálními volbami konanými ve stejný den a se senátními volbami 2018, 2020 a 2022.</p>
-<p class="sub">Autor: <a href="{AUTHOR_URL}">Martin Suchan</a> · 11. 10. 2026 · Každý nález obsahuje proklik na výsledky okrsku na volby.gov.cz.</p>
-<div class="verdict" id="zaver"><p><strong>Závěr:</strong> Data nenesou známky systematické ani koordinované manipulace. Oficiální výsledky všech 154 kandidátů
+    k2_okrsky = f'; 2. kolo {n0(b2.summ["okrsku"])} okrsků ve {b2.summ["obvodu"]} obvodech' if K2 else ''
+    k2_repro = ' a obou finalistů ve 2. kole' if K2 and b2.summ['reprodukce_shoda'] == b2.summ['reprodukce_obvodu'] else ''
+    soud = ('<p><strong>Soudní přezkum:</strong> k senátním volbám přijal Nejvyšší správní soud 16 návrhů (Vol 1–16/2026). Většinu odmítl nebo zamítl, '
+            'mimo jiné jako předčasné nebo podané neoprávněnou osobou. K obvodu 51 Žďár nad Sázavou běží řízení Vol 11/2026 o neplatnosti hlasování (stav k 10. 11. 2026).</p>')
+    body = f'''<p class="kicker">Senát 2026 · 1. kolo 9.–10. 10. · 2. kolo 16.–17. 10. · souvisí s <a href="../kv/index.html">komunálními volbami 2026</a></p>
+<h1>Senátní volby 2026: výsledky a forenzní audit obou kol</h1>
+<p class="lead">Analýza všech {n0(n_ok)} okrsků ve 27 senátních obvodech v 1. kole (9.–10. 10. 2026), {len(rk)} kandidátů a 156 XML dávek volební noci,
+porovnaná okrsek po okrsku s komunálními volbami konanými ve stejný den a se senátními volbami 2018, 2020 a 2022{f", a {n0(b2.summ['okrsku'])} okrsků ve {b2.summ['obvodu']} obvodech, kde se 16.–17. 10. konalo 2. kolo, porovnaných s 1. kolem" if K2 else ""}.</p>
+<p class="sub">Autor: <a href="{AUTHOR_URL}">Martin Suchan</a> · 1. kolo 11. 10. 2026, 2. kolo 17. 10. 2026 · Každý nález obsahuje proklik na výsledky okrsku na volby.gov.cz.</p>
+<div class="verdict" id="zaver"><p><strong>Závěr:</strong> Data obou kol nenesou známky systematické ani koordinované manipulace. <strong>1. kolo (9.–10. 10.):</strong> Oficiální výsledky všech 154 kandidátů
 jsou ze součtu okrsků reprodukovatelné na 100 % a přepočet postupujících i zvolených v 1. kole souhlasí. Globální testy (Klimek, poslední číslice, 2BL, celá procenta účasti)
 jsou v normě a odpovídají letům 2018–2022.</p>
-<p><strong>Zásadní je těsnost výsledků:</strong> v obvodu <strong>Žďár nad Sázavou rozhodl o postupu do 2. kola jediný hlas</strong> (Klement 11 373, Černý 11 372),
+<p><strong>Zásadní je těsnost 1. kola:</strong> v obvodu <strong>Žďár nad Sázavou rozhodl o postupu do 2. kola jediný hlas</strong> (Klement 11 373, Černý 11 372),
 v Karviné 50 hlasů a v Litovli 146. V Litovli je navíc okrsek Šumvald, kde se do urny nevrátilo 142 vydaných obálek.
 Kromě toho jsme našli prohozené zápisy dvou okrsků v Příbrami, dva překlepy v počtu vydaných obálek, pravděpodobnou záměnu kandidátů v Nišovicích a podezřelý balík
-neplatných obálek v Praze 19. Na postupující a zvolené nemá žádná z nalezených chyb vliv.</p></div>
+neplatných obálek v Praze 19. Na postupující a zvolené nemá žádná z nalezených chyb vliv.</p>{K2["zaver"] if K2 else ""}{soud}</div>
 <div class="tiles">
-<div class="tile"><div class="l">Okrsků analyzováno</div><div class="v">{n0(n_ok)}</div><div class="s">27 obvodů, 100 % pokrytí, 5 019 spárováno s KV</div></div>
-<div class="tile"><div class="l">Reprodukce výsledků</div><div class="v">100 %</div><div class="s">154 kandidátů, postup i zvolení v 1. kole</div></div>
+<div class="tile"><div class="l">Okrsků analyzováno</div><div class="v">{n0(n_ok)}</div><div class="s">1. kolo, 27 obvodů, 5 019 spárováno s KV{k2_okrsky}</div></div>
+<div class="tile"><div class="l">Reprodukce výsledků</div><div class="v">100 %</div><div class="s">154 kandidátů 1. kola{k2_repro}</div></div>
 <div class="tile"><div class="l">Nejtěsnější postup</div><div class="v">1 hlas</div><div class="s">Žďár nad Sázavou (51)</div></div>
 <div class="tile"><div class="l">Senátní / komunální obálky</div><div class="v">{pct(ratio)}</div><div class="s">2018: {pct(ratio_y[2018])}, 2022: {pct(ratio_y[2022])}</div></div>
-<div class="tile"><div class="l">Známky manipulace</div><div class="v">žádné</div><div class="s">chyby jsou ojedinělé a nahodilé</div></div>
+<div class="tile"><div class="l">Známky manipulace</div><div class="v">žádné</div><div class="s">chyby jsou ojedinělé a nahodilé</div></div>{K2["tiles"] if K2 else ""}
 </div>
-<h2 id="obalky">Odpovídá počet senátních obálek komunálním? Ne – a je to normální</h2>
+<nav class="card toc" aria-label="Obsah stránky"><strong>Obsah:</strong> <a href="#obvody">Výsledky obvodů</a> · <a href="#kolo1">1. kolo</a> · <a href="#kolo2">2. kolo</a> ·
+<a href="#registr">Nálezy</a> · <a href="#testy">Statistické testy</a> · <a href="#davky">XML dávky</a> · <a href="#metodika">Metodika a zdroje</a></nav>
+{districts_table(F, F2, b2.STRANA if K2 else None)}
+<h2 id="kolo1">1. kolo: obálky a těsné výsledky</h2>
+<h3 id="obalky">Odpovídá počet senátních obálek komunálním? Ne – a je to normální</h3>
 <div class="card"><p>V okrscích, kde se volilo do obou orgánů, bylo odevzdáno <strong>{n0(tot['kv_odevz'])} komunálních</strong> a jen <strong>{n0(tot['se_odevz'])} senátních obálek</strong>,
 tedy o {pct(1 - ratio)} méně. Stejný jev je vidět i v minulých souběžných volbách (2018: {pct(1 - ratio_y[2018])}, 2022: {pct(1 - ratio_y[2022])}); letos je rozdíl o necelé 2 p. b. větší.</p>
 <ul class="l">
@@ -372,37 +395,40 @@ Rozdíl vzniká už u stolu komise: vydaných senátních obálek je o tolik mé
 <p>Poměr se mezi obvody liší od {pct(rmin)} do {pct(rmax)}: ve velkých městech (Praha, Plzeň, Brno) bere senátní lístek téměř každý, na venkově s velkou účastí v komunálních volbách
 zhruba čtyři pětiny voličů. Odchylky jednotlivých okrsků od okolí jsme použili jako další detektor chyb (nálezy S04–S06, S10, S11).</p></div>
 {chart_envelopes(fig)}{chart_districts(fig)}{chart_ratio_hist(fig)}
-<h2 id="tesne">Těsné výsledky a materialita</h2>
+<h3 id="tesne">Těsné výsledky a materialita</h3>
 <p class="sub">Pro každý obvod: o kolik hlasů šlo při postupu do 2. kola (2. vs 3. místo) a při zvolení v 1. kole (hranice nadpoloviční většiny platných hlasů).
 „Stačí přesunout“ = nejmenší počet hlasů, který by při přesunu od jednoho kandidáta k druhému změnil výsledek.</p>
 {chart_margins(fig)}
-{districts_table(F)}
+{K2["sekce"] if K2 else ""}
 <h2 id="registr">Registr nálezů</h2>
-<p class="sub">Jistota = pravděpodobnost, že zveřejněný údaj neodpovídá skutečnosti (Jistá – deterministický rozpor; Velmi vysoká ≥ 95 %; Vysoká 80–95 %; Střední 50–80 %; Nízká &lt; 50 % = riziko, nikoli zjištěná chyba).</p>
-<div class="card tw"><table><thead><tr><th>ID</th><th>Místo</th><th>Typ</th><th>Jistota chyby</th><th>Dopad</th></tr></thead><tbody>{reg}</tbody></table></div>
+<p class="sub">Jistota = pravděpodobnost, že zveřejněný údaj neodpovídá skutečnosti (Jistá – deterministický rozpor; Velmi vysoká ≥ 95 %; Vysoká 80–95 %; Střední 50–80 %; Nízká &lt; 50 % = riziko, nikoli zjištěná chyba). Nálezy S jsou z 1. kola, nálezy K2 z 2. kola.</p>
+<div class="card tw"><table><thead><tr><th>ID</th><th>Kolo</th><th>Místo</th><th>Typ</th><th>Jistota chyby</th><th>Dopad</th></tr></thead><tbody>{reg}</tbody></table></div>
 <h2 id="nalezy">Detailní nálezy</h2>{cards}
 <h2 id="testy">Statistické testy a srovnání s minulými lety</h2>
+<h3 id="testy1">1. kolo</h3>
 <p>Stejné detektory jsme spustili na senátní volby 2018, 2020 a 2022 (pokaždé jiná třetina obvodů; 2020 = stejné obvody jako 2026). Rok 2026 nevybočuje: počet odlehlých hlasů kandidátů je
 naopak nejnižší, i když kandidátů je méně (5,7 na obvod proti 8,8 v roce 2018), a to i v přepočtu na jednu buňku okrsek × kandidát.</p>
 {tests_table()}
 <p class="sub">Model hlasů kandidátů: očekávaný podíl kandidáta v okrsku z 8 nejbližších okrsků téhož obvodu (těžiště okrsků 2022), beta-binomická overdisperze odhadnutá robustně pro každého kandidáta.
 Kladné odchylky jsou většinou bydliště kandidáta nebo sousední obce. Záměna kandidátů = prohození hlasů dvou kandidátů sníží součet z² alespoň o 40 a obě hodnoty se vrátí do pásma |z| &lt; 3.</p>
-<h3>Kandidáti na záměnu hlasů v roce 2026</h3>{swaps_table()}
-<h3>Globální otisky (election forensics)</h3>{fp_table()}
+<h4>Kandidáti na záměnu hlasů v roce 2026</h4>{swaps_table()}
+<h4>Globální otisky (election forensics)</h4>{fp_table()}
 <p class="sub">Klimek: okrsky s účastí i podílem vítěze obvodu nad 80 % (vzorec „vhazování“) – žádné. Poslední číslice: počty hlasů ≥ 100, očekávání z vyhlazené hustoty
 (klesající hustota mírně zvýhodňuje nižší číslice); p &gt; 0,05 = v normě, mírná odchylka jen v roce 2022. 2BL: průměr druhé číslice, vždy kolem 4,0, ve všech letech stejně. Celá procenta účasti (Kobak a kol.): počet okrsků s účastí přesně na celém procentu proti 300 binomickým simulacím – bez přebytku.</p>
 {chart_turnout(fig)}
+{K2["testy"] if K2 else ""}
 <h2 id="davky">XML dávky volební noci</h2>
-<p>Stáhli jsme všech 156 dávek ČSÚ ({summ['davky']['prvni'].replace('T', ' ')} až {summ['davky']['posledni'].replace('T', ' ')}). Obsahují 5 025 záznamů za 5 021 okrsků; konečné hodnoty se shodují s finálními daty CSV (0 neshod).
-Čtyři okrsky byly zaslány opakovaně:</p>{batch_table()}
+<p><strong>1. kolo:</strong> stáhli jsme všech 156 dávek ČSÚ ({summ['davky']['prvni'].replace('T', ' ')} až {summ['davky']['posledni'].replace('T', ' ')}). Obsahují 5 025 záznamů za 5 021 okrsků; konečné hodnoty se shodují s finálními daty CSV (0 neshod).
+Čtyři okrsky byly zaslány opakovaně:</p>{batch_table()}{K2["davky"] if K2 else ""}
 <h2 id="metodika">Metodika, omezení a zdroje</h2>
-<div class="card"><ol class="l">
+<div class="card"><p><strong>1. kolo</strong></p><ol class="l">
 <li><strong>Reprodukce:</strong> součet okrsků proti oficiálním výsledkům kandidátů (registr <code>serk</code>) a nezávislý přepočet postupu (nadpoloviční většina, jinak první dva).</li>
 <li><strong>Deterministické kontroly zápisů T/5:</strong> vydané ≤ zapsaní, odevzdané ≤ vydané, platné ≤ odevzdané, součet kandidátů = platné hlasy, hlasy jen pro registrované kandidáty, úplnost okrsků podle číselníku obvodů.</li>
 <li><strong>Párování s KV:</strong> okrsek = kód obce/MČ + číslo okrsku; spárováno 5 019 z 5 021 (obce Píšť a Krchleby v datech KV 2026 chybí, komunální volby se tam patrně nekonaly).
 Detektory: poměr odevzdaných obálek vůči 8 sousedům (robustní z), rozdíl seznamů voličů, záměna zápisů dvou okrsků (seznam voličů A odpovídá KV okrsku B a naopak), vydané senátní obálky &gt; vydané komunální.</li>
 <li><strong>Hlasy kandidátů:</strong> prostorový model vůči sousedům, test nulových hlasů, test záměny dvou kandidátů, test neplatných obálek (balík uznaný za neplatný).</li>
 <li><strong>Historie:</strong> senátní volby 2020 ve stejných obvodech, KV 2022, souběžné volby 2018 a 2022 pro srovnání četnosti nálezů.</li>
+</ol>{K2["metodika"] if K2 else ""}<p><strong>Obě kola</strong></p><ol class="l">
 <li><strong>Omezení:</strong> statistika neprokáže úmysl ani neodhalí chyby v jednotkách hlasů. Bez originálních zápisů a lístků nelze žádnou chybu potvrdit definitivně; nálezy jsou podnětem k ověření.
 U výsledku rozhodnutého 1 hlasem nemůže žádná analýza dat nahradit přepočet.</li>
 <li><strong>Lhůty:</strong> návrh na neplatnost hlasování nebo volby podle § 87 zákona č. 247/1995 Sb. se podává u Nejvyššího správního soudu do 10 dnů po vyhlášení výsledků voleb Státní volební komisí.
@@ -413,8 +439,8 @@ U senátních voleb se výsledky vyhlašují až po 2. kole a dřívější náv
 <a href="https://volby.gov.cz/opendata/kv2026/kv2026_opendata.htm" {A}>Otevřená data ČSÚ – KV 2026</a> ·
 <a href="https://volby.gov.cz/opendata/se2020/se2020_opendata.htm" {A}>Senát 2020</a> · <a href="https://volby.gov.cz/opendata/se2022/se2022_opendata.htm" {A}>Senát 2022</a> ·
 <a href="https://volby.gov.cz/opendata/se2018/se2018_opendata.htm" {A}>Senát 2018</a> · <a href="https://volby.gov.cz/app/senat/20261009/cs/results" {A}>Výsledky Senát 2026 na volby.gov.cz</a> ·
-<a href="https://www.zakonyprolidi.cz/cs/1995-247" {A}>Zákon č. 247/1995 Sb.</a> (§ 87, § 88). Výpočet: <code>scripts/se_etl.py</code> → <code>se_audit.py</code> → <code>build_senat.py</code>.</p>
+<a href="https://www.zakonyprolidi.cz/cs/1995-247" {A}>Zákon č. 247/1995 Sb.</a> (§ 87, § 88). Výpočet 1. kola: <code>scripts/se_etl.py</code> → <code>se_audit.py</code> → <code>build_senat.py</code>; {K2["zdroje"] if K2 else ""}</p>
 <p class="sub">Odkazy na okrsky: Senát <code>results/!_&lt;obvod&gt;_&lt;kód obce nebo MČ/MO&gt;__&lt;okrsek&gt;</code>, komunální volby <code>results/!__0_&lt;kraj&gt;_&lt;okres&gt;_&lt;kód obce nebo MČ/MO&gt;___&lt;okrsek&gt;</code>.</p></div>'''
-    page('senat/index.html', 'Senát 2026 – 1. kolo', body, 'Forenzní audit 1. kola senátních voleb 2026 a srovnání s komunálními volbami',
-         section='senat', crumbs=[('Přehled', 'index.html'), ('Senát 2026, 1. kolo', None)])
+    page('senat/index.html', 'Senát 2026', body, 'Výsledky a forenzní audit 1. a 2. kola senátních voleb 2026, srovnání s komunálními volbami',
+         section='senat', crumbs=[('Přehled', 'index.html'), ('Senát 2026', None)])
     return write_csv()

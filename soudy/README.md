@@ -19,6 +19,7 @@ Složka není součástí publikovaného webu (`report/`).
 | `podani_2022.csv` | Řízení ke KV 2022 (78): rozhodnutí krajských soudů o neplatnosti volby kandidáta, hlasování nebo voleb z vyhledávače NSS + Hrčava. Sloupce: soud, spis, obec, slug, mc, rozhodnuti, prepocet (soud skutečně přepočítal hlasy / přezkoumal lístky), poznamka, okrsky (zmíněné v rozhodnutí), odkaz. Bez jmen účastníků. Srovnání se zpětnou analýzou 2022 je na webu v `report/kv2022/index.html`. |
 | `podani_2018.csv` | Řízení ke KV 2018 (174) ze stejného zdroje + Praha 4 (14 A 213/2018) podle odborné analýzy. Stejné sloupce; `prepocet` je vyplněn jen u řízení, kde soud výsledek změnil. Část obcí je v rozhodnutích anonymizována („O.“) a nemá slug. Srovnání na webu v `report/kv2018/index.html`. |
 | `../scripts/soudy_historie.py` | Sestaví `podani_2022.csv` a `podani_2018.csv` (`python scripts/soudy_historie.py 2022`, resp. `2018`: vyhledání, stažení, rozbor; ruční údaje jsou v tabulkách ve skriptu). |
+| `senat_2026.csv` | Řízení u NSS k volbám do Senátu 2026 (Vol 1–16/2026, stav k 10. 11. 2026): obvod, předmět, stav, důvod rozhodnutí, vazba na senátní analýzu. Zdroj: vyhledávač NSS a úřední deska NSS (výzvy a sdělení); navrhovatele (soukromé osoby) neuvádíme jménem. Stažené dokumenty v `data/raw/soudy_senat2026/`. |
 | `historie_2018_2022.md` | Rešerše: kde soudy v letech 2018 a 2022 změnily složení zastupitelstva a jaké chyby uznaly. |
 
 Stažené PDF se ukládají do `data/raw/soudy/`, `data/raw/soudy2022/` a `data/raw/soudy2018/` (není v gitu).

@@ -1,5 +1,5 @@
-"""Stránka report/senat/kolo2.html – forenzní audit 2. kola senátních voleb 2026 (16.–17. 10. 2026).
-Volá se z build_site.py po build_senat.py (sdílí šablonu, grafy a odkazy). Data: scripts/se_kolo2.py → data/results/se2_*."""
+"""2. kolo senátních voleb 2026 (16.–17. 10. 2026): nálezy K2, grafy a tabulky pro společnou stránku report/senat/index.html.
+build_senat.build() vkládá casti(); build() zapíše přesměrování ze staré adresy senat/kolo2.html a CSV. Data: scripts/se_kolo2.py → data/results/se2_*."""
 import json, os
 import pandas as pd
 import svg
@@ -46,7 +46,7 @@ def findings():
         return []
     F = []
     k2chyba, k1chyba = _vol_rozdily()
-    url = lambda i: f'senat/kolo2.html#{i}'
+    url = lambda i: f'senat/index.html#{i}'
     if k2chyba:
         F.append(dict(id='K2-01', typ='Chybný počet zapsaných voličů ve 2. kole', misto=', '.join(f'{naz(o)} ({b1.OBV[o]})' for o in k2chyba), jistota=4, dopad='Bez vlivu',
                       zjisteni='Počet zapsaných voličů ve 2. kole neodpovídá 1. kolu ani komunálním volbám (1. kolo / 2. kolo / KV): ' + '; '.join(f'{naz(o)} – {vol3(o)}' for o in k2chyba) + '.',
@@ -163,16 +163,11 @@ def write_csv():
     return files
 
 
-# ------------------------------------------------------------------ stránka
-def build(page, fig, badge_j, badge_d, AUTHOR_URL):
+# ------------------------------------------------------------------ části společné stránky senat/index.html
+def casti(fig):
+    """Obsah 2. kola pro společnou stránku Senátu (build_senat.build): závěr, dlaždice, sekce, testy, dávky, metodika."""
     if not HAS:
-        return []
-    F = findings()
-    reg = ''.join(f'<tr><td><a href="#{f["id"]}">{f["id"]}</a></td><td>{E(f["misto"])}</td><td>{E(f["typ"])}</td><td>{badge_j(f["jistota"])}</td><td>{badge_d(f["dopad"])}</td></tr>' for f in F)
-    cards = ''.join(f'<article class="card find p3" id="{f["id"]}"><h3>{f["id"]} · {E(f["typ"])}</h3><p class="sub">{E(f["misto"])}</p>'
-                    f'<div style="margin-top:8px">{badge_j(f["jistota"])} {badge_d(f["dopad"])}</div><dl>'
-                    f'<dt>Zjištění</dt><dd>{E(f["zjisteni"])}</dd><dt>Důkaz</dt><dd>{E(f["dukaz"])}</dd><dt>Hodnocení</dt><dd>{E(f["hodnoceni"])}</dd>'
-                    f'<dt>Doporučení</dt><dd>{E(f["doporuceni"])}</dd><dt>Ověřit na volby.gov.cz</dt><dd>{f["odkazy"]}</dd></dl></article>' for f in F)
+        return None
     m = V.sort_values('k_obratu').iloc[0]
     z51, z75 = V[V.OBVOD == 51].iloc[0], V[V.OBVOD == 75].iloc[0]
     obraty = V[V.vitez_1k_poradi > 1]
@@ -182,62 +177,57 @@ def build(page, fig, badge_j, badge_d, AUTHOR_URL):
     zdroj = ('okrskové výsledky z XML dávek volební noci (finální CSV ČSÚ zatím nebylo zveřejněno; po zveřejnění se výpočet zopakuje)' if summ['zdroj'] == 'xml'
              else 'finální okrskové výsledky ČSÚ (CSV)')
     d = summ['davky']; fp = summ['otisky']
-    body = f'''<p class="kicker">Senát 2026 · <a href="index.html">1. kolo</a> · 2. kolo</p>
-<h1>Senátní volby 2026, 2. kolo: výsledky a forenzní audit</h1>
-<p class="lead">Analýza všech {n0(summ["okrsku"])} okrsků ve {summ["obvodu"]} obvodech, kde se 16.–17. 10. 2026 konalo 2. kolo, porovnaná okrsek po okrsku s 1. kolem
-a se 2. koly senátních voleb 2018, 2020 a 2022. Ve zbývajících pěti obvodech rozhodlo už 1. kolo ({E(", ".join(summ["rozhodnuto_v_1_kole"]))}).</p>
-<p class="sub">Autor: <a href="{AUTHOR_URL}">Martin Suchan</a> · {summ["generovano_souhrn"][8:10].lstrip("0")}. 10. 2026 · Zdroj: {zdroj}.</p>{stav}
-<div class="verdict" id="zaver"><p><strong>Závěr:</strong> Data 2. kola nenesou známky manipulace. Součty okrsků reprodukují oficiální výsledky
-ve {summ["reprodukce_shoda"]} z {summ["reprodukce_obvodu"]} obvodů, žádný zápis nemá aritmetický rozpor a hlasy obou finalistů odpovídají v každém okrsku jejich výsledku v 1. kole
-(z {n0(summ["model_n"])} okrsků jen {summ["model_z4"]} s odchylkou |z| ≥ 4, žádná záměna kandidátů). Výsledky nejsou těsné: nejmenší náskok má {E(m.nazev)}
-({E(m.vitez)} o {n0(m.rozdil)} hlasů).</p>
-<p><strong>Navazuje na těsná místa 1. kola:</strong> v obvodu Žďár nad Sázavou, kde o postupu rozhodl jediný hlas, zvítězil právě postupující {E(z51.vitez)}
-({n0(z51.hlasy_v)} : {n0(z51.hlasy_p)}); v Karviné, kde rozhodlo 50 hlasů, {E(z75.vitez)} ({n0(z75.hlasy_v)} : {n0(z75.hlasy_p)}).
-Pro soudní přezkum 1. kola v obvodu 51 začíná lhůta běžet vyhlášením výsledků Státní volební komisí po 2. kole.</p>
-<p>Zápisy 2. kola potvrdily chyby v počtech voličů z 1. kola (prohozené okrsky v Příbrami a další, nález K2-02) a samy obsahují pět chybných počtů zapsaných voličů (K2-01).
-Na hlasy ani na zvolení nemá žádná z chyb vliv.</p></div>
-<div class="tiles">
-<div class="tile"><div class="l">Okrsků analyzováno</div><div class="v">{n0(summ["okrsku"])}</div><div class="s">{summ["obvodu"]} obvodů 2. kola</div></div>
-<div class="tile"><div class="l">Reprodukce výsledků</div><div class="v">{"100 %" if summ["reprodukce_shoda"] == summ["reprodukce_obvodu"] else "neshoda"}</div><div class="s">hlasy, obálky i voliči</div></div>
-<div class="tile"><div class="l">Nejtěsnější výsledek</div><div class="v">{n0(m.rozdil)} hl.</div><div class="s">{E(m.nazev)}</div></div>
-<div class="tile"><div class="l">Účast</div><div class="v">{pct(summ["ucast_k2"])}</div><div class="s">1. kolo v týchž obvodech {pct(summ["ucast_k1"])}</div></div>
-<div class="tile"><div class="l">Obrat proti 1. kolu</div><div class="v">{len(obraty)}</div><div class="s">obvodů vyhrál druhý z 1. kola</div></div>
-</div>
-{districts_table(F)}
+    zaver = (f'<p><strong>2. kolo (16.–17. 10.):</strong> data nenesou známky manipulace. Součty okrsků reprodukují oficiální výsledky ve {summ["reprodukce_shoda"]} z {summ["reprodukce_obvodu"]} obvodů '
+             f'a hlasy obou finalistů odpovídají v každém okrsku jejich výsledku v 1. kole (z {n0(summ["model_n"])} okrsků jen {summ["model_z4"]} s odchylkou |z| ≥ 4, žádná záměna kandidátů). '
+             f'Výsledky nejsou těsné: nejmenší náskok má {E(m.nazev)} ({E(m.vitez)} o {n0(m.rozdil)} hlasů). V obvodu Žďár nad Sázavou zvítězil {E(z51.vitez)}, který do 2. kola postoupil o jediný hlas '
+             f'({n0(z51.hlasy_v)} : {n0(z51.hlasy_p)}), v Karviné {E(z75.vitez)} ({n0(z75.hlasy_v)} : {n0(z75.hlasy_p)}). '
+             'Zápisy 2. kola potvrdily chyby v počtech voličů z 1. kola (prohozené okrsky v Příbrami a další, nález K2-02) a samy obsahují pět chybných počtů zapsaných voličů (K2-01). '
+             'Na hlasy ani na zvolení nemá žádná z chyb vliv.</p>')
+    tiles = (f'<div class="tile"><div class="l">Nejtěsnější 2. kolo</div><div class="v">{n0(m.rozdil)} hl.</div><div class="s">{E(m.nazev)}; účast {pct(summ["ucast_k2"])}, '
+             f'v {len(obraty)} obvodech vyhrál druhý z 1. kola</div></div>')
+    sekce = f'''<h2 id="kolo2">2. kolo: zvolení senátoři a srovnání s 1. kolem</h2>
+<p>2. kolo se 16.–17. 10. 2026 konalo ve {summ["obvodu"]} obvodech ({n0(summ["okrsku"])} okrsků), ve zbývajících pěti rozhodlo už 1. kolo ({E(", ".join(summ["rozhodnuto_v_1_kole"]))}).
+Každý okrsek jsme porovnali s jeho výsledkem v 1. kole a celé kolo se 2. koly senátních voleb 2018, 2020 a 2022. Zvolení senátoři jsou v <a href="#obvody">tabulce obvodů</a>.</p>
+<p class="sub">Zdroj: {zdroj}.</p>{stav}
 {chart_margins(fig)}
-{chart_turnout(fig)}
-<h2 id="registr">Registr nálezů 2. kola</h2>
-<p class="sub">Jistota = pravděpodobnost, že zveřejněný údaj neodpovídá skutečnosti (Jistá – deterministický rozpor; Velmi vysoká ≥ 95 %; Vysoká 80–95 %; Střední 50–80 %; Nízká &lt; 50 % = riziko, nikoli zjištěná chyba).
-Nálezy 1. kola jsou na <a href="index.html#registr">stránce 1. kola</a>.</p>
-<div class="card tw"><table><thead><tr><th>ID</th><th>Místo</th><th>Typ</th><th>Jistota chyby</th><th>Dopad</th></tr></thead><tbody>{reg}</tbody></table></div>
-<h2 id="nalezy">Detailní nálezy</h2>{cards}
-<h2 id="testy">Statistické testy a srovnání s minulými lety</h2>
+{chart_turnout(fig)}'''
+    testy = f'''<h3 id="testy2">2. kolo</h3>
 <p>Ve 2. kole se volí jen mezi dvěma kandidáty a bez souběžných voleb, proto je hlavním srovnáním 1. kolo téhož okrsku. Ukazatele 2. kola 2026 odpovídají minulým letům:</p>
 {history_table()}
-<h3>Hlasy finalistů proti 1. kolu</h3>
+<h4>Hlasy finalistů proti 1. kolu</h4>
 <p>Pro každý obvod jsme odhadli, jak se podíl finalisty ve 2. kole odvíjí od jeho poměru k soupeři v 1. kole a od podílu ostatních kandidátů v okrsku (vážená logistická regrese,
 beta-binomický rozptyl). Z {n0(summ["model_n"])} okrsků vybočují o |z| ≥ 4 jen tyto – to odpovídá náhodě; žádný okrsek nemá nulu u silného kandidáta ani vzorec prohozených hlasů:</p>
 {outliers_table()}
-<h3>Globální otisky</h3>
+<h4>Globální otisky 2. kola</h4>
 <p>Poslední číslice hlasů finalistů (počty ≥ 100, {n0(fp["n_digits"])} hodnot): p = {f'{fp["last_digit_p"]:.2f}'.replace('.', ',')} – v normě.
 Okrsky s účastí přesně na celém procentu: {fp["kobak_obs"]} proti {fp["kobak_sim_mean"]:.0f} v simulacích (p = {f'{fp["kobak_sim_p"]:.3f}'.replace('.', ',')}); podobný mírný přebytek měl i rok 2018
-(72 proti 54), test je citlivý na zaokrouhlování malých okrsků a při počtu provedených testů nejde o významnou odchylku.</p>
-<h2 id="davky">XML dávky volební noci</h2>
-<p>Stáhli jsme {d["davek"]} dávek ČSÚ ({d["prvni"].replace("T", " ")} až {d["posledni"].replace("T", " ")}) se {n0(d["zaznamu"])} záznamy za {n0(d["okrsku_v_davkach"])} okrsků;
-opakovaně byly zaslány {d["opakovane"]} okrsky (viz nález opravených údajů).</p>
-<h2 id="metodika">Metodika a zdroje</h2>
-<div class="card"><ol class="l">
+(72 proti 54), test je citlivý na zaokrouhlování malých okrsků a při počtu provedených testů nejde o významnou odchylku.</p>'''
+    davky = (f'<p><strong>2. kolo:</strong> {d["davek"]} dávek ČSÚ ({d["prvni"].replace("T", " ")} až {d["posledni"].replace("T", " ")}) se {n0(d["zaznamu"])} záznamy za {n0(d["okrsku_v_davkach"])} okrsků; '
+             f'opakovaně byly zaslány {d["opakovane"]} okrsky (viz nález opravených údajů).</p>')
+    metodika = '''<p><strong>2. kolo</strong></p><ol class="l">
 <li><strong>Reprodukce:</strong> součet okrsků proti oficiálním výsledkům obvodů (<code>appdata/senat/20261009/odata/vysledky.xml</code>): hlasy obou finalistů, zapsaní voliči, vydané a odevzdané obálky, platné hlasy.</li>
 <li><strong>Deterministické kontroly:</strong> vydané ≤ zapsaní, odevzdané ≤ vydané, platné ≤ odevzdané, součet hlasů = platné hlasy, hlasy jen pro finalisty, změna seznamu voličů proti 1. kolu (&gt; 5 % a &gt; 20 voličů) ověřená proti komunálním volbám.</li>
-<li><strong>Hlasy finalistů:</strong> model z 1. kola téhož okrsku (viz výše), test záměny kandidátů (prohození hlasů A a B) a nulových hlasů.</li>
+<li><strong>Hlasy finalistů:</strong> model z 1. kola téhož okrsku (viz testy), test záměny kandidátů (prohození hlasů A a B) a nulových hlasů.</li>
 <li><strong>Účast a obálky:</strong> pokles vydaných obálek mezi koly proti 8 sousedním okrskům, neplatné hlasy proti sousedům (beta-binomicky), nevrácené obálky.</li>
-<li><strong>Omezení:</strong> statistika neodhalí chyby v jednotkách hlasů a neprokáže úmysl; nálezy jsou podnětem k ověření zápisů.</li>
-<li><strong>Lhůty:</strong> návrh na neplatnost volby podle § 87 zákona č. 247/1995 Sb. se podává u Nejvyššího správního soudu do 10 dnů po vyhlášení výsledků voleb Státní volební komisí.</li>
-</ol>
-<p><strong>Zdroje:</strong> <a href="https://volby.gov.cz/opendata/se2026/se2026_opendata.htm" {A}>Otevřená data ČSÚ – Senát 2026</a> (XML dávky <code>appdata/senat/20261009/odata/okrsky/K2/</code>, souhrn výsledků) ·
-<a href="https://volby.gov.cz/app/senat/20261009/cs/results" {A}>Výsledky Senát 2026 na volby.gov.cz</a> · Senát <a href="https://volby.gov.cz/opendata/se2018/se2018_opendata.htm" {A}>2018</a>,
-<a href="https://volby.gov.cz/opendata/se2020/se2020_opendata.htm" {A}>2020</a>, <a href="https://volby.gov.cz/opendata/se2022/se2022_opendata.htm" {A}>2022</a>.
-Výpočet: <code>scripts/download.py</code> → <code>se_kolo2.py</code> → <code>build_senat2.py</code>.</p></div>'''
-    page('senat/kolo2.html', 'Senát 2026 – 2. kolo', body, 'Výsledky a forenzní audit 2. kola senátních voleb 2026',
-         section='senat', crumbs=[('Přehled', 'index.html'), ('Senát 2026', 'senat/index.html'), ('2. kolo', None)])
+</ol>'''
+    zdroje = 'XML dávky 2. kola <code>appdata/senat/20261009/odata/okrsky/K2/</code> a souhrn výsledků; výpočet 2. kola: <code>scripts/se_kolo2.py</code> → <code>build_senat2.py</code>.'
+    return dict(F=findings(), zaver=zaver, tiles=tiles, sekce=sekce, testy=testy, davky=davky, metodika=metodika, zdroje=zdroje)
+
+
+# ------------------------------------------------------------------ přesměrování původní stránky 2. kola
+PRESMEROVANI = '''<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Senát 2026 – 2. kolo – Forenzní audit voleb 2026</title><meta name="robots" content="noindex"><link rel="canonical" href="index.html#kolo2">
+<meta http-equiv="refresh" content="0; url=index.html#kolo2">
+<script>var h=location.hash;location.replace('index.html'+(/^#(K2-\\d+|obvod-\\d+|registr|nalezy)$/.test(h)?h:(h==='#testy'?'#testy2':'#kolo2')));</script>
+<style>body{font-family:system-ui,sans-serif;margin:2rem;background:#fff;color:#111}@media (prefers-color-scheme:dark){body{background:#111;color:#eee}a{color:#8ab4ff}}</style></head>
+<body><p>Stránka 2. kola senátních voleb byla sloučena se stránkou 1. kola: <a href="index.html#kolo2">Senátní volby 2026 – 2. kolo</a>.</p></body></html>
+'''
+
+
+def build(page=None, fig=None, badge_j=None, badge_d=None, AUTHOR_URL=None):
+    """Obsah 2. kola je součástí senat/index.html (build_senat.build); zde se jen zapíše přesměrování ze staré adresy a CSV."""
+    if not HAS:
+        return []
+    os.makedirs(os.path.join(OUT, 'senat'), exist_ok=True)
+    open(os.path.join(OUT, 'senat', 'kolo2.html'), 'w', encoding='utf-8').write(PRESMEROVANI)
     return write_csv()

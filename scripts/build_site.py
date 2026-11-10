@@ -820,10 +820,8 @@ V senátním obvodu <strong>Žďár nad Sázavou</strong> rozhodl o postupu do 2
 <div class="hubs">
 <a class="hub" href="kv/index.html"><h3>Komunální volby 2026 →</h3><p>Zpracováno {n0(n_done)} obcí ({n0(sum(u["okrsku"] for u in UL if u["stav"] == "hotovo"))} okrsků).
 Přehledy okresů a obcí s počty nálezů a rozhodujícími rezervami.</p></a>
-<a class="hub" href="senat/kolo2.html"><h3>Senát 2026, 2. kolo →</h3><p>Zvolení senátoři ve 22 obvodech, srovnání každého okrsku s 1. kolem.
-Žďár nad Sázavou: vyhrál Josef Klement, který do 2. kola postoupil o jediný hlas.</p></a>
-<a class="hub" href="senat/index.html"><h3>Senát 2026, 1. kolo →</h3><p>5 021 okrsků ve 27 obvodech, srovnání s komunálními volbami okrsek po okrsku.
-Proč bylo senátních obálek o 13 % méně a kde rozhodly jednotky hlasů.</p></a>
+<a class="hub" href="senat/index.html"><h3>Senát 2026 →</h3><p>1. a 2. kolo: 5 021 okrsků ve 27 obvodech a zvolení senátoři ve 22 obvodech 2. kola, srovnání s komunálními volbami
+a mezi koly. Žďár nad Sázavou: o postupu rozhodl jediný hlas, vyhrál Josef Klement.</p></a>
 <a class="hub" href="nalezy.html"><h3>Všechny nálezy →</h3><p>Společný registr {len(AF)} nálezů s filtrem podle voleb, území, jistoty a dopadu.</p></a>
 <a class="hub" href="kv2022/index.html"><h3>Komunální volby 2022 →</h3><p>Zpětná analýza voleb 2022 stejnými detektory a pravidly ve všech obcích,
 nálezy po krajích a srovnání s rozhodnutími soudů.</p></a>
@@ -972,9 +970,7 @@ def search_entries(AF, se_obvody):
             else:
                 S.append((f'{m["nazev"]} – městská část/obvod ({u["nazev"]}, v přípravě)', u['url']))
     for o, nm in se_obvody:
-        S.append((f'Senát – obvod {o} {nm}', f'senat/index.html#obvod-{o}'))
-        if o in set(build_senat2.V.OBVOD) if build_senat2.HAS else False:
-            S.append((f'Senát 2. kolo – obvod {o} {nm}', f'senat/kolo2.html#obvod-{o}'))
+        S.append((f'Senát – obvod {o} {nm}', f'senat/index.html#obvod-{o}'))  # 1. i 2. kolo na jedné stránce
     for d in AF:
         S.append((f'{d["gid"]} – {d["typ"]} ({d["misto"]})', d['url']))
     S += [('Všechny nálezy', 'nalezy.html'), ('Metodika a zdroje', 'metodika.html'), ('Data ke stažení', 'data.html'),
